@@ -1,0 +1,9 @@
+name: manubot-ai-editor-evals
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - ipython
+  - langchain=0.0.333
+  - nodejs=20.8.*
+  - python=3.12.*
