@@ -1,6 +1,3 @@
-# This configuration runs each prompt through a series of example inputs and checks if they meet requirements.
-# Learn more: https://promptfoo.dev/docs/configuration/guide
-
 prompts:
   - |-
     Revise the following abstract of a scientific manuscript: {{paragraph}}
@@ -16,9 +13,9 @@ prompts:
     Revised paragraph:
 providers:
   - ollama:mistral:7b-instruct-fp16
-defaultTest:
-  options:
-    provider: ollama:llama2:7b-chat-fp16
+#defaultTest:
+#  options:
+#    provider: ollama:llama2:7b-chat-fp16
 scenarios:
   - config:
       - vars:
@@ -59,15 +56,51 @@ scenarios:
               print(
                 (len(output) > 0.6 * len(paragraph)) and (len(output) < 1.2 * len(paragraph))
               )
-          - type: llm-rubric
-            value: has no spelling errors, and correct grammar and punctuation
-          - type: llm-rubric
-            value: starts with context related to the research question
-          - type: llm-rubric
-            value: describes what is the gap in the research field
-          - type: llm-rubric
-            value: describes a novel method or approach that address a gap in the research field
-          - type: llm-rubric
-            value: describes the results
-          - type: llm-rubric
-            value: ends by discussing the implications of the results
+          - type: python
+            value: |
+              from manubot_evals.utils import eval_rubric
+              t=eval_rubric(
+                output,
+                "has no spelling errors, and correct grammar and punctuation",
+              )
+              print(t)
+          - type: python
+            value: |
+              from manubot_evals.utils import eval_rubric
+              t=eval_rubric(
+                output,
+                "starts with context related to the research question",
+              )
+              print(t)
+          - type: python
+            value: |
+              from manubot_evals.utils import eval_rubric
+              t=eval_rubric(
+                output,
+                "describes what is the gap in the research field",
+              )
+              print(t)
+          - type: python
+            value: |
+              from manubot_evals.utils import eval_rubric
+              t=eval_rubric(
+                output,
+                "describes a proposed method or approach that address a gap in the research field",
+              )
+              print(t)
+          - type: python
+            value: |
+              from manubot_evals.utils import eval_rubric
+              t=eval_rubric(
+                output,
+                "describes the results",
+              )
+              print(t)
+          - type: python
+            value: |
+              from manubot_evals.utils import eval_rubric
+              t=eval_rubric(
+                output,
+                "ends by discussing the implications of the results",
+              )
+              print(t)
