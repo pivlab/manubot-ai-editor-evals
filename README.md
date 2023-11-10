@@ -28,21 +28,18 @@ the Manubot AI Editor to revise scientific manuscripts.
 
 ### Pull local large language models
 
-In Ollama, you need to pull the models that you want to use:
+In Ollama, you need to pull the models that you want to use (from the [library](https://ollama.ai/library)).
+In the current configuration, two models are used:
 
- ```bash
-# Mistral 7b is fast and seems to perform relatively well.
-# Here we pull the fp16 version (the largest in size).
+```bash
+# Mistral 7b is used to revise the text. It is fast and seems to perform relatively
+# well. Here we pull the fp16 version (the largest in size), but quantized versions are
+# also available.
 ollama pull mistral:7b-instruct-fp16
 
-# We could also pull smaller models, e.g.:
-# ollama pull mistral:7b-instruct-q5_K_M
-
-# TODO: add https://huggingface.co/TheBloke/ShiningValiant-1.2-GGUF
-#  This is the model I was trying and seems to work pretty well.
-#  It is possible to download the gguf file and import it locally into the Ollama
-#  server (see https://github.com/jmorganca/ollama#import-from-gguf).
- ```
+# Llama 2 7b (chat) is use for llm-rubric asserts. It is also fast and performs well.
+ollama pull llama2:7b-chat-fp16
+```
 
 ### Configure access to remote large language models
 
@@ -59,6 +56,7 @@ export REPLICATE_API_TOKEN="YOUR_API_KEY"
 
 ## Run evaluations
 
+Examples of running evaluations:
 ```bash
 # cache results and use 1 job at a time
 promptfoo eval -j 1
@@ -71,7 +69,14 @@ promptfoo cache clear
 ```
 
 By default, the evaluations are run locally using open source models.
-To use a different local model or a remote 
+To use a different local or a remote, use:
+```bash
+# use OpenAI model
+promptfoo eval -j 1 --providers openai:gpt-3.5-turbo
+
+# use a different model from Ollama
+promptfoo eval -j 1 --providers ollama:llama2:70b-text-q5_K_M
+```
 
 ## Visualize results
 ```bash
