@@ -1,3 +1,4 @@
+import json
 from langchain.chat_models import ChatOllama
 from langchain.schema.messages import HumanMessage, SystemMessage
 
@@ -6,7 +7,7 @@ def eval_rubric(
     output: str,
     rubric: str,
     ollama_model: str = "llama2:7b-chat-fp16",
-    context: dict = None,
+    max_attemps: int = 3,
 ) -> str:
     chat = ChatOllama(
         model=ollama_model,
@@ -36,6 +37,15 @@ Rubric: Does not speak like a pirate
         HumanMessage(content=human_message),
     ]
 
-    t = chat.invoke(messages)
+    t = None
+    count = 0
+    while t is None and count < max_attemps:
+        try:
+            t = chat.invoke(messages)
+            json.loads(t.content)
+        except json.JSONDecodeError:
+            t = None
+        finally:
+            count += 1
 
     return t.content
