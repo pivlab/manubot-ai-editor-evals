@@ -7,3 +7,4 @@ dependencies:
   - langchain=0.0.333
   - nodejs=20.8.*
   - python=3.12.*
+  - pre-commit=3.5.*
