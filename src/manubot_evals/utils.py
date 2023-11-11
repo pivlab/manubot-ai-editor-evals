@@ -9,7 +9,7 @@ def eval_rubric(
     ollama_model: str = "llama2:7b-chat-fp16",
     max_attemps: int = 3,
 ) -> str:
-    chat = ChatOllama(model=ollama_model)
+    chat = ChatOllama(model=ollama_model, cache=False)
 
     # ruff: noqa: E501
     system_message = """You are grading output according to a user-specified rubric. If the statement in the rubric is true, then the output passes the test. You respond with a JSON object with this structure: {"pass": boolean, "score": float, "reason": string}.
@@ -47,4 +47,4 @@ Rubric: Does not speak like a pirate
         t is not None
     ), f"Failed to get a response from the chatbot ({count} attempts)"
 
-    return t.content
+    return t.content.strip()
