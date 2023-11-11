@@ -13,9 +13,6 @@ prompts:
     Revised paragraph:
 providers:
   - ollama:mistral:7b-instruct-fp16
-#defaultTest:
-#  options:
-#    provider: ollama:llama2:7b-chat-fp16
 scenarios:
   - config:
       - vars:
@@ -61,7 +58,7 @@ scenarios:
               from manubot_evals.utils import eval_rubric
               t=eval_rubric(
                 output,
-                "has no spelling errors, and correct grammar and punctuation",
+                "has no spelling errors, and its grammar and punctuation is correct",
               )
               print(t)
           - type: python
@@ -69,7 +66,7 @@ scenarios:
               from manubot_evals.utils import eval_rubric
               t=eval_rubric(
                 output,
-                "starts with context related to the research question",
+                "starts by introducing the broader field of research, and then the context is narrowed until it lands on the open question that the research answers",
               )
               print(t)
           - type: python
@@ -85,7 +82,7 @@ scenarios:
               from manubot_evals.utils import eval_rubric
               t=eval_rubric(
                 output,
-                "describes a proposed method or approach that address a gap in the research field",
+                "describes the novel method or approach proposed that addresses the gap in the research field",
               )
               print(t)
           - type: python
