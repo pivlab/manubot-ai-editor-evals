@@ -10,12 +10,8 @@ the Manubot AI Editor to revise scientific manuscripts.
 1. Create conda environment:
     ```bash
     conda env create -f environment.yml
+    conda activate manubot-ai-editor-evals
     ```
-1. Install [Ollama](https://ollama.ai/).
-1. Start Ollama server:
-   ```bash
-   ollama serve
-   ```
 1. Install [promptfoo](https://promptfoo.dev/):
    ```bash
    npm install -g promptfoo
@@ -25,6 +21,10 @@ the Manubot AI Editor to revise scientific manuscripts.
     ```bash
     pip install -e .
     ```
+1. (In a different terminal) Install [Ollama](https://ollama.ai/) and start Ollama server:
+   ```bash
+   ollama serve
+   ```
 
 ### Pull local large language models
 
@@ -56,14 +56,23 @@ export REPLICATE_API_TOKEN="YOUR_API_KEY"
 
 ## Run evaluations
 
-Examples of running evaluations:
+First, move to a directory corresponding to the type of prompt you want to
+evaluate, such as `abstracts`:
+```bash
+cd abstract/
+```
+
+Then, these are examples to run evaluations:
 ```bash
 # cache results and use 1 job at a time
 promptfoo eval -j 1
 
 # do not cache results; useful when testing prompts
 promptfoo eval --no-cache -j 1
+```
 
+If you need to clear the cache:
+```bash
 # clear cache
 promptfoo cache clear
 ```
@@ -82,3 +91,4 @@ promptfoo eval -j 1 --providers ollama:llama2:70b-text-q5_K_M
 ```bash
 promptfoo view
 ```
+
