@@ -12,7 +12,7 @@ def eval_rubric(
     chat = ChatOllama(model=ollama_model, cache=False)
 
     # ruff: noqa: E501
-    system_message = """You are grading output according to a user-specified rubric. If the statement in the rubric is true, then the output passes the test. You respond with a JSON object with this structure: {"pass": boolean, "score": float, "reason": string}.
+    system_message = """You are grading output according to a user-specified rubric. If the statement in the rubric is true, then the output passes the test with score=1.0. You respond with a JSON object with this structure: {"pass": boolean, "score": float, "reason": string}.
 
 Examples:
 
