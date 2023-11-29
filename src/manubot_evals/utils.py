@@ -1,18 +1,23 @@
 import json
-from langchain.chat_models import ChatOllama
+from langchain.chat_models import ChatOllama, ChatOpenAI
 from langchain.schema.messages import HumanMessage, SystemMessage
 
 
 def eval_rubric(
     output: str,
     rubric: str,
-    ollama_model: str = "llama2:7b-chat-fp16",
+    # model: str = "mistral:7b-instruct-fp16",
+    # model: str = "openai:gpt-4",
+    model: str = "openai:gpt-4-1106-preview",
     max_attemps: int = 3,
 ) -> str:
-    chat = ChatOllama(model=ollama_model, cache=False)
+    if model.startswith("openai:"):
+        chat = ChatOpenAI(model_name=model[7:], temperature=0.1, max_tokens=250, model_kwargs={"top_p": 1.0})
+    else:
+        chat = ChatOllama(model=model)
 
     # ruff: noqa: E501
-    system_message = """You are grading output according to a user-specified rubric. If the statement in the rubric is true, then the output passes the test with score=1.0. You respond with a JSON object with this structure: {"pass": boolean, "score": float, "reason": string}.
+    system_message = """You are a professional copyeditor specializing in structuring different sections of research articles. You are grading output according to a user-specified rubric. If the statement in the rubric is true, then the output passes the test with score=1.0. You respond with a JSON object with this structure: {"pass": boolean, "score": float, "reason": string}.
 
 Examples:
 
