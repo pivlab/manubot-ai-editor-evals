@@ -1,3 +1,4 @@
+import os
 import json
 from pathlib import Path
 import tempfile
@@ -28,6 +29,10 @@ def eval_rubric(
     model_name: str = "openai:gpt-4",
     max_attemps: int = 1,
 ) -> str:
+    env_name = "MANUBOT_AI_EDITOR_EVALS_MODEL_NAME"
+    if env_name in os.environ:
+        model_name = os.environ[env_name]
+
     if model_name.startswith("openai:"):
         model = ChatOpenAI(
             model_name=model_name[7:],
