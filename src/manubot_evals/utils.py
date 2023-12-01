@@ -32,6 +32,7 @@ def eval_rubric(
     env_name = "MANUBOT_AI_EDITOR_EVALS_MODEL_NAME"
     if env_name in os.environ:
         model_name = os.environ[env_name]
+        print(f"Using model name from environment variable {env_name}: {model_name}")
 
     if model_name.startswith("openai:"):
         model = ChatOpenAI(
@@ -84,7 +85,7 @@ def eval_rubric(
     prompt = ChatPromptTemplate(
         messages=[
             SystemMessagePromptTemplate.from_template(
-                "You are a scientist with copyediting skills, and you are having a conversation with a human interested in understanding a scientific manuscript titled '{title}'. Your answers to the human's questions will be used to evaluate the quality of the manuscript, so you are allowed to say that the provided manuscript's section lacks the information needed to answer the question."
+                "You are a scientist having a conversation with a human interested in understanding a scientific manuscript titled '{title}'. Your answers to the human's questions will be used to evaluate the quality of the manuscript, so you are allowed to say that the provided manuscript's text lacks the information needed to answer the question."
             ).format(title=title),
             # The `variable_name` here is what must align with memory
             MessagesPlaceholder(variable_name="chat_history"),
@@ -128,7 +129,7 @@ def eval_rubric(
 
             print(responses)
 
-            t = responses[-1].strip()
+            t = responses[-1].strip().replace(": True", ": true").replace(": False", ": false")
             json.loads(t)
         except json.JSONDecodeError:
             t = None
