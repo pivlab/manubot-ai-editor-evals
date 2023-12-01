@@ -57,6 +57,7 @@ scenarios:
           - type: not-icontains-any
             value:
               - "authors"
+              - "Abstract:"
           - type: python
             # Length of output is between 0.6 and 1.2 times the length of the input
             value: |
