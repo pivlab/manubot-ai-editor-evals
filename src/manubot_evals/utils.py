@@ -85,7 +85,7 @@ def eval_rubric(
     prompt = ChatPromptTemplate(
         messages=[
             SystemMessagePromptTemplate.from_template(
-                "You are a scientist having a conversation with a human interested in understanding a scientific manuscript titled '{title}'. Your answers to the human's questions will be used to evaluate the quality of the manuscript, so you are allowed to say that the provided manuscript's text lacks the information needed to answer the question."
+                "You are a scientist having a conversation with a human interested in understanding a scientific manuscript titled '{title}'. If the provided manuscript's text lacks the information needed to answer the question, you will reject answering the question."
             ).format(title=title),
             # The `variable_name` here is what must align with memory
             MessagesPlaceholder(variable_name="chat_history"),
