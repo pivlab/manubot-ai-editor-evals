@@ -38,7 +38,7 @@ def eval_rubric(
             },
         )
     else:
-        model = ChatOllama(model=model_name, cache=False)
+        model = ChatOllama(model=model_name, temperature=0.2, max_tokens=250, top_p=1.0)
 
     summary_prompt = PromptTemplate.from_template("Summarize this abstract: {text}")
     context_prompt = PromptTemplate.from_template(
