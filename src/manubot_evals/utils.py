@@ -1,10 +1,13 @@
-import os
+import re
 import json
 from pathlib import Path
 import tempfile
 
 from langchain.globals import set_llm_cache
 from langchain.cache import SQLiteCache
+
+
+JSON_REGEX = re.compile(r'{.*?}')
 
 set_llm_cache(
     SQLiteCache(database_path=str(Path(tempfile.gettempdir()) / "langchain.db"))
@@ -26,14 +29,10 @@ def eval_rubric(
     text: str,
     title: str,
     rubric: str,
-    model_name: str = "openai:gpt-4",
+    model_name: str = "starling-lm:7b-alpha-fp16",
     max_attemps: int = 1,
+    verbose: bool = False,
 ) -> str:
-    env_name = "MANUBOT_AI_EDITOR_EVALS_MODEL_NAME"
-    if env_name in os.environ:
-        model_name = os.environ[env_name]
-        print(f"Using model name from environment variable {env_name}: {model_name}")
-
     if model_name.startswith("openai:"):
         model = ChatOpenAI(
             model_name=model_name[7:],
@@ -97,7 +96,7 @@ def eval_rubric(
     conversation = LLMChain(
         llm=model,
         prompt=prompt,
-        verbose=True,
+        verbose=verbose,
         memory=memory,
     )
 
@@ -108,8 +107,6 @@ def eval_rubric(
 
         try:
             for m in messages:
-                # FIXME: add json format here
-                print(m.input_variables)
                 inputs = {
                     "text": text,
                     "rubric": rubric,
@@ -127,9 +124,13 @@ def eval_rubric(
                 r = conversation.__call__({"question": question_value})
                 responses.append(r["text"])
 
-            print(responses)
-
             t = responses[-1].strip().replace(": True", ": true").replace(": False", ": false")
+
+            # try to capture a JSON substring
+            tjson = JSON_REGEX.search(t)
+            if tjson:
+                t = tjson.group(0)
+
             json.loads(t)
         except json.JSONDecodeError:
             t = None
