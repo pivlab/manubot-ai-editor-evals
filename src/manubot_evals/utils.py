@@ -123,7 +123,7 @@ def eval_rubric(
 
             print(responses)
 
-            t = responses[-1]
+            t = responses[-1].strip()
             json.loads(t)
         except json.JSONDecodeError:
             t = None
