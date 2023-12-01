@@ -7,7 +7,7 @@ from langchain.globals import set_llm_cache
 from langchain.cache import SQLiteCache
 
 
-JSON_REGEX = re.compile(r'{.*?}')
+JSON_REGEX = re.compile(r"{.*?}")
 
 set_llm_cache(
     SQLiteCache(database_path=str(Path(tempfile.gettempdir()) / "langchain.db"))
@@ -30,7 +30,7 @@ def eval_rubric(
     title: str,
     rubric: str,
     model_name: str = "starling-lm:7b-alpha-fp16",
-    max_attemps: int = 1,
+    max_attemps: int = 3,
     verbose: bool = False,
 ) -> str:
     if model_name.startswith("openai:"):
@@ -124,7 +124,12 @@ def eval_rubric(
                 r = conversation.__call__({"question": question_value})
                 responses.append(r["text"])
 
-            t = responses[-1].strip().replace(": True", ": true").replace(": False", ": false")
+            t = (
+                responses[-1]
+                .strip()
+                .replace(": True", ": true")
+                .replace(": False", ": false")
+            )
 
             # try to capture a JSON substring
             tjson = JSON_REGEX.search(t)
