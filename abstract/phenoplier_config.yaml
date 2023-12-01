@@ -1,12 +1,5 @@
 prompts:
-  - |-
-    You are a professional copyeditor specializing in scholarly text. Revise the following abstract of a scientific manuscript: {{paragraph}}
-    
-    Revised abstract:
-  - |-
-    You are a professional copyeditor specializing in scholarly text. Revise the following abstract of a scientific manuscript titled '{{title}}' and with keywords '{{keywords}}': {{paragraph}}
-    
-    Revised abstract:
+  [file://prompts/baseline.json, file://prompts/candidate.json]
 providers:
   - ollama:mistral:7b-instruct-fp16
 scenarios:

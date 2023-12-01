@@ -1,0 +1,4 @@
+[
+  { "role": "system", "content": "Your are a scientist with copy-editing skills who will help in improving the text of a manuscript with title '{{ title }}' and keywords '{{ keywords }}'." },
+  { "role": "user", "content": "Revise the following abstract of this manuscript.\n\nAbstract: {{ paragraph }}\n\nRevised: " }
+]
