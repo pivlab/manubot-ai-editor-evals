@@ -76,6 +76,7 @@ scenarios:
               from manubot_evals.utils import eval_rubric
               t=eval_rubric(
                 output,
+                context["vars"]["title"],
                 "has no spelling errors, and its grammar and punctuation are correct",
               )
               print(t)
@@ -84,7 +85,8 @@ scenarios:
               from manubot_evals.utils import eval_rubric
               t=eval_rubric(
                 output,
-                "starts by introducing the context of the research (i.e., the broader field of research) not a specific method or result, and right after that the context is narrowed until it lands on the research gap",
+                context["vars"]["title"],
+                "the first sentences of the abstract introduce the context of the research (i.e., the broader field of research), and right after that, the context is narrowed until it lands on the research gap",
               )
               print(t)
           - type: python
@@ -92,6 +94,7 @@ scenarios:
               from manubot_evals.utils import eval_rubric
               t=eval_rubric(
                 output,
+                context["vars"]["title"],
                 "before describing any result, it describes the proposed method or approach that fills the research gap",
               )
               print(t)
@@ -100,6 +103,7 @@ scenarios:
               from manubot_evals.utils import eval_rubric
               t=eval_rubric(
                 output,
+                context["vars"]["title"],
                 "before mentioning any conclusion or implication, it describes concrete results obtained using the proposed method or approach",
               )
               print(t)
@@ -108,6 +112,7 @@ scenarios:
               from manubot_evals.utils import eval_rubric
               t=eval_rubric(
                 output,
+                context["vars"]["title"],
                 "it ends with a conclusion that interprets the results to answer the research gap, and then it highlights how that conclusion moves the broader field forward",
               )
               print(t)
