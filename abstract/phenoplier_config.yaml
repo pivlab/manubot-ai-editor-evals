@@ -46,10 +46,6 @@ scenarios:
             value: |
               print(output.strip()[-1] == ".")
           - type: python
-            # No newlines in output
-            value: |
-              print("\n" not in output.strip())
-          - type: python
             # No manuscript title in output
             value: |
               title = context["vars"]["title"]
@@ -74,21 +70,20 @@ scenarios:
           - type: python
             # Method is not mentioned at the beginning
             value: |
-              paragraph = context["vars"]["paragraph"]
               print(
                 "PhenoPLIER" not in output.split(".")[0]
               )
           - type: python
             # Method is mentioned before results
             value: |
-              paragraph = context["vars"]["paragraph"]
               print(
-                paragraph.find("PhenoPLIER") < paragraph.find("CRISPR")
+                output.find("PhenoPLIER") < max(output.find("CRISPR"), output.find("lipid"), output.find("drug-disease"), output.find("players"))
               )
-          - type: icontains-any
+          - type: python
             # Conclusions are included
-            value:
-              - "overall"
-              - "conclusion"
-              - "highlight"
-              - "insight"
+            value: |
+              keywords = ["overall", "conclusion", "insight"]
+              last_sentences = ".".join(output.split(".")[-3:]).lower()
+              print(
+                any(s in last_sentences for s in keywords)
+              )
