@@ -1,5 +1,5 @@
 prompts:
-  [file://prompts/baseline.json, file://prompts/candidate.json]
+  [file://prompts/baseline.txt, file://prompts/candidate.txt]
 providers:
   - ollama:mistral:7b-instruct-fp16
 scenarios:
