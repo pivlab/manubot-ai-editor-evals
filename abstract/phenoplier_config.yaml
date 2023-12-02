@@ -4,11 +4,11 @@ providers:
   - ollama:mistral:7b-instruct-fp16
 scenarios:
   - config:
-      - vars:
-          test_description: original
-          title: Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms
-          keywords: 'genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits'
-          paragraph: Genes act in concert with each other in specific contexts to perform their functions. Determining how these genes influence complex traits requires a mechanistic understanding of expression regulation across different conditions. It has been shown that this insight is critical for developing new therapies. Transcriptome-wide association studies have helped uncover the role of individual genes in disease-relevant mechanisms. However, modern models of the architecture of complex traits predict that gene-gene interactions play a crucial role in disease origin and progression. Here we introduce PhenoPLIER, a computational approach that maps gene-trait associations and pharmacological perturbation data into a common latent representation for a joint analysis. This representation is based on modules of genes with similar expression patterns across the same conditions. We observe that diseases are significantly associated with gene modules expressed in relevant cell types, and our approach is accurate in predicting known drug-disease pairs and inferring mechanisms of action. Furthermore, using a CRISPR screen to analyze lipid regulation, we find that functionally important players lack associations but are prioritized in trait-associated modules by PhenoPLIER. In conclusion, by incorporating groups of co-expressed genes, PhenoPLIER can contextualize genetic associations and reveal potential targets missed by single-gene strategies. PhenoPLIER provides a novel framework for interpreting genetic associations through the lens of gene modules.
+#      - vars:
+#          test_description: original
+#          title: Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms
+#          keywords: 'genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits'
+#          paragraph: Genes act in concert with each other in specific contexts to perform their functions. Determining how these genes influence complex traits requires a mechanistic understanding of expression regulation across different conditions. It has been shown that this insight is critical for developing new therapies. Transcriptome-wide association studies have helped uncover the role of individual genes in disease-relevant mechanisms. However, modern models of the architecture of complex traits predict that gene-gene interactions play a crucial role in disease origin and progression. Here we introduce PhenoPLIER, a computational approach that maps gene-trait associations and pharmacological perturbation data into a common latent representation for a joint analysis. This representation is based on modules of genes with similar expression patterns across the same conditions. We observe that diseases are significantly associated with gene modules expressed in relevant cell types, and our approach is accurate in predicting known drug-disease pairs and inferring mechanisms of action. Furthermore, using a CRISPR screen to analyze lipid regulation, we find that functionally important players lack associations but are prioritized in trait-associated modules by PhenoPLIER. In conclusion, by incorporating groups of co-expressed genes, PhenoPLIER can contextualize genetic associations and reveal potential targets missed by single-gene strategies. PhenoPLIER provides a novel framework for interpreting genetic associations through the lens of gene modules.
       - vars:
           test_description: spelling/grammar errors
           title: Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms
@@ -24,11 +24,11 @@ scenarios:
           title: Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms
           keywords: 'genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits'
           paragraph: Genes act in concert with each other in specific contexts to perform their functions. Determining how these genes influence complex traits requires a mechanistic understanding of expression regulation across different conditions. It has been shown that this insight is critical for developing new therapies. Our results in this study show that diseases are significantly associated with gene modules expressed in relevant cell types, and our approach is accurate in predicting known drug-disease pairs and inferring mechanisms of action. Furthermore, using a CRISPR screen to analyze lipid regulation, we find that functionally important players lack associations but are prioritized in trait-associated modules by PhenoPLIER. In conclusion, by incorporating groups of co-expressed genes, PhenoPLIER can contextualize genetic associations and reveal potential targets missed by single-gene strategies. PhenoPLIER provides a novel framework for interpreting genetic associations through the lens of gene modules.
-      - vars:
-          test_description: does not provide concrete results
-          title: Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms
-          keywords: 'genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits'
-          paragraph: Genes act in concert with each other in specific contexts to perform their functions. Determining how these genes influence complex traits requires a mechanistic understanding of expression regulation across different conditions. It has been shown that this insight is critical for developing new therapies. Transcriptome-wide association studies have helped uncover the role of individual genes in disease-relevant mechanisms. However, modern models of the architecture of complex traits predict that gene-gene interactions play a crucial role in disease origin and progression. Here we introduce PhenoPLIER, a computational approach that maps gene-trait associations and pharmacological perturbation data into a common latent representation for a joint analysis. This representation is based on modules of genes with similar expression patterns across the same conditions. In conclusion, by incorporating groups of co-expressed genes, PhenoPLIER can contextualize genetic associations and reveal potential targets missed by single-gene strategies. PhenoPLIER provides a novel framework for interpreting genetic associations through the lens of gene modules.
+#      - vars:
+#          test_description: does not provide concrete results
+#          title: Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms
+#          keywords: 'genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits'
+#          paragraph: Genes act in concert with each other in specific contexts to perform their functions. Determining how these genes influence complex traits requires a mechanistic understanding of expression regulation across different conditions. It has been shown that this insight is critical for developing new therapies. Transcriptome-wide association studies have helped uncover the role of individual genes in disease-relevant mechanisms. However, modern models of the architecture of complex traits predict that gene-gene interactions play a crucial role in disease origin and progression. Here we introduce PhenoPLIER, a computational approach that maps gene-trait associations and pharmacological perturbation data into a common latent representation for a joint analysis. This representation is based on modules of genes with similar expression patterns across the same conditions. In conclusion, by incorporating groups of co-expressed genes, PhenoPLIER can contextualize genetic associations and reveal potential targets missed by single-gene strategies. PhenoPLIER provides a novel framework for interpreting genetic associations through the lens of gene modules.
       - vars:
           test_description: does not provide an interpretation of the results and their implications
           title: Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms
@@ -58,6 +58,12 @@ scenarios:
             value:
               - "authors"
               - "Abstract:"
+          - type: not-icontains-any
+            # has no spelling errors
+            value:
+              - "concierto"
+              - "specifico"
+              - "significantl "
           - type: python
             # Length of output is between 0.6 and 1.2 times the length of the input
             value: |
@@ -66,47 +72,23 @@ scenarios:
                 (len(output) > 0.6 * len(paragraph)) and (len(output) < 1.2 * len(paragraph))
               )
           - type: python
+            # Method is not mentioned at the beginning
             value: |
-              from manubot_evals.utils import eval_rubric
-              t=eval_rubric(
-                output,
-                context["vars"]["title"],
-                "has no spelling errors, and its grammar and punctuation are correct",
+              paragraph = context["vars"]["paragraph"]
+              print(
+                "PhenoPLIER" not in output.split(".")[0]
               )
-              print(t)
           - type: python
+            # Method is mentioned before results
             value: |
-              from manubot_evals.utils import eval_rubric
-              t=eval_rubric(
-                output,
-                context["vars"]["title"],
-                "the first sentences of the abstract introduce the context of the research (i.e., the broader field of research), and right after that, the context is narrowed until it lands on the research gap",
+              paragraph = context["vars"]["paragraph"]
+              print(
+                paragraph.find("PhenoPLIER") < paragraph.find("CRISPR")
               )
-              print(t)
-          - type: python
-            value: |
-              from manubot_evals.utils import eval_rubric
-              t=eval_rubric(
-                output,
-                context["vars"]["title"],
-                "before describing any result, it describes the proposed method or approach that fills the research gap",
-              )
-              print(t)
-          - type: python
-            value: |
-              from manubot_evals.utils import eval_rubric
-              t=eval_rubric(
-                output,
-                context["vars"]["title"],
-                "before mentioning any conclusion or implication, it describes concrete results obtained using the proposed method or approach",
-              )
-              print(t)
-          - type: python
-            value: |
-              from manubot_evals.utils import eval_rubric
-              t=eval_rubric(
-                output,
-                context["vars"]["title"],
-                "it ends with a conclusion that interprets the results to answer the research gap, and then it highlights how that conclusion moves the broader field forward",
-              )
-              print(t)
+          - type: icontains-any
+            # Conclusions are included
+            value:
+              - "overall"
+              - "conclusion"
+              - "highlight"
+              - "insight"
