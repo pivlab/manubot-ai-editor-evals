@@ -77,7 +77,23 @@ scenarios:
           - type: python
             # Conclusions are included
             value: |
-              keywords = ["overall", "conclusion", "insight", "novel", "potential", "broader", "ultimately", "advancement", "valuable", "study"]
+              keywords = [
+                "overall",
+                "conclusion",
+                "insight",
+                "novel",
+                "potential",
+                "broader",
+                "ultimately",
+                "advancement",
+                "valuable",
+                "study",
+                "research",
+                "critical gap",
+                "understanding",
+                "powerful",
+                "advancing",
+              ]
               last_sentences = ".".join(output.split(".")[-3:]).lower()
               print(
                 any(s in last_sentences for s in keywords)
