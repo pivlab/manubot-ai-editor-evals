@@ -90,12 +90,12 @@ results:
           approach that integrates gene-trait associations and pharmacological
           perturbation data into a common latent representation for joint
           analysis. This representation is based on modules of genes with
-          similar expression patterns across the same conditions. Our results
-          show that diseases are significantly associated with gene modules
-          expressed in relevant cell types, and PhenoPLIER accurately predicts
-          known drug-disease pairs and infers mechanisms of action.
-          Additionally, using a CRISPR screen to analyze lipid regulation, we
-          find that functionally important genes without associations are
+          similar expression patterns across the same conditions. We find that
+          diseases are significantly associated with gene modules expressed in
+          relevant cell types, and our approach accurately predicts known
+          drug-disease pairs and infers mechanisms of action. Additionally,
+          using a CRISPR screen to analyze lipid regulation, we discover that
+          functionally important players, which lack associations, are
           prioritized in trait-associated modules by PhenoPLIER. In conclusion,
           by incorporating groups of co-expressed genes, PhenoPLIER can provide
           context to genetic associations and identify potential targets that
@@ -103,14 +103,14 @@ results:
           framework for interpreting genetic associations through the lens of
           gene modules.
         tokenUsage: &ref_53
-          total: 618
+          total: 619
           prompt: 357
-          completion: 261
+          completion: 262
         cached: false
       success: true
       score: 1
       namedScores: &ref_0 {}
-      latencyMs: 9209
+      latencyMs: 7498
       gradingResult: &ref_54
         pass: true
         score: 1
@@ -193,13 +193,25 @@ results:
             reason: Assertion passed
             assertion: &ref_11
               type: python
-              value: >
-                keywords = ["overall", "conclusion", "insight", "novel",
-                "potential", "broader", "ultimately", "advancement", "valuable",
-                "study"]
-
+              value: |
+                keywords = [
+                  "overall",
+                  "conclusion",
+                  "insight",
+                  "novel",
+                  "potential",
+                  "broader",
+                  "ultimately",
+                  "advancement",
+                  "valuable",
+                  "study",
+                  "research",
+                  "critical gap",
+                  "understanding",
+                  "powerful",
+                  "advancing",
+                ]
                 last_sentences = ".".join(output.split(".")[-3:]).lower()
-
                 print(
                   any(s in last_sentences for s in keywords)
                 )
@@ -301,7 +313,7 @@ results:
       success: true
       score: 1
       namedScores: &ref_2 {}
-      latencyMs: 7553
+      latencyMs: 6624
       gradingResult: &ref_56
         pass: true
         score: 1
@@ -406,12 +418,12 @@ results:
           approach that integrates gene-trait associations and pharmacological
           perturbation data into a common latent representation for joint
           analysis. This representation is based on modules of genes with
-          similar expression patterns across the same conditions. We find that
-          diseases are significantly associated with gene modules expressed in
-          relevant cell types, and our approach accurately predicts known
-          drug-disease pairs and infers mechanisms of action. Additionally,
-          using a CRISPR screen to analyze lipid regulation, we discover that
-          functionally important players, which lack associations, are
+          similar expression patterns across the same conditions. Our results
+          show that diseases are significantly associated with gene modules
+          expressed in relevant cell types, and PhenoPLIER accurately predicts
+          known drug-disease pairs and infers mechanisms of action.
+          Additionally, using a CRISPR screen to analyze lipid regulation, we
+          find that functionally important genes without associations are
           prioritized in trait-associated modules by PhenoPLIER. In conclusion,
           by incorporating groups of co-expressed genes, PhenoPLIER can provide
           context to genetic associations and identify potential targets that
@@ -419,14 +431,14 @@ results:
           framework for interpreting genetic associations through the lens of
           gene modules.
         tokenUsage: &ref_57
-          total: 619
+          total: 618
           prompt: 357
-          completion: 262
+          completion: 261
         cached: false
       success: true
       score: 1
       namedScores: &ref_12 {}
-      latencyMs: 8310
+      latencyMs: 6886
       gradingResult: &ref_58
         pass: true
         score: 1
@@ -571,7 +583,7 @@ results:
       success: true
       score: 1
       namedScores: &ref_13 {}
-      latencyMs: 7142
+      latencyMs: 6545
       gradingResult: &ref_60
         pass: true
         score: 1
@@ -676,12 +688,12 @@ results:
           approach that integrates gene-trait associations and pharmacological
           perturbation data into a common latent representation for joint
           analysis. This representation is based on modules of genes with
-          similar expression patterns across the same conditions. Our results
-          show that diseases are significantly associated with gene modules
-          expressed in relevant cell types, and PhenoPLIER accurately predicts
-          known drug-disease pairs and infers mechanisms of action.
-          Additionally, using a CRISPR screen to analyze lipid regulation, we
-          find that functionally important genes without associations are
+          similar expression patterns across the same conditions. We find that
+          diseases are significantly associated with gene modules expressed in
+          relevant cell types, and our approach accurately predicts known
+          drug-disease pairs and infers mechanisms of action. Additionally,
+          using a CRISPR screen to analyze lipid regulation, we discover that
+          functionally important players, which lack associations, are
           prioritized in trait-associated modules by PhenoPLIER. In conclusion,
           by incorporating groups of co-expressed genes, PhenoPLIER can provide
           context to genetic associations and identify potential targets that
@@ -689,14 +701,14 @@ results:
           framework for interpreting genetic associations through the lens of
           gene modules.
         tokenUsage: &ref_61
-          total: 618
+          total: 619
           prompt: 357
-          completion: 261
+          completion: 262
         cached: false
       success: true
       score: 1
       namedScores: &ref_14 {}
-      latencyMs: 6807
+      latencyMs: 7467
       gradingResult: &ref_62
         pass: true
         score: 1
@@ -841,7 +853,7 @@ results:
       success: true
       score: 1
       namedScores: &ref_15 {}
-      latencyMs: 7122
+      latencyMs: 7060
       gradingResult: &ref_64
         pass: true
         score: 1
@@ -966,7 +978,7 @@ results:
       success: true
       score: 1
       namedScores: &ref_16 {}
-      latencyMs: 7066
+      latencyMs: 6659
       gradingResult: &ref_66
         pass: true
         score: 1
@@ -1111,7 +1123,7 @@ results:
       success: true
       score: 1
       namedScores: &ref_17 {}
-      latencyMs: 7869
+      latencyMs: 7111
       gradingResult: &ref_68
         pass: true
         score: 1
@@ -1216,27 +1228,27 @@ results:
           approach that integrates gene-trait associations and pharmacological
           perturbation data into a common latent representation for joint
           analysis. This representation is based on modules of genes with
-          similar expression patterns across the same conditions. We find that
-          diseases are significantly associated with gene modules expressed in
-          relevant cell types, and our approach accurately predicts known
-          drug-disease pairs and infers mechanisms of action. Additionally,
-          using a CRISPR screen to analyze lipid regulation, we discover that
-          functionally important players, which lack associations, are
-          prioritized in trait-associated modules by PhenoPLIER. In conclusion,
-          by incorporating groups of co-expressed genes, PhenoPLIER can provide
-          context to genetic associations and identify potential targets that
-          may be missed by single-gene strategies. PhenoPLIER offers a novel
-          framework for interpreting genetic associations through the lens of
-          gene modules.
+          similar expression patterns across the same conditions. Our results
+          show that diseases are significantly associated with gene modules
+          expressed in relevant cell types, and PhenoPLIER accurately predicts
+          known drug-disease pairs and infers mechanisms of action.
+          Additionally, using a CRISPR screen to analyze lipid regulation, we
+          find that functionally important genes, which lack individual
+          associations, are prioritized in trait-associated modules by
+          PhenoPLIER. In conclusion, by incorporating groups of co-expressed
+          genes, PhenoPLIER can provide context to genetic associations and
+          identify potential targets that may be missed by single-gene
+          strategies. PhenoPLIER offers a novel framework for interpreting
+          genetic associations through the lens of gene modules.
         tokenUsage: &ref_69
-          total: 619
+          total: 622
           prompt: 357
-          completion: 262
+          completion: 265
         cached: false
       success: true
       score: 1
       namedScores: &ref_18 {}
-      latencyMs: 7585
+      latencyMs: 7133
       gradingResult: &ref_70
         pass: true
         score: 1
@@ -1381,7 +1393,7 @@ results:
       success: true
       score: 1
       namedScores: &ref_19 {}
-      latencyMs: 8657
+      latencyMs: 7088
       gradingResult: &ref_72
         pass: true
         score: 1
@@ -1524,20 +1536,20 @@ results:
           action. Additionally, using a CRISPR screen to study lipid regulation,
           we discover that functionally important genes, which lack individual
           associations, are prioritized in trait-associated modules by
-          PhenoPLIER. In conclusion, by incorporating groups of co-expressed
-          genes, PhenoPLIER provides a contextualized interpretation of genetic
-          associations and uncovers potential targets that may be missed by
-          single-gene strategies. PhenoPLIER offers a novel framework for
-          understanding genetic associations through the lens of gene modules.
+          PhenoPLIER. In conclusion, by incorporating co-expressed gene groups,
+          PhenoPLIER contextualizes genetic associations and uncovers potential
+          targets that may be missed by single-gene strategies. PhenoPLIER
+          offers a novel framework for interpreting genetic associations through
+          the lens of gene modules.
         tokenUsage: &ref_73
-          total: 612
+          total: 607
           prompt: 354
-          completion: 258
+          completion: 253
         cached: false
       success: false
       score: 0.8888888888888888
       namedScores: &ref_20 {}
-      latencyMs: 7452
+      latencyMs: 7423
       error: |
         Python code returned false
         print(
@@ -1668,7 +1680,7 @@ results:
           therapies. While transcriptome-wide association studies have shed
           light on the role of individual genes in disease mechanisms, it is now
           recognized that gene-gene interactions play a significant role in
-          disease origin and progression. To address this, we present
+          disease origin and progression. To address this, we introduce
           PhenoPLIER, a computational approach that maps gene-trait associations
           and pharmacological perturbation data into a common latent
           representation for joint analysis. PhenoPLIER's representation is
@@ -1694,7 +1706,7 @@ results:
       success: true
       score: 1
       namedScores: &ref_22 {}
-      latencyMs: 7081
+      latencyMs: 6997
       gradingResult: &ref_76
         pass: true
         score: 1
@@ -1805,20 +1817,20 @@ results:
           action. Additionally, using a CRISPR screen to study lipid regulation,
           we discover that functionally important genes, which lack individual
           associations, are prioritized in trait-associated modules by
-          PhenoPLIER. In conclusion, by incorporating co-expressed gene groups,
-          PhenoPLIER contextualizes genetic associations and uncovers potential
-          targets that may be missed by single-gene strategies. PhenoPLIER
-          offers a novel framework for interpreting genetic associations through
-          the lens of gene modules.
+          PhenoPLIER. In conclusion, by incorporating groups of co-expressed
+          genes, PhenoPLIER provides a contextualized interpretation of genetic
+          associations and uncovers potential targets that may be missed by
+          single-gene strategies. PhenoPLIER offers a novel framework for
+          understanding genetic associations through the lens of gene modules.
         tokenUsage: &ref_77
-          total: 607
+          total: 612
           prompt: 354
-          completion: 253
+          completion: 258
         cached: false
       success: false
       score: 0.8888888888888888
       namedScores: &ref_23 {}
-      latencyMs: 6512
+      latencyMs: 6901
       error: |
         Python code returned false
         print(
@@ -1975,7 +1987,7 @@ results:
       success: true
       score: 1
       namedScores: &ref_24 {}
-      latencyMs: 6440
+      latencyMs: 7693
       gradingResult: &ref_80
         pass: true
         score: 1
@@ -2099,7 +2111,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_25 {}
-      latencyMs: 7001
+      latencyMs: 7139
       error: |
         Python code returned false
         print(
@@ -2230,7 +2242,7 @@ results:
           therapies. While transcriptome-wide association studies have shed
           light on the role of individual genes in disease mechanisms, it is now
           recognized that gene-gene interactions play a significant role in
-          disease origin and progression. To address this, we introduce
+          disease origin and progression. To address this, we present
           PhenoPLIER, a computational approach that maps gene-trait associations
           and pharmacological perturbation data into a common latent
           representation for joint analysis. PhenoPLIER's representation is
@@ -2243,20 +2255,19 @@ results:
           pairs and infers mechanisms of action. Additionally, using a CRISPR
           screen to analyze lipid regulation, we find that functionally
           important players lacking associations are prioritized in
-          trait-associated modules by PhenoPLIER. In conclusion, PhenoPLIER
-          provides a novel framework for interpreting genetic associations
-          through the lens of gene modules, filling a gap in the current
-          literature and offering new insights for therapeutic targets and drug
-          repurposing.
+          trait-associated modules by PhenoPLIER. Overall, PhenoPLIER provides a
+          novel framework for interpreting genetic associations through the lens
+          of gene modules, filling a gap in the current literature and offering
+          new insights for therapeutic targets and drug repurposing.
         tokenUsage: &ref_83
-          total: 875
+          total: 874
           prompt: 621
-          completion: 254
+          completion: 253
         cached: false
       success: true
       score: 1
       namedScores: &ref_26 {}
-      latencyMs: 7938
+      latencyMs: 6826
       gradingResult: &ref_84
         pass: true
         score: 1
@@ -2367,20 +2378,20 @@ results:
           action. Additionally, using a CRISPR screen to study lipid regulation,
           we discover that functionally important genes, which lack individual
           associations, are prioritized in trait-associated modules by
-          PhenoPLIER. In conclusion, by incorporating co-expressed gene groups,
-          PhenoPLIER contextualizes genetic associations and uncovers potential
-          targets that may be missed by single-gene strategies. PhenoPLIER
-          offers a novel framework for interpreting genetic associations through
-          the lens of gene modules.
+          PhenoPLIER. In conclusion, by incorporating groups of co-expressed
+          genes, PhenoPLIER provides a contextualized interpretation of genetic
+          associations and uncovers potential targets that may be missed by
+          single-gene strategies. PhenoPLIER offers a novel framework for
+          understanding genetic associations through the lens of gene modules.
         tokenUsage: &ref_85
-          total: 607
+          total: 612
           prompt: 354
-          completion: 253
+          completion: 258
         cached: false
       success: false
       score: 0.8888888888888888
       namedScores: &ref_27 {}
-      latencyMs: 7590
+      latencyMs: 7567
       error: |
         Python code returned false
         print(
@@ -2537,7 +2548,7 @@ results:
       success: true
       score: 1
       namedScores: &ref_28 {}
-      latencyMs: 7601
+      latencyMs: 6925
       gradingResult: &ref_88
         pass: true
         score: 1
@@ -2648,20 +2659,20 @@ results:
           action. Additionally, using a CRISPR screen to study lipid regulation,
           we discover that functionally important genes, which lack individual
           associations, are prioritized in trait-associated modules by
-          PhenoPLIER. In conclusion, by incorporating co-expressed gene groups,
-          PhenoPLIER contextualizes genetic associations and uncovers potential
-          targets that may be missed by single-gene strategies. PhenoPLIER
-          offers a novel framework for interpreting genetic associations through
-          the lens of gene modules.
+          PhenoPLIER. In conclusion, by incorporating groups of co-expressed
+          genes, PhenoPLIER provides a contextualized interpretation of genetic
+          associations and uncovers potential targets that may be missed by
+          single-gene strategies. PhenoPLIER offers a novel framework for
+          understanding genetic associations through the lens of gene modules.
         tokenUsage: &ref_89
-          total: 607
+          total: 612
           prompt: 354
-          completion: 253
+          completion: 258
         cached: false
       success: false
       score: 0.8888888888888888
       namedScores: &ref_29 {}
-      latencyMs: 7185
+      latencyMs: 7119
       error: |
         Python code returned false
         print(
@@ -2792,7 +2803,7 @@ results:
           therapies. While transcriptome-wide association studies have shed
           light on the role of individual genes in disease mechanisms, it is now
           recognized that gene-gene interactions play a significant role in
-          disease origin and progression. To address this, we present
+          disease origin and progression. To address this, we introduce
           PhenoPLIER, a computational approach that maps gene-trait associations
           and pharmacological perturbation data into a common latent
           representation for joint analysis. PhenoPLIER's representation is
@@ -2818,7 +2829,7 @@ results:
       success: true
       score: 1
       namedScores: &ref_30 {}
-      latencyMs: 7476
+      latencyMs: 8051
       gradingResult: &ref_92
         pass: true
         score: 1
@@ -2950,7 +2961,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_31 {}
-      latencyMs: 5432
+      latencyMs: 5528
       error: |
         Python code returned false
         print(
@@ -3073,26 +3084,28 @@ results:
           mechanistic understanding of gene expression regulation across
           different conditions. This understanding is crucial for the
           development of new therapies. In this study, we demonstrate that
-          diseases are significantly associated with gene modules expressed in
-          relevant cell types. Our approach accurately predicts known
-          drug-disease pairs and infers mechanisms of action. Additionally, our
-          analysis of lipid regulation using a CRISPR screen reveals that
-          functionally important players lack associations but are prioritized
-          in trait-associated modules by PhenoPLIER. In conclusion, PhenoPLIER,
-          by incorporating groups of co-expressed genes, offers a novel
-          framework for interpreting genetic associations and identifying
-          potential targets that may be missed by single-gene strategies. This
-          approach has the potential to advance our understanding of disease
-          etiology and drug mechanisms.
+          diseases are significantly associated with gene modules that are
+          expressed in relevant cell types. Our approach accurately predicts
+          known drug-disease pairs and provides insights into the mechanisms of
+          action. Additionally, we use a CRISPR screen to analyze lipid
+          regulation and find that functionally important players lack
+          associations but are prioritized in trait-associated modules by
+          PhenoPLIER. In conclusion, our findings show that PhenoPLIER, by
+          incorporating groups of co-expressed genes, can provide context to
+          genetic associations and identify potential targets that may be missed
+          by single-gene strategies. PhenoPLIER offers a novel framework for
+          interpreting genetic associations through the lens of gene modules,
+          advancing our understanding of disease etiology and potential
+          therapeutic targets.
         tokenUsage: &ref_95
-          total: 699
+          total: 719
           prompt: 529
-          completion: 170
+          completion: 190
         cached: false
       success: false
       score: 0.8888888888888888
       namedScores: &ref_33 {}
-      latencyMs: 5389
+      latencyMs: 5514
       error: |
         Python code returned false
         print(
@@ -3214,7 +3227,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_34 {}
-      latencyMs: 4911
+      latencyMs: 5209
       error: |
         Python code returned false
         print(
@@ -3337,26 +3350,28 @@ results:
           mechanistic understanding of gene expression regulation across
           different conditions. This understanding is crucial for the
           development of new therapies. In this study, we demonstrate that
-          diseases are significantly associated with gene modules expressed in
-          relevant cell types. Our approach accurately predicts known
-          drug-disease pairs and infers mechanisms of action. Additionally, our
-          analysis of lipid regulation using a CRISPR screen reveals that
-          functionally important players lack associations but are prioritized
-          in trait-associated modules by PhenoPLIER. In conclusion, PhenoPLIER,
-          by incorporating groups of co-expressed genes, offers a novel
-          framework for interpreting genetic associations and identifying
-          potential targets that may be missed by single-gene strategies. This
-          approach has the potential to advance our understanding of disease
-          etiology and drug mechanisms.
+          diseases are significantly associated with gene modules that are
+          expressed in relevant cell types. Our approach accurately predicts
+          known drug-disease pairs and provides insights into the mechanisms of
+          action. Additionally, we use a CRISPR screen to analyze lipid
+          regulation and find that functionally important players lack
+          associations but are prioritized in trait-associated modules by
+          PhenoPLIER. In conclusion, our findings show that PhenoPLIER, by
+          incorporating groups of co-expressed genes, can provide context to
+          genetic associations and identify potential targets that may be missed
+          by single-gene strategies. PhenoPLIER offers a novel framework for
+          interpreting genetic associations through the lens of gene modules,
+          advancing our understanding of disease etiology and potential
+          therapeutic targets.
         tokenUsage: &ref_99
-          total: 699
+          total: 719
           prompt: 529
-          completion: 170
+          completion: 190
         cached: false
       success: false
       score: 0.8888888888888888
       namedScores: &ref_35 {}
-      latencyMs: 4929
+      latencyMs: 5587
       error: |
         Python code returned false
         print(
@@ -3478,7 +3493,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_36 {}
-      latencyMs: 5209
+      latencyMs: 5279
       error: |
         Python code returned false
         print(
@@ -3601,27 +3616,27 @@ results:
           mechanistic understanding of gene expression regulation across
           different conditions. This understanding is crucial for the
           development of new therapies. In this study, we demonstrate that
-          diseases are significantly associated with gene modules that are
-          expressed in relevant cell types. Our approach accurately predicts
-          known drug-disease pairs and provides insights into the mechanisms of
-          action. Additionally, we use a CRISPR screen to analyze lipid
-          regulation and find that functionally important players lack
-          associations but are prioritized in trait-associated modules by
-          PhenoPLIER. In conclusion, PhenoPLIER, by incorporating groups of
-          co-expressed genes, offers a novel framework for interpreting genetic
-          associations and identifying potential targets that may be missed by
-          single-gene strategies. This approach has the potential to advance our
+          diseases are significantly associated with gene modules expressed in
+          relevant cell types. Our approach accurately predicts known
+          drug-disease pairs and provides insights into the mechanisms of
+          action. Additionally, our analysis of lipid regulation using a CRISPR
+          screen reveals that functionally important players lack associations
+          but are prioritized in trait-associated modules by PhenoPLIER. In
+          conclusion, PhenoPLIER, by incorporating groups of co-expressed genes,
+          offers a novel framework for interpreting genetic associations and
+          identifying potential targets that may be missed by single-gene
+          strategies. This approach has the potential to advance our
           understanding of disease etiology and facilitate drug repurposing
           efforts.
         tokenUsage: &ref_103
-          total: 708
+          total: 705
           prompt: 529
-          completion: 179
+          completion: 176
         cached: false
       success: false
       score: 0.8888888888888888
       namedScores: &ref_37 {}
-      latencyMs: 5847
+      latencyMs: 4985
       error: |
         Python code returned false
         print(
@@ -3743,7 +3758,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_38 {}
-      latencyMs: 5757
+      latencyMs: 5074
       error: |
         Python code returned false
         print(
@@ -3872,22 +3887,22 @@ results:
           action. Additionally, we use a CRISPR screen to analyze lipid
           regulation and find that functionally important players lack
           associations but are prioritized in trait-associated modules by
-          PhenoPLIER. In conclusion, our findings show that by incorporating
-          groups of co-expressed genes, PhenoPLIER can provide context to
+          PhenoPLIER. In conclusion, our findings show that PhenoPLIER, by
+          incorporating groups of co-expressed genes, can provide context to
           genetic associations and identify potential targets that may be missed
           by single-gene strategies. PhenoPLIER offers a novel framework for
           interpreting genetic associations through the lens of gene modules,
           advancing our understanding of disease etiology and potential
           therapeutic targets.
         tokenUsage: &ref_107
-          total: 718
+          total: 719
           prompt: 529
-          completion: 189
+          completion: 190
         cached: false
       success: false
       score: 0.8888888888888888
       namedScores: &ref_39 {}
-      latencyMs: 6336
+      latencyMs: 5276
       error: |
         Python code returned false
         print(
@@ -4009,7 +4024,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_40 {}
-      latencyMs: 5339
+      latencyMs: 5226
       error: |
         Python code returned false
         print(
@@ -4138,22 +4153,22 @@ results:
           action. Additionally, we use a CRISPR screen to analyze lipid
           regulation and find that functionally important players lack
           associations but are prioritized in trait-associated modules by
-          PhenoPLIER. In conclusion, our findings show that PhenoPLIER, by
-          incorporating groups of co-expressed genes, can provide context to
+          PhenoPLIER. In conclusion, our findings show that by incorporating
+          groups of co-expressed genes, PhenoPLIER can provide context to
           genetic associations and identify potential targets that may be missed
           by single-gene strategies. PhenoPLIER offers a novel framework for
           interpreting genetic associations through the lens of gene modules,
           advancing our understanding of disease etiology and potential
           therapeutic targets.
         tokenUsage: &ref_111
-          total: 719
+          total: 718
           prompt: 529
-          completion: 190
+          completion: 189
         cached: false
       success: false
       score: 0.8888888888888888
       namedScores: &ref_41 {}
-      latencyMs: 5263
+      latencyMs: 5370
       error: |
         Python code returned false
         print(
@@ -4312,11 +4327,265 @@ results:
       success: true
       score: 1
       namedScores: &ref_42 {}
-      latencyMs: 6284
+      latencyMs: 5992
       gradingResult: &ref_114
         pass: true
         score: 1
         namedScores: *ref_42
+        reason: All assertions passed
+        tokensUsed:
+          total: 0
+          prompt: 0
+          completion: 0
+        componentResults:
+          - pass: true
+            score: 1
+            reason: Assertion passed
+            assertion: *ref_3
+          - pass: true
+            score: 1
+            reason: Assertion passed
+            assertion: *ref_4
+          - pass: true
+            score: 1
+            reason: Assertion passed
+            assertion: *ref_5
+          - pass: true
+            score: 1
+            reason: Assertion passed
+            assertion: *ref_6
+          - pass: true
+            score: 1
+            reason: Assertion passed
+            assertion: *ref_7
+          - pass: true
+            score: 1
+            reason: Assertion passed
+            assertion: *ref_8
+          - pass: true
+            score: 1
+            reason: Assertion passed
+            assertion: *ref_9
+          - pass: true
+            score: 1
+            reason: Assertion passed
+            assertion: *ref_10
+          - pass: true
+            score: 1
+            reason: Assertion passed
+            assertion: *ref_11
+        assertion: null
+    - provider:
+        id: openai:gpt-3.5-turbo
+      prompt:
+        raw: >-
+          You are a scientist with copy-editing skills who will help in
+          improving the text of a manuscript with title 'Projecting genetic
+          associations through gene expression patterns highlights disease
+          etiology and drug mechanisms' and keywords 'genetic studies,
+          functional genomics, gene co-expression, therapeutic targets, drug
+          repurposing, clustering of complex traits'. Revise the following
+          abstract of this manuscript, so it has a clear sentence structure and
+          follows a context-content-conclusion (C-C-C) scheme and fits in a
+          single paragraph. Make changes only when they are absolutely necessary
+          to follow the C-C-C scheme. Under the C-C-C scheme, the abstract must
+          follow the following structure: 1) The context must communicate to the
+          reader what gap the paper will fill. The first sentence orients the
+          reader by introducing the broader field in which the particular
+          research is situated. Then, this context is narrowed until it lands on
+          the open question that the research answered. A successful context
+          section sets the stage for distinguishing the paper’s contributions
+          from the current state of the art by communicating what is missing in
+          the literature (i.e., the specific gap) and why that matters (i.e.,
+          the connection between the specific gap and the broader context that
+          the paper opened with); 2) The content ("Here we") first describes the
+          novel method or approach that you used to fill the gap or question.
+          Then you present the meat—your executive summary of the results; 3)
+          Finally, the conclusion interprets the results to answer the question
+          that was posed at the end of the context section. There is often a
+          second part to the conclusion section that highlights how this
+          conclusion moves the broader field forward (i.e., "broader
+          significance").
+
+
+          Input paragraph: Genes act in concert with each other in specific
+          contexts to perform their functions. Determining how these genes
+          influence complex traits requires a mechanistic understanding of
+          expression regulation across different conditions. It has been shown
+          that this insight is critical for developing new therapies.
+          Transcriptome-wide association studies have helped uncover the role of
+          individual genes in disease-relevant mechanisms. However, modern
+          models of the architecture of complex traits predict that gene-gene
+          interactions play a crucial role in disease origin and progression.
+          Here we introduce PhenoPLIER, a computational approach that maps
+          gene-trait associations and pharmacological perturbation data into a
+          common latent representation for a joint analysis. This representation
+          is based on modules of genes with similar expression patterns across
+          the same conditions. We observe that diseases are significantly
+          associated with gene modules expressed in relevant cell types, and our
+          approach is accurate in predicting known drug-disease pairs and
+          inferring mechanisms of action. Furthermore, using a CRISPR screen to
+          analyze lipid regulation, we find that functionally important players
+          lack associations but are prioritized in trait-associated modules by
+          PhenoPLIER.
+
+
+          Revised paragraph:
+        display: >-
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/candidate.txt
+      vars: *ref_43
+      response:
+        output: >-
+          Genes work together in specific contexts to carry out their functions,
+          and understanding how these genes influence complex traits requires a
+          mechanistic understanding of gene expression regulation across
+          different conditions. This understanding is crucial for the
+          development of new therapies. While transcriptome-wide association
+          studies have helped uncover the role of individual genes in disease
+          mechanisms, modern models of complex traits suggest that gene-gene
+          interactions are also important in disease origin and progression. In
+          this study, we present PhenoPLIER, a computational approach that maps
+          gene-trait associations and pharmacological perturbation data into a
+          common latent representation for joint analysis. This representation
+          is based on modules of genes with similar expression patterns across
+          the same conditions. Our results show that diseases are significantly
+          associated with gene modules expressed in relevant cell types, and our
+          approach accurately predicts known drug-disease pairs and infers
+          mechanisms of action. Additionally, using a CRISPR screen to analyze
+          lipid regulation, we find that functionally important players lack
+          associations but are prioritized in trait-associated modules by
+          PhenoPLIER. This study fills the gap in understanding the role of
+          gene-gene interactions in complex traits and provides a valuable tool
+          for identifying therapeutic targets and repurposing drugs.
+        tokenUsage: &ref_115
+          total: 805
+          prompt: 570
+          completion: 235
+        cached: false
+      success: true
+      score: 1
+      namedScores: &ref_44 {}
+      latencyMs: 6785
+      gradingResult: &ref_116
+        pass: true
+        score: 1
+        namedScores: *ref_44
+        reason: All assertions passed
+        tokensUsed:
+          total: 0
+          prompt: 0
+          completion: 0
+        componentResults:
+          - pass: true
+            score: 1
+            reason: Assertion passed
+            assertion: *ref_3
+          - pass: true
+            score: 1
+            reason: Assertion passed
+            assertion: *ref_4
+          - pass: true
+            score: 1
+            reason: Assertion passed
+            assertion: *ref_5
+          - pass: true
+            score: 1
+            reason: Assertion passed
+            assertion: *ref_6
+          - pass: true
+            score: 1
+            reason: Assertion passed
+            assertion: *ref_7
+          - pass: true
+            score: 1
+            reason: Assertion passed
+            assertion: *ref_8
+          - pass: true
+            score: 1
+            reason: Assertion passed
+            assertion: *ref_9
+          - pass: true
+            score: 1
+            reason: Assertion passed
+            assertion: *ref_10
+          - pass: true
+            score: 1
+            reason: Assertion passed
+            assertion: *ref_11
+        assertion: null
+    - provider:
+        id: openai:gpt-3.5-turbo
+      prompt:
+        raw: >-
+          You are a scientist with copy-editing skills who will help in
+          improving the text of a manuscript with title 'Projecting genetic
+          associations through gene expression patterns highlights disease
+          etiology and drug mechanisms' and keywords 'genetic studies,
+          functional genomics, gene co-expression, therapeutic targets, drug
+          repurposing, clustering of complex traits'. Revise the following
+          abstract of this manuscript.
+
+
+          Input paragraph: Genes act in concert with each other in specific
+          contexts to perform their functions. Determining how these genes
+          influence complex traits requires a mechanistic understanding of
+          expression regulation across different conditions. It has been shown
+          that this insight is critical for developing new therapies.
+          Transcriptome-wide association studies have helped uncover the role of
+          individual genes in disease-relevant mechanisms. However, modern
+          models of the architecture of complex traits predict that gene-gene
+          interactions play a crucial role in disease origin and progression.
+          Here we introduce PhenoPLIER, a computational approach that maps
+          gene-trait associations and pharmacological perturbation data into a
+          common latent representation for a joint analysis. This representation
+          is based on modules of genes with similar expression patterns across
+          the same conditions. We observe that diseases are significantly
+          associated with gene modules expressed in relevant cell types, and our
+          approach is accurate in predicting known drug-disease pairs and
+          inferring mechanisms of action. Furthermore, using a CRISPR screen to
+          analyze lipid regulation, we find that functionally important players
+          lack associations but are prioritized in trait-associated modules by
+          PhenoPLIER.
+
+
+          Revised paragraph:
+        display: >-
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/baseline.txt
+      vars: *ref_43
+      response:
+        output: >-
+          Genes work together in specific contexts to carry out their functions.
+          To understand how these genes influence complex traits, it is
+          important to have a mechanistic understanding of how gene expression
+          is regulated under different conditions. This understanding is crucial
+          for the development of new therapies. Transcriptome-wide association
+          studies have helped uncover the role of individual genes in disease
+          mechanisms. However, current models of complex traits suggest that
+          interactions between genes are also important in the origin and
+          progression of diseases. In this study, we present PhenoPLIER, a
+          computational approach that combines gene-trait associations and
+          pharmacological perturbation data to analyze them together. We use
+          modules of genes with similar expression patterns across the same
+          conditions to create a common representation. We find that diseases
+          are significantly associated with gene modules expressed in relevant
+          cell types, and our approach accurately predicts known drug-disease
+          pairs and identifies mechanisms of action. Additionally, we use a
+          CRISPR screen to study lipid regulation and find that functionally
+          important genes, which may not have direct associations, are
+          prioritized in trait-associated modules by PhenoPLIER.
+        tokenUsage: &ref_117
+          total: 516
+          prompt: 303
+          completion: 213
+        cached: false
+      success: true
+      score: 1
+      namedScores: &ref_45 {}
+      latencyMs: 6649
+      gradingResult: &ref_118
+        pass: true
+        score: 1
+        namedScores: *ref_45
         reason: All assertions passed
         tokensUsed:
           total: 0
@@ -4443,269 +4712,15 @@ results:
           understanding the role of gene-gene interactions in complex traits and
           provides a valuable tool for identifying therapeutic targets and
           repurposing drugs.
-        tokenUsage: &ref_115
+        tokenUsage: &ref_119
           total: 807
           prompt: 570
           completion: 237
         cached: false
       success: true
       score: 1
-      namedScores: &ref_44 {}
-      latencyMs: 6724
-      gradingResult: &ref_116
-        pass: true
-        score: 1
-        namedScores: *ref_44
-        reason: All assertions passed
-        tokensUsed:
-          total: 0
-          prompt: 0
-          completion: 0
-        componentResults:
-          - pass: true
-            score: 1
-            reason: Assertion passed
-            assertion: *ref_3
-          - pass: true
-            score: 1
-            reason: Assertion passed
-            assertion: *ref_4
-          - pass: true
-            score: 1
-            reason: Assertion passed
-            assertion: *ref_5
-          - pass: true
-            score: 1
-            reason: Assertion passed
-            assertion: *ref_6
-          - pass: true
-            score: 1
-            reason: Assertion passed
-            assertion: *ref_7
-          - pass: true
-            score: 1
-            reason: Assertion passed
-            assertion: *ref_8
-          - pass: true
-            score: 1
-            reason: Assertion passed
-            assertion: *ref_9
-          - pass: true
-            score: 1
-            reason: Assertion passed
-            assertion: *ref_10
-          - pass: true
-            score: 1
-            reason: Assertion passed
-            assertion: *ref_11
-        assertion: null
-    - provider:
-        id: openai:gpt-3.5-turbo
-      prompt:
-        raw: >-
-          You are a scientist with copy-editing skills who will help in
-          improving the text of a manuscript with title 'Projecting genetic
-          associations through gene expression patterns highlights disease
-          etiology and drug mechanisms' and keywords 'genetic studies,
-          functional genomics, gene co-expression, therapeutic targets, drug
-          repurposing, clustering of complex traits'. Revise the following
-          abstract of this manuscript.
-
-
-          Input paragraph: Genes act in concert with each other in specific
-          contexts to perform their functions. Determining how these genes
-          influence complex traits requires a mechanistic understanding of
-          expression regulation across different conditions. It has been shown
-          that this insight is critical for developing new therapies.
-          Transcriptome-wide association studies have helped uncover the role of
-          individual genes in disease-relevant mechanisms. However, modern
-          models of the architecture of complex traits predict that gene-gene
-          interactions play a crucial role in disease origin and progression.
-          Here we introduce PhenoPLIER, a computational approach that maps
-          gene-trait associations and pharmacological perturbation data into a
-          common latent representation for a joint analysis. This representation
-          is based on modules of genes with similar expression patterns across
-          the same conditions. We observe that diseases are significantly
-          associated with gene modules expressed in relevant cell types, and our
-          approach is accurate in predicting known drug-disease pairs and
-          inferring mechanisms of action. Furthermore, using a CRISPR screen to
-          analyze lipid regulation, we find that functionally important players
-          lack associations but are prioritized in trait-associated modules by
-          PhenoPLIER.
-
-
-          Revised paragraph:
-        display: >-
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/baseline.txt
-      vars: *ref_43
-      response:
-        output: >-
-          Genes work together in specific contexts to carry out their functions.
-          To understand how these genes influence complex traits, it is
-          important to have a mechanistic understanding of how gene expression
-          is regulated under different conditions. This understanding is crucial
-          for the development of new therapies. Transcriptome-wide association
-          studies have helped uncover the role of individual genes in disease
-          mechanisms. However, current models of complex traits suggest that
-          interactions between genes are also important in the origin and
-          progression of diseases. In this study, we present PhenoPLIER, a
-          computational approach that combines gene-trait associations and
-          pharmacological perturbation data to analyze them together. We use
-          modules of genes with similar expression patterns across the same
-          conditions to create a common representation. We find that diseases
-          are significantly associated with gene modules expressed in relevant
-          cell types, and our approach accurately predicts known drug-disease
-          pairs and identifies mechanisms of action. Additionally, we use a
-          CRISPR screen to study lipid regulation and find that functionally
-          important genes, which may not have direct associations, are
-          prioritized in trait-associated modules by PhenoPLIER.
-        tokenUsage: &ref_117
-          total: 516
-          prompt: 303
-          completion: 213
-        cached: false
-      success: true
-      score: 1
-      namedScores: &ref_45 {}
-      latencyMs: 6393
-      gradingResult: &ref_118
-        pass: true
-        score: 1
-        namedScores: *ref_45
-        reason: All assertions passed
-        tokensUsed:
-          total: 0
-          prompt: 0
-          completion: 0
-        componentResults:
-          - pass: true
-            score: 1
-            reason: Assertion passed
-            assertion: *ref_3
-          - pass: true
-            score: 1
-            reason: Assertion passed
-            assertion: *ref_4
-          - pass: true
-            score: 1
-            reason: Assertion passed
-            assertion: *ref_5
-          - pass: true
-            score: 1
-            reason: Assertion passed
-            assertion: *ref_6
-          - pass: true
-            score: 1
-            reason: Assertion passed
-            assertion: *ref_7
-          - pass: true
-            score: 1
-            reason: Assertion passed
-            assertion: *ref_8
-          - pass: true
-            score: 1
-            reason: Assertion passed
-            assertion: *ref_9
-          - pass: true
-            score: 1
-            reason: Assertion passed
-            assertion: *ref_10
-          - pass: true
-            score: 1
-            reason: Assertion passed
-            assertion: *ref_11
-        assertion: null
-    - provider:
-        id: openai:gpt-3.5-turbo
-      prompt:
-        raw: >-
-          You are a scientist with copy-editing skills who will help in
-          improving the text of a manuscript with title 'Projecting genetic
-          associations through gene expression patterns highlights disease
-          etiology and drug mechanisms' and keywords 'genetic studies,
-          functional genomics, gene co-expression, therapeutic targets, drug
-          repurposing, clustering of complex traits'. Revise the following
-          abstract of this manuscript, so it has a clear sentence structure and
-          follows a context-content-conclusion (C-C-C) scheme and fits in a
-          single paragraph. Make changes only when they are absolutely necessary
-          to follow the C-C-C scheme. Under the C-C-C scheme, the abstract must
-          follow the following structure: 1) The context must communicate to the
-          reader what gap the paper will fill. The first sentence orients the
-          reader by introducing the broader field in which the particular
-          research is situated. Then, this context is narrowed until it lands on
-          the open question that the research answered. A successful context
-          section sets the stage for distinguishing the paper’s contributions
-          from the current state of the art by communicating what is missing in
-          the literature (i.e., the specific gap) and why that matters (i.e.,
-          the connection between the specific gap and the broader context that
-          the paper opened with); 2) The content ("Here we") first describes the
-          novel method or approach that you used to fill the gap or question.
-          Then you present the meat—your executive summary of the results; 3)
-          Finally, the conclusion interprets the results to answer the question
-          that was posed at the end of the context section. There is often a
-          second part to the conclusion section that highlights how this
-          conclusion moves the broader field forward (i.e., "broader
-          significance").
-
-
-          Input paragraph: Genes act in concert with each other in specific
-          contexts to perform their functions. Determining how these genes
-          influence complex traits requires a mechanistic understanding of
-          expression regulation across different conditions. It has been shown
-          that this insight is critical for developing new therapies.
-          Transcriptome-wide association studies have helped uncover the role of
-          individual genes in disease-relevant mechanisms. However, modern
-          models of the architecture of complex traits predict that gene-gene
-          interactions play a crucial role in disease origin and progression.
-          Here we introduce PhenoPLIER, a computational approach that maps
-          gene-trait associations and pharmacological perturbation data into a
-          common latent representation for a joint analysis. This representation
-          is based on modules of genes with similar expression patterns across
-          the same conditions. We observe that diseases are significantly
-          associated with gene modules expressed in relevant cell types, and our
-          approach is accurate in predicting known drug-disease pairs and
-          inferring mechanisms of action. Furthermore, using a CRISPR screen to
-          analyze lipid regulation, we find that functionally important players
-          lack associations but are prioritized in trait-associated modules by
-          PhenoPLIER.
-
-
-          Revised paragraph:
-        display: >-
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/candidate.txt
-      vars: *ref_43
-      response:
-        output: >-
-          Genes work together in specific contexts to carry out their functions,
-          and understanding how these genes influence complex traits requires a
-          mechanistic understanding of gene expression regulation across
-          different conditions. This understanding is crucial for the
-          development of new therapies. While transcriptome-wide association
-          studies have helped uncover the role of individual genes in disease
-          mechanisms, modern models of complex traits suggest that gene-gene
-          interactions are also important in disease origin and progression. In
-          this study, we present PhenoPLIER, a computational approach that maps
-          gene-trait associations and pharmacological perturbation data into a
-          common latent representation for joint analysis. This representation
-          is based on modules of genes with similar expression patterns across
-          the same conditions. Our results show that diseases are significantly
-          associated with gene modules expressed in relevant cell types, and our
-          approach accurately predicts known drug-disease pairs and infers
-          mechanisms of action. Additionally, using a CRISPR screen to analyze
-          lipid regulation, we find that functionally important players lack
-          associations but are prioritized in trait-associated modules by
-          PhenoPLIER. This study fills the gap in understanding the role of
-          gene-gene interactions in complex traits and provides a valuable tool
-          for identifying therapeutic targets and repurposing drugs.
-        tokenUsage: &ref_119
-          total: 805
-          prompt: 570
-          completion: 235
-        cached: false
-      success: true
-      score: 1
       namedScores: &ref_46 {}
-      latencyMs: 6203
+      latencyMs: 6356
       gradingResult: &ref_120
         pass: true
         score: 1
@@ -4821,7 +4836,7 @@ results:
       success: true
       score: 1
       namedScores: &ref_47 {}
-      latencyMs: 6112
+      latencyMs: 6309
       gradingResult: &ref_122
         pass: true
         score: 1
@@ -4959,7 +4974,7 @@ results:
       success: true
       score: 1
       namedScores: &ref_48 {}
-      latencyMs: 23388
+      latencyMs: 6014
       gradingResult: &ref_124
         pass: true
         score: 1
@@ -5075,7 +5090,7 @@ results:
       success: true
       score: 1
       namedScores: &ref_49 {}
-      latencyMs: 5377
+      latencyMs: 6200
       gradingResult: &ref_126
         pass: true
         score: 1
@@ -5192,28 +5207,29 @@ results:
           studies have helped uncover the role of individual genes in disease
           mechanisms, modern models of complex traits suggest that gene-gene
           interactions are also important in disease origin and progression. In
-          this study, we present PhenoPLIER, a computational approach that maps
-          gene-trait associations and pharmacological perturbation data into a
-          common latent representation for joint analysis. This representation
-          is based on modules of genes with similar expression patterns across
-          the same conditions. Our results show that diseases are significantly
-          associated with gene modules expressed in relevant cell types, and our
-          approach accurately predicts known drug-disease pairs and infers
-          mechanisms of action. Additionally, using a CRISPR screen to analyze
-          lipid regulation, we find that functionally important players lack
-          associations but are prioritized in trait-associated modules by
-          PhenoPLIER. This study fills the gap in understanding the role of
-          gene-gene interactions in complex traits and provides a valuable tool
-          for identifying therapeutic targets and repurposing drugs.
+          this study, we present PhenoPLIER, a computational approach that
+          integrates gene-trait associations and pharmacological perturbation
+          data into a common latent representation for joint analysis. This
+          representation is based on modules of genes with similar expression
+          patterns across the same conditions. Our results show that diseases
+          are significantly associated with gene modules expressed in relevant
+          cell types, and our approach accurately predicts known drug-disease
+          pairs and infers mechanisms of action. Additionally, we used a CRISPR
+          screen to analyze lipid regulation and found that functionally
+          important players, which lack associations, are prioritized in
+          trait-associated modules by PhenoPLIER. This study fills the gap in
+          understanding the role of gene-gene interactions in complex traits and
+          provides a valuable tool for identifying therapeutic targets and
+          repurposing drugs.
         tokenUsage: &ref_127
-          total: 805
+          total: 807
           prompt: 570
-          completion: 235
+          completion: 237
         cached: false
       success: true
       score: 1
       namedScores: &ref_50 {}
-      latencyMs: 7081
+      latencyMs: 7041
       gradingResult: &ref_128
         pass: true
         score: 1
@@ -5329,7 +5345,7 @@ results:
       success: true
       score: 1
       namedScores: &ref_51 {}
-      latencyMs: 6106
+      latencyMs: 6030
       gradingResult: &ref_130
         pass: true
         score: 1
@@ -5446,28 +5462,29 @@ results:
           studies have helped uncover the role of individual genes in disease
           mechanisms, modern models of complex traits suggest that gene-gene
           interactions are also important in disease origin and progression. In
-          this study, we present PhenoPLIER, a computational approach that maps
-          gene-trait associations and pharmacological perturbation data into a
-          common latent representation for joint analysis. This representation
-          is based on modules of genes with similar expression patterns across
-          the same conditions. Our results show that diseases are significantly
-          associated with gene modules expressed in relevant cell types, and our
-          approach accurately predicts known drug-disease pairs and infers
-          mechanisms of action. Additionally, using a CRISPR screen to analyze
-          lipid regulation, we find that functionally important players lack
-          associations but are prioritized in trait-associated modules by
-          PhenoPLIER. This study fills the gap in understanding the role of
-          gene-gene interactions in complex traits and provides a valuable tool
-          for identifying therapeutic targets and repurposing drugs.
+          this study, we present PhenoPLIER, a computational approach that
+          integrates gene-trait associations and pharmacological perturbation
+          data into a common latent representation for joint analysis. This
+          representation is based on modules of genes with similar expression
+          patterns across the same conditions. Our results show that diseases
+          are significantly associated with gene modules expressed in relevant
+          cell types, and our approach accurately predicts known drug-disease
+          pairs and infers mechanisms of action. Additionally, we used a CRISPR
+          screen to analyze lipid regulation and found that functionally
+          important players, which lack associations, are prioritized in
+          trait-associated modules by PhenoPLIER. This study fills the gap in
+          understanding the role of gene-gene interactions in complex traits and
+          provides a valuable tool for identifying therapeutic targets and
+          repurposing drugs.
         tokenUsage: &ref_131
-          total: 805
+          total: 807
           prompt: 570
-          completion: 235
+          completion: 237
         cached: false
       success: true
       score: 1
       namedScores: &ref_52 {}
-      latencyMs: 6324
+      latencyMs: 6284
       gradingResult: &ref_132
         pass: true
         score: 1
@@ -5519,9 +5536,9 @@ results:
     successes: 25
     failures: 15
     tokenUsage:
-      total: 27288
+      total: 27342
       prompt: 18100
-      completion: 9188
+      completion: 9242
       cached: 0
   table:
     head:
@@ -5546,11 +5563,11 @@ results:
             testFailCount: 10
             assertPassCount: 170
             assertFailCount: 10
-            totalLatencyMs: 131637
+            totalLatencyMs: 129288
             tokenUsage:
-              total: 10923
+              total: 10937
               prompt: 6380
-              completion: 4543
+              completion: 4557
               cached: 0
             namedScores: {}
         - raw: >-
@@ -5593,11 +5610,11 @@ results:
             testFailCount: 5
             assertPassCount: 175
             assertFailCount: 5
-            totalLatencyMs: 152363
+            totalLatencyMs: 130132
             tokenUsage:
-              total: 16365
+              total: 16405
               prompt: 11720
-              completion: 4645
+              completion: 4685
               cached: 0
             namedScores: {}
       vars:
@@ -5625,12 +5642,12 @@ results:
               gene-trait associations and pharmacological perturbation data into
               a common latent representation for joint analysis. This
               representation is based on modules of genes with similar
-              expression patterns across the same conditions. Our results show
-              that diseases are significantly associated with gene modules
-              expressed in relevant cell types, and PhenoPLIER accurately
-              predicts known drug-disease pairs and infers mechanisms of action.
-              Additionally, using a CRISPR screen to analyze lipid regulation,
-              we find that functionally important genes without associations are
+              expression patterns across the same conditions. We find that
+              diseases are significantly associated with gene modules expressed
+              in relevant cell types, and our approach accurately predicts known
+              drug-disease pairs and infers mechanisms of action. Additionally,
+              using a CRISPR screen to analyze lipid regulation, we discover
+              that functionally important players, which lack associations, are
               prioritized in trait-associated modules by PhenoPLIER. In
               conclusion, by incorporating groups of co-expressed genes,
               PhenoPLIER can provide context to genetic associations and
@@ -5677,7 +5694,7 @@ results:
 
               Revised paragraph:
             provider: openai:gpt-3.5-turbo
-            latencyMs: 9209
+            latencyMs: 7498
             tokenUsage: *ref_53
             gradingResult: *ref_54
           - pass: true
@@ -5770,7 +5787,7 @@ results:
 
               Revised paragraph:
             provider: openai:gpt-3.5-turbo
-            latencyMs: 7553
+            latencyMs: 6624
             tokenUsage: *ref_55
             gradingResult: *ref_56
         vars:
@@ -5825,12 +5842,12 @@ results:
               gene-trait associations and pharmacological perturbation data into
               a common latent representation for joint analysis. This
               representation is based on modules of genes with similar
-              expression patterns across the same conditions. We find that
-              diseases are significantly associated with gene modules expressed
-              in relevant cell types, and our approach accurately predicts known
-              drug-disease pairs and infers mechanisms of action. Additionally,
-              using a CRISPR screen to analyze lipid regulation, we discover
-              that functionally important players, which lack associations, are
+              expression patterns across the same conditions. Our results show
+              that diseases are significantly associated with gene modules
+              expressed in relevant cell types, and PhenoPLIER accurately
+              predicts known drug-disease pairs and infers mechanisms of action.
+              Additionally, using a CRISPR screen to analyze lipid regulation,
+              we find that functionally important genes without associations are
               prioritized in trait-associated modules by PhenoPLIER. In
               conclusion, by incorporating groups of co-expressed genes,
               PhenoPLIER can provide context to genetic associations and
@@ -5877,7 +5894,7 @@ results:
 
               Revised paragraph:
             provider: openai:gpt-3.5-turbo
-            latencyMs: 8310
+            latencyMs: 6886
             tokenUsage: *ref_57
             gradingResult: *ref_58
           - pass: true
@@ -5970,7 +5987,7 @@ results:
 
               Revised paragraph:
             provider: openai:gpt-3.5-turbo
-            latencyMs: 7142
+            latencyMs: 6545
             tokenUsage: *ref_59
             gradingResult: *ref_60
         vars:
@@ -6025,12 +6042,12 @@ results:
               gene-trait associations and pharmacological perturbation data into
               a common latent representation for joint analysis. This
               representation is based on modules of genes with similar
-              expression patterns across the same conditions. Our results show
-              that diseases are significantly associated with gene modules
-              expressed in relevant cell types, and PhenoPLIER accurately
-              predicts known drug-disease pairs and infers mechanisms of action.
-              Additionally, using a CRISPR screen to analyze lipid regulation,
-              we find that functionally important genes without associations are
+              expression patterns across the same conditions. We find that
+              diseases are significantly associated with gene modules expressed
+              in relevant cell types, and our approach accurately predicts known
+              drug-disease pairs and infers mechanisms of action. Additionally,
+              using a CRISPR screen to analyze lipid regulation, we discover
+              that functionally important players, which lack associations, are
               prioritized in trait-associated modules by PhenoPLIER. In
               conclusion, by incorporating groups of co-expressed genes,
               PhenoPLIER can provide context to genetic associations and
@@ -6077,7 +6094,7 @@ results:
 
               Revised paragraph:
             provider: openai:gpt-3.5-turbo
-            latencyMs: 6807
+            latencyMs: 7467
             tokenUsage: *ref_61
             gradingResult: *ref_62
           - pass: true
@@ -6170,7 +6187,7 @@ results:
 
               Revised paragraph:
             provider: openai:gpt-3.5-turbo
-            latencyMs: 7122
+            latencyMs: 7060
             tokenUsage: *ref_63
             gradingResult: *ref_64
         vars:
@@ -6277,7 +6294,7 @@ results:
 
               Revised paragraph:
             provider: openai:gpt-3.5-turbo
-            latencyMs: 7066
+            latencyMs: 6659
             tokenUsage: *ref_65
             gradingResult: *ref_66
           - pass: true
@@ -6370,7 +6387,7 @@ results:
 
               Revised paragraph:
             provider: openai:gpt-3.5-turbo
-            latencyMs: 7869
+            latencyMs: 7111
             tokenUsage: *ref_67
             gradingResult: *ref_68
         vars:
@@ -6425,15 +6442,15 @@ results:
               gene-trait associations and pharmacological perturbation data into
               a common latent representation for joint analysis. This
               representation is based on modules of genes with similar
-              expression patterns across the same conditions. We find that
-              diseases are significantly associated with gene modules expressed
-              in relevant cell types, and our approach accurately predicts known
-              drug-disease pairs and infers mechanisms of action. Additionally,
-              using a CRISPR screen to analyze lipid regulation, we discover
-              that functionally important players, which lack associations, are
-              prioritized in trait-associated modules by PhenoPLIER. In
-              conclusion, by incorporating groups of co-expressed genes,
-              PhenoPLIER can provide context to genetic associations and
+              expression patterns across the same conditions. Our results show
+              that diseases are significantly associated with gene modules
+              expressed in relevant cell types, and PhenoPLIER accurately
+              predicts known drug-disease pairs and infers mechanisms of action.
+              Additionally, using a CRISPR screen to analyze lipid regulation,
+              we find that functionally important genes, which lack individual
+              associations, are prioritized in trait-associated modules by
+              PhenoPLIER. In conclusion, by incorporating groups of co-expressed
+              genes, PhenoPLIER can provide context to genetic associations and
               identify potential targets that may be missed by single-gene
               strategies. PhenoPLIER offers a novel framework for interpreting
               genetic associations through the lens of gene modules.
@@ -6477,7 +6494,7 @@ results:
 
               Revised paragraph:
             provider: openai:gpt-3.5-turbo
-            latencyMs: 7585
+            latencyMs: 7133
             tokenUsage: *ref_69
             gradingResult: *ref_70
           - pass: true
@@ -6570,7 +6587,7 @@ results:
 
               Revised paragraph:
             provider: openai:gpt-3.5-turbo
-            latencyMs: 8657
+            latencyMs: 7088
             tokenUsage: *ref_71
             gradingResult: *ref_72
         vars:
@@ -6641,11 +6658,11 @@ results:
               lipid regulation, we discover that functionally important genes,
               which lack individual associations, are prioritized in
               trait-associated modules by PhenoPLIER. In conclusion, by
-              incorporating groups of co-expressed genes, PhenoPLIER provides a
-              contextualized interpretation of genetic associations and uncovers
-              potential targets that may be missed by single-gene strategies.
-              PhenoPLIER offers a novel framework for understanding genetic
-              associations through the lens of gene modules.
+              incorporating co-expressed gene groups, PhenoPLIER contextualizes
+              genetic associations and uncovers potential targets that may be
+              missed by single-gene strategies. PhenoPLIER offers a novel
+              framework for interpreting genetic associations through the lens
+              of gene modules.
             prompt: >-
               You are a scientist with copy-editing skills who will help in
               improving the text of a manuscript with title 'Projecting genetic
@@ -6685,7 +6702,7 @@ results:
 
               Revised paragraph:
             provider: openai:gpt-3.5-turbo
-            latencyMs: 7452
+            latencyMs: 7423
             tokenUsage: *ref_73
             gradingResult: *ref_74
           - pass: true
@@ -6698,7 +6715,7 @@ results:
               studies have shed light on the role of individual genes in disease
               mechanisms, it is now recognized that gene-gene interactions play
               a significant role in disease origin and progression. To address
-              this, we present PhenoPLIER, a computational approach that maps
+              this, we introduce PhenoPLIER, a computational approach that maps
               gene-trait associations and pharmacological perturbation data into
               a common latent representation for joint analysis. PhenoPLIER's
               representation is based on modules of genes with similar
@@ -6776,7 +6793,7 @@ results:
 
               Revised paragraph:
             provider: openai:gpt-3.5-turbo
-            latencyMs: 7081
+            latencyMs: 6997
             tokenUsage: *ref_75
             gradingResult: *ref_76
         vars:
@@ -6848,11 +6865,11 @@ results:
               lipid regulation, we discover that functionally important genes,
               which lack individual associations, are prioritized in
               trait-associated modules by PhenoPLIER. In conclusion, by
-              incorporating co-expressed gene groups, PhenoPLIER contextualizes
-              genetic associations and uncovers potential targets that may be
-              missed by single-gene strategies. PhenoPLIER offers a novel
-              framework for interpreting genetic associations through the lens
-              of gene modules.
+              incorporating groups of co-expressed genes, PhenoPLIER provides a
+              contextualized interpretation of genetic associations and uncovers
+              potential targets that may be missed by single-gene strategies.
+              PhenoPLIER offers a novel framework for understanding genetic
+              associations through the lens of gene modules.
             prompt: >-
               You are a scientist with copy-editing skills who will help in
               improving the text of a manuscript with title 'Projecting genetic
@@ -6892,7 +6909,7 @@ results:
 
               Revised paragraph:
             provider: openai:gpt-3.5-turbo
-            latencyMs: 6512
+            latencyMs: 6901
             tokenUsage: *ref_77
             gradingResult: *ref_78
           - pass: true
@@ -6983,7 +7000,7 @@ results:
 
               Revised paragraph:
             provider: openai:gpt-3.5-turbo
-            latencyMs: 6440
+            latencyMs: 7693
             tokenUsage: *ref_79
             gradingResult: *ref_80
         vars:
@@ -7099,7 +7116,7 @@ results:
 
               Revised paragraph:
             provider: openai:gpt-3.5-turbo
-            latencyMs: 7001
+            latencyMs: 7139
             tokenUsage: *ref_81
             gradingResult: *ref_82
           - pass: true
@@ -7112,7 +7129,7 @@ results:
               studies have shed light on the role of individual genes in disease
               mechanisms, it is now recognized that gene-gene interactions play
               a significant role in disease origin and progression. To address
-              this, we introduce PhenoPLIER, a computational approach that maps
+              this, we present PhenoPLIER, a computational approach that maps
               gene-trait associations and pharmacological perturbation data into
               a common latent representation for joint analysis. PhenoPLIER's
               representation is based on modules of genes with similar
@@ -7125,7 +7142,7 @@ results:
               infers mechanisms of action. Additionally, using a CRISPR screen
               to analyze lipid regulation, we find that functionally important
               players lacking associations are prioritized in trait-associated
-              modules by PhenoPLIER. In conclusion, PhenoPLIER provides a novel
+              modules by PhenoPLIER. Overall, PhenoPLIER provides a novel
               framework for interpreting genetic associations through the lens
               of gene modules, filling a gap in the current literature and
               offering new insights for therapeutic targets and drug
@@ -7190,7 +7207,7 @@ results:
 
               Revised paragraph:
             provider: openai:gpt-3.5-turbo
-            latencyMs: 7938
+            latencyMs: 6826
             tokenUsage: *ref_83
             gradingResult: *ref_84
         vars:
@@ -7262,11 +7279,11 @@ results:
               lipid regulation, we discover that functionally important genes,
               which lack individual associations, are prioritized in
               trait-associated modules by PhenoPLIER. In conclusion, by
-              incorporating co-expressed gene groups, PhenoPLIER contextualizes
-              genetic associations and uncovers potential targets that may be
-              missed by single-gene strategies. PhenoPLIER offers a novel
-              framework for interpreting genetic associations through the lens
-              of gene modules.
+              incorporating groups of co-expressed genes, PhenoPLIER provides a
+              contextualized interpretation of genetic associations and uncovers
+              potential targets that may be missed by single-gene strategies.
+              PhenoPLIER offers a novel framework for understanding genetic
+              associations through the lens of gene modules.
             prompt: >-
               You are a scientist with copy-editing skills who will help in
               improving the text of a manuscript with title 'Projecting genetic
@@ -7306,7 +7323,7 @@ results:
 
               Revised paragraph:
             provider: openai:gpt-3.5-turbo
-            latencyMs: 7590
+            latencyMs: 7567
             tokenUsage: *ref_85
             gradingResult: *ref_86
           - pass: true
@@ -7397,7 +7414,7 @@ results:
 
               Revised paragraph:
             provider: openai:gpt-3.5-turbo
-            latencyMs: 7601
+            latencyMs: 6925
             tokenUsage: *ref_87
             gradingResult: *ref_88
         vars:
@@ -7469,11 +7486,11 @@ results:
               lipid regulation, we discover that functionally important genes,
               which lack individual associations, are prioritized in
               trait-associated modules by PhenoPLIER. In conclusion, by
-              incorporating co-expressed gene groups, PhenoPLIER contextualizes
-              genetic associations and uncovers potential targets that may be
-              missed by single-gene strategies. PhenoPLIER offers a novel
-              framework for interpreting genetic associations through the lens
-              of gene modules.
+              incorporating groups of co-expressed genes, PhenoPLIER provides a
+              contextualized interpretation of genetic associations and uncovers
+              potential targets that may be missed by single-gene strategies.
+              PhenoPLIER offers a novel framework for understanding genetic
+              associations through the lens of gene modules.
             prompt: >-
               You are a scientist with copy-editing skills who will help in
               improving the text of a manuscript with title 'Projecting genetic
@@ -7513,7 +7530,7 @@ results:
 
               Revised paragraph:
             provider: openai:gpt-3.5-turbo
-            latencyMs: 7185
+            latencyMs: 7119
             tokenUsage: *ref_89
             gradingResult: *ref_90
           - pass: true
@@ -7526,7 +7543,7 @@ results:
               studies have shed light on the role of individual genes in disease
               mechanisms, it is now recognized that gene-gene interactions play
               a significant role in disease origin and progression. To address
-              this, we present PhenoPLIER, a computational approach that maps
+              this, we introduce PhenoPLIER, a computational approach that maps
               gene-trait associations and pharmacological perturbation data into
               a common latent representation for joint analysis. PhenoPLIER's
               representation is based on modules of genes with similar
@@ -7604,7 +7621,7 @@ results:
 
               Revised paragraph:
             provider: openai:gpt-3.5-turbo
-            latencyMs: 7476
+            latencyMs: 8051
             tokenUsage: *ref_91
             gradingResult: *ref_92
         vars:
@@ -7704,7 +7721,7 @@ results:
 
               Revised paragraph:
             provider: openai:gpt-3.5-turbo
-            latencyMs: 5432
+            latencyMs: 5528
             tokenUsage: *ref_93
             gradingResult: *ref_94
           - pass: false
@@ -7726,17 +7743,19 @@ results:
               regulation across different conditions. This understanding is
               crucial for the development of new therapies. In this study, we
               demonstrate that diseases are significantly associated with gene
-              modules expressed in relevant cell types. Our approach accurately
-              predicts known drug-disease pairs and infers mechanisms of action.
-              Additionally, our analysis of lipid regulation using a CRISPR
-              screen reveals that functionally important players lack
-              associations but are prioritized in trait-associated modules by
-              PhenoPLIER. In conclusion, PhenoPLIER, by incorporating groups of
-              co-expressed genes, offers a novel framework for interpreting
-              genetic associations and identifying potential targets that may be
-              missed by single-gene strategies. This approach has the potential
-              to advance our understanding of disease etiology and drug
-              mechanisms.
+              modules that are expressed in relevant cell types. Our approach
+              accurately predicts known drug-disease pairs and provides insights
+              into the mechanisms of action. Additionally, we use a CRISPR
+              screen to analyze lipid regulation and find that functionally
+              important players lack associations but are prioritized in
+              trait-associated modules by PhenoPLIER. In conclusion, our
+              findings show that PhenoPLIER, by incorporating groups of
+              co-expressed genes, can provide context to genetic associations
+              and identify potential targets that may be missed by single-gene
+              strategies. PhenoPLIER offers a novel framework for interpreting
+              genetic associations through the lens of gene modules, advancing
+              our understanding of disease etiology and potential therapeutic
+              targets.
             prompt: >-
               You are a scientist with copy-editing skills who will help in
               improving the text of a manuscript with title 'Projecting genetic
@@ -7789,7 +7808,7 @@ results:
 
               Revised paragraph:
             provider: openai:gpt-3.5-turbo
-            latencyMs: 5389
+            latencyMs: 5514
             tokenUsage: *ref_95
             gradingResult: *ref_96
         vars:
@@ -7880,7 +7899,7 @@ results:
 
               Revised paragraph:
             provider: openai:gpt-3.5-turbo
-            latencyMs: 4911
+            latencyMs: 5209
             tokenUsage: *ref_97
             gradingResult: *ref_98
           - pass: false
@@ -7902,17 +7921,19 @@ results:
               regulation across different conditions. This understanding is
               crucial for the development of new therapies. In this study, we
               demonstrate that diseases are significantly associated with gene
-              modules expressed in relevant cell types. Our approach accurately
-              predicts known drug-disease pairs and infers mechanisms of action.
-              Additionally, our analysis of lipid regulation using a CRISPR
-              screen reveals that functionally important players lack
-              associations but are prioritized in trait-associated modules by
-              PhenoPLIER. In conclusion, PhenoPLIER, by incorporating groups of
-              co-expressed genes, offers a novel framework for interpreting
-              genetic associations and identifying potential targets that may be
-              missed by single-gene strategies. This approach has the potential
-              to advance our understanding of disease etiology and drug
-              mechanisms.
+              modules that are expressed in relevant cell types. Our approach
+              accurately predicts known drug-disease pairs and provides insights
+              into the mechanisms of action. Additionally, we use a CRISPR
+              screen to analyze lipid regulation and find that functionally
+              important players lack associations but are prioritized in
+              trait-associated modules by PhenoPLIER. In conclusion, our
+              findings show that PhenoPLIER, by incorporating groups of
+              co-expressed genes, can provide context to genetic associations
+              and identify potential targets that may be missed by single-gene
+              strategies. PhenoPLIER offers a novel framework for interpreting
+              genetic associations through the lens of gene modules, advancing
+              our understanding of disease etiology and potential therapeutic
+              targets.
             prompt: >-
               You are a scientist with copy-editing skills who will help in
               improving the text of a manuscript with title 'Projecting genetic
@@ -7965,7 +7986,7 @@ results:
 
               Revised paragraph:
             provider: openai:gpt-3.5-turbo
-            latencyMs: 4929
+            latencyMs: 5587
             tokenUsage: *ref_99
             gradingResult: *ref_100
         vars:
@@ -8056,7 +8077,7 @@ results:
 
               Revised paragraph:
             provider: openai:gpt-3.5-turbo
-            latencyMs: 5209
+            latencyMs: 5279
             tokenUsage: *ref_101
             gradingResult: *ref_102
           - pass: false
@@ -8078,10 +8099,10 @@ results:
               regulation across different conditions. This understanding is
               crucial for the development of new therapies. In this study, we
               demonstrate that diseases are significantly associated with gene
-              modules that are expressed in relevant cell types. Our approach
-              accurately predicts known drug-disease pairs and provides insights
-              into the mechanisms of action. Additionally, we use a CRISPR
-              screen to analyze lipid regulation and find that functionally
+              modules expressed in relevant cell types. Our approach accurately
+              predicts known drug-disease pairs and provides insights into the
+              mechanisms of action. Additionally, our analysis of lipid
+              regulation using a CRISPR screen reveals that functionally
               important players lack associations but are prioritized in
               trait-associated modules by PhenoPLIER. In conclusion, PhenoPLIER,
               by incorporating groups of co-expressed genes, offers a novel
@@ -8141,7 +8162,7 @@ results:
 
               Revised paragraph:
             provider: openai:gpt-3.5-turbo
-            latencyMs: 5847
+            latencyMs: 4985
             tokenUsage: *ref_103
             gradingResult: *ref_104
         vars:
@@ -8232,7 +8253,7 @@ results:
 
               Revised paragraph:
             provider: openai:gpt-3.5-turbo
-            latencyMs: 5757
+            latencyMs: 5074
             tokenUsage: *ref_105
             gradingResult: *ref_106
           - pass: false
@@ -8260,9 +8281,9 @@ results:
               screen to analyze lipid regulation and find that functionally
               important players lack associations but are prioritized in
               trait-associated modules by PhenoPLIER. In conclusion, our
-              findings show that by incorporating groups of co-expressed genes,
-              PhenoPLIER can provide context to genetic associations and
-              identify potential targets that may be missed by single-gene
+              findings show that PhenoPLIER, by incorporating groups of
+              co-expressed genes, can provide context to genetic associations
+              and identify potential targets that may be missed by single-gene
               strategies. PhenoPLIER offers a novel framework for interpreting
               genetic associations through the lens of gene modules, advancing
               our understanding of disease etiology and potential therapeutic
@@ -8319,7 +8340,7 @@ results:
 
               Revised paragraph:
             provider: openai:gpt-3.5-turbo
-            latencyMs: 6336
+            latencyMs: 5276
             tokenUsage: *ref_107
             gradingResult: *ref_108
         vars:
@@ -8410,7 +8431,7 @@ results:
 
               Revised paragraph:
             provider: openai:gpt-3.5-turbo
-            latencyMs: 5339
+            latencyMs: 5226
             tokenUsage: *ref_109
             gradingResult: *ref_110
           - pass: false
@@ -8438,9 +8459,9 @@ results:
               screen to analyze lipid regulation and find that functionally
               important players lack associations but are prioritized in
               trait-associated modules by PhenoPLIER. In conclusion, our
-              findings show that PhenoPLIER, by incorporating groups of
-              co-expressed genes, can provide context to genetic associations
-              and identify potential targets that may be missed by single-gene
+              findings show that by incorporating groups of co-expressed genes,
+              PhenoPLIER can provide context to genetic associations and
+              identify potential targets that may be missed by single-gene
               strategies. PhenoPLIER offers a novel framework for interpreting
               genetic associations through the lens of gene modules, advancing
               our understanding of disease etiology and potential therapeutic
@@ -8497,7 +8518,7 @@ results:
 
               Revised paragraph:
             provider: openai:gpt-3.5-turbo
-            latencyMs: 5263
+            latencyMs: 5370
             tokenUsage: *ref_111
             gradingResult: *ref_112
         vars:
@@ -8586,7 +8607,7 @@ results:
 
               Revised paragraph:
             provider: openai:gpt-3.5-turbo
-            latencyMs: 6284
+            latencyMs: 5992
             tokenUsage: *ref_113
             gradingResult: *ref_114
           - pass: true
@@ -8602,20 +8623,20 @@ results:
               role of individual genes in disease mechanisms, modern models of
               complex traits suggest that gene-gene interactions are also
               important in disease origin and progression. In this study, we
-              present PhenoPLIER, a computational approach that integrates
-              gene-trait associations and pharmacological perturbation data into
-              a common latent representation for joint analysis. This
-              representation is based on modules of genes with similar
-              expression patterns across the same conditions. Our results show
-              that diseases are significantly associated with gene modules
-              expressed in relevant cell types, and our approach accurately
-              predicts known drug-disease pairs and infers mechanisms of action.
-              Additionally, we used a CRISPR screen to analyze lipid regulation
-              and found that functionally important players, which lack
-              associations, are prioritized in trait-associated modules by
-              PhenoPLIER. This study fills the gap in understanding the role of
-              gene-gene interactions in complex traits and provides a valuable
-              tool for identifying therapeutic targets and repurposing drugs.
+              present PhenoPLIER, a computational approach that maps gene-trait
+              associations and pharmacological perturbation data into a common
+              latent representation for joint analysis. This representation is
+              based on modules of genes with similar expression patterns across
+              the same conditions. Our results show that diseases are
+              significantly associated with gene modules expressed in relevant
+              cell types, and our approach accurately predicts known
+              drug-disease pairs and infers mechanisms of action. Additionally,
+              using a CRISPR screen to analyze lipid regulation, we find that
+              functionally important players lack associations but are
+              prioritized in trait-associated modules by PhenoPLIER. This study
+              fills the gap in understanding the role of gene-gene interactions
+              in complex traits and provides a valuable tool for identifying
+              therapeutic targets and repurposing drugs.
             prompt: >-
               You are a scientist with copy-editing skills who will help in
               improving the text of a manuscript with title 'Projecting genetic
@@ -8672,7 +8693,7 @@ results:
 
               Revised paragraph:
             provider: openai:gpt-3.5-turbo
-            latencyMs: 6724
+            latencyMs: 6785
             tokenUsage: *ref_115
             gradingResult: *ref_116
         vars:
@@ -8767,7 +8788,7 @@ results:
 
               Revised paragraph:
             provider: openai:gpt-3.5-turbo
-            latencyMs: 6393
+            latencyMs: 6649
             tokenUsage: *ref_117
             gradingResult: *ref_118
           - pass: true
@@ -8783,20 +8804,20 @@ results:
               role of individual genes in disease mechanisms, modern models of
               complex traits suggest that gene-gene interactions are also
               important in disease origin and progression. In this study, we
-              present PhenoPLIER, a computational approach that maps gene-trait
-              associations and pharmacological perturbation data into a common
-              latent representation for joint analysis. This representation is
-              based on modules of genes with similar expression patterns across
-              the same conditions. Our results show that diseases are
-              significantly associated with gene modules expressed in relevant
-              cell types, and our approach accurately predicts known
-              drug-disease pairs and infers mechanisms of action. Additionally,
-              using a CRISPR screen to analyze lipid regulation, we find that
-              functionally important players lack associations but are
-              prioritized in trait-associated modules by PhenoPLIER. This study
-              fills the gap in understanding the role of gene-gene interactions
-              in complex traits and provides a valuable tool for identifying
-              therapeutic targets and repurposing drugs.
+              present PhenoPLIER, a computational approach that integrates
+              gene-trait associations and pharmacological perturbation data into
+              a common latent representation for joint analysis. This
+              representation is based on modules of genes with similar
+              expression patterns across the same conditions. Our results show
+              that diseases are significantly associated with gene modules
+              expressed in relevant cell types, and our approach accurately
+              predicts known drug-disease pairs and infers mechanisms of action.
+              Additionally, we used a CRISPR screen to analyze lipid regulation
+              and found that functionally important players, which lack
+              associations, are prioritized in trait-associated modules by
+              PhenoPLIER. This study fills the gap in understanding the role of
+              gene-gene interactions in complex traits and provides a valuable
+              tool for identifying therapeutic targets and repurposing drugs.
             prompt: >-
               You are a scientist with copy-editing skills who will help in
               improving the text of a manuscript with title 'Projecting genetic
@@ -8853,7 +8874,7 @@ results:
 
               Revised paragraph:
             provider: openai:gpt-3.5-turbo
-            latencyMs: 6203
+            latencyMs: 6356
             tokenUsage: *ref_119
             gradingResult: *ref_120
         vars:
@@ -8948,7 +8969,7 @@ results:
 
               Revised paragraph:
             provider: openai:gpt-3.5-turbo
-            latencyMs: 6112
+            latencyMs: 6309
             tokenUsage: *ref_121
             gradingResult: *ref_122
           - pass: true
@@ -9034,7 +9055,7 @@ results:
 
               Revised paragraph:
             provider: openai:gpt-3.5-turbo
-            latencyMs: 23388
+            latencyMs: 6014
             tokenUsage: *ref_123
             gradingResult: *ref_124
         vars:
@@ -9129,7 +9150,7 @@ results:
 
               Revised paragraph:
             provider: openai:gpt-3.5-turbo
-            latencyMs: 5377
+            latencyMs: 6200
             tokenUsage: *ref_125
             gradingResult: *ref_126
           - pass: true
@@ -9145,20 +9166,20 @@ results:
               role of individual genes in disease mechanisms, modern models of
               complex traits suggest that gene-gene interactions are also
               important in disease origin and progression. In this study, we
-              present PhenoPLIER, a computational approach that maps gene-trait
-              associations and pharmacological perturbation data into a common
-              latent representation for joint analysis. This representation is
-              based on modules of genes with similar expression patterns across
-              the same conditions. Our results show that diseases are
-              significantly associated with gene modules expressed in relevant
-              cell types, and our approach accurately predicts known
-              drug-disease pairs and infers mechanisms of action. Additionally,
-              using a CRISPR screen to analyze lipid regulation, we find that
-              functionally important players lack associations but are
-              prioritized in trait-associated modules by PhenoPLIER. This study
-              fills the gap in understanding the role of gene-gene interactions
-              in complex traits and provides a valuable tool for identifying
-              therapeutic targets and repurposing drugs.
+              present PhenoPLIER, a computational approach that integrates
+              gene-trait associations and pharmacological perturbation data into
+              a common latent representation for joint analysis. This
+              representation is based on modules of genes with similar
+              expression patterns across the same conditions. Our results show
+              that diseases are significantly associated with gene modules
+              expressed in relevant cell types, and our approach accurately
+              predicts known drug-disease pairs and infers mechanisms of action.
+              Additionally, we used a CRISPR screen to analyze lipid regulation
+              and found that functionally important players, which lack
+              associations, are prioritized in trait-associated modules by
+              PhenoPLIER. This study fills the gap in understanding the role of
+              gene-gene interactions in complex traits and provides a valuable
+              tool for identifying therapeutic targets and repurposing drugs.
             prompt: >-
               You are a scientist with copy-editing skills who will help in
               improving the text of a manuscript with title 'Projecting genetic
@@ -9215,7 +9236,7 @@ results:
 
               Revised paragraph:
             provider: openai:gpt-3.5-turbo
-            latencyMs: 7081
+            latencyMs: 7041
             tokenUsage: *ref_127
             gradingResult: *ref_128
         vars:
@@ -9310,7 +9331,7 @@ results:
 
               Revised paragraph:
             provider: openai:gpt-3.5-turbo
-            latencyMs: 6106
+            latencyMs: 6030
             tokenUsage: *ref_129
             gradingResult: *ref_130
           - pass: true
@@ -9326,20 +9347,20 @@ results:
               role of individual genes in disease mechanisms, modern models of
               complex traits suggest that gene-gene interactions are also
               important in disease origin and progression. In this study, we
-              present PhenoPLIER, a computational approach that maps gene-trait
-              associations and pharmacological perturbation data into a common
-              latent representation for joint analysis. This representation is
-              based on modules of genes with similar expression patterns across
-              the same conditions. Our results show that diseases are
-              significantly associated with gene modules expressed in relevant
-              cell types, and our approach accurately predicts known
-              drug-disease pairs and infers mechanisms of action. Additionally,
-              using a CRISPR screen to analyze lipid regulation, we find that
-              functionally important players lack associations but are
-              prioritized in trait-associated modules by PhenoPLIER. This study
-              fills the gap in understanding the role of gene-gene interactions
-              in complex traits and provides a valuable tool for identifying
-              therapeutic targets and repurposing drugs.
+              present PhenoPLIER, a computational approach that integrates
+              gene-trait associations and pharmacological perturbation data into
+              a common latent representation for joint analysis. This
+              representation is based on modules of genes with similar
+              expression patterns across the same conditions. Our results show
+              that diseases are significantly associated with gene modules
+              expressed in relevant cell types, and our approach accurately
+              predicts known drug-disease pairs and infers mechanisms of action.
+              Additionally, we used a CRISPR screen to analyze lipid regulation
+              and found that functionally important players, which lack
+              associations, are prioritized in trait-associated modules by
+              PhenoPLIER. This study fills the gap in understanding the role of
+              gene-gene interactions in complex traits and provides a valuable
+              tool for identifying therapeutic targets and repurposing drugs.
             prompt: >-
               You are a scientist with copy-editing skills who will help in
               improving the text of a manuscript with title 'Projecting genetic
@@ -9396,7 +9417,7 @@ results:
 
               Revised paragraph:
             provider: openai:gpt-3.5-turbo
-            latencyMs: 6324
+            latencyMs: 6284
             tokenUsage: *ref_131
             gradingResult: *ref_132
         vars:

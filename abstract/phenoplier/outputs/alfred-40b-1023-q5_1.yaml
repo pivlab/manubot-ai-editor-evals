@@ -94,17 +94,18 @@ results:
           observe that diseases are significantly associated with gene modules
           expressed in relevant cell types, and our approach is accurate in
           predicting known drug-disease pairs and inferring mechanisms of
-          action. Furthermore using a CRISPR screen to analyze lipid regulation,
-          we find that functionally important players lack associations but are
-          prioritized in trait-associated modules by PhenoPLIER. In conclusion,
-          by incorporating groups of co-expressed genes, PhenoPLIER can
-          contextualize genetic associations and reveal potential targets missed
-          by single-gene strategies. PhenoPLIER provides a novel framework for
-          interpreting genetic associations through the lens of gene modules.
+          action. Furthermore, using a CRISPR screen to analyze lipid
+          regulation, we find that functionally important players lack
+          associations but are prioritized in trait-associated modules by
+          PhenoPLIER. In conclusion, by incorporating groups of co-expressed
+          genes, PhenoPLIER can contextualize genetic associations and reveal
+          potential targets missed by single-gene strategies. PhenoPLIER
+          provides a novel framework for interpreting genetic associations
+          through the lens of gene modules.
       success: true
       score: 1
       namedScores: &ref_0 {}
-      latencyMs: 116157
+      latencyMs: 148978
       gradingResult: &ref_53
         pass: true
         score: 1
@@ -187,13 +188,25 @@ results:
             reason: Assertion passed
             assertion: &ref_11
               type: python
-              value: >
-                keywords = ["overall", "conclusion", "insight", "novel",
-                "potential", "broader", "ultimately", "advancement", "valuable",
-                "study"]
-
+              value: |
+                keywords = [
+                  "overall",
+                  "conclusion",
+                  "insight",
+                  "novel",
+                  "potential",
+                  "broader",
+                  "ultimately",
+                  "advancement",
+                  "valuable",
+                  "study",
+                  "research",
+                  "critical gap",
+                  "understanding",
+                  "powerful",
+                  "advancing",
+                ]
                 last_sentences = ".".join(output.split(".")[-3:]).lower()
-
                 print(
                   any(s in last_sentences for s in keywords)
                 )
@@ -263,22 +276,24 @@ results:
       vars: *ref_1
       response:
         output: >-
-          Complex traits are influenced by the concerted action of multiple
-          genes in specific contexts. Understanding these gene-gene interactions
-          is essential for developing new therapies. Transcriptome-wide
-          association studies have helped uncover the role of individual genes
-          in disease-relevant mechanisms. However, modern models of the
-          architecture of complex traits predict that gene-gene interactions
-          play a crucial role in disease origin and progression. Here we
-          introduce PhenoPLIER, a computational approach that maps gene-trait
-          associations and pharmacological perturbation data into a common
-          latent representation for a joint analysis. This representation is
-          based on modules of genes with similar expression patterns across the
-          same conditions. We observe that diseases are significantly associated
-          with gene modules expressed in relevant cell types, and our approach
-          is accurate in predicting known drug-disease pairs and inferring
-          mechanisms of action. Furthermore, using a CRISPR screen to analyze
-          lipid regulation, we find that functionally important players lack
+          Genes act in concert with each other in specific contexts to perform
+          their functions. Determining how these genes influence complex traits
+          requires a mechanistic understanding of expression regulation across
+          different conditions. It has been shown that this insight is critical
+          for developing new therapies. Transcriptome-wide association studies
+          have helped uncover the role of individual genes in disease-relevant
+          mechanisms. However, modern models of the architecture of complex
+          traits predict that gene-gene interactions play a crucial role in
+          disease origin and progression. Here we introduce PhenoPLIER, a
+          computational approach that maps gene-trait associations and
+          pharmacological perturbation data into a common latent representation
+          for a joint analysis. This representation is based on modules of genes
+          with similar expression patterns across the same conditions. We
+          observe that diseases are significantly associated with gene modules
+          expressed in relevant cell types, and our approach is accurate in
+          predicting known drug-disease pairs and inferring mechanisms of
+          action. Furthermore, using a CRISPR screen to analyze lipid
+          regulation, we find that functionally important players lack
           associations but are prioritized in trait-associated modules by
           PhenoPLIER. In conclusion, by incorporating groups of co-expressed
           genes, PhenoPLIER can contextualize genetic associations and reveal
@@ -288,7 +303,7 @@ results:
       success: true
       score: 1
       namedScores: &ref_2 {}
-      latencyMs: 113952
+      latencyMs: 124268
       gradingResult: &ref_54
         pass: true
         score: 1
@@ -397,17 +412,18 @@ results:
           observe that diseases are significantly associated with gene modules
           expressed in relevant cell types, and our approach is accurate in
           predicting known drug-disease pairs and inferring mechanisms of
-          action. Furthermore using a CRISPR screen to analyze lipid regulation,
-          we find that functionally important players lack associations but are
-          prioritized in trait-associated modules by PhenoPLIER. In conclusion,
-          by incorporating groups of co-expressed genes, PhenoPLIER can
-          contextualize genetic associations and reveal potential targets missed
-          by single-gene strategies. PhenoPLIER provides a novel framework for
-          interpreting genetic associations through the lens of gene modules.
+          action. Furthermore, using a CRISPR screen to analyze lipid
+          regulation, we find that functionally important players lack
+          associations but are prioritized in trait-associated modules by
+          PhenoPLIER. In conclusion, by incorporating groups of co-expressed
+          genes, PhenoPLIER can contextualize genetic associations and reveal
+          potential targets missed by single-gene strategies. PhenoPLIER
+          provides a novel framework for interpreting genetic associations
+          through the lens of gene modules.
       success: true
       score: 1
       namedScores: &ref_12 {}
-      latencyMs: 111111
+      latencyMs: 110857
       gradingResult: &ref_55
         pass: true
         score: 1
@@ -547,7 +563,7 @@ results:
       success: true
       score: 1
       namedScores: &ref_13 {}
-      latencyMs: 123919
+      latencyMs: 124193
       gradingResult: &ref_56
         pass: true
         score: 1
@@ -656,17 +672,18 @@ results:
           observe that diseases are significantly associated with gene modules
           expressed in relevant cell types, and our approach is accurate in
           predicting known drug-disease pairs and inferring mechanisms of
-          action. Furthermore using a CRISPR screen to analyze lipid regulation,
-          we find that functionally important players lack associations but are
-          prioritized in trait-associated modules by PhenoPLIER. In conclusion,
-          by incorporating groups of co-expressed genes, PhenoPLIER can
-          contextualize genetic associations and reveal potential targets missed
-          by single-gene strategies. PhenoPLIER provides a novel framework for
-          interpreting genetic associations through the lens of gene modules.
+          action. Furthermore, using a CRISPR screen to analyze lipid
+          regulation, we find that functionally important players lack
+          associations but are prioritized in trait-associated modules by
+          PhenoPLIER. In conclusion, by incorporating groups of co-expressed
+          genes, PhenoPLIER can contextualize genetic associations and reveal
+          potential targets missed by single-gene strategies. PhenoPLIER
+          provides a novel framework for interpreting genetic associations
+          through the lens of gene modules.
       success: true
       score: 1
       namedScores: &ref_14 {}
-      latencyMs: 111631
+      latencyMs: 111823
       gradingResult: &ref_57
         pass: true
         score: 1
@@ -806,7 +823,7 @@ results:
       success: true
       score: 1
       namedScores: &ref_15 {}
-      latencyMs: 124256
+      latencyMs: 124305
       gradingResult: &ref_58
         pass: true
         score: 1
@@ -899,12 +916,12 @@ results:
       vars: *ref_1
       response:
         output: >-
-          Genes act in concert with each other to perform their functions.
-          Determining how these genes influence complex traits requires a
-          mechanistic understanding of gene expression across different
-          conditions. It has been shown that this insight is critical for
-          developing new therapies. Transcriptome-wide association studies have
-          helped uncover the role of individual genes in disease-relevant
+          Genes act in concert with each other in specific contexts to perform
+          their functions. Determining how these genes influence complex traits
+          requires a mechanistic understanding of expression regulation across
+          different conditions. It has been shown that this insight is critical
+          for developing new therapies. Transcriptome-wide association studies
+          have helped uncover the role of individual genes in disease-relevant
           mechanisms. However, modern models of the architecture of complex
           traits predict that gene-gene interactions play a crucial role in
           disease origin and progression. Here we introduce PhenoPLIER, a
@@ -915,18 +932,17 @@ results:
           observe that diseases are significantly associated with gene modules
           expressed in relevant cell types, and our approach is accurate in
           predicting known drug-disease pairs and inferring mechanisms of
-          action. Furthermore, using a CRISPR screen to analyze lipid
-          regulation, we find that functionally important players lack
-          associations but are prioritized in trait-associated modules by
-          PhenoPLIER. In conclusion, by incorporating groups of co-expressed
-          genes, PhenoPLIER can contextualize genetic associations and reveal
-          potential targets missed by single-gene strategies. PhenoPLIER
-          provides a novel framework for interpreting genetic associations
-          through the lens of gene modules.
+          action. Furthermore using a CRISPR screen to analyze lipid regulation,
+          we find that functionally important players lack associations but are
+          prioritized in trait-associated modules by PhenoPLIER. In conclusion,
+          by incorporating groups of co-expressed genes, PhenoPLIER can
+          contextualize genetic associations and reveal potential targets missed
+          by single-gene strategies. PhenoPLIER provides a novel framework for
+          interpreting genetic associations through the lens of gene modules.
       success: true
       score: 1
       namedScores: &ref_16 {}
-      latencyMs: 110257
+      latencyMs: 110767
       gradingResult: &ref_59
         pass: true
         score: 1
@@ -1055,17 +1071,18 @@ results:
           observe that diseases are significantly associated with gene modules
           expressed in relevant cell types, and our approach is accurate in
           predicting known drug-disease pairs and inferring mechanisms of
-          action. Furthermore using a CRISPR screen to analyze lipid regulation,
-          we find that functionally important players lack associations but are
-          prioritized in trait-associated modules by PhenoPLIER. In conclusion,
-          by incorporating groups of co-expressed genes, PhenoPLIER can
-          contextualize genetic associations and reveal potential targets missed
-          by single-gene strategies. PhenoPLIER provides a novel framework for
-          interpreting genetic associations through the lens of gene modules.
+          action. Furthermore, using a CRISPR screen to analyze lipid
+          regulation, we find that functionally important players lack
+          associations but are prioritized in trait-associated modules by
+          PhenoPLIER. In conclusion, by incorporating groups of co-expressed
+          genes, PhenoPLIER can contextualize genetic associations and reveal
+          potential targets missed by single-gene strategies. PhenoPLIER
+          provides a novel framework for interpreting genetic associations
+          through the lens of gene modules.
       success: true
       score: 1
       namedScores: &ref_17 {}
-      latencyMs: 123550
+      latencyMs: 124054
       gradingResult: &ref_60
         pass: true
         score: 1
@@ -1185,7 +1202,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_18 {}
-      latencyMs: 112797
+      latencyMs: 114010
       error: >-
         Expected output to not contain one of "concierto, specifico,
         significantl "
@@ -1321,17 +1338,18 @@ results:
           observe that diseases are significantly associated with gene modules
           expressed in relevant cell types, and our approach is accurate in
           predicting known drug-disease pairs and inferring mechanisms of
-          action. Furthermore using a CRISPR screen to analyze lipid regulation,
-          we find that functionally important players lack associations but are
-          prioritized in trait-associated modules by PhenoPLIER. In conclusion,
-          by incorporating groups of co-expressed genes, PhenoPLIER can
-          contextualize genetic associations and reveal potential targets missed
-          by single-gene strategies. PhenoPLIER provides a novel framework for
-          interpreting genetic associations through the lens of gene modules.
+          action. Furthermore, using a CRISPR screen to analyze lipid
+          regulation, we find that functionally important players lack
+          associations but are prioritized in trait-associated modules by
+          PhenoPLIER. In conclusion, by incorporating groups of co-expressed
+          genes, PhenoPLIER can contextualize genetic associations and reveal
+          potential targets missed by single-gene strategies. PhenoPLIER
+          provides a novel framework for interpreting genetic associations
+          through the lens of gene modules.
       success: true
       score: 1
       namedScores: &ref_19 {}
-      latencyMs: 123353
+      latencyMs: 123877
       gradingResult: &ref_62
         pass: true
         score: 1
@@ -1458,32 +1476,21 @@ results:
         output: >-
           We introduce PhenoPLIER, a computational approach that maps gene-trait
           associations and pharmacological perturbation data into a common
-          latent representation for a joint analysis. Genes act in concert with
-          each other in specific contexts to perform their functions.
-          Determining how these genes influence complex traits requires a
-          mechanistic understanding of expression regulation across different
-          conditions. It has been shown that this insight is critical for
-          developing new therapies. Transcriptome-wide association studies have
-          helped uncover the role of individual genes in disease-relevant
-          mechanisms. However, modern models of the architecture of complex
-          traits predict that gene-gene interactions play a crucial role in
-          disease origin and progression. PhenoPLIER's representation is based
-          on modules of genes with similar expression patterns across the same
-          conditions. We observe that diseases are significantly associated with
-          gene modules expressed in relevant cell types, and our approach is
-          accurate in predicting known drug-disease pairs and inferring
-          mechanisms of action. Furthermore, using a CRISPR screen to analyze
-          lipid regulation, we find that functionally important players lack
-          associations but are prioritized in trait-associated modules by
-          PhenoPLIER. In conclusion, by incorporating groups of co-expressed
-          genes, PhenoPLIER can contextualize genetic associations and reveal
-          potential targets missed by single-gene strategies. PhenoPLIER
-          provides a novel framework for interpreting genetic associations
-          through the lens of gene modules.
+          latent representation for a joint analysis. Our method groups genes
+          with similar expression patterns across conditions into modules. We
+          find that diseases are significantly associated with gene modules
+          expressed in relevant cell types. Furthermore, using a CRISPR screen
+          to analyze lipid regulation, we find that functionally important
+          players lack associations but are prioritized in trait-associated
+          modules by PhenoPLIER. In conclusion, by incorporating groups of
+          co-expressed genes, PhenoPLIER can contextualize genetic associations
+          and reveal potential targets missed by single-gene strategies. Our
+          approach provides a novel framework for interpreting genetic
+          associations through the lens of gene modules.
       success: false
-      score: 0.8888888888888888
+      score: 0.7777777777777778
       namedScores: &ref_20 {}
-      latencyMs: 113186
+      latencyMs: 62405
       error: |
         Python code returned false
         print(
@@ -1491,7 +1498,7 @@ results:
         )
       gradingResult: &ref_63
         pass: false
-        score: 0.8888888888888888
+        score: 0.7777777777777778
         namedScores: *ref_20
         reason: |
           Python code returned false
@@ -1523,9 +1530,14 @@ results:
             score: 1
             reason: Assertion passed
             assertion: *ref_7
-          - pass: true
-            score: 1
-            reason: Assertion passed
+          - pass: false
+            score: 0
+            reason: |
+              Python code returned false
+              paragraph = context["vars"]["paragraph"]
+              print(
+                (len(output) > 0.6 * len(paragraph)) and (len(output) < 1.4 * len(paragraph))
+              )
             assertion: *ref_8
           - pass: false
             score: 0
@@ -1636,7 +1648,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_22 {}
-      latencyMs: 124846
+      latencyMs: 126218
       error: |
         Python code returned false
         print(
@@ -1742,31 +1754,47 @@ results:
       vars: *ref_21
       response:
         output: >-
-          In this study, we introduce PhenoPLIER, a computational approach that
-          maps gene-trait associations and pharmacological perturbation data
-          into a common latent representation for a joint analysis. Our method
-          helps uncover the role of individual genes in disease-relevant
-          mechanisms by incorporating groups of co-expressed genes. By
-          contextualizing genetic associations through the lens of gene modules,
-          PhenoPLIER provides a novel framework for interpreting genetic
-          associations through the lens of gene modules.
+          PhenoPLIER is a computational approach that maps gene-trait
+          associations and pharmacological perturbation data into a common
+          latent representation for a joint analysis. Genes act in concert with
+          each other in specific contexts to perform their functions.
+          Determining how these genes influence complex traits requires a
+          mechanistic understanding of expression regulation across different
+          conditions. It has been shown that this insight is critical for
+          developing new therapies. Transcriptome-wide association studies have
+          helped uncover the role of individual genes in disease-relevant
+          mechanisms. However, modern models of the architecture of complex
+          traits predict that gene-gene interactions play a crucial role in
+          disease origin and progression. PhenoPLIER's representation is based
+          on modules of genes with similar expression patterns across the same
+          conditions. We observe that diseases are significantly associated with
+          gene modules expressed in relevant cell types, and our approach is
+          accurate in predicting known drug-disease pairs and inferring
+          mechanisms of action. Furthermore, using a CRISPR screen to analyze
+          lipid regulation, we find that functionally important players lack
+          associations but are prioritized in trait-associated modules by
+          PhenoPLIER. In conclusion, by incorporating groups of co-expressed
+          genes, PhenoPLIER can contextualize genetic associations and reveal
+          potential targets missed by single-gene strategies. PhenoPLIER
+          provides a novel framework for interpreting genetic associations
+          through the lens of gene modules.
       success: false
-      score: 0.6666666666666666
+      score: 0.8888888888888888
       namedScores: &ref_23 {}
-      latencyMs: 39958
+      latencyMs: 113714
       error: |
         Python code returned false
         print(
-          output.find("PhenoPLIER") < max(output.find("CRISPR"), output.find("lipid"), output.find("drug-disease"), output.find("players"))
+          "PhenoPLIER" not in output.split(".")[0]
         )
       gradingResult: &ref_65
         pass: false
-        score: 0.6666666666666666
+        score: 0.8888888888888888
         namedScores: *ref_23
         reason: |
           Python code returned false
           print(
-            output.find("PhenoPLIER") < max(output.find("CRISPR"), output.find("lipid"), output.find("drug-disease"), output.find("players"))
+            "PhenoPLIER" not in output.split(".")[0]
           )
         tokensUsed:
           total: 0
@@ -1793,14 +1821,9 @@ results:
             score: 1
             reason: Assertion passed
             assertion: *ref_7
-          - pass: false
-            score: 0
-            reason: |
-              Python code returned false
-              paragraph = context["vars"]["paragraph"]
-              print(
-                (len(output) > 0.6 * len(paragraph)) and (len(output) < 1.4 * len(paragraph))
-              )
+          - pass: true
+            score: 1
+            reason: Assertion passed
             assertion: *ref_8
           - pass: false
             score: 0
@@ -1810,13 +1833,9 @@ results:
                 "PhenoPLIER" not in output.split(".")[0]
               )
             assertion: *ref_9
-          - pass: false
-            score: 0
-            reason: |
-              Python code returned false
-              print(
-                output.find("PhenoPLIER") < max(output.find("CRISPR"), output.find("lipid"), output.find("drug-disease"), output.find("players"))
-              )
+          - pass: true
+            score: 1
+            reason: Assertion passed
             assertion: *ref_10
           - pass: true
             score: 1
@@ -1915,7 +1934,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_24 {}
-      latencyMs: 125594
+      latencyMs: 125692
       error: |
         Python code returned false
         print(
@@ -2021,7 +2040,7 @@ results:
       vars: *ref_21
       response:
         output: >-
-          We introduce PhenoPLIER, a computational approach that maps gene-trait
+          PhenoPLIER is a computational approach that maps gene-trait
           associations and pharmacological perturbation data into a common
           latent representation for a joint analysis. Genes act in concert with
           each other in specific contexts to perform their functions.
@@ -2048,7 +2067,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_25 {}
-      latencyMs: 113909
+      latencyMs: 112587
       error: |
         Python code returned false
         print(
@@ -2176,20 +2195,15 @@ results:
         output: >-
           We introduce PhenoPLIER, a computational approach that maps gene-trait
           associations and pharmacological perturbation data into a common
-          latent representation for a joint analysis. Genes act in concert with
-          each other in specific contexts to perform their functions.
-          Determining how these genes influence complex traits requires a
-          mechanistic understanding of expression regulation across different
-          conditions. It has been shown that this insight is critical for
-          developing new therapies. Transcriptome-wide association studies have
-          helped uncover the role of individual genes in disease-relevant
-          mechanisms. However, modern models of the architecture of complex
-          traits predict that gene-gene interactions play a crucial role in
-          disease origin and progression. PhenoPLIER's representation is based
-          on modules of genes with similar expression patterns across the same
-          conditions. We observe that diseases are significantly associated with
-          gene modules expressed in relevant cell types, and our approach is
-          accurate in predicting known drug-disease pairs and inferring
+          latent representation for a joint analysis. Determining how genes
+          influence complex traits requires a mechanistic understanding of
+          expression regulation across different conditions. Transcriptome-wide
+          association studies have helped uncover the role of individual genes
+          in disease-relevant mechanisms, but modern models predict that
+          gene-gene interactions play a crucial role in disease origin and
+          progression. PhenoPLIER's representation is based on modules of genes
+          with similar expression patterns across the same conditions. Our
+          approach accurately predicts known drug-disease pairs and infers
           mechanisms of action. Furthermore, using a CRISPR screen to analyze
           lipid regulation, we find that functionally important players lack
           associations but are prioritized in trait-associated modules by
@@ -2201,7 +2215,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_26 {}
-      latencyMs: 125149
+      latencyMs: 101443
       error: |
         Python code returned false
         print(
@@ -2307,7 +2321,7 @@ results:
       vars: *ref_21
       response:
         output: >-
-          PhenoPLIER is a computational approach that maps gene-trait
+          We introduce PhenoPLIER, a computational approach that maps gene-trait
           associations and pharmacological perturbation data into a common
           latent representation for a joint analysis. Genes act in concert with
           each other in specific contexts to perform their functions.
@@ -2334,7 +2348,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_27 {}
-      latencyMs: 112750
+      latencyMs: 113109
       error: |
         Python code returned false
         print(
@@ -2460,15 +2474,15 @@ results:
       vars: *ref_21
       response:
         output: >-
-          Here, we introduce PhenoPLIER, a novel computational approach that
-          maps gene-trait associations and pharmacological perturbation data
-          into a common latent representation for joint analysis. Genes act in
-          concert with each other in specific contexts to perform their
-          functions. Determining how these genes influence complex traits
-          requires a mechanistic understanding of expression regulation across
-          different conditions. It has been shown that this insight is critical
-          for developing new therapies. Transcriptome-wide association studies
-          have helped uncover the role of individual genes in disease-relevant
+          We introduce PhenoPLIER, a computational approach that maps gene-trait
+          associations and pharmacological perturbation data into a common
+          latent representation for a joint analysis. Genes act in concert with
+          each other in specific contexts to perform their functions.
+          Determining how these genes influence complex traits requires a
+          mechanistic understanding of expression regulation across different
+          conditions. It has been shown that this insight is critical for
+          developing new therapies. Transcriptome-wide association studies have
+          helped uncover the role of individual genes in disease-relevant
           mechanisms. However, modern models of the architecture of complex
           traits predict that gene-gene interactions play a crucial role in
           disease origin and progression. PhenoPLIER's representation is based
@@ -2487,7 +2501,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_28 {}
-      latencyMs: 127069
+      latencyMs: 124831
       error: |
         Python code returned false
         print(
@@ -2593,7 +2607,7 @@ results:
       vars: *ref_21
       response:
         output: >-
-          PhenoPLIER is a computational approach that maps gene-trait
+          We introduce PhenoPLIER, a computational approach that maps gene-trait
           associations and pharmacological perturbation data into a common
           latent representation for a joint analysis. Genes act in concert with
           each other in specific contexts to perform their functions.
@@ -2620,7 +2634,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_29 {}
-      latencyMs: 111410
+      latencyMs: 113724
       error: |
         Python code returned false
         print(
@@ -2773,7 +2787,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_30 {}
-      latencyMs: 125339
+      latencyMs: 124944
       error: |
         Python code returned false
         print(
@@ -2912,7 +2926,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_31 {}
-      latencyMs: 71228
+      latencyMs: 71710
       error: |
         Python code returned false
         print(
@@ -3048,7 +3062,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_33 {}
-      latencyMs: 81669
+      latencyMs: 81777
       error: |
         Python code returned false
         print(
@@ -3164,7 +3178,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_34 {}
-      latencyMs: 71623
+      latencyMs: 72662
       error: |
         Python code returned false
         print(
@@ -3300,7 +3314,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_35 {}
-      latencyMs: 82617
+      latencyMs: 81521
       error: |
         Python code returned false
         print(
@@ -3397,7 +3411,7 @@ results:
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/baseline.txt
       vars: *ref_32
       response:
-        output: >
+        output: >-
           Genes act in concert with each other in specific contexts to perform
           their functions. Determining how these genes influence complex traits
           requires a mechanistic understanding of expression regulation across
@@ -3416,7 +3430,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_36 {}
-      latencyMs: 72513
+      latencyMs: 71522
       error: |
         Python code returned false
         print(
@@ -3552,7 +3566,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_37 {}
-      latencyMs: 80935
+      latencyMs: 81660
       error: |
         Python code returned false
         print(
@@ -3668,7 +3682,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_38 {}
-      latencyMs: 71533
+      latencyMs: 72343
       error: |
         Python code returned false
         print(
@@ -3804,7 +3818,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_39 {}
-      latencyMs: 81925
+      latencyMs: 81353
       error: |
         Python code returned false
         print(
@@ -3917,14 +3931,10 @@ results:
           contextualize genetic associations and reveal potential targets missed
           by single-gene strategies. PhenoPLIER provides a novel framework for
           interpreting genetic associations through the lens of gene modules.
-
-
-          The revised paragraph is more concise and focuses on the main findings
-          and implications of the study.
       success: false
       score: 0.8888888888888888
       namedScores: &ref_40 {}
-      latencyMs: 78402
+      latencyMs: 72414
       error: |
         Python code returned false
         print(
@@ -4060,7 +4070,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_41 {}
-      latencyMs: 81937
+      latencyMs: 81373
       error: |
         Python code returned false
         print(
@@ -4215,15 +4225,27 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_42 {}
-      latencyMs: 88822
-      error: >
+      latencyMs: 89373
+      error: |
         Python code returned false
-
-        keywords = ["overall", "conclusion", "insight", "novel", "potential",
-        "broader", "ultimately", "advancement", "valuable", "study"]
-
+        keywords = [
+          "overall",
+          "conclusion",
+          "insight",
+          "novel",
+          "potential",
+          "broader",
+          "ultimately",
+          "advancement",
+          "valuable",
+          "study",
+          "research",
+          "critical gap",
+          "understanding",
+          "powerful",
+          "advancing",
+        ]
         last_sentences = ".".join(output.split(".")[-3:]).lower()
-
         print(
           any(s in last_sentences for s in keywords)
         )
@@ -4231,14 +4253,26 @@ results:
         pass: false
         score: 0.8888888888888888
         namedScores: *ref_42
-        reason: >
+        reason: |
           Python code returned false
-
-          keywords = ["overall", "conclusion", "insight", "novel", "potential",
-          "broader", "ultimately", "advancement", "valuable", "study"]
-
+          keywords = [
+            "overall",
+            "conclusion",
+            "insight",
+            "novel",
+            "potential",
+            "broader",
+            "ultimately",
+            "advancement",
+            "valuable",
+            "study",
+            "research",
+            "critical gap",
+            "understanding",
+            "powerful",
+            "advancing",
+          ]
           last_sentences = ".".join(output.split(".")[-3:]).lower()
-
           print(
             any(s in last_sentences for s in keywords)
           )
@@ -4281,15 +4315,26 @@ results:
             assertion: *ref_10
           - pass: false
             score: 0
-            reason: >
+            reason: |
               Python code returned false
-
-              keywords = ["overall", "conclusion", "insight", "novel",
-              "potential", "broader", "ultimately", "advancement", "valuable",
-              "study"]
-
+              keywords = [
+                "overall",
+                "conclusion",
+                "insight",
+                "novel",
+                "potential",
+                "broader",
+                "ultimately",
+                "advancement",
+                "valuable",
+                "study",
+                "research",
+                "critical gap",
+                "understanding",
+                "powerful",
+                "advancing",
+              ]
               last_sentences = ".".join(output.split(".")[-3:]).lower()
-
               print(
                 any(s in last_sentences for s in keywords)
               )
@@ -4379,15 +4424,27 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_44 {}
-      latencyMs: 100751
-      error: >
+      latencyMs: 99930
+      error: |
         Python code returned false
-
-        keywords = ["overall", "conclusion", "insight", "novel", "potential",
-        "broader", "ultimately", "advancement", "valuable", "study"]
-
+        keywords = [
+          "overall",
+          "conclusion",
+          "insight",
+          "novel",
+          "potential",
+          "broader",
+          "ultimately",
+          "advancement",
+          "valuable",
+          "study",
+          "research",
+          "critical gap",
+          "understanding",
+          "powerful",
+          "advancing",
+        ]
         last_sentences = ".".join(output.split(".")[-3:]).lower()
-
         print(
           any(s in last_sentences for s in keywords)
         )
@@ -4395,14 +4452,26 @@ results:
         pass: false
         score: 0.8888888888888888
         namedScores: *ref_44
-        reason: >
+        reason: |
           Python code returned false
-
-          keywords = ["overall", "conclusion", "insight", "novel", "potential",
-          "broader", "ultimately", "advancement", "valuable", "study"]
-
+          keywords = [
+            "overall",
+            "conclusion",
+            "insight",
+            "novel",
+            "potential",
+            "broader",
+            "ultimately",
+            "advancement",
+            "valuable",
+            "study",
+            "research",
+            "critical gap",
+            "understanding",
+            "powerful",
+            "advancing",
+          ]
           last_sentences = ".".join(output.split(".")[-3:]).lower()
-
           print(
             any(s in last_sentences for s in keywords)
           )
@@ -4445,15 +4514,26 @@ results:
             assertion: *ref_10
           - pass: false
             score: 0
-            reason: >
+            reason: |
               Python code returned false
-
-              keywords = ["overall", "conclusion", "insight", "novel",
-              "potential", "broader", "ultimately", "advancement", "valuable",
-              "study"]
-
+              keywords = [
+                "overall",
+                "conclusion",
+                "insight",
+                "novel",
+                "potential",
+                "broader",
+                "ultimately",
+                "advancement",
+                "valuable",
+                "study",
+                "research",
+                "critical gap",
+                "understanding",
+                "powerful",
+                "advancing",
+              ]
               last_sentences = ".".join(output.split(".")[-3:]).lower()
-
               print(
                 any(s in last_sentences for s in keywords)
               )
@@ -4523,15 +4603,27 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_45 {}
-      latencyMs: 88850
-      error: >
+      latencyMs: 89180
+      error: |
         Python code returned false
-
-        keywords = ["overall", "conclusion", "insight", "novel", "potential",
-        "broader", "ultimately", "advancement", "valuable", "study"]
-
+        keywords = [
+          "overall",
+          "conclusion",
+          "insight",
+          "novel",
+          "potential",
+          "broader",
+          "ultimately",
+          "advancement",
+          "valuable",
+          "study",
+          "research",
+          "critical gap",
+          "understanding",
+          "powerful",
+          "advancing",
+        ]
         last_sentences = ".".join(output.split(".")[-3:]).lower()
-
         print(
           any(s in last_sentences for s in keywords)
         )
@@ -4539,14 +4631,26 @@ results:
         pass: false
         score: 0.8888888888888888
         namedScores: *ref_45
-        reason: >
+        reason: |
           Python code returned false
-
-          keywords = ["overall", "conclusion", "insight", "novel", "potential",
-          "broader", "ultimately", "advancement", "valuable", "study"]
-
+          keywords = [
+            "overall",
+            "conclusion",
+            "insight",
+            "novel",
+            "potential",
+            "broader",
+            "ultimately",
+            "advancement",
+            "valuable",
+            "study",
+            "research",
+            "critical gap",
+            "understanding",
+            "powerful",
+            "advancing",
+          ]
           last_sentences = ".".join(output.split(".")[-3:]).lower()
-
           print(
             any(s in last_sentences for s in keywords)
           )
@@ -4589,15 +4693,26 @@ results:
             assertion: *ref_10
           - pass: false
             score: 0
-            reason: >
+            reason: |
               Python code returned false
-
-              keywords = ["overall", "conclusion", "insight", "novel",
-              "potential", "broader", "ultimately", "advancement", "valuable",
-              "study"]
-
+              keywords = [
+                "overall",
+                "conclusion",
+                "insight",
+                "novel",
+                "potential",
+                "broader",
+                "ultimately",
+                "advancement",
+                "valuable",
+                "study",
+                "research",
+                "critical gap",
+                "understanding",
+                "powerful",
+                "advancing",
+              ]
               last_sentences = ".".join(output.split(".")[-3:]).lower()
-
               print(
                 any(s in last_sentences for s in keywords)
               )
@@ -4687,15 +4802,27 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_46 {}
-      latencyMs: 100661
-      error: >
+      latencyMs: 100243
+      error: |
         Python code returned false
-
-        keywords = ["overall", "conclusion", "insight", "novel", "potential",
-        "broader", "ultimately", "advancement", "valuable", "study"]
-
+        keywords = [
+          "overall",
+          "conclusion",
+          "insight",
+          "novel",
+          "potential",
+          "broader",
+          "ultimately",
+          "advancement",
+          "valuable",
+          "study",
+          "research",
+          "critical gap",
+          "understanding",
+          "powerful",
+          "advancing",
+        ]
         last_sentences = ".".join(output.split(".")[-3:]).lower()
-
         print(
           any(s in last_sentences for s in keywords)
         )
@@ -4703,14 +4830,26 @@ results:
         pass: false
         score: 0.8888888888888888
         namedScores: *ref_46
-        reason: >
+        reason: |
           Python code returned false
-
-          keywords = ["overall", "conclusion", "insight", "novel", "potential",
-          "broader", "ultimately", "advancement", "valuable", "study"]
-
+          keywords = [
+            "overall",
+            "conclusion",
+            "insight",
+            "novel",
+            "potential",
+            "broader",
+            "ultimately",
+            "advancement",
+            "valuable",
+            "study",
+            "research",
+            "critical gap",
+            "understanding",
+            "powerful",
+            "advancing",
+          ]
           last_sentences = ".".join(output.split(".")[-3:]).lower()
-
           print(
             any(s in last_sentences for s in keywords)
           )
@@ -4753,15 +4892,26 @@ results:
             assertion: *ref_10
           - pass: false
             score: 0
-            reason: >
+            reason: |
               Python code returned false
-
-              keywords = ["overall", "conclusion", "insight", "novel",
-              "potential", "broader", "ultimately", "advancement", "valuable",
-              "study"]
-
+              keywords = [
+                "overall",
+                "conclusion",
+                "insight",
+                "novel",
+                "potential",
+                "broader",
+                "ultimately",
+                "advancement",
+                "valuable",
+                "study",
+                "research",
+                "critical gap",
+                "understanding",
+                "powerful",
+                "advancing",
+              ]
               last_sentences = ".".join(output.split(".")[-3:]).lower()
-
               print(
                 any(s in last_sentences for s in keywords)
               )
@@ -4831,15 +4981,27 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_47 {}
-      latencyMs: 88820
-      error: >
+      latencyMs: 88917
+      error: |
         Python code returned false
-
-        keywords = ["overall", "conclusion", "insight", "novel", "potential",
-        "broader", "ultimately", "advancement", "valuable", "study"]
-
+        keywords = [
+          "overall",
+          "conclusion",
+          "insight",
+          "novel",
+          "potential",
+          "broader",
+          "ultimately",
+          "advancement",
+          "valuable",
+          "study",
+          "research",
+          "critical gap",
+          "understanding",
+          "powerful",
+          "advancing",
+        ]
         last_sentences = ".".join(output.split(".")[-3:]).lower()
-
         print(
           any(s in last_sentences for s in keywords)
         )
@@ -4847,14 +5009,26 @@ results:
         pass: false
         score: 0.8888888888888888
         namedScores: *ref_47
-        reason: >
+        reason: |
           Python code returned false
-
-          keywords = ["overall", "conclusion", "insight", "novel", "potential",
-          "broader", "ultimately", "advancement", "valuable", "study"]
-
+          keywords = [
+            "overall",
+            "conclusion",
+            "insight",
+            "novel",
+            "potential",
+            "broader",
+            "ultimately",
+            "advancement",
+            "valuable",
+            "study",
+            "research",
+            "critical gap",
+            "understanding",
+            "powerful",
+            "advancing",
+          ]
           last_sentences = ".".join(output.split(".")[-3:]).lower()
-
           print(
             any(s in last_sentences for s in keywords)
           )
@@ -4897,15 +5071,26 @@ results:
             assertion: *ref_10
           - pass: false
             score: 0
-            reason: >
+            reason: |
               Python code returned false
-
-              keywords = ["overall", "conclusion", "insight", "novel",
-              "potential", "broader", "ultimately", "advancement", "valuable",
-              "study"]
-
+              keywords = [
+                "overall",
+                "conclusion",
+                "insight",
+                "novel",
+                "potential",
+                "broader",
+                "ultimately",
+                "advancement",
+                "valuable",
+                "study",
+                "research",
+                "critical gap",
+                "understanding",
+                "powerful",
+                "advancing",
+              ]
               last_sentences = ".".join(output.split(".")[-3:]).lower()
-
               print(
                 any(s in last_sentences for s in keywords)
               )
@@ -4995,15 +5180,27 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_48 {}
-      latencyMs: 99633
-      error: >
+      latencyMs: 100272
+      error: |
         Python code returned false
-
-        keywords = ["overall", "conclusion", "insight", "novel", "potential",
-        "broader", "ultimately", "advancement", "valuable", "study"]
-
+        keywords = [
+          "overall",
+          "conclusion",
+          "insight",
+          "novel",
+          "potential",
+          "broader",
+          "ultimately",
+          "advancement",
+          "valuable",
+          "study",
+          "research",
+          "critical gap",
+          "understanding",
+          "powerful",
+          "advancing",
+        ]
         last_sentences = ".".join(output.split(".")[-3:]).lower()
-
         print(
           any(s in last_sentences for s in keywords)
         )
@@ -5011,14 +5208,26 @@ results:
         pass: false
         score: 0.8888888888888888
         namedScores: *ref_48
-        reason: >
+        reason: |
           Python code returned false
-
-          keywords = ["overall", "conclusion", "insight", "novel", "potential",
-          "broader", "ultimately", "advancement", "valuable", "study"]
-
+          keywords = [
+            "overall",
+            "conclusion",
+            "insight",
+            "novel",
+            "potential",
+            "broader",
+            "ultimately",
+            "advancement",
+            "valuable",
+            "study",
+            "research",
+            "critical gap",
+            "understanding",
+            "powerful",
+            "advancing",
+          ]
           last_sentences = ".".join(output.split(".")[-3:]).lower()
-
           print(
             any(s in last_sentences for s in keywords)
           )
@@ -5061,15 +5270,26 @@ results:
             assertion: *ref_10
           - pass: false
             score: 0
-            reason: >
+            reason: |
               Python code returned false
-
-              keywords = ["overall", "conclusion", "insight", "novel",
-              "potential", "broader", "ultimately", "advancement", "valuable",
-              "study"]
-
+              keywords = [
+                "overall",
+                "conclusion",
+                "insight",
+                "novel",
+                "potential",
+                "broader",
+                "ultimately",
+                "advancement",
+                "valuable",
+                "study",
+                "research",
+                "critical gap",
+                "understanding",
+                "powerful",
+                "advancing",
+              ]
               last_sentences = ".".join(output.split(".")[-3:]).lower()
-
               print(
                 any(s in last_sentences for s in keywords)
               )
@@ -5139,15 +5359,27 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_49 {}
-      latencyMs: 89078
-      error: >
+      latencyMs: 88442
+      error: |
         Python code returned false
-
-        keywords = ["overall", "conclusion", "insight", "novel", "potential",
-        "broader", "ultimately", "advancement", "valuable", "study"]
-
+        keywords = [
+          "overall",
+          "conclusion",
+          "insight",
+          "novel",
+          "potential",
+          "broader",
+          "ultimately",
+          "advancement",
+          "valuable",
+          "study",
+          "research",
+          "critical gap",
+          "understanding",
+          "powerful",
+          "advancing",
+        ]
         last_sentences = ".".join(output.split(".")[-3:]).lower()
-
         print(
           any(s in last_sentences for s in keywords)
         )
@@ -5155,14 +5387,26 @@ results:
         pass: false
         score: 0.8888888888888888
         namedScores: *ref_49
-        reason: >
+        reason: |
           Python code returned false
-
-          keywords = ["overall", "conclusion", "insight", "novel", "potential",
-          "broader", "ultimately", "advancement", "valuable", "study"]
-
+          keywords = [
+            "overall",
+            "conclusion",
+            "insight",
+            "novel",
+            "potential",
+            "broader",
+            "ultimately",
+            "advancement",
+            "valuable",
+            "study",
+            "research",
+            "critical gap",
+            "understanding",
+            "powerful",
+            "advancing",
+          ]
           last_sentences = ".".join(output.split(".")[-3:]).lower()
-
           print(
             any(s in last_sentences for s in keywords)
           )
@@ -5205,15 +5449,26 @@ results:
             assertion: *ref_10
           - pass: false
             score: 0
-            reason: >
+            reason: |
               Python code returned false
-
-              keywords = ["overall", "conclusion", "insight", "novel",
-              "potential", "broader", "ultimately", "advancement", "valuable",
-              "study"]
-
+              keywords = [
+                "overall",
+                "conclusion",
+                "insight",
+                "novel",
+                "potential",
+                "broader",
+                "ultimately",
+                "advancement",
+                "valuable",
+                "study",
+                "research",
+                "critical gap",
+                "understanding",
+                "powerful",
+                "advancing",
+              ]
               last_sentences = ".".join(output.split(".")[-3:]).lower()
-
               print(
                 any(s in last_sentences for s in keywords)
               )
@@ -5303,15 +5558,27 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_50 {}
-      latencyMs: 99983
-      error: >
+      latencyMs: 99652
+      error: |
         Python code returned false
-
-        keywords = ["overall", "conclusion", "insight", "novel", "potential",
-        "broader", "ultimately", "advancement", "valuable", "study"]
-
+        keywords = [
+          "overall",
+          "conclusion",
+          "insight",
+          "novel",
+          "potential",
+          "broader",
+          "ultimately",
+          "advancement",
+          "valuable",
+          "study",
+          "research",
+          "critical gap",
+          "understanding",
+          "powerful",
+          "advancing",
+        ]
         last_sentences = ".".join(output.split(".")[-3:]).lower()
-
         print(
           any(s in last_sentences for s in keywords)
         )
@@ -5319,14 +5586,26 @@ results:
         pass: false
         score: 0.8888888888888888
         namedScores: *ref_50
-        reason: >
+        reason: |
           Python code returned false
-
-          keywords = ["overall", "conclusion", "insight", "novel", "potential",
-          "broader", "ultimately", "advancement", "valuable", "study"]
-
+          keywords = [
+            "overall",
+            "conclusion",
+            "insight",
+            "novel",
+            "potential",
+            "broader",
+            "ultimately",
+            "advancement",
+            "valuable",
+            "study",
+            "research",
+            "critical gap",
+            "understanding",
+            "powerful",
+            "advancing",
+          ]
           last_sentences = ".".join(output.split(".")[-3:]).lower()
-
           print(
             any(s in last_sentences for s in keywords)
           )
@@ -5369,15 +5648,26 @@ results:
             assertion: *ref_10
           - pass: false
             score: 0
-            reason: >
+            reason: |
               Python code returned false
-
-              keywords = ["overall", "conclusion", "insight", "novel",
-              "potential", "broader", "ultimately", "advancement", "valuable",
-              "study"]
-
+              keywords = [
+                "overall",
+                "conclusion",
+                "insight",
+                "novel",
+                "potential",
+                "broader",
+                "ultimately",
+                "advancement",
+                "valuable",
+                "study",
+                "research",
+                "critical gap",
+                "understanding",
+                "powerful",
+                "advancing",
+              ]
               last_sentences = ".".join(output.split(".")[-3:]).lower()
-
               print(
                 any(s in last_sentences for s in keywords)
               )
@@ -5447,15 +5737,27 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_51 {}
-      latencyMs: 89278
-      error: >
+      latencyMs: 89677
+      error: |
         Python code returned false
-
-        keywords = ["overall", "conclusion", "insight", "novel", "potential",
-        "broader", "ultimately", "advancement", "valuable", "study"]
-
+        keywords = [
+          "overall",
+          "conclusion",
+          "insight",
+          "novel",
+          "potential",
+          "broader",
+          "ultimately",
+          "advancement",
+          "valuable",
+          "study",
+          "research",
+          "critical gap",
+          "understanding",
+          "powerful",
+          "advancing",
+        ]
         last_sentences = ".".join(output.split(".")[-3:]).lower()
-
         print(
           any(s in last_sentences for s in keywords)
         )
@@ -5463,14 +5765,26 @@ results:
         pass: false
         score: 0.8888888888888888
         namedScores: *ref_51
-        reason: >
+        reason: |
           Python code returned false
-
-          keywords = ["overall", "conclusion", "insight", "novel", "potential",
-          "broader", "ultimately", "advancement", "valuable", "study"]
-
+          keywords = [
+            "overall",
+            "conclusion",
+            "insight",
+            "novel",
+            "potential",
+            "broader",
+            "ultimately",
+            "advancement",
+            "valuable",
+            "study",
+            "research",
+            "critical gap",
+            "understanding",
+            "powerful",
+            "advancing",
+          ]
           last_sentences = ".".join(output.split(".")[-3:]).lower()
-
           print(
             any(s in last_sentences for s in keywords)
           )
@@ -5513,15 +5827,26 @@ results:
             assertion: *ref_10
           - pass: false
             score: 0
-            reason: >
+            reason: |
               Python code returned false
-
-              keywords = ["overall", "conclusion", "insight", "novel",
-              "potential", "broader", "ultimately", "advancement", "valuable",
-              "study"]
-
+              keywords = [
+                "overall",
+                "conclusion",
+                "insight",
+                "novel",
+                "potential",
+                "broader",
+                "ultimately",
+                "advancement",
+                "valuable",
+                "study",
+                "research",
+                "critical gap",
+                "understanding",
+                "powerful",
+                "advancing",
+              ]
               last_sentences = ".".join(output.split(".")[-3:]).lower()
-
               print(
                 any(s in last_sentences for s in keywords)
               )
@@ -5611,15 +5936,27 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_52 {}
-      latencyMs: 99627
-      error: >
+      latencyMs: 100279
+      error: |
         Python code returned false
-
-        keywords = ["overall", "conclusion", "insight", "novel", "potential",
-        "broader", "ultimately", "advancement", "valuable", "study"]
-
+        keywords = [
+          "overall",
+          "conclusion",
+          "insight",
+          "novel",
+          "potential",
+          "broader",
+          "ultimately",
+          "advancement",
+          "valuable",
+          "study",
+          "research",
+          "critical gap",
+          "understanding",
+          "powerful",
+          "advancing",
+        ]
         last_sentences = ".".join(output.split(".")[-3:]).lower()
-
         print(
           any(s in last_sentences for s in keywords)
         )
@@ -5627,14 +5964,26 @@ results:
         pass: false
         score: 0.8888888888888888
         namedScores: *ref_52
-        reason: >
+        reason: |
           Python code returned false
-
-          keywords = ["overall", "conclusion", "insight", "novel", "potential",
-          "broader", "ultimately", "advancement", "valuable", "study"]
-
+          keywords = [
+            "overall",
+            "conclusion",
+            "insight",
+            "novel",
+            "potential",
+            "broader",
+            "ultimately",
+            "advancement",
+            "valuable",
+            "study",
+            "research",
+            "critical gap",
+            "understanding",
+            "powerful",
+            "advancing",
+          ]
           last_sentences = ".".join(output.split(".")[-3:]).lower()
-
           print(
             any(s in last_sentences for s in keywords)
           )
@@ -5677,15 +6026,26 @@ results:
             assertion: *ref_10
           - pass: false
             score: 0
-            reason: >
+            reason: |
               Python code returned false
-
-              keywords = ["overall", "conclusion", "insight", "novel",
-              "potential", "broader", "ultimately", "advancement", "valuable",
-              "study"]
-
+              keywords = [
+                "overall",
+                "conclusion",
+                "insight",
+                "novel",
+                "potential",
+                "broader",
+                "ultimately",
+                "advancement",
+                "valuable",
+                "study",
+                "research",
+                "critical gap",
+                "understanding",
+                "powerful",
+                "advancing",
+              ]
               last_sentences = ".".join(output.split(".")[-3:]).lower()
-
               print(
                 any(s in last_sentences for s in keywords)
               )
@@ -5717,12 +6077,12 @@ results:
             /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/baseline.txt
           id: e1a57a9264776c29f043b96cf25a9c6b38b059a85043459f545fc3392e2dcf4c
           metrics:
-            score: 18.000000000000004
+            score: 18.111111111111114
             testPassCount: 4
             testFailCount: 16
-            assertPassCount: 162
-            assertFailCount: 18
-            totalLatencyMs: 1863313
+            assertPassCount: 163
+            assertFailCount: 17
+            totalLatencyMs: 1918214
             tokenUsage:
               total: 0
               prompt: 0
@@ -5769,7 +6129,7 @@ results:
             testFailCount: 15
             assertPassCount: 165
             assertFailCount: 15
-            totalLatencyMs: 2146765
+            totalLatencyMs: 2131885
             tokenUsage:
               total: 0
               prompt: 0
@@ -5805,7 +6165,7 @@ results:
               that diseases are significantly associated with gene modules
               expressed in relevant cell types, and our approach is accurate in
               predicting known drug-disease pairs and inferring mechanisms of
-              action. Furthermore using a CRISPR screen to analyze lipid
+              action. Furthermore, using a CRISPR screen to analyze lipid
               regulation, we find that functionally important players lack
               associations but are prioritized in trait-associated modules by
               PhenoPLIER. In conclusion, by incorporating groups of co-expressed
@@ -5853,15 +6213,17 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 116157
+            latencyMs: 148978
             gradingResult: *ref_53
           - pass: true
             score: 1
             namedScores: *ref_2
             text: >-
-              Complex traits are influenced by the concerted action of multiple
-              genes in specific contexts. Understanding these gene-gene
-              interactions is essential for developing new therapies.
+              Genes act in concert with each other in specific contexts to
+              perform their functions. Determining how these genes influence
+              complex traits requires a mechanistic understanding of expression
+              regulation across different conditions. It has been shown that
+              this insight is critical for developing new therapies.
               Transcriptome-wide association studies have helped uncover the
               role of individual genes in disease-relevant mechanisms. However,
               modern models of the architecture of complex traits predict that
@@ -5943,7 +6305,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 113952
+            latencyMs: 124268
             gradingResult: *ref_54
         vars:
           - >-
@@ -6001,7 +6363,7 @@ results:
               that diseases are significantly associated with gene modules
               expressed in relevant cell types, and our approach is accurate in
               predicting known drug-disease pairs and inferring mechanisms of
-              action. Furthermore using a CRISPR screen to analyze lipid
+              action. Furthermore, using a CRISPR screen to analyze lipid
               regulation, we find that functionally important players lack
               associations but are prioritized in trait-associated modules by
               PhenoPLIER. In conclusion, by incorporating groups of co-expressed
@@ -6049,7 +6411,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 111111
+            latencyMs: 110857
             gradingResult: *ref_55
           - pass: true
             score: 1
@@ -6141,7 +6503,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 123919
+            latencyMs: 124193
             gradingResult: *ref_56
         vars:
           - >-
@@ -6199,7 +6561,7 @@ results:
               that diseases are significantly associated with gene modules
               expressed in relevant cell types, and our approach is accurate in
               predicting known drug-disease pairs and inferring mechanisms of
-              action. Furthermore using a CRISPR screen to analyze lipid
+              action. Furthermore, using a CRISPR screen to analyze lipid
               regulation, we find that functionally important players lack
               associations but are prioritized in trait-associated modules by
               PhenoPLIER. In conclusion, by incorporating groups of co-expressed
@@ -6247,7 +6609,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 111631
+            latencyMs: 111823
             gradingResult: *ref_57
           - pass: true
             score: 1
@@ -6339,7 +6701,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 124256
+            latencyMs: 124305
             gradingResult: *ref_58
         vars:
           - >-
@@ -6380,31 +6742,31 @@ results:
             score: 1
             namedScores: *ref_16
             text: >-
-              Genes act in concert with each other to perform their functions.
-              Determining how these genes influence complex traits requires a
-              mechanistic understanding of gene expression across different
-              conditions. It has been shown that this insight is critical for
-              developing new therapies. Transcriptome-wide association studies
-              have helped uncover the role of individual genes in
-              disease-relevant mechanisms. However, modern models of the
-              architecture of complex traits predict that gene-gene interactions
-              play a crucial role in disease origin and progression. Here we
-              introduce PhenoPLIER, a computational approach that maps
-              gene-trait associations and pharmacological perturbation data into
-              a common latent representation for a joint analysis. This
-              representation is based on modules of genes with similar
-              expression patterns across the same conditions. We observe that
-              diseases are significantly associated with gene modules expressed
-              in relevant cell types, and our approach is accurate in predicting
-              known drug-disease pairs and inferring mechanisms of action.
-              Furthermore, using a CRISPR screen to analyze lipid regulation, we
-              find that functionally important players lack associations but are
-              prioritized in trait-associated modules by PhenoPLIER. In
-              conclusion, by incorporating groups of co-expressed genes,
-              PhenoPLIER can contextualize genetic associations and reveal
-              potential targets missed by single-gene strategies. PhenoPLIER
-              provides a novel framework for interpreting genetic associations
-              through the lens of gene modules.
+              Genes act in concert with each other in specific contexts to
+              perform their functions. Determining how these genes influence
+              complex traits requires a mechanistic understanding of expression
+              regulation across different conditions. It has been shown that
+              this insight is critical for developing new therapies.
+              Transcriptome-wide association studies have helped uncover the
+              role of individual genes in disease-relevant mechanisms. However,
+              modern models of the architecture of complex traits predict that
+              gene-gene interactions play a crucial role in disease origin and
+              progression. Here we introduce PhenoPLIER, a computational
+              approach that maps gene-trait associations and pharmacological
+              perturbation data into a common latent representation for a joint
+              analysis. This representation is based on modules of genes with
+              similar expression patterns across the same conditions. We observe
+              that diseases are significantly associated with gene modules
+              expressed in relevant cell types, and our approach is accurate in
+              predicting known drug-disease pairs and inferring mechanisms of
+              action. Furthermore using a CRISPR screen to analyze lipid
+              regulation, we find that functionally important players lack
+              associations but are prioritized in trait-associated modules by
+              PhenoPLIER. In conclusion, by incorporating groups of co-expressed
+              genes, PhenoPLIER can contextualize genetic associations and
+              reveal potential targets missed by single-gene strategies.
+              PhenoPLIER provides a novel framework for interpreting genetic
+              associations through the lens of gene modules.
             prompt: >-
               You are a scientist with copy-editing skills who will help in
               improving the text of a manuscript with title 'Projecting genetic
@@ -6445,7 +6807,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 110257
+            latencyMs: 110767
             gradingResult: *ref_59
           - pass: true
             score: 1
@@ -6468,7 +6830,7 @@ results:
               that diseases are significantly associated with gene modules
               expressed in relevant cell types, and our approach is accurate in
               predicting known drug-disease pairs and inferring mechanisms of
-              action. Furthermore using a CRISPR screen to analyze lipid
+              action. Furthermore, using a CRISPR screen to analyze lipid
               regulation, we find that functionally important players lack
               associations but are prioritized in trait-associated modules by
               PhenoPLIER. In conclusion, by incorporating groups of co-expressed
@@ -6537,7 +6899,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 123550
+            latencyMs: 124054
             gradingResult: *ref_60
         vars:
           - >-
@@ -6648,7 +7010,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 112797
+            latencyMs: 114010
             gradingResult: *ref_61
           - pass: true
             score: 1
@@ -6671,7 +7033,7 @@ results:
               that diseases are significantly associated with gene modules
               expressed in relevant cell types, and our approach is accurate in
               predicting known drug-disease pairs and inferring mechanisms of
-              action. Furthermore using a CRISPR screen to analyze lipid
+              action. Furthermore, using a CRISPR screen to analyze lipid
               regulation, we find that functionally important players lack
               associations but are prioritized in trait-associated modules by
               PhenoPLIER. In conclusion, by incorporating groups of co-expressed
@@ -6740,7 +7102,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 123353
+            latencyMs: 123877
             gradingResult: *ref_62
         vars:
           - >-
@@ -6778,7 +7140,7 @@ results:
       - description: Abstract
         outputs:
           - pass: false
-            score: 0.8888888888888888
+            score: 0.7777777777777778
             namedScores: *ref_20
             text: >-
               Python code returned false
@@ -6792,29 +7154,18 @@ results:
 
               We introduce PhenoPLIER, a computational approach that maps
               gene-trait associations and pharmacological perturbation data into
-              a common latent representation for a joint analysis. Genes act in
-              concert with each other in specific contexts to perform their
-              functions. Determining how these genes influence complex traits
-              requires a mechanistic understanding of expression regulation
-              across different conditions. It has been shown that this insight
-              is critical for developing new therapies. Transcriptome-wide
-              association studies have helped uncover the role of individual
-              genes in disease-relevant mechanisms. However, modern models of
-              the architecture of complex traits predict that gene-gene
-              interactions play a crucial role in disease origin and
-              progression. PhenoPLIER's representation is based on modules of
-              genes with similar expression patterns across the same conditions.
-              We observe that diseases are significantly associated with gene
-              modules expressed in relevant cell types, and our approach is
-              accurate in predicting known drug-disease pairs and inferring
-              mechanisms of action. Furthermore, using a CRISPR screen to
-              analyze lipid regulation, we find that functionally important
-              players lack associations but are prioritized in trait-associated
-              modules by PhenoPLIER. In conclusion, by incorporating groups of
-              co-expressed genes, PhenoPLIER can contextualize genetic
-              associations and reveal potential targets missed by single-gene
-              strategies. PhenoPLIER provides a novel framework for interpreting
-              genetic associations through the lens of gene modules.
+              a common latent representation for a joint analysis. Our method
+              groups genes with similar expression patterns across conditions
+              into modules. We find that diseases are significantly associated
+              with gene modules expressed in relevant cell types. Furthermore,
+              using a CRISPR screen to analyze lipid regulation, we find that
+              functionally important players lack associations but are
+              prioritized in trait-associated modules by PhenoPLIER. In
+              conclusion, by incorporating groups of co-expressed genes,
+              PhenoPLIER can contextualize genetic associations and reveal
+              potential targets missed by single-gene strategies. Our approach
+              provides a novel framework for interpreting genetic associations
+              through the lens of gene modules.
             prompt: >-
               You are a scientist with copy-editing skills who will help in
               improving the text of a manuscript with title 'Projecting genetic
@@ -6854,7 +7205,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 113186
+            latencyMs: 62405
             gradingResult: *ref_63
           - pass: false
             score: 0.8888888888888888
@@ -6954,7 +7305,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 124846
+            latencyMs: 126218
             gradingResult: *ref_64
         vars:
           - >-
@@ -6993,27 +7344,43 @@ results:
       - description: Abstract
         outputs:
           - pass: false
-            score: 0.6666666666666666
+            score: 0.8888888888888888
             namedScores: *ref_23
             text: >-
               Python code returned false
 
               print(
-                output.find("PhenoPLIER") < max(output.find("CRISPR"), output.find("lipid"), output.find("drug-disease"), output.find("players"))
+                "PhenoPLIER" not in output.split(".")[0]
               )
 
 
               ---
 
-              In this study, we introduce PhenoPLIER, a computational approach
-              that maps gene-trait associations and pharmacological perturbation
-              data into a common latent representation for a joint analysis. Our
-              method helps uncover the role of individual genes in
-              disease-relevant mechanisms by incorporating groups of
-              co-expressed genes. By contextualizing genetic associations
-              through the lens of gene modules, PhenoPLIER provides a novel
-              framework for interpreting genetic associations through the lens
-              of gene modules.
+              PhenoPLIER is a computational approach that maps gene-trait
+              associations and pharmacological perturbation data into a common
+              latent representation for a joint analysis. Genes act in concert
+              with each other in specific contexts to perform their functions.
+              Determining how these genes influence complex traits requires a
+              mechanistic understanding of expression regulation across
+              different conditions. It has been shown that this insight is
+              critical for developing new therapies. Transcriptome-wide
+              association studies have helped uncover the role of individual
+              genes in disease-relevant mechanisms. However, modern models of
+              the architecture of complex traits predict that gene-gene
+              interactions play a crucial role in disease origin and
+              progression. PhenoPLIER's representation is based on modules of
+              genes with similar expression patterns across the same conditions.
+              We observe that diseases are significantly associated with gene
+              modules expressed in relevant cell types, and our approach is
+              accurate in predicting known drug-disease pairs and inferring
+              mechanisms of action. Furthermore, using a CRISPR screen to
+              analyze lipid regulation, we find that functionally important
+              players lack associations but are prioritized in trait-associated
+              modules by PhenoPLIER. In conclusion, by incorporating groups of
+              co-expressed genes, PhenoPLIER can contextualize genetic
+              associations and reveal potential targets missed by single-gene
+              strategies. PhenoPLIER provides a novel framework for interpreting
+              genetic associations through the lens of gene modules.
             prompt: >-
               You are a scientist with copy-editing skills who will help in
               improving the text of a manuscript with title 'Projecting genetic
@@ -7053,7 +7420,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 39958
+            latencyMs: 113714
             gradingResult: *ref_65
           - pass: false
             score: 0.8888888888888888
@@ -7153,7 +7520,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 125594
+            latencyMs: 125692
             gradingResult: *ref_66
         vars:
           - >-
@@ -7204,14 +7571,14 @@ results:
 
               ---
 
-              We introduce PhenoPLIER, a computational approach that maps
-              gene-trait associations and pharmacological perturbation data into
-              a common latent representation for a joint analysis. Genes act in
-              concert with each other in specific contexts to perform their
-              functions. Determining how these genes influence complex traits
-              requires a mechanistic understanding of expression regulation
-              across different conditions. It has been shown that this insight
-              is critical for developing new therapies. Transcriptome-wide
+              PhenoPLIER is a computational approach that maps gene-trait
+              associations and pharmacological perturbation data into a common
+              latent representation for a joint analysis. Genes act in concert
+              with each other in specific contexts to perform their functions.
+              Determining how these genes influence complex traits requires a
+              mechanistic understanding of expression regulation across
+              different conditions. It has been shown that this insight is
+              critical for developing new therapies. Transcriptome-wide
               association studies have helped uncover the role of individual
               genes in disease-relevant mechanisms. However, modern models of
               the architecture of complex traits predict that gene-gene
@@ -7268,7 +7635,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 113909
+            latencyMs: 112587
             gradingResult: *ref_67
           - pass: false
             score: 0.8888888888888888
@@ -7285,21 +7652,16 @@ results:
 
               We introduce PhenoPLIER, a computational approach that maps
               gene-trait associations and pharmacological perturbation data into
-              a common latent representation for a joint analysis. Genes act in
-              concert with each other in specific contexts to perform their
-              functions. Determining how these genes influence complex traits
-              requires a mechanistic understanding of expression regulation
-              across different conditions. It has been shown that this insight
-              is critical for developing new therapies. Transcriptome-wide
-              association studies have helped uncover the role of individual
-              genes in disease-relevant mechanisms. However, modern models of
-              the architecture of complex traits predict that gene-gene
-              interactions play a crucial role in disease origin and
-              progression. PhenoPLIER's representation is based on modules of
-              genes with similar expression patterns across the same conditions.
-              We observe that diseases are significantly associated with gene
-              modules expressed in relevant cell types, and our approach is
-              accurate in predicting known drug-disease pairs and inferring
+              a common latent representation for a joint analysis. Determining
+              how genes influence complex traits requires a mechanistic
+              understanding of expression regulation across different
+              conditions. Transcriptome-wide association studies have helped
+              uncover the role of individual genes in disease-relevant
+              mechanisms, but modern models predict that gene-gene interactions
+              play a crucial role in disease origin and progression.
+              PhenoPLIER's representation is based on modules of genes with
+              similar expression patterns across the same conditions. Our
+              approach accurately predicts known drug-disease pairs and infers
               mechanisms of action. Furthermore, using a CRISPR screen to
               analyze lipid regulation, we find that functionally important
               players lack associations but are prioritized in trait-associated
@@ -7368,7 +7730,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 125149
+            latencyMs: 101443
             gradingResult: *ref_68
         vars:
           - >-
@@ -7419,14 +7781,14 @@ results:
 
               ---
 
-              PhenoPLIER is a computational approach that maps gene-trait
-              associations and pharmacological perturbation data into a common
-              latent representation for a joint analysis. Genes act in concert
-              with each other in specific contexts to perform their functions.
-              Determining how these genes influence complex traits requires a
-              mechanistic understanding of expression regulation across
-              different conditions. It has been shown that this insight is
-              critical for developing new therapies. Transcriptome-wide
+              We introduce PhenoPLIER, a computational approach that maps
+              gene-trait associations and pharmacological perturbation data into
+              a common latent representation for a joint analysis. Genes act in
+              concert with each other in specific contexts to perform their
+              functions. Determining how these genes influence complex traits
+              requires a mechanistic understanding of expression regulation
+              across different conditions. It has been shown that this insight
+              is critical for developing new therapies. Transcriptome-wide
               association studies have helped uncover the role of individual
               genes in disease-relevant mechanisms. However, modern models of
               the architecture of complex traits predict that gene-gene
@@ -7483,7 +7845,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 112750
+            latencyMs: 113109
             gradingResult: *ref_69
           - pass: false
             score: 0.8888888888888888
@@ -7498,10 +7860,10 @@ results:
 
               ---
 
-              Here, we introduce PhenoPLIER, a novel computational approach that
-              maps gene-trait associations and pharmacological perturbation data
-              into a common latent representation for joint analysis. Genes act
-              in concert with each other in specific contexts to perform their
+              We introduce PhenoPLIER, a computational approach that maps
+              gene-trait associations and pharmacological perturbation data into
+              a common latent representation for a joint analysis. Genes act in
+              concert with each other in specific contexts to perform their
               functions. Determining how these genes influence complex traits
               requires a mechanistic understanding of expression regulation
               across different conditions. It has been shown that this insight
@@ -7583,7 +7945,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 127069
+            latencyMs: 124831
             gradingResult: *ref_70
         vars:
           - >-
@@ -7634,14 +7996,14 @@ results:
 
               ---
 
-              PhenoPLIER is a computational approach that maps gene-trait
-              associations and pharmacological perturbation data into a common
-              latent representation for a joint analysis. Genes act in concert
-              with each other in specific contexts to perform their functions.
-              Determining how these genes influence complex traits requires a
-              mechanistic understanding of expression regulation across
-              different conditions. It has been shown that this insight is
-              critical for developing new therapies. Transcriptome-wide
+              We introduce PhenoPLIER, a computational approach that maps
+              gene-trait associations and pharmacological perturbation data into
+              a common latent representation for a joint analysis. Genes act in
+              concert with each other in specific contexts to perform their
+              functions. Determining how these genes influence complex traits
+              requires a mechanistic understanding of expression regulation
+              across different conditions. It has been shown that this insight
+              is critical for developing new therapies. Transcriptome-wide
               association studies have helped uncover the role of individual
               genes in disease-relevant mechanisms. However, modern models of
               the architecture of complex traits predict that gene-gene
@@ -7698,7 +8060,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 111410
+            latencyMs: 113724
             gradingResult: *ref_71
           - pass: false
             score: 0.8888888888888888
@@ -7798,7 +8160,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 125339
+            latencyMs: 124944
             gradingResult: *ref_72
         vars:
           - >-
@@ -7896,7 +8258,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 71228
+            latencyMs: 71710
             gradingResult: *ref_73
           - pass: false
             score: 0.8888888888888888
@@ -7979,7 +8341,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 81669
+            latencyMs: 81777
             gradingResult: *ref_74
         vars:
           - >-
@@ -8068,7 +8430,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 71623
+            latencyMs: 72662
             gradingResult: *ref_75
           - pass: false
             score: 0.8888888888888888
@@ -8151,7 +8513,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 82617
+            latencyMs: 81521
             gradingResult: *ref_76
         vars:
           - >-
@@ -8183,7 +8545,7 @@ results:
           - pass: false
             score: 0.8888888888888888
             namedScores: *ref_36
-            text: >
+            text: >-
               Python code returned false
 
               print(
@@ -8240,7 +8602,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 72513
+            latencyMs: 71522
             gradingResult: *ref_77
           - pass: false
             score: 0.8888888888888888
@@ -8323,7 +8685,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 80935
+            latencyMs: 81660
             gradingResult: *ref_78
         vars:
           - >-
@@ -8412,7 +8774,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 71533
+            latencyMs: 72343
             gradingResult: *ref_79
           - pass: false
             score: 0.8888888888888888
@@ -8495,7 +8857,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 81925
+            latencyMs: 81353
             gradingResult: *ref_80
         vars:
           - >-
@@ -8553,10 +8915,6 @@ results:
               associations and reveal potential targets missed by single-gene
               strategies. PhenoPLIER provides a novel framework for interpreting
               genetic associations through the lens of gene modules.
-
-
-              The revised paragraph is more concise and focuses on the main
-              findings and implications of the study.
             prompt: >-
               You are a scientist with copy-editing skills who will help in
               improving the text of a manuscript with title 'Projecting genetic
@@ -8588,7 +8946,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 78402
+            latencyMs: 72414
             gradingResult: *ref_81
           - pass: false
             score: 0.8888888888888888
@@ -8671,7 +9029,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 81937
+            latencyMs: 81373
             gradingResult: *ref_82
         vars:
           - >-
@@ -8706,9 +9064,23 @@ results:
             text: >-
               Python code returned false
 
-              keywords = ["overall", "conclusion", "insight", "novel",
-              "potential", "broader", "ultimately", "advancement", "valuable",
-              "study"]
+              keywords = [
+                "overall",
+                "conclusion",
+                "insight",
+                "novel",
+                "potential",
+                "broader",
+                "ultimately",
+                "advancement",
+                "valuable",
+                "study",
+                "research",
+                "critical gap",
+                "understanding",
+                "powerful",
+                "advancing",
+              ]
 
               last_sentences = ".".join(output.split(".")[-3:]).lower()
 
@@ -8775,7 +9147,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 88822
+            latencyMs: 89373
             gradingResult: *ref_83
           - pass: false
             score: 0.8888888888888888
@@ -8783,9 +9155,23 @@ results:
             text: >-
               Python code returned false
 
-              keywords = ["overall", "conclusion", "insight", "novel",
-              "potential", "broader", "ultimately", "advancement", "valuable",
-              "study"]
+              keywords = [
+                "overall",
+                "conclusion",
+                "insight",
+                "novel",
+                "potential",
+                "broader",
+                "ultimately",
+                "advancement",
+                "valuable",
+                "study",
+                "research",
+                "critical gap",
+                "understanding",
+                "powerful",
+                "advancing",
+              ]
 
               last_sentences = ".".join(output.split(".")[-3:]).lower()
 
@@ -8873,7 +9259,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 100751
+            latencyMs: 99930
             gradingResult: *ref_84
         vars:
           - >-
@@ -8914,9 +9300,23 @@ results:
             text: >-
               Python code returned false
 
-              keywords = ["overall", "conclusion", "insight", "novel",
-              "potential", "broader", "ultimately", "advancement", "valuable",
-              "study"]
+              keywords = [
+                "overall",
+                "conclusion",
+                "insight",
+                "novel",
+                "potential",
+                "broader",
+                "ultimately",
+                "advancement",
+                "valuable",
+                "study",
+                "research",
+                "critical gap",
+                "understanding",
+                "powerful",
+                "advancing",
+              ]
 
               last_sentences = ".".join(output.split(".")[-3:]).lower()
 
@@ -8983,7 +9383,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 88850
+            latencyMs: 89180
             gradingResult: *ref_85
           - pass: false
             score: 0.8888888888888888
@@ -8991,9 +9391,23 @@ results:
             text: >-
               Python code returned false
 
-              keywords = ["overall", "conclusion", "insight", "novel",
-              "potential", "broader", "ultimately", "advancement", "valuable",
-              "study"]
+              keywords = [
+                "overall",
+                "conclusion",
+                "insight",
+                "novel",
+                "potential",
+                "broader",
+                "ultimately",
+                "advancement",
+                "valuable",
+                "study",
+                "research",
+                "critical gap",
+                "understanding",
+                "powerful",
+                "advancing",
+              ]
 
               last_sentences = ".".join(output.split(".")[-3:]).lower()
 
@@ -9081,7 +9495,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 100661
+            latencyMs: 100243
             gradingResult: *ref_86
         vars:
           - >-
@@ -9122,9 +9536,23 @@ results:
             text: >-
               Python code returned false
 
-              keywords = ["overall", "conclusion", "insight", "novel",
-              "potential", "broader", "ultimately", "advancement", "valuable",
-              "study"]
+              keywords = [
+                "overall",
+                "conclusion",
+                "insight",
+                "novel",
+                "potential",
+                "broader",
+                "ultimately",
+                "advancement",
+                "valuable",
+                "study",
+                "research",
+                "critical gap",
+                "understanding",
+                "powerful",
+                "advancing",
+              ]
 
               last_sentences = ".".join(output.split(".")[-3:]).lower()
 
@@ -9191,7 +9619,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 88820
+            latencyMs: 88917
             gradingResult: *ref_87
           - pass: false
             score: 0.8888888888888888
@@ -9199,9 +9627,23 @@ results:
             text: >-
               Python code returned false
 
-              keywords = ["overall", "conclusion", "insight", "novel",
-              "potential", "broader", "ultimately", "advancement", "valuable",
-              "study"]
+              keywords = [
+                "overall",
+                "conclusion",
+                "insight",
+                "novel",
+                "potential",
+                "broader",
+                "ultimately",
+                "advancement",
+                "valuable",
+                "study",
+                "research",
+                "critical gap",
+                "understanding",
+                "powerful",
+                "advancing",
+              ]
 
               last_sentences = ".".join(output.split(".")[-3:]).lower()
 
@@ -9289,7 +9731,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 99633
+            latencyMs: 100272
             gradingResult: *ref_88
         vars:
           - >-
@@ -9330,9 +9772,23 @@ results:
             text: >-
               Python code returned false
 
-              keywords = ["overall", "conclusion", "insight", "novel",
-              "potential", "broader", "ultimately", "advancement", "valuable",
-              "study"]
+              keywords = [
+                "overall",
+                "conclusion",
+                "insight",
+                "novel",
+                "potential",
+                "broader",
+                "ultimately",
+                "advancement",
+                "valuable",
+                "study",
+                "research",
+                "critical gap",
+                "understanding",
+                "powerful",
+                "advancing",
+              ]
 
               last_sentences = ".".join(output.split(".")[-3:]).lower()
 
@@ -9399,7 +9855,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 89078
+            latencyMs: 88442
             gradingResult: *ref_89
           - pass: false
             score: 0.8888888888888888
@@ -9407,9 +9863,23 @@ results:
             text: >-
               Python code returned false
 
-              keywords = ["overall", "conclusion", "insight", "novel",
-              "potential", "broader", "ultimately", "advancement", "valuable",
-              "study"]
+              keywords = [
+                "overall",
+                "conclusion",
+                "insight",
+                "novel",
+                "potential",
+                "broader",
+                "ultimately",
+                "advancement",
+                "valuable",
+                "study",
+                "research",
+                "critical gap",
+                "understanding",
+                "powerful",
+                "advancing",
+              ]
 
               last_sentences = ".".join(output.split(".")[-3:]).lower()
 
@@ -9497,7 +9967,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 99983
+            latencyMs: 99652
             gradingResult: *ref_90
         vars:
           - >-
@@ -9538,9 +10008,23 @@ results:
             text: >-
               Python code returned false
 
-              keywords = ["overall", "conclusion", "insight", "novel",
-              "potential", "broader", "ultimately", "advancement", "valuable",
-              "study"]
+              keywords = [
+                "overall",
+                "conclusion",
+                "insight",
+                "novel",
+                "potential",
+                "broader",
+                "ultimately",
+                "advancement",
+                "valuable",
+                "study",
+                "research",
+                "critical gap",
+                "understanding",
+                "powerful",
+                "advancing",
+              ]
 
               last_sentences = ".".join(output.split(".")[-3:]).lower()
 
@@ -9607,7 +10091,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 89278
+            latencyMs: 89677
             gradingResult: *ref_91
           - pass: false
             score: 0.8888888888888888
@@ -9615,9 +10099,23 @@ results:
             text: >-
               Python code returned false
 
-              keywords = ["overall", "conclusion", "insight", "novel",
-              "potential", "broader", "ultimately", "advancement", "valuable",
-              "study"]
+              keywords = [
+                "overall",
+                "conclusion",
+                "insight",
+                "novel",
+                "potential",
+                "broader",
+                "ultimately",
+                "advancement",
+                "valuable",
+                "study",
+                "research",
+                "critical gap",
+                "understanding",
+                "powerful",
+                "advancing",
+              ]
 
               last_sentences = ".".join(output.split(".")[-3:]).lower()
 
@@ -9705,7 +10203,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 99627
+            latencyMs: 100279
             gradingResult: *ref_92
         vars:
           - >-
