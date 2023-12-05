@@ -10,6 +10,7 @@ models = {
   "ollama:alfred:40b-1023-q5_1": 5,
   "openai:gpt-3.5-turbo": 5,
   "openai:gpt-4": 5,
+  "openai:gpt-4-1106-preview": 5,
 }
 
 for model, model_n_rep in models.items():
