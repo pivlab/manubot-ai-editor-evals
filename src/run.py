@@ -4,6 +4,8 @@ models = {
     "ollama:starling-lm:7b-alpha-fp16": 5,
     "ollama:mistral:7b-instruct-fp16": 5,
     "ollama:mistral:7b-instruct-v0.2-fp16": 5,
+    "ollama:mixtral:8x7b-instruct-v0.1-q8_0": 5,
+    "ollama:mixtral:8x7b-instruct-v0.1-q5_K_S": 5,
     "ollama:deepseek-llm:7b-chat-fp16": 5,
     "ollama:neural-chat:7b-v3.1-fp16": 5,
     "ollama:openchat:7b-v3.5-fp16": 5,
