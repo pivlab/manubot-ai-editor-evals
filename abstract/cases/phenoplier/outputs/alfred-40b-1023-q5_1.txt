@@ -10,7 +10,7 @@ results:
           associations through gene expression patterns highlights disease
           etiology and drug mechanisms' and keywords 'genetic studies,
           functional genomics, gene co-expression, therapeutic targets, drug
-          repurposing, clustering of complex traits'. Revise the following
+          repurposing, clustering of complex traits.' Revise the following
           abstract of this manuscript.
 
 
@@ -42,7 +42,7 @@ results:
 
           Revised paragraph:
         display: >-
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/baseline.txt
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/prompts/baseline.txt
       vars: &ref_1
         test_description: spelling/grammar errors
         title: >-
@@ -105,7 +105,7 @@ results:
       success: true
       score: 1
       namedScores: &ref_0 {}
-      latencyMs: 148978
+      latencyMs: 149146
       gradingResult: &ref_53
         pass: true
         score: 1
@@ -146,6 +146,8 @@ results:
               value:
                 - authors
                 - 'Abstract:'
+                - 'Keywords:'
+                - 'References:'
           - pass: true
             score: 1
             reason: Assertion passed
@@ -162,8 +164,10 @@ results:
               type: python
               value: |
                 paragraph = context["vars"]["paragraph"]
+                paragraph_words = len(paragraph.strip().split())
+                output_words = len(output.strip().split())
                 print(
-                  (len(output) > 0.6 * len(paragraph)) and (len(output) < 1.4 * len(paragraph))
+                  (output_words > 0.5 * paragraph_words) and (output_words < 1.6 * paragraph_words)
                 )
           - pass: true
             score: 1
@@ -220,7 +224,7 @@ results:
           associations through gene expression patterns highlights disease
           etiology and drug mechanisms' and keywords 'genetic studies,
           functional genomics, gene co-expression, therapeutic targets, drug
-          repurposing, clustering of complex traits'. Revise the following
+          repurposing, clustering of complex traits.' Revise the following
           abstract of this manuscript, so it has a clear sentence structure and
           follows a context-content-conclusion (C-C-C) scheme and fits in a
           single paragraph. Make changes only when they are absolutely necessary
@@ -272,7 +276,7 @@ results:
 
           Revised paragraph:
         display: >-
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/candidate.txt
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/prompts/candidate.txt
       vars: *ref_1
       response:
         output: >-
@@ -292,18 +296,17 @@ results:
           observe that diseases are significantly associated with gene modules
           expressed in relevant cell types, and our approach is accurate in
           predicting known drug-disease pairs and inferring mechanisms of
-          action. Furthermore, using a CRISPR screen to analyze lipid
-          regulation, we find that functionally important players lack
-          associations but are prioritized in trait-associated modules by
-          PhenoPLIER. In conclusion, by incorporating groups of co-expressed
-          genes, PhenoPLIER can contextualize genetic associations and reveal
-          potential targets missed by single-gene strategies. PhenoPLIER
-          provides a novel framework for interpreting genetic associations
-          through the lens of gene modules.
+          action. Furthermore using a CRISPR screen to analyze lipid regulation,
+          we find that functionally important players lack associations but are
+          prioritized in trait-associated modules by PhenoPLIER. In conclusion,
+          by incorporating groups of co-expressed genes, PhenoPLIER can
+          contextualize genetic associations and reveal potential targets missed
+          by single-gene strategies. PhenoPLIER provides a novel framework for
+          interpreting genetic associations through the lens of gene modules.
       success: true
       score: 1
       namedScores: &ref_2 {}
-      latencyMs: 124268
+      latencyMs: 119014
       gradingResult: &ref_54
         pass: true
         score: 1
@@ -360,7 +363,7 @@ results:
           associations through gene expression patterns highlights disease
           etiology and drug mechanisms' and keywords 'genetic studies,
           functional genomics, gene co-expression, therapeutic targets, drug
-          repurposing, clustering of complex traits'. Revise the following
+          repurposing, clustering of complex traits.' Revise the following
           abstract of this manuscript.
 
 
@@ -392,7 +395,7 @@ results:
 
           Revised paragraph:
         display: >-
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/baseline.txt
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/prompts/baseline.txt
       vars: *ref_1
       response:
         output: >-
@@ -412,18 +415,17 @@ results:
           observe that diseases are significantly associated with gene modules
           expressed in relevant cell types, and our approach is accurate in
           predicting known drug-disease pairs and inferring mechanisms of
-          action. Furthermore, using a CRISPR screen to analyze lipid
-          regulation, we find that functionally important players lack
-          associations but are prioritized in trait-associated modules by
-          PhenoPLIER. In conclusion, by incorporating groups of co-expressed
-          genes, PhenoPLIER can contextualize genetic associations and reveal
-          potential targets missed by single-gene strategies. PhenoPLIER
-          provides a novel framework for interpreting genetic associations
-          through the lens of gene modules.
+          action. Furthermore using a CRISPR screen to analyze lipid regulation,
+          we find that functionally important players lack associations but are
+          prioritized in trait-associated modules by PhenoPLIER. In conclusion,
+          by incorporating groups of co-expressed genes, PhenoPLIER can
+          contextualize genetic associations and reveal potential targets missed
+          by single-gene strategies. PhenoPLIER provides a novel framework for
+          interpreting genetic associations through the lens of gene modules.
       success: true
       score: 1
       namedScores: &ref_12 {}
-      latencyMs: 110857
+      latencyMs: 111665
       gradingResult: &ref_55
         pass: true
         score: 1
@@ -480,7 +482,7 @@ results:
           associations through gene expression patterns highlights disease
           etiology and drug mechanisms' and keywords 'genetic studies,
           functional genomics, gene co-expression, therapeutic targets, drug
-          repurposing, clustering of complex traits'. Revise the following
+          repurposing, clustering of complex traits.' Revise the following
           abstract of this manuscript, so it has a clear sentence structure and
           follows a context-content-conclusion (C-C-C) scheme and fits in a
           single paragraph. Make changes only when they are absolutely necessary
@@ -532,7 +534,7 @@ results:
 
           Revised paragraph:
         display: >-
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/candidate.txt
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/prompts/candidate.txt
       vars: *ref_1
       response:
         output: >-
@@ -552,18 +554,17 @@ results:
           observe that diseases are significantly associated with gene modules
           expressed in relevant cell types, and our approach is accurate in
           predicting known drug-disease pairs and inferring mechanisms of
-          action. Furthermore, using a CRISPR screen to analyze lipid
-          regulation, we find that functionally important players lack
-          associations but are prioritized in trait-associated modules by
-          PhenoPLIER. In conclusion, by incorporating groups of co-expressed
-          genes, PhenoPLIER can contextualize genetic associations and reveal
-          potential targets missed by single-gene strategies. PhenoPLIER
-          provides a novel framework for interpreting genetic associations
-          through the lens of gene modules.
+          action. Furthermore using a CRISPR screen to analyze lipid regulation,
+          we find that functionally important players lack associations but are
+          prioritized in trait-associated modules by PhenoPLIER. In conclusion,
+          by incorporating groups of co-expressed genes, PhenoPLIER can
+          contextualize genetic associations and reveal potential targets missed
+          by single-gene strategies. PhenoPLIER provides a novel framework for
+          interpreting genetic associations through the lens of gene modules.
       success: true
       score: 1
       namedScores: &ref_13 {}
-      latencyMs: 124193
+      latencyMs: 120164
       gradingResult: &ref_56
         pass: true
         score: 1
@@ -620,7 +621,7 @@ results:
           associations through gene expression patterns highlights disease
           etiology and drug mechanisms' and keywords 'genetic studies,
           functional genomics, gene co-expression, therapeutic targets, drug
-          repurposing, clustering of complex traits'. Revise the following
+          repurposing, clustering of complex traits.' Revise the following
           abstract of this manuscript.
 
 
@@ -652,7 +653,7 @@ results:
 
           Revised paragraph:
         display: >-
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/baseline.txt
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/prompts/baseline.txt
       vars: *ref_1
       response:
         output: >-
@@ -683,7 +684,7 @@ results:
       success: true
       score: 1
       namedScores: &ref_14 {}
-      latencyMs: 111823
+      latencyMs: 113623
       gradingResult: &ref_57
         pass: true
         score: 1
@@ -740,7 +741,7 @@ results:
           associations through gene expression patterns highlights disease
           etiology and drug mechanisms' and keywords 'genetic studies,
           functional genomics, gene co-expression, therapeutic targets, drug
-          repurposing, clustering of complex traits'. Revise the following
+          repurposing, clustering of complex traits.' Revise the following
           abstract of this manuscript, so it has a clear sentence structure and
           follows a context-content-conclusion (C-C-C) scheme and fits in a
           single paragraph. Make changes only when they are absolutely necessary
@@ -792,7 +793,7 @@ results:
 
           Revised paragraph:
         display: >-
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/candidate.txt
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/prompts/candidate.txt
       vars: *ref_1
       response:
         output: >-
@@ -823,7 +824,7 @@ results:
       success: true
       score: 1
       namedScores: &ref_15 {}
-      latencyMs: 124305
+      latencyMs: 120488
       gradingResult: &ref_58
         pass: true
         score: 1
@@ -880,7 +881,7 @@ results:
           associations through gene expression patterns highlights disease
           etiology and drug mechanisms' and keywords 'genetic studies,
           functional genomics, gene co-expression, therapeutic targets, drug
-          repurposing, clustering of complex traits'. Revise the following
+          repurposing, clustering of complex traits.' Revise the following
           abstract of this manuscript.
 
 
@@ -912,7 +913,7 @@ results:
 
           Revised paragraph:
         display: >-
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/baseline.txt
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/prompts/baseline.txt
       vars: *ref_1
       response:
         output: >-
@@ -932,17 +933,18 @@ results:
           observe that diseases are significantly associated with gene modules
           expressed in relevant cell types, and our approach is accurate in
           predicting known drug-disease pairs and inferring mechanisms of
-          action. Furthermore using a CRISPR screen to analyze lipid regulation,
-          we find that functionally important players lack associations but are
-          prioritized in trait-associated modules by PhenoPLIER. In conclusion,
-          by incorporating groups of co-expressed genes, PhenoPLIER can
-          contextualize genetic associations and reveal potential targets missed
-          by single-gene strategies. PhenoPLIER provides a novel framework for
-          interpreting genetic associations through the lens of gene modules.
+          action. Furthermore, using a CRISPR screen to analyze lipid
+          regulation, we find that functionally important players lack
+          associations but are prioritized in trait-associated modules by
+          PhenoPLIER. In conclusion, by incorporating groups of co-expressed
+          genes, PhenoPLIER can contextualize genetic associations and reveal
+          potential targets missed by single-gene strategies. PhenoPLIER
+          provides a novel framework for interpreting genetic associations
+          through the lens of gene modules.
       success: true
       score: 1
       namedScores: &ref_16 {}
-      latencyMs: 110767
+      latencyMs: 112353
       gradingResult: &ref_59
         pass: true
         score: 1
@@ -999,7 +1001,7 @@ results:
           associations through gene expression patterns highlights disease
           etiology and drug mechanisms' and keywords 'genetic studies,
           functional genomics, gene co-expression, therapeutic targets, drug
-          repurposing, clustering of complex traits'. Revise the following
+          repurposing, clustering of complex traits.' Revise the following
           abstract of this manuscript, so it has a clear sentence structure and
           follows a context-content-conclusion (C-C-C) scheme and fits in a
           single paragraph. Make changes only when they are absolutely necessary
@@ -1051,127 +1053,7 @@ results:
 
           Revised paragraph:
         display: >-
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/candidate.txt
-      vars: *ref_1
-      response:
-        output: >-
-          Genes act in concert with each other in specific contexts to perform
-          their functions. Determining how these genes influence complex traits
-          requires a mechanistic understanding of expression regulation across
-          different conditions. It has been shown that this insight is critical
-          for developing new therapies. Transcriptome-wide association studies
-          have helped uncover the role of individual genes in disease-relevant
-          mechanisms. However, modern models of the architecture of complex
-          traits predict that gene-gene interactions play a crucial role in
-          disease origin and progression. Here we introduce PhenoPLIER, a
-          computational approach that maps gene-trait associations and
-          pharmacological perturbation data into a common latent representation
-          for a joint analysis. This representation is based on modules of genes
-          with similar expression patterns across the same conditions. We
-          observe that diseases are significantly associated with gene modules
-          expressed in relevant cell types, and our approach is accurate in
-          predicting known drug-disease pairs and inferring mechanisms of
-          action. Furthermore, using a CRISPR screen to analyze lipid
-          regulation, we find that functionally important players lack
-          associations but are prioritized in trait-associated modules by
-          PhenoPLIER. In conclusion, by incorporating groups of co-expressed
-          genes, PhenoPLIER can contextualize genetic associations and reveal
-          potential targets missed by single-gene strategies. PhenoPLIER
-          provides a novel framework for interpreting genetic associations
-          through the lens of gene modules.
-      success: true
-      score: 1
-      namedScores: &ref_17 {}
-      latencyMs: 124054
-      gradingResult: &ref_60
-        pass: true
-        score: 1
-        namedScores: *ref_17
-        reason: All assertions passed
-        tokensUsed:
-          total: 0
-          prompt: 0
-          completion: 0
-        componentResults:
-          - pass: true
-            score: 1
-            reason: Assertion passed
-            assertion: *ref_3
-          - pass: true
-            score: 1
-            reason: Assertion passed
-            assertion: *ref_4
-          - pass: true
-            score: 1
-            reason: Assertion passed
-            assertion: *ref_5
-          - pass: true
-            score: 1
-            reason: Assertion passed
-            assertion: *ref_6
-          - pass: true
-            score: 1
-            reason: Assertion passed
-            assertion: *ref_7
-          - pass: true
-            score: 1
-            reason: Assertion passed
-            assertion: *ref_8
-          - pass: true
-            score: 1
-            reason: Assertion passed
-            assertion: *ref_9
-          - pass: true
-            score: 1
-            reason: Assertion passed
-            assertion: *ref_10
-          - pass: true
-            score: 1
-            reason: Assertion passed
-            assertion: *ref_11
-        assertion: null
-    - provider:
-        id: ollama:alfred:40b-1023-q5_1
-      prompt:
-        raw: >-
-          You are a scientist with copy-editing skills who will help in
-          improving the text of a manuscript with title 'Projecting genetic
-          associations through gene expression patterns highlights disease
-          etiology and drug mechanisms' and keywords 'genetic studies,
-          functional genomics, gene co-expression, therapeutic targets, drug
-          repurposing, clustering of complex traits'. Revise the following
-          abstract of this manuscript.
-
-
-          Input paragraph: Genes act in concierto with each other in specifico
-          contexts to perform their functions. Determining how these genes
-          influence complex traits requires a mechanistic understanding of
-          expression regulation across different conditions. It has been shown
-          that this insight is critical for developing new therapies.
-          Transcriptome-wide association studies have helped uncover the role of
-          individual genes in disease-relevant mechanisms. However, modern
-          models of the architecture of complex traits predict that gene-gene
-          interactions play a crucial role in disease origin and progression.
-          Here we introduce PhenoPLIER, a computational approach that maps
-          gene-trait associations and pharmacological perturbation data into a
-          common latent representation for a joint analysis. This representation
-          is base on modules of genes with similar expression patterns across
-          the same conditions. We observe that diseases are significantl
-          associated with gene modules expressed in relevant cell types, and our
-          approach is accurate in predicting known drug-disease pairs and
-          inferring mechanisms of action. Furthermore using a CRISPR screen to
-          analyze lipid regulation, we find that functionally important players
-          lack associations but are prioritized in trait-associated modules by
-          PhenoPLIER. In conclusion, by incorporating, groups of co-expressed
-          genes, PhenoPLIER can contextualize genetic associations and reveal,
-          potential targets missed by single-gene strategies. PhenoPLIER
-          provides a novel framework for interpreting genetic associations
-          through the lens of gene modules.
-
-
-          Revised paragraph:
-        display: >-
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/baseline.txt
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/prompts/candidate.txt
       vars: *ref_1
       response:
         output: >-
@@ -1201,15 +1083,15 @@ results:
           through the lens of gene modules.
       success: false
       score: 0.8888888888888888
-      namedScores: &ref_18 {}
-      latencyMs: 114010
+      namedScores: &ref_17 {}
+      latencyMs: 122050
       error: >-
         Expected output to not contain one of "concierto, specifico,
         significantl "
-      gradingResult: &ref_61
+      gradingResult: &ref_60
         pass: false
         score: 0.8888888888888888
-        namedScores: *ref_18
+        namedScores: *ref_17
         reason: >-
           Expected output to not contain one of "concierto, specifico,
           significantl "
@@ -1266,7 +1148,127 @@ results:
           associations through gene expression patterns highlights disease
           etiology and drug mechanisms' and keywords 'genetic studies,
           functional genomics, gene co-expression, therapeutic targets, drug
-          repurposing, clustering of complex traits'. Revise the following
+          repurposing, clustering of complex traits.' Revise the following
+          abstract of this manuscript.
+
+
+          Input paragraph: Genes act in concierto with each other in specifico
+          contexts to perform their functions. Determining how these genes
+          influence complex traits requires a mechanistic understanding of
+          expression regulation across different conditions. It has been shown
+          that this insight is critical for developing new therapies.
+          Transcriptome-wide association studies have helped uncover the role of
+          individual genes in disease-relevant mechanisms. However, modern
+          models of the architecture of complex traits predict that gene-gene
+          interactions play a crucial role in disease origin and progression.
+          Here we introduce PhenoPLIER, a computational approach that maps
+          gene-trait associations and pharmacological perturbation data into a
+          common latent representation for a joint analysis. This representation
+          is base on modules of genes with similar expression patterns across
+          the same conditions. We observe that diseases are significantl
+          associated with gene modules expressed in relevant cell types, and our
+          approach is accurate in predicting known drug-disease pairs and
+          inferring mechanisms of action. Furthermore using a CRISPR screen to
+          analyze lipid regulation, we find that functionally important players
+          lack associations but are prioritized in trait-associated modules by
+          PhenoPLIER. In conclusion, by incorporating, groups of co-expressed
+          genes, PhenoPLIER can contextualize genetic associations and reveal,
+          potential targets missed by single-gene strategies. PhenoPLIER
+          provides a novel framework for interpreting genetic associations
+          through the lens of gene modules.
+
+
+          Revised paragraph:
+        display: >-
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/prompts/baseline.txt
+      vars: *ref_1
+      response:
+        output: >-
+          Genes act in concert with each other in specific contexts to perform
+          their functions. Determining how these genes influence complex traits
+          requires a mechanistic understanding of expression regulation across
+          different conditions. It has been shown that this insight is critical
+          for developing new therapies. Transcriptome-wide association studies
+          have helped uncover the role of individual genes in disease-relevant
+          mechanisms. However, modern models of the architecture of complex
+          traits predict that gene-gene interactions play a crucial role in
+          disease origin and progression. Here we introduce PhenoPLIER, a
+          computational approach that maps gene-trait associations and
+          pharmacological perturbation data into a common latent representation
+          for a joint analysis. This representation is based on modules of genes
+          with similar expression patterns across the same conditions. We
+          observe that diseases are significantly associated with gene modules
+          expressed in relevant cell types, and our approach is accurate in
+          predicting known drug-disease pairs and inferring mechanisms of
+          action. Furthermore, using a CRISPR screen to analyze lipid
+          regulation, we find that functionally important players lack
+          associations but are prioritized in trait-associated modules by
+          PhenoPLIER. In conclusion, by incorporating groups of co-expressed
+          genes, PhenoPLIER can contextualize genetic associations and reveal
+          potential targets missed by single-gene strategies. PhenoPLIER
+          provides a novel framework for interpreting genetic associations
+          through the lens of gene modules.
+      success: true
+      score: 1
+      namedScores: &ref_18 {}
+      latencyMs: 112030
+      gradingResult: &ref_61
+        pass: true
+        score: 1
+        namedScores: *ref_18
+        reason: All assertions passed
+        tokensUsed:
+          total: 0
+          prompt: 0
+          completion: 0
+        componentResults:
+          - pass: true
+            score: 1
+            reason: Assertion passed
+            assertion: *ref_3
+          - pass: true
+            score: 1
+            reason: Assertion passed
+            assertion: *ref_4
+          - pass: true
+            score: 1
+            reason: Assertion passed
+            assertion: *ref_5
+          - pass: true
+            score: 1
+            reason: Assertion passed
+            assertion: *ref_6
+          - pass: true
+            score: 1
+            reason: Assertion passed
+            assertion: *ref_7
+          - pass: true
+            score: 1
+            reason: Assertion passed
+            assertion: *ref_8
+          - pass: true
+            score: 1
+            reason: Assertion passed
+            assertion: *ref_9
+          - pass: true
+            score: 1
+            reason: Assertion passed
+            assertion: *ref_10
+          - pass: true
+            score: 1
+            reason: Assertion passed
+            assertion: *ref_11
+        assertion: null
+    - provider:
+        id: ollama:alfred:40b-1023-q5_1
+      prompt:
+        raw: >-
+          You are a scientist with copy-editing skills who will help in
+          improving the text of a manuscript with title 'Projecting genetic
+          associations through gene expression patterns highlights disease
+          etiology and drug mechanisms' and keywords 'genetic studies,
+          functional genomics, gene co-expression, therapeutic targets, drug
+          repurposing, clustering of complex traits.' Revise the following
           abstract of this manuscript, so it has a clear sentence structure and
           follows a context-content-conclusion (C-C-C) scheme and fits in a
           single paragraph. Make changes only when they are absolutely necessary
@@ -1318,7 +1320,7 @@ results:
 
           Revised paragraph:
         display: >-
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/candidate.txt
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/prompts/candidate.txt
       vars: *ref_1
       response:
         output: >-
@@ -1338,18 +1340,17 @@ results:
           observe that diseases are significantly associated with gene modules
           expressed in relevant cell types, and our approach is accurate in
           predicting known drug-disease pairs and inferring mechanisms of
-          action. Furthermore, using a CRISPR screen to analyze lipid
-          regulation, we find that functionally important players lack
-          associations but are prioritized in trait-associated modules by
-          PhenoPLIER. In conclusion, by incorporating groups of co-expressed
-          genes, PhenoPLIER can contextualize genetic associations and reveal
-          potential targets missed by single-gene strategies. PhenoPLIER
-          provides a novel framework for interpreting genetic associations
-          through the lens of gene modules.
+          action. Furthermore using a CRISPR screen to analyze lipid regulation,
+          we find that functionally important players lack associations but are
+          prioritized in trait-associated modules by PhenoPLIER. In conclusion,
+          by incorporating groups of co-expressed genes, PhenoPLIER can
+          contextualize genetic associations and reveal potential targets missed
+          by single-gene strategies. PhenoPLIER provides a novel framework for
+          interpreting genetic associations through the lens of gene modules.
       success: true
       score: 1
       namedScores: &ref_19 {}
-      latencyMs: 123877
+      latencyMs: 119732
       gradingResult: &ref_62
         pass: true
         score: 1
@@ -1406,7 +1407,7 @@ results:
           associations through gene expression patterns highlights disease
           etiology and drug mechanisms' and keywords 'genetic studies,
           functional genomics, gene co-expression, therapeutic targets, drug
-          repurposing, clustering of complex traits'. Revise the following
+          repurposing, clustering of complex traits.' Revise the following
           abstract of this manuscript.
 
 
@@ -1438,7 +1439,7 @@ results:
 
           Revised paragraph:
         display: >-
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/baseline.txt
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/prompts/baseline.txt
       vars: &ref_21
         test_description: does not start with background
         title: >-
@@ -1474,23 +1475,34 @@ results:
           through the lens of gene modules.
       response:
         output: >-
-          We introduce PhenoPLIER, a computational approach that maps gene-trait
+          PhenoPLIER is a computational approach that maps gene-trait
           associations and pharmacological perturbation data into a common
-          latent representation for a joint analysis. Our method groups genes
-          with similar expression patterns across conditions into modules. We
-          find that diseases are significantly associated with gene modules
-          expressed in relevant cell types. Furthermore, using a CRISPR screen
-          to analyze lipid regulation, we find that functionally important
-          players lack associations but are prioritized in trait-associated
-          modules by PhenoPLIER. In conclusion, by incorporating groups of
-          co-expressed genes, PhenoPLIER can contextualize genetic associations
-          and reveal potential targets missed by single-gene strategies. Our
-          approach provides a novel framework for interpreting genetic
-          associations through the lens of gene modules.
+          latent representation for a joint analysis. Genes act in concert with
+          each other in specific contexts to perform their functions.
+          Determining how these genes influence complex traits requires a
+          mechanistic understanding of expression regulation across different
+          conditions. It has been shown that this insight is critical for
+          developing new therapies. Transcriptome-wide association studies have
+          helped uncover the role of individual genes in disease-relevant
+          mechanisms. However, modern models of the architecture of complex
+          traits predict that gene-gene interactions play a crucial role in
+          disease origin and progression. PhenoPLIER's representation is based
+          on modules of genes with similar expression patterns across the same
+          conditions. We observe that diseases are significantly associated with
+          gene modules expressed in relevant cell types, and our approach is
+          accurate in predicting known drug-disease pairs and inferring
+          mechanisms of action. Furthermore, using a CRISPR screen to analyze
+          lipid regulation, we find that functionally important players lack
+          associations but are prioritized in trait-associated modules by
+          PhenoPLIER. In conclusion, by incorporating groups of co-expressed
+          genes, PhenoPLIER can contextualize genetic associations and reveal
+          potential targets missed by single-gene strategies. PhenoPLIER
+          provides a novel framework for interpreting genetic associations
+          through the lens of gene modules.
       success: false
-      score: 0.7777777777777778
+      score: 0.8888888888888888
       namedScores: &ref_20 {}
-      latencyMs: 62405
+      latencyMs: 114041
       error: |
         Python code returned false
         print(
@@ -1498,7 +1510,7 @@ results:
         )
       gradingResult: &ref_63
         pass: false
-        score: 0.7777777777777778
+        score: 0.8888888888888888
         namedScores: *ref_20
         reason: |
           Python code returned false
@@ -1530,14 +1542,9 @@ results:
             score: 1
             reason: Assertion passed
             assertion: *ref_7
-          - pass: false
-            score: 0
-            reason: |
-              Python code returned false
-              paragraph = context["vars"]["paragraph"]
-              print(
-                (len(output) > 0.6 * len(paragraph)) and (len(output) < 1.4 * len(paragraph))
-              )
+          - pass: true
+            score: 1
+            reason: Assertion passed
             assertion: *ref_8
           - pass: false
             score: 0
@@ -1565,7 +1572,7 @@ results:
           associations through gene expression patterns highlights disease
           etiology and drug mechanisms' and keywords 'genetic studies,
           functional genomics, gene co-expression, therapeutic targets, drug
-          repurposing, clustering of complex traits'. Revise the following
+          repurposing, clustering of complex traits.' Revise the following
           abstract of this manuscript, so it has a clear sentence structure and
           follows a context-content-conclusion (C-C-C) scheme and fits in a
           single paragraph. Make changes only when they are absolutely necessary
@@ -1617,7 +1624,7 @@ results:
 
           Revised paragraph:
         display: >-
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/candidate.txt
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/prompts/candidate.txt
       vars: *ref_21
       response:
         output: >-
@@ -1648,7 +1655,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_22 {}
-      latencyMs: 126218
+      latencyMs: 121697
       error: |
         Python code returned false
         print(
@@ -1718,7 +1725,7 @@ results:
           associations through gene expression patterns highlights disease
           etiology and drug mechanisms' and keywords 'genetic studies,
           functional genomics, gene co-expression, therapeutic targets, drug
-          repurposing, clustering of complex traits'. Revise the following
+          repurposing, clustering of complex traits.' Revise the following
           abstract of this manuscript.
 
 
@@ -1750,11 +1757,11 @@ results:
 
           Revised paragraph:
         display: >-
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/baseline.txt
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/prompts/baseline.txt
       vars: *ref_21
       response:
         output: >-
-          PhenoPLIER is a computational approach that maps gene-trait
+          We introduce PhenoPLIER, a computational approach that maps gene-trait
           associations and pharmacological perturbation data into a common
           latent representation for a joint analysis. Genes act in concert with
           each other in specific contexts to perform their functions.
@@ -1781,7 +1788,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_23 {}
-      latencyMs: 113714
+      latencyMs: 114064
       error: |
         Python code returned false
         print(
@@ -1851,7 +1858,7 @@ results:
           associations through gene expression patterns highlights disease
           etiology and drug mechanisms' and keywords 'genetic studies,
           functional genomics, gene co-expression, therapeutic targets, drug
-          repurposing, clustering of complex traits'. Revise the following
+          repurposing, clustering of complex traits.' Revise the following
           abstract of this manuscript, so it has a clear sentence structure and
           follows a context-content-conclusion (C-C-C) scheme and fits in a
           single paragraph. Make changes only when they are absolutely necessary
@@ -1903,38 +1910,38 @@ results:
 
           Revised paragraph:
         display: >-
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/candidate.txt
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/prompts/candidate.txt
       vars: *ref_21
       response:
         output: >-
-          We introduce PhenoPLIER, a computational approach that maps gene-trait
-          associations and pharmacological perturbation data into a common
-          latent representation for a joint analysis. Genes act in concert with
-          each other in specific contexts to perform their functions.
-          Determining how these genes influence complex traits requires a
-          mechanistic understanding of expression regulation across different
-          conditions. It has been shown that this insight is critical for
-          developing new therapies. Transcriptome-wide association studies have
-          helped uncover the role of individual genes in disease-relevant
-          mechanisms. However, modern models of the architecture of complex
-          traits predict that gene-gene interactions play a crucial role in
-          disease origin and progression. PhenoPLIER's representation is based
-          on modules of genes with similar expression patterns across the same
-          conditions. We observe that diseases are significantly associated with
-          gene modules expressed in relevant cell types, and our approach is
-          accurate in predicting known drug-disease pairs and inferring
-          mechanisms of action. Furthermore, using a CRISPR screen to analyze
-          lipid regulation, we find that functionally important players lack
-          associations but are prioritized in trait-associated modules by
-          PhenoPLIER. In conclusion, by incorporating groups of co-expressed
-          genes, PhenoPLIER can contextualize genetic associations and reveal
-          potential targets missed by single-gene strategies. PhenoPLIER
-          provides a novel framework for interpreting genetic associations
-          through the lens of gene modules.
+          In this study, we introduce PhenoPLIER, a computational approach that
+          maps gene-trait associations and pharmacological perturbation data
+          into a common latent representation for a joint analysis. We
+          demonstrate that genes act in concert with each other in specific
+          contexts to perform their functions. Determining how these genes
+          influence complex traits requires a mechanistic understanding of
+          expression regulation across different conditions. It has been shown
+          that this insight is critical for developing new therapies.
+          Transcriptome-wide association studies have helped uncover the role of
+          individual genes in disease-relevant mechanisms. However, modern
+          models of the architecture of complex traits predict that gene-gene
+          interactions play a crucial role in disease origin and progression.
+          PhenoPLIER's representation is based on modules of genes with similar
+          expression patterns across the same conditions. We observe that
+          diseases are significantly associated with gene modules expressed in
+          relevant cell types, and our approach is accurate in predicting known
+          drug-disease pairs and inferring mechanisms of action. Furthermore,
+          using a CRISPR screen to analyze lipid regulation, we find that
+          functionally important players lack associations but are prioritized
+          in trait-associated modules by PhenoPLIER. In conclusion, by
+          incorporating groups of co-expressed genes, PhenoPLIER can
+          contextualize genetic associations and reveal potential targets missed
+          by single-gene strategies. PhenoPLIER provides a novel framework for
+          interpreting genetic associations through the lens of gene modules.
       success: false
       score: 0.8888888888888888
       namedScores: &ref_24 {}
-      latencyMs: 125692
+      latencyMs: 123347
       error: |
         Python code returned false
         print(
@@ -2004,7 +2011,7 @@ results:
           associations through gene expression patterns highlights disease
           etiology and drug mechanisms' and keywords 'genetic studies,
           functional genomics, gene co-expression, therapeutic targets, drug
-          repurposing, clustering of complex traits'. Revise the following
+          repurposing, clustering of complex traits.' Revise the following
           abstract of this manuscript.
 
 
@@ -2036,11 +2043,11 @@ results:
 
           Revised paragraph:
         display: >-
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/baseline.txt
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/prompts/baseline.txt
       vars: *ref_21
       response:
         output: >-
-          PhenoPLIER is a computational approach that maps gene-trait
+          We introduce PhenoPLIER, a computational approach that maps gene-trait
           associations and pharmacological perturbation data into a common
           latent representation for a joint analysis. Genes act in concert with
           each other in specific contexts to perform their functions.
@@ -2067,7 +2074,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_25 {}
-      latencyMs: 112587
+      latencyMs: 114190
       error: |
         Python code returned false
         print(
@@ -2137,7 +2144,7 @@ results:
           associations through gene expression patterns highlights disease
           etiology and drug mechanisms' and keywords 'genetic studies,
           functional genomics, gene co-expression, therapeutic targets, drug
-          repurposing, clustering of complex traits'. Revise the following
+          repurposing, clustering of complex traits.' Revise the following
           abstract of this manuscript, so it has a clear sentence structure and
           follows a context-content-conclusion (C-C-C) scheme and fits in a
           single paragraph. Make changes only when they are absolutely necessary
@@ -2189,21 +2196,26 @@ results:
 
           Revised paragraph:
         display: >-
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/candidate.txt
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/prompts/candidate.txt
       vars: *ref_21
       response:
         output: >-
           We introduce PhenoPLIER, a computational approach that maps gene-trait
           associations and pharmacological perturbation data into a common
-          latent representation for a joint analysis. Determining how genes
-          influence complex traits requires a mechanistic understanding of
-          expression regulation across different conditions. Transcriptome-wide
-          association studies have helped uncover the role of individual genes
-          in disease-relevant mechanisms, but modern models predict that
-          gene-gene interactions play a crucial role in disease origin and
-          progression. PhenoPLIER's representation is based on modules of genes
-          with similar expression patterns across the same conditions. Our
-          approach accurately predicts known drug-disease pairs and infers
+          latent representation for a joint analysis. Genes act in concert with
+          each other in specific contexts to perform their functions.
+          Determining how these genes influence complex traits requires a
+          mechanistic understanding of expression regulation across different
+          conditions. It has been shown that this insight is critical for
+          developing new therapies. Transcriptome-wide association studies have
+          helped uncover the role of individual genes in disease-relevant
+          mechanisms. However, modern models of the architecture of complex
+          traits predict that gene-gene interactions play a crucial role in
+          disease origin and progression. PhenoPLIER's representation is based
+          on modules of genes with similar expression patterns across the same
+          conditions. We observe that diseases are significantly associated with
+          gene modules expressed in relevant cell types, and our approach is
+          accurate in predicting known drug-disease pairs and inferring
           mechanisms of action. Furthermore, using a CRISPR screen to analyze
           lipid regulation, we find that functionally important players lack
           associations but are prioritized in trait-associated modules by
@@ -2215,7 +2227,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_26 {}
-      latencyMs: 101443
+      latencyMs: 120878
       error: |
         Python code returned false
         print(
@@ -2285,7 +2297,7 @@ results:
           associations through gene expression patterns highlights disease
           etiology and drug mechanisms' and keywords 'genetic studies,
           functional genomics, gene co-expression, therapeutic targets, drug
-          repurposing, clustering of complex traits'. Revise the following
+          repurposing, clustering of complex traits.' Revise the following
           abstract of this manuscript.
 
 
@@ -2317,11 +2329,11 @@ results:
 
           Revised paragraph:
         display: >-
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/baseline.txt
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/prompts/baseline.txt
       vars: *ref_21
       response:
         output: >-
-          We introduce PhenoPLIER, a computational approach that maps gene-trait
+          PhenoPLIER is a computational approach that maps gene-trait
           associations and pharmacological perturbation data into a common
           latent representation for a joint analysis. Genes act in concert with
           each other in specific contexts to perform their functions.
@@ -2348,7 +2360,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_27 {}
-      latencyMs: 113109
+      latencyMs: 113741
       error: |
         Python code returned false
         print(
@@ -2418,7 +2430,7 @@ results:
           associations through gene expression patterns highlights disease
           etiology and drug mechanisms' and keywords 'genetic studies,
           functional genomics, gene co-expression, therapeutic targets, drug
-          repurposing, clustering of complex traits'. Revise the following
+          repurposing, clustering of complex traits.' Revise the following
           abstract of this manuscript, so it has a clear sentence structure and
           follows a context-content-conclusion (C-C-C) scheme and fits in a
           single paragraph. Make changes only when they are absolutely necessary
@@ -2470,7 +2482,7 @@ results:
 
           Revised paragraph:
         display: >-
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/candidate.txt
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/prompts/candidate.txt
       vars: *ref_21
       response:
         output: >-
@@ -2501,7 +2513,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_28 {}
-      latencyMs: 124831
+      latencyMs: 121442
       error: |
         Python code returned false
         print(
@@ -2571,7 +2583,7 @@ results:
           associations through gene expression patterns highlights disease
           etiology and drug mechanisms' and keywords 'genetic studies,
           functional genomics, gene co-expression, therapeutic targets, drug
-          repurposing, clustering of complex traits'. Revise the following
+          repurposing, clustering of complex traits.' Revise the following
           abstract of this manuscript.
 
 
@@ -2603,7 +2615,7 @@ results:
 
           Revised paragraph:
         display: >-
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/baseline.txt
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/prompts/baseline.txt
       vars: *ref_21
       response:
         output: >-
@@ -2634,7 +2646,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_29 {}
-      latencyMs: 113724
+      latencyMs: 114905
       error: |
         Python code returned false
         print(
@@ -2704,7 +2716,7 @@ results:
           associations through gene expression patterns highlights disease
           etiology and drug mechanisms' and keywords 'genetic studies,
           functional genomics, gene co-expression, therapeutic targets, drug
-          repurposing, clustering of complex traits'. Revise the following
+          repurposing, clustering of complex traits.' Revise the following
           abstract of this manuscript, so it has a clear sentence structure and
           follows a context-content-conclusion (C-C-C) scheme and fits in a
           single paragraph. Make changes only when they are absolutely necessary
@@ -2756,7 +2768,7 @@ results:
 
           Revised paragraph:
         display: >-
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/candidate.txt
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/prompts/candidate.txt
       vars: *ref_21
       response:
         output: >-
@@ -2787,7 +2799,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_30 {}
-      latencyMs: 124944
+      latencyMs: 121947
       error: |
         Python code returned false
         print(
@@ -2857,7 +2869,7 @@ results:
           associations through gene expression patterns highlights disease
           etiology and drug mechanisms' and keywords 'genetic studies,
           functional genomics, gene co-expression, therapeutic targets, drug
-          repurposing, clustering of complex traits'. Revise the following
+          repurposing, clustering of complex traits.' Revise the following
           abstract of this manuscript.
 
 
@@ -2881,7 +2893,7 @@ results:
 
           Revised paragraph:
         display: >-
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/baseline.txt
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/prompts/baseline.txt
       vars: &ref_32
         test_description: does not describe the method or approach proposed
         title: >-
@@ -2926,7 +2938,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_31 {}
-      latencyMs: 71710
+      latencyMs: 74269
       error: |
         Python code returned false
         print(
@@ -2996,7 +3008,7 @@ results:
           associations through gene expression patterns highlights disease
           etiology and drug mechanisms' and keywords 'genetic studies,
           functional genomics, gene co-expression, therapeutic targets, drug
-          repurposing, clustering of complex traits'. Revise the following
+          repurposing, clustering of complex traits.' Revise the following
           abstract of this manuscript, so it has a clear sentence structure and
           follows a context-content-conclusion (C-C-C) scheme and fits in a
           single paragraph. Make changes only when they are absolutely necessary
@@ -3040,7 +3052,7 @@ results:
 
           Revised paragraph:
         display: >-
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/candidate.txt
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/prompts/candidate.txt
       vars: *ref_32
       response:
         output: >-
@@ -3062,7 +3074,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_33 {}
-      latencyMs: 81777
+      latencyMs: 80214
       error: |
         Python code returned false
         print(
@@ -3132,7 +3144,7 @@ results:
           associations through gene expression patterns highlights disease
           etiology and drug mechanisms' and keywords 'genetic studies,
           functional genomics, gene co-expression, therapeutic targets, drug
-          repurposing, clustering of complex traits'. Revise the following
+          repurposing, clustering of complex traits.' Revise the following
           abstract of this manuscript.
 
 
@@ -3156,7 +3168,7 @@ results:
 
           Revised paragraph:
         display: >-
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/baseline.txt
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/prompts/baseline.txt
       vars: *ref_32
       response:
         output: >-
@@ -3178,7 +3190,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_34 {}
-      latencyMs: 72662
+      latencyMs: 73683
       error: |
         Python code returned false
         print(
@@ -3248,7 +3260,7 @@ results:
           associations through gene expression patterns highlights disease
           etiology and drug mechanisms' and keywords 'genetic studies,
           functional genomics, gene co-expression, therapeutic targets, drug
-          repurposing, clustering of complex traits'. Revise the following
+          repurposing, clustering of complex traits.' Revise the following
           abstract of this manuscript, so it has a clear sentence structure and
           follows a context-content-conclusion (C-C-C) scheme and fits in a
           single paragraph. Make changes only when they are absolutely necessary
@@ -3292,7 +3304,7 @@ results:
 
           Revised paragraph:
         display: >-
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/candidate.txt
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/prompts/candidate.txt
       vars: *ref_32
       response:
         output: >-
@@ -3314,7 +3326,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_35 {}
-      latencyMs: 81521
+      latencyMs: 79562
       error: |
         Python code returned false
         print(
@@ -3384,7 +3396,7 @@ results:
           associations through gene expression patterns highlights disease
           etiology and drug mechanisms' and keywords 'genetic studies,
           functional genomics, gene co-expression, therapeutic targets, drug
-          repurposing, clustering of complex traits'. Revise the following
+          repurposing, clustering of complex traits.' Revise the following
           abstract of this manuscript.
 
 
@@ -3408,7 +3420,7 @@ results:
 
           Revised paragraph:
         display: >-
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/baseline.txt
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/prompts/baseline.txt
       vars: *ref_32
       response:
         output: >-
@@ -3430,7 +3442,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_36 {}
-      latencyMs: 71522
+      latencyMs: 73943
       error: |
         Python code returned false
         print(
@@ -3500,7 +3512,7 @@ results:
           associations through gene expression patterns highlights disease
           etiology and drug mechanisms' and keywords 'genetic studies,
           functional genomics, gene co-expression, therapeutic targets, drug
-          repurposing, clustering of complex traits'. Revise the following
+          repurposing, clustering of complex traits.' Revise the following
           abstract of this manuscript, so it has a clear sentence structure and
           follows a context-content-conclusion (C-C-C) scheme and fits in a
           single paragraph. Make changes only when they are absolutely necessary
@@ -3544,7 +3556,7 @@ results:
 
           Revised paragraph:
         display: >-
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/candidate.txt
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/prompts/candidate.txt
       vars: *ref_32
       response:
         output: >-
@@ -3566,7 +3578,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_37 {}
-      latencyMs: 81660
+      latencyMs: 79783
       error: |
         Python code returned false
         print(
@@ -3636,7 +3648,7 @@ results:
           associations through gene expression patterns highlights disease
           etiology and drug mechanisms' and keywords 'genetic studies,
           functional genomics, gene co-expression, therapeutic targets, drug
-          repurposing, clustering of complex traits'. Revise the following
+          repurposing, clustering of complex traits.' Revise the following
           abstract of this manuscript.
 
 
@@ -3660,7 +3672,7 @@ results:
 
           Revised paragraph:
         display: >-
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/baseline.txt
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/prompts/baseline.txt
       vars: *ref_32
       response:
         output: >-
@@ -3682,7 +3694,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_38 {}
-      latencyMs: 72343
+      latencyMs: 73996
       error: |
         Python code returned false
         print(
@@ -3752,7 +3764,7 @@ results:
           associations through gene expression patterns highlights disease
           etiology and drug mechanisms' and keywords 'genetic studies,
           functional genomics, gene co-expression, therapeutic targets, drug
-          repurposing, clustering of complex traits'. Revise the following
+          repurposing, clustering of complex traits.' Revise the following
           abstract of this manuscript, so it has a clear sentence structure and
           follows a context-content-conclusion (C-C-C) scheme and fits in a
           single paragraph. Make changes only when they are absolutely necessary
@@ -3796,7 +3808,7 @@ results:
 
           Revised paragraph:
         display: >-
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/candidate.txt
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/prompts/candidate.txt
       vars: *ref_32
       response:
         output: >-
@@ -3818,7 +3830,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_39 {}
-      latencyMs: 81353
+      latencyMs: 80258
       error: |
         Python code returned false
         print(
@@ -3888,7 +3900,7 @@ results:
           associations through gene expression patterns highlights disease
           etiology and drug mechanisms' and keywords 'genetic studies,
           functional genomics, gene co-expression, therapeutic targets, drug
-          repurposing, clustering of complex traits'. Revise the following
+          repurposing, clustering of complex traits.' Revise the following
           abstract of this manuscript.
 
 
@@ -3912,7 +3924,7 @@ results:
 
           Revised paragraph:
         display: >-
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/baseline.txt
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/prompts/baseline.txt
       vars: *ref_32
       response:
         output: >-
@@ -3934,7 +3946,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_40 {}
-      latencyMs: 72414
+      latencyMs: 73520
       error: |
         Python code returned false
         print(
@@ -4004,7 +4016,7 @@ results:
           associations through gene expression patterns highlights disease
           etiology and drug mechanisms' and keywords 'genetic studies,
           functional genomics, gene co-expression, therapeutic targets, drug
-          repurposing, clustering of complex traits'. Revise the following
+          repurposing, clustering of complex traits.' Revise the following
           abstract of this manuscript, so it has a clear sentence structure and
           follows a context-content-conclusion (C-C-C) scheme and fits in a
           single paragraph. Make changes only when they are absolutely necessary
@@ -4048,7 +4060,7 @@ results:
 
           Revised paragraph:
         display: >-
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/candidate.txt
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/prompts/candidate.txt
       vars: *ref_32
       response:
         output: >-
@@ -4070,7 +4082,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_41 {}
-      latencyMs: 81373
+      latencyMs: 79104
       error: |
         Python code returned false
         print(
@@ -4140,7 +4152,7 @@ results:
           associations through gene expression patterns highlights disease
           etiology and drug mechanisms' and keywords 'genetic studies,
           functional genomics, gene co-expression, therapeutic targets, drug
-          repurposing, clustering of complex traits'. Revise the following
+          repurposing, clustering of complex traits.' Revise the following
           abstract of this manuscript.
 
 
@@ -4168,7 +4180,7 @@ results:
 
           Revised paragraph:
         display: >-
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/baseline.txt
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/prompts/baseline.txt
       vars: &ref_43
         test_description: >-
           does not provide an interpretation of the results and their
@@ -4225,7 +4237,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_42 {}
-      latencyMs: 89373
+      latencyMs: 91602
       error: |
         Python code returned false
         keywords = [
@@ -4349,7 +4361,7 @@ results:
           associations through gene expression patterns highlights disease
           etiology and drug mechanisms' and keywords 'genetic studies,
           functional genomics, gene co-expression, therapeutic targets, drug
-          repurposing, clustering of complex traits'. Revise the following
+          repurposing, clustering of complex traits.' Revise the following
           abstract of this manuscript, so it has a clear sentence structure and
           follows a context-content-conclusion (C-C-C) scheme and fits in a
           single paragraph. Make changes only when they are absolutely necessary
@@ -4397,7 +4409,7 @@ results:
 
           Revised paragraph:
         display: >-
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/candidate.txt
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/prompts/candidate.txt
       vars: *ref_43
       response:
         output: >-
@@ -4424,7 +4436,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_44 {}
-      latencyMs: 99930
+      latencyMs: 97232
       error: |
         Python code returned false
         keywords = [
@@ -4548,7 +4560,7 @@ results:
           associations through gene expression patterns highlights disease
           etiology and drug mechanisms' and keywords 'genetic studies,
           functional genomics, gene co-expression, therapeutic targets, drug
-          repurposing, clustering of complex traits'. Revise the following
+          repurposing, clustering of complex traits.' Revise the following
           abstract of this manuscript.
 
 
@@ -4576,7 +4588,7 @@ results:
 
           Revised paragraph:
         display: >-
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/baseline.txt
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/prompts/baseline.txt
       vars: *ref_43
       response:
         output: >-
@@ -4603,7 +4615,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_45 {}
-      latencyMs: 89180
+      latencyMs: 91093
       error: |
         Python code returned false
         keywords = [
@@ -4727,7 +4739,7 @@ results:
           associations through gene expression patterns highlights disease
           etiology and drug mechanisms' and keywords 'genetic studies,
           functional genomics, gene co-expression, therapeutic targets, drug
-          repurposing, clustering of complex traits'. Revise the following
+          repurposing, clustering of complex traits.' Revise the following
           abstract of this manuscript, so it has a clear sentence structure and
           follows a context-content-conclusion (C-C-C) scheme and fits in a
           single paragraph. Make changes only when they are absolutely necessary
@@ -4775,7 +4787,7 @@ results:
 
           Revised paragraph:
         display: >-
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/candidate.txt
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/prompts/candidate.txt
       vars: *ref_43
       response:
         output: >-
@@ -4802,7 +4814,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_46 {}
-      latencyMs: 100243
+      latencyMs: 97601
       error: |
         Python code returned false
         keywords = [
@@ -4926,7 +4938,7 @@ results:
           associations through gene expression patterns highlights disease
           etiology and drug mechanisms' and keywords 'genetic studies,
           functional genomics, gene co-expression, therapeutic targets, drug
-          repurposing, clustering of complex traits'. Revise the following
+          repurposing, clustering of complex traits.' Revise the following
           abstract of this manuscript.
 
 
@@ -4954,7 +4966,7 @@ results:
 
           Revised paragraph:
         display: >-
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/baseline.txt
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/prompts/baseline.txt
       vars: *ref_43
       response:
         output: >-
@@ -4981,7 +4993,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_47 {}
-      latencyMs: 88917
+      latencyMs: 90067
       error: |
         Python code returned false
         keywords = [
@@ -5105,7 +5117,7 @@ results:
           associations through gene expression patterns highlights disease
           etiology and drug mechanisms' and keywords 'genetic studies,
           functional genomics, gene co-expression, therapeutic targets, drug
-          repurposing, clustering of complex traits'. Revise the following
+          repurposing, clustering of complex traits.' Revise the following
           abstract of this manuscript, so it has a clear sentence structure and
           follows a context-content-conclusion (C-C-C) scheme and fits in a
           single paragraph. Make changes only when they are absolutely necessary
@@ -5153,7 +5165,7 @@ results:
 
           Revised paragraph:
         display: >-
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/candidate.txt
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/prompts/candidate.txt
       vars: *ref_43
       response:
         output: >-
@@ -5180,7 +5192,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_48 {}
-      latencyMs: 100272
+      latencyMs: 96478
       error: |
         Python code returned false
         keywords = [
@@ -5304,7 +5316,7 @@ results:
           associations through gene expression patterns highlights disease
           etiology and drug mechanisms' and keywords 'genetic studies,
           functional genomics, gene co-expression, therapeutic targets, drug
-          repurposing, clustering of complex traits'. Revise the following
+          repurposing, clustering of complex traits.' Revise the following
           abstract of this manuscript.
 
 
@@ -5332,7 +5344,7 @@ results:
 
           Revised paragraph:
         display: >-
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/baseline.txt
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/prompts/baseline.txt
       vars: *ref_43
       response:
         output: >-
@@ -5359,7 +5371,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_49 {}
-      latencyMs: 88442
+      latencyMs: 90306
       error: |
         Python code returned false
         keywords = [
@@ -5483,7 +5495,7 @@ results:
           associations through gene expression patterns highlights disease
           etiology and drug mechanisms' and keywords 'genetic studies,
           functional genomics, gene co-expression, therapeutic targets, drug
-          repurposing, clustering of complex traits'. Revise the following
+          repurposing, clustering of complex traits.' Revise the following
           abstract of this manuscript, so it has a clear sentence structure and
           follows a context-content-conclusion (C-C-C) scheme and fits in a
           single paragraph. Make changes only when they are absolutely necessary
@@ -5531,7 +5543,7 @@ results:
 
           Revised paragraph:
         display: >-
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/candidate.txt
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/prompts/candidate.txt
       vars: *ref_43
       response:
         output: >-
@@ -5558,7 +5570,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_50 {}
-      latencyMs: 99652
+      latencyMs: 97494
       error: |
         Python code returned false
         keywords = [
@@ -5682,7 +5694,7 @@ results:
           associations through gene expression patterns highlights disease
           etiology and drug mechanisms' and keywords 'genetic studies,
           functional genomics, gene co-expression, therapeutic targets, drug
-          repurposing, clustering of complex traits'. Revise the following
+          repurposing, clustering of complex traits.' Revise the following
           abstract of this manuscript.
 
 
@@ -5710,7 +5722,7 @@ results:
 
           Revised paragraph:
         display: >-
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/baseline.txt
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/prompts/baseline.txt
       vars: *ref_43
       response:
         output: >-
@@ -5737,7 +5749,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_51 {}
-      latencyMs: 89677
+      latencyMs: 90725
       error: |
         Python code returned false
         keywords = [
@@ -5861,7 +5873,7 @@ results:
           associations through gene expression patterns highlights disease
           etiology and drug mechanisms' and keywords 'genetic studies,
           functional genomics, gene co-expression, therapeutic targets, drug
-          repurposing, clustering of complex traits'. Revise the following
+          repurposing, clustering of complex traits.' Revise the following
           abstract of this manuscript, so it has a clear sentence structure and
           follows a context-content-conclusion (C-C-C) scheme and fits in a
           single paragraph. Make changes only when they are absolutely necessary
@@ -5909,7 +5921,7 @@ results:
 
           Revised paragraph:
         display: >-
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/candidate.txt
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/prompts/candidate.txt
       vars: *ref_43
       response:
         output: >-
@@ -5936,7 +5948,7 @@ results:
       success: false
       score: 0.8888888888888888
       namedScores: &ref_52 {}
-      latencyMs: 100279
+      latencyMs: 96876
       error: |
         Python code returned false
         keywords = [
@@ -6065,7 +6077,7 @@ results:
         - raw: >-
             You are a scientist with copy-editing skills who will help in
             improving the text of a manuscript with title '{{ title }}' and
-            keywords '{{ keywords }}'. Revise the following abstract of this
+            keywords '{{ keywords }}.' Revise the following abstract of this
             manuscript.
 
 
@@ -6074,15 +6086,15 @@ results:
 
             Revised paragraph:
           display: >-
-            /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/baseline.txt
-          id: e1a57a9264776c29f043b96cf25a9c6b38b059a85043459f545fc3392e2dcf4c
+            /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/prompts/baseline.txt
+          id: 19e4f6dde336b9d67eb2fd558e9ea7f8ab3fef6ce8f03817f772c506f658bc55
           metrics:
-            score: 18.111111111111114
-            testPassCount: 4
-            testFailCount: 16
-            assertPassCount: 163
-            assertFailCount: 17
-            totalLatencyMs: 1918214
+            score: 18.33333333333334
+            testPassCount: 5
+            testFailCount: 15
+            assertPassCount: 165
+            assertFailCount: 15
+            totalLatencyMs: 1992962
             tokenUsage:
               total: 0
               prompt: 0
@@ -6092,7 +6104,7 @@ results:
         - raw: >-
             You are a scientist with copy-editing skills who will help in
             improving the text of a manuscript with title '{{ title }}' and
-            keywords '{{ keywords }}'. Revise the following abstract of this
+            keywords '{{ keywords }}.' Revise the following abstract of this
             manuscript, so it has a clear sentence structure and follows a
             context-content-conclusion (C-C-C) scheme and fits in a single
             paragraph. Make changes only when they are absolutely necessary to
@@ -6121,15 +6133,15 @@ results:
 
             Revised paragraph:
           display: >-
-            /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/phenoplier/prompts/candidate.txt
-          id: 0f5d561555c25e8d2190ab31964c7226ce27388741d7951aebeb28761ec0ff57
+            /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/abstract/prompts/candidate.txt
+          id: 1dd365a9bb4d181580c711f92234a3eb9f11ee68b4877763e27cf57607fb0222
           metrics:
-            score: 18.33333333333334
-            testPassCount: 5
-            testFailCount: 15
-            assertPassCount: 165
-            assertFailCount: 15
-            totalLatencyMs: 2131885
+            score: 18.22222222222223
+            testPassCount: 4
+            testFailCount: 16
+            assertPassCount: 164
+            assertFailCount: 16
+            totalLatencyMs: 2095361
             tokenUsage:
               total: 0
               prompt: 0
@@ -6179,7 +6191,7 @@ results:
               associations through gene expression patterns highlights disease
               etiology and drug mechanisms' and keywords 'genetic studies,
               functional genomics, gene co-expression, therapeutic targets, drug
-              repurposing, clustering of complex traits'. Revise the following
+              repurposing, clustering of complex traits.' Revise the following
               abstract of this manuscript.
 
 
@@ -6213,7 +6225,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 148978
+            latencyMs: 149146
             gradingResult: *ref_53
           - pass: true
             score: 1
@@ -6236,7 +6248,7 @@ results:
               that diseases are significantly associated with gene modules
               expressed in relevant cell types, and our approach is accurate in
               predicting known drug-disease pairs and inferring mechanisms of
-              action. Furthermore, using a CRISPR screen to analyze lipid
+              action. Furthermore using a CRISPR screen to analyze lipid
               regulation, we find that functionally important players lack
               associations but are prioritized in trait-associated modules by
               PhenoPLIER. In conclusion, by incorporating groups of co-expressed
@@ -6250,7 +6262,7 @@ results:
               associations through gene expression patterns highlights disease
               etiology and drug mechanisms' and keywords 'genetic studies,
               functional genomics, gene co-expression, therapeutic targets, drug
-              repurposing, clustering of complex traits'. Revise the following
+              repurposing, clustering of complex traits.' Revise the following
               abstract of this manuscript, so it has a clear sentence structure
               and follows a context-content-conclusion (C-C-C) scheme and fits
               in a single paragraph. Make changes only when they are absolutely
@@ -6305,7 +6317,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 124268
+            latencyMs: 119014
             gradingResult: *ref_54
         vars:
           - >-
@@ -6363,7 +6375,7 @@ results:
               that diseases are significantly associated with gene modules
               expressed in relevant cell types, and our approach is accurate in
               predicting known drug-disease pairs and inferring mechanisms of
-              action. Furthermore, using a CRISPR screen to analyze lipid
+              action. Furthermore using a CRISPR screen to analyze lipid
               regulation, we find that functionally important players lack
               associations but are prioritized in trait-associated modules by
               PhenoPLIER. In conclusion, by incorporating groups of co-expressed
@@ -6377,7 +6389,7 @@ results:
               associations through gene expression patterns highlights disease
               etiology and drug mechanisms' and keywords 'genetic studies,
               functional genomics, gene co-expression, therapeutic targets, drug
-              repurposing, clustering of complex traits'. Revise the following
+              repurposing, clustering of complex traits.' Revise the following
               abstract of this manuscript.
 
 
@@ -6411,7 +6423,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 110857
+            latencyMs: 111665
             gradingResult: *ref_55
           - pass: true
             score: 1
@@ -6434,7 +6446,7 @@ results:
               that diseases are significantly associated with gene modules
               expressed in relevant cell types, and our approach is accurate in
               predicting known drug-disease pairs and inferring mechanisms of
-              action. Furthermore, using a CRISPR screen to analyze lipid
+              action. Furthermore using a CRISPR screen to analyze lipid
               regulation, we find that functionally important players lack
               associations but are prioritized in trait-associated modules by
               PhenoPLIER. In conclusion, by incorporating groups of co-expressed
@@ -6448,7 +6460,7 @@ results:
               associations through gene expression patterns highlights disease
               etiology and drug mechanisms' and keywords 'genetic studies,
               functional genomics, gene co-expression, therapeutic targets, drug
-              repurposing, clustering of complex traits'. Revise the following
+              repurposing, clustering of complex traits.' Revise the following
               abstract of this manuscript, so it has a clear sentence structure
               and follows a context-content-conclusion (C-C-C) scheme and fits
               in a single paragraph. Make changes only when they are absolutely
@@ -6503,7 +6515,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 124193
+            latencyMs: 120164
             gradingResult: *ref_56
         vars:
           - >-
@@ -6575,7 +6587,7 @@ results:
               associations through gene expression patterns highlights disease
               etiology and drug mechanisms' and keywords 'genetic studies,
               functional genomics, gene co-expression, therapeutic targets, drug
-              repurposing, clustering of complex traits'. Revise the following
+              repurposing, clustering of complex traits.' Revise the following
               abstract of this manuscript.
 
 
@@ -6609,7 +6621,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 111823
+            latencyMs: 113623
             gradingResult: *ref_57
           - pass: true
             score: 1
@@ -6646,7 +6658,7 @@ results:
               associations through gene expression patterns highlights disease
               etiology and drug mechanisms' and keywords 'genetic studies,
               functional genomics, gene co-expression, therapeutic targets, drug
-              repurposing, clustering of complex traits'. Revise the following
+              repurposing, clustering of complex traits.' Revise the following
               abstract of this manuscript, so it has a clear sentence structure
               and follows a context-content-conclusion (C-C-C) scheme and fits
               in a single paragraph. Make changes only when they are absolutely
@@ -6701,7 +6713,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 124305
+            latencyMs: 120488
             gradingResult: *ref_58
         vars:
           - >-
@@ -6759,7 +6771,7 @@ results:
               that diseases are significantly associated with gene modules
               expressed in relevant cell types, and our approach is accurate in
               predicting known drug-disease pairs and inferring mechanisms of
-              action. Furthermore using a CRISPR screen to analyze lipid
+              action. Furthermore, using a CRISPR screen to analyze lipid
               regulation, we find that functionally important players lack
               associations but are prioritized in trait-associated modules by
               PhenoPLIER. In conclusion, by incorporating groups of co-expressed
@@ -6773,7 +6785,7 @@ results:
               associations through gene expression patterns highlights disease
               etiology and drug mechanisms' and keywords 'genetic studies,
               functional genomics, gene co-expression, therapeutic targets, drug
-              repurposing, clustering of complex traits'. Revise the following
+              repurposing, clustering of complex traits.' Revise the following
               abstract of this manuscript.
 
 
@@ -6807,138 +6819,11 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 110767
+            latencyMs: 112353
             gradingResult: *ref_59
-          - pass: true
-            score: 1
-            namedScores: *ref_17
-            text: >-
-              Genes act in concert with each other in specific contexts to
-              perform their functions. Determining how these genes influence
-              complex traits requires a mechanistic understanding of expression
-              regulation across different conditions. It has been shown that
-              this insight is critical for developing new therapies.
-              Transcriptome-wide association studies have helped uncover the
-              role of individual genes in disease-relevant mechanisms. However,
-              modern models of the architecture of complex traits predict that
-              gene-gene interactions play a crucial role in disease origin and
-              progression. Here we introduce PhenoPLIER, a computational
-              approach that maps gene-trait associations and pharmacological
-              perturbation data into a common latent representation for a joint
-              analysis. This representation is based on modules of genes with
-              similar expression patterns across the same conditions. We observe
-              that diseases are significantly associated with gene modules
-              expressed in relevant cell types, and our approach is accurate in
-              predicting known drug-disease pairs and inferring mechanisms of
-              action. Furthermore, using a CRISPR screen to analyze lipid
-              regulation, we find that functionally important players lack
-              associations but are prioritized in trait-associated modules by
-              PhenoPLIER. In conclusion, by incorporating groups of co-expressed
-              genes, PhenoPLIER can contextualize genetic associations and
-              reveal potential targets missed by single-gene strategies.
-              PhenoPLIER provides a novel framework for interpreting genetic
-              associations through the lens of gene modules.
-            prompt: >-
-              You are a scientist with copy-editing skills who will help in
-              improving the text of a manuscript with title 'Projecting genetic
-              associations through gene expression patterns highlights disease
-              etiology and drug mechanisms' and keywords 'genetic studies,
-              functional genomics, gene co-expression, therapeutic targets, drug
-              repurposing, clustering of complex traits'. Revise the following
-              abstract of this manuscript, so it has a clear sentence structure
-              and follows a context-content-conclusion (C-C-C) scheme and fits
-              in a single paragraph. Make changes only when they are absolutely
-              necessary to follow the C-C-C scheme. Under the C-C-C scheme, the
-              abstract must follow the following structure: 1) The context must
-              communicate to the reader what gap the paper will fill. The first
-              sentence orients the reader by introducing the broader field in
-              which the particular research is situated. Then, this context is
-              narrowed until it lands on the open question that the research
-              answered. A successful context section sets the stage for
-              distinguishing the paper’s contributions from the current state of
-              the art by communicating what is missing in the literature (i.e.,
-              the specific gap) and why that matters (i.e., the connection
-              between the specific gap and the broader context that the paper
-              opened with); 2) The content ("Here we") first describes the novel
-              method or approach that you used to fill the gap or question. Then
-              you present the meat—your executive summary of the results; 3)
-              Finally, the conclusion interprets the results to answer the
-              question that was posed at the end of the context section. There
-              is often a second part to the conclusion section that highlights
-              how this conclusion moves the broader field forward (i.e.,
-              "broader significance").
-
-
-              Input paragraph: Genes act in concierto with each other in
-              specifico contexts to perform their functions. Determining how
-              these genes influence complex traits requires a mechanistic
-              understanding of expression regulation across different
-              conditions. It has been shown that this insight is critical for
-              developing new therapies. Transcriptome-wide association studies
-              have helped uncover the role of individual genes in
-              disease-relevant mechanisms. However, modern models of the
-              architecture of complex traits predict that gene-gene interactions
-              play a crucial role in disease origin and progression. Here we
-              introduce PhenoPLIER, a computational approach that maps
-              gene-trait associations and pharmacological perturbation data into
-              a common latent representation for a joint analysis. This
-              representation is base on modules of genes with similar expression
-              patterns across the same conditions. We observe that diseases are
-              significantl associated with gene modules expressed in relevant
-              cell types, and our approach is accurate in predicting known
-              drug-disease pairs and inferring mechanisms of action. Furthermore
-              using a CRISPR screen to analyze lipid regulation, we find that
-              functionally important players lack associations but are
-              prioritized in trait-associated modules by PhenoPLIER. In
-              conclusion, by incorporating, groups of co-expressed genes,
-              PhenoPLIER can contextualize genetic associations and reveal,
-              potential targets missed by single-gene strategies. PhenoPLIER
-              provides a novel framework for interpreting genetic associations
-              through the lens of gene modules.
-
-
-              Revised paragraph:
-            provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 124054
-            gradingResult: *ref_60
-        vars:
-          - >-
-            genetic studies, functional genomics, gene co-expression,
-            therapeutic targets, drug repurposing, clustering of complex traits
-          - >-
-            Genes act in concierto with each other in specifico contexts to
-            perform their functions. Determining how these genes influence
-            complex traits requires a mechanistic understanding of expression
-            regulation across different conditions. It has been shown that this
-            insight is critical for developing new therapies. Transcriptome-wide
-            association studies have helped uncover the role of individual genes
-            in disease-relevant mechanisms. However, modern models of the
-            architecture of complex traits predict that gene-gene interactions
-            play a crucial role in disease origin and progression. Here we
-            introduce PhenoPLIER, a computational approach that maps gene-trait
-            associations and pharmacological perturbation data into a common
-            latent representation for a joint analysis. This representation is
-            base on modules of genes with similar expression patterns across the
-            same conditions. We observe that diseases are significantl
-            associated with gene modules expressed in relevant cell types, and
-            our approach is accurate in predicting known drug-disease pairs and
-            inferring mechanisms of action. Furthermore using a CRISPR screen to
-            analyze lipid regulation, we find that functionally important
-            players lack associations but are prioritized in trait-associated
-            modules by PhenoPLIER. In conclusion, by incorporating, groups of
-            co-expressed genes, PhenoPLIER can contextualize genetic
-            associations and reveal, potential targets missed by single-gene
-            strategies. PhenoPLIER provides a novel framework for interpreting
-            genetic associations through the lens of gene modules.
-          - spelling/grammar errors
-          - >-
-            Projecting genetic associations through gene expression patterns
-            highlights disease etiology and drug mechanisms
-      - description: Abstract
-        outputs:
           - pass: false
             score: 0.8888888888888888
-            namedScores: *ref_18
+            namedScores: *ref_17
             text: >-
               Expected output to not contain one of "concierto, specifico,
               significantl "
@@ -6976,78 +6861,7 @@ results:
               associations through gene expression patterns highlights disease
               etiology and drug mechanisms' and keywords 'genetic studies,
               functional genomics, gene co-expression, therapeutic targets, drug
-              repurposing, clustering of complex traits'. Revise the following
-              abstract of this manuscript.
-
-
-              Input paragraph: Genes act in concierto with each other in
-              specifico contexts to perform their functions. Determining how
-              these genes influence complex traits requires a mechanistic
-              understanding of expression regulation across different
-              conditions. It has been shown that this insight is critical for
-              developing new therapies. Transcriptome-wide association studies
-              have helped uncover the role of individual genes in
-              disease-relevant mechanisms. However, modern models of the
-              architecture of complex traits predict that gene-gene interactions
-              play a crucial role in disease origin and progression. Here we
-              introduce PhenoPLIER, a computational approach that maps
-              gene-trait associations and pharmacological perturbation data into
-              a common latent representation for a joint analysis. This
-              representation is base on modules of genes with similar expression
-              patterns across the same conditions. We observe that diseases are
-              significantl associated with gene modules expressed in relevant
-              cell types, and our approach is accurate in predicting known
-              drug-disease pairs and inferring mechanisms of action. Furthermore
-              using a CRISPR screen to analyze lipid regulation, we find that
-              functionally important players lack associations but are
-              prioritized in trait-associated modules by PhenoPLIER. In
-              conclusion, by incorporating, groups of co-expressed genes,
-              PhenoPLIER can contextualize genetic associations and reveal,
-              potential targets missed by single-gene strategies. PhenoPLIER
-              provides a novel framework for interpreting genetic associations
-              through the lens of gene modules.
-
-
-              Revised paragraph:
-            provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 114010
-            gradingResult: *ref_61
-          - pass: true
-            score: 1
-            namedScores: *ref_19
-            text: >-
-              Genes act in concert with each other in specific contexts to
-              perform their functions. Determining how these genes influence
-              complex traits requires a mechanistic understanding of expression
-              regulation across different conditions. It has been shown that
-              this insight is critical for developing new therapies.
-              Transcriptome-wide association studies have helped uncover the
-              role of individual genes in disease-relevant mechanisms. However,
-              modern models of the architecture of complex traits predict that
-              gene-gene interactions play a crucial role in disease origin and
-              progression. Here we introduce PhenoPLIER, a computational
-              approach that maps gene-trait associations and pharmacological
-              perturbation data into a common latent representation for a joint
-              analysis. This representation is based on modules of genes with
-              similar expression patterns across the same conditions. We observe
-              that diseases are significantly associated with gene modules
-              expressed in relevant cell types, and our approach is accurate in
-              predicting known drug-disease pairs and inferring mechanisms of
-              action. Furthermore, using a CRISPR screen to analyze lipid
-              regulation, we find that functionally important players lack
-              associations but are prioritized in trait-associated modules by
-              PhenoPLIER. In conclusion, by incorporating groups of co-expressed
-              genes, PhenoPLIER can contextualize genetic associations and
-              reveal potential targets missed by single-gene strategies.
-              PhenoPLIER provides a novel framework for interpreting genetic
-              associations through the lens of gene modules.
-            prompt: >-
-              You are a scientist with copy-editing skills who will help in
-              improving the text of a manuscript with title 'Projecting genetic
-              associations through gene expression patterns highlights disease
-              etiology and drug mechanisms' and keywords 'genetic studies,
-              functional genomics, gene co-expression, therapeutic targets, drug
-              repurposing, clustering of complex traits'. Revise the following
+              repurposing, clustering of complex traits.' Revise the following
               abstract of this manuscript, so it has a clear sentence structure
               and follows a context-content-conclusion (C-C-C) scheme and fits
               in a single paragraph. Make changes only when they are absolutely
@@ -7102,7 +6916,205 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 123877
+            latencyMs: 122050
+            gradingResult: *ref_60
+        vars:
+          - >-
+            genetic studies, functional genomics, gene co-expression,
+            therapeutic targets, drug repurposing, clustering of complex traits
+          - >-
+            Genes act in concierto with each other in specifico contexts to
+            perform their functions. Determining how these genes influence
+            complex traits requires a mechanistic understanding of expression
+            regulation across different conditions. It has been shown that this
+            insight is critical for developing new therapies. Transcriptome-wide
+            association studies have helped uncover the role of individual genes
+            in disease-relevant mechanisms. However, modern models of the
+            architecture of complex traits predict that gene-gene interactions
+            play a crucial role in disease origin and progression. Here we
+            introduce PhenoPLIER, a computational approach that maps gene-trait
+            associations and pharmacological perturbation data into a common
+            latent representation for a joint analysis. This representation is
+            base on modules of genes with similar expression patterns across the
+            same conditions. We observe that diseases are significantl
+            associated with gene modules expressed in relevant cell types, and
+            our approach is accurate in predicting known drug-disease pairs and
+            inferring mechanisms of action. Furthermore using a CRISPR screen to
+            analyze lipid regulation, we find that functionally important
+            players lack associations but are prioritized in trait-associated
+            modules by PhenoPLIER. In conclusion, by incorporating, groups of
+            co-expressed genes, PhenoPLIER can contextualize genetic
+            associations and reveal, potential targets missed by single-gene
+            strategies. PhenoPLIER provides a novel framework for interpreting
+            genetic associations through the lens of gene modules.
+          - spelling/grammar errors
+          - >-
+            Projecting genetic associations through gene expression patterns
+            highlights disease etiology and drug mechanisms
+      - description: Abstract
+        outputs:
+          - pass: true
+            score: 1
+            namedScores: *ref_18
+            text: >-
+              Genes act in concert with each other in specific contexts to
+              perform their functions. Determining how these genes influence
+              complex traits requires a mechanistic understanding of expression
+              regulation across different conditions. It has been shown that
+              this insight is critical for developing new therapies.
+              Transcriptome-wide association studies have helped uncover the
+              role of individual genes in disease-relevant mechanisms. However,
+              modern models of the architecture of complex traits predict that
+              gene-gene interactions play a crucial role in disease origin and
+              progression. Here we introduce PhenoPLIER, a computational
+              approach that maps gene-trait associations and pharmacological
+              perturbation data into a common latent representation for a joint
+              analysis. This representation is based on modules of genes with
+              similar expression patterns across the same conditions. We observe
+              that diseases are significantly associated with gene modules
+              expressed in relevant cell types, and our approach is accurate in
+              predicting known drug-disease pairs and inferring mechanisms of
+              action. Furthermore, using a CRISPR screen to analyze lipid
+              regulation, we find that functionally important players lack
+              associations but are prioritized in trait-associated modules by
+              PhenoPLIER. In conclusion, by incorporating groups of co-expressed
+              genes, PhenoPLIER can contextualize genetic associations and
+              reveal potential targets missed by single-gene strategies.
+              PhenoPLIER provides a novel framework for interpreting genetic
+              associations through the lens of gene modules.
+            prompt: >-
+              You are a scientist with copy-editing skills who will help in
+              improving the text of a manuscript with title 'Projecting genetic
+              associations through gene expression patterns highlights disease
+              etiology and drug mechanisms' and keywords 'genetic studies,
+              functional genomics, gene co-expression, therapeutic targets, drug
+              repurposing, clustering of complex traits.' Revise the following
+              abstract of this manuscript.
+
+
+              Input paragraph: Genes act in concierto with each other in
+              specifico contexts to perform their functions. Determining how
+              these genes influence complex traits requires a mechanistic
+              understanding of expression regulation across different
+              conditions. It has been shown that this insight is critical for
+              developing new therapies. Transcriptome-wide association studies
+              have helped uncover the role of individual genes in
+              disease-relevant mechanisms. However, modern models of the
+              architecture of complex traits predict that gene-gene interactions
+              play a crucial role in disease origin and progression. Here we
+              introduce PhenoPLIER, a computational approach that maps
+              gene-trait associations and pharmacological perturbation data into
+              a common latent representation for a joint analysis. This
+              representation is base on modules of genes with similar expression
+              patterns across the same conditions. We observe that diseases are
+              significantl associated with gene modules expressed in relevant
+              cell types, and our approach is accurate in predicting known
+              drug-disease pairs and inferring mechanisms of action. Furthermore
+              using a CRISPR screen to analyze lipid regulation, we find that
+              functionally important players lack associations but are
+              prioritized in trait-associated modules by PhenoPLIER. In
+              conclusion, by incorporating, groups of co-expressed genes,
+              PhenoPLIER can contextualize genetic associations and reveal,
+              potential targets missed by single-gene strategies. PhenoPLIER
+              provides a novel framework for interpreting genetic associations
+              through the lens of gene modules.
+
+
+              Revised paragraph:
+            provider: ollama:alfred:40b-1023-q5_1
+            latencyMs: 112030
+            gradingResult: *ref_61
+          - pass: true
+            score: 1
+            namedScores: *ref_19
+            text: >-
+              Genes act in concert with each other in specific contexts to
+              perform their functions. Determining how these genes influence
+              complex traits requires a mechanistic understanding of expression
+              regulation across different conditions. It has been shown that
+              this insight is critical for developing new therapies.
+              Transcriptome-wide association studies have helped uncover the
+              role of individual genes in disease-relevant mechanisms. However,
+              modern models of the architecture of complex traits predict that
+              gene-gene interactions play a crucial role in disease origin and
+              progression. Here we introduce PhenoPLIER, a computational
+              approach that maps gene-trait associations and pharmacological
+              perturbation data into a common latent representation for a joint
+              analysis. This representation is based on modules of genes with
+              similar expression patterns across the same conditions. We observe
+              that diseases are significantly associated with gene modules
+              expressed in relevant cell types, and our approach is accurate in
+              predicting known drug-disease pairs and inferring mechanisms of
+              action. Furthermore using a CRISPR screen to analyze lipid
+              regulation, we find that functionally important players lack
+              associations but are prioritized in trait-associated modules by
+              PhenoPLIER. In conclusion, by incorporating groups of co-expressed
+              genes, PhenoPLIER can contextualize genetic associations and
+              reveal potential targets missed by single-gene strategies.
+              PhenoPLIER provides a novel framework for interpreting genetic
+              associations through the lens of gene modules.
+            prompt: >-
+              You are a scientist with copy-editing skills who will help in
+              improving the text of a manuscript with title 'Projecting genetic
+              associations through gene expression patterns highlights disease
+              etiology and drug mechanisms' and keywords 'genetic studies,
+              functional genomics, gene co-expression, therapeutic targets, drug
+              repurposing, clustering of complex traits.' Revise the following
+              abstract of this manuscript, so it has a clear sentence structure
+              and follows a context-content-conclusion (C-C-C) scheme and fits
+              in a single paragraph. Make changes only when they are absolutely
+              necessary to follow the C-C-C scheme. Under the C-C-C scheme, the
+              abstract must follow the following structure: 1) The context must
+              communicate to the reader what gap the paper will fill. The first
+              sentence orients the reader by introducing the broader field in
+              which the particular research is situated. Then, this context is
+              narrowed until it lands on the open question that the research
+              answered. A successful context section sets the stage for
+              distinguishing the paper’s contributions from the current state of
+              the art by communicating what is missing in the literature (i.e.,
+              the specific gap) and why that matters (i.e., the connection
+              between the specific gap and the broader context that the paper
+              opened with); 2) The content ("Here we") first describes the novel
+              method or approach that you used to fill the gap or question. Then
+              you present the meat—your executive summary of the results; 3)
+              Finally, the conclusion interprets the results to answer the
+              question that was posed at the end of the context section. There
+              is often a second part to the conclusion section that highlights
+              how this conclusion moves the broader field forward (i.e.,
+              "broader significance").
+
+
+              Input paragraph: Genes act in concierto with each other in
+              specifico contexts to perform their functions. Determining how
+              these genes influence complex traits requires a mechanistic
+              understanding of expression regulation across different
+              conditions. It has been shown that this insight is critical for
+              developing new therapies. Transcriptome-wide association studies
+              have helped uncover the role of individual genes in
+              disease-relevant mechanisms. However, modern models of the
+              architecture of complex traits predict that gene-gene interactions
+              play a crucial role in disease origin and progression. Here we
+              introduce PhenoPLIER, a computational approach that maps
+              gene-trait associations and pharmacological perturbation data into
+              a common latent representation for a joint analysis. This
+              representation is base on modules of genes with similar expression
+              patterns across the same conditions. We observe that diseases are
+              significantl associated with gene modules expressed in relevant
+              cell types, and our approach is accurate in predicting known
+              drug-disease pairs and inferring mechanisms of action. Furthermore
+              using a CRISPR screen to analyze lipid regulation, we find that
+              functionally important players lack associations but are
+              prioritized in trait-associated modules by PhenoPLIER. In
+              conclusion, by incorporating, groups of co-expressed genes,
+              PhenoPLIER can contextualize genetic associations and reveal,
+              potential targets missed by single-gene strategies. PhenoPLIER
+              provides a novel framework for interpreting genetic associations
+              through the lens of gene modules.
+
+
+              Revised paragraph:
+            provider: ollama:alfred:40b-1023-q5_1
+            latencyMs: 119732
             gradingResult: *ref_62
         vars:
           - >-
@@ -7140,7 +7152,7 @@ results:
       - description: Abstract
         outputs:
           - pass: false
-            score: 0.7777777777777778
+            score: 0.8888888888888888
             namedScores: *ref_20
             text: >-
               Python code returned false
@@ -7152,27 +7164,38 @@ results:
 
               ---
 
-              We introduce PhenoPLIER, a computational approach that maps
-              gene-trait associations and pharmacological perturbation data into
-              a common latent representation for a joint analysis. Our method
-              groups genes with similar expression patterns across conditions
-              into modules. We find that diseases are significantly associated
-              with gene modules expressed in relevant cell types. Furthermore,
-              using a CRISPR screen to analyze lipid regulation, we find that
-              functionally important players lack associations but are
-              prioritized in trait-associated modules by PhenoPLIER. In
-              conclusion, by incorporating groups of co-expressed genes,
-              PhenoPLIER can contextualize genetic associations and reveal
-              potential targets missed by single-gene strategies. Our approach
-              provides a novel framework for interpreting genetic associations
-              through the lens of gene modules.
+              PhenoPLIER is a computational approach that maps gene-trait
+              associations and pharmacological perturbation data into a common
+              latent representation for a joint analysis. Genes act in concert
+              with each other in specific contexts to perform their functions.
+              Determining how these genes influence complex traits requires a
+              mechanistic understanding of expression regulation across
+              different conditions. It has been shown that this insight is
+              critical for developing new therapies. Transcriptome-wide
+              association studies have helped uncover the role of individual
+              genes in disease-relevant mechanisms. However, modern models of
+              the architecture of complex traits predict that gene-gene
+              interactions play a crucial role in disease origin and
+              progression. PhenoPLIER's representation is based on modules of
+              genes with similar expression patterns across the same conditions.
+              We observe that diseases are significantly associated with gene
+              modules expressed in relevant cell types, and our approach is
+              accurate in predicting known drug-disease pairs and inferring
+              mechanisms of action. Furthermore, using a CRISPR screen to
+              analyze lipid regulation, we find that functionally important
+              players lack associations but are prioritized in trait-associated
+              modules by PhenoPLIER. In conclusion, by incorporating groups of
+              co-expressed genes, PhenoPLIER can contextualize genetic
+              associations and reveal potential targets missed by single-gene
+              strategies. PhenoPLIER provides a novel framework for interpreting
+              genetic associations through the lens of gene modules.
             prompt: >-
               You are a scientist with copy-editing skills who will help in
               improving the text of a manuscript with title 'Projecting genetic
               associations through gene expression patterns highlights disease
               etiology and drug mechanisms' and keywords 'genetic studies,
               functional genomics, gene co-expression, therapeutic targets, drug
-              repurposing, clustering of complex traits'. Revise the following
+              repurposing, clustering of complex traits.' Revise the following
               abstract of this manuscript.
 
 
@@ -7205,7 +7228,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 62405
+            latencyMs: 114041
             gradingResult: *ref_63
           - pass: false
             score: 0.8888888888888888
@@ -7251,7 +7274,7 @@ results:
               associations through gene expression patterns highlights disease
               etiology and drug mechanisms' and keywords 'genetic studies,
               functional genomics, gene co-expression, therapeutic targets, drug
-              repurposing, clustering of complex traits'. Revise the following
+              repurposing, clustering of complex traits.' Revise the following
               abstract of this manuscript, so it has a clear sentence structure
               and follows a context-content-conclusion (C-C-C) scheme and fits
               in a single paragraph. Make changes only when they are absolutely
@@ -7305,7 +7328,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 126218
+            latencyMs: 121697
             gradingResult: *ref_64
         vars:
           - >-
@@ -7356,14 +7379,14 @@ results:
 
               ---
 
-              PhenoPLIER is a computational approach that maps gene-trait
-              associations and pharmacological perturbation data into a common
-              latent representation for a joint analysis. Genes act in concert
-              with each other in specific contexts to perform their functions.
-              Determining how these genes influence complex traits requires a
-              mechanistic understanding of expression regulation across
-              different conditions. It has been shown that this insight is
-              critical for developing new therapies. Transcriptome-wide
+              We introduce PhenoPLIER, a computational approach that maps
+              gene-trait associations and pharmacological perturbation data into
+              a common latent representation for a joint analysis. Genes act in
+              concert with each other in specific contexts to perform their
+              functions. Determining how these genes influence complex traits
+              requires a mechanistic understanding of expression regulation
+              across different conditions. It has been shown that this insight
+              is critical for developing new therapies. Transcriptome-wide
               association studies have helped uncover the role of individual
               genes in disease-relevant mechanisms. However, modern models of
               the architecture of complex traits predict that gene-gene
@@ -7387,7 +7410,7 @@ results:
               associations through gene expression patterns highlights disease
               etiology and drug mechanisms' and keywords 'genetic studies,
               functional genomics, gene co-expression, therapeutic targets, drug
-              repurposing, clustering of complex traits'. Revise the following
+              repurposing, clustering of complex traits.' Revise the following
               abstract of this manuscript.
 
 
@@ -7420,7 +7443,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 113714
+            latencyMs: 114064
             gradingResult: *ref_65
           - pass: false
             score: 0.8888888888888888
@@ -7435,18 +7458,18 @@ results:
 
               ---
 
-              We introduce PhenoPLIER, a computational approach that maps
-              gene-trait associations and pharmacological perturbation data into
-              a common latent representation for a joint analysis. Genes act in
-              concert with each other in specific contexts to perform their
-              functions. Determining how these genes influence complex traits
-              requires a mechanistic understanding of expression regulation
-              across different conditions. It has been shown that this insight
-              is critical for developing new therapies. Transcriptome-wide
-              association studies have helped uncover the role of individual
-              genes in disease-relevant mechanisms. However, modern models of
-              the architecture of complex traits predict that gene-gene
-              interactions play a crucial role in disease origin and
+              In this study, we introduce PhenoPLIER, a computational approach
+              that maps gene-trait associations and pharmacological perturbation
+              data into a common latent representation for a joint analysis. We
+              demonstrate that genes act in concert with each other in specific
+              contexts to perform their functions. Determining how these genes
+              influence complex traits requires a mechanistic understanding of
+              expression regulation across different conditions. It has been
+              shown that this insight is critical for developing new therapies.
+              Transcriptome-wide association studies have helped uncover the
+              role of individual genes in disease-relevant mechanisms. However,
+              modern models of the architecture of complex traits predict that
+              gene-gene interactions play a crucial role in disease origin and
               progression. PhenoPLIER's representation is based on modules of
               genes with similar expression patterns across the same conditions.
               We observe that diseases are significantly associated with gene
@@ -7466,7 +7489,7 @@ results:
               associations through gene expression patterns highlights disease
               etiology and drug mechanisms' and keywords 'genetic studies,
               functional genomics, gene co-expression, therapeutic targets, drug
-              repurposing, clustering of complex traits'. Revise the following
+              repurposing, clustering of complex traits.' Revise the following
               abstract of this manuscript, so it has a clear sentence structure
               and follows a context-content-conclusion (C-C-C) scheme and fits
               in a single paragraph. Make changes only when they are absolutely
@@ -7520,7 +7543,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 125692
+            latencyMs: 123347
             gradingResult: *ref_66
         vars:
           - >-
@@ -7571,14 +7594,14 @@ results:
 
               ---
 
-              PhenoPLIER is a computational approach that maps gene-trait
-              associations and pharmacological perturbation data into a common
-              latent representation for a joint analysis. Genes act in concert
-              with each other in specific contexts to perform their functions.
-              Determining how these genes influence complex traits requires a
-              mechanistic understanding of expression regulation across
-              different conditions. It has been shown that this insight is
-              critical for developing new therapies. Transcriptome-wide
+              We introduce PhenoPLIER, a computational approach that maps
+              gene-trait associations and pharmacological perturbation data into
+              a common latent representation for a joint analysis. Genes act in
+              concert with each other in specific contexts to perform their
+              functions. Determining how these genes influence complex traits
+              requires a mechanistic understanding of expression regulation
+              across different conditions. It has been shown that this insight
+              is critical for developing new therapies. Transcriptome-wide
               association studies have helped uncover the role of individual
               genes in disease-relevant mechanisms. However, modern models of
               the architecture of complex traits predict that gene-gene
@@ -7602,7 +7625,7 @@ results:
               associations through gene expression patterns highlights disease
               etiology and drug mechanisms' and keywords 'genetic studies,
               functional genomics, gene co-expression, therapeutic targets, drug
-              repurposing, clustering of complex traits'. Revise the following
+              repurposing, clustering of complex traits.' Revise the following
               abstract of this manuscript.
 
 
@@ -7635,7 +7658,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 112587
+            latencyMs: 114190
             gradingResult: *ref_67
           - pass: false
             score: 0.8888888888888888
@@ -7652,16 +7675,21 @@ results:
 
               We introduce PhenoPLIER, a computational approach that maps
               gene-trait associations and pharmacological perturbation data into
-              a common latent representation for a joint analysis. Determining
-              how genes influence complex traits requires a mechanistic
-              understanding of expression regulation across different
-              conditions. Transcriptome-wide association studies have helped
-              uncover the role of individual genes in disease-relevant
-              mechanisms, but modern models predict that gene-gene interactions
-              play a crucial role in disease origin and progression.
-              PhenoPLIER's representation is based on modules of genes with
-              similar expression patterns across the same conditions. Our
-              approach accurately predicts known drug-disease pairs and infers
+              a common latent representation for a joint analysis. Genes act in
+              concert with each other in specific contexts to perform their
+              functions. Determining how these genes influence complex traits
+              requires a mechanistic understanding of expression regulation
+              across different conditions. It has been shown that this insight
+              is critical for developing new therapies. Transcriptome-wide
+              association studies have helped uncover the role of individual
+              genes in disease-relevant mechanisms. However, modern models of
+              the architecture of complex traits predict that gene-gene
+              interactions play a crucial role in disease origin and
+              progression. PhenoPLIER's representation is based on modules of
+              genes with similar expression patterns across the same conditions.
+              We observe that diseases are significantly associated with gene
+              modules expressed in relevant cell types, and our approach is
+              accurate in predicting known drug-disease pairs and inferring
               mechanisms of action. Furthermore, using a CRISPR screen to
               analyze lipid regulation, we find that functionally important
               players lack associations but are prioritized in trait-associated
@@ -7676,7 +7704,7 @@ results:
               associations through gene expression patterns highlights disease
               etiology and drug mechanisms' and keywords 'genetic studies,
               functional genomics, gene co-expression, therapeutic targets, drug
-              repurposing, clustering of complex traits'. Revise the following
+              repurposing, clustering of complex traits.' Revise the following
               abstract of this manuscript, so it has a clear sentence structure
               and follows a context-content-conclusion (C-C-C) scheme and fits
               in a single paragraph. Make changes only when they are absolutely
@@ -7730,7 +7758,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 101443
+            latencyMs: 120878
             gradingResult: *ref_68
         vars:
           - >-
@@ -7781,14 +7809,14 @@ results:
 
               ---
 
-              We introduce PhenoPLIER, a computational approach that maps
-              gene-trait associations and pharmacological perturbation data into
-              a common latent representation for a joint analysis. Genes act in
-              concert with each other in specific contexts to perform their
-              functions. Determining how these genes influence complex traits
-              requires a mechanistic understanding of expression regulation
-              across different conditions. It has been shown that this insight
-              is critical for developing new therapies. Transcriptome-wide
+              PhenoPLIER is a computational approach that maps gene-trait
+              associations and pharmacological perturbation data into a common
+              latent representation for a joint analysis. Genes act in concert
+              with each other in specific contexts to perform their functions.
+              Determining how these genes influence complex traits requires a
+              mechanistic understanding of expression regulation across
+              different conditions. It has been shown that this insight is
+              critical for developing new therapies. Transcriptome-wide
               association studies have helped uncover the role of individual
               genes in disease-relevant mechanisms. However, modern models of
               the architecture of complex traits predict that gene-gene
@@ -7812,7 +7840,7 @@ results:
               associations through gene expression patterns highlights disease
               etiology and drug mechanisms' and keywords 'genetic studies,
               functional genomics, gene co-expression, therapeutic targets, drug
-              repurposing, clustering of complex traits'. Revise the following
+              repurposing, clustering of complex traits.' Revise the following
               abstract of this manuscript.
 
 
@@ -7845,7 +7873,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 113109
+            latencyMs: 113741
             gradingResult: *ref_69
           - pass: false
             score: 0.8888888888888888
@@ -7891,7 +7919,7 @@ results:
               associations through gene expression patterns highlights disease
               etiology and drug mechanisms' and keywords 'genetic studies,
               functional genomics, gene co-expression, therapeutic targets, drug
-              repurposing, clustering of complex traits'. Revise the following
+              repurposing, clustering of complex traits.' Revise the following
               abstract of this manuscript, so it has a clear sentence structure
               and follows a context-content-conclusion (C-C-C) scheme and fits
               in a single paragraph. Make changes only when they are absolutely
@@ -7945,7 +7973,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 124831
+            latencyMs: 121442
             gradingResult: *ref_70
         vars:
           - >-
@@ -8027,7 +8055,7 @@ results:
               associations through gene expression patterns highlights disease
               etiology and drug mechanisms' and keywords 'genetic studies,
               functional genomics, gene co-expression, therapeutic targets, drug
-              repurposing, clustering of complex traits'. Revise the following
+              repurposing, clustering of complex traits.' Revise the following
               abstract of this manuscript.
 
 
@@ -8060,7 +8088,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 113724
+            latencyMs: 114905
             gradingResult: *ref_71
           - pass: false
             score: 0.8888888888888888
@@ -8106,7 +8134,7 @@ results:
               associations through gene expression patterns highlights disease
               etiology and drug mechanisms' and keywords 'genetic studies,
               functional genomics, gene co-expression, therapeutic targets, drug
-              repurposing, clustering of complex traits'. Revise the following
+              repurposing, clustering of complex traits.' Revise the following
               abstract of this manuscript, so it has a clear sentence structure
               and follows a context-content-conclusion (C-C-C) scheme and fits
               in a single paragraph. Make changes only when they are absolutely
@@ -8160,7 +8188,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 124944
+            latencyMs: 121947
             gradingResult: *ref_72
         vars:
           - >-
@@ -8233,7 +8261,7 @@ results:
               associations through gene expression patterns highlights disease
               etiology and drug mechanisms' and keywords 'genetic studies,
               functional genomics, gene co-expression, therapeutic targets, drug
-              repurposing, clustering of complex traits'. Revise the following
+              repurposing, clustering of complex traits.' Revise the following
               abstract of this manuscript.
 
 
@@ -8258,7 +8286,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 71710
+            latencyMs: 74269
             gradingResult: *ref_73
           - pass: false
             score: 0.8888888888888888
@@ -8295,7 +8323,7 @@ results:
               associations through gene expression patterns highlights disease
               etiology and drug mechanisms' and keywords 'genetic studies,
               functional genomics, gene co-expression, therapeutic targets, drug
-              repurposing, clustering of complex traits'. Revise the following
+              repurposing, clustering of complex traits.' Revise the following
               abstract of this manuscript, so it has a clear sentence structure
               and follows a context-content-conclusion (C-C-C) scheme and fits
               in a single paragraph. Make changes only when they are absolutely
@@ -8341,7 +8369,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 81777
+            latencyMs: 80214
             gradingResult: *ref_74
         vars:
           - >-
@@ -8405,7 +8433,7 @@ results:
               associations through gene expression patterns highlights disease
               etiology and drug mechanisms' and keywords 'genetic studies,
               functional genomics, gene co-expression, therapeutic targets, drug
-              repurposing, clustering of complex traits'. Revise the following
+              repurposing, clustering of complex traits.' Revise the following
               abstract of this manuscript.
 
 
@@ -8430,7 +8458,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 72662
+            latencyMs: 73683
             gradingResult: *ref_75
           - pass: false
             score: 0.8888888888888888
@@ -8467,7 +8495,7 @@ results:
               associations through gene expression patterns highlights disease
               etiology and drug mechanisms' and keywords 'genetic studies,
               functional genomics, gene co-expression, therapeutic targets, drug
-              repurposing, clustering of complex traits'. Revise the following
+              repurposing, clustering of complex traits.' Revise the following
               abstract of this manuscript, so it has a clear sentence structure
               and follows a context-content-conclusion (C-C-C) scheme and fits
               in a single paragraph. Make changes only when they are absolutely
@@ -8513,7 +8541,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 81521
+            latencyMs: 79562
             gradingResult: *ref_76
         vars:
           - >-
@@ -8577,7 +8605,7 @@ results:
               associations through gene expression patterns highlights disease
               etiology and drug mechanisms' and keywords 'genetic studies,
               functional genomics, gene co-expression, therapeutic targets, drug
-              repurposing, clustering of complex traits'. Revise the following
+              repurposing, clustering of complex traits.' Revise the following
               abstract of this manuscript.
 
 
@@ -8602,7 +8630,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 71522
+            latencyMs: 73943
             gradingResult: *ref_77
           - pass: false
             score: 0.8888888888888888
@@ -8639,7 +8667,7 @@ results:
               associations through gene expression patterns highlights disease
               etiology and drug mechanisms' and keywords 'genetic studies,
               functional genomics, gene co-expression, therapeutic targets, drug
-              repurposing, clustering of complex traits'. Revise the following
+              repurposing, clustering of complex traits.' Revise the following
               abstract of this manuscript, so it has a clear sentence structure
               and follows a context-content-conclusion (C-C-C) scheme and fits
               in a single paragraph. Make changes only when they are absolutely
@@ -8685,7 +8713,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 81660
+            latencyMs: 79783
             gradingResult: *ref_78
         vars:
           - >-
@@ -8749,7 +8777,7 @@ results:
               associations through gene expression patterns highlights disease
               etiology and drug mechanisms' and keywords 'genetic studies,
               functional genomics, gene co-expression, therapeutic targets, drug
-              repurposing, clustering of complex traits'. Revise the following
+              repurposing, clustering of complex traits.' Revise the following
               abstract of this manuscript.
 
 
@@ -8774,7 +8802,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 72343
+            latencyMs: 73996
             gradingResult: *ref_79
           - pass: false
             score: 0.8888888888888888
@@ -8811,7 +8839,7 @@ results:
               associations through gene expression patterns highlights disease
               etiology and drug mechanisms' and keywords 'genetic studies,
               functional genomics, gene co-expression, therapeutic targets, drug
-              repurposing, clustering of complex traits'. Revise the following
+              repurposing, clustering of complex traits.' Revise the following
               abstract of this manuscript, so it has a clear sentence structure
               and follows a context-content-conclusion (C-C-C) scheme and fits
               in a single paragraph. Make changes only when they are absolutely
@@ -8857,7 +8885,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 81353
+            latencyMs: 80258
             gradingResult: *ref_80
         vars:
           - >-
@@ -8921,7 +8949,7 @@ results:
               associations through gene expression patterns highlights disease
               etiology and drug mechanisms' and keywords 'genetic studies,
               functional genomics, gene co-expression, therapeutic targets, drug
-              repurposing, clustering of complex traits'. Revise the following
+              repurposing, clustering of complex traits.' Revise the following
               abstract of this manuscript.
 
 
@@ -8946,7 +8974,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 72414
+            latencyMs: 73520
             gradingResult: *ref_81
           - pass: false
             score: 0.8888888888888888
@@ -8983,7 +9011,7 @@ results:
               associations through gene expression patterns highlights disease
               etiology and drug mechanisms' and keywords 'genetic studies,
               functional genomics, gene co-expression, therapeutic targets, drug
-              repurposing, clustering of complex traits'. Revise the following
+              repurposing, clustering of complex traits.' Revise the following
               abstract of this manuscript, so it has a clear sentence structure
               and follows a context-content-conclusion (C-C-C) scheme and fits
               in a single paragraph. Make changes only when they are absolutely
@@ -9029,7 +9057,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 81373
+            latencyMs: 79104
             gradingResult: *ref_82
         vars:
           - >-
@@ -9118,7 +9146,7 @@ results:
               associations through gene expression patterns highlights disease
               etiology and drug mechanisms' and keywords 'genetic studies,
               functional genomics, gene co-expression, therapeutic targets, drug
-              repurposing, clustering of complex traits'. Revise the following
+              repurposing, clustering of complex traits.' Revise the following
               abstract of this manuscript.
 
 
@@ -9147,7 +9175,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 89373
+            latencyMs: 91602
             gradingResult: *ref_83
           - pass: false
             score: 0.8888888888888888
@@ -9209,7 +9237,7 @@ results:
               associations through gene expression patterns highlights disease
               etiology and drug mechanisms' and keywords 'genetic studies,
               functional genomics, gene co-expression, therapeutic targets, drug
-              repurposing, clustering of complex traits'. Revise the following
+              repurposing, clustering of complex traits.' Revise the following
               abstract of this manuscript, so it has a clear sentence structure
               and follows a context-content-conclusion (C-C-C) scheme and fits
               in a single paragraph. Make changes only when they are absolutely
@@ -9259,7 +9287,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 99930
+            latencyMs: 97232
             gradingResult: *ref_84
         vars:
           - >-
@@ -9354,7 +9382,7 @@ results:
               associations through gene expression patterns highlights disease
               etiology and drug mechanisms' and keywords 'genetic studies,
               functional genomics, gene co-expression, therapeutic targets, drug
-              repurposing, clustering of complex traits'. Revise the following
+              repurposing, clustering of complex traits.' Revise the following
               abstract of this manuscript.
 
 
@@ -9383,7 +9411,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 89180
+            latencyMs: 91093
             gradingResult: *ref_85
           - pass: false
             score: 0.8888888888888888
@@ -9445,7 +9473,7 @@ results:
               associations through gene expression patterns highlights disease
               etiology and drug mechanisms' and keywords 'genetic studies,
               functional genomics, gene co-expression, therapeutic targets, drug
-              repurposing, clustering of complex traits'. Revise the following
+              repurposing, clustering of complex traits.' Revise the following
               abstract of this manuscript, so it has a clear sentence structure
               and follows a context-content-conclusion (C-C-C) scheme and fits
               in a single paragraph. Make changes only when they are absolutely
@@ -9495,7 +9523,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 100243
+            latencyMs: 97601
             gradingResult: *ref_86
         vars:
           - >-
@@ -9590,7 +9618,7 @@ results:
               associations through gene expression patterns highlights disease
               etiology and drug mechanisms' and keywords 'genetic studies,
               functional genomics, gene co-expression, therapeutic targets, drug
-              repurposing, clustering of complex traits'. Revise the following
+              repurposing, clustering of complex traits.' Revise the following
               abstract of this manuscript.
 
 
@@ -9619,7 +9647,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 88917
+            latencyMs: 90067
             gradingResult: *ref_87
           - pass: false
             score: 0.8888888888888888
@@ -9681,7 +9709,7 @@ results:
               associations through gene expression patterns highlights disease
               etiology and drug mechanisms' and keywords 'genetic studies,
               functional genomics, gene co-expression, therapeutic targets, drug
-              repurposing, clustering of complex traits'. Revise the following
+              repurposing, clustering of complex traits.' Revise the following
               abstract of this manuscript, so it has a clear sentence structure
               and follows a context-content-conclusion (C-C-C) scheme and fits
               in a single paragraph. Make changes only when they are absolutely
@@ -9731,7 +9759,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 100272
+            latencyMs: 96478
             gradingResult: *ref_88
         vars:
           - >-
@@ -9826,7 +9854,7 @@ results:
               associations through gene expression patterns highlights disease
               etiology and drug mechanisms' and keywords 'genetic studies,
               functional genomics, gene co-expression, therapeutic targets, drug
-              repurposing, clustering of complex traits'. Revise the following
+              repurposing, clustering of complex traits.' Revise the following
               abstract of this manuscript.
 
 
@@ -9855,7 +9883,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 88442
+            latencyMs: 90306
             gradingResult: *ref_89
           - pass: false
             score: 0.8888888888888888
@@ -9917,7 +9945,7 @@ results:
               associations through gene expression patterns highlights disease
               etiology and drug mechanisms' and keywords 'genetic studies,
               functional genomics, gene co-expression, therapeutic targets, drug
-              repurposing, clustering of complex traits'. Revise the following
+              repurposing, clustering of complex traits.' Revise the following
               abstract of this manuscript, so it has a clear sentence structure
               and follows a context-content-conclusion (C-C-C) scheme and fits
               in a single paragraph. Make changes only when they are absolutely
@@ -9967,7 +9995,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 99652
+            latencyMs: 97494
             gradingResult: *ref_90
         vars:
           - >-
@@ -10062,7 +10090,7 @@ results:
               associations through gene expression patterns highlights disease
               etiology and drug mechanisms' and keywords 'genetic studies,
               functional genomics, gene co-expression, therapeutic targets, drug
-              repurposing, clustering of complex traits'. Revise the following
+              repurposing, clustering of complex traits.' Revise the following
               abstract of this manuscript.
 
 
@@ -10091,7 +10119,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 89677
+            latencyMs: 90725
             gradingResult: *ref_91
           - pass: false
             score: 0.8888888888888888
@@ -10153,7 +10181,7 @@ results:
               associations through gene expression patterns highlights disease
               etiology and drug mechanisms' and keywords 'genetic studies,
               functional genomics, gene co-expression, therapeutic targets, drug
-              repurposing, clustering of complex traits'. Revise the following
+              repurposing, clustering of complex traits.' Revise the following
               abstract of this manuscript, so it has a clear sentence structure
               and follows a context-content-conclusion (C-C-C) scheme and fits
               in a single paragraph. Make changes only when they are absolutely
@@ -10203,7 +10231,7 @@ results:
 
               Revised paragraph:
             provider: ollama:alfred:40b-1023-q5_1
-            latencyMs: 100279
+            latencyMs: 96876
             gradingResult: *ref_92
         vars:
           - >-
@@ -10238,8 +10266,8 @@ results:
             highlights disease etiology and drug mechanisms
 config:
   prompts:
-    - file://prompts/baseline.txt
-    - file://prompts/candidate.txt
+    - file://../../prompts/baseline.txt
+    - file://../../prompts/candidate.txt
   providers:
     - ollama:alfred:40b-1023-q5_1
   scenarios:
