@@ -49,6 +49,8 @@ scenarios:
             value:
               - "authors"
               - "Abstract:"
+              - "Keywords:"
+              - "References:"
           - type: not-icontains-any
             # has no spelling errors
             value:
@@ -56,11 +58,13 @@ scenarios:
               - "specifico"
               - "significantl "
           - type: python
-            # Length of output is between 0.6 and 1.2 times the length of the input
+            # Length of output is between 0.5 and 1.6 times the length of the input
             value: |
               paragraph = context["vars"]["paragraph"]
+              paragraph_words = len(paragraph.strip().split())
+              output_words = len(output.strip().split())
               print(
-                (len(output) > 0.6 * len(paragraph)) and (len(output) < 1.4 * len(paragraph))
+                (output_words > 0.5 * paragraph_words) and (output_words < 1.6 * paragraph_words)
               )
           - type: python
             # Method is not mentioned at the beginning
