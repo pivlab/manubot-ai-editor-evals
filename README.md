@@ -3,50 +3,78 @@
 This repository contains code and frameworks used to evaluate a set of prompts used by
 the Manubot AI Editor to revise scientific manuscripts.
 
+## How it works
+
+TODO: High level summary of parts. Ollama for managing local models. promptfoo for config, running evaluations, and presenting comparisons. Python for basic scripting and coordination.
+
 ## Setup
 
 ### Install software requirements
+
 1. Install [Miniconda](https://docs.conda.io/en/latest/miniconda.html).
 1. Create conda environment:
-    ```bash
-    conda env create -f environment.yml
-    conda activate manubot-ai-editor-evals
-    ```
+   ```bash
+   conda env create -f environment.yml
+   ```
 1. Install [promptfoo](https://promptfoo.dev/):
    ```bash
    npm install -g promptfoo
    ```
-1. Install this package in editable mode (needs to be done only once):
-
-    ```bash
-    pip install -e .
-    ```
-1. (In a different terminal) Install [Ollama](https://ollama.ai/) and start Ollama server:
+1. Install this package in editable mode (only needs to be done once):
    ```bash
-   ollama serve
+   pip install -e .
    ```
+1. Install [Ollama](https://ollama.ai/).
 
 ### Pull local large language models
 
-In Ollama, you need to pull the models that you want to use (from the [library](https://ollama.ai/library)).
-In the current configuration (check out `src/run.py`), several models are used.
-To pull one model in Ollama, you run:
+Before you can run models locally, you have to pull them with Ollama.
+See the [library of models](https://ollama.ai/library) Ollama has available.
+
+To pull a specific model in Ollama, run:
 
 ```bash
 ollama pull mistral:7b-instruct-fp16
 ```
 
+The current configuration of this tool (see `src/run.py`) lists a handful of models that can be used in test cases.
+To pull all of them, run:
+
+```bash
+ollama pull starling-lm:7b-alpha-fp16
+ollama pull mistral:7b-instruct-fp16
+ollama pull mistral:7b-instruct-v0.2-fp16
+ollama pull mixtral:8x7b-instruct-v0.1-q8_0
+ollama pull mixtral:8x7b-instruct-v0.1-q5_K_S
+ollama pull deepseek-llm:7b-chat-fp16
+ollama pull neural-chat:7b-v3.1-fp16
+ollama pull openchat:7b-v3.5-fp16
+ollama pull deepseek-llm:67b-chat-q5_0
+ollama pull alfred:40b-1023-q5_1
+```
+
 ### Configure access to remote large language models
 
-OpenAI:
-```bash
-export OPENAI_API_KEY="YOUR_API_KEY"
+Provide an API key for the service you wish to use as an environment variable:
+
+In **.env** file:
+
+```
+API_KEY_NAME="API_KEY_VALUE"
 ```
 
-Replicate:
+or in CLI:
+
 ```bash
-export REPLICATE_API_TOKEN="YOUR_API_KEY"
+export API_KEY_NAME="API_KEY_VALUE"
 ```
+
+| Service   | API_KEY_NAME        |
+| --------- | ------------------- |
+| OpenAI    | OPENAI_API_KEY      |
+| Replicate | REPLICATE_API_TOKEN |
+
+(Per [promptfoo docs](https://www.promptfoo.dev/docs/providers))
 
 ## Evaluations
 
@@ -67,33 +95,33 @@ For example, for the `abstract` and the `introduction` sections, the structure c
 │       ├── baseline.txt
 │       └── candidate.txt
 ├── introduction
-│   ├── cases
-│   │   └── phenoplier
-│   │       ├── outputs
-│   │       │   ├── gpt-4.json
-│   │       │   ├── mistral-7b-instruct-fp16.json
-│   │       └── promptfooconfig.yaml
-│   └── prompts
-│       ├── baseline.txt
-│       └── candidate.txt
+│   ├── ...
 ```
 
 Under each section, there are two subfolders: 1) `cases` and 2) `prompts`.
-A case corresponds to text from an existing manuscript (journal article, preprint, etc) for testing;
-in the above example, `phenoplier` corresponds to [this journal article](https://doi.org/10.1038/s41467-023-41057-4).
+
+A case corresponds to text from an existing manuscript (journal article, preprint, etc.) for testing.
+In the above example, `phenoplier` corresponds to [this journal article](https://doi.org/10.1038/s41467-023-41057-4).
 A case contains a [promptfoo](https://promptfoo.dev/) configuration file (`promptfooconfig.yaml`) with test cases and asserts, and an `outputs` folder with the results of the evaluations across different models.
-The `prompts` folder contains the prompts to be evaluated for this manuscript section;
-right now we are using a baseline prompt (which includes a basic intruction to revise a text) and a candidate prompt (which includes a more complex set of instructions).
+
+The `prompts` folder contains the prompts to be evaluated for this manuscript section.
+At the moment, we are using a 1) baseline prompt, which includes a basic instruction to revise a text, and 2) a candidate prompt, which includes a more complex set of instructions.
 
 ### Run
 
-Make sure your conda environment is activated:
+Activate the conda environment:
 
 ```bash
 conda activate manubot-ai-editor-evals
 ```
 
-To run the tests for a specific section and case, move to the corresponding directory and run the `run.py` script.
+Start Ollama server, if not [already running automatically](https://github.com/jmorganca/ollama/issues/707):
+
+```bash
+ollama serve
+```
+
+Move to the directory of a specific section and case, then run the `run.py` script from there.
 For example, for the `abstract` section and the `phenoplier` case:
 
 ```bash
@@ -101,16 +129,17 @@ cd abstract/cases/phenoplier/
 python ../../../src/run.py
 ```
 
-The script `src/run.py` runs `promptfoo eval` internally.
+This will run `promptfoo eval` for you as appropriate.
 
-If for any reason you need to clear `promptfoo`'s cache, you can use:
+If you need to clear `promptfoo`'s cache, you can run:
+
 ```bash
 promptfoo cache clear
 ```
 
 ## Visualize results
 
-TODO: this needs more explanation to visualize the results for a specific model.
+TODO: This needs more explanation/customization to visualize the results for a specific model.
 
 ```bash
 promptfoo view
