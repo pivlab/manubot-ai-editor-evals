@@ -1,11 +1,12 @@
 # Prompt evaluations for the Manubot AI Editor
 
-This repository contains code and frameworks used to evaluate a set of prompts used by
-the Manubot AI Editor to revise scientific manuscripts.
+This repository contains code and frameworks used to evaluate a set of prompts used by the Manubot AI Editor to revise scientific manuscripts.
 
-## How it works
+Under-the-hood, it uses:
 
-TODO: High level summary of parts. Ollama for managing local models. promptfoo for config, running evaluations, and presenting comparisons. Python for basic scripting and coordination.
+- promptfoo for test configuration, running evaluations, and presenting comparisons.
+- Ollama for managing local models.
+- Python for basic scripting and coordination.
 
 ## Setup
 
@@ -139,8 +140,12 @@ promptfoo cache clear
 
 ## Visualize results
 
-TODO: This needs more explanation/customization to visualize the results for a specific model.
+promptfoo provides a convenient way to view and compare results:
 
 ```bash
 promptfoo view
 ```
+
+[See more here](https://www.promptfoo.dev/docs/usage/web-ui).
+
+TODO: More explanation of how to visualize the results for a specific model.
