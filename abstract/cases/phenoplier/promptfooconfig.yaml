@@ -64,7 +64,7 @@ scenarios:
             value:
               - "concierto"
               - "specifico"
-              - "significantl"
+              - "significantl "
 
           # Length of output roughly same as length of input
           - type: python
