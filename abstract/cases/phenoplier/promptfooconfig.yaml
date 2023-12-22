@@ -37,23 +37,19 @@ scenarios:
         assert:
           # Starts with capital letter
           - type: python
-            value: |
-              output.strip()[0].isupper()
+            value: output.strip()[0].isupper()
 
           # Ends with period
           - type: python
-            value: |
-              output.strip()[-1] == "."
+            value: output.strip()[-1] == "."
 
           # Single paragraph
           - type: python
-            value: |
-              len(output.strip().split("\n")) == 1
+            value: len(output.strip().split("\n")) == 1
 
           # No manuscript title
           - type: python
-            value: |
-              context["vars"]["title"] not in output
+            value: context["vars"]["title"] not in output
 
           # No headings (?)
           - type: not-icontains-any
@@ -80,8 +76,7 @@ scenarios:
 
           # Method not mentioned at beginning
           - type: python
-            value: |
-              "PhenoPLIER" not in output.split(".")[0]
+            value: ("PhenoPLIER" not in output.split(".")[0])
 
           # Method mentioned before results
           - type: python
