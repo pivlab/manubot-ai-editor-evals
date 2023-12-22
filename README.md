@@ -33,6 +33,7 @@ Under-the-hood, it uses:
 Before you can run models locally, you have to pull them with Ollama.
 See the [library of models](https://ollama.ai/library) Ollama has available.
 
+Make sure the Ollama server is running (e.g., `ollama serve`).
 To pull a specific model in Ollama, run:
 
 ```bash
