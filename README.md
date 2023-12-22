@@ -1,6 +1,7 @@
 # Prompt evaluations for the Manubot AI Editor
 
-This repository contains code and frameworks used to evaluate a set of prompts used by the Manubot AI Editor to revise scientific manuscripts.
+The Manubot AI Editor is a tool for [Manubot](https://manubot.org) that uses AI to help authors revise their manuscripts.
+This repository contains code used to evaluate the effectiveness of the prompts (instructions to the AI) used in the tool.
 
 Under-the-hood, it uses:
 
@@ -81,7 +82,7 @@ export API_KEY_NAME="API_KEY_VALUE"
 
 ### Structure
 
-Evaluations are organized in folders by manuscript section.
+Evaluations are organized into folders by manuscript section.
 For example, for the `abstract` and the `introduction` sections, the structure could be:
 
 ```bash
@@ -103,10 +104,10 @@ Under each section, there are two subfolders: 1) `cases` and 2) `prompts`.
 
 A case corresponds to text from an existing manuscript (journal article, preprint, etc.) for testing.
 In the above example, `phenoplier` corresponds to [this journal article](https://doi.org/10.1038/s41467-023-41057-4).
-A case contains a [promptfoo](https://promptfoo.dev/) configuration file (`promptfooconfig.yaml`) with test cases and asserts, and an `outputs` folder with the results of the evaluations across different models.
+A case contains a [promptfoo](https://promptfoo.dev/) configuration file (`promptfooconfig.yaml`) with test cases and assertions, and an `outputs` folder with the results of the evaluations across different models.
 
 The `prompts` folder contains the prompts to be evaluated for this manuscript section.
-At the moment, we are using a 1) baseline prompt, which includes a basic instruction to revise a text, and 2) a candidate prompt, which includes a more complex set of instructions.
+At the moment, we are using 1) a candidate prompt containing a complex set of instructions and 2) a baseline prompt containing more basic instructions to compare the candidate prompt against.
 
 ### Run
 

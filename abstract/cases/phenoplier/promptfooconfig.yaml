@@ -1,4 +1,6 @@
-prompts: [file://../../prompts/baseline.txt, file://../../prompts/candidate.txt]
+prompts:
+  - file://../../prompts/baseline.txt
+  - file://../../prompts/candidate.txt
 providers:
   - ollama:mistral:7b-instruct-fp16
 evaluateOptions:
