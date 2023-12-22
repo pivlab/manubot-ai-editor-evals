@@ -6,6 +6,7 @@ dependencies:
   - ipython
   - langchain=0.0.340
   - nodejs=20.8.*
+  - pip
   - python=3.12.*
   - pre-commit=3.5.*
   - pip:
