@@ -72,7 +72,8 @@ scenarios:
               paragraph = context["vars"]["paragraph"]
               paragraph_words = len(paragraph.strip().split())
               output_words = len(output.strip().split())
-              return (output_words > 0.5 * paragraph_words) and (output_words < 1.6 * paragraph_words)
+              response = (output_words > 0.5 * paragraph_words) and (output_words < 1.6 * paragraph_words)
+              print(response)
 
           # Method not mentioned at beginning
           - type: python
@@ -87,7 +88,8 @@ scenarios:
                   output.find("lipid"),
                   output.find("drug-disease"),
               )
-              return methods_start < results_start
+              response = methods_start < results_start
+              print(response)
 
           # CRISPR mentioned
           - type: contains
@@ -125,4 +127,5 @@ scenarios:
               # explanations below the revised paragraph)
               first_paragraph = output.strip().split("\n")[0]
               last_sentences = ".".join(first_paragraph.strip().split(".")[-2:]).lower()
-              return any(s in last_sentences for s in keywords)
+              response = any(s in last_sentences for s in keywords)
+              print(response)
