@@ -15,6 +15,8 @@ models = {
     "ollama:openchat:7b-v3.5-fp16": 5,
     "ollama:deepseek-llm:67b-chat-q5_0": 5,
     "ollama:alfred:40b-1023-q5_1": 5,
+    "ollama:solar:10.7b-instruct-v1-q8_0": 5,
+    "ollama:phi:2.7b-chat-v2-fp16": 5,
     "openai:gpt-3.5-turbo": 5,
     "openai:gpt-4": 5,
     "openai:gpt-4-1106-preview": 5,
