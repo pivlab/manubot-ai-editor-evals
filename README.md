@@ -152,4 +152,21 @@ promptfoo view
 
 [See more here](https://www.promptfoo.dev/docs/usage/web-ui).
 
-TODO: More explanation of how to visualize the results for a specific model.
+If you run the command above, promptfoo will read the latest run result set.
+The way I found to specify which a specific result set (such as those for Mistral or GPT-4) is to copy a result set in a directory and run `promptfoo view` with that directory as argument.
+
+First, setup the directory with the results you want to visualize:
+
+```bash
+# create directory for results
+mkdir -p /tmp/promptfoo/output
+
+# copy one result set as the "latest" in that directory
+cp outputs/gpt-4-1106-preview.json /tmp/promptfoo/output/latest.json
+```
+
+Then you run `promptfoo view` with that directory as argument (you can run this only once, and `promptfoo` will automatically refresh the page as you copy a new result set to the directory above).
+
+```bash
+promptfoo view /tmp/promptfoo/
+```
