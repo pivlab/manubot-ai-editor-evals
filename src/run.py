@@ -1,3 +1,4 @@
+import argparse
 import subprocess
 from dotenv import load_dotenv
 
@@ -22,8 +23,24 @@ models = {
     "openai:gpt-4-1106-preview": 5,
 }
 
-for model, repeat in models.items():
-    model_name = "".join(model.split(":", 1)[1:]).replace(":", "-")
-    command = f"promptfoo eval -j 1 --no-cache --repeat {repeat} --providers {model} -o outputs/{model_name}.html -o outputs/{model_name}.csv -o outputs/{model_name}.txt -o outputs/{model_name}.json -o outputs/{model_name}.yaml"
-    print(command)
-    subprocess.run(command, shell=True)
+# Set up argument parser
+parser = argparse.ArgumentParser(description="Run model evaluations and optionally download models.")
+parser.add_argument('--download-models', action='store_true', help='Download specified models using ollama pull')
+args = parser.parse_args()
+
+if args.download_models:
+    for model in models.keys():
+        model_prefix, model_name = model.split(":", maxsplit=1)
+
+        if model_prefix != "ollama":
+            continue
+
+        command = f"ollama pull {model_name}"
+        print(command)
+        subprocess.run(command, shell=True)
+else:
+    for model, repeat in models.items():
+        model_name = "".join(model.split(":", 1)[1:]).replace(":", "-")
+        command = f"promptfoo eval -j 1 --no-cache --repeat {repeat} --providers {model} -o outputs/{model_name}.html -o outputs/{model_name}.csv -o outputs/{model_name}.txt -o outputs/{model_name}.json -o outputs/{model_name}.yaml"
+        print(command)
+        subprocess.run(command, shell=True)
