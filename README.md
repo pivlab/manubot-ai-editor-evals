@@ -18,9 +18,9 @@ Under-the-hood, it uses:
    ```bash
    conda env create -f environment.yml
    ```
-1. Install [promptfoo](https://promptfoo.dev/):
+1. Install the last tested [promptfoo](https://promptfoo.dev/) version:
    ```bash
-   npm install -g promptfoo
+   npm install -g promptfoo@0.33.3
    ```
 1. Install this package in editable mode (only needs to be done once):
    ```bash
