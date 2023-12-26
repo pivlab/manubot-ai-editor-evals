@@ -54,6 +54,8 @@ ollama pull neural-chat:7b-v3.1-fp16
 ollama pull openchat:7b-v3.5-fp16
 ollama pull deepseek-llm:67b-chat-q5_0
 ollama pull alfred:40b-1023-q5_1
+ollama pull solar:10.7b-instruct-v1-q8_0
+ollama pull phi:2.7b-chat-v2-fp16
 ```
 
 ### Configure access to remote large language models
