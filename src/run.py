@@ -1,3 +1,4 @@
+import sys
 import argparse
 import subprocess
 from dotenv import load_dotenv
@@ -28,8 +29,14 @@ models = {
 }
 
 # Set up argument parser
-parser = argparse.ArgumentParser(description="Run model evaluations and optionally download models.")
-parser.add_argument('--download-models', action='store_true', help='Download specified models using ollama pull')
+parser = argparse.ArgumentParser(
+    description="Run model evaluations and optionally download models."
+)
+parser.add_argument(
+    "--download-models",
+    action="store_true",
+    help="Download specified models using ollama pull",
+)
 args = parser.parse_args()
 
 if args.download_models:
@@ -41,10 +48,33 @@ if args.download_models:
 
         command = f"ollama pull {model_name}"
         print(command)
+
         subprocess.run(command, shell=True)
-else:
-    for model, repeat in models.items():
-        model_name = "".join(model.split(":", 1)[1:]).replace(":", "-")
-        command = f"promptfoo eval -j 1 --no-cache --repeat {repeat} --providers {model} -o outputs/{model_name}.html -o outputs/{model_name}.csv -o outputs/{model_name}.txt -o outputs/{model_name}.json -o outputs/{model_name}.yaml"
-        print(command)
-        subprocess.run(command, shell=True)
+
+    sys.exit(0)
+
+# run promptfoo eval
+for model, repeat in models.items():
+    model_prefix, model_name = model.split(":", maxsplit=1)
+    model_name = model_name.replace(":", "-")
+
+    # by default, we do not cache, because otherwise promptfoo does not repeat
+    # we only cache with OpenAI or paid models
+    cache_option = "--no-cache"
+    if model_prefix in ("openai",):
+        cache_option = ""
+
+    command = f"""
+    promptfoo eval \
+      -j 1 {cache_option} \
+      --repeat {repeat} \
+      --providers {model} \
+      -o outputs/{model_name}.html \
+      -o outputs/{model_name}.csv \
+      -o outputs/{model_name}.txt \
+      -o outputs/{model_name}.json \
+      -o outputs/{model_name}.yaml
+    """.strip()
+    print(command)
+
+    subprocess.run(command, shell=True)
