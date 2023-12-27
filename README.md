@@ -34,28 +34,16 @@ Before you can run models locally, you have to pull them with Ollama.
 See the [library of models](https://ollama.ai/library) Ollama has available.
 
 Make sure the Ollama server is running (e.g., `ollama serve`).
-To pull a specific model in Ollama, run:
-
-```bash
-ollama pull mistral:7b-instruct-fp16
-```
 
 The current configuration of this tool (see `src/run.py`) lists a handful of models that can be used in test cases.
 To pull all of them, run:
 
 ```bash
-ollama pull starling-lm:7b-alpha-fp16
-ollama pull mistral:7b-instruct-fp16
-ollama pull mistral:7b-instruct-v0.2-fp16
-ollama pull mixtral:8x7b-instruct-v0.1-q8_0
-ollama pull mixtral:8x7b-instruct-v0.1-q5_K_S
-ollama pull deepseek-llm:7b-chat-fp16
-ollama pull neural-chat:7b-v3.1-fp16
-ollama pull openchat:7b-v3.5-fp16
-ollama pull deepseek-llm:67b-chat-q5_0
-ollama pull alfred:40b-1023-q5_1
-ollama pull solar:10.7b-instruct-v1-q8_0
-ollama pull phi:2.7b-chat-v2-fp16
+# activate the environment if you didn't
+# conda activate manubot-ai-editor-evals
+
+# download models
+python src/run.py --download-models
 ```
 
 ### Configure access to remote large language models
