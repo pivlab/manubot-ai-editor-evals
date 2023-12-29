@@ -1,4 +1,5 @@
 import sys
+import re
 import argparse
 import subprocess
 from dotenv import load_dotenv
@@ -30,12 +31,12 @@ models = {
 
 # Set up argument parser
 parser = argparse.ArgumentParser(
-    description="Run model evaluations and optionally download models."
+    description="Run model evaluations across different models."
 )
 parser.add_argument(
     "--download-models",
     action="store_true",
-    help="Download specified models using ollama pull",
+    help="Download models using Ollama",
 )
 args = parser.parse_args()
 
@@ -58,15 +59,10 @@ for model, repeat in models.items():
     model_prefix, model_name = model.split(":", maxsplit=1)
     model_name = model_name.replace(":", "-")
 
-    # by default, we do not cache, because otherwise promptfoo does not repeat
-    # we only cache with OpenAI or paid models
-    cache_option = "--no-cache"
-    if model_prefix in ("openai",):
-        cache_option = ""
-
     command = f"""
     promptfoo eval \
-      -j 1 {cache_option} \
+      -j 1 \
+      --no-cache \
       --repeat {repeat} \
       --providers {model} \
       -o outputs/{model_name}.html \
@@ -75,6 +71,6 @@ for model, repeat in models.items():
       -o outputs/{model_name}.json \
       -o outputs/{model_name}.yaml
     """.strip()
-    print(command)
+    print(re.sub(r"\s{2,}", " \\\n  ", command))
 
     subprocess.run(command, shell=True)
