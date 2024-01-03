@@ -81,8 +81,8 @@ elif args.view:
 
     # open preview
     for model in models:
-        port += 1
         command = f"promptfoo view --yes --port {port} ./outputs/{model['path']}"
+        port += 1
         print(command)
         processes.append(subprocess.Popen(command, shell=True))
 
