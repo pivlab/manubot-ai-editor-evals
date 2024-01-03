@@ -1,13 +1,15 @@
 prompts:
   - file://../../prompts/baseline.txt
   - file://../../prompts/candidate.txt
+
 providers:
   - id: ollama:mistral:7b-instruct-fp16
-#    config:
-#      temperature: 0.5
-#      num_predict: 1024
-#      stop: ["\r\n"]
-# Here I defined default asserts that are applied to all test cases below
+    # config:
+    #   temperature: 0.5
+    #   num_predict: 1024
+    #   stop: ["\r\n"]
+
+# Default asserts applied to each test case below
 defaultTest:
   assert:
     # Starts with capital letter
@@ -33,20 +35,24 @@ defaultTest:
         - "Abstract:"
         - "Keywords:"
         - "References:"
+
     # Length of output roughly same as length of input
     - type: python
       value: |
-        paragraph = context["vars"]["paragraph"]
-        paragraph_words = len(paragraph.strip().split())
+        input = context["vars"]["paragraph"]
+        input_words = len(input.strip().split())
         output_words = len(output.strip().split())
-        response = (output_words > 0.5 * paragraph_words) and (output_words < 1.6 * paragraph_words)
+        response = (output_words > 0.5 * input_words) and (output_words < 1.6 * input_words)
         print(response)
+
     # CRISPR results are mentioned
     - type: contains
       value: "CRISPR"
+
+# Test cases
 tests:
   - vars:
-      test_description: spelling/grammar errors
+      test_description: Has spelling/grammar errors
       title: file://./inputs/title.txt
       keywords: file://./inputs/keywords.txt
       paragraph: file://./inputs/has_spelling_errors.md
@@ -57,8 +63,9 @@ tests:
           - "concierto"
           - "specifico"
           - "significantl "
+
   - vars:
-      test_description: does not start with background
+      test_description: Does not start with background
       title: file://./inputs/title.txt
       keywords: file://./inputs/keywords.txt
       paragraph: file://./inputs/no_background.md
@@ -66,8 +73,9 @@ tests:
       # Method not mentioned at beginning
       - type: python
         value: ("PhenoPLIER" not in output.split(".")[0])
+
   - vars:
-      test_description: does not describe the method or approach proposed
+      test_description: Does not describe method
       title: file://./inputs/title.txt
       keywords: file://./inputs/keywords.txt
       paragraph: file://./inputs/no_method_description.md
@@ -83,13 +91,14 @@ tests:
           )
           response = methods_start < results_start
           print(response)
+
   - vars:
-      test_description: does not provide an interpretation of the results and their implications
+      test_description: No interpretation of results
       title: file://./inputs/title.txt
       keywords: file://./inputs/keywords.txt
       paragraph: file://./inputs/no_interpretation.md
     assert:
-      # Conclusions included
+      # Conclusion included
       - type: python
         value: |
           keywords = [
@@ -119,7 +128,7 @@ tests:
             "promising",
             "innovative",
             "perspective",
-            "refine ",
+            "refine",
             "refining",
             "accelerate",
             "accelerating",
@@ -133,6 +142,5 @@ tests:
           # explanations below the revised paragraph)
           first_paragraph = output.strip().split("\n")[0]
           last_sentences = ".".join(first_paragraph.strip().split(".")[-2:]).lower()
-          response = any(s in last_sentences for s in keywords)
+          response = any(keyword in last_sentences for keyword in keywords)
           print(response)
-
