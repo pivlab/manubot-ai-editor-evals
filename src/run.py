@@ -47,8 +47,6 @@ def split_model(model):
 
 models = list(map(split_model, models.items()))
 
-print(models)
-
 
 # parse arguments
 parser = argparse.ArgumentParser(description="Run evaluations across different models")
