@@ -48,8 +48,6 @@ This list is what is used when running the script commands below.
 To add other models from promptfoo/Ollama, include their [ids](https://www.promptfoo.dev/docs/providers/ollama) here.
 To select specific models for a pull/eval/view, you can comment/uncomment their entries.
 
-If you need to configure parameters of the model, you can do so in the [promptfoo configuration file](https://www.promptfoo.dev/docs/configuration/reference#provider-related-types).
-
 ### Pull local models
 
 Before you can run models locally, you have to pull them with Ollama.

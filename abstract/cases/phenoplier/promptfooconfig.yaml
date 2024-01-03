@@ -2,13 +2,6 @@ prompts:
   - file://../../prompts/baseline.txt
   - file://../../prompts/candidate.txt
 
-providers:
-  - id: ollama:mistral:7b-instruct-fp16
-    # config:
-    #   temperature: 0.5
-    #   num_predict: 1024
-    #   stop: ["\r\n"]
-
 # Default asserts applied to each test case below
 defaultTest:
   assert:
