@@ -39,7 +39,7 @@ defaultTest:
     # Length of output roughly same as length of input
     - type: python
       value: |
-        input = context["vars"]["paragraph"]
+        input = context["vars"]["content"]
         input_words = len(input.strip().split())
         output_words = len(output.strip().split())
         response = (output_words > 0.5 * input_words) and (output_words < 1.6 * input_words)
@@ -55,7 +55,7 @@ tests:
       test_description: Has spelling/grammar errors
       title: file://./inputs/title.txt
       keywords: file://./inputs/keywords.txt
-      paragraph: file://./inputs/has_spelling_errors.md
+      content: file://./inputs/has_spelling_errors.md
     assert:
       # No spelling errors
       - type: not-icontains-any
@@ -68,7 +68,7 @@ tests:
       test_description: Does not start with background
       title: file://./inputs/title.txt
       keywords: file://./inputs/keywords.txt
-      paragraph: file://./inputs/no_background.md
+      content: file://./inputs/no_background.md
     assert:
       # Method not mentioned at beginning
       - type: python
@@ -78,7 +78,7 @@ tests:
       test_description: Does not describe method
       title: file://./inputs/title.txt
       keywords: file://./inputs/keywords.txt
-      paragraph: file://./inputs/no_method_description.md
+      content: file://./inputs/no_method_description.md
     assert:
       # Method mentioned before results
       - type: python
@@ -96,7 +96,7 @@ tests:
       test_description: No interpretation of results
       title: file://./inputs/title.txt
       keywords: file://./inputs/keywords.txt
-      paragraph: file://./inputs/no_interpretation.md
+      content: file://./inputs/no_interpretation.md
     assert:
       # Conclusion included
       - type: python

@@ -28,25 +28,37 @@ Under-the-hood, it uses:
    ```
 1. Install [Ollama](https://ollama.ai/).
 
-### Pull local large language models
+### Start required processes
+
+1. Start Ollama server, if not [already running automatically](https://github.com/jmorganca/ollama/issues/707):
+   ```bash
+   ollama serve
+   ```
+1. Activate the conda environment:
+   ```bash
+   conda activate manubot-ai-editor-evals
+   ```
+
+### Select models
+
+promptfoo supports a [large selection of models from different providers](https://www.promptfoo.dev/docs/providers).
+This tool lists a handful of select models in `src/run.py`, focusing on OpenAI ChatGPT and local models with [Ollama](https://ollama.ai/library).
+
+This list is what is used when running the script commands below.
+To add other models from promptfoo/Ollama, include their [ids](https://www.promptfoo.dev/docs/providers/ollama) here.
+To select specific models for a pull/eval/view, you can comment/uncomment their entries.
+
+If you need to configure parameters of the model, you can do so in the [promptfoo configuration file](https://www.promptfoo.dev/docs/configuration/reference#provider-related-types).
+
+### Pull local models
 
 Before you can run models locally, you have to pull them with Ollama.
-See the [library of models](https://ollama.ai/library) Ollama has available.
-
-Make sure the Ollama server is running (e.g., `ollama serve`).
-
-The current configuration of this tool (see `src/run.py`) lists a handful of models that can be used in test cases.
-To pull all of them, run:
 
 ```bash
-# activate the environment if you didn't
-# conda activate manubot-ai-editor-evals
-
-# download models
-python src/run.py --download-models
+python src/run.py --pull
 ```
 
-### Configure access to remote large language models
+### Configure access to remote models
 
 Provide an API key for the service you wish to use as an environment variable:
 
@@ -71,8 +83,6 @@ export API_KEY_NAME="API_KEY_VALUE"
 
 ## Evaluations
 
-### Structure
-
 Evaluations are organized into folders by manuscript section.
 For example, for the `abstract` and the `introduction` sections, the structure could be:
 
@@ -80,9 +90,8 @@ For example, for the `abstract` and the `introduction` sections, the structure c
 ├── abstract
 │   ├── cases
 │   │   └── phenoplier
+│   │       ├── inputs
 │   │       ├── outputs
-│   │       │   ├── gpt-4.json
-│   │       │   ├── mistral-7b-instruct-fp16.json
 │   │       └── promptfooconfig.yaml
 │   └── prompts
 │       ├── baseline.txt
@@ -100,21 +109,10 @@ A case contains a [promptfoo](https://promptfoo.dev/) configuration file (`promp
 The `prompts` folder contains the prompts to be evaluated for this manuscript section.
 At the moment, we are using 1) a candidate prompt containing a complex set of instructions and 2) a baseline prompt containing more basic instructions to compare the candidate prompt against.
 
-### Run
+## Usage
 
-Activate the conda environment:
-
-```bash
-conda activate manubot-ai-editor-evals
-```
-
-Start Ollama server, if not [already running automatically](https://github.com/jmorganca/ollama/issues/707):
-
-```bash
-ollama serve
-```
-
-Move to the directory of a specific section and case, then run the `run.py` script from there.
+First, move to the directory of the section and case of interest.
+Then run the `src/run.py` script from there.
 For example, for the `abstract` section and the `phenoplier` case:
 
 ```bash
@@ -122,39 +120,28 @@ cd abstract/cases/phenoplier/
 python ../../../src/run.py
 ```
 
-This will run `promptfoo eval` for you as appropriate.
+### Run evaluation
+
+Running the script without flags runs your evaluations.
+
+```bash
+python ../../../src/run.py
+```
+
+### Visualize results
+
+To explore the results of your evaluations in a web UI table, run:
+
+```bash
+python ../../../src/run.py --view
+```
+
+[See more here](https://www.promptfoo.dev/docs/usage/web-ui).
+
+### Misc
 
 If you need to clear `promptfoo`'s cache, you can run:
 
 ```bash
 promptfoo cache clear
-```
-
-## Visualize results
-
-promptfoo provides a convenient way to view and compare results:
-
-```bash
-promptfoo view
-```
-
-[See more here](https://www.promptfoo.dev/docs/usage/web-ui).
-
-If you run the command above, promptfoo will read the latest run result set.
-The way I found to specify which a specific result set (such as those for Mistral or GPT-4) is to copy a result set in a directory and run `promptfoo view` with that directory as argument.
-
-First, setup the directory with the results you want to visualize:
-
-```bash
-# create directory for results
-mkdir -p /tmp/promptfoo/output
-
-# copy one result set as the "latest" in that directory
-cp outputs/gpt-4-1106-preview.json /tmp/promptfoo/output/latest.json
-```
-
-Then you run `promptfoo view` with that directory as argument (you can run this only once, and `promptfoo` will automatically refresh the page as you copy a new result set to the directory above).
-
-```bash
-promptfoo view /tmp/promptfoo/
 ```
