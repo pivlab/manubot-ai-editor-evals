@@ -17,6 +17,7 @@ Under-the-hood, it uses:
 1. Create conda environment:
    ```bash
    conda env create -f environment.yml
+   conda activate manubot-ai-editor-evals
    ```
 1. Install the last tested [promptfoo](https://promptfoo.dev/) version:
    ```bash
@@ -26,17 +27,21 @@ Under-the-hood, it uses:
    ```bash
    pip install -e .
    ```
-1. Install [Ollama](https://ollama.ai/).
+1. Install [Ollama](https://ollama.ai/). The latest version we tested is [v0.1.18](https://github.com/jmorganca/ollama/releases/tag/v0.1.18), which in Linux (amd64) you can install with:
+   ```bash
+   sudo curl -L https://github.com/jmorganca/ollama/releases/download/v0.1.18/ollama-linux-amd64 -o /usr/bin/ollama
+   sudo chmod +x /usr/bin/ollama
+   ```
 
 ### Start required processes
 
-1. Start Ollama server, if not [already running automatically](https://github.com/jmorganca/ollama/issues/707):
-   ```bash
-   ollama serve
-   ```
-1. Activate the conda environment:
+1. Activate the conda environment if haven't already:
    ```bash
    conda activate manubot-ai-editor-evals
+   ```
+1. Start Ollama in a different terminal (no need to activate the conda environment), if not [already running automatically](https://github.com/jmorganca/ollama/issues/707):
+   ```bash
+   ollama serve
    ```
 
 ### Select models
