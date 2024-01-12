@@ -21,7 +21,7 @@ Under-the-hood, it uses:
    ```
 1. Install the last tested [promptfoo](https://promptfoo.dev/) version:
    ```bash
-   npm install -g promptfoo@0.33.3
+   npm install -g promptfoo@0.35.0
    ```
 1. Install this package in editable mode (only needs to be done once):
    ```bash
