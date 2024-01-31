@@ -1,0 +1,39 @@
+prompts:
+  - file://../../prompts/baseline.txt
+  - file://../../prompts/candidate.txt
+
+# Default asserts applied to each test case below
+defaultTest:
+  assert:
+    # Starts with capital letter
+    - type: python
+      value: output.strip()[0].isupper()
+
+    # Ends with period
+    - type: python
+      value: output.strip()[-1] == "."
+
+
+    # Length of output roughly same as length of input
+    - type: python
+      value: |
+        input = context["vars"]["content"]
+        input_words = len(input.strip().split())
+        output_words = len(output.strip().split())
+        response = (output_words > 0.5 * input_words) and (output_words < 1.6 * input_words)
+        print(response)
+
+# Test cases
+tests:
+  - vars:
+      test_description: Has spelling/grammar errors
+      title: file://./inputs/title.txt
+      keywords: file://./inputs/keywords.txt
+      content: file://./inputs/has_spelling_errors.md
+    assert:
+      # No spelling errors
+      - type: not-icontains-any
+        value:
+          - "concierto"
+          - "specifico"
+          - "significantl "

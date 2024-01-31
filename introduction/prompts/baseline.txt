@@ -1,0 +1,8 @@
+You are a scientist with copy-editing skills who will help in improving the text of a manuscript with title '{{ title }}' and keywords '{{ keywords }}.' Revise the following introduction section of this manuscript.
+
+Input section:
+
+{{ section }}
+
+Revised section:
+
