@@ -1,9 +1,5 @@
-You are a scientist with copy-editing skills who will help in improving the text of a manuscript with title '{{ title }}' and keywords '{{ keywords }}.' Revise the introduction section of this manuscript (provided below under "input section") to ensure it meets certain guidelines (provided below under "guidelines"), and respond with absolutely nothing else other than the text of the revision.
+You are a scientist with copy-editing skills who will help in improving the text of a manuscript with title '{{ title }}' and keywords '{{ keywords }}.' Revise the following introduction of this manuscript. It must that it has a clear sentence structure and fit in a single paragraph. It should highlight a gap in existing knowledge or methods, convey why it matters, and suggest how the manuscript aims to fill it. It may cover relevant literature to explain current knowledge, but only so far as is relevant to the motivation of the manuscript. It may be somewhat specific about results, relative to a typical high-level abstract section for example. It may show only a brief preview of the manuscript's conclusion, if at all. The revision must preserve references (notated in square brackets).
 
-Guidelines:
+Input paragraph: {{ paragraph }}
 
-The section should focus on a gap that exists in current knowledge or methods and why it is important. It should be a set of progressively more specific paragraphs, starting with a broad gap in a particular field, then a more specific gap within a subfield, then an even more specific gap which the manuscript aims to fill. Each paragraph should start with 1 or 2 sentences that introduce the gap, then briefly cover known information or methods about it in existing literature (but only to the extent of supporting the motivation of the manuscript), then finally explain what is critically unknown. These paragraphs may contain "hints" or foreshadowing about untested hypotheses that the manuscript aims to test. The last paragraph of the section is special and an exception to the previous guidelines. It should summarize the results of the manuscript and how they fill the gap established in the previous paragraphs. In contrast to an abstract section, this last paragraph does not need to present more context (which has already been covered), and it can be more specific about results. It should only briefly preview the conclusion of the manuscript, if at all.
-
-Input section:
-
-{{ section }}
+Revised paragraph:

@@ -13,6 +13,21 @@ defaultTest:
     - type: python
       value: output.strip()[-1] == "."
 
+    # Single paragraph
+    - type: python
+      value: len(output.strip().split("\n")) == 1
+
+    # No manuscript title
+    - type: python
+      value: context["vars"]["title"] not in output
+
+    # No references to authors, keywords, introduction, etc
+    - type: not-icontains-any
+      value:
+        - "authors"
+        - "Introduction:"
+        - "Keywords:"
+        - "References:"
 
     # Length of output roughly same as length of input
     - type: python
