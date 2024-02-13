@@ -139,6 +139,12 @@ To explore the results of your evaluations in a web UI table, run:
 python ../../../src/run.py --view
 ```
 
+Or you can view the results for a specific model (e.g. `gpt-4-1106-preview`) with:
+
+```bash
+promptfoo view outputs/gpt-4-1106-preview/
+```
+
 [See more here](https://www.promptfoo.dev/docs/usage/web-ui).
 
 ### Misc
