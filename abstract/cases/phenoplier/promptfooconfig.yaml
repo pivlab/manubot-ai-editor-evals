@@ -4,24 +4,25 @@ prompts:
 
 # Default asserts applied to each test case below
 defaultTest:
+  # Ensure that output paragraph...
   assert:
-    # Starts with capital letter
+    # ...starts with capital letter
     - type: python
       value: output.strip()[0].isupper()
 
-    # Ends with period
+    # ...ends with period
     - type: python
       value: output.strip()[-1] == "."
 
-    # Single paragraph
+    # ...is a single paragraph
     - type: python
       value: len(output.strip().split("\n")) == 1
 
-    # No manuscript title
+    # ...doesn't include manuscript title
     - type: python
       value: context["vars"]["title"] not in output
 
-    # No references to authors, keywords, abstract, etc
+    # ...doesn't reference authors, keywords, abstract, etc
     - type: not-icontains-any
       value:
         - "authors"
@@ -29,7 +30,7 @@ defaultTest:
         - "Keywords:"
         - "References:"
 
-    # Length of output roughly same as length of input
+    # ...is roughly same length as input
     - type: python
       value: |
         input = context["vars"]["content"]
@@ -38,42 +39,42 @@ defaultTest:
         response = (output_words > 0.5 * input_words) and (output_words < 1.6 * input_words)
         print(response)
 
-    # CRISPR results are mentioned
+    # ...mentions CRISPR results
     - type: contains
       value: "CRISPR"
 
-# Test cases
+# Ensure that output paragraph...
 tests:
+  # ...has no spelling/grammar errors
   - vars:
-      test_description: Has spelling/grammar errors
+      test_description: Has no spelling/grammar errors
       title: file://./inputs/title.txt
       keywords: file://./inputs/keywords.txt
       content: file://./inputs/has_spelling_errors.md
     assert:
-      # No spelling errors
       - type: not-icontains-any
         value:
           - "concierto"
           - "specifico"
           - "significantl "
 
+  # ...doesn't start with background
   - vars:
-      test_description: Does not start with background
+      test_description: Doesn't start with background
       title: file://./inputs/title.txt
       keywords: file://./inputs/keywords.txt
-      content: file://./inputs/no_background.md
+      content: file://./inputs/has_background.md
     assert:
-      # Method not mentioned at beginning
       - type: python
         value: ("PhenoPLIER" not in output.split(".")[0])
 
+  # ...describes method (before results)
   - vars:
-      test_description: Does not describe method
+      test_description: Describes method
       title: file://./inputs/title.txt
       keywords: file://./inputs/keywords.txt
       content: file://./inputs/no_method_description.md
     assert:
-      # Method mentioned before results
       - type: python
         value: |
           methods_start = output.find("PhenoPLIER")
@@ -85,15 +86,16 @@ tests:
           response = methods_start < results_start
           print(response)
 
+  # ...doesn't include interpretation of results
   - vars:
       test_description: No interpretation of results
       title: file://./inputs/title.txt
       keywords: file://./inputs/keywords.txt
-      content: file://./inputs/no_interpretation.md
+      content: file://./inputs/has_interpretation.md
     assert:
-      # Conclusion included
       - type: python
         value: |
+          # look for "conclusion" words
           keywords = [
             "overall",
             "conclusion",

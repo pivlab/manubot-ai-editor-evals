@@ -81,3 +81,9 @@ tests:
           - "karry"
           - "ekspression"
           - "improoved"
+
+  - vars:
+      test_description: Does not include a conclusion
+      title: file://./inputs/title.txt
+      keywords: file://./inputs/keywords.txt
+      content: file://./inputs/has_conclusion.md
