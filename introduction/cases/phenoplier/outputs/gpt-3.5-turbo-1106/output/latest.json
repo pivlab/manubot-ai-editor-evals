@@ -1,0 +1,1027 @@
+{
+  "results": {
+    "version": 2,
+    "results": [
+      {
+        "provider": {
+          "id": "openai:gpt-3.5-turbo-1106"
+        },
+        "prompt": {
+          "raw": "You are a scientist with copy-editing skills who will help in improving the text of a manuscript with title 'Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms' and keywords 'genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits.' Revise the following introduction paragraph of this manuscript.\n\nInput paragraph: \n\nRevised paragraph:",
+          "display": "/Users/vincerubinetti/Desktop/manubot-ai-editor-evals/introduction/prompts/baseline.txt"
+        },
+        "vars": {
+          "test_description": "Has no spelling/grammar errors",
+          "title": "Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms",
+          "keywords": "genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",
+          "content": "Genes work together in context-specific networks to karry out different functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can change their functional role and, at a higher level, affect disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, determining how genes influence complex traits requires mechanistically understanding ekspression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9], which in turn should lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies have described different regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3] including genetic effects on gene expression across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has improoved the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105]."
+        },
+        "response": {
+          "output": "Genetic studies have revolutionized our understanding of disease etiology and drug mechanisms by integrating functional genomics and gene co-expression patterns. This approach allows for the identification of therapeutic targets and the repurposing of drugs, as well as the clustering of complex traits. In this manuscript, we aim to project genetic associations through gene expression patterns, shedding light on the underlying causes of diseases and providing insights into potential drug targets and treatment strategies.",
+          "tokenUsage": {
+            "total": 177,
+            "prompt": 91,
+            "completion": 86
+          },
+          "cached": false,
+          "cost": 0.000263
+        },
+        "success": true,
+        "score": 1,
+        "namedScores": {},
+        "latencyMs": 2173,
+        "cost": 0.000263,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "namedScores": {},
+          "reason": "All assertions passed",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "python",
+                "value": "output.strip()[0].isupper()"
+              }
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "python",
+                "value": "output.strip()[-1] == \".\""
+              }
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "python",
+                "value": "len(output.strip().split(\"\\n\")) == 1"
+              }
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "python",
+                "value": "context[\"vars\"][\"title\"] not in output"
+              }
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "not-icontains-any",
+                "value": [
+                  "authors",
+                  "Introduction:",
+                  "Keywords:",
+                  "References:"
+                ]
+              }
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "python",
+                "value": "input = context[\"vars\"][\"content\"]\ninput_words = len(input.strip().split())\noutput_words = len(output.strip().split())\nresponse = (output_words > 0.5 * input_words) and (output_words < 1.6 * input_words)\nprint(response)\n"
+              }
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "not-icontains-any",
+                "value": [
+                  "karry",
+                  "ekspression",
+                  "improoved"
+                ]
+              }
+            }
+          ],
+          "assertion": null
+        }
+      },
+      {
+        "provider": {
+          "id": "openai:gpt-3.5-turbo-1106"
+        },
+        "prompt": {
+          "raw": "You are a scientist with copy-editing skills who will help in improving the text of a manuscript with title 'Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms' and keywords 'genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits.' Revise the following introduction of this manuscript. Keep references to papers, figures, and tables. It must have a clear sentence structure and fit in a single paragraph. It should highlight a gap in existing knowledge or methods, convey why it matters, and suggest how the manuscript aims to fill it. It may cover relevant literature to explain current knowledge, but only so far as is relevant to the motivation of the manuscript. It may be somewhat specific about results, relative to a typical high-level abstract section for example. It may show only a brief preview of the manuscript's conclusion, if at all.\n\nInput paragraph: \n\nRevised paragraph:",
+          "display": "/Users/vincerubinetti/Desktop/manubot-ai-editor-evals/introduction/prompts/candidate.txt"
+        },
+        "vars": {
+          "test_description": "Has no spelling/grammar errors",
+          "title": "Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms",
+          "keywords": "genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",
+          "content": "Genes work together in context-specific networks to karry out different functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can change their functional role and, at a higher level, affect disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, determining how genes influence complex traits requires mechanistically understanding ekspression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9], which in turn should lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies have described different regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3] including genetic effects on gene expression across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has improoved the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105]."
+        },
+        "response": {
+          "output": "Genetic studies have provided valuable insights into the etiology of complex diseases and the identification of potential therapeutic targets. However, the translation of genetic associations into actionable drug mechanisms remains a challenge. Functional genomics approaches, such as gene co-expression analysis, have emerged as powerful tools for uncovering the molecular underpinnings of disease and drug response. In this manuscript, we present a novel approach for projecting genetic associations through gene expression patterns, which allows for the identification of disease etiology and drug mechanisms. By leveraging the clustering of complex traits and drug repurposing strategies, we demonstrate the potential of our method to uncover new therapeutic opportunities. Our findings highlight the importance of integrating genetic and gene expression data to gain a deeper understanding of disease mechanisms and to identify novel targets for drug development. Through the use of illustrative figures and tables, we provide a comprehensive overview of our approach and its implications for precision medicine.",
+          "tokenUsage": {
+            "total": 381,
+            "prompt": 200,
+            "completion": 181
+          },
+          "cached": false,
+          "cost": 0.000562
+        },
+        "success": true,
+        "score": 1,
+        "namedScores": {},
+        "latencyMs": 3029,
+        "cost": 0.000562,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "namedScores": {},
+          "reason": "All assertions passed",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "python",
+                "value": "output.strip()[0].isupper()"
+              }
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "python",
+                "value": "output.strip()[-1] == \".\""
+              }
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "python",
+                "value": "len(output.strip().split(\"\\n\")) == 1"
+              }
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "python",
+                "value": "context[\"vars\"][\"title\"] not in output"
+              }
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "not-icontains-any",
+                "value": [
+                  "authors",
+                  "Introduction:",
+                  "Keywords:",
+                  "References:"
+                ]
+              }
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "python",
+                "value": "input = context[\"vars\"][\"content\"]\ninput_words = len(input.strip().split())\noutput_words = len(output.strip().split())\nresponse = (output_words > 0.5 * input_words) and (output_words < 1.6 * input_words)\nprint(response)\n"
+              }
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "not-icontains-any",
+                "value": [
+                  "karry",
+                  "ekspression",
+                  "improoved"
+                ]
+              }
+            }
+          ],
+          "assertion": null
+        }
+      },
+      {
+        "provider": {
+          "id": "openai:gpt-3.5-turbo-1106"
+        },
+        "prompt": {
+          "raw": "You are a scientist with copy-editing skills who will help in improving the text of a manuscript with title 'Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms' and keywords 'genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits.' Revise the following introduction paragraph of this manuscript.\n\nInput paragraph: \n\nRevised paragraph:",
+          "display": "/Users/vincerubinetti/Desktop/manubot-ai-editor-evals/introduction/prompts/baseline.txt"
+        },
+        "vars": {
+          "test_description": "Doesn't end with conclusion",
+          "title": "Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms",
+          "keywords": "genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",
+          "content": "Genes work together in context-specific networks to carry out different functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can change their functional role and, at a higher level, affect disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, determining how genes influence complex traits requires mechanistically understanding expression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9], which in turn should lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies have described different regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3] including genetic effects on gene expression across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has improved the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105]. Ultimately, the quality of the representations is essential to performance. Here we used a representation derived from a factorization of bulk RNA-seq data. Detailed perturbation datasets and single-cell profiling of tissues, with and without perturbagens, and at various stages of development provide an avenue to generate higher quality and more interpretable representations. On the other hand, the key to interpretability is driven by the annotation of sample metadata. New approaches to infer and annotate with structured metadata are promising and can be directly applied to existing data98. Rapid improvements in both areas set the stage for latent variable projections to be widely applied to disentangle the genetic basis of complex human phenotypes. By providing a new perspective for a mechanistic understanding of statistical associations from TWAS, our method can generate testable hypotheses for the post-GWAS functional characterization of complex diseases, which will likely be an area of great importance in the coming years."
+        },
+        "response": {
+          "output": "Genetic studies and functional genomics have provided valuable insights into the complex mechanisms underlying disease etiology and drug response. One powerful approach is the analysis of gene co-expression patterns, which can reveal potential therapeutic targets and facilitate drug repurposing. By clustering complex traits based on gene expression patterns, we can project genetic associations and gain a deeper understanding of disease mechanisms. In this manuscript, we explore the use of gene expression patterns to highlight disease etiology and drug mechanisms, shedding light on potential new avenues for therapeutic intervention.",
+          "tokenUsage": {
+            "total": 194,
+            "prompt": 91,
+            "completion": 103
+          },
+          "cached": false,
+          "cost": 0.00029699999999999996
+        },
+        "success": false,
+        "score": 0.8571428571428571,
+        "namedScores": {},
+        "latencyMs": 1915,
+        "cost": 0.00029699999999999996,
+        "error": "Python code returned false\ninput = context[\"vars\"][\"content\"]\ninput_words = len(input.strip().split())\noutput_words = len(output.strip().split())\nresponse = (output_words > 0.5 * input_words) and (output_words < 1.6 * input_words)\nprint(response)\n",
+        "gradingResult": {
+          "pass": false,
+          "score": 0.8571428571428571,
+          "namedScores": {},
+          "reason": "Python code returned false\ninput = context[\"vars\"][\"content\"]\ninput_words = len(input.strip().split())\noutput_words = len(output.strip().split())\nresponse = (output_words > 0.5 * input_words) and (output_words < 1.6 * input_words)\nprint(response)\n",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "python",
+                "value": "output.strip()[0].isupper()"
+              }
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "python",
+                "value": "output.strip()[-1] == \".\""
+              }
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "python",
+                "value": "len(output.strip().split(\"\\n\")) == 1"
+              }
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "python",
+                "value": "context[\"vars\"][\"title\"] not in output"
+              }
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "not-icontains-any",
+                "value": [
+                  "authors",
+                  "Introduction:",
+                  "Keywords:",
+                  "References:"
+                ]
+              }
+            },
+            {
+              "pass": false,
+              "score": 0,
+              "reason": "Python code returned false\ninput = context[\"vars\"][\"content\"]\ninput_words = len(input.strip().split())\noutput_words = len(output.strip().split())\nresponse = (output_words > 0.5 * input_words) and (output_words < 1.6 * input_words)\nprint(response)\n",
+              "assertion": {
+                "type": "python",
+                "value": "input = context[\"vars\"][\"content\"]\ninput_words = len(input.strip().split())\noutput_words = len(output.strip().split())\nresponse = (output_words > 0.5 * input_words) and (output_words < 1.6 * input_words)\nprint(response)\n"
+              }
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "python",
+                "value": "# look for \"conclusion\" words\nkeywords = [\n  \"overall\",\n  \"conclusion\",\n  \"insight\",\n  \"novel\",\n  \"potential\",\n  \"broader\",\n  \"ultimately\",\n  \"advancement\",\n  \"valuable\",\n  \"our study\",\n  \"this study\",\n  \"our work\",\n  \"this work\",\n  \"our approach\",\n  \"research\",\n  \"critical gap\",\n  \"understanding\",\n  \"powerful\",\n  \"advancing\",\n  \"importance\",\n  \"findings\",\n  \"highlight\",\n  \"promise\",\n  \"promising\",\n  \"innovative\",\n  \"perspective\",\n  \"refine\",\n  \"refining\",\n  \"accelerate\",\n  \"accelerating\",\n  \"facilitate\",\n  \"facilitating\",\n  \"pinpoint\",\n  \"implications\",\n  \"reveal\",\n]\n# try to capture the first paragraph (because sometimes models add\n# explanations below the revised paragraph)\nfirst_paragraph = output.strip().split(\"\\n\")[0]\nlast_sentences = \".\".join(first_paragraph.strip().split(\".\")[-2:]).lower()\nresponse = any(keyword in last_sentences for keyword in keywords)\nprint(response)\n"
+              }
+            }
+          ],
+          "assertion": null
+        }
+      },
+      {
+        "provider": {
+          "id": "openai:gpt-3.5-turbo-1106"
+        },
+        "prompt": {
+          "raw": "You are a scientist with copy-editing skills who will help in improving the text of a manuscript with title 'Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms' and keywords 'genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits.' Revise the following introduction of this manuscript. Keep references to papers, figures, and tables. It must have a clear sentence structure and fit in a single paragraph. It should highlight a gap in existing knowledge or methods, convey why it matters, and suggest how the manuscript aims to fill it. It may cover relevant literature to explain current knowledge, but only so far as is relevant to the motivation of the manuscript. It may be somewhat specific about results, relative to a typical high-level abstract section for example. It may show only a brief preview of the manuscript's conclusion, if at all.\n\nInput paragraph: \n\nRevised paragraph:",
+          "display": "/Users/vincerubinetti/Desktop/manubot-ai-editor-evals/introduction/prompts/candidate.txt"
+        },
+        "vars": {
+          "test_description": "Doesn't end with conclusion",
+          "title": "Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms",
+          "keywords": "genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",
+          "content": "Genes work together in context-specific networks to carry out different functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can change their functional role and, at a higher level, affect disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, determining how genes influence complex traits requires mechanistically understanding expression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9], which in turn should lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies have described different regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3] including genetic effects on gene expression across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has improved the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105]. Ultimately, the quality of the representations is essential to performance. Here we used a representation derived from a factorization of bulk RNA-seq data. Detailed perturbation datasets and single-cell profiling of tissues, with and without perturbagens, and at various stages of development provide an avenue to generate higher quality and more interpretable representations. On the other hand, the key to interpretability is driven by the annotation of sample metadata. New approaches to infer and annotate with structured metadata are promising and can be directly applied to existing data98. Rapid improvements in both areas set the stage for latent variable projections to be widely applied to disentangle the genetic basis of complex human phenotypes. By providing a new perspective for a mechanistic understanding of statistical associations from TWAS, our method can generate testable hypotheses for the post-GWAS functional characterization of complex diseases, which will likely be an area of great importance in the coming years."
+        },
+        "response": {
+          "output": "Genetic studies have provided valuable insights into the etiology of complex diseases and the identification of potential therapeutic targets. However, the translation of genetic associations into actionable drug mechanisms remains a challenge. Functional genomics approaches, such as gene co-expression analysis, have emerged as powerful tools for uncovering the functional relationships between genes and their role in disease pathogenesis. In this manuscript, we present a novel approach for projecting genetic associations through gene expression patterns, which allows for the identification of disease etiology and potential drug mechanisms. By integrating genetic data with gene co-expression networks, we demonstrate the potential for drug repurposing and the clustering of complex traits. Our findings highlight the utility of this approach in uncovering new insights into disease mechanisms and identifying potential therapeutic targets. This manuscript aims to bridge the gap between genetic associations and drug mechanisms, ultimately advancing our understanding of disease etiology and the development of targeted therapies. (Figure 1 and Table 1 provide a visual representation of our approach and results.)",
+          "tokenUsage": {
+            "total": 397,
+            "prompt": 200,
+            "completion": 197
+          },
+          "cached": false,
+          "cost": 0.0005939999999999999
+        },
+        "success": false,
+        "score": 0.8571428571428571,
+        "namedScores": {},
+        "latencyMs": 2957,
+        "cost": 0.0005939999999999999,
+        "error": "Python code returned false\noutput.strip()[-1] == \".\"",
+        "gradingResult": {
+          "pass": false,
+          "score": 0.8571428571428571,
+          "namedScores": {},
+          "reason": "Python code returned false\noutput.strip()[-1] == \".\"",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "python",
+                "value": "output.strip()[0].isupper()"
+              }
+            },
+            {
+              "pass": false,
+              "score": 0,
+              "reason": "Python code returned false\noutput.strip()[-1] == \".\"",
+              "assertion": {
+                "type": "python",
+                "value": "output.strip()[-1] == \".\""
+              }
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "python",
+                "value": "len(output.strip().split(\"\\n\")) == 1"
+              }
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "python",
+                "value": "context[\"vars\"][\"title\"] not in output"
+              }
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "not-icontains-any",
+                "value": [
+                  "authors",
+                  "Introduction:",
+                  "Keywords:",
+                  "References:"
+                ]
+              }
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "python",
+                "value": "input = context[\"vars\"][\"content\"]\ninput_words = len(input.strip().split())\noutput_words = len(output.strip().split())\nresponse = (output_words > 0.5 * input_words) and (output_words < 1.6 * input_words)\nprint(response)\n"
+              }
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "python",
+                "value": "# look for \"conclusion\" words\nkeywords = [\n  \"overall\",\n  \"conclusion\",\n  \"insight\",\n  \"novel\",\n  \"potential\",\n  \"broader\",\n  \"ultimately\",\n  \"advancement\",\n  \"valuable\",\n  \"our study\",\n  \"this study\",\n  \"our work\",\n  \"this work\",\n  \"our approach\",\n  \"research\",\n  \"critical gap\",\n  \"understanding\",\n  \"powerful\",\n  \"advancing\",\n  \"importance\",\n  \"findings\",\n  \"highlight\",\n  \"promise\",\n  \"promising\",\n  \"innovative\",\n  \"perspective\",\n  \"refine\",\n  \"refining\",\n  \"accelerate\",\n  \"accelerating\",\n  \"facilitate\",\n  \"facilitating\",\n  \"pinpoint\",\n  \"implications\",\n  \"reveal\",\n]\n# try to capture the first paragraph (because sometimes models add\n# explanations below the revised paragraph)\nfirst_paragraph = output.strip().split(\"\\n\")[0]\nlast_sentences = \".\".join(first_paragraph.strip().split(\".\")[-2:]).lower()\nresponse = any(keyword in last_sentences for keyword in keywords)\nprint(response)\n"
+              }
+            }
+          ],
+          "assertion": null
+        }
+      }
+    ],
+    "stats": {
+      "successes": 2,
+      "failures": 2,
+      "tokenUsage": {
+        "total": 1149,
+        "prompt": 582,
+        "completion": 567,
+        "cached": 0
+      }
+    },
+    "table": {
+      "head": {
+        "prompts": [
+          {
+            "raw": "You are a scientist with copy-editing skills who will help in improving the text of a manuscript with title '{{ title }}' and keywords '{{ keywords }}.' Revise the following introduction paragraph of this manuscript.\n\nInput paragraph: {{ paragraph }}\n\nRevised paragraph:",
+            "display": "/Users/vincerubinetti/Desktop/manubot-ai-editor-evals/introduction/prompts/baseline.txt",
+            "id": "c6cc0de47ad436e0e888f37693fe8561ec5d1fd733d4c685d73e85a30c74033a",
+            "provider": "openai:gpt-3.5-turbo-1106",
+            "metrics": {
+              "score": 1.8571428571428572,
+              "testPassCount": 1,
+              "testFailCount": 1,
+              "assertPassCount": 13,
+              "assertFailCount": 1,
+              "totalLatencyMs": 4088,
+              "tokenUsage": {
+                "total": 371,
+                "prompt": 182,
+                "completion": 189,
+                "cached": 0
+              },
+              "namedScores": {},
+              "cost": 0.00056
+            }
+          },
+          {
+            "raw": "You are a scientist with copy-editing skills who will help in improving the text of a manuscript with title '{{ title }}' and keywords '{{ keywords }}.' Revise the following introduction of this manuscript. Keep references to papers, figures, and tables. It must have a clear sentence structure and fit in a single paragraph. It should highlight a gap in existing knowledge or methods, convey why it matters, and suggest how the manuscript aims to fill it. It may cover relevant literature to explain current knowledge, but only so far as is relevant to the motivation of the manuscript. It may be somewhat specific about results, relative to a typical high-level abstract section for example. It may show only a brief preview of the manuscript's conclusion, if at all.\n\nInput paragraph: {{ paragraph }}\n\nRevised paragraph:",
+            "display": "/Users/vincerubinetti/Desktop/manubot-ai-editor-evals/introduction/prompts/candidate.txt",
+            "id": "efd9e68226d942f1f20081b5321e2fc5864c5f5c661e8df42334c58ad5da2790",
+            "provider": "openai:gpt-3.5-turbo-1106",
+            "metrics": {
+              "score": 1.8571428571428572,
+              "testPassCount": 1,
+              "testFailCount": 1,
+              "assertPassCount": 13,
+              "assertFailCount": 1,
+              "totalLatencyMs": 5986,
+              "tokenUsage": {
+                "total": 778,
+                "prompt": 400,
+                "completion": 378,
+                "cached": 0
+              },
+              "namedScores": {},
+              "cost": 0.001156
+            }
+          }
+        ],
+        "vars": [
+          "content",
+          "keywords",
+          "test_description",
+          "title"
+        ]
+      },
+      "body": [
+        {
+          "outputs": [
+            {
+              "pass": true,
+              "score": 1,
+              "namedScores": {},
+              "text": "Genetic studies have revolutionized our understanding of disease etiology and drug mechanisms by integrating functional genomics and gene co-expression patterns. This approach allows for the identification of therapeutic targets and the repurposing of drugs, as well as the clustering of complex traits. In this manuscript, we aim to project genetic associations through gene expression patterns, shedding light on the underlying causes of diseases and providing insights into potential drug targets and treatment strategies.",
+              "prompt": "You are a scientist with copy-editing skills who will help in improving the text of a manuscript with title 'Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms' and keywords 'genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits.' Revise the following introduction paragraph of this manuscript.\n\nInput paragraph: \n\nRevised paragraph:",
+              "provider": "openai:gpt-3.5-turbo-1106",
+              "latencyMs": 2173,
+              "tokenUsage": {
+                "total": 177,
+                "prompt": 91,
+                "completion": 86
+              },
+              "gradingResult": {
+                "pass": true,
+                "score": 1,
+                "namedScores": {},
+                "reason": "All assertions passed",
+                "tokensUsed": {
+                  "total": 0,
+                  "prompt": 0,
+                  "completion": 0
+                },
+                "componentResults": [
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "python",
+                      "value": "output.strip()[0].isupper()"
+                    }
+                  },
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "python",
+                      "value": "output.strip()[-1] == \".\""
+                    }
+                  },
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "python",
+                      "value": "len(output.strip().split(\"\\n\")) == 1"
+                    }
+                  },
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "python",
+                      "value": "context[\"vars\"][\"title\"] not in output"
+                    }
+                  },
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "not-icontains-any",
+                      "value": [
+                        "authors",
+                        "Introduction:",
+                        "Keywords:",
+                        "References:"
+                      ]
+                    }
+                  },
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "python",
+                      "value": "input = context[\"vars\"][\"content\"]\ninput_words = len(input.strip().split())\noutput_words = len(output.strip().split())\nresponse = (output_words > 0.5 * input_words) and (output_words < 1.6 * input_words)\nprint(response)\n"
+                    }
+                  },
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "not-icontains-any",
+                      "value": [
+                        "karry",
+                        "ekspression",
+                        "improoved"
+                      ]
+                    }
+                  }
+                ],
+                "assertion": null
+              },
+              "cost": 0.000263
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "namedScores": {},
+              "text": "Genetic studies have provided valuable insights into the etiology of complex diseases and the identification of potential therapeutic targets. However, the translation of genetic associations into actionable drug mechanisms remains a challenge. Functional genomics approaches, such as gene co-expression analysis, have emerged as powerful tools for uncovering the molecular underpinnings of disease and drug response. In this manuscript, we present a novel approach for projecting genetic associations through gene expression patterns, which allows for the identification of disease etiology and drug mechanisms. By leveraging the clustering of complex traits and drug repurposing strategies, we demonstrate the potential of our method to uncover new therapeutic opportunities. Our findings highlight the importance of integrating genetic and gene expression data to gain a deeper understanding of disease mechanisms and to identify novel targets for drug development. Through the use of illustrative figures and tables, we provide a comprehensive overview of our approach and its implications for precision medicine.",
+              "prompt": "You are a scientist with copy-editing skills who will help in improving the text of a manuscript with title 'Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms' and keywords 'genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits.' Revise the following introduction of this manuscript. Keep references to papers, figures, and tables. It must have a clear sentence structure and fit in a single paragraph. It should highlight a gap in existing knowledge or methods, convey why it matters, and suggest how the manuscript aims to fill it. It may cover relevant literature to explain current knowledge, but only so far as is relevant to the motivation of the manuscript. It may be somewhat specific about results, relative to a typical high-level abstract section for example. It may show only a brief preview of the manuscript's conclusion, if at all.\n\nInput paragraph: \n\nRevised paragraph:",
+              "provider": "openai:gpt-3.5-turbo-1106",
+              "latencyMs": 3029,
+              "tokenUsage": {
+                "total": 381,
+                "prompt": 200,
+                "completion": 181
+              },
+              "gradingResult": {
+                "pass": true,
+                "score": 1,
+                "namedScores": {},
+                "reason": "All assertions passed",
+                "tokensUsed": {
+                  "total": 0,
+                  "prompt": 0,
+                  "completion": 0
+                },
+                "componentResults": [
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "python",
+                      "value": "output.strip()[0].isupper()"
+                    }
+                  },
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "python",
+                      "value": "output.strip()[-1] == \".\""
+                    }
+                  },
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "python",
+                      "value": "len(output.strip().split(\"\\n\")) == 1"
+                    }
+                  },
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "python",
+                      "value": "context[\"vars\"][\"title\"] not in output"
+                    }
+                  },
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "not-icontains-any",
+                      "value": [
+                        "authors",
+                        "Introduction:",
+                        "Keywords:",
+                        "References:"
+                      ]
+                    }
+                  },
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "python",
+                      "value": "input = context[\"vars\"][\"content\"]\ninput_words = len(input.strip().split())\noutput_words = len(output.strip().split())\nresponse = (output_words > 0.5 * input_words) and (output_words < 1.6 * input_words)\nprint(response)\n"
+                    }
+                  },
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "not-icontains-any",
+                      "value": [
+                        "karry",
+                        "ekspression",
+                        "improoved"
+                      ]
+                    }
+                  }
+                ],
+                "assertion": null
+              },
+              "cost": 0.000562
+            }
+          ],
+          "vars": [
+            "Genes work together in context-specific networks to karry out different functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can change their functional role and, at a higher level, affect disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, determining how genes influence complex traits requires mechanistically understanding ekspression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9], which in turn should lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies have described different regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3] including genetic effects on gene expression across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has improoved the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].",
+            "genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",
+            "Has no spelling/grammar errors",
+            "Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms"
+          ]
+        },
+        {
+          "outputs": [
+            {
+              "pass": false,
+              "score": 0.8571428571428571,
+              "namedScores": {},
+              "text": "Python code returned false\ninput = context[\"vars\"][\"content\"]\ninput_words = len(input.strip().split())\noutput_words = len(output.strip().split())\nresponse = (output_words > 0.5 * input_words) and (output_words < 1.6 * input_words)\nprint(response)\n\n---\nGenetic studies and functional genomics have provided valuable insights into the complex mechanisms underlying disease etiology and drug response. One powerful approach is the analysis of gene co-expression patterns, which can reveal potential therapeutic targets and facilitate drug repurposing. By clustering complex traits based on gene expression patterns, we can project genetic associations and gain a deeper understanding of disease mechanisms. In this manuscript, we explore the use of gene expression patterns to highlight disease etiology and drug mechanisms, shedding light on potential new avenues for therapeutic intervention.",
+              "prompt": "You are a scientist with copy-editing skills who will help in improving the text of a manuscript with title 'Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms' and keywords 'genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits.' Revise the following introduction paragraph of this manuscript.\n\nInput paragraph: \n\nRevised paragraph:",
+              "provider": "openai:gpt-3.5-turbo-1106",
+              "latencyMs": 1915,
+              "tokenUsage": {
+                "total": 194,
+                "prompt": 91,
+                "completion": 103
+              },
+              "gradingResult": {
+                "pass": false,
+                "score": 0.8571428571428571,
+                "namedScores": {},
+                "reason": "Python code returned false\ninput = context[\"vars\"][\"content\"]\ninput_words = len(input.strip().split())\noutput_words = len(output.strip().split())\nresponse = (output_words > 0.5 * input_words) and (output_words < 1.6 * input_words)\nprint(response)\n",
+                "tokensUsed": {
+                  "total": 0,
+                  "prompt": 0,
+                  "completion": 0
+                },
+                "componentResults": [
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "python",
+                      "value": "output.strip()[0].isupper()"
+                    }
+                  },
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "python",
+                      "value": "output.strip()[-1] == \".\""
+                    }
+                  },
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "python",
+                      "value": "len(output.strip().split(\"\\n\")) == 1"
+                    }
+                  },
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "python",
+                      "value": "context[\"vars\"][\"title\"] not in output"
+                    }
+                  },
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "not-icontains-any",
+                      "value": [
+                        "authors",
+                        "Introduction:",
+                        "Keywords:",
+                        "References:"
+                      ]
+                    }
+                  },
+                  {
+                    "pass": false,
+                    "score": 0,
+                    "reason": "Python code returned false\ninput = context[\"vars\"][\"content\"]\ninput_words = len(input.strip().split())\noutput_words = len(output.strip().split())\nresponse = (output_words > 0.5 * input_words) and (output_words < 1.6 * input_words)\nprint(response)\n",
+                    "assertion": {
+                      "type": "python",
+                      "value": "input = context[\"vars\"][\"content\"]\ninput_words = len(input.strip().split())\noutput_words = len(output.strip().split())\nresponse = (output_words > 0.5 * input_words) and (output_words < 1.6 * input_words)\nprint(response)\n"
+                    }
+                  },
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "python",
+                      "value": "# look for \"conclusion\" words\nkeywords = [\n  \"overall\",\n  \"conclusion\",\n  \"insight\",\n  \"novel\",\n  \"potential\",\n  \"broader\",\n  \"ultimately\",\n  \"advancement\",\n  \"valuable\",\n  \"our study\",\n  \"this study\",\n  \"our work\",\n  \"this work\",\n  \"our approach\",\n  \"research\",\n  \"critical gap\",\n  \"understanding\",\n  \"powerful\",\n  \"advancing\",\n  \"importance\",\n  \"findings\",\n  \"highlight\",\n  \"promise\",\n  \"promising\",\n  \"innovative\",\n  \"perspective\",\n  \"refine\",\n  \"refining\",\n  \"accelerate\",\n  \"accelerating\",\n  \"facilitate\",\n  \"facilitating\",\n  \"pinpoint\",\n  \"implications\",\n  \"reveal\",\n]\n# try to capture the first paragraph (because sometimes models add\n# explanations below the revised paragraph)\nfirst_paragraph = output.strip().split(\"\\n\")[0]\nlast_sentences = \".\".join(first_paragraph.strip().split(\".\")[-2:]).lower()\nresponse = any(keyword in last_sentences for keyword in keywords)\nprint(response)\n"
+                    }
+                  }
+                ],
+                "assertion": null
+              },
+              "cost": 0.00029699999999999996
+            },
+            {
+              "pass": false,
+              "score": 0.8571428571428571,
+              "namedScores": {},
+              "text": "Python code returned false\noutput.strip()[-1] == \".\"\n---\nGenetic studies have provided valuable insights into the etiology of complex diseases and the identification of potential therapeutic targets. However, the translation of genetic associations into actionable drug mechanisms remains a challenge. Functional genomics approaches, such as gene co-expression analysis, have emerged as powerful tools for uncovering the functional relationships between genes and their role in disease pathogenesis. In this manuscript, we present a novel approach for projecting genetic associations through gene expression patterns, which allows for the identification of disease etiology and potential drug mechanisms. By integrating genetic data with gene co-expression networks, we demonstrate the potential for drug repurposing and the clustering of complex traits. Our findings highlight the utility of this approach in uncovering new insights into disease mechanisms and identifying potential therapeutic targets. This manuscript aims to bridge the gap between genetic associations and drug mechanisms, ultimately advancing our understanding of disease etiology and the development of targeted therapies. (Figure 1 and Table 1 provide a visual representation of our approach and results.)",
+              "prompt": "You are a scientist with copy-editing skills who will help in improving the text of a manuscript with title 'Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms' and keywords 'genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits.' Revise the following introduction of this manuscript. Keep references to papers, figures, and tables. It must have a clear sentence structure and fit in a single paragraph. It should highlight a gap in existing knowledge or methods, convey why it matters, and suggest how the manuscript aims to fill it. It may cover relevant literature to explain current knowledge, but only so far as is relevant to the motivation of the manuscript. It may be somewhat specific about results, relative to a typical high-level abstract section for example. It may show only a brief preview of the manuscript's conclusion, if at all.\n\nInput paragraph: \n\nRevised paragraph:",
+              "provider": "openai:gpt-3.5-turbo-1106",
+              "latencyMs": 2957,
+              "tokenUsage": {
+                "total": 397,
+                "prompt": 200,
+                "completion": 197
+              },
+              "gradingResult": {
+                "pass": false,
+                "score": 0.8571428571428571,
+                "namedScores": {},
+                "reason": "Python code returned false\noutput.strip()[-1] == \".\"",
+                "tokensUsed": {
+                  "total": 0,
+                  "prompt": 0,
+                  "completion": 0
+                },
+                "componentResults": [
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "python",
+                      "value": "output.strip()[0].isupper()"
+                    }
+                  },
+                  {
+                    "pass": false,
+                    "score": 0,
+                    "reason": "Python code returned false\noutput.strip()[-1] == \".\"",
+                    "assertion": {
+                      "type": "python",
+                      "value": "output.strip()[-1] == \".\""
+                    }
+                  },
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "python",
+                      "value": "len(output.strip().split(\"\\n\")) == 1"
+                    }
+                  },
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "python",
+                      "value": "context[\"vars\"][\"title\"] not in output"
+                    }
+                  },
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "not-icontains-any",
+                      "value": [
+                        "authors",
+                        "Introduction:",
+                        "Keywords:",
+                        "References:"
+                      ]
+                    }
+                  },
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "python",
+                      "value": "input = context[\"vars\"][\"content\"]\ninput_words = len(input.strip().split())\noutput_words = len(output.strip().split())\nresponse = (output_words > 0.5 * input_words) and (output_words < 1.6 * input_words)\nprint(response)\n"
+                    }
+                  },
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "python",
+                      "value": "# look for \"conclusion\" words\nkeywords = [\n  \"overall\",\n  \"conclusion\",\n  \"insight\",\n  \"novel\",\n  \"potential\",\n  \"broader\",\n  \"ultimately\",\n  \"advancement\",\n  \"valuable\",\n  \"our study\",\n  \"this study\",\n  \"our work\",\n  \"this work\",\n  \"our approach\",\n  \"research\",\n  \"critical gap\",\n  \"understanding\",\n  \"powerful\",\n  \"advancing\",\n  \"importance\",\n  \"findings\",\n  \"highlight\",\n  \"promise\",\n  \"promising\",\n  \"innovative\",\n  \"perspective\",\n  \"refine\",\n  \"refining\",\n  \"accelerate\",\n  \"accelerating\",\n  \"facilitate\",\n  \"facilitating\",\n  \"pinpoint\",\n  \"implications\",\n  \"reveal\",\n]\n# try to capture the first paragraph (because sometimes models add\n# explanations below the revised paragraph)\nfirst_paragraph = output.strip().split(\"\\n\")[0]\nlast_sentences = \".\".join(first_paragraph.strip().split(\".\")[-2:]).lower()\nresponse = any(keyword in last_sentences for keyword in keywords)\nprint(response)\n"
+                    }
+                  }
+                ],
+                "assertion": null
+              },
+              "cost": 0.0005939999999999999
+            }
+          ],
+          "vars": [
+            "Genes work together in context-specific networks to carry out different functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can change their functional role and, at a higher level, affect disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, determining how genes influence complex traits requires mechanistically understanding expression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9], which in turn should lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies have described different regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3] including genetic effects on gene expression across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has improved the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105]. Ultimately, the quality of the representations is essential to performance. Here we used a representation derived from a factorization of bulk RNA-seq data. Detailed perturbation datasets and single-cell profiling of tissues, with and without perturbagens, and at various stages of development provide an avenue to generate higher quality and more interpretable representations. On the other hand, the key to interpretability is driven by the annotation of sample metadata. New approaches to infer and annotate with structured metadata are promising and can be directly applied to existing data98. Rapid improvements in both areas set the stage for latent variable projections to be widely applied to disentangle the genetic basis of complex human phenotypes. By providing a new perspective for a mechanistic understanding of statistical associations from TWAS, our method can generate testable hypotheses for the post-GWAS functional characterization of complex diseases, which will likely be an area of great importance in the coming years.",
+            "genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",
+            "Doesn't end with conclusion",
+            "Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms"
+          ]
+        }
+      ]
+    }
+  },
+  "config": {
+    "prompts": [
+      "file://../../prompts/baseline.txt",
+      "file://../../prompts/candidate.txt"
+    ],
+    "providers": [
+      "openai:gpt-3.5-turbo-1106"
+    ],
+    "tests": [
+      {
+        "vars": {
+          "test_description": "Has no spelling/grammar errors",
+          "title": "file://./inputs/title.txt",
+          "keywords": "file://./inputs/keywords.txt",
+          "content": "file://./inputs/has_spelling_errors.md"
+        },
+        "assert": [
+          {
+            "type": "not-icontains-any",
+            "value": [
+              "karry",
+              "ekspression",
+              "improoved"
+            ]
+          }
+        ]
+      },
+      {
+        "vars": {
+          "test_description": "Doesn't end with conclusion",
+          "title": "file://./inputs/title.txt",
+          "keywords": "file://./inputs/keywords.txt",
+          "content": "file://./inputs/has_conclusion.md"
+        },
+        "assert": [
+          {
+            "type": "python",
+            "value": "# look for \"conclusion\" words\nkeywords = [\n  \"overall\",\n  \"conclusion\",\n  \"insight\",\n  \"novel\",\n  \"potential\",\n  \"broader\",\n  \"ultimately\",\n  \"advancement\",\n  \"valuable\",\n  \"our study\",\n  \"this study\",\n  \"our work\",\n  \"this work\",\n  \"our approach\",\n  \"research\",\n  \"critical gap\",\n  \"understanding\",\n  \"powerful\",\n  \"advancing\",\n  \"importance\",\n  \"findings\",\n  \"highlight\",\n  \"promise\",\n  \"promising\",\n  \"innovative\",\n  \"perspective\",\n  \"refine\",\n  \"refining\",\n  \"accelerate\",\n  \"accelerating\",\n  \"facilitate\",\n  \"facilitating\",\n  \"pinpoint\",\n  \"implications\",\n  \"reveal\",\n]\n# try to capture the first paragraph (because sometimes models add\n# explanations below the revised paragraph)\nfirst_paragraph = output.strip().split(\"\\n\")[0]\nlast_sentences = \".\".join(first_paragraph.strip().split(\".\")[-2:]).lower()\nresponse = any(keyword in last_sentences for keyword in keywords)\nprint(response)\n"
+          }
+        ]
+      }
+    ],
+    "sharing": true,
+    "defaultTest": {
+      "assert": [
+        {
+          "type": "python",
+          "value": "output.strip()[0].isupper()"
+        },
+        {
+          "type": "python",
+          "value": "output.strip()[-1] == \".\""
+        },
+        {
+          "type": "python",
+          "value": "len(output.strip().split(\"\\n\")) == 1"
+        },
+        {
+          "type": "python",
+          "value": "context[\"vars\"][\"title\"] not in output"
+        },
+        {
+          "type": "not-icontains-any",
+          "value": [
+            "authors",
+            "Introduction:",
+            "Keywords:",
+            "References:"
+          ]
+        },
+        {
+          "type": "python",
+          "value": "input = context[\"vars\"][\"content\"]\ninput_words = len(input.strip().split())\noutput_words = len(output.strip().split())\nresponse = (output_words > 0.5 * input_words) and (output_words < 1.6 * input_words)\nprint(response)\n"
+        }
+      ]
+    }
+  },
+  "shareableUrl": null
+}

@@ -4,24 +4,25 @@ prompts:
 
 # Default asserts applied to each test case below
 defaultTest:
+  # Make sure that output...
   assert:
-    # Starts with capital letter
+    # ...starts with capital letter
     - type: python
       value: output.strip()[0].isupper()
 
-    # Ends with period
+    # ...ends with period
     - type: python
       value: output.strip()[-1] == "."
 
-    # Single paragraph
+    # ...is a single paragraph
     - type: python
       value: len(output.strip().split("\n")) == 1
 
-    # No manuscript title
+    # ...doesn't include manuscript title
     - type: python
       value: context["vars"]["title"] not in output
 
-    # No references to authors, keywords, introduction, etc
+    # ...doesn't reference authors, keywords, introduction, etc
     - type: not-icontains-any
       value:
         - "authors"
@@ -29,7 +30,7 @@ defaultTest:
         - "Keywords:"
         - "References:"
 
-    # Length of output roughly same as length of input
+    # ...is roughly same length as input
     - type: python
       value: |
         input = context["vars"]["content"]
@@ -38,7 +39,7 @@ defaultTest:
         response = (output_words > 0.5 * input_words) and (output_words < 1.6 * input_words)
         print(response)
 
-    # Most references are preserved
+    # ...preserves most references
     # - type: python
     #   value: |
     #     references = [
@@ -67,23 +68,71 @@ defaultTest:
     #     count = len([reference for reference in references if reference in output])
     #     print(count / len(references) > 0.5)
 
-# Test cases
+# Make sure that output...
 tests:
+  # ...has no spelling/grammar errors
   - vars:
-      test_description: Has spelling/grammar errors
+      test_description: Has no spelling/grammar errors
       title: file://./inputs/title.txt
       keywords: file://./inputs/keywords.txt
       content: file://./inputs/has_spelling_errors.md
     assert:
-      # No spelling errors
       - type: not-icontains-any
         value:
           - "karry"
           - "ekspression"
           - "improoved"
 
+  # ...doesn't end with conclusion
   - vars:
-      test_description: Does not include a conclusion
+      test_description: Doesn't end with conclusion
       title: file://./inputs/title.txt
       keywords: file://./inputs/keywords.txt
       content: file://./inputs/has_conclusion.md
+    assert:
+      - type: python
+        value: |
+          # look for "conclusion" words
+          keywords = [
+            "overall",
+            "conclusion",
+            "insight",
+            "novel",
+            "potential",
+            "broader",
+            "ultimately",
+            "advancement",
+            "valuable",
+            "our study",
+            "this study",
+            "our work",
+            "this work",
+            "our approach",
+            "research",
+            "critical gap",
+            "understanding",
+            "powerful",
+            "advancing",
+            "importance",
+            "findings",
+            "highlight",
+            "promise",
+            "promising",
+            "innovative",
+            "perspective",
+            "refine",
+            "refining",
+            "accelerate",
+            "accelerating",
+            "facilitate",
+            "facilitating",
+            "pinpoint",
+            "implications",
+            "reveal",
+          ]
+          # try to capture the first paragraph (because sometimes models add
+          # explanations below the revised paragraph)
+          first_paragraph = output.strip().split("\n")[0]
+          last_sentences = ".".join(first_paragraph.strip().split(".")[-2:]).lower()
+          response = any(keyword in last_sentences for keyword in keywords)
+          print(response)

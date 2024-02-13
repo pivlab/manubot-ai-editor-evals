@@ -23,8 +23,8 @@ models = {
     # "ollama:solar:10.7b-instruct-v1-q8_0": 5,
     # "ollama:starling-lm:7b-alpha-fp16": 5,
     # "openai:gpt-3.5-turbo-0613": 5,
-    # "openai:gpt-3.5-turbo-1106": 5,
-    "openai:gpt-4-0613": 1,
+    "openai:gpt-3.5-turbo-1106": 1,
+    # "openai:gpt-4-0613": 5,
     # "openai:gpt-4-1106-preview": 5,
 }
 

@@ -4,7 +4,7 @@ prompts:
 
 # Default asserts applied to each test case below
 defaultTest:
-  # Ensure that output paragraph...
+  # Make sure that output...
   assert:
     # ...starts with capital letter
     - type: python
@@ -43,7 +43,7 @@ defaultTest:
     - type: contains
       value: "CRISPR"
 
-# Ensure that output paragraph...
+# Make sure that output...
 tests:
   # ...has no spelling/grammar errors
   - vars:
@@ -68,9 +68,9 @@ tests:
       - type: python
         value: ("PhenoPLIER" not in output.split(".")[0])
 
-  # ...describes method (before results)
+  # ...describes method before results
   - vars:
-      test_description: Describes method
+      test_description: Describes method before results
       title: file://./inputs/title.txt
       keywords: file://./inputs/keywords.txt
       content: file://./inputs/no_method_description.md
@@ -86,9 +86,9 @@ tests:
           response = methods_start < results_start
           print(response)
 
-  # ...doesn't include interpretation of results
+  # ...doesn't end with interpretation of results
   - vars:
-      test_description: No interpretation of results
+      test_description: Doesn't end with interpretation of results
       title: file://./inputs/title.txt
       keywords: file://./inputs/keywords.txt
       content: file://./inputs/has_interpretation.md
