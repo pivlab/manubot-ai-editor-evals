@@ -23,8 +23,8 @@ models = {
     # "ollama:solar:10.7b-instruct-v1-q8_0": 5,
     # "ollama:starling-lm:7b-alpha-fp16": 5,
     # "openai:gpt-3.5-turbo-0613": 5,
-    "openai:gpt-3.5-turbo-1106": 1,
-    # "openai:gpt-4-0613": 5,
+    # "openai:gpt-3.5-turbo-1106": 5,
+    "openai:gpt-4-0613": 1,
     # "openai:gpt-4-1106-preview": 5,
 }
 
@@ -94,17 +94,18 @@ elif args.view:
 # run in evaluation mode
 else:
     for model in models:
+        # --verbose \
         command = f"""
         promptfoo eval \
-        -j 1 \
-        --no-cache \
-        --repeat {model['repeat']} \
-        --providers {model['id']} \
-        -o outputs/{model['path']}/output/latest.html \
-        -o outputs/{model['path']}/output/latest.csv \
-        -o outputs/{model['path']}/output/latest.txt \
-        -o outputs/{model['path']}/output/latest.json \
-        -o outputs/{model['path']}/output/latest.yaml
+            -j 1 \
+            --no-cache \
+            --repeat {model['repeat']} \
+            --providers {model['id']} \
+            -o outputs/{model['path']}/output/latest.html \
+            -o outputs/{model['path']}/output/latest.csv \
+            -o outputs/{model['path']}/output/latest.txt \
+            -o outputs/{model['path']}/output/latest.json \
+            -o outputs/{model['path']}/output/latest.yaml
         """.strip()
         print(re.sub(r"\s{2,}", " \\\n  ", command))
         subprocess.run(command, shell=True)

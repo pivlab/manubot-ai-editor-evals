@@ -2,6 +2,12 @@ prompts:
   - file://../../prompts/baseline.txt
   - file://../../prompts/candidate.txt
 
+providers:
+  - id: openai:gpt-4-0613
+    config:
+      temperature: 0
+      max_tokens: 1024
+
 # Default asserts applied to each test case below
 defaultTest:
   # Make sure that output...
@@ -40,33 +46,33 @@ defaultTest:
         print(response)
 
     # ...preserves most references
-    # - type: python
-    #   value: |
-    #     references = [
-    #       "@pmid:19104045",
-    #       "@doi:10.1038/ng.3259",
-    #       "@doi:10.1038/s41467-018-06022-6",
-    #       "@doi:10.1126/science.aaz1776",
-    #       "@doi:10.1038/s41586-020-2559-3",
-    #       "@doi:10.1038/s41576-019-0200-9",
-    #       "@doi:10.1038/ng.3314",
-    #       "@doi:10.1371/journal.pgen.1008489",
-    #       "@doi:10.1038/nature11247",
-    #       "@doi:10.1038/nature14248",
-    #       "@doi:10.1038/nature12787",
-    #       "@doi:10.1038/s41586-020-03145-z",
-    #       "@doi:10.1038/s41586-020-2559-3",
-    #       "@doi:10.1126/science.aaz1776",
-    #       "@doi:10.1038/s41588-018-0081-4",
-    #       "@doi:10.1016/j.ajhg.2018.04.002",
-    #       "@doi:10.1038/s41588-018-0081-4",
-    #       "@doi:10.1038/ncomms6890",
-    #       "@pmid:20624743",
-    #       "@pmid:14707169",
-    #       "@doi:10.1073/pnas.0810772105",
-    #     ]
-    #     count = len([reference for reference in references if reference in output])
-    #     print(count / len(references) > 0.5)
+    - type: python
+      value: |
+        references = [
+          "@pmid:19104045",
+          "@doi:10.1038/ng.3259",
+          "@doi:10.1038/s41467-018-06022-6",
+          "@doi:10.1126/science.aaz1776",
+          "@doi:10.1038/s41586-020-2559-3",
+          "@doi:10.1038/s41576-019-0200-9",
+          "@doi:10.1038/ng.3314",
+          "@doi:10.1371/journal.pgen.1008489",
+          "@doi:10.1038/nature11247",
+          "@doi:10.1038/nature14248",
+          "@doi:10.1038/nature12787",
+          "@doi:10.1038/s41586-020-03145-z",
+          "@doi:10.1038/s41586-020-2559-3",
+          "@doi:10.1126/science.aaz1776",
+          "@doi:10.1038/s41588-018-0081-4",
+          "@doi:10.1016/j.ajhg.2018.04.002",
+          "@doi:10.1038/s41588-018-0081-4",
+          "@doi:10.1038/ncomms6890",
+          "@pmid:20624743",
+          "@pmid:14707169",
+          "@doi:10.1073/pnas.0810772105",
+        ]
+        count = len([reference for reference in references if reference in output])
+        print(count / len(references) > 0.5)
 
 # Make sure that output...
 tests:
@@ -76,6 +82,9 @@ tests:
       title: file://./inputs/title.txt
       keywords: file://./inputs/keywords.txt
       content: file://./inputs/has_spelling_errors.md
+      messages:
+        - role: system
+          content: You are a scientist with copy-editing skills who will help in improving the text of a manuscript
     assert:
       - type: not-icontains-any
         value:
@@ -89,6 +98,9 @@ tests:
       title: file://./inputs/title.txt
       keywords: file://./inputs/keywords.txt
       content: file://./inputs/has_conclusion.md
+      messages:
+        - role: system
+          content: You are a scientist with copy-editing skills who will help in improving the text of a manuscript
     assert:
       - type: python
         value: |
