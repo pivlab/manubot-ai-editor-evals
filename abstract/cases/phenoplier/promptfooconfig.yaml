@@ -45,9 +45,9 @@ defaultTest:
 
 # Make sure that output...
 tests:
-  # ...has no spelling/grammar errors
+  # ...has no spelling errors
   - vars:
-      test_description: Has no spelling/grammar errors
+      test_description: Has no spelling errors
       title: file://./inputs/title.txt
       keywords: file://./inputs/keywords.txt
       content: file://./inputs/has_spelling_errors.md
@@ -63,7 +63,7 @@ tests:
       test_description: Doesn't start with background
       title: file://./inputs/title.txt
       keywords: file://./inputs/keywords.txt
-      content: file://./inputs/has_background.md
+      content: file://./inputs/starts_with_background.md
     assert:
       - type: python
         value: ("PhenoPLIER" not in output.split(".")[0])
@@ -73,7 +73,7 @@ tests:
       test_description: Describes method before results
       title: file://./inputs/title.txt
       keywords: file://./inputs/keywords.txt
-      content: file://./inputs/no_method_description.md
+      content: file://./inputs/doesn't_describe_method_before_results.md
     assert:
       - type: python
         value: |
@@ -86,12 +86,12 @@ tests:
           response = methods_start < results_start
           print(response)
 
-  # ...doesn't end with interpretation of results
+  # ...ends with interpretation of results
   - vars:
       test_description: Doesn't end with interpretation of results
       title: file://./inputs/title.txt
       keywords: file://./inputs/keywords.txt
-      content: file://./inputs/has_interpretation.md
+      content: file://./inputs/doesn't_end_with_interpretation_of_results.md
     assert:
       - type: python
         value: |

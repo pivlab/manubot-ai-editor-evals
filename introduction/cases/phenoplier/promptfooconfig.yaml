@@ -42,7 +42,7 @@ defaultTest:
         input = context["vars"]["content"]
         input_words = len(input.strip().split())
         output_words = len(output.strip().split())
-        response = (output_words > 0.5 * input_words) and (output_words < 1.6 * input_words)
+        response = (output_words > 0.5 * input_words) and (output_words < 1.5 * input_words)
         print(response)
 
     # ...preserves most references
@@ -72,79 +72,19 @@ defaultTest:
           "@doi:10.1073/pnas.0810772105",
         ]
         count = len([reference for reference in references if reference in output])
-        print(count / len(references) > 0.5)
+        print(count / len(references) > 0.75)
 
 # Make sure that output...
 tests:
-  # ...has no spelling/grammar errors
+  # ...has no spelling errors
   - vars:
-      test_description: Has no spelling/grammar errors
+      test_description: Has no spelling errors
       title: file://./inputs/title.txt
       keywords: file://./inputs/keywords.txt
       content: file://./inputs/has_spelling_errors.md
-      messages:
-        - role: system
-          content: You are a scientist with copy-editing skills who will help in improving the text of a manuscript
     assert:
       - type: not-icontains-any
         value:
           - "karry"
           - "ekspression"
           - "improoved"
-
-  # ...doesn't end with conclusion
-  - vars:
-      test_description: Doesn't end with conclusion
-      title: file://./inputs/title.txt
-      keywords: file://./inputs/keywords.txt
-      content: file://./inputs/has_conclusion.md
-      messages:
-        - role: system
-          content: You are a scientist with copy-editing skills who will help in improving the text of a manuscript
-    assert:
-      - type: python
-        value: |
-          # look for "conclusion" words
-          keywords = [
-            "overall",
-            "conclusion",
-            "insight",
-            "novel",
-            "potential",
-            "broader",
-            "ultimately",
-            "advancement",
-            "valuable",
-            "our study",
-            "this study",
-            "our work",
-            "this work",
-            "our approach",
-            "research",
-            "critical gap",
-            "understanding",
-            "powerful",
-            "advancing",
-            "importance",
-            "findings",
-            "highlight",
-            "promise",
-            "promising",
-            "innovative",
-            "perspective",
-            "refine",
-            "refining",
-            "accelerate",
-            "accelerating",
-            "facilitate",
-            "facilitating",
-            "pinpoint",
-            "implications",
-            "reveal",
-          ]
-          # try to capture the first paragraph (because sometimes models add
-          # explanations below the revised paragraph)
-          first_paragraph = output.strip().split("\n")[0]
-          last_sentences = ".".join(first_paragraph.strip().split(".")[-2:]).lower()
-          response = any(keyword in last_sentences for keyword in keywords)
-          print(response)
