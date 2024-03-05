@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 models = {
     "ollama:deepseek-llm:7b-chat-fp16": 5,
     "ollama:llama2:13b-chat-q8_0": 5,
-    "ollama:llama2:7b-chat-fp16": 1,
+    "ollama:llama2:7b-chat-fp16": 5,
     "ollama:mistral:7b-instruct-fp16": 5,
     "ollama:mistral:7b-instruct-v0.2-fp16": 5,
     "ollama:mixtral:8x7b-instruct-v0.1-q8_0": 5,
