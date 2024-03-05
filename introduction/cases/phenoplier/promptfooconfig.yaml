@@ -60,9 +60,9 @@ tests:
           - "ekspression"
           - "improoved"
 
-  # ...keeps most references to other articles
+  # ...keeps most references to other articles and doesn't make them up
   - vars:
-      test_description: Keeps most references to other articles
+      test_description: Keeps most references to other articles and doesn't make them up
       title: file://./inputs/title.txt
       keywords: file://./inputs/keywords.txt
       content: file://./inputs/has_references_to_articles.md
@@ -102,13 +102,6 @@ tests:
           count = len([ref for ref in references if ref in output])
           print(count / len(references) > 0.50)
 
-  # ...doesn't make up references to other articles
-  - vars:
-      test_description: Doesn't make up references to other articles
-      title: file://./inputs/title.txt
-      keywords: file://./inputs/keywords.txt
-      content: file://./inputs/has_references_to_articles.md
-    assert:
       - type: python
         value: |
           import re
