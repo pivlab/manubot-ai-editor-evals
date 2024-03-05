@@ -9865,7 +9865,7 @@ config:
         test_description: Doesn't start with background
         title: file://./inputs/title.txt
         keywords: file://./inputs/keywords.txt
-        content: file://./inputs/starts_with_background.md
+        content: file://./inputs/doesnt_starts_with_background.md
       assert:
         - *ref_22
     - vars:
