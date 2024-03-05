@@ -4,7 +4,6 @@ channels:
   - defaults
 dependencies:
   - ipython
-  - langchain=0.0.340
   - nodejs=20.8.*
   - pip
   - python=3.12.*
