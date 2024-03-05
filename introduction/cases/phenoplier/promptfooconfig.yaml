@@ -71,7 +71,7 @@ tests:
         value: |
           input = context["vars"]["content"]
           
-          references = [
+          references = {
             "@pmid:19104045",
             "@doi:10.1038/ng.3259",
             "@doi:10.1038/s41467-018-06022-6",
@@ -93,7 +93,7 @@ tests:
             "@pmid:20624743",
             "@pmid:14707169",
             "@doi:10.1073/pnas.0810772105",
-          ]
+          }
           
           # keep only references that are present in the input (this is needed because
           #  references might be removed from the input in some cases)
@@ -101,3 +101,50 @@ tests:
           
           count = len([ref for ref in references if ref in output])
           print(count / len(references) > 0.50)
+
+  # ...doesn't make up references to other articles
+  - vars:
+      test_description: Doesn't make up references to other articles
+      title: file://./inputs/title.txt
+      keywords: file://./inputs/keywords.txt
+      content: file://./inputs/has_references_to_articles.md
+    assert:
+      - type: python
+        value: |
+          import re
+          
+          input = context["vars"]["content"]
+          
+          references = {
+            "@pmid:19104045",
+            "@doi:10.1038/ng.3259",
+            "@doi:10.1038/s41467-018-06022-6",
+            "@doi:10.1126/science.aaz1776",
+            "@doi:10.1038/s41586-020-2559-3",
+            "@doi:10.1038/s41576-019-0200-9",
+            "@doi:10.1038/ng.3314",
+            "@doi:10.1371/journal.pgen.1008489",
+            "@doi:10.1038/nature11247",
+            "@doi:10.1038/nature14248",
+            "@doi:10.1038/nature12787",
+            "@doi:10.1038/s41586-020-03145-z",
+            "@doi:10.1038/s41586-020-2559-3",
+            "@doi:10.1126/science.aaz1776",
+            "@doi:10.1038/s41588-018-0081-4",
+            "@doi:10.1016/j.ajhg.2018.04.002",
+            "@doi:10.1038/s41588-018-0081-4",
+            "@doi:10.1038/ncomms6890",
+            "@pmid:20624743",
+            "@pmid:14707169",
+            "@doi:10.1073/pnas.0810772105",
+          }
+          
+          # keep only references that are present in the input (this is needed because
+          #  references might be removed from the input in some cases)
+          references = [ref for ref in references if ref in input]
+          
+          # capture current references in the output using a regex
+          output_references = re.findall(r'@[^ ;\]]+', output)
+          
+          n_fake_refs = len([ref for ref in output_references if ref not in references])
+          print(n_fake_refs == 0)
