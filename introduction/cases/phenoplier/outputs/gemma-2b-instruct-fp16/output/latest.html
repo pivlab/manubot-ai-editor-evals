@@ -1,0 +1,1850 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Eval Output</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial,
+          sans-serif;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        text-align: left;
+        word-break: break-all;
+      }
+      th,
+      td {
+        padding: 5px;
+        min-width: 200px;
+        white-space: pre-line;
+        vertical-align: top;
+      }
+
+      tr > td[data-content^='[PASS]'] {
+        color: green;
+      }
+      tr > td[data-content^='[FAIL]'] {
+        color: #ad0000;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        
+        <th>content</th>
+        
+        <th>keywords</th>
+        
+        <th>test_description</th>
+        
+        <th>title</th>
+        
+        <th>/home/miltondp/projects/others/manubot/manubot-ai-editor-evals/introduction/prompts/baseline.txt</th>
+        
+        <th>/home/miltondp/projects/others/manubot/manubot-ai-editor-evals/introduction/prompts/candidate.txt</th>
+        
+      </thead>
+      <tbody>
+        
+        <tr>
+          
+          <td data-content="Genes work together in context-specific networks to karry out different functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can change their functional role and, at a higher level, affect disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, determining how genes influence complex traits requires mechanistically understanding ekspression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9], which in turn should lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies have described different regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3] including genetic effects on gene expression across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has improoved the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].">Genes work together in context-specific networks to karry out different functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can change their functional role and, at a higher level, affect disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, determining how genes influence complex traits requires mechanistically understanding ekspression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9], which in turn should lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies have described different regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3] including genetic effects on gene expression across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has improoved the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].</td>
+          
+          <td data-content="genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits">genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits</td>
+          
+          <td data-content="Has no spelling errors">Has no spelling errors</td>
+          
+          <td data-content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms">Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms</td>
+          
+          <td data-content="[FAIL] (0.71)
+
+Python code returned false
+len(output.strip().split(&quot;&#92;n&quot;)) == 1
+---
+**Rewritten paragraph:**
+
+Genetic interactions across different cellular and molecular networks are crucial in shaping disease etiology and drug mechanisms. Elucidating how these networks regulate complex traits is a multifaceted endeavor, requiring a deep understanding of gene expression patterns across multiple cell types. Integrative approaches that combine functional genomics data with genome-wide association studies provide a robust framework for identifying and understanding transcriptional mechanisms that contribute to disease pathogenesis. This integrative approach has led to significant advancements in disease research, with insights into disease etiology and drug repurposing emerging from complex trait research.
+
+Reason: Python code returned false
+len(output.strip().split(&quot;&#92;n&quot;)) == 1">[FAIL] (0.71)
+
+Python code returned false
+len(output.strip().split("\n")) == 1
+---
+**Rewritten paragraph:**
+
+Genetic interactions across different cellular and molecular networks are crucial in shaping disease etiology and drug mechanisms. Elucidating how these networks regulate complex traits is a multifaceted endeavor, requiring a deep understanding of gene expression patterns across multiple cell types. Integrative approaches that combine functional genomics data with genome-wide association studies provide a robust framework for identifying and understanding transcriptional mechanisms that contribute to disease pathogenesis. This integrative approach has led to significant advancements in disease research, with insights into disease etiology and drug repurposing emerging from complex trait research.
+
+Reason: Python code returned false
+len(output.strip().split("\n")) == 1</td>
+          
+          <td data-content="[FAIL] (0.71)
+
+Python code returned false
+len(output.strip().split(&quot;&#92;n&quot;)) == 1
+---
+**Context:** Advances in genetic research have revealed the critical role of gene expression patterns in understanding complex traits and diseases. However, our current understanding of gene regulation across different cell types is still incomplete.
+
+**Content:** This manuscript introduces a novel approach to study the regulation of complex traits by integrating functional genomics data with genome-wide association studies. By combining these two approaches, we aim to identify the transcriptional mechanisms that are involved in disease etiology and drug mechanisms. We hope that this work will pave the way for novel therapeutic approaches to diseases that are currently challenging to treat.
+
+**Conclusion:** This research provides a detailed understanding of the genetic regulation of complex traits and sheds light on the importance of gene expression patterns in understanding disease etiology and drug mechanisms.
+
+Reason: Python code returned false
+len(output.strip().split(&quot;&#92;n&quot;)) == 1">[FAIL] (0.71)
+
+Python code returned false
+len(output.strip().split("\n")) == 1
+---
+**Context:** Advances in genetic research have revealed the critical role of gene expression patterns in understanding complex traits and diseases. However, our current understanding of gene regulation across different cell types is still incomplete.
+
+**Content:** This manuscript introduces a novel approach to study the regulation of complex traits by integrating functional genomics data with genome-wide association studies. By combining these two approaches, we aim to identify the transcriptional mechanisms that are involved in disease etiology and drug mechanisms. We hope that this work will pave the way for novel therapeutic approaches to diseases that are currently challenging to treat.
+
+**Conclusion:** This research provides a detailed understanding of the genetic regulation of complex traits and sheds light on the importance of gene expression patterns in understanding disease etiology and drug mechanisms.
+
+Reason: Python code returned false
+len(output.strip().split("\n")) == 1</td>
+          
+        </tr>
+        
+        <tr>
+          
+          <td data-content="Genes work together in context-specific networks to karry out different functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can change their functional role and, at a higher level, affect disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, determining how genes influence complex traits requires mechanistically understanding ekspression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9], which in turn should lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies have described different regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3] including genetic effects on gene expression across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has improoved the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].">Genes work together in context-specific networks to karry out different functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can change their functional role and, at a higher level, affect disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, determining how genes influence complex traits requires mechanistically understanding ekspression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9], which in turn should lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies have described different regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3] including genetic effects on gene expression across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has improoved the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].</td>
+          
+          <td data-content="genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits">genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits</td>
+          
+          <td data-content="Has no spelling errors">Has no spelling errors</td>
+          
+          <td data-content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms">Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms</td>
+          
+          <td data-content="[FAIL] (0.57)
+
+Expected output to not contain one of &quot;authors, Introduction:, Keywords:, References:&quot;
+---
+Sure, here is the revised paragraph from the introduction:
+
+&quot;The coordinated regulation of genes and networks across various cell types is crucial for understanding disease etiology and drug mechanisms. Investigating how these genes collectively influence complex traits requires an integrative approach that combines functional genomics and genome-wide association studies. By integrating data from multiple sources, including genetic, transcriptional, and functional information, we aim to uncover the molecular mechanisms that contribute to disease development and identify potential therapeutic targets. This integrated approach has the potential to provide novel insights into disease etiology and lead to the development of more effective treatments.&quot;
+
+Reason: Expected output to not contain one of &quot;authors, Introduction:, Keywords:, References:&quot;">[FAIL] (0.57)
+
+Expected output to not contain one of "authors, Introduction:, Keywords:, References:"
+---
+Sure, here is the revised paragraph from the introduction:
+
+"The coordinated regulation of genes and networks across various cell types is crucial for understanding disease etiology and drug mechanisms. Investigating how these genes collectively influence complex traits requires an integrative approach that combines functional genomics and genome-wide association studies. By integrating data from multiple sources, including genetic, transcriptional, and functional information, we aim to uncover the molecular mechanisms that contribute to disease development and identify potential therapeutic targets. This integrated approach has the potential to provide novel insights into disease etiology and lead to the development of more effective treatments."
+
+Reason: Expected output to not contain one of "authors, Introduction:, Keywords:, References:"</td>
+          
+          <td data-content="[FAIL] (0.86)
+
+Python code returned false
+len(output.strip().split(&quot;&#92;n&quot;)) == 1
+---
+Sure, here is the revised paragraph:
+
+Genetic studies have demonstrated that variations in gene expression patterns contribute to the etiology of complex diseases. However, there is a significant gap in our understanding of how these changes in gene expression impact disease processes. Here, we propose a novel approach to fill this gap by integrating functional genomics and genome-wide association studies to comprehensively understand the genetic mechanisms underlying complex traits. Our method utilizes machine learning algorithms to identify and validate novel regulatory DNA elements and transcriptional mechanisms that influence gene expression across multiple cell types. We demonstrate that this approach is powerful in identifying disease-relevant molecular mechanisms, paving the way for the development of novel therapeutic strategies for complex diseases.
+
+Reason: Python code returned false
+len(output.strip().split(&quot;&#92;n&quot;)) == 1">[FAIL] (0.86)
+
+Python code returned false
+len(output.strip().split("\n")) == 1
+---
+Sure, here is the revised paragraph:
+
+Genetic studies have demonstrated that variations in gene expression patterns contribute to the etiology of complex diseases. However, there is a significant gap in our understanding of how these changes in gene expression impact disease processes. Here, we propose a novel approach to fill this gap by integrating functional genomics and genome-wide association studies to comprehensively understand the genetic mechanisms underlying complex traits. Our method utilizes machine learning algorithms to identify and validate novel regulatory DNA elements and transcriptional mechanisms that influence gene expression across multiple cell types. We demonstrate that this approach is powerful in identifying disease-relevant molecular mechanisms, paving the way for the development of novel therapeutic strategies for complex diseases.
+
+Reason: Python code returned false
+len(output.strip().split("\n")) == 1</td>
+          
+        </tr>
+        
+        <tr>
+          
+          <td data-content="Genes work together in context-specific networks to karry out different functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can change their functional role and, at a higher level, affect disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, determining how genes influence complex traits requires mechanistically understanding ekspression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9], which in turn should lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies have described different regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3] including genetic effects on gene expression across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has improoved the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].">Genes work together in context-specific networks to karry out different functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can change their functional role and, at a higher level, affect disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, determining how genes influence complex traits requires mechanistically understanding ekspression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9], which in turn should lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies have described different regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3] including genetic effects on gene expression across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has improoved the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].</td>
+          
+          <td data-content="genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits">genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits</td>
+          
+          <td data-content="Has no spelling errors">Has no spelling errors</td>
+          
+          <td data-content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms">Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms</td>
+          
+          <td data-content="[PASS] (1.00)
+
+Genes work together in context-specific networks to carry out different functions, impacting disease etiology and drug mechanisms. Precise understanding of how these genes influence complex traits requires a mechanistic approach that integrates functional genomics and whole-genome association studies. By combining data from genetic studies, functional genomics, and GWAS, researchers can identify and validate transcriptional mechanisms that contribute to tissue- and cell lineage-specific pathologies. This integrative approach provides a deeper mechanistic understanding of disease etiology and opens avenues for the development of more effective therapeutic strategies.
+
+Reason: All assertions passed">[PASS] (1.00)
+
+Genes work together in context-specific networks to carry out different functions, impacting disease etiology and drug mechanisms. Precise understanding of how these genes influence complex traits requires a mechanistic approach that integrates functional genomics and whole-genome association studies. By combining data from genetic studies, functional genomics, and GWAS, researchers can identify and validate transcriptional mechanisms that contribute to tissue- and cell lineage-specific pathologies. This integrative approach provides a deeper mechanistic understanding of disease etiology and opens avenues for the development of more effective therapeutic strategies.
+
+Reason: All assertions passed</td>
+          
+          <td data-content="[FAIL] (0.86)
+
+Python code returned false
+len(output.strip().split(&quot;&#92;n&quot;)) == 1
+---
+Sure, here is the revised paragraph from the introduction of the manuscript:
+
+In the realm of complex traits, understanding how genes regulate gene expression across different cell types is crucial for uncovering disease etiology and developing novel therapeutic strategies. However, despite extensive research efforts, a comprehensive understanding of these gene expression mechanisms remains elusive. This is particularly relevant in the context of drug repurposing, where identifying reliable therapeutic targets is essential for developing effective interventions to treat diseases that affect multiple tissues and cell types.
+
+This manuscript seeks to address this knowledge gap by integrating functional genomics and genome-wide association studies to elucidate the role of genetic variation in influencing complex traits. By combining these approaches, we aim to uncover novel transcriptional mechanisms that are commonly associated with tissue- and cell lineage-specific pathology. These findings will have significant implications for advancing our understanding of disease etiology, identifying novel therapeutic targets, and developing personalized medicine approaches.
+
+Reason: Python code returned false
+len(output.strip().split(&quot;&#92;n&quot;)) == 1">[FAIL] (0.86)
+
+Python code returned false
+len(output.strip().split("\n")) == 1
+---
+Sure, here is the revised paragraph from the introduction of the manuscript:
+
+In the realm of complex traits, understanding how genes regulate gene expression across different cell types is crucial for uncovering disease etiology and developing novel therapeutic strategies. However, despite extensive research efforts, a comprehensive understanding of these gene expression mechanisms remains elusive. This is particularly relevant in the context of drug repurposing, where identifying reliable therapeutic targets is essential for developing effective interventions to treat diseases that affect multiple tissues and cell types.
+
+This manuscript seeks to address this knowledge gap by integrating functional genomics and genome-wide association studies to elucidate the role of genetic variation in influencing complex traits. By combining these approaches, we aim to uncover novel transcriptional mechanisms that are commonly associated with tissue- and cell lineage-specific pathology. These findings will have significant implications for advancing our understanding of disease etiology, identifying novel therapeutic targets, and developing personalized medicine approaches.
+
+Reason: Python code returned false
+len(output.strip().split("\n")) == 1</td>
+          
+        </tr>
+        
+        <tr>
+          
+          <td data-content="Genes work together in context-specific networks to karry out different functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can change their functional role and, at a higher level, affect disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, determining how genes influence complex traits requires mechanistically understanding ekspression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9], which in turn should lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies have described different regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3] including genetic effects on gene expression across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has improoved the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].">Genes work together in context-specific networks to karry out different functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can change their functional role and, at a higher level, affect disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, determining how genes influence complex traits requires mechanistically understanding ekspression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9], which in turn should lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies have described different regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3] including genetic effects on gene expression across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has improoved the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].</td>
+          
+          <td data-content="genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits">genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits</td>
+          
+          <td data-content="Has no spelling errors">Has no spelling errors</td>
+          
+          <td data-content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms">Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms</td>
+          
+          <td data-content="[PASS] (1.00)
+
+Genes are intricately co-regulated to orchestrate various cellular and physiological processes in context-specific manners. Variations in these co-regulated genes can profoundly impact the disease etiology and therapeutic responses. Elucidating the mechanisms by which these genes influence complex traits is critical for developing effective interventions. Advances in functional genomics and whole-genome association studies have facilitated our understanding of these co-regulation networks, with many key regulatory elements and genetic variants being identified across different tissues and cell types. However, the precise roles of these genes in disease pathogenesis remain largely unknown, hindering the development of targeted therapies. Nonetheless, by integrating and analyzing functional genomic data with genetic variation information, researchers have gained insights into the transcriptional mechanisms that drive complex traits, paving the way for the identification of promising therapeutic targets.
+
+Reason: All assertions passed">[PASS] (1.00)
+
+Genes are intricately co-regulated to orchestrate various cellular and physiological processes in context-specific manners. Variations in these co-regulated genes can profoundly impact the disease etiology and therapeutic responses. Elucidating the mechanisms by which these genes influence complex traits is critical for developing effective interventions. Advances in functional genomics and whole-genome association studies have facilitated our understanding of these co-regulation networks, with many key regulatory elements and genetic variants being identified across different tissues and cell types. However, the precise roles of these genes in disease pathogenesis remain largely unknown, hindering the development of targeted therapies. Nonetheless, by integrating and analyzing functional genomic data with genetic variation information, researchers have gained insights into the transcriptional mechanisms that drive complex traits, paving the way for the identification of promising therapeutic targets.
+
+Reason: All assertions passed</td>
+          
+          <td data-content="[FAIL] (0.86)
+
+Python code returned false
+len(output.strip().split(&quot;&#92;n&quot;)) == 1
+---
+Sure, here is the revised paragraph:
+
+Functional genomics analysis of complex traits requires the integration of high-dimensional gene expression and genetic data to comprehensively understand the etiology and mechanisms of diseases. Recent studies have highlighted the importance of genetic mechanisms in shaping disease susceptibility and disease progression. However, our understanding of how variations in gene expression contribute to complex traits is still incomplete. This knowledge gap hampers our ability to develop effective therapeutic strategies for various diseases. This manuscript addresses this knowledge gap by integrating functional genomics data and genome-wide association studies to comprehensively characterize the genetic architecture of complex traits. This study provides novel insights into the molecular mechanisms underlying these disorders and identifies potential therapeutic targets for disease prevention and treatment.
+
+Reason: Python code returned false
+len(output.strip().split(&quot;&#92;n&quot;)) == 1">[FAIL] (0.86)
+
+Python code returned false
+len(output.strip().split("\n")) == 1
+---
+Sure, here is the revised paragraph:
+
+Functional genomics analysis of complex traits requires the integration of high-dimensional gene expression and genetic data to comprehensively understand the etiology and mechanisms of diseases. Recent studies have highlighted the importance of genetic mechanisms in shaping disease susceptibility and disease progression. However, our understanding of how variations in gene expression contribute to complex traits is still incomplete. This knowledge gap hampers our ability to develop effective therapeutic strategies for various diseases. This manuscript addresses this knowledge gap by integrating functional genomics data and genome-wide association studies to comprehensively characterize the genetic architecture of complex traits. This study provides novel insights into the molecular mechanisms underlying these disorders and identifies potential therapeutic targets for disease prevention and treatment.
+
+Reason: Python code returned false
+len(output.strip().split("\n")) == 1</td>
+          
+        </tr>
+        
+        <tr>
+          
+          <td data-content="Genes work together in context-specific networks to karry out different functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can change their functional role and, at a higher level, affect disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, determining how genes influence complex traits requires mechanistically understanding ekspression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9], which in turn should lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies have described different regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3] including genetic effects on gene expression across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has improoved the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].">Genes work together in context-specific networks to karry out different functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can change their functional role and, at a higher level, affect disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, determining how genes influence complex traits requires mechanistically understanding ekspression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9], which in turn should lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies have described different regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3] including genetic effects on gene expression across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has improoved the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].</td>
+          
+          <td data-content="genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits">genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits</td>
+          
+          <td data-content="Has no spelling errors">Has no spelling errors</td>
+          
+          <td data-content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms">Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms</td>
+          
+          <td data-content="[FAIL] (0.86)
+
+Python code returned false
+len(output.strip().split(&quot;&#92;n&quot;)) == 1
+---
+Sure, here is the revised paragraph from the introduction of the manuscript:
+
+Genes interact with each other in context-specific networks to carry out different functions. Variations in these genes can change their functional role, affecting disease-relevant biological processes. Understanding how genes influence complex traits requires mechanistically understanding expression regulation across different cell types, which ultimately leads to improved treatments. Recent studies have demonstrated that functional genomics data and GWAS data can synergistically improve the identification of transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology. Integrating these data has enhanced our understanding of disease etiology and drug mechanisms, paving the way for innovative therapeutic approaches.
+
+Reason: Python code returned false
+len(output.strip().split(&quot;&#92;n&quot;)) == 1">[FAIL] (0.86)
+
+Python code returned false
+len(output.strip().split("\n")) == 1
+---
+Sure, here is the revised paragraph from the introduction of the manuscript:
+
+Genes interact with each other in context-specific networks to carry out different functions. Variations in these genes can change their functional role, affecting disease-relevant biological processes. Understanding how genes influence complex traits requires mechanistically understanding expression regulation across different cell types, which ultimately leads to improved treatments. Recent studies have demonstrated that functional genomics data and GWAS data can synergistically improve the identification of transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology. Integrating these data has enhanced our understanding of disease etiology and drug mechanisms, paving the way for innovative therapeutic approaches.
+
+Reason: Python code returned false
+len(output.strip().split("\n")) == 1</td>
+          
+          <td data-content="[PASS] (1.00)
+
+Existing knowledge suggests that genetic variations in regulatory DNA elements and gene expression are critical for disease etiology and drug mechanisms. However, there is a lack of direct evidence on the role of complex trait regulation in these processes. This is an open question that our study aims to address. We propose a novel method that integrates functional genomics and genome-wide association studies to comprehensively understand how genetic variations in regulatory DNA elements and gene expression contribute to disease etiology and drug mechanisms across different cell types. This research will have important implications for understanding complex traits, which are linked to a wide range of diseases, including cancer and metabolic disorders.
+
+Reason: All assertions passed">[PASS] (1.00)
+
+Existing knowledge suggests that genetic variations in regulatory DNA elements and gene expression are critical for disease etiology and drug mechanisms. However, there is a lack of direct evidence on the role of complex trait regulation in these processes. This is an open question that our study aims to address. We propose a novel method that integrates functional genomics and genome-wide association studies to comprehensively understand how genetic variations in regulatory DNA elements and gene expression contribute to disease etiology and drug mechanisms across different cell types. This research will have important implications for understanding complex traits, which are linked to a wide range of diseases, including cancer and metabolic disorders.
+
+Reason: All assertions passed</td>
+          
+        </tr>
+        
+        <tr>
+          
+          <td data-content="Genes work together in context-specific networks to carry out different functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can change their functional role and, at a higher level, affect disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, determining how genes influence complex traits requires mechanistically understanding expression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9], which in turn should lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies have described different regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3] including genetic effects on gene expression across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has improved the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].">Genes work together in context-specific networks to carry out different functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can change their functional role and, at a higher level, affect disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, determining how genes influence complex traits requires mechanistically understanding expression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9], which in turn should lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies have described different regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3] including genetic effects on gene expression across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has improved the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].</td>
+          
+          <td data-content="genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits">genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits</td>
+          
+          <td data-content="Keeps most references to other articles and doesn&#39;t make them up">Keeps most references to other articles and doesn't make them up</td>
+          
+          <td data-content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms">Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms</td>
+          
+          <td data-content="[FAIL] (0.88)
+
+Python code returned false
+input = context[&quot;vars&quot;][&quot;content&quot;]
+
+references = {
+  &quot;@pmid:19104045&quot;,
+  &quot;@doi:10.1038/ng.3259&quot;,
+  &quot;@doi:10.1038/s41467-018-06022-6&quot;,
+  &quot;@doi:10.1126/science.aaz1776&quot;,
+  &quot;@doi:10.1038/s41586-020-2559-3&quot;,
+  &quot;@doi:10.1038/s41576-019-0200-9&quot;,
+  &quot;@doi:10.1038/ng.3314&quot;,
+  &quot;@doi:10.1371/journal.pgen.1008489&quot;,
+  &quot;@doi:10.1038/nature11247&quot;,
+  &quot;@doi:10.1038/nature14248&quot;,
+  &quot;@doi:10.1038/nature12787&quot;,
+  &quot;@doi:10.1038/s41586-020-03145-z&quot;,
+  &quot;@doi:10.1038/s41586-020-2559-3&quot;,
+  &quot;@doi:10.1126/science.aaz1776&quot;,
+  &quot;@doi:10.1038/s41588-018-0081-4&quot;,
+  &quot;@doi:10.1016/j.ajhg.2018.04.002&quot;,
+  &quot;@doi:10.1038/s41588-018-0081-4&quot;,
+  &quot;@doi:10.1038/ncomms6890&quot;,
+  &quot;@pmid:20624743&quot;,
+  &quot;@pmid:14707169&quot;,
+  &quot;@doi:10.1073/pnas.0810772105&quot;,
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) &gt; 0.50)
+
+---
+Genes interact and co-express to perform diverse functions in cells, contributing to a range of biological processes relevant to disease etiology and drug mechanisms. Understanding how these interactions influence complex traits requires a multi-layered approach that integrates gene expression data with functional genomics and GWAS data. This integrative approach allows for the identification of transcriptional mechanisms that, when dysregulated, are implicated in tissue- and cell lineage-specific pathologies. Such insights are crucial for the development of novel therapeutic strategies by guiding the identification of potential drug targets and optimizing treatment approaches for complex diseases.
+
+Reason: Python code returned false
+input = context[&quot;vars&quot;][&quot;content&quot;]
+
+references = {
+  &quot;@pmid:19104045&quot;,
+  &quot;@doi:10.1038/ng.3259&quot;,
+  &quot;@doi:10.1038/s41467-018-06022-6&quot;,
+  &quot;@doi:10.1126/science.aaz1776&quot;,
+  &quot;@doi:10.1038/s41586-020-2559-3&quot;,
+  &quot;@doi:10.1038/s41576-019-0200-9&quot;,
+  &quot;@doi:10.1038/ng.3314&quot;,
+  &quot;@doi:10.1371/journal.pgen.1008489&quot;,
+  &quot;@doi:10.1038/nature11247&quot;,
+  &quot;@doi:10.1038/nature14248&quot;,
+  &quot;@doi:10.1038/nature12787&quot;,
+  &quot;@doi:10.1038/s41586-020-03145-z&quot;,
+  &quot;@doi:10.1038/s41586-020-2559-3&quot;,
+  &quot;@doi:10.1126/science.aaz1776&quot;,
+  &quot;@doi:10.1038/s41588-018-0081-4&quot;,
+  &quot;@doi:10.1016/j.ajhg.2018.04.002&quot;,
+  &quot;@doi:10.1038/s41588-018-0081-4&quot;,
+  &quot;@doi:10.1038/ncomms6890&quot;,
+  &quot;@pmid:20624743&quot;,
+  &quot;@pmid:14707169&quot;,
+  &quot;@doi:10.1073/pnas.0810772105&quot;,
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) &gt; 0.50)">[FAIL] (0.88)
+
+Python code returned false
+input = context["vars"]["content"]
+
+references = {
+  "@pmid:19104045",
+  "@doi:10.1038/ng.3259",
+  "@doi:10.1038/s41467-018-06022-6",
+  "@doi:10.1126/science.aaz1776",
+  "@doi:10.1038/s41586-020-2559-3",
+  "@doi:10.1038/s41576-019-0200-9",
+  "@doi:10.1038/ng.3314",
+  "@doi:10.1371/journal.pgen.1008489",
+  "@doi:10.1038/nature11247",
+  "@doi:10.1038/nature14248",
+  "@doi:10.1038/nature12787",
+  "@doi:10.1038/s41586-020-03145-z",
+  "@doi:10.1038/s41586-020-2559-3",
+  "@doi:10.1126/science.aaz1776",
+  "@doi:10.1038/s41588-018-0081-4",
+  "@doi:10.1016/j.ajhg.2018.04.002",
+  "@doi:10.1038/s41588-018-0081-4",
+  "@doi:10.1038/ncomms6890",
+  "@pmid:20624743",
+  "@pmid:14707169",
+  "@doi:10.1073/pnas.0810772105",
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) > 0.50)
+
+---
+Genes interact and co-express to perform diverse functions in cells, contributing to a range of biological processes relevant to disease etiology and drug mechanisms. Understanding how these interactions influence complex traits requires a multi-layered approach that integrates gene expression data with functional genomics and GWAS data. This integrative approach allows for the identification of transcriptional mechanisms that, when dysregulated, are implicated in tissue- and cell lineage-specific pathologies. Such insights are crucial for the development of novel therapeutic strategies by guiding the identification of potential drug targets and optimizing treatment approaches for complex diseases.
+
+Reason: Python code returned false
+input = context["vars"]["content"]
+
+references = {
+  "@pmid:19104045",
+  "@doi:10.1038/ng.3259",
+  "@doi:10.1038/s41467-018-06022-6",
+  "@doi:10.1126/science.aaz1776",
+  "@doi:10.1038/s41586-020-2559-3",
+  "@doi:10.1038/s41576-019-0200-9",
+  "@doi:10.1038/ng.3314",
+  "@doi:10.1371/journal.pgen.1008489",
+  "@doi:10.1038/nature11247",
+  "@doi:10.1038/nature14248",
+  "@doi:10.1038/nature12787",
+  "@doi:10.1038/s41586-020-03145-z",
+  "@doi:10.1038/s41586-020-2559-3",
+  "@doi:10.1126/science.aaz1776",
+  "@doi:10.1038/s41588-018-0081-4",
+  "@doi:10.1016/j.ajhg.2018.04.002",
+  "@doi:10.1038/s41588-018-0081-4",
+  "@doi:10.1038/ncomms6890",
+  "@pmid:20624743",
+  "@pmid:14707169",
+  "@doi:10.1073/pnas.0810772105",
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) > 0.50)</td>
+          
+          <td data-content="[FAIL] (0.75)
+
+Python code returned false
+input = context[&quot;vars&quot;][&quot;content&quot;]
+
+references = {
+  &quot;@pmid:19104045&quot;,
+  &quot;@doi:10.1038/ng.3259&quot;,
+  &quot;@doi:10.1038/s41467-018-06022-6&quot;,
+  &quot;@doi:10.1126/science.aaz1776&quot;,
+  &quot;@doi:10.1038/s41586-020-2559-3&quot;,
+  &quot;@doi:10.1038/s41576-019-0200-9&quot;,
+  &quot;@doi:10.1038/ng.3314&quot;,
+  &quot;@doi:10.1371/journal.pgen.1008489&quot;,
+  &quot;@doi:10.1038/nature11247&quot;,
+  &quot;@doi:10.1038/nature14248&quot;,
+  &quot;@doi:10.1038/nature12787&quot;,
+  &quot;@doi:10.1038/s41586-020-03145-z&quot;,
+  &quot;@doi:10.1038/s41586-020-2559-3&quot;,
+  &quot;@doi:10.1126/science.aaz1776&quot;,
+  &quot;@doi:10.1038/s41588-018-0081-4&quot;,
+  &quot;@doi:10.1016/j.ajhg.2018.04.002&quot;,
+  &quot;@doi:10.1038/s41588-018-0081-4&quot;,
+  &quot;@doi:10.1038/ncomms6890&quot;,
+  &quot;@pmid:20624743&quot;,
+  &quot;@pmid:14707169&quot;,
+  &quot;@doi:10.1073/pnas.0810772105&quot;,
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) &gt; 0.50)
+
+---
+Sure, here is the revised paragraph from the introduction of the manuscript:
+
+**Gap in Existing Knowledge and Importance:** Existing research has demonstrated that genetic variations can impact complex traits by influencing gene expression patterns across different cell types. However, there is a critical gap in our understanding regarding the role of genetic variations in regulating gene expression in a context-dependent manner. This knowledge gap hinders our ability to develop effective therapeutic strategies for various diseases that are associated with complex traits.
+
+**Aim of the Manuscript:** This study aims to address this knowledge gap by integrating functional genomics data with genome-wide association studies to elucidate how genetic variations influence gene expression patterns in different cell types. By bridging this knowledge gap, we aim to provide new insights into disease etiology and develop more effective therapeutic strategies for a range of complex traits.
+
+Reason: Python code returned false
+input = context[&quot;vars&quot;][&quot;content&quot;]
+
+references = {
+  &quot;@pmid:19104045&quot;,
+  &quot;@doi:10.1038/ng.3259&quot;,
+  &quot;@doi:10.1038/s41467-018-06022-6&quot;,
+  &quot;@doi:10.1126/science.aaz1776&quot;,
+  &quot;@doi:10.1038/s41586-020-2559-3&quot;,
+  &quot;@doi:10.1038/s41576-019-0200-9&quot;,
+  &quot;@doi:10.1038/ng.3314&quot;,
+  &quot;@doi:10.1371/journal.pgen.1008489&quot;,
+  &quot;@doi:10.1038/nature11247&quot;,
+  &quot;@doi:10.1038/nature14248&quot;,
+  &quot;@doi:10.1038/nature12787&quot;,
+  &quot;@doi:10.1038/s41586-020-03145-z&quot;,
+  &quot;@doi:10.1038/s41586-020-2559-3&quot;,
+  &quot;@doi:10.1126/science.aaz1776&quot;,
+  &quot;@doi:10.1038/s41588-018-0081-4&quot;,
+  &quot;@doi:10.1016/j.ajhg.2018.04.002&quot;,
+  &quot;@doi:10.1038/s41588-018-0081-4&quot;,
+  &quot;@doi:10.1038/ncomms6890&quot;,
+  &quot;@pmid:20624743&quot;,
+  &quot;@pmid:14707169&quot;,
+  &quot;@doi:10.1073/pnas.0810772105&quot;,
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) &gt; 0.50)">[FAIL] (0.75)
+
+Python code returned false
+input = context["vars"]["content"]
+
+references = {
+  "@pmid:19104045",
+  "@doi:10.1038/ng.3259",
+  "@doi:10.1038/s41467-018-06022-6",
+  "@doi:10.1126/science.aaz1776",
+  "@doi:10.1038/s41586-020-2559-3",
+  "@doi:10.1038/s41576-019-0200-9",
+  "@doi:10.1038/ng.3314",
+  "@doi:10.1371/journal.pgen.1008489",
+  "@doi:10.1038/nature11247",
+  "@doi:10.1038/nature14248",
+  "@doi:10.1038/nature12787",
+  "@doi:10.1038/s41586-020-03145-z",
+  "@doi:10.1038/s41586-020-2559-3",
+  "@doi:10.1126/science.aaz1776",
+  "@doi:10.1038/s41588-018-0081-4",
+  "@doi:10.1016/j.ajhg.2018.04.002",
+  "@doi:10.1038/s41588-018-0081-4",
+  "@doi:10.1038/ncomms6890",
+  "@pmid:20624743",
+  "@pmid:14707169",
+  "@doi:10.1073/pnas.0810772105",
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) > 0.50)
+
+---
+Sure, here is the revised paragraph from the introduction of the manuscript:
+
+**Gap in Existing Knowledge and Importance:** Existing research has demonstrated that genetic variations can impact complex traits by influencing gene expression patterns across different cell types. However, there is a critical gap in our understanding regarding the role of genetic variations in regulating gene expression in a context-dependent manner. This knowledge gap hinders our ability to develop effective therapeutic strategies for various diseases that are associated with complex traits.
+
+**Aim of the Manuscript:** This study aims to address this knowledge gap by integrating functional genomics data with genome-wide association studies to elucidate how genetic variations influence gene expression patterns in different cell types. By bridging this knowledge gap, we aim to provide new insights into disease etiology and develop more effective therapeutic strategies for a range of complex traits.
+
+Reason: Python code returned false
+input = context["vars"]["content"]
+
+references = {
+  "@pmid:19104045",
+  "@doi:10.1038/ng.3259",
+  "@doi:10.1038/s41467-018-06022-6",
+  "@doi:10.1126/science.aaz1776",
+  "@doi:10.1038/s41586-020-2559-3",
+  "@doi:10.1038/s41576-019-0200-9",
+  "@doi:10.1038/ng.3314",
+  "@doi:10.1371/journal.pgen.1008489",
+  "@doi:10.1038/nature11247",
+  "@doi:10.1038/nature14248",
+  "@doi:10.1038/nature12787",
+  "@doi:10.1038/s41586-020-03145-z",
+  "@doi:10.1038/s41586-020-2559-3",
+  "@doi:10.1126/science.aaz1776",
+  "@doi:10.1038/s41588-018-0081-4",
+  "@doi:10.1016/j.ajhg.2018.04.002",
+  "@doi:10.1038/s41588-018-0081-4",
+  "@doi:10.1038/ncomms6890",
+  "@pmid:20624743",
+  "@pmid:14707169",
+  "@doi:10.1073/pnas.0810772105",
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) > 0.50)</td>
+          
+        </tr>
+        
+        <tr>
+          
+          <td data-content="Genes work together in context-specific networks to carry out different functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can change their functional role and, at a higher level, affect disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, determining how genes influence complex traits requires mechanistically understanding expression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9], which in turn should lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies have described different regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3] including genetic effects on gene expression across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has improved the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].">Genes work together in context-specific networks to carry out different functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can change their functional role and, at a higher level, affect disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, determining how genes influence complex traits requires mechanistically understanding expression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9], which in turn should lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies have described different regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3] including genetic effects on gene expression across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has improved the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].</td>
+          
+          <td data-content="genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits">genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits</td>
+          
+          <td data-content="Keeps most references to other articles and doesn&#39;t make them up">Keeps most references to other articles and doesn't make them up</td>
+          
+          <td data-content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms">Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms</td>
+          
+          <td data-content="[FAIL] (0.75)
+
+Python code returned false
+input = context[&quot;vars&quot;][&quot;content&quot;]
+
+references = {
+  &quot;@pmid:19104045&quot;,
+  &quot;@doi:10.1038/ng.3259&quot;,
+  &quot;@doi:10.1038/s41467-018-06022-6&quot;,
+  &quot;@doi:10.1126/science.aaz1776&quot;,
+  &quot;@doi:10.1038/s41586-020-2559-3&quot;,
+  &quot;@doi:10.1038/s41576-019-0200-9&quot;,
+  &quot;@doi:10.1038/ng.3314&quot;,
+  &quot;@doi:10.1371/journal.pgen.1008489&quot;,
+  &quot;@doi:10.1038/nature11247&quot;,
+  &quot;@doi:10.1038/nature14248&quot;,
+  &quot;@doi:10.1038/nature12787&quot;,
+  &quot;@doi:10.1038/s41586-020-03145-z&quot;,
+  &quot;@doi:10.1038/s41586-020-2559-3&quot;,
+  &quot;@doi:10.1126/science.aaz1776&quot;,
+  &quot;@doi:10.1038/s41588-018-0081-4&quot;,
+  &quot;@doi:10.1016/j.ajhg.2018.04.002&quot;,
+  &quot;@doi:10.1038/s41588-018-0081-4&quot;,
+  &quot;@doi:10.1038/ncomms6890&quot;,
+  &quot;@pmid:20624743&quot;,
+  &quot;@pmid:14707169&quot;,
+  &quot;@doi:10.1073/pnas.0810772105&quot;,
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) &gt; 0.50)
+
+---
+Sure, here&#39;s the revised paragraph from the introduction of the manuscript:
+
+Genes interact within complex regulatory networks to orchestrate various cellular processes. Variations in these regulatory elements can significantly impact disease etiology and drug mechanisms. Integrating functional genomics data and genome-wide association studies has proven crucial in identifying transcriptional mechanisms that are critical for tissue- and cell lineage-specific pathology. This approach has provided valuable insights into the genetic basis of complex diseases and has paved the way for the development of novel therapeutic strategies.
+
+Reason: Python code returned false
+input = context[&quot;vars&quot;][&quot;content&quot;]
+
+references = {
+  &quot;@pmid:19104045&quot;,
+  &quot;@doi:10.1038/ng.3259&quot;,
+  &quot;@doi:10.1038/s41467-018-06022-6&quot;,
+  &quot;@doi:10.1126/science.aaz1776&quot;,
+  &quot;@doi:10.1038/s41586-020-2559-3&quot;,
+  &quot;@doi:10.1038/s41576-019-0200-9&quot;,
+  &quot;@doi:10.1038/ng.3314&quot;,
+  &quot;@doi:10.1371/journal.pgen.1008489&quot;,
+  &quot;@doi:10.1038/nature11247&quot;,
+  &quot;@doi:10.1038/nature14248&quot;,
+  &quot;@doi:10.1038/nature12787&quot;,
+  &quot;@doi:10.1038/s41586-020-03145-z&quot;,
+  &quot;@doi:10.1038/s41586-020-2559-3&quot;,
+  &quot;@doi:10.1126/science.aaz1776&quot;,
+  &quot;@doi:10.1038/s41588-018-0081-4&quot;,
+  &quot;@doi:10.1016/j.ajhg.2018.04.002&quot;,
+  &quot;@doi:10.1038/s41588-018-0081-4&quot;,
+  &quot;@doi:10.1038/ncomms6890&quot;,
+  &quot;@pmid:20624743&quot;,
+  &quot;@pmid:14707169&quot;,
+  &quot;@doi:10.1073/pnas.0810772105&quot;,
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) &gt; 0.50)">[FAIL] (0.75)
+
+Python code returned false
+input = context["vars"]["content"]
+
+references = {
+  "@pmid:19104045",
+  "@doi:10.1038/ng.3259",
+  "@doi:10.1038/s41467-018-06022-6",
+  "@doi:10.1126/science.aaz1776",
+  "@doi:10.1038/s41586-020-2559-3",
+  "@doi:10.1038/s41576-019-0200-9",
+  "@doi:10.1038/ng.3314",
+  "@doi:10.1371/journal.pgen.1008489",
+  "@doi:10.1038/nature11247",
+  "@doi:10.1038/nature14248",
+  "@doi:10.1038/nature12787",
+  "@doi:10.1038/s41586-020-03145-z",
+  "@doi:10.1038/s41586-020-2559-3",
+  "@doi:10.1126/science.aaz1776",
+  "@doi:10.1038/s41588-018-0081-4",
+  "@doi:10.1016/j.ajhg.2018.04.002",
+  "@doi:10.1038/s41588-018-0081-4",
+  "@doi:10.1038/ncomms6890",
+  "@pmid:20624743",
+  "@pmid:14707169",
+  "@doi:10.1073/pnas.0810772105",
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) > 0.50)
+
+---
+Sure, here's the revised paragraph from the introduction of the manuscript:
+
+Genes interact within complex regulatory networks to orchestrate various cellular processes. Variations in these regulatory elements can significantly impact disease etiology and drug mechanisms. Integrating functional genomics data and genome-wide association studies has proven crucial in identifying transcriptional mechanisms that are critical for tissue- and cell lineage-specific pathology. This approach has provided valuable insights into the genetic basis of complex diseases and has paved the way for the development of novel therapeutic strategies.
+
+Reason: Python code returned false
+input = context["vars"]["content"]
+
+references = {
+  "@pmid:19104045",
+  "@doi:10.1038/ng.3259",
+  "@doi:10.1038/s41467-018-06022-6",
+  "@doi:10.1126/science.aaz1776",
+  "@doi:10.1038/s41586-020-2559-3",
+  "@doi:10.1038/s41576-019-0200-9",
+  "@doi:10.1038/ng.3314",
+  "@doi:10.1371/journal.pgen.1008489",
+  "@doi:10.1038/nature11247",
+  "@doi:10.1038/nature14248",
+  "@doi:10.1038/nature12787",
+  "@doi:10.1038/s41586-020-03145-z",
+  "@doi:10.1038/s41586-020-2559-3",
+  "@doi:10.1126/science.aaz1776",
+  "@doi:10.1038/s41588-018-0081-4",
+  "@doi:10.1016/j.ajhg.2018.04.002",
+  "@doi:10.1038/s41588-018-0081-4",
+  "@doi:10.1038/ncomms6890",
+  "@pmid:20624743",
+  "@pmid:14707169",
+  "@doi:10.1073/pnas.0810772105",
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) > 0.50)</td>
+          
+          <td data-content="[FAIL] (0.75)
+
+Python code returned false
+input = context[&quot;vars&quot;][&quot;content&quot;]
+
+references = {
+  &quot;@pmid:19104045&quot;,
+  &quot;@doi:10.1038/ng.3259&quot;,
+  &quot;@doi:10.1038/s41467-018-06022-6&quot;,
+  &quot;@doi:10.1126/science.aaz1776&quot;,
+  &quot;@doi:10.1038/s41586-020-2559-3&quot;,
+  &quot;@doi:10.1038/s41576-019-0200-9&quot;,
+  &quot;@doi:10.1038/ng.3314&quot;,
+  &quot;@doi:10.1371/journal.pgen.1008489&quot;,
+  &quot;@doi:10.1038/nature11247&quot;,
+  &quot;@doi:10.1038/nature14248&quot;,
+  &quot;@doi:10.1038/nature12787&quot;,
+  &quot;@doi:10.1038/s41586-020-03145-z&quot;,
+  &quot;@doi:10.1038/s41586-020-2559-3&quot;,
+  &quot;@doi:10.1126/science.aaz1776&quot;,
+  &quot;@doi:10.1038/s41588-018-0081-4&quot;,
+  &quot;@doi:10.1016/j.ajhg.2018.04.002&quot;,
+  &quot;@doi:10.1038/s41588-018-0081-4&quot;,
+  &quot;@doi:10.1038/ncomms6890&quot;,
+  &quot;@pmid:20624743&quot;,
+  &quot;@pmid:14707169&quot;,
+  &quot;@doi:10.1073/pnas.0810772105&quot;,
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) &gt; 0.50)
+
+---
+Sure, here is the revised paragraph:
+
+In the field of genetic studies and disease research, the interplay between genetic variations and gene expression patterns remains an intricate and challenging area of investigation. Existing literature suggests that disruptions in regulatory DNA elements, including both common and tissue-specific factors, can lead to disease development through altered gene expression patterns. However, the precise mechanisms linking genetic variations to complex traits are largely unknown. Here, we present a novel approach that integrates functional genomics and genome-wide association studies to elucidate the role of genetic control mechanisms in the etiology of diseases. We demonstrate that this approach significantly improves the identification of genetic associations and provides novel insights into the molecular mechanisms by which genetic variations contribute to disease.
+
+Reason: Python code returned false
+input = context[&quot;vars&quot;][&quot;content&quot;]
+
+references = {
+  &quot;@pmid:19104045&quot;,
+  &quot;@doi:10.1038/ng.3259&quot;,
+  &quot;@doi:10.1038/s41467-018-06022-6&quot;,
+  &quot;@doi:10.1126/science.aaz1776&quot;,
+  &quot;@doi:10.1038/s41586-020-2559-3&quot;,
+  &quot;@doi:10.1038/s41576-019-0200-9&quot;,
+  &quot;@doi:10.1038/ng.3314&quot;,
+  &quot;@doi:10.1371/journal.pgen.1008489&quot;,
+  &quot;@doi:10.1038/nature11247&quot;,
+  &quot;@doi:10.1038/nature14248&quot;,
+  &quot;@doi:10.1038/nature12787&quot;,
+  &quot;@doi:10.1038/s41586-020-03145-z&quot;,
+  &quot;@doi:10.1038/s41586-020-2559-3&quot;,
+  &quot;@doi:10.1126/science.aaz1776&quot;,
+  &quot;@doi:10.1038/s41588-018-0081-4&quot;,
+  &quot;@doi:10.1016/j.ajhg.2018.04.002&quot;,
+  &quot;@doi:10.1038/s41588-018-0081-4&quot;,
+  &quot;@doi:10.1038/ncomms6890&quot;,
+  &quot;@pmid:20624743&quot;,
+  &quot;@pmid:14707169&quot;,
+  &quot;@doi:10.1073/pnas.0810772105&quot;,
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) &gt; 0.50)">[FAIL] (0.75)
+
+Python code returned false
+input = context["vars"]["content"]
+
+references = {
+  "@pmid:19104045",
+  "@doi:10.1038/ng.3259",
+  "@doi:10.1038/s41467-018-06022-6",
+  "@doi:10.1126/science.aaz1776",
+  "@doi:10.1038/s41586-020-2559-3",
+  "@doi:10.1038/s41576-019-0200-9",
+  "@doi:10.1038/ng.3314",
+  "@doi:10.1371/journal.pgen.1008489",
+  "@doi:10.1038/nature11247",
+  "@doi:10.1038/nature14248",
+  "@doi:10.1038/nature12787",
+  "@doi:10.1038/s41586-020-03145-z",
+  "@doi:10.1038/s41586-020-2559-3",
+  "@doi:10.1126/science.aaz1776",
+  "@doi:10.1038/s41588-018-0081-4",
+  "@doi:10.1016/j.ajhg.2018.04.002",
+  "@doi:10.1038/s41588-018-0081-4",
+  "@doi:10.1038/ncomms6890",
+  "@pmid:20624743",
+  "@pmid:14707169",
+  "@doi:10.1073/pnas.0810772105",
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) > 0.50)
+
+---
+Sure, here is the revised paragraph:
+
+In the field of genetic studies and disease research, the interplay between genetic variations and gene expression patterns remains an intricate and challenging area of investigation. Existing literature suggests that disruptions in regulatory DNA elements, including both common and tissue-specific factors, can lead to disease development through altered gene expression patterns. However, the precise mechanisms linking genetic variations to complex traits are largely unknown. Here, we present a novel approach that integrates functional genomics and genome-wide association studies to elucidate the role of genetic control mechanisms in the etiology of diseases. We demonstrate that this approach significantly improves the identification of genetic associations and provides novel insights into the molecular mechanisms by which genetic variations contribute to disease.
+
+Reason: Python code returned false
+input = context["vars"]["content"]
+
+references = {
+  "@pmid:19104045",
+  "@doi:10.1038/ng.3259",
+  "@doi:10.1038/s41467-018-06022-6",
+  "@doi:10.1126/science.aaz1776",
+  "@doi:10.1038/s41586-020-2559-3",
+  "@doi:10.1038/s41576-019-0200-9",
+  "@doi:10.1038/ng.3314",
+  "@doi:10.1371/journal.pgen.1008489",
+  "@doi:10.1038/nature11247",
+  "@doi:10.1038/nature14248",
+  "@doi:10.1038/nature12787",
+  "@doi:10.1038/s41586-020-03145-z",
+  "@doi:10.1038/s41586-020-2559-3",
+  "@doi:10.1126/science.aaz1776",
+  "@doi:10.1038/s41588-018-0081-4",
+  "@doi:10.1016/j.ajhg.2018.04.002",
+  "@doi:10.1038/s41588-018-0081-4",
+  "@doi:10.1038/ncomms6890",
+  "@pmid:20624743",
+  "@pmid:14707169",
+  "@doi:10.1073/pnas.0810772105",
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) > 0.50)</td>
+          
+        </tr>
+        
+        <tr>
+          
+          <td data-content="Genes work together in context-specific networks to carry out different functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can change their functional role and, at a higher level, affect disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, determining how genes influence complex traits requires mechanistically understanding expression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9], which in turn should lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies have described different regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3] including genetic effects on gene expression across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has improved the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].">Genes work together in context-specific networks to carry out different functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can change their functional role and, at a higher level, affect disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, determining how genes influence complex traits requires mechanistically understanding expression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9], which in turn should lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies have described different regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3] including genetic effects on gene expression across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has improved the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].</td>
+          
+          <td data-content="genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits">genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits</td>
+          
+          <td data-content="Keeps most references to other articles and doesn&#39;t make them up">Keeps most references to other articles and doesn't make them up</td>
+          
+          <td data-content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms">Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms</td>
+          
+          <td data-content="[FAIL] (0.63)
+
+Python code returned false
+input = context[&quot;vars&quot;][&quot;content&quot;]
+
+references = {
+  &quot;@pmid:19104045&quot;,
+  &quot;@doi:10.1038/ng.3259&quot;,
+  &quot;@doi:10.1038/s41467-018-06022-6&quot;,
+  &quot;@doi:10.1126/science.aaz1776&quot;,
+  &quot;@doi:10.1038/s41586-020-2559-3&quot;,
+  &quot;@doi:10.1038/s41576-019-0200-9&quot;,
+  &quot;@doi:10.1038/ng.3314&quot;,
+  &quot;@doi:10.1371/journal.pgen.1008489&quot;,
+  &quot;@doi:10.1038/nature11247&quot;,
+  &quot;@doi:10.1038/nature14248&quot;,
+  &quot;@doi:10.1038/nature12787&quot;,
+  &quot;@doi:10.1038/s41586-020-03145-z&quot;,
+  &quot;@doi:10.1038/s41586-020-2559-3&quot;,
+  &quot;@doi:10.1126/science.aaz1776&quot;,
+  &quot;@doi:10.1038/s41588-018-0081-4&quot;,
+  &quot;@doi:10.1016/j.ajhg.2018.04.002&quot;,
+  &quot;@doi:10.1038/s41588-018-0081-4&quot;,
+  &quot;@doi:10.1038/ncomms6890&quot;,
+  &quot;@pmid:20624743&quot;,
+  &quot;@pmid:14707169&quot;,
+  &quot;@doi:10.1073/pnas.0810772105&quot;,
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) &gt; 0.50)
+
+---
+Sure, here is the revised paragraph from the introduction:
+
+**Genes and their expression patterns are intricately linked to disease etiology and drug mechanisms, impacting the complex interplay between cellular pathways and tissue-specific pathologies. Understanding how genetic variations impact gene expression across various cell types is crucial for identifying disease-relevant therapeutic targets. Functional genomics data integration, combined with genome-wide association studies, has greatly advanced our understanding of transcriptional mechanisms, revealing the importance of specific genetic variants in disease development and progression. By elucidating these molecular mechanisms, we can pave the way for personalized therapies that effectively target disease processes, ultimately improving patient outcomes.
+
+Reason: Python code returned false
+input = context[&quot;vars&quot;][&quot;content&quot;]
+
+references = {
+  &quot;@pmid:19104045&quot;,
+  &quot;@doi:10.1038/ng.3259&quot;,
+  &quot;@doi:10.1038/s41467-018-06022-6&quot;,
+  &quot;@doi:10.1126/science.aaz1776&quot;,
+  &quot;@doi:10.1038/s41586-020-2559-3&quot;,
+  &quot;@doi:10.1038/s41576-019-0200-9&quot;,
+  &quot;@doi:10.1038/ng.3314&quot;,
+  &quot;@doi:10.1371/journal.pgen.1008489&quot;,
+  &quot;@doi:10.1038/nature11247&quot;,
+  &quot;@doi:10.1038/nature14248&quot;,
+  &quot;@doi:10.1038/nature12787&quot;,
+  &quot;@doi:10.1038/s41586-020-03145-z&quot;,
+  &quot;@doi:10.1038/s41586-020-2559-3&quot;,
+  &quot;@doi:10.1126/science.aaz1776&quot;,
+  &quot;@doi:10.1038/s41588-018-0081-4&quot;,
+  &quot;@doi:10.1016/j.ajhg.2018.04.002&quot;,
+  &quot;@doi:10.1038/s41588-018-0081-4&quot;,
+  &quot;@doi:10.1038/ncomms6890&quot;,
+  &quot;@pmid:20624743&quot;,
+  &quot;@pmid:14707169&quot;,
+  &quot;@doi:10.1073/pnas.0810772105&quot;,
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) &gt; 0.50)">[FAIL] (0.63)
+
+Python code returned false
+input = context["vars"]["content"]
+
+references = {
+  "@pmid:19104045",
+  "@doi:10.1038/ng.3259",
+  "@doi:10.1038/s41467-018-06022-6",
+  "@doi:10.1126/science.aaz1776",
+  "@doi:10.1038/s41586-020-2559-3",
+  "@doi:10.1038/s41576-019-0200-9",
+  "@doi:10.1038/ng.3314",
+  "@doi:10.1371/journal.pgen.1008489",
+  "@doi:10.1038/nature11247",
+  "@doi:10.1038/nature14248",
+  "@doi:10.1038/nature12787",
+  "@doi:10.1038/s41586-020-03145-z",
+  "@doi:10.1038/s41586-020-2559-3",
+  "@doi:10.1126/science.aaz1776",
+  "@doi:10.1038/s41588-018-0081-4",
+  "@doi:10.1016/j.ajhg.2018.04.002",
+  "@doi:10.1038/s41588-018-0081-4",
+  "@doi:10.1038/ncomms6890",
+  "@pmid:20624743",
+  "@pmid:14707169",
+  "@doi:10.1073/pnas.0810772105",
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) > 0.50)
+
+---
+Sure, here is the revised paragraph from the introduction:
+
+**Genes and their expression patterns are intricately linked to disease etiology and drug mechanisms, impacting the complex interplay between cellular pathways and tissue-specific pathologies. Understanding how genetic variations impact gene expression across various cell types is crucial for identifying disease-relevant therapeutic targets. Functional genomics data integration, combined with genome-wide association studies, has greatly advanced our understanding of transcriptional mechanisms, revealing the importance of specific genetic variants in disease development and progression. By elucidating these molecular mechanisms, we can pave the way for personalized therapies that effectively target disease processes, ultimately improving patient outcomes.
+
+Reason: Python code returned false
+input = context["vars"]["content"]
+
+references = {
+  "@pmid:19104045",
+  "@doi:10.1038/ng.3259",
+  "@doi:10.1038/s41467-018-06022-6",
+  "@doi:10.1126/science.aaz1776",
+  "@doi:10.1038/s41586-020-2559-3",
+  "@doi:10.1038/s41576-019-0200-9",
+  "@doi:10.1038/ng.3314",
+  "@doi:10.1371/journal.pgen.1008489",
+  "@doi:10.1038/nature11247",
+  "@doi:10.1038/nature14248",
+  "@doi:10.1038/nature12787",
+  "@doi:10.1038/s41586-020-03145-z",
+  "@doi:10.1038/s41586-020-2559-3",
+  "@doi:10.1126/science.aaz1776",
+  "@doi:10.1038/s41588-018-0081-4",
+  "@doi:10.1016/j.ajhg.2018.04.002",
+  "@doi:10.1038/s41588-018-0081-4",
+  "@doi:10.1038/ncomms6890",
+  "@pmid:20624743",
+  "@pmid:14707169",
+  "@doi:10.1073/pnas.0810772105",
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) > 0.50)</td>
+          
+          <td data-content="[FAIL] (0.50)
+
+Python code returned false
+input = context[&quot;vars&quot;][&quot;content&quot;]
+
+references = {
+  &quot;@pmid:19104045&quot;,
+  &quot;@doi:10.1038/ng.3259&quot;,
+  &quot;@doi:10.1038/s41467-018-06022-6&quot;,
+  &quot;@doi:10.1126/science.aaz1776&quot;,
+  &quot;@doi:10.1038/s41586-020-2559-3&quot;,
+  &quot;@doi:10.1038/s41576-019-0200-9&quot;,
+  &quot;@doi:10.1038/ng.3314&quot;,
+  &quot;@doi:10.1371/journal.pgen.1008489&quot;,
+  &quot;@doi:10.1038/nature11247&quot;,
+  &quot;@doi:10.1038/nature14248&quot;,
+  &quot;@doi:10.1038/nature12787&quot;,
+  &quot;@doi:10.1038/s41586-020-03145-z&quot;,
+  &quot;@doi:10.1038/s41586-020-2559-3&quot;,
+  &quot;@doi:10.1126/science.aaz1776&quot;,
+  &quot;@doi:10.1038/s41588-018-0081-4&quot;,
+  &quot;@doi:10.1016/j.ajhg.2018.04.002&quot;,
+  &quot;@doi:10.1038/s41588-018-0081-4&quot;,
+  &quot;@doi:10.1038/ncomms6890&quot;,
+  &quot;@pmid:20624743&quot;,
+  &quot;@pmid:14707169&quot;,
+  &quot;@doi:10.1073/pnas.0810772105&quot;,
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) &gt; 0.50)
+
+---
+**Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms**
+
+Existing research suggests that variations in gene expression patterns contribute to the etiology of complex diseases, including cancer and cardiovascular disorders. However, there is a lack of understanding regarding the specific mechanisms through which genetic variations influence disease risk and progression. This manuscript proposes a novel approach to address this gap in knowledge by integrating functional genomics data with genome-wide association studies. This integrative approach allows us to identify and validate novel genetic variants that are associated with disease risk and progression. By understanding the genetic mechanisms that contribute to disease, we can develop more effective treatments that will improve patient outcomes.
+
+Reason: Python code returned false
+input = context[&quot;vars&quot;][&quot;content&quot;]
+
+references = {
+  &quot;@pmid:19104045&quot;,
+  &quot;@doi:10.1038/ng.3259&quot;,
+  &quot;@doi:10.1038/s41467-018-06022-6&quot;,
+  &quot;@doi:10.1126/science.aaz1776&quot;,
+  &quot;@doi:10.1038/s41586-020-2559-3&quot;,
+  &quot;@doi:10.1038/s41576-019-0200-9&quot;,
+  &quot;@doi:10.1038/ng.3314&quot;,
+  &quot;@doi:10.1371/journal.pgen.1008489&quot;,
+  &quot;@doi:10.1038/nature11247&quot;,
+  &quot;@doi:10.1038/nature14248&quot;,
+  &quot;@doi:10.1038/nature12787&quot;,
+  &quot;@doi:10.1038/s41586-020-03145-z&quot;,
+  &quot;@doi:10.1038/s41586-020-2559-3&quot;,
+  &quot;@doi:10.1126/science.aaz1776&quot;,
+  &quot;@doi:10.1038/s41588-018-0081-4&quot;,
+  &quot;@doi:10.1016/j.ajhg.2018.04.002&quot;,
+  &quot;@doi:10.1038/s41588-018-0081-4&quot;,
+  &quot;@doi:10.1038/ncomms6890&quot;,
+  &quot;@pmid:20624743&quot;,
+  &quot;@pmid:14707169&quot;,
+  &quot;@doi:10.1073/pnas.0810772105&quot;,
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) &gt; 0.50)">[FAIL] (0.50)
+
+Python code returned false
+input = context["vars"]["content"]
+
+references = {
+  "@pmid:19104045",
+  "@doi:10.1038/ng.3259",
+  "@doi:10.1038/s41467-018-06022-6",
+  "@doi:10.1126/science.aaz1776",
+  "@doi:10.1038/s41586-020-2559-3",
+  "@doi:10.1038/s41576-019-0200-9",
+  "@doi:10.1038/ng.3314",
+  "@doi:10.1371/journal.pgen.1008489",
+  "@doi:10.1038/nature11247",
+  "@doi:10.1038/nature14248",
+  "@doi:10.1038/nature12787",
+  "@doi:10.1038/s41586-020-03145-z",
+  "@doi:10.1038/s41586-020-2559-3",
+  "@doi:10.1126/science.aaz1776",
+  "@doi:10.1038/s41588-018-0081-4",
+  "@doi:10.1016/j.ajhg.2018.04.002",
+  "@doi:10.1038/s41588-018-0081-4",
+  "@doi:10.1038/ncomms6890",
+  "@pmid:20624743",
+  "@pmid:14707169",
+  "@doi:10.1073/pnas.0810772105",
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) > 0.50)
+
+---
+**Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms**
+
+Existing research suggests that variations in gene expression patterns contribute to the etiology of complex diseases, including cancer and cardiovascular disorders. However, there is a lack of understanding regarding the specific mechanisms through which genetic variations influence disease risk and progression. This manuscript proposes a novel approach to address this gap in knowledge by integrating functional genomics data with genome-wide association studies. This integrative approach allows us to identify and validate novel genetic variants that are associated with disease risk and progression. By understanding the genetic mechanisms that contribute to disease, we can develop more effective treatments that will improve patient outcomes.
+
+Reason: Python code returned false
+input = context["vars"]["content"]
+
+references = {
+  "@pmid:19104045",
+  "@doi:10.1038/ng.3259",
+  "@doi:10.1038/s41467-018-06022-6",
+  "@doi:10.1126/science.aaz1776",
+  "@doi:10.1038/s41586-020-2559-3",
+  "@doi:10.1038/s41576-019-0200-9",
+  "@doi:10.1038/ng.3314",
+  "@doi:10.1371/journal.pgen.1008489",
+  "@doi:10.1038/nature11247",
+  "@doi:10.1038/nature14248",
+  "@doi:10.1038/nature12787",
+  "@doi:10.1038/s41586-020-03145-z",
+  "@doi:10.1038/s41586-020-2559-3",
+  "@doi:10.1126/science.aaz1776",
+  "@doi:10.1038/s41588-018-0081-4",
+  "@doi:10.1016/j.ajhg.2018.04.002",
+  "@doi:10.1038/s41588-018-0081-4",
+  "@doi:10.1038/ncomms6890",
+  "@pmid:20624743",
+  "@pmid:14707169",
+  "@doi:10.1073/pnas.0810772105",
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) > 0.50)</td>
+          
+        </tr>
+        
+        <tr>
+          
+          <td data-content="Genes work together in context-specific networks to carry out different functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can change their functional role and, at a higher level, affect disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, determining how genes influence complex traits requires mechanistically understanding expression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9], which in turn should lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies have described different regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3] including genetic effects on gene expression across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has improved the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].">Genes work together in context-specific networks to carry out different functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can change their functional role and, at a higher level, affect disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, determining how genes influence complex traits requires mechanistically understanding expression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9], which in turn should lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies have described different regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3] including genetic effects on gene expression across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has improved the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].</td>
+          
+          <td data-content="genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits">genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits</td>
+          
+          <td data-content="Keeps most references to other articles and doesn&#39;t make them up">Keeps most references to other articles and doesn't make them up</td>
+          
+          <td data-content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms">Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms</td>
+          
+          <td data-content="[FAIL] (0.75)
+
+Python code returned false
+input = context[&quot;vars&quot;][&quot;content&quot;]
+
+references = {
+  &quot;@pmid:19104045&quot;,
+  &quot;@doi:10.1038/ng.3259&quot;,
+  &quot;@doi:10.1038/s41467-018-06022-6&quot;,
+  &quot;@doi:10.1126/science.aaz1776&quot;,
+  &quot;@doi:10.1038/s41586-020-2559-3&quot;,
+  &quot;@doi:10.1038/s41576-019-0200-9&quot;,
+  &quot;@doi:10.1038/ng.3314&quot;,
+  &quot;@doi:10.1371/journal.pgen.1008489&quot;,
+  &quot;@doi:10.1038/nature11247&quot;,
+  &quot;@doi:10.1038/nature14248&quot;,
+  &quot;@doi:10.1038/nature12787&quot;,
+  &quot;@doi:10.1038/s41586-020-03145-z&quot;,
+  &quot;@doi:10.1038/s41586-020-2559-3&quot;,
+  &quot;@doi:10.1126/science.aaz1776&quot;,
+  &quot;@doi:10.1038/s41588-018-0081-4&quot;,
+  &quot;@doi:10.1016/j.ajhg.2018.04.002&quot;,
+  &quot;@doi:10.1038/s41588-018-0081-4&quot;,
+  &quot;@doi:10.1038/ncomms6890&quot;,
+  &quot;@pmid:20624743&quot;,
+  &quot;@pmid:14707169&quot;,
+  &quot;@doi:10.1073/pnas.0810772105&quot;,
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) &gt; 0.50)
+
+---
+Genes are intricately coordinated to regulate a wide range of cellular processes and functions in context-specific networks. Variations in gene expression patterns across different cell types have been well established and are increasingly recognized as critical determinants of disease etiology and drug response. Recent advances have emphasized the importance of understanding how genetic variations influence gene expression across different tissues, highlighting the need for integrative approaches that combine functional genomics and genome-wide association studies.
+
+This paradigm shift has led to improved identification of transcriptional mechanisms that are often dysregulated in disease, including those that are involved in tissue- and cell lineage-specific pathology. By integrating functional genomics data and GWAS data, researchers have gained a deeper understanding of the genetic basis of complex traits, paving the way for the development of novel therapeutic strategies.
+
+Reason: Python code returned false
+input = context[&quot;vars&quot;][&quot;content&quot;]
+
+references = {
+  &quot;@pmid:19104045&quot;,
+  &quot;@doi:10.1038/ng.3259&quot;,
+  &quot;@doi:10.1038/s41467-018-06022-6&quot;,
+  &quot;@doi:10.1126/science.aaz1776&quot;,
+  &quot;@doi:10.1038/s41586-020-2559-3&quot;,
+  &quot;@doi:10.1038/s41576-019-0200-9&quot;,
+  &quot;@doi:10.1038/ng.3314&quot;,
+  &quot;@doi:10.1371/journal.pgen.1008489&quot;,
+  &quot;@doi:10.1038/nature11247&quot;,
+  &quot;@doi:10.1038/nature14248&quot;,
+  &quot;@doi:10.1038/nature12787&quot;,
+  &quot;@doi:10.1038/s41586-020-03145-z&quot;,
+  &quot;@doi:10.1038/s41586-020-2559-3&quot;,
+  &quot;@doi:10.1126/science.aaz1776&quot;,
+  &quot;@doi:10.1038/s41588-018-0081-4&quot;,
+  &quot;@doi:10.1016/j.ajhg.2018.04.002&quot;,
+  &quot;@doi:10.1038/s41588-018-0081-4&quot;,
+  &quot;@doi:10.1038/ncomms6890&quot;,
+  &quot;@pmid:20624743&quot;,
+  &quot;@pmid:14707169&quot;,
+  &quot;@doi:10.1073/pnas.0810772105&quot;,
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) &gt; 0.50)">[FAIL] (0.75)
+
+Python code returned false
+input = context["vars"]["content"]
+
+references = {
+  "@pmid:19104045",
+  "@doi:10.1038/ng.3259",
+  "@doi:10.1038/s41467-018-06022-6",
+  "@doi:10.1126/science.aaz1776",
+  "@doi:10.1038/s41586-020-2559-3",
+  "@doi:10.1038/s41576-019-0200-9",
+  "@doi:10.1038/ng.3314",
+  "@doi:10.1371/journal.pgen.1008489",
+  "@doi:10.1038/nature11247",
+  "@doi:10.1038/nature14248",
+  "@doi:10.1038/nature12787",
+  "@doi:10.1038/s41586-020-03145-z",
+  "@doi:10.1038/s41586-020-2559-3",
+  "@doi:10.1126/science.aaz1776",
+  "@doi:10.1038/s41588-018-0081-4",
+  "@doi:10.1016/j.ajhg.2018.04.002",
+  "@doi:10.1038/s41588-018-0081-4",
+  "@doi:10.1038/ncomms6890",
+  "@pmid:20624743",
+  "@pmid:14707169",
+  "@doi:10.1073/pnas.0810772105",
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) > 0.50)
+
+---
+Genes are intricately coordinated to regulate a wide range of cellular processes and functions in context-specific networks. Variations in gene expression patterns across different cell types have been well established and are increasingly recognized as critical determinants of disease etiology and drug response. Recent advances have emphasized the importance of understanding how genetic variations influence gene expression across different tissues, highlighting the need for integrative approaches that combine functional genomics and genome-wide association studies.
+
+This paradigm shift has led to improved identification of transcriptional mechanisms that are often dysregulated in disease, including those that are involved in tissue- and cell lineage-specific pathology. By integrating functional genomics data and GWAS data, researchers have gained a deeper understanding of the genetic basis of complex traits, paving the way for the development of novel therapeutic strategies.
+
+Reason: Python code returned false
+input = context["vars"]["content"]
+
+references = {
+  "@pmid:19104045",
+  "@doi:10.1038/ng.3259",
+  "@doi:10.1038/s41467-018-06022-6",
+  "@doi:10.1126/science.aaz1776",
+  "@doi:10.1038/s41586-020-2559-3",
+  "@doi:10.1038/s41576-019-0200-9",
+  "@doi:10.1038/ng.3314",
+  "@doi:10.1371/journal.pgen.1008489",
+  "@doi:10.1038/nature11247",
+  "@doi:10.1038/nature14248",
+  "@doi:10.1038/nature12787",
+  "@doi:10.1038/s41586-020-03145-z",
+  "@doi:10.1038/s41586-020-2559-3",
+  "@doi:10.1126/science.aaz1776",
+  "@doi:10.1038/s41588-018-0081-4",
+  "@doi:10.1016/j.ajhg.2018.04.002",
+  "@doi:10.1038/s41588-018-0081-4",
+  "@doi:10.1038/ncomms6890",
+  "@pmid:20624743",
+  "@pmid:14707169",
+  "@doi:10.1073/pnas.0810772105",
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) > 0.50)</td>
+          
+          <td data-content="[FAIL] (0.63)
+
+Python code returned false
+input = context[&quot;vars&quot;][&quot;content&quot;]
+
+references = {
+  &quot;@pmid:19104045&quot;,
+  &quot;@doi:10.1038/ng.3259&quot;,
+  &quot;@doi:10.1038/s41467-018-06022-6&quot;,
+  &quot;@doi:10.1126/science.aaz1776&quot;,
+  &quot;@doi:10.1038/s41586-020-2559-3&quot;,
+  &quot;@doi:10.1038/s41576-019-0200-9&quot;,
+  &quot;@doi:10.1038/ng.3314&quot;,
+  &quot;@doi:10.1371/journal.pgen.1008489&quot;,
+  &quot;@doi:10.1038/nature11247&quot;,
+  &quot;@doi:10.1038/nature14248&quot;,
+  &quot;@doi:10.1038/nature12787&quot;,
+  &quot;@doi:10.1038/s41586-020-03145-z&quot;,
+  &quot;@doi:10.1038/s41586-020-2559-3&quot;,
+  &quot;@doi:10.1126/science.aaz1776&quot;,
+  &quot;@doi:10.1038/s41588-018-0081-4&quot;,
+  &quot;@doi:10.1016/j.ajhg.2018.04.002&quot;,
+  &quot;@doi:10.1038/s41588-018-0081-4&quot;,
+  &quot;@doi:10.1038/ncomms6890&quot;,
+  &quot;@pmid:20624743&quot;,
+  &quot;@pmid:14707169&quot;,
+  &quot;@doi:10.1073/pnas.0810772105&quot;,
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) &gt; 0.50)
+
+---
+**Revised paragraph:**
+
+Advances in functional genomics have highlighted the intricate interplay between gene expression and disease etiology. However, despite extensive research on gene co-expression and disease networks, our understanding of how these interactions influence complex traits remains fragmentary. Here, we propose a novel method that integrates functional genomics and genome-wide association studies to comprehensively elucidate the role of genetic variation in shaping cellular behavior and disease susceptibility. Our approach reveals novel regulatory mechanisms that transcend traditional knowledge and provide potential avenues for therapeutic intervention. This research bridges a critical gap in our knowledge by integrating these two powerful tools and offers a framework for understanding the complex interplay between genetics, biology, and disease.
+
+Reason: Python code returned false
+input = context[&quot;vars&quot;][&quot;content&quot;]
+
+references = {
+  &quot;@pmid:19104045&quot;,
+  &quot;@doi:10.1038/ng.3259&quot;,
+  &quot;@doi:10.1038/s41467-018-06022-6&quot;,
+  &quot;@doi:10.1126/science.aaz1776&quot;,
+  &quot;@doi:10.1038/s41586-020-2559-3&quot;,
+  &quot;@doi:10.1038/s41576-019-0200-9&quot;,
+  &quot;@doi:10.1038/ng.3314&quot;,
+  &quot;@doi:10.1371/journal.pgen.1008489&quot;,
+  &quot;@doi:10.1038/nature11247&quot;,
+  &quot;@doi:10.1038/nature14248&quot;,
+  &quot;@doi:10.1038/nature12787&quot;,
+  &quot;@doi:10.1038/s41586-020-03145-z&quot;,
+  &quot;@doi:10.1038/s41586-020-2559-3&quot;,
+  &quot;@doi:10.1126/science.aaz1776&quot;,
+  &quot;@doi:10.1038/s41588-018-0081-4&quot;,
+  &quot;@doi:10.1016/j.ajhg.2018.04.002&quot;,
+  &quot;@doi:10.1038/s41588-018-0081-4&quot;,
+  &quot;@doi:10.1038/ncomms6890&quot;,
+  &quot;@pmid:20624743&quot;,
+  &quot;@pmid:14707169&quot;,
+  &quot;@doi:10.1073/pnas.0810772105&quot;,
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) &gt; 0.50)">[FAIL] (0.63)
+
+Python code returned false
+input = context["vars"]["content"]
+
+references = {
+  "@pmid:19104045",
+  "@doi:10.1038/ng.3259",
+  "@doi:10.1038/s41467-018-06022-6",
+  "@doi:10.1126/science.aaz1776",
+  "@doi:10.1038/s41586-020-2559-3",
+  "@doi:10.1038/s41576-019-0200-9",
+  "@doi:10.1038/ng.3314",
+  "@doi:10.1371/journal.pgen.1008489",
+  "@doi:10.1038/nature11247",
+  "@doi:10.1038/nature14248",
+  "@doi:10.1038/nature12787",
+  "@doi:10.1038/s41586-020-03145-z",
+  "@doi:10.1038/s41586-020-2559-3",
+  "@doi:10.1126/science.aaz1776",
+  "@doi:10.1038/s41588-018-0081-4",
+  "@doi:10.1016/j.ajhg.2018.04.002",
+  "@doi:10.1038/s41588-018-0081-4",
+  "@doi:10.1038/ncomms6890",
+  "@pmid:20624743",
+  "@pmid:14707169",
+  "@doi:10.1073/pnas.0810772105",
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) > 0.50)
+
+---
+**Revised paragraph:**
+
+Advances in functional genomics have highlighted the intricate interplay between gene expression and disease etiology. However, despite extensive research on gene co-expression and disease networks, our understanding of how these interactions influence complex traits remains fragmentary. Here, we propose a novel method that integrates functional genomics and genome-wide association studies to comprehensively elucidate the role of genetic variation in shaping cellular behavior and disease susceptibility. Our approach reveals novel regulatory mechanisms that transcend traditional knowledge and provide potential avenues for therapeutic intervention. This research bridges a critical gap in our knowledge by integrating these two powerful tools and offers a framework for understanding the complex interplay between genetics, biology, and disease.
+
+Reason: Python code returned false
+input = context["vars"]["content"]
+
+references = {
+  "@pmid:19104045",
+  "@doi:10.1038/ng.3259",
+  "@doi:10.1038/s41467-018-06022-6",
+  "@doi:10.1126/science.aaz1776",
+  "@doi:10.1038/s41586-020-2559-3",
+  "@doi:10.1038/s41576-019-0200-9",
+  "@doi:10.1038/ng.3314",
+  "@doi:10.1371/journal.pgen.1008489",
+  "@doi:10.1038/nature11247",
+  "@doi:10.1038/nature14248",
+  "@doi:10.1038/nature12787",
+  "@doi:10.1038/s41586-020-03145-z",
+  "@doi:10.1038/s41586-020-2559-3",
+  "@doi:10.1126/science.aaz1776",
+  "@doi:10.1038/s41588-018-0081-4",
+  "@doi:10.1016/j.ajhg.2018.04.002",
+  "@doi:10.1038/s41588-018-0081-4",
+  "@doi:10.1038/ncomms6890",
+  "@pmid:20624743",
+  "@pmid:14707169",
+  "@doi:10.1073/pnas.0810772105",
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) > 0.50)</td>
+          
+        </tr>
+        
+        <tr>
+          
+          <td data-content="Genes work together in context-specific networks to carry out different functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can change their functional role and, at a higher level, affect disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, determining how genes influence complex traits requires mechanistically understanding expression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9], which in turn should lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies have described different regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3] including genetic effects on gene expression across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has improved the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].">Genes work together in context-specific networks to carry out different functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can change their functional role and, at a higher level, affect disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, determining how genes influence complex traits requires mechanistically understanding expression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9], which in turn should lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies have described different regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3] including genetic effects on gene expression across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has improved the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].</td>
+          
+          <td data-content="genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits">genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits</td>
+          
+          <td data-content="Keeps most references to other articles and doesn&#39;t make them up">Keeps most references to other articles and doesn't make them up</td>
+          
+          <td data-content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms">Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms</td>
+          
+          <td data-content="[FAIL] (0.75)
+
+Python code returned false
+input = context[&quot;vars&quot;][&quot;content&quot;]
+
+references = {
+  &quot;@pmid:19104045&quot;,
+  &quot;@doi:10.1038/ng.3259&quot;,
+  &quot;@doi:10.1038/s41467-018-06022-6&quot;,
+  &quot;@doi:10.1126/science.aaz1776&quot;,
+  &quot;@doi:10.1038/s41586-020-2559-3&quot;,
+  &quot;@doi:10.1038/s41576-019-0200-9&quot;,
+  &quot;@doi:10.1038/ng.3314&quot;,
+  &quot;@doi:10.1371/journal.pgen.1008489&quot;,
+  &quot;@doi:10.1038/nature11247&quot;,
+  &quot;@doi:10.1038/nature14248&quot;,
+  &quot;@doi:10.1038/nature12787&quot;,
+  &quot;@doi:10.1038/s41586-020-03145-z&quot;,
+  &quot;@doi:10.1038/s41586-020-2559-3&quot;,
+  &quot;@doi:10.1126/science.aaz1776&quot;,
+  &quot;@doi:10.1038/s41588-018-0081-4&quot;,
+  &quot;@doi:10.1016/j.ajhg.2018.04.002&quot;,
+  &quot;@doi:10.1038/s41588-018-0081-4&quot;,
+  &quot;@doi:10.1038/ncomms6890&quot;,
+  &quot;@pmid:20624743&quot;,
+  &quot;@pmid:14707169&quot;,
+  &quot;@doi:10.1073/pnas.0810772105&quot;,
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) &gt; 0.50)
+
+---
+Sure, here is the revised paragraph from the introduction of the manuscript:
+
+Genes interact and coordinate their activities to perform diverse functions within cells and tissues. Variations in gene expression patterns are critical for understanding disease etiology and drug mechanisms. Studying how these genes influence complex traits requires an integrated approach that considers not only genetic effects but also the interplay between different cell types and tissues. Functional genomics data and genome-wide association studies have revealed the importance of specific regulatory DNA elements and transcriptional mechanisms in disease pathogenesis. Integrating these data sources has enhanced the identification of disease-relevant pathways and provided valuable insights for therapeutic interventions.
+
+Reason: Python code returned false
+input = context[&quot;vars&quot;][&quot;content&quot;]
+
+references = {
+  &quot;@pmid:19104045&quot;,
+  &quot;@doi:10.1038/ng.3259&quot;,
+  &quot;@doi:10.1038/s41467-018-06022-6&quot;,
+  &quot;@doi:10.1126/science.aaz1776&quot;,
+  &quot;@doi:10.1038/s41586-020-2559-3&quot;,
+  &quot;@doi:10.1038/s41576-019-0200-9&quot;,
+  &quot;@doi:10.1038/ng.3314&quot;,
+  &quot;@doi:10.1371/journal.pgen.1008489&quot;,
+  &quot;@doi:10.1038/nature11247&quot;,
+  &quot;@doi:10.1038/nature14248&quot;,
+  &quot;@doi:10.1038/nature12787&quot;,
+  &quot;@doi:10.1038/s41586-020-03145-z&quot;,
+  &quot;@doi:10.1038/s41586-020-2559-3&quot;,
+  &quot;@doi:10.1126/science.aaz1776&quot;,
+  &quot;@doi:10.1038/s41588-018-0081-4&quot;,
+  &quot;@doi:10.1016/j.ajhg.2018.04.002&quot;,
+  &quot;@doi:10.1038/s41588-018-0081-4&quot;,
+  &quot;@doi:10.1038/ncomms6890&quot;,
+  &quot;@pmid:20624743&quot;,
+  &quot;@pmid:14707169&quot;,
+  &quot;@doi:10.1073/pnas.0810772105&quot;,
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) &gt; 0.50)">[FAIL] (0.75)
+
+Python code returned false
+input = context["vars"]["content"]
+
+references = {
+  "@pmid:19104045",
+  "@doi:10.1038/ng.3259",
+  "@doi:10.1038/s41467-018-06022-6",
+  "@doi:10.1126/science.aaz1776",
+  "@doi:10.1038/s41586-020-2559-3",
+  "@doi:10.1038/s41576-019-0200-9",
+  "@doi:10.1038/ng.3314",
+  "@doi:10.1371/journal.pgen.1008489",
+  "@doi:10.1038/nature11247",
+  "@doi:10.1038/nature14248",
+  "@doi:10.1038/nature12787",
+  "@doi:10.1038/s41586-020-03145-z",
+  "@doi:10.1038/s41586-020-2559-3",
+  "@doi:10.1126/science.aaz1776",
+  "@doi:10.1038/s41588-018-0081-4",
+  "@doi:10.1016/j.ajhg.2018.04.002",
+  "@doi:10.1038/s41588-018-0081-4",
+  "@doi:10.1038/ncomms6890",
+  "@pmid:20624743",
+  "@pmid:14707169",
+  "@doi:10.1073/pnas.0810772105",
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) > 0.50)
+
+---
+Sure, here is the revised paragraph from the introduction of the manuscript:
+
+Genes interact and coordinate their activities to perform diverse functions within cells and tissues. Variations in gene expression patterns are critical for understanding disease etiology and drug mechanisms. Studying how these genes influence complex traits requires an integrated approach that considers not only genetic effects but also the interplay between different cell types and tissues. Functional genomics data and genome-wide association studies have revealed the importance of specific regulatory DNA elements and transcriptional mechanisms in disease pathogenesis. Integrating these data sources has enhanced the identification of disease-relevant pathways and provided valuable insights for therapeutic interventions.
+
+Reason: Python code returned false
+input = context["vars"]["content"]
+
+references = {
+  "@pmid:19104045",
+  "@doi:10.1038/ng.3259",
+  "@doi:10.1038/s41467-018-06022-6",
+  "@doi:10.1126/science.aaz1776",
+  "@doi:10.1038/s41586-020-2559-3",
+  "@doi:10.1038/s41576-019-0200-9",
+  "@doi:10.1038/ng.3314",
+  "@doi:10.1371/journal.pgen.1008489",
+  "@doi:10.1038/nature11247",
+  "@doi:10.1038/nature14248",
+  "@doi:10.1038/nature12787",
+  "@doi:10.1038/s41586-020-03145-z",
+  "@doi:10.1038/s41586-020-2559-3",
+  "@doi:10.1126/science.aaz1776",
+  "@doi:10.1038/s41588-018-0081-4",
+  "@doi:10.1016/j.ajhg.2018.04.002",
+  "@doi:10.1038/s41588-018-0081-4",
+  "@doi:10.1038/ncomms6890",
+  "@pmid:20624743",
+  "@pmid:14707169",
+  "@doi:10.1073/pnas.0810772105",
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) > 0.50)</td>
+          
+          <td data-content="[FAIL] (0.63)
+
+Python code returned false
+input = context[&quot;vars&quot;][&quot;content&quot;]
+
+references = {
+  &quot;@pmid:19104045&quot;,
+  &quot;@doi:10.1038/ng.3259&quot;,
+  &quot;@doi:10.1038/s41467-018-06022-6&quot;,
+  &quot;@doi:10.1126/science.aaz1776&quot;,
+  &quot;@doi:10.1038/s41586-020-2559-3&quot;,
+  &quot;@doi:10.1038/s41576-019-0200-9&quot;,
+  &quot;@doi:10.1038/ng.3314&quot;,
+  &quot;@doi:10.1371/journal.pgen.1008489&quot;,
+  &quot;@doi:10.1038/nature11247&quot;,
+  &quot;@doi:10.1038/nature14248&quot;,
+  &quot;@doi:10.1038/nature12787&quot;,
+  &quot;@doi:10.1038/s41586-020-03145-z&quot;,
+  &quot;@doi:10.1038/s41586-020-2559-3&quot;,
+  &quot;@doi:10.1126/science.aaz1776&quot;,
+  &quot;@doi:10.1038/s41588-018-0081-4&quot;,
+  &quot;@doi:10.1016/j.ajhg.2018.04.002&quot;,
+  &quot;@doi:10.1038/s41588-018-0081-4&quot;,
+  &quot;@doi:10.1038/ncomms6890&quot;,
+  &quot;@pmid:20624743&quot;,
+  &quot;@pmid:14707169&quot;,
+  &quot;@doi:10.1073/pnas.0810772105&quot;,
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) &gt; 0.50)
+
+---
+**Context:** Despite extensive efforts in understanding the genetic basis of complex traits, the exact mechanisms regulating gene expression across different cell types and tissues remain poorly understood, hindering the development of effective therapeutic strategies.
+
+**Contribution:** This study proposes a novel approach to filling this knowledge gap by integrating functional genomics and whole-genome association studies. We demonstrate that this method allows for the identification of novel genetic regulatory mechanisms associated with disease etiology and drug repurposing.
+
+**Overall Significance:** This work has significant implications for understanding the complex genetic basis of disease etiology and developing novel therapeutic approaches. By elucidating the mechanisms underlying tissue- and cell lineage-specific pathology, this research can pave the way for personalized medicine and the development of more effective therapeutic interventions for a range of genetic disorders.
+
+Reason: Python code returned false
+input = context[&quot;vars&quot;][&quot;content&quot;]
+
+references = {
+  &quot;@pmid:19104045&quot;,
+  &quot;@doi:10.1038/ng.3259&quot;,
+  &quot;@doi:10.1038/s41467-018-06022-6&quot;,
+  &quot;@doi:10.1126/science.aaz1776&quot;,
+  &quot;@doi:10.1038/s41586-020-2559-3&quot;,
+  &quot;@doi:10.1038/s41576-019-0200-9&quot;,
+  &quot;@doi:10.1038/ng.3314&quot;,
+  &quot;@doi:10.1371/journal.pgen.1008489&quot;,
+  &quot;@doi:10.1038/nature11247&quot;,
+  &quot;@doi:10.1038/nature14248&quot;,
+  &quot;@doi:10.1038/nature12787&quot;,
+  &quot;@doi:10.1038/s41586-020-03145-z&quot;,
+  &quot;@doi:10.1038/s41586-020-2559-3&quot;,
+  &quot;@doi:10.1126/science.aaz1776&quot;,
+  &quot;@doi:10.1038/s41588-018-0081-4&quot;,
+  &quot;@doi:10.1016/j.ajhg.2018.04.002&quot;,
+  &quot;@doi:10.1038/s41588-018-0081-4&quot;,
+  &quot;@doi:10.1038/ncomms6890&quot;,
+  &quot;@pmid:20624743&quot;,
+  &quot;@pmid:14707169&quot;,
+  &quot;@doi:10.1073/pnas.0810772105&quot;,
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) &gt; 0.50)">[FAIL] (0.63)
+
+Python code returned false
+input = context["vars"]["content"]
+
+references = {
+  "@pmid:19104045",
+  "@doi:10.1038/ng.3259",
+  "@doi:10.1038/s41467-018-06022-6",
+  "@doi:10.1126/science.aaz1776",
+  "@doi:10.1038/s41586-020-2559-3",
+  "@doi:10.1038/s41576-019-0200-9",
+  "@doi:10.1038/ng.3314",
+  "@doi:10.1371/journal.pgen.1008489",
+  "@doi:10.1038/nature11247",
+  "@doi:10.1038/nature14248",
+  "@doi:10.1038/nature12787",
+  "@doi:10.1038/s41586-020-03145-z",
+  "@doi:10.1038/s41586-020-2559-3",
+  "@doi:10.1126/science.aaz1776",
+  "@doi:10.1038/s41588-018-0081-4",
+  "@doi:10.1016/j.ajhg.2018.04.002",
+  "@doi:10.1038/s41588-018-0081-4",
+  "@doi:10.1038/ncomms6890",
+  "@pmid:20624743",
+  "@pmid:14707169",
+  "@doi:10.1073/pnas.0810772105",
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) > 0.50)
+
+---
+**Context:** Despite extensive efforts in understanding the genetic basis of complex traits, the exact mechanisms regulating gene expression across different cell types and tissues remain poorly understood, hindering the development of effective therapeutic strategies.
+
+**Contribution:** This study proposes a novel approach to filling this knowledge gap by integrating functional genomics and whole-genome association studies. We demonstrate that this method allows for the identification of novel genetic regulatory mechanisms associated with disease etiology and drug repurposing.
+
+**Overall Significance:** This work has significant implications for understanding the complex genetic basis of disease etiology and developing novel therapeutic approaches. By elucidating the mechanisms underlying tissue- and cell lineage-specific pathology, this research can pave the way for personalized medicine and the development of more effective therapeutic interventions for a range of genetic disorders.
+
+Reason: Python code returned false
+input = context["vars"]["content"]
+
+references = {
+  "@pmid:19104045",
+  "@doi:10.1038/ng.3259",
+  "@doi:10.1038/s41467-018-06022-6",
+  "@doi:10.1126/science.aaz1776",
+  "@doi:10.1038/s41586-020-2559-3",
+  "@doi:10.1038/s41576-019-0200-9",
+  "@doi:10.1038/ng.3314",
+  "@doi:10.1371/journal.pgen.1008489",
+  "@doi:10.1038/nature11247",
+  "@doi:10.1038/nature14248",
+  "@doi:10.1038/nature12787",
+  "@doi:10.1038/s41586-020-03145-z",
+  "@doi:10.1038/s41586-020-2559-3",
+  "@doi:10.1126/science.aaz1776",
+  "@doi:10.1038/s41588-018-0081-4",
+  "@doi:10.1016/j.ajhg.2018.04.002",
+  "@doi:10.1038/s41588-018-0081-4",
+  "@doi:10.1038/ncomms6890",
+  "@pmid:20624743",
+  "@pmid:14707169",
+  "@doi:10.1073/pnas.0810772105",
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) > 0.50)</td>
+          
+        </tr>
+        
+      </tbody>
+    </table>
+  </body>
+</html>

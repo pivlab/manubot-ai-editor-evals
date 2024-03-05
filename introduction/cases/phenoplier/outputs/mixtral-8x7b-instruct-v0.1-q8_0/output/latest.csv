@@ -1,0 +1,388 @@
+content,keywords,test_description,title,"{""raw"":""You are a scientist with copy-editing skills who will help in improving the text of a manuscript with title '{{ title }}' and keywords '{{ keywords }}.' Revise the following paragraph from the introduction of this manuscript.\n\nInput paragraph: {{ content }}\n\nRevised paragraph:"",""display"":""/home/miltondp/projects/others/manubot/manubot-ai-editor-evals/introduction/prompts/baseline.txt"",""id"":""dc502e423d7246c4f414ee17a163a145fff155e61c0f879a6e3006637005ee16"",""provider"":""ollama:completion:mixtral:8x7b-instruct-v0.1-q8_0"",""metrics"":{""score"":8.071428571428571,""testPassCount"":3,""testFailCount"":7,""assertPassCount"":61,""assertFailCount"":14,""totalLatencyMs"":1073107,""tokenUsage"":{""total"":0,""prompt"":0,""completion"":0,""cached"":0},""namedScores"":{},""cost"":0}}","{""raw"":""You are a scientist with copy-editing skills who will help in improving the text of a manuscript with title '{{ title }}' and keywords '{{ keywords }}.' Revise the following paragraph from the introduction of this manuscript so that it has a clear sentence structure, fits in a single paragraph, and keeps most references to papers (e.g. [@doi:...]). At a high level, the revision should highlight a gap in existing knowledge or methods, convey why it matters, and suggest how the manuscript aims to fill it. It may cover relevant literature to explain current knowledge, but only so far as is relevant to the motivation of the manuscript. It may be somewhat specific about results, relative to a typical high-level abstract section for example. More specifically, the revision should follow a context-content-conclusion (C-C-C) scheme, as follows: 1) The context portion communicates to the reader what gap the paper will fill. The first sentence orients the reader by introducing the broader field in which the manuscript's research is situated. Then, the context is narrowed until it lands on the open question that the research answers. A successful context section distinguishes the research’s contributions from the current state-of-the-art, communicating what is missing in the current literature (i.e., the specific gap) and why that matters (i.e. the connection between the specific gap and the broader context). 2) The content portion (e.g. \""here we\"") first describes the novel method or approach that was used to fill the gap, then presents an executive summary of results. 3) The conclusion portion interprets the results to answer the question that was posed at the end of the context portion. There may be a second part to the conclusion portion that highlights how this conclusion moves the broader field forward (e.g. \""broader significance\"").\n\nInput paragraph: {{ content }}\n\nRevised paragraph:"",""display"":""/home/miltondp/projects/others/manubot/manubot-ai-editor-evals/introduction/prompts/candidate.txt"",""id"":""f407172fef4c47c60ded66bf34859bc53a906c9f5d738c70fc065de34e3d35e1"",""provider"":""ollama:completion:mixtral:8x7b-instruct-v0.1-q8_0"",""metrics"":{""score"":8.410714285714285,""testPassCount"":1,""testFailCount"":9,""assertPassCount"":63,""assertFailCount"":12,""totalLatencyMs"":806259,""tokenUsage"":{""total"":0,""prompt"":0,""completion"":0,""cached"":0},""namedScores"":{},""cost"":0}}"
+"Genes work together in context-specific networks to karry out different functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can change their functional role and, at a higher level, affect disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, determining how genes influence complex traits requires mechanistically understanding ekspression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9], which in turn should lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies have described different regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3] including genetic effects on gene expression across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has improoved the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",Has no spelling errors,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[PASS] (1.00)
+
+ Genes operate in concert within context-specific networks to execute diverse functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can alter their functional roles and, at a higher level, impact disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, elucidating how genes influence complex traits necessitates a mechanistic understanding of expression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9], which should ultimately lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies have identified various regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3], including genetic effects on gene expression across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has enhanced the identification of these transcriptional mechanisms. Dysregulation of these mechanisms commonly results in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].
+
+Reason: All assertions passed","[FAIL] (0.86)
+
+Python code returned false
+input = context[""vars""][""content""]
+input_words = len(input.strip().split())
+output_words = len(output.strip().split())
+response = (output_words > 0.5 * input_words) and (output_words < 1.5 * input_words)
+print(response)
+
+---
+ Despite the well-established role of genes working together in context-specific networks to regulate biological processes, determining how genetic variations influence complex traits remains an open challenge [@pmid:19104045; @doi:10.1038/ng.3259]. Mechanistic understanding of expression regulation across different cell types is crucial for uncovering the relationship between genes and complex traits, which can ultimately lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. While previous studies have identified different regulatory DNA elements, including genetic effects on gene expression across tissues [@doi:10.1126/science.aaz1776; @doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787], integrating functional genomics data and GWAS data has been shown to improve the identification of transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105]. However, a gap exists in the current literature regarding the use of gene co-expression patterns to project genetic associations and highlight disease etiology and drug mechanisms [@doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9; @doi:10.1038/s41588-018-0081-4]. Here, we propose a novel approach that leverages gene co-expression patterns to identify therapeutic targets and drug repurposing opportunities for complex traits. Our results demonstrate the potential of this method in highlighting disease etiology and drug mechanisms (details in Section XX), thereby filling an important gap in existing knowledge and methods.
+
+Reason: Python code returned false
+input = context[""vars""][""content""]
+input_words = len(input.strip().split())
+output_words = len(output.strip().split())
+response = (output_words > 0.5 * input_words) and (output_words < 1.5 * input_words)
+print(response)"
+"Genes work together in context-specific networks to karry out different functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can change their functional role and, at a higher level, affect disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, determining how genes influence complex traits requires mechanistically understanding ekspression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9], which in turn should lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies have described different regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3] including genetic effects on gene expression across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has improoved the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",Has no spelling errors,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[FAIL] (0.43)
+
+Expected output to not contain one of ""karry, ekspression, improoved""
+---
+ Genes operate in concert within context-specific networks to execute various functions (PMID:19104045; DOI:10.1038/ng.3259). Alterations in these genes can change their functional roles and, at a higher level, impact disease-relevant biological processes (DOI:10.1038/s41467-018-06022-6). In this context, elucidating how genes influence complex traits necessitates a mechanistic understanding of expression regulation across different cell types (PMID:20624743; DOI:10.1038/s41586-020-2559-3; DOI:10.1038/s41576-019-0200-9). Such understanding is expected to lead to improved treatments (DOI:10.1038/ng.3314; DOI:10.1371/journal.pgen.1008489). Previous studies have described various regulatory DNA elements, including genetic effects on gene expression across different tissues (PMID:20624743; DOI:10.1038/nature14248; DOI:10.1038/nature12787; DOI:10.1038/s41586-020-03145-z; DOI:10.1038/s41586-020-2559-3). Integrating functional genomics data and GWAS data (DOI:10.1038/s41588-018-0081-4; DOI:10.1016/j.ajhg.2018.04.002; DOI:10.1038/s41588-018-0081-4; DOI:10.1038/ncomms6890) has enhanced the identification of these transcriptional mechanisms. Dysregulation of these mechanisms commonly leads to tissue- and cell lineage-specific pathology (PMID:14707169; DOI:10.1073/pnas.0810772105).
+
+Changes made:
+
+* Corrected spelling errors (e.g., ""karry out"" to ""carry out"", ""ekspression"" to ""expression"")
+* Standardized the format of references and DOIs
+* Replaced some outdated or redundant references with more recent ones
+* Simplified complex sentence structures for better readability
+* Added a few missing words for clarity (e.g., ""is expected to lead"" instead of ""should lead"")
+
+Reason: Expected output to not contain one of ""karry, ekspression, improoved""","[PASS] (1.00)
+
+ Despite the growing understanding of how genes function in context-specific networks ([@pmid:19104045; @doi:10.1038/ng.3259]), a significant gap remains in mechanistically linking genetic variation to complex traits through the regulation of gene expression across different cell types ([@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9]). Currently, it is recognized that regulatory DNA elements play a crucial role in gene expression regulation and are affected by genetic variation ([@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3]), but integrating functional genomics data and GWAS data to identify transcriptional mechanisms has yet to be fully exploited ([@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890]). Here, we develop a method for projecting genetic associations through gene expression patterns that highlights disease etiology and drug mechanisms (specific results will be presented in the following sections). Our approach moves beyond identifying individual genes associated with complex traits to uncovering how co-expressed gene networks are impacted by genetic variation. This novel perspective sheds light on tissue- and cell lineage-specific pathology ([@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105]) and provides insights into potential therapeutic targets for drug repurposing, with implications for personalized medicine.
+
+Reason: All assertions passed"
+"Genes work together in context-specific networks to karry out different functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can change their functional role and, at a higher level, affect disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, determining how genes influence complex traits requires mechanistically understanding ekspression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9], which in turn should lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies have described different regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3] including genetic effects on gene expression across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has improoved the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",Has no spelling errors,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[FAIL] (0.57)
+
+Expected output to not contain one of ""karry, ekspression, improoved""
+---
+ Genes operate in context-specific networks to carry out various functions (PMID:19104045; DOI:10.1038/ng.3259). Variations in these genes can alter their functional roles and, at a higher level, impact disease-relevant biological processes (DOI:10.1038/s41467-018-06022-6). In this context, understanding how genes influence complex traits requires a mechanistic comprehension of expression regulation across different cell types (PMID:20624743; DOI:10.1038/s41586-020-2559-3; DOI:10.1038/s41576-019-0200-9). This, in turn, should lead to improved treatments (DOI:10.1038/ng.3314; DOI:10.1371/journal.pgen.1008489). Previous studies have described various regulatory DNA elements (DOI:10.1038/nature11247; DOI:10.1038/nature14248; DOI:10.1038/nature12787; DOI:10.1038/s41586-020-03145-z; DOI:10.1038/s41586-020-2559-3), including genetic effects on gene expression across different tissues (PMID:20624743). Integrating functional genomics data and GWAS data (DOI:10.1038/s41588-018-0081-4; DOI:10.1016/j.ajhg.2018.04.002; DOI:10.1038/s41588-018-0081-4; DOI:10.1038/ncomms6890) has improved the identification of these transcriptional mechanisms. When dysregulated, these mechanisms commonly result in tissue- and cell lineage-specific pathology (PMID:14707169; DOI:10.1073/pnas.0810772105).
+
+Changes made:
+
+* Fixed some typos, such as ""karry out"" to ""carry out,"" and ""ekspression"" to ""expression.""
+* Replaced outdated or informal language with more formal scientific language. For example, ""mechanistically understanding ekspression regulation"" was changed to ""understanding how genes influence complex traits requires a mechanistic comprehension of expression regulation.""
+* Simplified some sentences for clarity and readability. For example, ""Integrating functional genomics data and GWAS data has improoved the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology"" was simplified to ""Integrating functional genomics data and GWAS data has improved the identification of these transcriptional mechanisms. When dysregulated, these mechanisms commonly result in tissue- and cell lineage-specific pathology.""
+* Added missing DOI and PMID numbers for references where they were missing.
+* Consistently used ""DOI"" instead of ""doi"" and ""PMID"" instead of ""pmid"" to maintain a formal tone throughout the paragraph.
+
+Reason: Expected output to not contain one of ""karry, ekspression, improoved""","[FAIL] (0.71)
+
+Python code returned false
+input = context[""vars""][""content""]
+input_words = len(input.strip().split())
+output_words = len(output.strip().split())
+response = (output_words > 0.5 * input_words) and (output_words < 1.5 * input_words)
+print(response)
+
+---
+ The current understanding of how genes contribute to complex traits and diseases is limited by our incomplete knowledge of the gene regulatory networks that underlie biological processes ([@pmid:19104045; @doi:10.1038/ng.3259]). Mechanistic insights into gene expression regulation across different cell types can help address this gap, leading to improved treatments ([@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]). Although previous studies have identified various regulatory DNA elements and genetic effects on gene expression across tissues ([@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3]; [@doi:10.1126/science.aaz1776]), a comprehensive integration of functional genomics data and GWAS data to elucidate the transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology ([@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105]) has not been thoroughly explored. Here, we introduce a novel approach that projects genetic associations through gene expression patterns to highlight disease etiology and drug mechanisms (Keywords: genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits). Our method identifies critical regulatory elements and pathways by integrating GWAS data with gene co-expression networks across different tissues. This approach not only provides insights into the genetic basis of complex diseases but also suggests novel therapeutic targets and potential drug repurposing opportunities.
+
+Reason: Python code returned false
+input = context[""vars""][""content""]
+input_words = len(input.strip().split())
+output_words = len(output.strip().split())
+response = (output_words > 0.5 * input_words) and (output_words < 1.5 * input_words)
+print(response)"
+"Genes work together in context-specific networks to karry out different functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can change their functional role and, at a higher level, affect disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, determining how genes influence complex traits requires mechanistically understanding ekspression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9], which in turn should lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies have described different regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3] including genetic effects on gene expression across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has improoved the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",Has no spelling errors,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[FAIL] (0.57)
+
+Expected output to not contain one of ""karry, ekspression, improoved""
+---
+ Genes operate in context-specific networks to carry out various functions (PMID:19104045; DOI:10.1038/ng.3259). Variations in these genes can alter their functional roles and, at a higher level, impact disease-relevant biological processes (DOI:10.1038/s41467-018-06022-6). In this context, understanding how genes influence complex traits requires mechanistically dissecting expression regulation across different cell types (PMID:20624743; DOI:10.1038/s41586-020-2559-3; DOI:10.1038/s41576-019-0200-9), which should ultimately lead to improved treatments (DOI:10.1038/ng.3314; DOI:10.1371/journal.pgen.1008489). Previous studies have identified various regulatory DNA elements (DOI:10.1038/nature11247; DOI:10.1038/nature14248; DOI:10.1038/nature12787; DOI:10.1038/s41586-020-03145-z; DOI:10.1038/s41586-020-2559-3), including genetic effects on gene expression across different tissues (PMID:20624743). Integrating functional genomics data and GWAS data (DOI:10.1038/s41588-018-0081-4; DOI:10.1016/j.ajhg.2018.04.002; DOI:10.1038/s41588-018-0081-4; DOI:10.1038/ncomms6890) has improved the identification of these transcriptional mechanisms. When dysregulated, such mechanisms commonly result in tissue- and cell lineage-specific pathology (PMID:14707169; DOI:10.1073/pnas.0810772105).
+
+Changes Made:
+
+* Corrected grammar, spelling, and formatting errors.
+* Replaced ""karry out"" with ""carry out"".
+* Replaced ""ekspression"" with ""expression"" throughout the paragraph.
+* Changed ""affect"" to ""impact"" for clarity.
+* Added DOI and PMID numbers for proper citation format.
+* Consistently capitalized ""DOI"" and ""PMID"".
+* Combined two similar sentences about previous studies into one sentence.
+* Reordered some sentences for better flow.
+
+Reason: Expected output to not contain one of ""karry, ekspression, improoved""","[FAIL] (0.86)
+
+Python code returned false
+input = context[""vars""][""content""]
+input_words = len(input.strip().split())
+output_words = len(output.strip().split())
+response = (output_words > 0.5 * input_words) and (output_words < 1.5 * input_words)
+print(response)
+
+---
+ The current understanding of how genes contribute to complex traits and diseases is limited by our incomplete knowledge of the genetic regulation of gene expression across different cell types and tissues. Although previous studies have identified regulatory DNA elements, including genetic effects on gene expression (e.g., [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787]), a comprehensive and integrated analysis of functional genomics data and GWAS data is still needed to fully elucidate the transcriptional mechanisms underlying tissue- and cell lineage-specific pathology (e.g., [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002]). Here, we present a novel approach for integrating functional genomics data and GWAS data that allows us to identify gene co-expression networks associated with complex traits and diseases. Our method reveals previously unrecognized genetic associations and provides insights into the mechanisms of disease etiology and drug action. By clustering complex traits based on their genetic associations, we also identify potential therapeutic targets and opportunities for drug repurposing. Overall, our findings highlight the importance of understanding gene regulation in the context of specific cell types and tissues, and provide a framework for future studies aimed at identifying functional mechanisms underlying complex traits and diseases.
+
+Reason: Python code returned false
+input = context[""vars""][""content""]
+input_words = len(input.strip().split())
+output_words = len(output.strip().split())
+response = (output_words > 0.5 * input_words) and (output_words < 1.5 * input_words)
+print(response)"
+"Genes work together in context-specific networks to karry out different functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can change their functional role and, at a higher level, affect disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, determining how genes influence complex traits requires mechanistically understanding ekspression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9], which in turn should lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies have described different regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3] including genetic effects on gene expression across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has improoved the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",Has no spelling errors,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[PASS] (1.00)
+
+ Genes operate in concert within context-specific networks to execute diverse functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can alter their functional roles and, at a higher level, impact disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, elucidating how genes influence complex traits necessitates a mechanistic understanding of expression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9], which should ultimately lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies have identified various regulatory DNA elements, including genetic effects on gene expression across different tissues [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has enhanced the identification of these transcriptional mechanisms. Dysregulation of these mechanisms commonly results in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].
+
+Reason: All assertions passed","[FAIL] (0.86)
+
+Python code returned false
+input = context[""vars""][""content""]
+input_words = len(input.strip().split())
+output_words = len(output.strip().split())
+response = (output_words > 0.5 * input_words) and (output_words < 1.5 * input_words)
+print(response)
+
+---
+ The current understanding of how genes contribute to complex traits and diseases is limited by our incomplete knowledge of the genetic regulation of gene expression across different cell types and tissues. While previous studies have described various regulatory DNA elements, including genetic effects on gene expression [@doi:10.1126/science.aaz1776; @doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3], integrating functional genomics data and GWAS data has been shown to improve the identification of transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/ncomms6890]. However, a gap remains in our ability to project genetic associations through gene expression patterns in order to highlight disease etiology and drug mechanisms. Here, we present a novel approach for integrating GWAS and functional genomics data that allows us to identify co-expressed gene modules and their corresponding regulatory elements. We demonstrate that this method improves the identification of therapeutic targets and facilitates drug repurposing for complex traits by highlighting shared genetic regulation across diseases (details in Results section). Our results provide new insights into the genetic architecture of complex traits, and have implications for our understanding of disease etiology and drug mechanisms.
+
+Reason: Python code returned false
+input = context[""vars""][""content""]
+input_words = len(input.strip().split())
+output_words = len(output.strip().split())
+response = (output_words > 0.5 * input_words) and (output_words < 1.5 * input_words)
+print(response)"
+"Genes work together in context-specific networks to carry out different functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can change their functional role and, at a higher level, affect disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, determining how genes influence complex traits requires mechanistically understanding expression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9], which in turn should lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies have described different regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3] including genetic effects on gene expression across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has improved the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",Keeps most references to other articles and doesn't make them up,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[PASS] (1.00)
+
+ Genes operate in a context-specific manner, functioning as part of networks that collectively execute various cellular tasks [@pmid:19104045; @doi:10.1038/ng.3259]. Alterations in these genes can modify their functional roles and, at a higher level, impact disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, elucidating the influence of genes on complex traits necessitates a mechanistic understanding of expression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9]. This, in turn, should lead to the development of improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies have identified various regulatory DNA elements, including genetic effects on gene expression across different tissues [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3]. The integration of functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has facilitated the identification of transcriptional mechanisms, which, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].
+
+Reason: All assertions passed","[FAIL] (0.88)
+
+Python code returned false
+input = context[""vars""][""content""]
+input_words = len(input.strip().split())
+output_words = len(output.strip().split())
+response = (output_words > 0.5 * input_words) and (output_words < 1.5 * input_words)
+print(response)
+
+---
+ The current understanding of how genes contribute to complex traits and diseases is primarily based on genetic association studies, which have identified numerous genetic variants associated with various phenotypes [@doi:10.1038/s41467-018-06022-6]. However, these associations do not provide insights into the underlying molecular mechanisms. Mechanistically understanding expression regulation across different cell types and tissues is crucial to bridge this gap [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9]. Although previous studies have described various regulatory DNA elements, including genetic effects on gene expression across different tissues [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z], a comprehensive integration of functional genomics data and GWAS data to identify transcriptional mechanisms that, when dysregulated, result in tissue- and cell lineage-specific pathology is still lacking [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002]. Here, we propose a novel approach that projects genetic associations through gene expression patterns to highlight disease etiology and drug mechanisms (content). Our results demonstrate the power of this method in identifying therapeutic targets and repurposing drugs for complex traits by revealing previously unreported gene-disease associations and providing insights into disease etiology (conclusion). This study moves the broader field forward by suggesting that a systematic analysis of genetic associations through functional genomics data has the potential to uncover novel drug targets, thereby improving treatments.
+
+Reason: Python code returned false
+input = context[""vars""][""content""]
+input_words = len(input.strip().split())
+output_words = len(output.strip().split())
+response = (output_words > 0.5 * input_words) and (output_words < 1.5 * input_words)
+print(response)"
+"Genes work together in context-specific networks to carry out different functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can change their functional role and, at a higher level, affect disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, determining how genes influence complex traits requires mechanistically understanding expression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9], which in turn should lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies have described different regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3] including genetic effects on gene expression across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has improved the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",Keeps most references to other articles and doesn't make them up,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[FAIL] (0.88)
+
+Python code returned false
+len(output.strip().split(""\n"")) == 1
+---
+ Genes operate within context-specific networks to execute diverse functions [@pmid:19104045; @doi:10.1038/ng.3259]. Genetic variants can alter these genes' functional roles, ultimately impacting disease-relevant biological processes at a higher level [@doi:10.1038/s41467-018-06022-6]. To elucidate the influence of genes on complex traits, it is essential to understand the mechanistic regulation of gene expression across various cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9]. Such insights have the potential to enhance treatment development [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489].
+
+Previous research has identified various regulatory DNA elements, including genetic effects on gene expression across different tissues [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has facilitated the identification of transcriptional mechanisms. Dysregulation of these mechanisms often leads to tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].
+
+My revisions aimed to improve clarity, readability, and conciseness while maintaining the original meaning. I removed redundant information and sentences that could be merged for better flow. Additionally, I corrected some minor grammatical issues. The revised paragraph should now be clearer and more engaging for readers.
+
+Reason: Python code returned false
+len(output.strip().split(""\n"")) == 1","[FAIL] (0.88)
+
+Python code returned false
+input = context[""vars""][""content""]
+input_words = len(input.strip().split())
+output_words = len(output.strip().split())
+response = (output_words > 0.5 * input_words) and (output_words < 1.5 * input_words)
+print(response)
+
+---
+ In the field of genetic studies, it is well-established that genes function in context-specific networks to carry out various biological processes ([@pmid:19104045; @doi:10.1038/ng.3259]). However, a gap exists in our understanding of how genetic variations affect these disease-relevant processes by altering gene expression regulation across different cell types ([@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9]). While previous studies have identified different regulatory DNA elements, including genetic effects on gene expression across tissues ([@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3]), there is a need to integrate functional genomics data and GWAS data ([@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890]) to improve the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology ([@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105]). Here, we present a novel approach that mechanistically understands gene expression regulation and its impact on complex traits. Our results show that by integrating functional genomics data and GWAS data, we can identify therapeutic targets and repurpose drugs for various diseases (manuscript under review). This approach not only fills the gap in our understanding of how genes influence complex traits but also highlights the potential of using gene expression patterns to guide drug discovery and development.
+
+Reason: Python code returned false
+input = context[""vars""][""content""]
+input_words = len(input.strip().split())
+output_words = len(output.strip().split())
+response = (output_words > 0.5 * input_words) and (output_words < 1.5 * input_words)
+print(response)"
+"Genes work together in context-specific networks to carry out different functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can change their functional role and, at a higher level, affect disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, determining how genes influence complex traits requires mechanistically understanding expression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9], which in turn should lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies have described different regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3] including genetic effects on gene expression across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has improved the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",Keeps most references to other articles and doesn't make them up,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[FAIL] (0.88)
+
+Python code returned false
+len(output.strip().split(""\n"")) == 1
+---
+ Genes operate in context-specific networks to execute various functions [@pmid:19104045; @doi:10.1038/ng.3259]. Alterations in these genes can modify their functional roles, and more broadly, impact disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, elucidating the influence of genes on complex traits necessitates a mechanistic understanding of expression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9]. Such comprehension should facilitate the development of improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489].
+
+Previous investigations have identified various regulatory DNA elements, including genetic effects on gene expression across different tissues [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has enhanced the identification of these transcriptional mechanisms. Dysregulation of these mechanisms often leads to tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].
+
+My revisions aimed to improve clarity, conciseness, and readability while maintaining the original meaning. I also ensured that the paragraph flowed smoothly and addressed the significance of gene expression regulation in disease etiology and drug mechanisms, which aligns with the manuscript's title and keywords.
+
+Reason: Python code returned false
+len(output.strip().split(""\n"")) == 1","[FAIL] (0.75)
+
+Python code returned false
+input = context[""vars""][""content""]
+
+references = {
+  ""@pmid:19104045"",
+  ""@doi:10.1038/ng.3259"",
+  ""@doi:10.1038/s41467-018-06022-6"",
+  ""@doi:10.1126/science.aaz1776"",
+  ""@doi:10.1038/s41586-020-2559-3"",
+  ""@doi:10.1038/s41576-019-0200-9"",
+  ""@doi:10.1038/ng.3314"",
+  ""@doi:10.1371/journal.pgen.1008489"",
+  ""@doi:10.1038/nature11247"",
+  ""@doi:10.1038/nature14248"",
+  ""@doi:10.1038/nature12787"",
+  ""@doi:10.1038/s41586-020-03145-z"",
+  ""@doi:10.1038/s41586-020-2559-3"",
+  ""@doi:10.1126/science.aaz1776"",
+  ""@doi:10.1038/s41588-018-0081-4"",
+  ""@doi:10.1016/j.ajhg.2018.04.002"",
+  ""@doi:10.1038/s41588-018-0081-4"",
+  ""@doi:10.1038/ncomms6890"",
+  ""@pmid:20624743"",
+  ""@pmid:14707169"",
+  ""@doi:10.1073/pnas.0810772105"",
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) > 0.50)
+
+---
+ The current understanding of how genes contribute to complex traits and diseases is limited by our incomplete knowledge of the genetic regulation of gene expression across different cell types. While previous studies have identified regulatory DNA elements, including genetic effects on gene expression across tissues, there remains a need for a more comprehensive and integrative approach that combines functional genomics data with GWAS data to elucidate the transcriptional mechanisms underlying tissue- and cell lineage-specific pathology. This is crucial because genes often work together in context-specific networks to carry out different functions, and variations in these genes can affect disease-relevant biological processes. Here, we present a novel approach for projecting genetic associations through gene expression patterns, which allows us to identify key regulatory elements that influence complex traits and diseases. Our results reveal new insights into the genetic regulation of gene expression across different cell types and highlight potential therapeutic targets for drug repurposing and development. By integrating functional genomics data with GWAS data, our approach bridges the gap between genetic associations and molecular mechanisms, providing a more complete understanding of disease etiology and drug action.
+
+Reason: Python code returned false
+input = context[""vars""][""content""]
+
+references = {
+  ""@pmid:19104045"",
+  ""@doi:10.1038/ng.3259"",
+  ""@doi:10.1038/s41467-018-06022-6"",
+  ""@doi:10.1126/science.aaz1776"",
+  ""@doi:10.1038/s41586-020-2559-3"",
+  ""@doi:10.1038/s41576-019-0200-9"",
+  ""@doi:10.1038/ng.3314"",
+  ""@doi:10.1371/journal.pgen.1008489"",
+  ""@doi:10.1038/nature11247"",
+  ""@doi:10.1038/nature14248"",
+  ""@doi:10.1038/nature12787"",
+  ""@doi:10.1038/s41586-020-03145-z"",
+  ""@doi:10.1038/s41586-020-2559-3"",
+  ""@doi:10.1126/science.aaz1776"",
+  ""@doi:10.1038/s41588-018-0081-4"",
+  ""@doi:10.1016/j.ajhg.2018.04.002"",
+  ""@doi:10.1038/s41588-018-0081-4"",
+  ""@doi:10.1038/ncomms6890"",
+  ""@pmid:20624743"",
+  ""@pmid:14707169"",
+  ""@doi:10.1073/pnas.0810772105"",
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) > 0.50)"
+"Genes work together in context-specific networks to carry out different functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can change their functional role and, at a higher level, affect disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, determining how genes influence complex traits requires mechanistically understanding expression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9], which in turn should lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies have described different regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3] including genetic effects on gene expression across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has improved the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",Keeps most references to other articles and doesn't make them up,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[FAIL] (0.88)
+
+Python code returned false
+input = context[""vars""][""content""]
+
+references = {
+  ""@pmid:19104045"",
+  ""@doi:10.1038/ng.3259"",
+  ""@doi:10.1038/s41467-018-06022-6"",
+  ""@doi:10.1126/science.aaz1776"",
+  ""@doi:10.1038/s41586-020-2559-3"",
+  ""@doi:10.1038/s41576-019-0200-9"",
+  ""@doi:10.1038/ng.3314"",
+  ""@doi:10.1371/journal.pgen.1008489"",
+  ""@doi:10.1038/nature11247"",
+  ""@doi:10.1038/nature14248"",
+  ""@doi:10.1038/nature12787"",
+  ""@doi:10.1038/s41586-020-03145-z"",
+  ""@doi:10.1038/s41586-020-2559-3"",
+  ""@doi:10.1126/science.aaz1776"",
+  ""@doi:10.1038/s41588-018-0081-4"",
+  ""@doi:10.1016/j.ajhg.2018.04.002"",
+  ""@doi:10.1038/s41588-018-0081-4"",
+  ""@doi:10.1038/ncomms6890"",
+  ""@pmid:20624743"",
+  ""@pmid:14707169"",
+  ""@doi:10.1073/pnas.0810772105"",
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) > 0.50)
+
+---
+ Genes operate in context-specific networks to execute diverse functionalities (*[pmid:19104045]; [doi:10.1038/ng.3259]*). The functional roles of these genes can be altered by variations, which subsequently impact disease-relevant biological processes at higher levels (*[doi:10.1038/s41467-018-06022-6]*). To comprehend how genes influence complex traits, it is essential to mechanistically understand the regulation of gene expression across different cell types (*[doi:10.1126/science.aaz1776]; [doi:10.1038/s41586-020-2559-3]; [doi:10.1038/s41576-019-0200-9]*). This improved understanding can potentially lead to the development of more effective treatments (*[doi:10.1038/ng.3314]; [doi:10.1371/journal.pgen.1008489]*). Previous research has identified various regulatory DNA elements, including genetic effects on gene expression across different tissues (*[doi:10.1038/nature11247]; [doi:10.1038/nature14248]; [doi:10.1038/nature12787]; [doi:10.1038/s41586-020-03145-z]; [doi:10.1038/s41586-020-2559-3]*). The integration of functional genomics data and GWAS data (*[doi:10.1038/s41588-018-0081-4]; [doi:10.1016/j.ajhg.2018.04.002]; [doi:10.1038/s41588-018-0081-4]; [doi:10.1038/ncomms6890]*) has enhanced the identification of transcriptional mechanisms. Dysregulation of these mechanisms frequently results in tissue- and cell lineage-specific pathology (*[pmid:20624743]; [pmid:14707169]; [doi:10.1073/pnas.0810772105]*).
+
+Reason: Python code returned false
+input = context[""vars""][""content""]
+
+references = {
+  ""@pmid:19104045"",
+  ""@doi:10.1038/ng.3259"",
+  ""@doi:10.1038/s41467-018-06022-6"",
+  ""@doi:10.1126/science.aaz1776"",
+  ""@doi:10.1038/s41586-020-2559-3"",
+  ""@doi:10.1038/s41576-019-0200-9"",
+  ""@doi:10.1038/ng.3314"",
+  ""@doi:10.1371/journal.pgen.1008489"",
+  ""@doi:10.1038/nature11247"",
+  ""@doi:10.1038/nature14248"",
+  ""@doi:10.1038/nature12787"",
+  ""@doi:10.1038/s41586-020-03145-z"",
+  ""@doi:10.1038/s41586-020-2559-3"",
+  ""@doi:10.1126/science.aaz1776"",
+  ""@doi:10.1038/s41588-018-0081-4"",
+  ""@doi:10.1016/j.ajhg.2018.04.002"",
+  ""@doi:10.1038/s41588-018-0081-4"",
+  ""@doi:10.1038/ncomms6890"",
+  ""@pmid:20624743"",
+  ""@pmid:14707169"",
+  ""@doi:10.1073/pnas.0810772105"",
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+count = len([ref for ref in references if ref in output])
+print(count / len(references) > 0.50)","[FAIL] (0.88)
+
+Python code returned false
+input = context[""vars""][""content""]
+input_words = len(input.strip().split())
+output_words = len(output.strip().split())
+response = (output_words > 0.5 * input_words) and (output_words < 1.5 * input_words)
+print(response)
+
+---
+ The current understanding of the relationship between genes and complex traits has been advanced by studies detailing how genes function in context-specific networks ([@pmid:19104045; @doi:10.1038/ng.3259]). However, there remains a gap in knowledge regarding the mechanistic understanding of expression regulation across different cell types, which is crucial for determining how genes influence complex traits and developing improved treatments ([@doi:10.1038/s41467-018-06022-6; @doi:10.1038/ng.3314]). While previous studies have described various regulatory DNA elements, including genetic effects on gene expression across different tissues ([@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787]), there is a need for better integration of functional genomics data and GWAS data to identify transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology ([@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002]). Here, we address this gap by presenting a novel approach that combines gene co-expression analysis with functional genomics data to project genetic associations onto gene expression patterns. Our results reveal new insights into disease etiology and drug mechanisms ([@doi:10.1038/s41576-019-0200-9; @doi:10.1038/s41586-020-2559-3]), highlighting the potential of this approach for identifying therapeutic targets and drug repurposing ([@doi:10.1038/ng.3259; @doi:10.1371/journal.pgen.1008489]). This research thus advances the broader field of functional genomics and its applications for understanding complex traits and disease mechanisms.
+
+Reason: Python code returned false
+input = context[""vars""][""content""]
+input_words = len(input.strip().split())
+output_words = len(output.strip().split())
+response = (output_words > 0.5 * input_words) and (output_words < 1.5 * input_words)
+print(response)"
+"Genes work together in context-specific networks to carry out different functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can change their functional role and, at a higher level, affect disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, determining how genes influence complex traits requires mechanistically understanding expression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9], which in turn should lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies have described different regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3] including genetic effects on gene expression across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has improved the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",Keeps most references to other articles and doesn't make them up,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[FAIL] (0.88)
+
+Python code returned false
+len(output.strip().split(""\n"")) == 1
+---
+ Genes operate in context-specific networks to execute various functions [@pmid:19104045; @doi:10.1038/ng.3259]. Alterations in these genes can modify their functional role, ultimately impacting disease-relevant biological processes at a higher level [@doi:10.1038/s41467-018-06022-6]. In this context, elucidating the influence of genes on complex traits necessitates a mechanistic understanding of expression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9]. Such comprehension should facilitate the development of improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489].
+
+Previous investigations have identified various regulatory DNA elements, including genetic effects on gene expression across different tissues [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3]. Integrating functional genomics data with GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has enhanced the identification of these transcriptional mechanisms. Dysregulation of these mechanisms frequently leads to tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].
+
+My revisions mainly focused on improving the flow and clarity of the text while maintaining the original meaning. I corrected some grammatical errors, redundancies, and awkward phrasings. Additionally, I made sure that all in-text citations were formatted consistently according to the required citation style.
+
+Reason: Python code returned false
+len(output.strip().split(""\n"")) == 1","[FAIL] (0.75)
+
+Python code returned false
+input = context[""vars""][""content""]
+input_words = len(input.strip().split())
+output_words = len(output.strip().split())
+response = (output_words > 0.5 * input_words) and (output_words < 1.5 * input_words)
+print(response)
+
+---
+ The current understanding of how genes work together to influence complex traits and disease risk is primarily based on genetic association studies, such as Genome-Wide Association Studies (GWAS). However, these approaches often fall short in providing a mechanistic explanation for the observed associations. It is widely recognized that genes function within context-specific networks, and variations in these genes can alter their functional roles and impact disease-relevant biological processes [@pmid:19104045; @doi:10.1038/ng.3259]. To advance our knowledge of the relationship between genetic variation and complex traits, it is essential to mechanistically understand expression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9].
+
+In this study, we employed a novel approach that integrates functional genomics data and GWAS data to elucidate gene co-expression networks and identify tissue-specific transcriptional mechanisms [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890]. We found that these transcriptional mechanisms, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105]. Our results demonstrate that by understanding the genetic associations through gene expression patterns, we can highlight disease etiology and drug mechanisms (broader significance). These findings have important implications for identifying therapeutic targets and drug repurposing, ultimately leading to improved treatments for complex diseases.
+
+Reason: Python code returned false
+input = context[""vars""][""content""]
+input_words = len(input.strip().split())
+output_words = len(output.strip().split())
+response = (output_words > 0.5 * input_words) and (output_words < 1.5 * input_words)
+print(response)"
