@@ -73,7 +73,7 @@ tests:
       test_description: Describes method before results
       title: file://./inputs/title.txt
       keywords: file://./inputs/keywords.txt
-      content: file://./inputs/doesn't_describe_method_before_results.md
+      content: file://./inputs/doesnt_describe_method_before_results.md
     assert:
       - type: python
         value: |
@@ -91,7 +91,7 @@ tests:
       test_description: Doesn't end with interpretation of results
       title: file://./inputs/title.txt
       keywords: file://./inputs/keywords.txt
-      content: file://./inputs/doesn't_end_with_interpretation_of_results.md
+      content: file://./inputs/doesnt_end_with_interpretation_of_results.md
     assert:
       - type: python
         value: |
