@@ -133,10 +133,16 @@ python ../../../src/run.py
 
 ### Visualize results
 
-To explore the results of your evaluations in a web UI table, run:
+To explore the results of your evaluations across *all* models in a web UI table, run:
 
 ```bash
 python ../../../src/run.py --view
+```
+
+If you are interested only in a specific model such as `gpt-3.5-turbo-0613`, run:
+
+```bash
+promptfoo view outputs/gpt-3.5-turbo-0613/
 ```
 
 [See more here](https://www.promptfoo.dev/docs/usage/web-ui).
