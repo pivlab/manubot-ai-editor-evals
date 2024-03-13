@@ -151,3 +151,13 @@ tests:
     assert:
       - type: python
         value: ("transcription-wide association study" in output.split(".")[0].lower())
+
+  # adheres to C-C-C by ending with a conclusion
+  - vars:
+      test_description: ends with conclusion
+      title: file://./inputs/title.txt
+      keywords: file://./inputs/keywords.txt
+      content: file://./inputs/doesnt_end_with_conclusion.md
+    assert:
+      - type: python
+        value: ("however" in output.split(".")[-2].lower())
