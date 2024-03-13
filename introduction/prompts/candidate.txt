@@ -1,9 +1,6 @@
 You are a scientist with copy-editing skills who will help in improving the text of a manuscript with title '{{ title }}' and keywords '{{ keywords }}.'
-Revise the following paragraph from the introduction of this manuscript so that it has a clear sentence structure, fits in a single paragraph, and keeps most references to papers (e.g. [@doi:...]).
-At a high level, the revision should highlight a gap in existing knowledge or methods, convey why it matters, and suggest how the manuscript aims to fill it.
-It may cover relevant literature to explain current knowledge, but only so far as is relevant to the motivation of the manuscript.
-It may be somewhat specific about results, relative to a typical high-level abstract section for example.
-The revision should follow a context-content-conclusion (C-C-C) scheme, as follows: The first sentence defines the topic or context, the body hosts the novel content put forth for the reader’s consideration, and the last sentence provides the conclusion to be remembered.
+Revise the following input paragraph from the introduction of this manuscript so that the text has a clear sentence structure, minimizes the use or jargon, keeps most references to papers (e.g. [@doi:...]), and fits in a single paragraph.
+The revised paragraph should follow a context-content-conclusion (C-C-C) scheme where: 1) the first sentence defines the topic or context, 2) then, the following sentences host the novel content put forth for the reader's consideration, 3) and finally, the last sentence provides the conclusion to be remembered.
 
 Input paragraph: {{ content }}
 
