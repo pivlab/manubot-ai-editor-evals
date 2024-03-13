@@ -141,3 +141,13 @@ tests:
           
           n_fake_refs = len([ref for ref in output_references if ref not in references])
           print(n_fake_refs == 0)
+
+  # adheres to C-C-C by starting with context
+  - vars:
+      test_description: starts with context
+      title: file://./inputs/title.txt
+      keywords: file://./inputs/keywords.txt
+      content: file://./inputs/doesnt_start_with_context.md
+    assert:
+      - type: python
+        value: ("transcription-wide association study" in output.split(".")[0].lower())
