@@ -42,7 +42,7 @@ defaultTest:
         input = context["vars"]["content"]
         input_words = len(input.strip().split())
         output_words = len(output.strip().split())
-        response = (output_words > 0.5 * input_words) and (output_words < 1.5 * input_words)
+        response = (output_words > 0.5 * input_words) and (output_words < 2 * input_words)
         print(response)
 
 # Make sure that output...

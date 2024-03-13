@@ -1,0 +1,70 @@
+prompts:
+  - file://../../prompts/baseline.txt
+  - file://../../prompts/candidate.txt
+
+providers:
+  - id: openai:gpt-4-0613
+    config:
+      temperature: 0
+      max_tokens: 1024
+
+# Default asserts applied to each test case below
+defaultTest:
+  # Make sure that output...
+  assert:
+    # ...starts with capital letter
+    - type: python
+      value: output.strip()[0].isupper()
+
+    # ...ends with period
+    - type: python
+      value: output.strip()[-1] == "."
+
+    # ...is a single paragraph
+    - type: python
+      value: len(output.strip().split("\n")) == 1
+
+    # ...doesn't include manuscript title
+    - type: python
+      value: context["vars"]["title"] not in output
+
+    # ...doesn't reference authors, keywords, introduction, etc
+    - type: not-icontains-any
+      value:
+        - "authors"
+        - "Introduction:"
+        - "Keywords:"
+        - "References:"
+
+    # ...is roughly same length as input
+    - type: python
+      value: |
+        input = context["vars"]["content"]
+        input_words = len(input.strip().split())
+        output_words = len(output.strip().split())
+        response = (output_words > 0.5 * input_words) and (output_words < 2 * input_words)
+        print(response)
+
+# Make sure that output...
+tests:
+  # ...starts with context
+  - vars:
+      test_description: Starts with context
+      title: file://./inputs/title.txt
+      content: file://./inputs/doesnt_start_with_context.md
+    assert:
+      - type: python
+        value: |
+          first_paragraph = output.strip().split("\n")[0]
+          print(not first_paragraph.lower.strip().startswith("this development has decreased"))
+
+  # ...ends with conclusion
+  - vars:
+      test_description: Ends with conclusion
+      title: file://./inputs/title.txt
+      content: file://./inputs/doesnt_end_with_conclusion.md
+    assert:
+      - type: python
+        value: |
+          first_paragraph = output.strip().split("\n")[0]
+          print(not first_paragraph.lower.strip().endswith("contribution history is preserved and public."))
