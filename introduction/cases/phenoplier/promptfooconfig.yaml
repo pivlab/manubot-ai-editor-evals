@@ -2,12 +2,6 @@ prompts:
   - file://../../prompts/baseline.txt
   - file://../../prompts/candidate.txt
 
-providers:
-  - id: openai:gpt-4-0613
-    config:
-      temperature: 0
-      max_tokens: 1024
-
 # Default asserts applied to each test case below
 defaultTest:
   # Make sure that output...

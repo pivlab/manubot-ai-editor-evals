@@ -2,24 +2,18 @@ import re
 import argparse
 import subprocess
 import time
+from pathlib import Path
 from dotenv import load_dotenv
 
 
 # model names and repetitions
 models = {
-    "ollama:deepseek-llm:7b-chat-fp16": 5,
-    "ollama:llama2:13b-chat-q8_0": 5,
-    "ollama:llama2:7b-chat-fp16": 5,
-    "ollama:mistral:7b-instruct-fp16": 5,
-    "ollama:mistral:7b-instruct-v0.2-fp16": 5,
-    "ollama:mixtral:8x7b-instruct-v0.1-q8_0": 5,
-    "ollama:starling-lm:7b-alpha-fp16": 5,
-    "ollama:gemma:2b-instruct-fp16": 5,
-    "ollama:gemma:7b-instruct-fp16": 5,
-    "openai:gpt-3.5-turbo-0613": 5,
-    "openai:gpt-3.5-turbo-1106": 5,
-    "openai:gpt-4-0613": 5,
-    "openai:gpt-4-1106-preview": 5,
+    "ollama=mistral=7b-instruct-fp16": 5,
+    "ollama=mixtral=8x7b-instruct-v0.1-q8_0": 5,
+    "ollama=starling-lm=7b-alpha-fp16": 5,
+    "openai=gpt-3.5-turbo-0125": 5,
+    "openai=gpt-4-0613": 5,
+    "openai=gpt-4-0125-preview": 5,
 }
 
 
@@ -29,7 +23,7 @@ load_dotenv()
 # extract parts of model name
 def split_model(model):
     id, repeat = model
-    prefix, name = id.split(":", maxsplit=1)
+    prefix, name = id.split("=", maxsplit=1)
     path = name.replace(":", "-")
     return {
         "id": id,
@@ -57,6 +51,7 @@ parser.add_argument(
 )
 args = parser.parse_args()
 
+script_dir = Path(__file__).parent.resolve()
 
 # run in pull mode
 if args.pull:
@@ -94,13 +89,15 @@ else:
         if model["prefix"] == "openai":
             max_concurrent_arg = ""
 
+        provider = f"exec:python {str(script_dir)}/llm.py --model {model['id']}"
+
         # --verbose \
         command = f"""
         promptfoo eval \
             {max_concurrent_arg} \
             --no-cache \
             --repeat {model['repeat']} \
-            --providers {model['id']} \
+            --providers "{provider}" \
             -o outputs/{model['path']}/output/latest.html \
             -o outputs/{model['path']}/output/latest.csv \
             -o outputs/{model['path']}/output/latest.txt \
