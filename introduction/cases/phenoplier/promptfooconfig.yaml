@@ -73,27 +73,19 @@ tests:
           input = context["vars"]["content"]
           
           references = {
-            "@pmid:19104045",
-            "@doi:10.1038/ng.3259",
-            "@doi:10.1038/s41467-018-06022-6",
+            "@doi:10.1038/nbt.3838",
+            "@doi:10.1038/s41467-018-03751-6",
             "@doi:10.1126/science.aaz1776",
-            "@doi:10.1038/s41586-020-2559-3",
-            "@doi:10.1038/s41576-019-0200-9",
-            "@doi:10.1038/ng.3314",
-            "@doi:10.1371/journal.pgen.1008489",
-            "@doi:10.1038/nature11247",
-            "@doi:10.1038/nature14248",
-            "@doi:10.1038/nature12787",
-            "@doi:10.1038/s41586-020-03145-z",
-            "@doi:10.1038/s41586-020-2559-3",
-            "@doi:10.1126/science.aaz1776",
-            "@doi:10.1038/s41588-018-0081-4",
-            "@doi:10.1016/j.ajhg.2018.04.002",
-            "@doi:10.1038/s41588-018-0081-4",
-            "@doi:10.1038/ncomms6890",
-            "@pmid:20624743",
-            "@pmid:14707169",
-            "@doi:10.1073/pnas.0810772105",
+            "@doi:10.1186/s13040-020-00216-9",
+            "@doi:10.1371/journal.pgen.1009482",
+            "@doi:10.1038/ng.3506",
+            "@doi:10.1371/journal.pgen.1007889",
+            "@doi:10.1038/ng.3367",
+            "@pmid:33931583",
+            "@doi:10.1101/2021.10.21.21265225",
+            "@pmid:31036433",
+            "@doi:10.1186/s13059-021-02591-w",
+            "@doi:10.1038/nn.4618",
           }
           
           # keep only references that are present in the input (this is needed because
@@ -110,27 +102,19 @@ tests:
           input = context["vars"]["content"]
           
           references = {
-            "@pmid:19104045",
-            "@doi:10.1038/ng.3259",
-            "@doi:10.1038/s41467-018-06022-6",
+            "@doi:10.1038/nbt.3838",
+            "@doi:10.1038/s41467-018-03751-6",
             "@doi:10.1126/science.aaz1776",
-            "@doi:10.1038/s41586-020-2559-3",
-            "@doi:10.1038/s41576-019-0200-9",
-            "@doi:10.1038/ng.3314",
-            "@doi:10.1371/journal.pgen.1008489",
-            "@doi:10.1038/nature11247",
-            "@doi:10.1038/nature14248",
-            "@doi:10.1038/nature12787",
-            "@doi:10.1038/s41586-020-03145-z",
-            "@doi:10.1038/s41586-020-2559-3",
-            "@doi:10.1126/science.aaz1776",
-            "@doi:10.1038/s41588-018-0081-4",
-            "@doi:10.1016/j.ajhg.2018.04.002",
-            "@doi:10.1038/s41588-018-0081-4",
-            "@doi:10.1038/ncomms6890",
-            "@pmid:20624743",
-            "@pmid:14707169",
-            "@doi:10.1073/pnas.0810772105",
+            "@doi:10.1186/s13040-020-00216-9",
+            "@doi:10.1371/journal.pgen.1009482",
+            "@doi:10.1038/ng.3506",
+            "@doi:10.1371/journal.pgen.1007889",
+            "@doi:10.1038/ng.3367",
+            "@pmid:33931583",
+            "@doi:10.1101/2021.10.21.21265225",
+            "@pmid:31036433",
+            "@doi:10.1186/s13059-021-02591-w",
+            "@doi:10.1038/nn.4618",
           }
           
           # keep only references that are present in the input (this is needed because
@@ -151,7 +135,7 @@ tests:
       content: file://./inputs/doesnt_start_with_context.md
     assert:
       - type: python
-        value: ("transcription-wide association study" in output.split(".")[0].lower())
+        value: ("transcription-wide association stud" in output.split(".")[0].lower())
 
   # adheres to C-C-C by ending with a conclusion
   - vars:
