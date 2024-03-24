@@ -24,7 +24,7 @@ load_dotenv()
 def split_model(model):
     id, repeat = model
     prefix, name = id.split("=", maxsplit=1)
-    path = name.replace(":", "-")
+    path = name.replace("=", ":").replace(":", "-")
     return {
         "id": id,
         "prefix": prefix,
