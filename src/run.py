@@ -58,7 +58,8 @@ if args.pull:
     for model in models:
         if model["prefix"] != "ollama":
             continue
-        command = f"ollama pull {model['name']}"
+        model_name = model["name"].replace("=", ":")
+        command = f"ollama pull {model_name}"
         print(command)
         subprocess.run(command, shell=True)
 
