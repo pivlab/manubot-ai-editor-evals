@@ -21,15 +21,15 @@ Under-the-hood, it uses:
    ```
 1. Install the last tested [promptfoo](https://promptfoo.dev/) version:
    ```bash
-   npm install -g promptfoo@0.44.0
+   npm install -g promptfoo@0.47.0
    ```
 1. Install this package in editable mode (only needs to be done once):
    ```bash
    pip install -e .
    ```
-1. Install [Ollama](https://ollama.ai/). The latest version we tested is [v0.1.27](https://github.com/jmorganca/ollama/releases/tag/v0.1.27), which in Linux (amd64) you can install with:
+1. Install [Ollama](https://ollama.ai/). The latest version we tested is [v0.1.29](https://github.com/ollama/ollama/releases/tag/v0.1.29), which in Linux (amd64) you can install with:
    ```bash
-   sudo curl -L https://github.com/ollama/ollama/releases/download/v0.1.27/ollama-linux-amd64 -o /usr/bin/ollama
+   sudo curl -L https://github.com/ollama/ollama/releases/download/v0.1.29/ollama-linux-amd64 -o /usr/bin/ollama
    sudo chmod +x /usr/bin/ollama
    ```
 
