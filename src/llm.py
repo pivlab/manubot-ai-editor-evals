@@ -41,17 +41,20 @@ if __name__ == "__main__":
     model_type, model = model.split("=", 1)
     model = model.replace("=", ":")
 
+    TEMPERATURE=0.5
+    MAX_TOKENS=1024
+
     if model_type == "ollama":
         llm = ChatOllama(
             model=model,
-            temperature=0,
-            max_tokens=1024,
+            temperature=TEMPERATURE,
+            max_tokens=MAX_TOKENS,
         )
     elif model_type == "openai":
         llm = ChatOpenAI(
             model_name=model,
-            temperature=0,
-            max_tokens=1024,
+            temperature=TEMPERATURE,
+            max_tokens=MAX_TOKENS,
         )
 
     prompt = ChatPromptTemplate(
