@@ -43,22 +43,23 @@ defaultTest:
         input_words = len(input.strip().split())
         output_words = len(output.strip().split())
         response = (output_words > 0.5 * input_words) and (output_words < 2 * input_words)
-        print(response)
+        return response
 
 # Make sure that output...
 tests:
-  # ...has no spelling errors
+  # ...has no spelling or grammar errors
   - vars:
       test_description: Has no spelling errors
       title: file://./inputs/title.txt
       keywords: file://./inputs/keywords.txt
-      content: file://./inputs/has_spelling_errors.md
+      content: file://./inputs/has_spelling_and_grammar_errors.md
     assert:
       - type: not-icontains-any
         value:
           - "karry"
           - "ekspression"
           - "improoved"
+          - "studies has"
 
   # ...keeps most references to other articles and doesn't make them up
   - vars:
@@ -100,7 +101,7 @@ tests:
           references = [ref for ref in references if ref in input]
           
           count = len([ref for ref in references if ref in output])
-          print(count / len(references) > 0.50)
+          return (count / len(references) > 0.50)
 
       - type: python
         value: |
@@ -140,7 +141,7 @@ tests:
           output_references = re.findall(r'@[^ ;\]]+', output)
           
           n_fake_refs = len([ref for ref in output_references if ref not in references])
-          print(n_fake_refs == 0)
+          return (n_fake_refs == 0)
 
   # adheres to C-C-C by starting with context
   - vars:
@@ -161,3 +162,16 @@ tests:
     assert:
       - type: python
         value: ("however" in output.split(".")[-2].lower())
+
+  # adheres to guidelines by treating last paragraph as a special case:
+  #  - it does not define any gaps, since all that done in the previous paragraphs
+  #  - it compactly summarizes the results
+  #  TODO: complete/define
+  - vars:
+      test_description: has proper last paragraph structure
+      title: file://./inputs/title.txt
+      keywords: file://./inputs/keywords.txt
+      content: file://./inputs/original_last_paragraph.md
+    assert:
+      - type: python
+        value: ("PhenoPLIER" in output.split(".")[0])
