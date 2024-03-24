@@ -88,10 +88,16 @@ elif args.view:
 # run in evaluation mode
 else:
     for model in models:
+        # the maximum concurrent API calls should be one for local models, and could
+        #  be increased (or use the default value) for remote models
+        max_concurrent_arg = "-j 1"
+        if model["prefix"] == "openai":
+            max_concurrent_arg = ""
+
         # --verbose \
         command = f"""
         promptfoo eval \
-            -j 1 \
+            {max_concurrent_arg} \
             --no-cache \
             --repeat {model['repeat']} \
             --providers {model['id']} \
