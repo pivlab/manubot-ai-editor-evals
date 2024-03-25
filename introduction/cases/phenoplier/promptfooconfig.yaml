@@ -1,5 +1,6 @@
 prompts:
   - file://../../prompts/baseline.txt
+  - file://../../prompts/candidate_with_metadata.txt
   - file://../../prompts/candidate.txt
 
 # Default asserts applied to each test case below
