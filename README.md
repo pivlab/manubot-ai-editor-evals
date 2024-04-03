@@ -142,7 +142,7 @@ python ../../../src/run.py --view
 If you are interested only in a specific model such as `gpt-3.5-turbo-0613`, run:
 
 ```bash
-promptfoo view outputs/gpt-3.5-turbo-0613/
+promptfoo view outputs/gpt-3.5-turbo-0125/
 ```
 
 [See more here](https://www.promptfoo.dev/docs/usage/web-ui).
