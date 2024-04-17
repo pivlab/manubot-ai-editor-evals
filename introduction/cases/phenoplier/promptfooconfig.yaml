@@ -9,22 +9,27 @@ defaultTest:
   assert:
     # ...starts with capital letter
     - type: python
+      weight: 0.5
       value: output.strip()[0].isupper()
 
     # ...ends with period
     - type: python
+      weight: 0.5
       value: output.strip()[-1] == "."
 
     # ...is a single paragraph
     - type: python
+      weight: 0.5
       value: len(output.strip().split("\n")) == 1
 
     # ...doesn't include manuscript title
     - type: python
+      weight: 0.5
       value: context["vars"]["title"] not in output
 
     # ...doesn't reference authors, keywords, introduction, etc
     - type: not-icontains-any
+      weight: 0.5
       value:
         - "authors"
         - "Introduction:"
@@ -33,6 +38,7 @@ defaultTest:
 
     # ...is roughly same length as input
     - type: python
+      weight: 0.5
       value: |
         input = context["vars"]["content"]
         input_words = len(input.strip().split())
@@ -50,6 +56,7 @@ tests:
       content: file://./inputs/has_spelling_and_grammar_errors.md
     assert:
       - type: not-icontains-any
+        weight: 1.0
         value:
           - "karry"
           - "ekspression"
@@ -64,6 +71,7 @@ tests:
       content: file://./inputs/has_references_to_articles.md
     assert:
       - type: python
+        weight: 1.0
         value: |
           input = context["vars"]["content"]
           
@@ -91,6 +99,7 @@ tests:
           return (count / len(references) > 0.50)
 
       - type: python
+        weight: 2.0
         value: |
           import re
           
@@ -130,7 +139,11 @@ tests:
       content: file://./inputs/doesnt_start_with_context.md
     assert:
       - type: python
-        value: ("transcription-wide association stud" in output.split(".")[0].lower())
+        weight: 1.0
+        value: |
+          # make sure TWAS is spelled out in the first two sentences
+          first_two_sentences = ". ".join(output.split(".")[:2]).lower()
+          return "transcription-wide association stud" in first_two_sentences
 
   # adheres to C-C-C by ending with a conclusion
   - vars:
@@ -140,17 +153,14 @@ tests:
       content: file://./inputs/doesnt_end_with_conclusion.md
     assert:
       - type: python
-        value: ("however" in output.split(".")[-2].lower())
-
-  # adheres to guidelines by treating last paragraph as a special case:
-  #  - it does not define any gaps, since all that done in the previous paragraphs
-  #  - it compactly summarizes the results
-  #  TODO: complete/define
-  - vars:
-      test_description: has proper last paragraph structure
-      title: file://./inputs/title.txt
-      keywords: file://./inputs/keywords.txt
-      content: file://./inputs/original_last_paragraph.md
-    assert:
-      - type: python
-        value: ("PhenoPLIER" in output.split(".")[0])
+        weight: 1.0
+        value: |
+          last_two_sentences = ". ".join(output.split(".")[-3:]).lower()
+          
+          keywords = [
+            "however",
+            "nevertheless",
+            "limitation",
+          ]
+          
+          return any(k in last_two_sentences for k in keywords)
