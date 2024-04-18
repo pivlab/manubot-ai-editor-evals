@@ -7,6 +7,7 @@ from langchain.prompts import (
 )
 from langchain_community.chat_models import ChatOllama
 from langchain_openai import ChatOpenAI
+from langchain_anthropic import ChatAnthropic
 
 
 if __name__ == "__main__":
@@ -53,6 +54,12 @@ if __name__ == "__main__":
     elif model_type == "openai":
         llm = ChatOpenAI(
             model_name=model,
+            temperature=TEMPERATURE,
+            max_tokens=MAX_TOKENS,
+        )
+    elif model_type == "anthropic":
+        llm = ChatAnthropic(
+            model=model,
             temperature=TEMPERATURE,
             max_tokens=MAX_TOKENS,
         )
