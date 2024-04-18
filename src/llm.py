@@ -1,5 +1,7 @@
 import argparse
+from pathlib import Path
 
+import pandas as pd
 from langchain.chains import LLMChain
 from langchain.prompts import (
     ChatPromptTemplate,
@@ -8,6 +10,8 @@ from langchain.prompts import (
 from langchain_community.chat_models import ChatOllama
 from langchain_openai import ChatOpenAI
 from langchain_anthropic import ChatAnthropic
+from langchain.cache import SQLiteCache
+from langchain.globals import set_llm_cache
 
 
 if __name__ == "__main__":
@@ -36,6 +40,35 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
 
+    # setup the cache
+    script_dir = Path(__file__).parent.resolve()
+    cache_dir = script_dir / "cache"
+    cache_dir.mkdir(exist_ok=True, parents=True)
+
+    REP_NUM = 0
+    repeat_runs_file = cache_dir / "repeat_runs.pkl"
+    if not repeat_runs_file.exists():
+        repeat_info = pd.DataFrame(columns=["model", "prompt", "repeat"])
+    else:
+        repeat_info = pd.read_pickle(repeat_runs_file)
+    
+    run_info = repeat_info[
+        (repeat_info["model"] == args.model)
+        & (repeat_info["prompt"] == args.prompt)
+    ]
+    if run_info.shape[0] > 0:
+        REP_NUM = run_info["repeat"].max() + 1
+    
+    repeat_info = pd.concat([
+        repeat_info,
+        pd.DataFrame({"model": [args.model], "prompt": [args.prompt], "repeat": [REP_NUM]}),
+    ], ignore_index=True)
+    repeat_info.to_pickle(repeat_runs_file)
+    
+    default_cache_file = cache_dir / f"llm_cache-rep{REP_NUM}.db"
+    set_llm_cache(SQLiteCache(database_path=str(default_cache_file)))
+
+    # process arguments
     model = args.model
     q = args.prompt
 

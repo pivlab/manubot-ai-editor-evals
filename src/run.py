@@ -87,12 +87,18 @@ elif args.view:
 
 # run in evaluation mode
 else:
+    # before starting, remove temporary repetition file in cache dir if exists
+    script_dir = Path(__file__).parent.resolve()
+    cache_dir = script_dir / "cache"
+    repeat_runs_file = cache_dir / "repeat_runs.pkl"
+    repeat_runs_file.unlink(missing_ok=True)
+
     for model in models:
-        # the maximum concurrent API calls should be one for local models, and could
-        #  be increased (or use the default value) for remote models
+        # the maximum concurrent API calls is one by default (needed for custom caching
+        # to work properly)
         max_concurrent_arg = "-j 1"
-        if model["prefix"] == "openai":
-            max_concurrent_arg = ""
+        # if model["prefix"] == "openai":
+        #     max_concurrent_arg = ""
 
         provider = f"exec:python {str(script_dir)}/llm.py --model {model['id']}"
 
