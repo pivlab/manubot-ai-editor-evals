@@ -142,7 +142,7 @@ tests:
         weight: 1.0
         value: |
           # make sure TWAS is spelled out in the first two sentences
-          first_two_sentences = ". ".join(output.split(".")[:2]).lower()
+          first_two_sentences = ". ".join(output.split(". ")[:2]).lower()
           return "transcription-wide association stud" in first_two_sentences
 
   # adheres to C-C-C by ending with a conclusion
@@ -155,7 +155,7 @@ tests:
       - type: python
         weight: 1.0
         value: |
-          last_two_sentences = ". ".join(output.split(".")[-3:]).lower()
+          last_two_sentences = ". ".join(output.split(". ")[-2:]).lower()
           
           keywords = [
             "however",
