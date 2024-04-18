@@ -1,5 +1,6 @@
 prompts:
   - file://../../prompts/baseline.txt
+  - file://../../prompts/candidate_with_metadata.txt
   - file://../../prompts/candidate.txt
 
 # Default asserts applied to each test case below
@@ -8,22 +9,27 @@ defaultTest:
   assert:
     # ...starts with capital letter
     - type: python
+      weight: 1
       value: output.strip()[0].isupper()
 
     # ...ends with period
     - type: python
+      weight: 1
       value: output.strip()[-1] == "."
 
     # ...is a single paragraph
     - type: python
+      weight: 1
       value: len(output.strip().split("\n")) == 1
 
     # ...doesn't include manuscript title
     - type: python
+      weight: 1
       value: context["vars"]["title"] not in output
 
     # ...doesn't reference authors, keywords, abstract, etc
     - type: not-icontains-any
+      weight: 1
       value:
         - "authors"
         - "Abstract:"
@@ -32,27 +38,25 @@ defaultTest:
 
     # ...is roughly same length as input
     - type: python
+      weight: 1
       value: |
         input = context["vars"]["content"]
         input_words = len(input.strip().split())
         output_words = len(output.strip().split())
         response = (output_words > 0.5 * input_words) and (output_words < 2 * input_words)
-        print(response)
-
-    # ...mentions CRISPR results
-    - type: contains
-      value: "CRISPR"
+        return response
 
 # Make sure that output...
 tests:
-  # ...has no spelling errors
+  # ...has no spelling or grammar errors
   - vars:
       test_description: Has no spelling errors
       title: file://./inputs/title.txt
       keywords: file://./inputs/keywords.txt
-      content: file://./inputs/has_spelling_errors.md
+      content: file://./inputs/has_spelling_and_grammar_errors.md
     assert:
       - type: not-icontains-any
+        weight: 2
         value:
           - "concierto"
           - "specifico"
@@ -60,13 +64,16 @@ tests:
 
   # ...starts with background
   - vars:
-      test_description: starts with background
+      test_description: Starts with background
       title: file://./inputs/title.txt
       keywords: file://./inputs/keywords.txt
       content: file://./inputs/doesnt_starts_with_background.md
     assert:
       - type: python
-        value: ("PhenoPLIER" not in output.split(".")[0])
+        weight: 2
+        value: |
+          # make sure it does not mention the method ("PhenoPLIER") in the first sentence
+          return ("PhenoPLIER" not in output.split(". ")[0])
 
   # ...describes method before results
   - vars:
@@ -76,6 +83,7 @@ tests:
       content: file://./inputs/doesnt_describe_method_before_results.md
     assert:
       - type: python
+        weight: 2
         value: |
           methods_start = output.find("PhenoPLIER")
           results_start = max(
@@ -83,17 +91,17 @@ tests:
               output.find("lipid"),
               output.find("drug-disease"),
           )
-          response = methods_start < results_start
-          print(response)
+          return (methods_start < results_start)
 
   # ...ends with interpretation of results
   - vars:
-      test_description: Doesn't end with interpretation of results
+      test_description: Ends with interpretation of results
       title: file://./inputs/title.txt
       keywords: file://./inputs/keywords.txt
       content: file://./inputs/doesnt_end_with_interpretation_of_results.md
     assert:
       - type: python
+        weight: 2
         value: |
           # look for "conclusion" words
           keywords = [
@@ -133,9 +141,9 @@ tests:
             "implications",
             "reveal",
           ]
+          
           # try to capture the first paragraph (because sometimes models add
           # explanations below the revised paragraph)
           first_paragraph = output.strip().split("\n")[0]
-          last_sentences = ".".join(first_paragraph.strip().split(".")[-2:]).lower()
-          response = any(keyword in last_sentences for keyword in keywords)
-          print(response)
+          last_sentences = ".".join(first_paragraph.strip().split(". ")[-1:]).lower()
+          return any(keyword in last_sentences for keyword in keywords)
