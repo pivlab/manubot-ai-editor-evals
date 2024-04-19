@@ -57,6 +57,12 @@ parser.add_argument(
     action="store_true",
     help="View evaluation results",
 )
+parser.add_argument(
+    "--update-cache",
+    action=argparse.BooleanOptionalAction,
+    help="Forces the LangChain to skip any cached response, hit the model, and then "
+         "update the cache",
+)
 args = parser.parse_args()
 
 script_dir = Path(__file__).parent.resolve()
@@ -104,7 +110,11 @@ else:
         # if model["prefix"] == "openai":
         #     max_concurrent_arg = ""
 
-        provider = f"exec:python {str(script_dir)}/llm.py --model {model['id']}"
+        update_cache_arg = ""
+        if args.update_cache:
+            update_cache_arg = "--update-cache"
+
+        provider = f"exec:python {str(script_dir)}/llm.py {update_cache_arg} --model {model['id']}"
 
         # --verbose \
         command = f"""

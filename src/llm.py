@@ -11,7 +11,6 @@ from langchain_community.chat_models import ChatOllama
 from langchain_openai import ChatOpenAI
 from langchain_anthropic import ChatAnthropic
 from langchain.cache import SQLiteCache
-from langchain_core.caches import BaseCache
 from langchain.globals import set_llm_cache
 
 
@@ -47,6 +46,8 @@ if __name__ == "__main__":
     parser.add_argument(
         "--update-cache",
         action=argparse.BooleanOptionalAction,
+        help="Forces the LangChain to skip any cached response, hit the model, and then"
+             " update the cache",
     )
     args = parser.parse_args()
 
@@ -122,6 +123,9 @@ if __name__ == "__main__":
 
     llm_chain = LLMChain(llm=llm, prompt=prompt)
 
-    # q = sys.argv[1]
     output = llm_chain.invoke(q)["text"]
+    
+    # fix for starling models
+    output = output.replace("<|end_of_turn|>", "")
+    
     print(output)

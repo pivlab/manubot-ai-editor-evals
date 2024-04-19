@@ -23,7 +23,7 @@ Under-the-hood, it uses:
    ```bash
    npm install -g promptfoo@0.47.0
    ```
-1. Install this package in editable mode (only needs to be done once):
+1. Install this package in editable mode:
    ```bash
    pip install -e .
    ```
