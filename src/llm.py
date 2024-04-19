@@ -11,7 +11,13 @@ from langchain_community.chat_models import ChatOllama
 from langchain_openai import ChatOpenAI
 from langchain_anthropic import ChatAnthropic
 from langchain.cache import SQLiteCache
+from langchain_core.caches import BaseCache
 from langchain.globals import set_llm_cache
+
+
+class WriteOnlyCache(SQLiteCache):
+    def lookup(self, prompt: str, llm_string: str):
+        return None
 
 
 if __name__ == "__main__":
@@ -37,6 +43,10 @@ if __name__ == "__main__":
         type=str,
         nargs="?",
         help="TODO",
+    )
+    parser.add_argument(
+        "--update-cache",
+        action=argparse.BooleanOptionalAction,
     )
     args = parser.parse_args()
 
@@ -66,7 +76,13 @@ if __name__ == "__main__":
     repeat_info.to_pickle(repeat_runs_file)
     
     default_cache_file = cache_dir / f"llm_cache-rep{REP_NUM}.db"
-    set_llm_cache(SQLiteCache(database_path=str(default_cache_file)))
+    
+    cache_obj = None
+    if args.update_cache:
+        cache_obj = WriteOnlyCache(database_path=str(default_cache_file))
+    else:
+        cache_obj = SQLiteCache(database_path=str(default_cache_file))
+    set_llm_cache(cache_obj)
 
     # process arguments
     model = args.model
