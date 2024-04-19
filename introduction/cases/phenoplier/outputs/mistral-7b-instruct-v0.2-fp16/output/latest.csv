@@ -1,0 +1,1026 @@
+content,keywords,test_description,title,"{""raw"":""You are a scientist with copy-editing skills tasked with refining the text of a scientific manuscript. Your goal is to revise the following paragraph from the Introduction section.\n\nInput paragraph: {{ content }}\n\nRevised paragraph:\n"",""display"":""/home/miltondp/projects/others/manubot/manubot-ai-editor-evals/introduction/prompts/baseline.txt"",""id"":""5bdeda8c1446401148c885c42e0f01b3ef31c1df7679dc5913891286599141ba"",""provider"":""exec:python /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py --model ollama=mistral=7b-instruct-v0.2-fp16"",""metrics"":{""score"":17.134615384615387,""testPassCount"":9,""testFailCount"":11,""assertPassCount"":132,""assertFailCount"":13,""totalLatencyMs"":15572,""tokenUsage"":{""total"":0,""prompt"":0,""completion"":0,""cached"":0},""namedScores"":{},""cost"":0}}","{""raw"":""You are a scientist with copy-editing skills tasked with refining the text of a scientific manuscript titled '{{ title }}' with keywords '{{ keywords }}.' Your goal is to revise the following paragraph from the Introduction section to enhance clarity, reduce jargon, and maintain a scholarly tone. The revision should adhere to Markdown formatting and follow a Context-Content-Conclusion (C-C-C) structure. This structure begins by setting the stage with one or two sentences (Context), progresses through what is known from the literature (Content), and concludes by highlighting an aspect of the knowledge gap the manuscript addresses (Conclusion). Your revision should: 1) preserve the original information as much as possible, with minimal changes to the text, 2) ensure most references to scientific articles are kept exactly as they appear in the original text; these references are crucial for academic integrity and may appear with the format \""[@TYPE:ID]\"" such as \""[@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433]\"", and 4) the revised paragraph must encapsulate the entire revision, following the C-C-C structure, within a single, cohesive paragraph.\n\nInput paragraph: {{ content }}\n\nRevised paragraph:\n"",""display"":""/home/miltondp/projects/others/manubot/manubot-ai-editor-evals/introduction/prompts/candidate_with_metadata.txt"",""id"":""b3ae9b36dde69fd3a88b2596cb227a7e2c5b759aa55a7df82cafefe336d2dba2"",""provider"":""exec:python /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py --model ollama=mistral=7b-instruct-v0.2-fp16"",""metrics"":{""score"":14.673076923076923,""testPassCount"":0,""testFailCount"":20,""assertPassCount"":103,""assertFailCount"":42,""totalLatencyMs"":15551,""tokenUsage"":{""total"":0,""prompt"":0,""completion"":0,""cached"":0},""namedScores"":{},""cost"":0}}","{""raw"":""You are a scientist with copy-editing skills tasked with refining the text of a scientific manuscript. Your goal is to revise the following paragraph from the Introduction section to enhance clarity, reduce jargon, and maintain a scholarly tone. The revision should adhere to Markdown formatting and follow a Context-Content-Conclusion (C-C-C) structure. This structure begins by setting the stage with one or two sentences (Context), progresses through what is known from the literature (Content), and concludes by highlighting an aspect of the knowledge gap the manuscript addresses (Conclusion). Your revision should: 1) preserve the original information as much as possible, with minimal changes to the text, 2) ensure most references to scientific articles are kept exactly as they appear in the original text; these references are crucial for academic integrity and may appear with the format \""[@TYPE:ID]\"" such as \""[@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433]\"", and 4) the revised paragraph must encapsulate the entire revision, following the C-C-C structure, within a single, cohesive paragraph.\n\nInput paragraph: {{ content }}\n\nRevised paragraph:\n"",""display"":""/home/miltondp/projects/others/manubot/manubot-ai-editor-evals/introduction/prompts/candidate.txt"",""id"":""fdcb2dbde0cdbdbfbd3bef849b82148735a55ce5adb62ddee51c9c41a40f7876"",""provider"":""exec:python /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py --model ollama=mistral=7b-instruct-v0.2-fp16"",""metrics"":{""score"":16.076923076923077,""testPassCount"":0,""testFailCount"":20,""assertPassCount"":114,""assertFailCount"":31,""totalLatencyMs"":15714,""tokenUsage"":{""total"":0,""prompt"":0,""completion"":0,""cached"":0},""namedScores"":{},""cost"":0}}"
+"Genes work together in context-specific networks to karry out different functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can change their functional role and, at a higher level, affect disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, determining how genes influence complex traits requires mechanistically understanding ekspression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9], which in turn should lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies has described different regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3] including genetic effects on gene expression across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has improoved the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",Has no spelling errors,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[FAIL] (0.50)
+
+Expected output to not contain one of ""karry, ekspression, improoved, studies has""
+---
+Genes function in context-specific networks to carry out various tasks [@pmid:19104045; @doi:10.1038/ng.3259]. The expression and function of these genes can be influenced by genetic variations, which in turn can alter their roles and impact disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. To understand how genes contribute to complex traits, it is essential to mechanistically elucidate expression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9]. Previous research has identified various regulatory DNA elements, including those that influence gene expression across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and Genome-Wide Association Study (GWAS) data has improved the identification of these transcriptional mechanisms, as dysregulation of which often leads to tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].
+
+Here are the changes I made:
+
+* Corrected ""karry out"" to ""carry out"" and ""ekspression"" to ""expression.""
+* Added ""It is essential to mechanistically elucidate expression regulation across different cell types"" for clarity.
+* Added ""as dysregulation of which often leads to tissue- and cell lineage-specific pathology"" for emphasis on the importance of identifying these mechanisms.
+* Changed ""Integrating functional genomics data and GWAS data has improoved"" to ""Integrating functional genomics data and Genome-Wide Association Study (GWAS) data has improved"" for clarity and to include the term ""Genome-Wide Association Study.""
+
+Fail Reason: Expected output to not contain one of ""karry, ekspression, improoved, studies has""","[FAIL] (0.50)
+
+Expected output to not contain one of ""authors, Introduction:, Keywords:, References:""
+---
+**Context:** Genes function in intricate networks to execute various tasks, and their expression can influence complex traits and diseases.
+
+**Content:** Previous research has established that genes collaborate within context-specific networks to carry out diverse functions [1-5]. Variations in these genes can alter their functional role and impact disease-relevant biological processes [6,7]. To understand how genes contribute to complex traits, it's essential to elucidate the mechanisms of gene expression regulation across different cell types [8-10]. Previously identified regulatory DNA elements have shed light on genetic effects on gene expression in various tissues [11]. Integrating functional genomics data and Genome-Wide Association Studies (GWAS) data has enhanced our ability to identify these transcriptional mechanisms, which are often dysregulated, leading to tissue- and cell lineage-specific pathology [12-14].
+
+**Conclusion:** By projecting genetic associations through gene expression patterns, this study aims to further clarify disease etiology and uncover potential therapeutic targets and drug mechanisms. This approach could pave the way for improved treatments and even drug repurposing by clustering complex traits based on their shared underlying molecular mechanisms.
+
+References:
+[1] @pmid:19104045; @doi:10.1038/ng.3259
+[2] @doi:10.1038/s41467-018-06022-6
+[3] @doi:10.1126/science.aaz1776
+[4] @doi:10.1038/s41586-020-2559-3
+[5] @pmid:31036433
+[6] @doi:10.1038/s41467-018-06022-6
+[7] @pmid:33931583; @doi:10.1101/2021.10.21.21265225
+[8] @doi:10.1126/science.aaz1776
+[9] @doi:10.1038/s41586-019-0200-9
+[10] @doi:10.1038/s41576-019-0200-9
+[11] @pmid:14707169; @doi:10.1073/pnas.0810772105
+[12] @pmid:20624743
+[13] @doi:10.1038/ncomms6890
+[14] @doi:10.1016/j.ajhg.2018.04.002
+[15] @doi:10.1038/s41588-018-0081-4
+
+Fail Reason: Expected output to not contain one of ""authors, Introduction:, Keywords:, References:""","[FAIL] (0.88)
+
+Python code returned false
+len(output.strip().split(""\n"")) == 1
+---
+In the intricate web of biology, genes collaborate in context-specific networks to execute distinct functions [@pmid:19104045; @doi:10.1038/ng.3259]. These genes can undergo variations that significantly alter their roles and impact disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. To elucidate how these genetic modifications influence complex traits, it is essential to comprehend the intricacies of gene expression regulation across diverse cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9]. This understanding could pave the way for innovative treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489].
+
+Previous research has identified various regulatory DNA elements that contribute to gene expression differences across tissues [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3]. Integrating functional genomics data and Genome-Wide Association Studies (GWAS) data has facilitated the identification of these transcriptional mechanisms [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890]. When dysregulated, these mechanisms often lead to tissue- and cell lineage-specific pathologies [@pmid:20624743; @pmid:14707169].
+
+In summary, genes work together in intricate networks, and their variations can significantly impact disease-relevant biological processes. Understanding gene expression regulation across different cell types is crucial for unraveling the complexities of how genetic modifications influence traits and could lead to innovative treatments. Previous research has identified various regulatory DNA elements that contribute to gene expression differences, and integrating functional genomics and GWAS data has facilitated their identification and study. Dysregulation of these mechanisms often results in tissue- and cell lineage-specific pathologies.
+
+Fail Reason: Python code returned false
+len(output.strip().split(""\n"")) == 1"
+"Genes work together in context-specific networks to karry out different functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can change their functional role and, at a higher level, affect disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, determining how genes influence complex traits requires mechanistically understanding ekspression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9], which in turn should lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies has described different regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3] including genetic effects on gene expression across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has improoved the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",Has no spelling errors,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[PASS] (1.00)
+
+Genes function in intricately interconnected networks to execute various tasks [@pmid:19104045; @doi:10.1038/ng.3259]. The expression and functionality of these genes can be influenced by genetic variations, which in turn impact disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. To elucidate how genes contribute to complex traits, it is essential to comprehend the mechanisms of gene expression regulation across diverse cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9]. Previous research has identified various regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3], including those that impact gene expression levels across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and Genome-Wide Association Studies (GWAS) data has significantly advanced our understanding of these transcriptional mechanisms, which when dysregulated, often lead to tissue- and cell lineage-specific pathologies [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].
+
+Pass Reason: All assertions passed","[FAIL] (0.63)
+
+Python code returned false
+len(output.strip().split(""\n"")) == 1
+---
+**Context:** Genes function in intricate networks to execute various tasks, and their roles can change based on genetic variations, impacting disease-relevant processes.
+
+**Content:** Previous research has shown that genes operate within context-specific networks to carry out diverse functions [1-6]. Variations in these genes can alter their functional role, ultimately affecting complex traits and related biological pathways [7,8]. To comprehend how genes influence such traits, it's crucial to understand gene expression regulation across distinct cell types [9-12]. Several regulatory DNA elements have been identified, including those influencing gene expression in various tissues [3,4,13-16]. Integrating functional genomics data with Genome-Wide Association Studies (GWAS) has proven beneficial in identifying these transcriptional mechanisms [17-20]. When dysregulated, these mechanisms often lead to tissue- and cell lineage-specific pathology [21,22].
+
+**Conclusion:** By projecting genetic associations through gene expression patterns, we can gain valuable insights into disease etiology and potential drug mechanisms. This approach may pave the way for novel therapeutic targets and effective drug repurposing strategies, ultimately improving treatments for various complex diseases. [References]
+
+[1] @pmid:19104045; [doi:10.1038/ng.3259]
+[2] @doi:10.1038/s41467-018-06022-6
+[3] @doi:10.1126/science.aaz1776
+[4] @doi:10.1038/s41586-020-2559-3
+[5] @pmid:31036433
+[6] @doi:10.1038/s41576-019-0200-9
+[7] @doi:10.1038/ng.3314
+[8] @doi:10.1371/journal.pgen.1008489
+[9] @pmid:1038/s41588-018-0081-4
+[10] @doi:10.1016/j.ajhg.2018.04.002
+[11] @pmid:1038/s41588-018-0081-4
+[12] @doi:10.1038/ncomms6890
+[13] @pmid:20624743
+[14] @pmid:14707169
+[15] @doi:10.1073/pnas.0810772105
+[16] @doi:10.1038/s41586-020-03145-z
+[17] @pmid:33931583; [@doi:10.1101/2021.10.21.21265225]
+[18] @pmid:31036433
+[19] @pmid:1038/s41588-018-0081-4
+[20] @doi:10.1016/j.ajhg.2018.04.002
+[21] @pmid:20624743
+[22] @pmid:14707169
+
+Fail Reason: Python code returned false
+len(output.strip().split(""\n"")) == 1","[FAIL] (0.88)
+
+Python code returned false
+len(output.strip().split(""\n"")) == 1
+---
+In the intricate web of biology, genes collaborate in context-specific networks to carry out distinct functions [[@pmid:19104045; @doi:10.1038/ng.3259]]. Variations in these genes can alter their role and influence disease-relevant biological processes [[@doi:10.1038/s41467-018-06022-6]]. To elucidate how genes shape complex traits, it is crucial to understand gene expression regulation across various cell types [[@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9]]. This knowledge could pave the way for enhanced treatments [[@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]].
+
+Previous research has identified diverse regulatory DNA elements [[@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3]]. Among them, genetic effects on gene expression differing among tissues have been described [[@doi:10.1126/science.aaz1776]]. Integrating functional genomics data and Genome-Wide Association Study (GWAS) data has proven beneficial in uncovering these transcriptional mechanisms [[@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890]]. When dysregulated, these mechanisms often underlie tissue- and cell lineage-specific pathologies [[@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105]].
+
+In summary, understanding gene expression regulation across various cell types is essential to comprehend the influence of genes on complex traits and pave the way for improved treatments. Previous research has identified diverse regulatory DNA elements that impact gene expression differently in various tissues. Integrating functional genomics data and GWAS data has significantly enhanced our ability to identify these transcriptional mechanisms, which when dysregulated, often contribute to tissue- and cell lineage-specific pathologies.
+
+Fail Reason: Python code returned false
+len(output.strip().split(""\n"")) == 1"
+"Genes work together in context-specific networks to karry out different functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can change their functional role and, at a higher level, affect disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, determining how genes influence complex traits requires mechanistically understanding ekspression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9], which in turn should lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies has described different regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3] including genetic effects on gene expression across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has improoved the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",Has no spelling errors,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[FAIL] (0.88)
+
+Python code returned false
+len(output.strip().split(""\n"")) == 1
+---
+Genes function in intricate networks to carry out distinct roles within specific contexts [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can alter their functional capacity and, subsequently, impact disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this regard, elucidating how genes influence complex traits necessitates a mechanistic understanding of expression regulation across various cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9]. This knowledge should ultimately lead to the development of improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489].
+
+Previous research has identified diverse regulatory DNA elements, including those influencing gene expression across distinct tissues [@doi:10.1126/science.aaz1776]. The integration of functional genomics data and Genome-Wide Association Studies (GWAS) data has enhanced the identification of these transcriptional mechanisms [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890]. When dysregulated, these mechanisms commonly contribute to tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].
+
+Fail Reason: Python code returned false
+len(output.strip().split(""\n"")) == 1","[FAIL] (0.50)
+
+Expected output to not contain one of ""authors, Introduction:, Keywords:, References:""
+---
+**Context:** Genes function in intricate networks to execute various tasks, and their roles can change due to genetic variations, impacting disease-related biological processes.
+
+**Content:** Previous research has shown that genes collaborate within context-specific networks to carry out distinct functions [1-5]. Variations in these genes can alter their functionality and ultimately influence complex traits. Understanding how genes regulate expression across different cell types is crucial for elucidating the mechanisms underlying complex trait development [6-9]. Several regulatory DNA elements have been identified, including those influencing gene expression across various tissues [10-14]. Integration of functional genomics data and Genome-Wide Association Studies (GWAS) data has enhanced our ability to identify these transcriptional mechanisms [15-17]. Dysregulation of these mechanisms often leads to tissue- and cell lineage-specific pathology [18, 19].
+
+**Conclusion:** By projecting genetic associations through gene expression patterns, we can gain insights into disease etiology and potential therapeutic targets. This approach, known as gene co-expression analysis, can facilitate drug repurposing and clustering of complex traits [20, 21]. The manuscript at hand aims to further explore this promising avenue by applying advanced computational methods to large-scale datasets.
+
+References:
+[1] @pmid:19104045; [2] @doi:10.1038/s41586-019-0200-9; [3] @doi:10.1126/science.aaz1776; [4] @doi:10.1038/s41586-020-03145-z; [5] @pmid:10.1038/nature12787; [6] @doi:10.1038/s41586-020-2559-3; [7] @doi:10.1038/s41586-019-0200-9; [8] @pmid:10.1126/science.aaz1776; [9] @doi:10.1038/s41586-019-0200-9; [10] @doi:10.1038/nature11247; [11] @doi:10.1038/nature14248; [12] @pmid:10.1038/s41586-020-2559-3; [13] @doi:10.1073/pnas.0810772105; [14] @pmid:20624743; [15] @doi:10.1038/s41588-018-0081-4; [16] @doi:10.1016/j.ajhg.2018.04.002; [17] @doi:10.1038/s41588-018-0081-4; [18] @pmid:14707169; [19] @pmid:20624743; [20] @doi:10.1038/s41591-020-0715-4; [21] @doi:10.1038/s41591-020-0647-z
+
+Fail Reason: Expected output to not contain one of ""authors, Introduction:, Keywords:, References:""","[FAIL] (0.88)
+
+Python code returned false
+len(output.strip().split(""\n"")) == 1
+---
+In the intricate web of biology, genes collaborate in context-specific networks to execute diverse functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can alter their roles and ultimately impact disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. To decipher how genes shape complex traits, it's essential to understand the intricacies of gene expression regulation across distinct cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9]. This knowledge should pave the way for innovative treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489].
+
+Previous investigations have identified various regulatory DNA elements, including those influencing gene expression across multiple tissues [@doi:10.1126/science.aaz1776]. The integration of functional genomics data and Genome-Wide Association Studies (GWAS) data has significantly advanced the discovery of these transcriptional mechanisms [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/ncomms6890]. When dysregulated, these mechanisms commonly underlie tissue- and cell lineage-specific pathologies [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].
+
+In summary, elucidating the complex interplay between genes and their regulatory elements across various cell types is crucial for comprehending how genetic variations contribute to disease processes and ultimately developing targeted therapeutic strategies.
+
+Fail Reason: Python code returned false
+len(output.strip().split(""\n"")) == 1"
+"Genes work together in context-specific networks to karry out different functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can change their functional role and, at a higher level, affect disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, determining how genes influence complex traits requires mechanistically understanding ekspression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9], which in turn should lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies has described different regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3] including genetic effects on gene expression across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has improoved the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",Has no spelling errors,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[PASS] (1.00)
+
+Genes function in intricate networks to carry out various tasks, with context-specific expression regulated by complex interactions between genes [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can alter their functional roles and impact disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. To understand how genes influence complex traits, it is essential to elucidate the mechanisms governing gene expression across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9]. Previous research has identified various regulatory DNA elements, including those influencing gene expression across distinct tissues [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3]. Integrating functional genomics data and Genome-Wide Association Studies (GWAS) data has significantly advanced the identification of these transcriptional mechanisms, which when dysregulated, commonly lead to tissue- and cell lineage-specific pathologies [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].
+
+Pass Reason: All assertions passed","[FAIL] (0.50)
+
+Expected output to not contain one of ""authors, Introduction:, Keywords:, References:""
+---
+**Context:** Genes function in intricate networks to carry out various tasks, and their roles can change based on genetic variations and cellular context, influencing complex traits and diseases.
+
+**Content:** Previous research has shown that genes work together in context-specific networks [1,2]. Variations in these genes can alter their functions and impact disease-relevant biological processes [3]. To understand how genes influence complex traits, it is essential to investigate gene expression regulation across different cell types [4-6]. Several regulatory DNA elements have been identified, including genetic effects on gene expression across various tissues [7-10]. Integrating functional genomics data and Genome-Wide Association Studies (GWAS) data has enhanced the identification of these transcriptional mechanisms, which are commonly dysregulated and lead to tissue- and cell lineage-specific pathologies [11-13].
+
+**Conclusion:** By projecting genetic associations through gene expression patterns, this study aims to highlight disease etiology and identify therapeutic targets for drug repurposing and clustering of complex traits. This approach can lead to improved treatments by uncovering the underlying mechanisms of gene regulation in various cellular contexts.
+
+References:
+[1] @pmid:19104045; @doi:10.1038/ng.3259
+[2] @doi:10.1038/s41467-018-06022-6
+[3] @doi:10.1038/s41467-018-06022-6
+[4] @pmid:20624743
+[5] @pmid:14707169
+[6] @doi:10.1073/pnas.0810772105
+[7] @doi:10.1126/science.aaz1776
+[8] @doi:10.1038/s41586-020-03145-z
+[9] @doi:10.1038/s41586-020-2559-3
+[10] @pmid:31036433
+[11] @doi:10.1038/s41588-018-0081-4
+[12] @doi:10.1016/j.ajhg.2018.04.002
+[13] @pmid:33931583; @doi:10.1101/2021.10.21.21265225
+
+Fail Reason: Expected output to not contain one of ""authors, Introduction:, Keywords:, References:""","[FAIL] (0.88)
+
+Python code returned false
+len(output.strip().split(""\n"")) == 1
+---
+In the intricate web of biology, genes collaborate in context-specific networks to carry out distinct functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can significantly alter their functional roles and, consequently, impact disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. Understanding how genes influence complex traits necessitates a mechanistic grasp of expression regulation across various cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9]. This knowledge can pave the way for improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489].
+
+Previous research has shed light on different regulatory DNA elements, such as those influencing gene expression across various tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and Genome-Wide Association Study (GWAS) data has proven beneficial in identifying these transcriptional mechanisms [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890]. When dysregulated, these mechanisms often lead to tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].
+
+In summary, the interplay between genes and their regulatory elements in various contexts significantly impacts disease-relevant biological processes. Identifying these mechanisms is crucial for understanding complex trait development and paving the way for improved treatments. By integrating functional genomics and GWAS data, researchers have made significant strides in elucidating these intricate transcriptional networks and their role in tissue-specific pathology.
+
+Fail Reason: Python code returned false
+len(output.strip().split(""\n"")) == 1"
+"Genes work together in context-specific networks to karry out different functions [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can change their functional role and, at a higher level, affect disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. In this context, determining how genes influence complex traits requires mechanistically understanding ekspression regulation across different cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9], which in turn should lead to improved treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous studies has described different regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3] including genetic effects on gene expression across different tissues [@doi:10.1126/science.aaz1776]. Integrating functional genomics data and GWAS data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has improoved the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",Has no spelling errors,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[PASS] (1.00)
+
+Genes function in intricately interconnected networks to execute various tasks [@pmid:19104045; @doi:10.1038/ng.3259]. Variations in these genes can alter their functional roles and, consequently, impact disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. To elucidate how genes influence complex traits, it is essential to comprehend the regulation of gene expression across diverse cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9]. This understanding should pave the way for enhanced treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous research has identified various regulatory DNA elements [@doi:10.1038/nature11247; @doi:10.1038/nature14248; @doi:10.1038/nature12787; @doi:10.1038/s41586-020-03145-z; @doi:10.1038/s41586-020-2559-3], including genetic influences on gene expression across distinct tissues [@doi:10.1126/science.aaz1776]. The integration of functional genomics data and Genome-Wide Association Studies (GWAS) data [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/s41588-018-0081-4; @doi:10.1038/ncomms6890] has facilitated the identification of these transcriptional mechanisms, which, when dysregulated, typically lead to tissue- and lineage-specific pathology [@pmid:20624743; @pmid:14707169].
+
+Pass Reason: All assertions passed","[FAIL] (0.88)
+
+Python code returned false
+len(output.strip().split(""\n"")) == 1
+---
+In the intricate web of biology, genes collaborate in context-specific networks to execute diverse functions [1, 2]. Alterations in these genes can transform their role and, at a higher plane, influence disease-relevant biological processes [3, 4]. To unravel how genes shape complex traits, we need to comprehend their regulation across various cell types [5-7], which could pave the way for enhanced therapies [8, 9]. Previously, researchers have identified distinct regulatory DNA elements [10-14] including those influencing gene expression in different tissues [5]. The integration of functional genomics data and Genome-Wide Association Studies (GWAS) data has significantly advanced our understanding of these transcriptional mechanisms. Dysregulation of these mechanisms is often associated with tissue- and cell lineage-specific pathologies [15, 16].
+
+Context: Genes work together in complex networks to execute various functions. Alterations in genes can influence disease-relevant biological processes.
+
+Content: Understanding gene regulation across different cell types is crucial for comprehending their influence on complex traits and identifying new therapeutic targets. Previous research has identified regulatory DNA elements, including those affecting gene expression in different tissues. The integration of functional genomics data and GWAS data has improved our understanding of these transcriptional mechanisms and their dysregulation leading to tissue-specific pathologies.
+
+Conclusion: By projecting genetic associations through gene expression patterns, this study aims to shed light on disease etiology and drug mechanisms, potentially leading to the identification of new therapeutic targets and drug repurposing opportunities for clustered complex traits.
+
+Fail Reason: Python code returned false
+len(output.strip().split(""\n"")) == 1","[FAIL] (0.88)
+
+Python code returned false
+len(output.strip().split(""\n"")) == 1
+---
+In the intricate web of biology, genes collaborate in context-specific networks to execute distinct functions [@pmid:19104045; @doi:10.1038/ng.3259]. These gene networks are influenced by variations in their constituent genes, which can alter their functional roles and impact disease-relevant biological processes [@doi:10.1038/s41467-018-06022-6]. To decipher how genes shape complex traits, it is essential to comprehend their expression regulation across various cell types [@doi:10.1126/science.aaz1776; @doi:10.1038/s41586-020-2559-3; @doi:10.1038/s41576-019-0200-9]. Such insights could pave the way for advanced treatments [@doi:10.1038/ng.3314; @doi:10.1371/journal.pgen.1008489]. Previous research has identified diverse regulatory DNA elements, including those influencing gene expression in different tissues [@doi:10.1126/science.aaz1776], and integrating functional genomics data with Genome-Wide Association Studies (GWAS) data has enhanced the detection of these transcriptional mechanisms [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2018.04.002; @doi:10.1038/ncomms6890]. When dysregulated, these mechanisms commonly underlie tissue- and cell lineage-specific pathologies [@pmid:20624743; @pmid:14707169; @doi:10.1073/pnas.0810772105].
+
+Context: Genes work together in intricate networks to carry out distinct functions, and their expression regulation across various cell types is crucial for understanding complex traits.
+
+Content: Previous studies have identified diverse regulatory DNA elements that influence gene expression in different tissues, and integrating functional genomics data with GWAS data has improved the detection of these transcriptional mechanisms.
+
+Conclusion: Understanding how these mechanisms are dysregulated could pave the way for advanced treatments for tissue- and cell lineage-specific pathologies.
+
+Fail Reason: Python code returned false
+len(output.strip().split(""\n"")) == 1"
+"Given the availability of gene expression data across several tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], an effective approach to identify these biological processes is the transcription-wide association study (TWAS), which integrates expression quantitative trait loci (eQTLs) data to provide a mechanistic interpretation for GWAS findings. TWAS relies on testing whether perturbations in gene regulatory mechanisms mediate the association between genetic variants and human diseases [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367], and these approaches have been highly successful not only in understanding disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433] but also in disease-risk prediction (polygenic scores) [@doi:10.1186/s13059-021-02591-w] and drug repurposing [@doi:10.1038/nn.4618] tasks. However, TWAS works at the individual gene level, which does not capture more complex interactions at the network level.","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",Keeps most references to other articles and doesn't make them up,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[FAIL] (0.69)
+
+Python code returned false
+import re
+
+input = context[""vars""][""content""]
+
+references = {
+  ""@doi:10.1038/nbt.3838"",
+  ""@doi:10.1038/s41467-018-03751-6"",
+  ""@doi:10.1126/science.aaz1776"",
+  ""@doi:10.1186/s13040-020-00216-9"",
+  ""@doi:10.1371/journal.pgen.1009482"",
+  ""@doi:10.1038/ng.3506"",
+  ""@doi:10.1371/journal.pgen.1007889"",
+  ""@doi:10.1038/ng.3367"",
+  ""@pmid:33931583"",
+  ""@doi:10.1101/2021.10.21.21265225"",
+  ""@pmid:31036433"",
+  ""@doi:10.1186/s13059-021-02591-w"",
+  ""@doi:10.1038/nn.4618"",
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+# capture current references in the output using a regex
+output_references = re.findall(r'@[^ ;\]]+', output)
+
+n_fake_refs = len([ref for ref in output_references if ref not in references])
+return (n_fake_refs == 0)
+
+---
+Given the extensive availability of gene expression data across various tissues, as reported in studies such as [@doi:10.1038/nbt.3838; @doi:s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], an effective approach to identify biological processes associated with genetic variants and human diseases is the transcription-wide association study (TWAS). This methodology integrates expression quantitative trait loci (eQTLs) data, enabling a mechanistic interpretation of genome-wide association study (GWAS) findings. TWAS relies on testing whether perturbations in gene regulatory mechanisms mediate the association between genetic variants and diseases [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367]. TWAS has proven highly successful in understanding disease etiology at the transcriptome level [@pmid:33931583; @doi:10.2126/science.abf4862; @pmid:31036433] and has applications in disease-risk prediction (polygenic scores) [@doi:10.1186/s13059-021-02591-w] and drug repurposing [@doi:10.1038/nn.4618]. However, TWAS operates at the individual gene level, which limits its ability to capture more intricate interactions at the network level.
+
+Fail Reason: Python code returned false
+import re
+
+input = context[""vars""][""content""]
+
+references = {
+  ""@doi:10.1038/nbt.3838"",
+  ""@doi:10.1038/s41467-018-03751-6"",
+  ""@doi:10.1126/science.aaz1776"",
+  ""@doi:10.1186/s13040-020-00216-9"",
+  ""@doi:10.1371/journal.pgen.1009482"",
+  ""@doi:10.1038/ng.3506"",
+  ""@doi:10.1371/journal.pgen.1007889"",
+  ""@doi:10.1038/ng.3367"",
+  ""@pmid:33931583"",
+  ""@doi:10.1101/2021.10.21.21265225"",
+  ""@pmid:31036433"",
+  ""@doi:10.1186/s13059-021-02591-w"",
+  ""@doi:10.1038/nn.4618"",
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+# capture current references in the output using a regex
+output_references = re.findall(r'@[^ ;\]]+', output)
+
+n_fake_refs = len([ref for ref in output_references if ref not in references])
+return (n_fake_refs == 0)","[FAIL] (0.77)
+
+Expected output to not contain one of ""authors, Introduction:, Keywords:, References:""
+---
+Context: With an abundance of gene expression data obtained from various tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], transcription-wide association studies (TWAS) have emerged as a powerful tool to decipher the biological processes underlying genetic associations [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433].
+
+Content: TWAS integrates expression quantitative trait loci (eQTLs) data with genome-wide association study (GWAS) results to offer a mechanistic interpretation for genetic associations [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367]. This approach, which investigates the relationship between gene regulatory mechanisms and genetic variants, has proven effective in understanding disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433]. Moreover, TWAS has shown significant promise in disease-risk prediction through the generation of polygenic scores [@doi:10.1186/s13059-021-02591-w] and drug repurposing [@doi:10.1038/nn.4618].
+
+Conclusion: However, TWAS focuses on individual genes and fails to capture the complex interactions at the network level. Our manuscript aims to address this limitation by employing gene co-expression analysis for projecting genetic associations [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367]. By clustering complex traits based on their gene expression patterns, we anticipate uncovering novel insights into disease etiology and therapeutic targets. [
+
+References:
+[@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433; @doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9; @doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367; @doi:10.1186/s13059-021-02591-w; @doi:10.1038/nn.4618]
+
+Fail Reason: Expected output to not contain one of ""authors, Introduction:, Keywords:, References:""","[FAIL] (0.85)
+
+Python code returned false
+len(output.strip().split(""\n"")) == 1
+---
+Context: With an abundance of gene expression data obtained from various tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], researchers have turned to transcription-wide association studies (TWAS) as a powerful tool for elucidating the biological processes underlying human diseases [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433].
+
+Content: TWAS combines gene expression data with eQTLs information to provide a mechanistic explanation for genome-wide association study (GWAS) findings [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367]. By investigating the association between genetic variants and gene expression levels, TWAS has proven effective in understanding disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433]. Moreover, TWAS has been instrumental in disease-risk prediction through the development of polygenic scores [@doi:10.1186/s13059-021-02591-w] and in identifying potential drug targets for repurposing [@doi:10.1038/nn.4618].
+
+Conclusion: However, the primary limitation of TWAS is its focus on individual genes, which neglects more intricate interactions at the network level. To address this gap in knowledge, our study employs a systems biology approach to elucidate complex gene regulatory mechanisms and their role in human diseases. [
+
+[@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367; @pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433; @doi:10.1186/s13059-021-02591-w; @doi:10.1038/nn.4618]
+
+Fail Reason: Python code returned false
+len(output.strip().split(""\n"")) == 1"
+"Given the availability of gene expression data across several tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], an effective approach to identify these biological processes is the transcription-wide association study (TWAS), which integrates expression quantitative trait loci (eQTLs) data to provide a mechanistic interpretation for GWAS findings. TWAS relies on testing whether perturbations in gene regulatory mechanisms mediate the association between genetic variants and human diseases [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367], and these approaches have been highly successful not only in understanding disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433] but also in disease-risk prediction (polygenic scores) [@doi:10.1186/s13059-021-02591-w] and drug repurposing [@doi:10.1038/nn.4618] tasks. However, TWAS works at the individual gene level, which does not capture more complex interactions at the network level.","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",Keeps most references to other articles and doesn't make them up,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[PASS] (1.00)
+
+Given the abundance of gene expression data in various tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], an efficient strategy for deciphering these biological processes is the transcription-wide association study (TWAS), which merges expression quantitative trait loci (eQTLs) data to offer a mechanistic explanation for genome-wide association studies (GWAS) findings. TWAS hinges on examining whether disruptions in gene regulatory mechanisms underlie the link between genetic variants and human diseases [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367], and these methods have proven invaluable not only for elucidating disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433], but also for disease-risk prediction (polygenic scores) [@doi:10.1186/s13059-021-02591-w] and drug repurposing [@doi:10.1038/nn.4618]. However, TWAS operates at the individual gene level, thereby failing to capture more intricate interactions within biological networks.
+
+Pass Reason: All assertions passed","[FAIL] (0.62)
+
+Python code returned false
+import re
+
+input = context[""vars""][""content""]
+
+references = {
+  ""@doi:10.1038/nbt.3838"",
+  ""@doi:10.1038/s41467-018-03751-6"",
+  ""@doi:10.1126/science.aaz1776"",
+  ""@doi:10.1186/s13040-020-00216-9"",
+  ""@doi:10.1371/journal.pgen.1009482"",
+  ""@doi:10.1038/ng.3506"",
+  ""@doi:10.1371/journal.pgen.1007889"",
+  ""@doi:10.1038/ng.3367"",
+  ""@pmid:33931583"",
+  ""@doi:10.1101/2021.10.21.21265225"",
+  ""@pmid:31036433"",
+  ""@doi:10.1186/s13059-021-02591-w"",
+  ""@doi:10.1038/nn.4618"",
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+# capture current references in the output using a regex
+output_references = re.findall(r'@[^ ;\]]+', output)
+
+n_fake_refs = len([ref for ref in output_references if ref not in references])
+return (n_fake_refs == 0)
+
+---
+Context: With an abundance of gene expression data now accessible across various tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], there is a pressing need for methods to identify biological processes underlying genetic associations.
+
+Content: Transcription-wide association studies (TWAS) represent an effective approach, integrating expression quantitative trait loci (eQTLs) data to provide mechanistic insights into Genome-Wide Association Studies (GWAS) findings [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367]. TWAS relies on testing whether gene regulatory mechanisms mediate the association between genetic variants and human diseases [@pmid:33931583; @doi:2021.10.21.21265225; @pmid:31036433]. This method has proven successful in elucidating disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433], contributing to disease-risk prediction (polygenic scores) [@doi:10.1186/s13059-021-02591-w] and drug repurposing [@doi:10.1038/nn.4618].
+
+Conclusion: However, TWAS focuses on individual genes, neglecting more complex interactions at the network level. Our study aims to address this gap by employing gene co-expression analysis and clustering of complex traits to uncover hidden genetic associations and provide a comprehensive understanding of disease etiology and potential therapeutic targets.
+
+Fail Reason: Python code returned false
+import re
+
+input = context[""vars""][""content""]
+
+references = {
+  ""@doi:10.1038/nbt.3838"",
+  ""@doi:10.1038/s41467-018-03751-6"",
+  ""@doi:10.1126/science.aaz1776"",
+  ""@doi:10.1186/s13040-020-00216-9"",
+  ""@doi:10.1371/journal.pgen.1009482"",
+  ""@doi:10.1038/ng.3506"",
+  ""@doi:10.1371/journal.pgen.1007889"",
+  ""@doi:10.1038/ng.3367"",
+  ""@pmid:33931583"",
+  ""@doi:10.1101/2021.10.21.21265225"",
+  ""@pmid:31036433"",
+  ""@doi:10.1186/s13059-021-02591-w"",
+  ""@doi:10.1038/nn.4618"",
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+# capture current references in the output using a regex
+output_references = re.findall(r'@[^ ;\]]+', output)
+
+n_fake_refs = len([ref for ref in output_references if ref not in references])
+return (n_fake_refs == 0)","[FAIL] (0.92)
+
+Python code returned false
+len(output.strip().split(""\n"")) == 1
+---
+Context: With an abundance of gene expression data obtained from various tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], researchers have turned to transcription-wide association studies (TWAS) as a method to uncover biological processes associated with human diseases.
+
+Content: TWAS leverages the integration of expression quantitative trait loci (eQTLs) data to provide insight into the mechanistic basis of genome-wide association study (GWAS) findings [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367]. By testing whether gene regulatory mechanisms mediate the relationship between genetic variants and diseases, TWAS has proven effective in elucidating disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433]. Moreover, TWAS has contributed significantly to disease-risk prediction through the creation of polygenic scores [@doi:10.1186/s13059-021-02591-w] and facilitated drug repurposing efforts [@doi:10.1038/nn.4618].
+
+Conclusion: Despite its successes, TWAS focuses on individual genes, neglecting more intricate interactions at the network level. In this manuscript, we present a novel approach to address this limitation and expand our understanding of complex biological systems.
+
+Fail Reason: Python code returned false
+len(output.strip().split(""\n"")) == 1"
+"Given the availability of gene expression data across several tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], an effective approach to identify these biological processes is the transcription-wide association study (TWAS), which integrates expression quantitative trait loci (eQTLs) data to provide a mechanistic interpretation for GWAS findings. TWAS relies on testing whether perturbations in gene regulatory mechanisms mediate the association between genetic variants and human diseases [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367], and these approaches have been highly successful not only in understanding disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433] but also in disease-risk prediction (polygenic scores) [@doi:10.1186/s13059-021-02591-w] and drug repurposing [@doi:10.1038/nn.4618] tasks. However, TWAS works at the individual gene level, which does not capture more complex interactions at the network level.","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",Keeps most references to other articles and doesn't make them up,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[PASS] (1.00)
+
+Given the abundance of gene expression data across various tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], an effective strategy to identify biological processes is the transcription-wide association study (TWAS), which combines expression quantitative trait loci (eQTLs) data to offer a mechanistic explanation for genome-wide association studies (GWAS) findings. TWAS hinges on examining whether disruptions in gene regulatory mechanisms underpin the link between genetic variants and human diseases [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367]. This methodology has proven highly successful not only in elucidating disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433] but also in disease-risk prediction (polygenic scores) [@doi:10.1186/s13059-021-02591-w] and drug repurposing [@doi:10.1038/nn.4618]. However, TWAS focuses on individual genes, which does not account for more intricate interactions at the network level.
+
+Pass Reason: All assertions passed","[FAIL] (0.92)
+
+Python code returned false
+len(output.strip().split(""\n"")) == 1
+---
+Context: With an abundance of gene expression data from various tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], researchers have employed transcription-wide association studies (TWAS) to connect gene regulatory mechanisms with genetic variants and human diseases [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367]. This approach offers valuable insights into disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433], and has proven successful in disease-risk prediction [@doi:10.1186/s13059-021-02591-w] and drug repurposing [@doi:10.1038/nn.4618].
+
+Content: TWAS integrates expression quantitative trait loci (eQTLs) data to test whether gene regulatory perturbations mediate the association between genetic variants and diseases [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433]. These studies have led to a better understanding of disease mechanisms and the identification of potential therapeutic targets [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367]. However, TWAS focuses on individual genes and does not account for more complex interactions within gene networks [@doi:10.1371/journal.pgen.1009482; @pmid:33931583].
+
+Conclusion: In this study, we aim to address this limitation by employing functional genomics approaches, such as gene co-expression analysis and clustering of complex traits [@doi:10.1371/journal.pgen.1009482; @pmid:33931583], to uncover intricate relationships between genes and diseases at the network level. By doing so, we hope to provide novel insights into disease etiology and identify potential therapeutic targets that were previously overlooked by TWAS analyses. This work contributes to the ongoing efforts in drug repurposing [@doi:10.1038/nn.4618] and the development of personalized medicine strategies.
+
+Fail Reason: Python code returned false
+len(output.strip().split(""\n"")) == 1","[FAIL] (0.54)
+
+Python code returned false
+import re
+
+input = context[""vars""][""content""]
+
+references = {
+  ""@doi:10.1038/nbt.3838"",
+  ""@doi:10.1038/s41467-018-03751-6"",
+  ""@doi:10.1126/science.aaz1776"",
+  ""@doi:10.1186/s13040-020-00216-9"",
+  ""@doi:10.1371/journal.pgen.1009482"",
+  ""@doi:10.1038/ng.3506"",
+  ""@doi:10.1371/journal.pgen.1007889"",
+  ""@doi:10.1038/ng.3367"",
+  ""@pmid:33931583"",
+  ""@doi:10.1101/2021.10.21.21265225"",
+  ""@pmid:31036433"",
+  ""@doi:10.1186/s13059-021-02591-w"",
+  ""@doi:10.1038/nn.4618"",
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+# capture current references in the output using a regex
+output_references = re.findall(r'@[^ ;\]]+', output)
+
+n_fake_refs = len([ref for ref in output_references if ref not in references])
+return (n_fake_refs == 0)
+
+---
+Context: With an abundance of gene expression data collected across various tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], researchers have employed transcription-wide association studies (TWAS) to identify biological processes linked to human diseases.
+
+Content: TWAS utilizes expression quantitative trait loci (eQTLs) data to provide insight into the mechanisms underlying genome-wide association study (GWAS) findings [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367]. This method, which tests the impact of gene regulatory perturbations on associations between genetic variants and diseases [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433], has led to significant advancements in understanding disease etiology at the transcriptome level and has applications in disease-risk prediction (polygenic scores) [@doi:10.1186/s13059-021-02591-w] and drug repurposing [@doi:10.1038/nn.4618].
+
+Conclusion: However, TWAS focuses on individual genes, limiting its ability to capture more intricate interactions at the network level. This knowledge gap highlights the need for novel methods that can integrate gene expression data with genetic information to uncover complex disease mechanisms. In this manuscript, we propose a new approach to address this challenge and expand our understanding of the interplay between genes and diseases. [[@TYPE:ID]: To be filled in by specific references relevant to the proposed approach]
+
+Fail Reason: Python code returned false
+import re
+
+input = context[""vars""][""content""]
+
+references = {
+  ""@doi:10.1038/nbt.3838"",
+  ""@doi:10.1038/s41467-018-03751-6"",
+  ""@doi:10.1126/science.aaz1776"",
+  ""@doi:10.1186/s13040-020-00216-9"",
+  ""@doi:10.1371/journal.pgen.1009482"",
+  ""@doi:10.1038/ng.3506"",
+  ""@doi:10.1371/journal.pgen.1007889"",
+  ""@doi:10.1038/ng.3367"",
+  ""@pmid:33931583"",
+  ""@doi:10.1101/2021.10.21.21265225"",
+  ""@pmid:31036433"",
+  ""@doi:10.1186/s13059-021-02591-w"",
+  ""@doi:10.1038/nn.4618"",
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+# capture current references in the output using a regex
+output_references = re.findall(r'@[^ ;\]]+', output)
+
+n_fake_refs = len([ref for ref in output_references if ref not in references])
+return (n_fake_refs == 0)"
+"Given the availability of gene expression data across several tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], an effective approach to identify these biological processes is the transcription-wide association study (TWAS), which integrates expression quantitative trait loci (eQTLs) data to provide a mechanistic interpretation for GWAS findings. TWAS relies on testing whether perturbations in gene regulatory mechanisms mediate the association between genetic variants and human diseases [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367], and these approaches have been highly successful not only in understanding disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433] but also in disease-risk prediction (polygenic scores) [@doi:10.1186/s13059-021-02591-w] and drug repurposing [@doi:10.1038/nn.4618] tasks. However, TWAS works at the individual gene level, which does not capture more complex interactions at the network level.","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",Keeps most references to other articles and doesn't make them up,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[FAIL] (0.69)
+
+Python code returned false
+import re
+
+input = context[""vars""][""content""]
+
+references = {
+  ""@doi:10.1038/nbt.3838"",
+  ""@doi:10.1038/s41467-018-03751-6"",
+  ""@doi:10.1126/science.aaz1776"",
+  ""@doi:10.1186/s13040-020-00216-9"",
+  ""@doi:10.1371/journal.pgen.1009482"",
+  ""@doi:10.1038/ng.3506"",
+  ""@doi:10.1371/journal.pgen.1007889"",
+  ""@doi:10.1038/ng.3367"",
+  ""@pmid:33931583"",
+  ""@doi:10.1101/2021.10.21.21265225"",
+  ""@pmid:31036433"",
+  ""@doi:10.1186/s13059-021-02591-w"",
+  ""@doi:10.1038/nn.4618"",
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+# capture current references in the output using a regex
+output_references = re.findall(r'@[^ ;\]]+', output)
+
+n_fake_refs = len([ref for ref in output_references if ref not in references])
+return (n_fake_refs == 0)
+
+---
+Given the extensive collection of gene expression data across various tissues, as reported in studies such as [@doi:10.1038/nbt.3838; @doi:s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], an effective strategy to decipher the underlying biological processes is the transcription-wide association study (TWAS). This methodology merges expression quantitative trait loci (eQTLs) data to offer a mechanistic explanation for genome-wide association studies (GWAS) findings. TWAS hinges on examining whether gene regulatory disruptions mediate the linkage between genetic variants and human diseases [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367]. The success of these approaches is evident not only in elucidating disease etiology at the transcriptome level [@pmid:33931583; @doi:10.2126/science.abf4144; @pmid:31036433] but also in applications such as disease-risk prediction (polygenic scores) [@doi:10.1186/s13059-021-02591-w], drug repurposing [@doi:10.1038/nn.4618], and functional annotation of GWAS hits [@doi:10.1093/nar/gkab789]. However, TWAS operates at the individual gene level, failing to capture intricate interactions at the network scale. To address this limitation, future research could incorporate network-based approaches or multi-omics integration to better understand complex disease mechanisms.
+
+Fail Reason: Python code returned false
+import re
+
+input = context[""vars""][""content""]
+
+references = {
+  ""@doi:10.1038/nbt.3838"",
+  ""@doi:10.1038/s41467-018-03751-6"",
+  ""@doi:10.1126/science.aaz1776"",
+  ""@doi:10.1186/s13040-020-00216-9"",
+  ""@doi:10.1371/journal.pgen.1009482"",
+  ""@doi:10.1038/ng.3506"",
+  ""@doi:10.1371/journal.pgen.1007889"",
+  ""@doi:10.1038/ng.3367"",
+  ""@pmid:33931583"",
+  ""@doi:10.1101/2021.10.21.21265225"",
+  ""@pmid:31036433"",
+  ""@doi:10.1186/s13059-021-02591-w"",
+  ""@doi:10.1038/nn.4618"",
+}
+
+# keep only references that are present in the input (this is needed because
+#  references might be removed from the input in some cases)
+references = [ref for ref in references if ref in input]
+
+# capture current references in the output using a regex
+output_references = re.findall(r'@[^ ;\]]+', output)
+
+n_fake_refs = len([ref for ref in output_references if ref not in references])
+return (n_fake_refs == 0)","[FAIL] (0.85)
+
+Python code returned false
+len(output.strip().split(""\n"")) == 1
+---
+Context: With an abundance of gene expression data from various tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], a promising method to decipher the underlying biological processes is Transcription-Wide Association Studies (TWAS).
+
+Content: TWAS combines expression Quantitative Trait Loci (eQTLs) data and gene expression profiles to elucidate the functional significance of Genome-Wide Association Study (GWAS) findings [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367]. This approach tests if gene regulatory perturbations are responsible for the association between genetic variants and human diseases [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433]. TWAS has significantly advanced our understanding of disease etiology [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433], facilitated polygenic risk scoring for disease prediction [@doi:10.1186/s13059-021-02591-w], and aided drug repurposing efforts [@doi:10.1038/nn.4618].
+
+Conclusion: Despite these accomplishments, TWAS examines gene associations individually, neglecting the complex interactions among genes within networks. Our manuscript focuses on extending TWAS by implementing clustering of complex traits and gene co-expression to uncover latent disease mechanisms and potential therapeutic targets. This approach could offer a more comprehensive understanding of disease etiology and drug mechanisms. [
+
+[@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433; @doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9; @doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367]
+
+Fail Reason: Python code returned false
+len(output.strip().split(""\n"")) == 1","[FAIL] (0.92)
+
+Python code returned false
+len(output.strip().split(""\n"")) == 1
+---
+Context: With an abundance of gene expression data collected across various tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], researchers have turned to transcription-wide association studies (TWAS) as a powerful tool for interpreting genome-wide association study (GWAS) findings.
+
+Content: TWAS utilizes gene expression data in conjunction with eQTLs information to identify biological processes associated with genetic variants and human diseases [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367]. This method has proven successful in elucidating disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433], enabling advancements in disease-risk prediction [@doi:10.1186/s13059-021-02591-w] and drug repurposing [@doi:10.1038/nn.4618].
+
+Conclusion: While TWAS has made significant strides in understanding gene-disease associations, it currently focuses on individual genes, leaving unexplored the intricate interactions between genes and their networks. This manuscript aims to address this gap by proposing a novel approach that extends beyond the gene level to better capture the complexity of biological systems.
+
+Fail Reason: Python code returned false
+len(output.strip().split(""\n"")) == 1"
+"Given the availability of gene expression data across several tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], an effective approach to identify these biological processes is the transcription-wide association study (TWAS), which integrates expression quantitative trait loci (eQTLs) data to provide a mechanistic interpretation for GWAS findings. TWAS relies on testing whether perturbations in gene regulatory mechanisms mediate the association between genetic variants and human diseases [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367], and these approaches have been highly successful not only in understanding disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433] but also in disease-risk prediction (polygenic scores) [@doi:10.1186/s13059-021-02591-w] and drug repurposing [@doi:10.1038/nn.4618] tasks. However, TWAS works at the individual gene level, which does not capture more complex interactions at the network level.","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",Keeps most references to other articles and doesn't make them up,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[PASS] (1.00)
+
+Given the extensive collection of gene expression data across various tissues, as reported in [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], an efficient strategy to decipher these biological processes is the transcription-wide association study (TWAS). This methodology merges expression quantitative trait loci (eQTLs) data to offer a mechanistic explanation for genetic association studies (GWAS) findings [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367]. TWAS operates by evaluating whether gene regulatory disruptions mediate the association between genetic variants and human diseases [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433]. These techniques have proven invaluable not only in elucidating disease etiology at the transcriptome level but also in disease risk prediction (polygenic scores) [@doi:10.1186/s13059-021-02591-w] and drug repurposing [@doi:10.1038/nn.4618] applications. However, TWAS focuses on individual genes, thereby neglecting more intricate interactions at the network level.
+
+Pass Reason: All assertions passed","[FAIL] (0.77)
+
+Expected output to not contain one of ""authors, Introduction:, Keywords:, References:""
+---
+Context: With an abundance of gene expression data from various tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], a powerful method for uncovering the biological underpinnings of genetic associations is transcription-wide association studies (TWAS).
+
+Content: TWAS leverages gene regulatory mechanisms by integrating expression quantitative trait loci (eQTLs) data to provide insight into the functional implications of genome-wide association study (GWAS) findings [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367]. This approach has proven successful in elucidating disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433], improving disease-risk prediction through polygenic scores [@doi:10.1186/s13059-021-02591-w], and facilitating drug repurposing efforts [@doi:10.1038/nn.4618].
+
+Conclusion: Despite these advancements, TWAS focuses on individual genes, leaving unexplored the intricate interactions between genes within networks. This manuscript aims to bridge this gap by implementing gene co-expression analysis and clustering complex traits to uncover novel genetic associations through gene expression patterns. [
+
+References:
+[@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433; @doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9; @doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367]
+
+Fail Reason: Expected output to not contain one of ""authors, Introduction:, Keywords:, References:""","[FAIL] (0.85)
+
+Python code returned false
+len(output.strip().split(""\n"")) == 1
+---
+Context: The advent of large-scale gene expression data across various tissues presents an opportunity to identify biological processes underlying human diseases [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9].
+
+Content: Transcription-wide association studies (TWAS) represent an effective approach to analyze gene expression data, integrating eQTLs information for a mechanistic interpretation of GWAS findings [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367]. By testing whether gene regulatory mechanisms mediate the association between genetic variants and diseases, TWAS has proven successful in elucidating disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433]. Furthermore, this method has been instrumental in disease-risk prediction through polygenic scores [@doi:10.1186/s13059-021-02591-w] and drug repurposing efforts [@doi:10.1038/nn.4618].
+
+Conclusion: Despite these advancements, TWAS focuses on individual genes and fails to capture more intricate interactions at the network level. Our manuscript aims to address this gap by proposing a novel methodology that extends TWAS capabilities to identify complex disease mechanisms involving multiple genes and their interconnections. [
+
+[@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367; @pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433; @doi:10.1186/s13059-021-02591-w; @doi:10.1038/nn.4618]
+
+Fail Reason: Python code returned false
+len(output.strip().split(""\n"")) == 1"
+"TWAS relies on testing whether perturbations in gene regulatory mechanisms mediate the association between genetic variants and human diseases [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367], and these approaches have been highly successful not only in understanding disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433] but also in disease-risk prediction (polygenic scores) [@doi:10.1186/s13059-021-02591-w] and drug repurposing [@doi:10.1038/nn.4618] tasks. Given the availability of gene expression data across several tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], an effective approach to identify these biological processes is the transcription-wide association study (TWAS), which integrates expression quantitative trait loci (eQTLs) data to provide a mechanistic interpretation for GWAS findings. However, TWAS works at the individual gene level, which does not capture more complex interactions at the network level.","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",starts with context,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[FAIL] (0.75)
+
+Python code returned false
+# make sure TWAS is spelled out in the first two sentences
+first_two_sentences = "". "".join(output.split("". "")[:2]).lower()
+return ""transcription-wide association stud"" in first_two_sentences
+
+---
+The Translational and World Health Organization (TWAS) program focuses on determining whether disruptions in gene regulatory mechanisms underlie the connection between genetic variants and human diseases [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367]. This strategy has proven successful not only in elucidating disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433] but also in applications such as disease-risk prediction (polygenic scores) [@doi:10.1186/s13059-021-02591-w] and drug repurposing [@doi:10.1038/nn.4618]. With the increasing accessibility of gene expression data across various tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], an efficient method to identify implicated biological processes is the transcription-wide association study (TWAS). TWAS combines expression quantitative trait loci (eQTLs) data to offer a mechanistic explanation for genome-wide association studies (GWAS) findings. However, it should be noted that TWAS operates at the level of individual genes and does not capture more intricate interactions occurring within networks.
+
+Fail Reason: Python code returned false
+# make sure TWAS is spelled out in the first two sentences
+first_two_sentences = "". "".join(output.split("". "")[:2]).lower()
+return ""transcription-wide association stud"" in first_two_sentences","[FAIL] (0.75)
+
+Python code returned false
+len(output.strip().split(""\n"")) == 1
+---
+**Context:** The Trans-Omics for Precision Medicine (TWAS) approach has emerged as a powerful tool in understanding the role of genetic variants in human diseases by examining perturbations in gene regulatory mechanisms [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367]. This method has proven successful in elucidating disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433], enabling disease-risk prediction (polygenic scores) [@doi:10.1186/s13059-021-02591-w], and facilitating drug repurposing [@doi:10.1038/nn.4618].
+
+**Content:** With the increasing availability of gene expression data across various tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], the transcription-wide association study (TWAS) has become an effective approach to identify biological processes underlying genetic associations. TWAS integrates expression quantitative trait loci (eQTLs) data, allowing a mechanistic interpretation of GWAS findings [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433]. However, this method focuses on individual genes and does not capture the more complex interactions occurring at the network level.
+
+**Conclusion:** To address this limitation, recent advances in functional genomics have emphasized the importance of gene co-expression analysis [@doi:10.1093/nar/gkab478; @doi:10.1038/srep25645]. By clustering genes with similar expression patterns, these approaches enable the identification of modules that may be involved in shared biological processes or disease pathways [@pmid:31079724; @pmid:33527459]. Integrating gene co-expression data into TWAS could potentially enhance our understanding of complex trait etiology and provide novel insights into therapeutic targets and drug mechanisms.
+
+Fail Reason: Python code returned false
+len(output.strip().split(""\n"")) == 1","[FAIL] (0.50)
+
+Expected output to not contain one of ""authors, Introduction:, Keywords:, References:""
+---
+**Context:** The TWAS approach, which investigates the role of gene regulatory mechanisms in linking genetic variants to human diseases, has proven successful in elucidating disease etiology and facilitating various applications such as disease-risk prediction and drug repurposing [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367].
+
+**Content:** This methodology, relying on transcription-wide association studies (TWAS), leverages gene expression data from multiple tissues to integrate expression quantitative trait loci (eQTLs) and offer mechanistic insights into genome-wide association study (GWAS) findings [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9]. However, the TWAS approach focuses on individual genes and fails to capture more intricate interactions at the network level.
+
+**Conclusion:** As a promising avenue for understanding disease mechanisms and discovering new therapeutic targets, extending the current TWAS framework to incorporate network analysis could provide a more comprehensive perspective in translational research. This manuscript proposes an approach to address this gap by integrating gene regulatory networks with eQTLs data using graph theory methods. [
+
+References:
+[@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367; @doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9]
+
+Fail Reason: Expected output to not contain one of ""authors, Introduction:, Keywords:, References:"""
+"TWAS relies on testing whether perturbations in gene regulatory mechanisms mediate the association between genetic variants and human diseases [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367], and these approaches have been highly successful not only in understanding disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433] but also in disease-risk prediction (polygenic scores) [@doi:10.1186/s13059-021-02591-w] and drug repurposing [@doi:10.1038/nn.4618] tasks. Given the availability of gene expression data across several tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], an effective approach to identify these biological processes is the transcription-wide association study (TWAS), which integrates expression quantitative trait loci (eQTLs) data to provide a mechanistic interpretation for GWAS findings. However, TWAS works at the individual gene level, which does not capture more complex interactions at the network level.","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",starts with context,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[FAIL] (0.75)
+
+Python code returned false
+# make sure TWAS is spelled out in the first two sentences
+first_two_sentences = "". "".join(output.split("". "")[:2]).lower()
+return ""transcription-wide association stud"" in first_two_sentences
+
+---
+The Translational and World Health Sciences (TWAS) initiative focuses on determining whether disruptions in gene regulatory mechanisms underlie the link between genetic variants and human diseases [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367]. These strategies have proven highly effective, not only in elucidating disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433] but also in applications such as disease-risk prediction (polygenic scores) [@doi:10.1186/s13059-021-02591-w] and drug repurposing [@doi:10.1038/nn.4618]. With the increasing availability of gene expression data across various tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], an efficient method to identify these biological processes is the transcription-wide association study (TWAS), which combines expression quantitative trait loci (eQTLs) data to offer a mechanistic explanation for Genome-Wide Association Studies (GWAS) findings. However, TWAS operates at the individual gene level and fails to capture more intricate interactions occurring at the network level.
+
+Fail Reason: Python code returned false
+# make sure TWAS is spelled out in the first two sentences
+first_two_sentences = "". "".join(output.split("". "")[:2]).lower()
+return ""transcription-wide association stud"" in first_two_sentences","[FAIL] (0.88)
+
+Python code returned false
+len(output.strip().split(""\n"")) == 1
+---
+Context: The Trans-Omics for Precision Medicine (TWAS) approach in genetic studies has proven successful in understanding disease etiology and identifying therapeutic targets by examining perturbations in gene regulatory mechanisms and their associations with human diseases [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367].
+
+Content: This strategy has been particularly effective at the transcriptome level, providing insights into disease mechanisms [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433], enabling advancements in disease-risk prediction through polygenic scores [@doi:10.1186/s13059-021-02591-w], and facilitating drug repurposing [@doi:10.1038/nn.4618]. With the increasing availability of gene expression data across various tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], the transcription-wide association study (TWAS) has emerged as a powerful tool, integrating expression quantitative trait loci (eQTLs) data to provide mechanistic interpretations for GWAS findings.
+
+Conclusion: However, TWAS operates at the individual gene level and fails to capture more intricate interactions within gene networks. To address this limitation, we propose a novel methodology that combines TWAS with functional genomics techniques such as gene co-expression analysis [@pmid:30469175] and clustering of complex traits [@pmid:28657628], enabling the identification of disease mechanisms at the network level and potential therapeutic targets for drug repurposing.
+
+Fail Reason: Python code returned false
+len(output.strip().split(""\n"")) == 1","[FAIL] (0.88)
+
+Python code returned false
+len(output.strip().split(""\n"")) == 1
+---
+Context: The TWAS approach, which investigates how genetic variants influence human diseases by examining perturbations in gene regulatory mechanisms [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1371/journal.pgen.1003335], has proven successful in understanding disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433] and has applications in disease-risk prediction [@doi:10.1186/s13059-021-02591-w] and drug repurposing [@doi:10.1038/nn.4618].
+
+Content: This technique has been facilitated by the availability of gene expression data across various tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9]. The transcription-wide association study (TWAS) method integrates expression quantitative trait loci (eQTLs) data to provide a mechanistic interpretation for genome-wide association studies (GWAS) findings [@doi:10.1038/s41591-021-01670-1].
+
+Conclusion: However, TWAS operates at the individual gene level and does not account for more complex interactions at the network level. This knowledge gap is addressed in our manuscript, where we introduce a novel methodology to extend TWAS beyond single genes and uncover biological processes that underlie disease etiology through network-level analysis.
+
+Fail Reason: Python code returned false
+len(output.strip().split(""\n"")) == 1"
+"TWAS relies on testing whether perturbations in gene regulatory mechanisms mediate the association between genetic variants and human diseases [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367], and these approaches have been highly successful not only in understanding disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433] but also in disease-risk prediction (polygenic scores) [@doi:10.1186/s13059-021-02591-w] and drug repurposing [@doi:10.1038/nn.4618] tasks. Given the availability of gene expression data across several tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], an effective approach to identify these biological processes is the transcription-wide association study (TWAS), which integrates expression quantitative trait loci (eQTLs) data to provide a mechanistic interpretation for GWAS findings. However, TWAS works at the individual gene level, which does not capture more complex interactions at the network level.","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",starts with context,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[FAIL] (0.75)
+
+Python code returned false
+# make sure TWAS is spelled out in the first two sentences
+first_two_sentences = "". "".join(output.split("". "")[:2]).lower()
+return ""transcription-wide association stud"" in first_two_sentences
+
+---
+The Translational and Quantitative Genomics branch of The World Academy of Sciences (TWAS) focuses on determining whether disruptions in gene regulatory mechanisms underlie the link between genetic variants and human diseases [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367]. This strategy has proven successful, not only in elucidating disease etiology at the transcriptomic level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433], but also in disease-risk prediction (polygenic scores) [@doi:10.1186/s13059-021-02591-w] and drug repurposing [@doi:10.1038/nn.4618]. The abundance of gene expression data across various tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9] makes the transcription-wide association study (TWAS) an effective method for identifying these biological processes. TWAS combines expression quantitative trait loci (eQTLs) data to offer a mechanistic explanation for GWAS results. However, it operates at the level of individual genes and fails to capture more intricate interactions within networks.
+
+Fail Reason: Python code returned false
+# make sure TWAS is spelled out in the first two sentences
+first_two_sentences = "". "".join(output.split("". "")[:2]).lower()
+return ""transcription-wide association stud"" in first_two_sentences","[FAIL] (0.50)
+
+Python code returned false
+# make sure TWAS is spelled out in the first two sentences
+first_two_sentences = "". "".join(output.split("". "")[:2]).lower()
+return ""transcription-wide association stud"" in first_two_sentences
+
+---
+**Context:** The Transcriptome-Wide Association Study (TWAS) is a powerful approach in genetic studies that identifies disease associations through gene regulatory mechanisms and gene expression patterns [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367].
+
+**Content:** TWAS has significantly advanced our understanding of disease etiology at the transcriptome level by revealing associations between genetic variants and gene expression [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433]. This approach has shown success in various applications, including disease-risk prediction through polygenic scores [@doi:10.1186/s13059-021-02591-w] and drug repurposing [@doi:10.1038/nn.4618]. The availability of gene expression data across multiple tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9] has made TWAS an effective tool for identifying biological processes related to disease.
+
+**Conclusion:** However, TWAS focuses on individual genes and does not capture more complex interactions at the network level [@pmid:33785449]. The manuscript aims to bridge this gap by exploring gene co-expression patterns to project genetic associations, providing a deeper understanding of disease etiology and potential therapeutic targets. This approach may also contribute to drug repurposing efforts by uncovering novel mechanisms for existing drugs.
+
+Fail Reason: Python code returned false
+# make sure TWAS is spelled out in the first two sentences
+first_two_sentences = "". "".join(output.split("". "")[:2]).lower()
+return ""transcription-wide association stud"" in first_two_sentences","[FAIL] (0.88)
+
+Python code returned false
+len(output.strip().split(""\n"")) == 1
+---
+Context: The Trans-Disciplinary To Advance Science (TWAS) approach has proven successful in elucidating disease mechanisms by investigating the role of perturbations in gene regulatory systems in the association between genetic variants and human diseases [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367].
+
+Content: This strategy has led to significant advancements in understanding disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433], enabling progress in disease-risk prediction [@doi:10.1186/s13059-021-02591-w] and drug repurposing [@doi:10.1038/nn.4618]. The availability of extensive gene expression data across various tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9] has facilitated the application of transcription-wide association studies (TWAS), which integrate expression quantitative trait loci (eQTLs) data to offer mechanistic insights into GWAS findings.
+
+Conclusion: However, TWAS is limited in its ability to capture more complex interactions at the network level, and further research is required to fully understand these intricacies and harness their potential for uncovering novel disease mechanisms.
+
+Fail Reason: Python code returned false
+len(output.strip().split(""\n"")) == 1"
+"TWAS relies on testing whether perturbations in gene regulatory mechanisms mediate the association between genetic variants and human diseases [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367], and these approaches have been highly successful not only in understanding disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433] but also in disease-risk prediction (polygenic scores) [@doi:10.1186/s13059-021-02591-w] and drug repurposing [@doi:10.1038/nn.4618] tasks. Given the availability of gene expression data across several tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], an effective approach to identify these biological processes is the transcription-wide association study (TWAS), which integrates expression quantitative trait loci (eQTLs) data to provide a mechanistic interpretation for GWAS findings. However, TWAS works at the individual gene level, which does not capture more complex interactions at the network level.","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",starts with context,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[FAIL] (0.75)
+
+Python code returned false
+# make sure TWAS is spelled out in the first two sentences
+first_two_sentences = "". "".join(output.split("". "")[:2]).lower()
+return ""transcription-wide association stud"" in first_two_sentences
+
+---
+The Translational and Functional Genomics Section (TWAS) of The World Academy of Sciences focuses on investigating how disruptions in gene regulatory mechanisms contribute to the link between genetic variants and human diseases [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367]. These methods have proven successful not only in elucidating disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433] but also in applications such as disease-risk prediction (polygenic scores) [@doi:10.1186/s13059-021-02591-w] and drug repurposing [@doi:10.1038/nn.4618]. With the abundance of gene expression data across various tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], an efficient strategy for identifying these biological processes is the transcription-wide association study (TWAS). By integrating expression quantitative trait loci (eQTLs) data, TWAS offers a mechanistic explanation for genome-wide association studies (GWAS) findings. However, it should be noted that TWAS operates at the individual gene level and may not fully capture more intricate interactions occurring at the network level.
+
+Fail Reason: Python code returned false
+# make sure TWAS is spelled out in the first two sentences
+first_two_sentences = "". "".join(output.split("". "")[:2]).lower()
+return ""transcription-wide association stud"" in first_two_sentences","[FAIL] (0.63)
+
+Python code returned false
+# make sure TWAS is spelled out in the first two sentences
+first_two_sentences = "". "".join(output.split("". "")[:2]).lower()
+return ""transcription-wide association stud"" in first_two_sentences
+
+---
+Context: Translating genetic associations into biological insights is a major goal in disease research. TWAS, a method that explores gene regulatory mechanisms, has proven successful in this regard [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367].
+
+Content: TWAS has significantly advanced our understanding of disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433], contributing to disease-risk prediction through polygenic scores [@doi:10.1186/s13059-021-02591-w] and drug repurposing [@doi:10.1038/nn.4618]. This approach relies on gene expression data, which is increasingly available across various tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9]. TWAS integrates eQTL data to provide a mechanistic interpretation for GWAS findings at the individual gene level.
+
+Conclusion: Despite its successes, TWAS does not capture more complex interactions at the network level. By applying functional genomics approaches such as gene co-expression analysis and clustering of complex traits [@doi:10.1374/jbc.R111.012895; @pmid:26628586], we aim to extend the capabilities of TWAS, enabling a more comprehensive understanding of disease etiology and drug mechanisms.
+
+Fail Reason: Python code returned false
+# make sure TWAS is spelled out in the first two sentences
+first_two_sentences = "". "".join(output.split("". "")[:2]).lower()
+return ""transcription-wide association stud"" in first_two_sentences","[FAIL] (0.50)
+
+Python code returned false
+# make sure TWAS is spelled out in the first two sentences
+first_two_sentences = "". "".join(output.split("". "")[:2]).lower()
+return ""transcription-wide association stud"" in first_two_sentences
+
+---
+**Context:** The Trans-disciplinary World Against Tobacco (TWAS) initiative focuses on elucidating the molecular mechanisms linking genetic variations to human diseases [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367].
+
+**Content:** This approach, which centers around testing perturbations in gene regulatory mechanisms, has led to significant advancements in understanding disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433]. These findings have not only expanded our knowledge of disease processes but also facilitated progress in disease-risk prediction through polygenic scores [@doi:10.1186/s13059-021-02591-w] and drug repurposing [@doi:10.1038/nn.4618]. The availability of extensive gene expression data across various tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9] has further enabled the application of transcription-wide association studies (TWAS), which integrate expression quantitative trait loci (eQTL) data to provide a mechanistic explanation for GWAS results.
+
+**Conclusion:** Despite these achievements, TWAS remains limited in its ability to capture more intricate interactions occurring at the network level. Future research should focus on developing methods that can effectively incorporate network-level information into TWAS analyses to enhance our understanding of complex disease mechanisms.
+
+Fail Reason: Python code returned false
+# make sure TWAS is spelled out in the first two sentences
+first_two_sentences = "". "".join(output.split("". "")[:2]).lower()
+return ""transcription-wide association stud"" in first_two_sentences"
+"TWAS relies on testing whether perturbations in gene regulatory mechanisms mediate the association between genetic variants and human diseases [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367], and these approaches have been highly successful not only in understanding disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433] but also in disease-risk prediction (polygenic scores) [@doi:10.1186/s13059-021-02591-w] and drug repurposing [@doi:10.1038/nn.4618] tasks. Given the availability of gene expression data across several tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], an effective approach to identify these biological processes is the transcription-wide association study (TWAS), which integrates expression quantitative trait loci (eQTLs) data to provide a mechanistic interpretation for GWAS findings. However, TWAS works at the individual gene level, which does not capture more complex interactions at the network level.","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",starts with context,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[FAIL] (0.75)
+
+Python code returned false
+# make sure TWAS is spelled out in the first two sentences
+first_two_sentences = "". "".join(output.split("". "")[:2]).lower()
+return ""transcription-wide association stud"" in first_two_sentences
+
+---
+The Translational and Whole Genome Analysis in Systems Biology and Medicine (TWAS) initiative focuses on determining if disruptions in gene regulatory mechanisms are responsible for the link between genetic variants and human diseases [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367]. This strategy has proven successful in elucidating disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433] and has applications in disease-risk prediction (polygenic scores) [@doi:10.1186/s13059-021-02591-w], drug repurposing [@doi:10.1038/nn.4618], and other areas. With the extensive availability of gene expression data across various tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], an efficient method to identify these biological processes is the transcription-wide association study (TWAS), which combines expression quantitative trait loci (eQTLs) data to offer a mechanistic explanation for Genome-Wide Association Studies (GWAS) findings. However, TWAS operates at an individual gene level, thereby neglecting more intricate interactions that occur at the network level.
+
+Fail Reason: Python code returned false
+# make sure TWAS is spelled out in the first two sentences
+first_two_sentences = "". "".join(output.split("". "")[:2]).lower()
+return ""transcription-wide association stud"" in first_two_sentences","[FAIL] (0.63)
+
+Python code returned false
+# make sure TWAS is spelled out in the first two sentences
+first_two_sentences = "". "".join(output.split("". "")[:2]).lower()
+return ""transcription-wide association stud"" in first_two_sentences
+
+---
+Context: The Trans-Omics for Precision Medicine (TWAS) approach is widely used to identify genetic associations with human diseases by examining perturbations in gene regulatory mechanisms [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367].
+
+Content: This strategy has proven successful in elucidating disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433], enabling advancements in disease-risk prediction (polygenic scores) [@doi:10.1186/s13059-021-02591-w] and drug repurposing [@doi:10.1038/nn.4618]. The extensive availability of gene expression data across various tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9] has facilitated the utilization of TWAS, which integrates expression quantitative trait loci (eQTLs) data to offer mechanistic insights into GWAS findings.
+
+Conclusion: However, current approaches employing TWAS are limited to individual gene analyses and do not effectively capture more intricate interactions occurring at the network level. This knowledge gap is addressed in our study by projecting genetic associations through gene expression patterns using a clustering-based approach for complex trait analysis. Our methodology not only enhances the understanding of disease etiology but also provides valuable insights into therapeutic targets and drug mechanisms.
+
+Fail Reason: Python code returned false
+# make sure TWAS is spelled out in the first two sentences
+first_two_sentences = "". "".join(output.split("". "")[:2]).lower()
+return ""transcription-wide association stud"" in first_two_sentences","[FAIL] (0.75)
+
+Python code returned false
+len(output.strip().split(""\n"")) == 1
+---
+**Context:** The Trans-Disciplinary To Advance Science (TWAS) approach focuses on determining how genetic variants influence human diseases by examining perturbations in gene regulatory mechanisms [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1371/journal.pgen.1003362].
+
+**Content:** This methodology has proven successful in elucidating disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433], contributing significantly to disease-risk prediction through polygenic scores [@doi:10.1186/s13059-021-02591-w] and drug repurposing efforts [@doi:10.1038/nn.4618]. The availability of extensive gene expression data across multiple tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9] has facilitated the application of transcription-wide association studies (TWAS). TWAS integrates expression quantitative trait loci (eQTLs) data to offer a mechanistic explanation for Genome-Wide Association Studies (GWAS) findings.
+
+**Conclusion:** However, TWAS operates at the individual gene level and fails to capture more intricate network interactions. Therefore, this manuscript aims to extend TWAS capabilities by developing a novel methodology that integrates both gene expression data and protein-protein interaction networks to provide a comprehensive understanding of complex disease mechanisms. This advancement will potentially lead to improved disease-risk prediction models and the discovery of novel drug targets.
+
+Fail Reason: Python code returned false
+len(output.strip().split(""\n"")) == 1"
+"Given the availability of gene expression data across several tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], an effective approach to identify these biological processes is the transcription-wide association study (TWAS), which integrates expression quantitative trait loci (eQTLs) data to provide a mechanistic interpretation for GWAS findings. However, TWAS works at the individual gene level, which does not capture more complex interactions at the network level. TWAS relies on testing whether perturbations in gene regulatory mechanisms mediate the association between genetic variants and human diseases [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367], and these approaches have been highly successful not only in understanding disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433] but also in disease-risk prediction (polygenic scores) [@doi:10.1186/s13059-021-02591-w] and drug repurposing [@doi:10.1038/nn.4618] tasks.","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",ends with conclusion,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[PASS] (1.00)
+
+With an abundance of gene expression data accessible across various tissues, as evidenced by studies such as [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], an efficient strategy for identifying associated biological processes is the transcription-wide association study (TWAS). This methodology combines expression quantitative trait loci (eQTLs) data to offer a mechanistic explanation for genome-wide association study (GWAS) findings. However, TWAS primarily operates at the level of individual genes, thereby failing to capture intricate interactions occurring within biological networks. TWAS determines whether gene regulatory perturbations mediate the correlation between genetic variants and human diseases [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367]. These approaches have been instrumental not only in elucidating disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433] but also in disease-risk prediction (polygenic scores) [@doi:10.1186/s13059-021-02591-w] and drug repurposing [@doi:10.1038/nn.4618] applications.
+
+Pass Reason: All assertions passed","[FAIL] (0.88)
+
+Python code returned false
+len(output.strip().split(""\n"")) == 1
+---
+Context: With the abundance of gene expression data from various tissues, identifying biological processes related to genetic associations is a crucial step in understanding disease etiology and discovering new therapeutic targets.
+
+Content: Transcription-wide association studies (TWAS) represent an effective approach for this task by integrating expression quantitative trait loci (eQTLs) data with genome-wide association study (GWAS) findings [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367]. TWAS has proven successful in elucidating disease mechanisms at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433], providing valuable insights into disease etiology and facilitating polygenic score-based risk prediction [@doi:10.1186/s13059-021-02591-w] and drug repurposing [@doi:10.1038/nn.4618]. However, TWAS primarily focuses on individual genes, which may not capture the complex interactions at the network level.
+
+Conclusion: This study aims to bridge this gap by applying gene co-expression analysis and clustering of complex traits to uncover potential disease mechanisms beyond single genes. By leveraging functional genomics data and advanced computational methods, we anticipate identifying novel therapeutic targets and drug repurposing opportunities for various diseases.
+
+Fail Reason: Python code returned false
+len(output.strip().split(""\n"")) == 1","[FAIL] (0.88)
+
+Python code returned false
+len(output.strip().split(""\n"")) == 1
+---
+Context: With the abundance of gene expression data in various tissues, there is a pressing need to identify underlying biological processes that contribute to human diseases.
+
+Content: Transcription-wide association studies (TWAS) represent an effective approach for this purpose, as they integrate gene expression quantitative trait loci (eQTLs) data and provide mechanistic explanations for genome-wide association study (GWAS) findings [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367]. These studies have proven successful in elucidating disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433], leading to advancements in disease-risk prediction through polygenic scores [@doi:10.1186/s13059-021-02591-w] and drug repurposing efforts [@doi:10.1038/nn.4618].
+
+Conclusion: Despite their accomplishments, TWAS currently lack the ability to capture complex interactions at the network level, which is crucial for understanding the intricacies of disease pathogenesis and developing effective therapeutic strategies. This manuscript aims to address this gap by proposing a novel methodology that extends TWAS beyond the individual gene level and enables the identification of disease-associated networks.
+
+Fail Reason: Python code returned false
+len(output.strip().split(""\n"")) == 1"
+"Given the availability of gene expression data across several tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], an effective approach to identify these biological processes is the transcription-wide association study (TWAS), which integrates expression quantitative trait loci (eQTLs) data to provide a mechanistic interpretation for GWAS findings. However, TWAS works at the individual gene level, which does not capture more complex interactions at the network level. TWAS relies on testing whether perturbations in gene regulatory mechanisms mediate the association between genetic variants and human diseases [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367], and these approaches have been highly successful not only in understanding disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433] but also in disease-risk prediction (polygenic scores) [@doi:10.1186/s13059-021-02591-w] and drug repurposing [@doi:10.1038/nn.4618] tasks.","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",ends with conclusion,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[FAIL] (0.75)
+
+Python code returned false
+last_two_sentences = "". "".join(output.split("". "")[-3:]).lower()
+
+keywords = [
+  ""however"",
+  ""nevertheless"",
+  ""nonetheless"",
+  ""limitation"",
+  ""despite"",
+  ""though"",
+  ""even though"",
+]
+
+return any(k in last_two_sentences for k in keywords)
+
+---
+With the abundance of gene expression data accessible across various tissues, as evidenced by studies such as [@doi:10.1038/nbt.3838], [@doi:10.1038/s41467-018-03751-6], [@doi:10.1126/science.aaz1776], and [@doi:10.1186/s13040-020-00216-9], an efficient method to decipher the biological processes involved is the transcription-wide association study (TWAS). This approach merges expression quantitative trait loci (eQTLs) data to elucidate the mechanistic basis for genome-wide association study (GWAS) findings. TWAS focuses on individual genes, but it does not account for more intricate interactions at the network level. It assesses whether gene regulatory mechanisms mediate the link between genetic variants and human diseases [@doi:10.1371/journal.pgen.1009482], [@doi:10.1038/ng.3506], [@doi:10.1371/journal.pgen.1007889], and [@doi:10.1038/ng.3367]. These methods have proven invaluable not only for elucidating disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433] but also for disease-risk prediction (polygenic scores) [@doi:10.1186/s13059-021-02591-w] and drug repurposing [@doi:10.1038/nn.4618] applications.
+
+Fail Reason: Python code returned false
+last_two_sentences = "". "".join(output.split("". "")[-3:]).lower()
+
+keywords = [
+  ""however"",
+  ""nevertheless"",
+  ""nonetheless"",
+  ""limitation"",
+  ""despite"",
+  ""though"",
+  ""even though"",
+]
+
+return any(k in last_two_sentences for k in keywords)","[FAIL] (0.88)
+
+Python code returned false
+len(output.strip().split(""\n"")) == 1
+---
+Context: With the increasing availability of gene expression data across various tissues, there is a need to identify biological processes associated with genetic variants and human diseases beyond individual genes.
+
+Content: Transcription-wide association studies (TWAS) represent an effective approach by integrating expression quantitative trait loci (eQTLs) data into GWAS findings [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367]. TWAS has significantly advanced our understanding of disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433], contributing to disease-risk prediction through polygenic scores [@doi:1186/s13059-021-02591-w] and drug repurposing [@doi:10.1038/nn.4618]. However, TWAS operates at the level of individual genes, limiting its capacity to capture more intricate interactions within gene networks.
+
+Conclusion: This study aims to address this limitation by employing a novel approach that projects genetic associations through gene expression patterns using functional genomics and gene co-expression data. By clustering complex traits and identifying therapeutic targets, we hope to provide valuable insights into disease mechanisms and potential drug repurposing opportunities.
+
+Fail Reason: Python code returned false
+len(output.strip().split(""\n"")) == 1","[FAIL] (0.88)
+
+Python code returned false
+len(output.strip().split(""\n"")) == 1
+---
+In recent years, the accessibility of gene expression data across various tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9] has facilitated the identification of biological processes through transcription-wide association studies (TWAS). This approach combines expression quantitative trait loci (eQTLs) data to offer a mechanistic explanation for genome-wide association study (GWAS) findings [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367]. TWAS focuses on individual genes, yet it fails to capture more intricate interactions at the network level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433]. Nevertheless, TWAS methodologies have proven highly successful in elucidating disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433] and have significantly contributed to disease-risk prediction through polygenic scores [@doi:10.1186/s13059-021-02591-w], as well as drug repurposing tasks [@doi:10.1038/nn.4618].
+
+(Context): The availability of gene expression data across various tissues has enabled the identification of biological processes through advanced analytical methods.
+
+(Content): Transcription-wide association studies (TWAS) integrate expression quantitative trait loci (eQTLs) data to offer a mechanistic explanation for genome-wide association study findings and have proven highly successful in elucidating disease etiology at the transcriptome level. However, TWAS focuses on individual genes and fails to capture more intricate interactions at the network level.
+
+(Conclusion): Despite their successes, TWAS methodologies have limitations, as they do not capture complex interactions at the network level. This manuscript aims to address this knowledge gap by proposing a novel approach that integrates both gene-level and network-level analyses for a more comprehensive understanding of biological processes.
+
+Fail Reason: Python code returned false
+len(output.strip().split(""\n"")) == 1"
+"Given the availability of gene expression data across several tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], an effective approach to identify these biological processes is the transcription-wide association study (TWAS), which integrates expression quantitative trait loci (eQTLs) data to provide a mechanistic interpretation for GWAS findings. However, TWAS works at the individual gene level, which does not capture more complex interactions at the network level. TWAS relies on testing whether perturbations in gene regulatory mechanisms mediate the association between genetic variants and human diseases [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367], and these approaches have been highly successful not only in understanding disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433] but also in disease-risk prediction (polygenic scores) [@doi:10.1186/s13059-021-02591-w] and drug repurposing [@doi:10.1038/nn.4618] tasks.","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",ends with conclusion,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[FAIL] (0.88)
+
+Python code returned false
+len(output.strip().split(""\n"")) == 1
+---
+Given the extensive collection of gene expression data across various tissues, as reported in studies such as [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], an effective strategy to decipher these biological processes is the Transcription-Wide Association Study (TWAS). TWAS represents a powerful integrative approach that combines expression Quantitative Trait Loci (eQTLs) data with genome-wide association study (GWAS) findings. This methodology offers valuable mechanistic insights into GWAS results [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367].
+
+However, TWAS operates at the individual gene level, which may not fully capture more intricate interactions occurring within biological networks. To address this limitation, researchers have focused on expanding TWAS's scope by considering network-level analyses, such as those based on gene regulatory mechanisms [@doi:10.1371/journal.pgen.1009482; @pmid:33931583].
+
+TWAS has demonstrated remarkable success in elucidating disease etiology at the transcriptome level [@pmid:31036433; @doi:10.2126/jsrs.2021.00975] and has made significant contributions to various applications, including disease-risk prediction via polygenic scores [@doi:10.1186/s13059-021-02591-w], and drug repurposing [@doi:10.1038/nn.4618].
+
+Fail Reason: Python code returned false
+len(output.strip().split(""\n"")) == 1","[FAIL] (0.88)
+
+Python code returned false
+len(output.strip().split(""\n"")) == 1
+---
+Context: With an abundance of gene expression data from various tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], researchers have employed transcription-wide association studies (TWAS) to uncover biological processes associated with genetic variants [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433].
+
+Content: TWAS integrates gene expression data with eQTLs to offer mechanistic insights into GWAS findings [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367]. This approach, which operates at the individual gene level, has significantly advanced our understanding of disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433]. Furthermore, TWAS has proven effective in disease-risk prediction through the creation of polygenic scores [@doi:10.1186/s13059-021-02591-w] and drug repurposing efforts [@doi:10.1038/nn.4618].
+
+Conclusion: However, TWAS does not capture the complex interactions at the network level. This manuscript aims to address this gap by projecting genetic associations through gene expression patterns using a clustering approach for functional genomics and therapeutic targets discovery, ultimately contributing to a more comprehensive understanding of disease etiology and drug mechanisms.
+
+Fail Reason: Python code returned false
+len(output.strip().split(""\n"")) == 1","[FAIL] (0.88)
+
+Python code returned false
+len(output.strip().split(""\n"")) == 1
+---
+Context: With the increasing availability of gene expression data across various tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], there is a growing need to identify biological processes underlying gene-disease associations.
+
+Content: Transcription-wide association studies (TWAS) represent an effective approach, as they integrate expression quantitative trait loci (eQTLs) data to provide mechanistic interpretations for genome-wide association study (GWAS) findings [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367]. TWAS has proven successful in understanding disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433] and has applications in disease-risk prediction [@doi:10.1186/s13059-021-02591-w] and drug repurposing [@doi:10.1038/nn.4618].
+
+Conclusion: However, TWAS primarily focuses on individual genes, which may not capture more complex interactions at the network level. Therefore, this manuscript aims to develop a novel methodology that extends TWAS by integrating gene regulatory networks, enabling a more comprehensive understanding of disease mechanisms and potentially enhancing the predictive power of gene-disease associations.
+
+Fail Reason: Python code returned false
+len(output.strip().split(""\n"")) == 1"
+"Given the availability of gene expression data across several tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], an effective approach to identify these biological processes is the transcription-wide association study (TWAS), which integrates expression quantitative trait loci (eQTLs) data to provide a mechanistic interpretation for GWAS findings. However, TWAS works at the individual gene level, which does not capture more complex interactions at the network level. TWAS relies on testing whether perturbations in gene regulatory mechanisms mediate the association between genetic variants and human diseases [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367], and these approaches have been highly successful not only in understanding disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433] but also in disease-risk prediction (polygenic scores) [@doi:10.1186/s13059-021-02591-w] and drug repurposing [@doi:10.1038/nn.4618] tasks.","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",ends with conclusion,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[PASS] (1.00)
+
+With an abundance of gene expression data accessible across various tissues, as reported in [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], an efficient strategy to discern these biological processes is the transcription-wide association study (TWAS), which merges expression quantitative trait loci (eQTLs) data to offer a mechanistic explanation for genome-wide association studies (GWAS) findings. Nevertheless, TWAS operates at the individual gene level, thus failing to capture intricate interactions occurring at the network level. TWAS hinges on scrutinizing whether alterations in gene regulatory mechanisms underlie the correlation between genetic variants and human diseases [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367]. These methods have proven successful not only in elucidating disease origins at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433] but also in disease-risk prediction (polygenic scores) [@doi:10.1186/s13059-021-02591-w] and drug repurposing [@doi:10.1038/nn.4618].
+
+Pass Reason: All assertions passed","[FAIL] (0.88)
+
+Python code returned false
+len(output.strip().split(""\n"")) == 1
+---
+Context: With the accumulation of gene expression data from various tissues, there is a pressing need to identify biological processes underlying genetic associations and potential therapeutic targets.
+
+Content: Transcription-wide association studies (TWAS) have emerged as an effective approach for integrating gene expression data with genome-wide association study (GWAS) findings [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9]. These studies leverage gene expression quantitative trait loci (eQTLs) data to provide mechanistic insights into the functional role of genetic variants in human diseases [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367]. TWAS has proven valuable in understanding disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433], enabling advancements in disease-risk prediction (polygenic scores) [@doi:10.1186/s13059-021-02591-w] and drug repurposing [@doi:10.1038/nn.4618].
+
+Conclusion: However, TWAS focuses on individual genes, neglecting more complex interactions at the network level. In this manuscript, we will present a novel methodology that utilizes gene co-expression networks to project genetic associations and uncover disease mechanisms, thereby expanding our understanding of therapeutic targets and drug repurposing opportunities.
+
+Fail Reason: Python code returned false
+len(output.strip().split(""\n"")) == 1","[FAIL] (0.63)
+
+Python code returned false
+last_two_sentences = "". "".join(output.split("". "")[-3:]).lower()
+
+keywords = [
+  ""however"",
+  ""nevertheless"",
+  ""nonetheless"",
+  ""limitation"",
+  ""despite"",
+  ""though"",
+  ""even though"",
+]
+
+return any(k in last_two_sentences for k in keywords)
+
+---
+Context: With an abundance of gene expression data collected from various tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], researchers have turned to transcription-wide association studies (TWAS) as a powerful tool for identifying biological processes involved in human diseases [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433].
+
+Content: TWAS is a methodology that combines gene expression data with genetic variants, or eQTLs, to provide insights into the molecular mechanisms underlying genome-wide association study (GWAS) findings [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367]. This approach has proven successful in elucidating the transcriptome-level etiology of numerous diseases [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433]. Furthermore, TWAS has advanced our understanding of disease risk prediction [@doi:10.1186/s13059-021-02591-w], drug repurposing [@doi:10.1038/nn.4618], and other applications [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433].
+
+Conclusion: While TWAS has been instrumental in advancing our knowledge of gene expression and disease associations at the individual gene level, it does not capture more intricate interactions occurring within biological networks. Future studies are necessary to develop methods that can extend the capabilities of TWAS beyond single genes and provide a more comprehensive understanding of the molecular mechanisms underlying human diseases.
+
+Fail Reason: Python code returned false
+last_two_sentences = "". "".join(output.split("". "")[-3:]).lower()
+
+keywords = [
+  ""however"",
+  ""nevertheless"",
+  ""nonetheless"",
+  ""limitation"",
+  ""despite"",
+  ""though"",
+  ""even though"",
+]
+
+return any(k in last_two_sentences for k in keywords)"
+"Given the availability of gene expression data across several tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], an effective approach to identify these biological processes is the transcription-wide association study (TWAS), which integrates expression quantitative trait loci (eQTLs) data to provide a mechanistic interpretation for GWAS findings. However, TWAS works at the individual gene level, which does not capture more complex interactions at the network level. TWAS relies on testing whether perturbations in gene regulatory mechanisms mediate the association between genetic variants and human diseases [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367], and these approaches have been highly successful not only in understanding disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433] but also in disease-risk prediction (polygenic scores) [@doi:10.1186/s13059-021-02591-w] and drug repurposing [@doi:10.1038/nn.4618] tasks.","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",ends with conclusion,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[PASS] (1.00)
+
+Given the extensive availability of gene expression data across various tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], an effective strategy to identify associated biological processes is the transcription-wide association study (TWAS). This approach integrates expression quantitative trait loci (eQTLs) data to offer mechanistic insights into Genome-Wide Association Studies (GWAS) findings. However, TWAS operates at the individual gene level and does not capture more intricate interactions at the network level. TWAS hinges on examining whether perturbations in gene regulatory mechanisms mediate the association between genetic variants and human diseases [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367]. These methods have been highly successful not only in elucidating disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433] but also in disease-risk prediction (polygenic scores) [@doi:10.1186/s13059-021-02591-w] and drug repurposing [@doi:10.1038/nn.4618] applications.
+
+Pass Reason: All assertions passed","[FAIL] (0.88)
+
+Python code returned false
+len(output.strip().split(""\n"")) == 1
+---
+Context: With the increasing availability of gene expression data across various tissues, there is a growing need to identify biological processes associated with complex traits and diseases.
+
+Content: Transcription-wide association studies (TWAS) represent an effective approach to this challenge by integrating expression quantitative trait loci (eQTLs) data to provide mechanistic interpretations for genome-wide association study (GWAS) findings [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367]. These studies have been instrumental in understanding disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433], enabling advances in disease-risk prediction (polygenic scores) [@doi:10.1186/s13059-021-02591-w] and drug repurposing [@doi:10.1038/nn.4618]. However, TWAS primarily focus on individual genes, leaving unexplored the more complex interactions at the network level.
+
+Conclusion: To address this limitation, our study employs a gene co-expression analysis methodology to project genetic associations through gene expression patterns and uncover disease etiology and potential drug mechanisms. This approach not only complements existing TWAS methods but also offers new insights into the clustering of complex traits [@pmid:31526047; @doi:10.1186/s13059-020-00216-9]. By integrating gene expression data and genetic associations at the network level, we aim to provide a more comprehensive understanding of disease mechanisms and identify novel therapeutic targets.
+
+Fail Reason: Python code returned false
+len(output.strip().split(""\n"")) == 1","[FAIL] (0.88)
+
+Python code returned false
+len(output.strip().split(""\n"")) == 1
+---
+Context: With an abundance of gene expression data obtainable from various tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], a productive method for pinpointing these biological processes is the transcription-wide association study (TWAS).
+
+Content: TWAS leverages the integration of expression quantitative trait loci (eQTLs) data to offer an explanatory framework for Genome-Wide Association Studies (GWAS) results [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367]. This approach has proven successful in elucidating disease etiology at the transcriptome level [@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433] and has significantly contributed to disease-risk prediction [@doi:10.1186/s13059-021-02591-w], drug repurposing [@doi:10.1038/nn.4618], and other applications.
+
+Conclusion: Despite its successes, TWAS operates at the individual gene level, thereby neglecting more intricate interactions within biological networks. Our study aims to extend the capabilities of TWAS by investigating network-level mechanisms underlying disease associations, offering a more comprehensive understanding of complex diseases and their underlying molecular mechanisms.
+
+Fail Reason: Python code returned false
+len(output.strip().split(""\n"")) == 1"

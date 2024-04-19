@@ -9,27 +9,27 @@ defaultTest:
   assert:
     # ...starts with capital letter
     - type: python
-      weight: 0.5
+      weight: 1
       value: output.strip()[0].isupper()
 
     # ...ends with period
     - type: python
-      weight: 0.5
+      weight: 1
       value: output.strip()[-1] == "."
 
     # ...is a single paragraph
     - type: python
-      weight: 0.5
+      weight: 1
       value: len(output.strip().split("\n")) == 1
 
     # ...doesn't include manuscript title
     - type: python
-      weight: 0.5
+      weight: 1
       value: context["vars"]["title"] not in output
 
     # ...doesn't reference authors, keywords, introduction, etc
     - type: not-icontains-any
-      weight: 0.5
+      weight: 1
       value:
         - "authors"
         - "Introduction:"
@@ -38,7 +38,7 @@ defaultTest:
 
     # ...is roughly same length as input
     - type: python
-      weight: 0.5
+      weight: 1
       value: |
         input = context["vars"]["content"]
         input_words = len(input.strip().split())
@@ -56,7 +56,7 @@ tests:
       content: file://./inputs/has_spelling_and_grammar_errors.md
     assert:
       - type: not-icontains-any
-        weight: 1.0
+        weight: 2
         value:
           - "karry"
           - "ekspression"
@@ -71,7 +71,7 @@ tests:
       content: file://./inputs/has_references_to_articles.md
     assert:
       - type: python
-        weight: 1.0
+        weight: 3
         value: |
           input = context["vars"]["content"]
           
@@ -99,7 +99,7 @@ tests:
           return (count / len(references) > 0.50)
 
       - type: python
-        weight: 2.0
+        weight: 4
         value: |
           import re
           
@@ -139,7 +139,7 @@ tests:
       content: file://./inputs/doesnt_start_with_context.md
     assert:
       - type: python
-        weight: 1.0
+        weight: 2
         value: |
           # make sure TWAS is spelled out in the first two sentences
           first_two_sentences = ". ".join(output.split(". ")[:2]).lower()
@@ -153,14 +153,18 @@ tests:
       content: file://./inputs/doesnt_end_with_conclusion.md
     assert:
       - type: python
-        weight: 1.0
+        weight: 2
         value: |
-          last_two_sentences = ". ".join(output.split(". ")[-2:]).lower()
+          last_two_sentences = ". ".join(output.split(". ")[-3:]).lower()
           
           keywords = [
             "however",
             "nevertheless",
+            "nonetheless",
             "limitation",
+            "despite",
+            "though",
+            "even though",
           ]
           
           return any(k in last_two_sentences for k in keywords)

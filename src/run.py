@@ -12,6 +12,7 @@ models = {
     "ollama=mistral=7b-instruct-fp16": N_REPS,
     "ollama=mistral=7b-instruct-v0.2-fp16": N_REPS,
     "ollama=mixtral=8x7b-instruct-v0.1-q8_0": N_REPS,
+    "ollama=mixtral=8x22b-instruct-v0.1-q5_1": N_REPS,
     "ollama=starling-lm=7b-alpha-fp16": N_REPS,
     "ollama=llama2=7b-chat-fp16": N_REPS,
     "ollama=gemma=2b-instruct-fp16": N_REPS,
@@ -19,6 +20,8 @@ models = {
     "openai=gpt-4-0613": N_REPS,  # gpt-4 points to this one
     "openai=gpt-4-turbo-2024-04-09": N_REPS,  # gpt-4-turbo points to this one
     "anthropic=claude-3-opus-20240229": N_REPS,
+    "anthropic=claude-3-sonnet-20240229": N_REPS,
+    "anthropic=claude-3-haiku-20240307": N_REPS,
 }
 
 

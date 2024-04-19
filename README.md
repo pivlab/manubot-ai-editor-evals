@@ -27,9 +27,9 @@ Under-the-hood, it uses:
    ```bash
    pip install -e .
    ```
-1. Install [Ollama](https://ollama.ai/). The latest version we tested is [v0.1.29](https://github.com/ollama/ollama/releases/tag/v0.1.29), which in Linux (amd64) you can install with:
+1. Install [Ollama](https://ollama.ai/). The latest version we tested is [v0.1.32](https://github.com/ollama/ollama/releases/tag/v0.1.32), which in Linux (amd64) you can install with:
    ```bash
-   sudo curl -L https://github.com/ollama/ollama/releases/download/v0.1.29/ollama-linux-amd64 -o /usr/bin/ollama
+   sudo curl -L https://github.com/ollama/ollama/releases/download/v0.1.32/ollama-linux-amd64 -o /usr/bin/ollama
    sudo chmod +x /usr/bin/ollama
    ```
 
