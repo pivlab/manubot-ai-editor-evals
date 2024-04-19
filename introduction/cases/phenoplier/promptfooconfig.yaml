@@ -6,61 +6,90 @@ prompts:
 # Default asserts applied to each test case below
 defaultTest:
   # Make sure that output...
-  threshold: 4
   assert:
     # ...starts with capital letter
     - type: python
-      weight: 1
       value: |
+        description = "Starts with capital letter"
+        type = "Formatting"
         score = 0.25
+        
         res = output.strip()[0].isupper()
         
         return {
           "pass": res,
-          "score": score,
+          "score": score if res else 0.0,
+          "reason": "Passed" if res else "Failed",
+          "assertion": {
+            "value": description,
+            "type": type,
+          },
         }
 
     # ...ends with period
     - type: python
-      weight: 1
       value: |
+        description = "Ends with a period"
+        type = "Formatting"
         score = 0.25
+        
         res = output.strip()[-1] == "."
         
         return {
           "pass": res,
-          "score": score,
+          "score": score if res else 0.0,
+          "reason": "Passed" if res else "Failed",
+          "assertion": {
+            "value": description,
+            "type": type,
+          },
         }
 
     # ...is a single paragraph
     - type: python
-      weight: 1
       value: |
+        description = "Is a single paragraph"
+        type = "Formatting"
         score = 0.25
+        
         res = len(output.strip().split("\n")) == 1
         
         return {
           "pass": res,
-          "score": score,
+          "score": score if res else 0.0,
+          "reason": "Passed" if res else "Failed",
+          "assertion": {
+            "value": description,
+            "type": type,
+          },
         }
 
     # ...doesn't include manuscript title
     - type: python
-      weight: 1
       value: |
+        description = "Doesn't include manuscript title"
+        type = "Formatting"
         score = 0.25
+        
         res = (context["vars"]["title"] not in output)
         
         return {
           "pass": res,
-          "score": score,
+          "score": score if res else 0.0,
+          "reason": "Passed" if res else "Failed",
+          "assertion": {
+            "value": description,
+            "type": type,
+          },
         }
 
     # ...doesn't reference authors, keywords, introduction, etc
     - type: python
-      weight: 1
       value: |
+        description = "Doesn't reference authors, keywords, introduction, etc"
+        type = "Formatting"
         score = 0.25
+        
         keywords = [
           "authors",
           "Introduction:",
@@ -71,14 +100,21 @@ defaultTest:
         
         return {
           "pass": res,
-          "score": score,
+          "score": score if res else 0.0,
+          "reason": "Passed" if res else "Failed",
+          "assertion": {
+            "value": description,
+            "type": type,
+          },
         }
 
     # ...is roughly same length as input
     - type: python
-      weight: 1
       value: |
+        description = "Has roughly the same length as input"
+        type = "Formatting"
         score = 0.25
+        
         input = context["vars"]["content"]
         input_words = len(input.strip().split())
         output_words = len(output.strip().split())
@@ -87,7 +123,12 @@ defaultTest:
         
         return {
           "pass": res,
-          "score": score,
+          "score": score if res else 0.0,
+          "reason": "Passed" if res else "Failed",
+          "assertion": {
+            "value": description,
+            "type": type,
+          },
         }
 
 # Make sure that output...
@@ -101,7 +142,10 @@ tests:
     assert:
       - type: python
         value: |
-          score = 1.0
+          description = "Has no spelling errors"
+          type = "Spelling/grammar"
+          score = 2.0
+          
           keywords = [
             "karry",
             "ekspression",
@@ -112,7 +156,12 @@ tests:
           
           return {
             "pass": res,
-            "score": score,
+            "score": score if res else 0.0,
+            "reason": "Passed" if res else "Failed",
+            "assertion": {
+              "value": description,
+              "type": type,
+            },
           }
 
   # ...keeps most references to other articles and doesn't make them up
@@ -124,7 +173,10 @@ tests:
     assert:
       - type: python
         value: |
-          score = 1.0
+          description = "Keeps most references to other articles"
+          type = "Information accuracy"
+          score = 2.0
+          
           input = context["vars"]["content"]
           
           references = {
@@ -152,12 +204,20 @@ tests:
           
           return {
             "pass": res,
-            "score": score,
+            "score": score if res else 0.0,
+            "reason": "Passed" if res else "Failed",
+            "assertion": {
+              "value": description,
+              "type": type,
+            },
           }
 
       - type: python
         value: |
+          description = "Does not make up references to other articles"
+          type = "Information accuracy"
           score = 2.0
+          
           import re
           
           input = context["vars"]["content"]
@@ -190,7 +250,12 @@ tests:
           
           return {
             "pass": res,
-            "score": score,
+            "score": score if res else 0.0,
+            "reason": "Passed" if res else "Failed",
+            "assertion": {
+              "value": description,
+              "type": type,
+            },
           }
 
   # adheres to C-C-C by starting with context
@@ -202,14 +267,22 @@ tests:
     assert:
       - type: python
         value: |
-          score = 1.0
+          description = "Starts with context"
+          type = "Structure"
+          score = 2.0
+          
           # make sure TWAS is spelled out in the first two sentences
           first_two_sentences = ". ".join(output.split(". ")[:2]).lower()
           res = "transcription-wide association stud" in first_two_sentences
           
           return {
             "pass": res,
-            "score": score,
+            "score": score if res else 0.0,
+            "reason": "Passed" if res else "Failed",
+            "assertion": {
+              "value": description,
+              "type": type,
+            },
           }
 
   # adheres to C-C-C by ending with a conclusion
@@ -221,7 +294,10 @@ tests:
     assert:
       - type: python
         value: |
-          score = 1.0
+          description = "Ends with conclusion"
+          type = "Structure"
+          score = 2.0
+          
           # get last two sentences
           last_sentences = ". ".join(output.split(". ")[-2:]).lower()
           
@@ -239,6 +315,11 @@ tests:
           
           return {
             "pass": res,
-            "score": score,
+            "score": score if res else 0.0,
+            "reason": "Passed" if res else "Failed",
+            "assertion": {
+              "value": description,
+              "type": type,
+            },
           }
   
