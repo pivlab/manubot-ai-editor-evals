@@ -10,31 +10,68 @@ defaultTest:
     # ...starts with capital letter
     - type: python
       weight: 1
-      value: output.strip()[0].isupper()
+      value: |
+        score = 0.25
+        res = output.strip()[0].isupper()
+        
+        return {
+          "pass": res,
+          "score": score,
+        }
 
     # ...ends with period
     - type: python
       weight: 1
-      value: output.strip()[-1] == "."
+      value: |
+        score = 0.25
+        res = output.strip()[-1] == "."
+        
+        return {
+          "pass": res,
+          "score": score,
+        }
 
     # ...is a single paragraph
     - type: python
       weight: 1
-      value: len(output.strip().split("\n")) == 1
+      value: |
+        score = 0.25
+        res = len(output.strip().split("\n")) == 1
+        
+        return {
+          "pass": res,
+          "score": score,
+        }
 
     # ...doesn't include manuscript title
     - type: python
       weight: 1
-      value: context["vars"]["title"] not in output
+      value: |
+        score = 0.25
+        res = (context["vars"]["title"] not in output)
+        
+        return {
+          "pass": res,
+          "score": score,
+        }
 
     # ...doesn't reference authors, keywords, introduction, etc
-    - type: not-icontains-any
+    - type: python
       weight: 1
-      value:
-        - "authors"
-        - "Introduction:"
-        - "Keywords:"
-        - "References:"
+      value: |
+        score = 0.25
+        keywords = [
+          "authors",
+          "Introduction:",
+          "Keywords:",
+          "References:",
+        ]
+        res = not any(kw in output for kw in keywords)
+        
+        return {
+          "pass": res,
+          "score": score,
+        }
 
     # ...is roughly same length as input
     - type: python
@@ -43,8 +80,14 @@ defaultTest:
         input = context["vars"]["content"]
         input_words = len(input.strip().split())
         output_words = len(output.strip().split())
-        response = (output_words > 0.5 * input_words) and (output_words < 2 * input_words)
-        return response
+        
+        res = (output_words > 0.5 * input_words) and (output_words < 1.5 * input_words)
+        score = 0.50
+        
+        return {
+          "pass": res,
+          "score": score,
+        }
 
 # Make sure that output...
 tests:
@@ -55,13 +98,22 @@ tests:
       keywords: file://./inputs/keywords.txt
       content: file://./inputs/has_spelling_and_grammar_errors.md
     assert:
-      - type: not-icontains-any
-        weight: 2
-        value:
-          - "karry"
-          - "ekspression"
-          - "improoved"
-          - "studies has"
+      - type: python
+        weight: 1
+        value: |
+          score = 1.0
+          keywords = [
+            "karry",
+            "ekspression",
+            "improoved",
+            "studies has",
+          ]
+          res = not any(kw in output for kw in keywords)
+          
+          return {
+            "pass": res,
+            "score": score,
+          }
 
   # ...keeps most references to other articles and doesn't make them up
   - vars:
@@ -71,8 +123,9 @@ tests:
       content: file://./inputs/has_references_to_articles.md
     assert:
       - type: python
-        weight: 3
+        weight: 2
         value: |
+          score = 2.0
           input = context["vars"]["content"]
           
           references = {
@@ -96,11 +149,17 @@ tests:
           references = [ref for ref in references if ref in input]
           
           count = len([ref for ref in references if ref in output])
-          return (count / len(references) > 0.50)
+          res = (count / len(references) > 0.50)
+          
+          return {
+            "pass": res,
+            "score": score,
+          }
 
       - type: python
         weight: 4
         value: |
+          score = 3.0
           import re
           
           input = context["vars"]["content"]
@@ -129,7 +188,12 @@ tests:
           output_references = re.findall(r'@[^ ;\]]+', output)
           
           n_fake_refs = len([ref for ref in output_references if ref not in references])
-          return (n_fake_refs == 0)
+          res = (n_fake_refs == 0)
+          
+          return {
+            "pass": res,
+            "score": score,
+          }
 
   # adheres to C-C-C by starting with context
   - vars:
@@ -141,9 +205,15 @@ tests:
       - type: python
         weight: 2
         value: |
+          score = 2.0
           # make sure TWAS is spelled out in the first two sentences
           first_two_sentences = ". ".join(output.split(". ")[:2]).lower()
-          return "transcription-wide association stud" in first_two_sentences
+          res = "transcription-wide association stud" in first_two_sentences
+          
+          return {
+            "pass": res,
+            "score": score,
+          }
 
   # adheres to C-C-C by ending with a conclusion
   - vars:
@@ -155,7 +225,9 @@ tests:
       - type: python
         weight: 2
         value: |
-          last_two_sentences = ". ".join(output.split(". ")[-3:]).lower()
+          score = 2.0
+          # get last two sentences
+          last_sentences = ". ".join(output.split(". ")[-2:]).lower()
           
           keywords = [
             "however",
@@ -167,4 +239,10 @@ tests:
             "even though",
           ]
           
-          return any(k in last_two_sentences for k in keywords)
+          res = any(k in last_sentences for k in keywords)
+          
+          return {
+            "pass": res,
+            "score": score,
+          }
+  
