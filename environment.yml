@@ -4,6 +4,8 @@ channels:
   - defaults
 dependencies:
   - ipython
+  - jupyterlab=4.1.*
+  - jupytext=1.16.*
   - langchain=0.1.*
   - nodejs=20.8.*
   - pandas=2.2.*
