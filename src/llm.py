@@ -1,5 +1,6 @@
 import argparse
 from pathlib import Path
+import fcntl
 
 import pandas as pd
 from langchain.chains import LLMChain
@@ -58,23 +59,28 @@ if __name__ == "__main__":
 
     REP_NUM = 0
     repeat_runs_file = cache_dir / "repeat_runs.pkl"
-    if not repeat_runs_file.exists():
-        repeat_info = pd.DataFrame(columns=["model", "prompt", "repeat"])
-    else:
-        repeat_info = pd.read_pickle(repeat_runs_file)
-    
-    run_info = repeat_info[
-        (repeat_info["model"] == args.model)
-        & (repeat_info["prompt"] == args.prompt)
-    ]
-    if run_info.shape[0] > 0:
-        REP_NUM = run_info["repeat"].max() + 1
-    
-    repeat_info = pd.concat([
-        repeat_info,
-        pd.DataFrame({"model": [args.model], "prompt": [args.prompt], "repeat": [REP_NUM]}),
-    ], ignore_index=True)
-    repeat_info.to_pickle(repeat_runs_file)
+    with open(repeat_runs_file.with_suffix(".lock"), "w+") as g:
+        fcntl.flock(g, fcntl.LOCK_EX)
+        
+        if not repeat_runs_file.exists():
+            repeat_info = pd.DataFrame(columns=["model", "prompt", "repeat"])
+        else:
+            repeat_info = pd.read_pickle(repeat_runs_file)
+        
+        run_info = repeat_info[
+            (repeat_info["model"] == args.model)
+            & (repeat_info["prompt"] == args.prompt)
+        ]
+        if run_info.shape[0] > 0:
+            REP_NUM = run_info["repeat"].max() + 1
+        
+        repeat_info = pd.concat([
+            repeat_info,
+            pd.DataFrame({"model": [args.model], "prompt": [args.prompt], "repeat": [REP_NUM]}),
+        ], ignore_index=True)
+        repeat_info.to_pickle(repeat_runs_file)
+
+        fcntl.flock(g, fcntl.LOCK_UN)
     
     default_cache_file = cache_dir / f"llm_cache-rep{REP_NUM}.db"
     

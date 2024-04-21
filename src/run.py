@@ -59,6 +59,12 @@ parser.add_argument(
     help="View evaluation results",
 )
 parser.add_argument(
+    "-j", "--max-concurrency",
+    type=int,
+    help="Max concurrency for promptfoo eval. Only set to a value greater than 1 if the"
+         " cache is only read, not written to.",
+)
+parser.add_argument(
     "--update-cache",
     action=argparse.BooleanOptionalAction,
     help="Forces the LangChain to skip any cached response, hit the model, and then "
@@ -110,6 +116,8 @@ else:
         max_concurrent_arg = "-j 1"
         # if model["prefix"] == "openai":
         #     max_concurrent_arg = ""
+        if args.max_concurrency is not None:
+            max_concurrent_arg = f"-j {args.max_concurrency}"
 
         update_cache_arg = ""
         if args.update_cache:
