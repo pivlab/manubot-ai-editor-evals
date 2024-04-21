@@ -9,42 +9,127 @@ defaultTest:
   assert:
     # ...starts with capital letter
     - type: python
-      weight: 1
-      value: output.strip()[0].isupper()
+      value: |
+        description = "Starts with capital letter"
+        type = "Formatting"
+        score = 0.25
+        
+        res = output.strip()[0].isupper()
+        
+        return {
+          "pass": res,
+          "score": score if res else 0.0,
+          "reason": "Passed" if res else "Failed",
+          "assertion": {
+            "value": description,
+            "type": type,
+          },
+        }
 
     # ...ends with period
     - type: python
-      weight: 1
-      value: output.strip()[-1] == "."
+      value: |
+        description = "Ends with a period"
+        type = "Formatting"
+        score = 0.25
+        
+        res = output.strip()[-1] == "."
+        
+        return {
+          "pass": res,
+          "score": score if res else 0.0,
+          "reason": "Passed" if res else "Failed",
+          "assertion": {
+            "value": description,
+            "type": type,
+          },
+        }
 
     # ...is a single paragraph
     - type: python
-      weight: 1
-      value: len(output.strip().split("\n")) == 1
+      value: |
+        description = "Is a single paragraph"
+        type = "Formatting"
+        score = 0.25
+        
+        res = len(output.strip().split("\n")) == 1
+        
+        return {
+          "pass": res,
+          "score": score if res else 0.0,
+          "reason": "Passed" if res else "Failed",
+          "assertion": {
+            "value": description,
+            "type": type,
+          },
+        }
 
     # ...doesn't include manuscript title
     - type: python
-      weight: 1
-      value: context["vars"]["title"] not in output
+      value: |
+        description = "Doesn't include manuscript title"
+        type = "Formatting"
+        score = 0.25
+        
+        res = (context["vars"]["title"] not in output)
+        
+        return {
+          "pass": res,
+          "score": score if res else 0.0,
+          "reason": "Passed" if res else "Failed",
+          "assertion": {
+            "value": description,
+            "type": type,
+          },
+        }
 
     # ...doesn't reference authors, keywords, abstract, etc
-    - type: not-icontains-any
-      weight: 1
-      value:
-        - "authors"
-        - "Abstract:"
-        - "Keywords:"
-        - "References:"
+    - type: python
+      value: |
+        description = "Doesn't reference authors, keywords, abstract, etc"
+        type = "Formatting"
+        score = 0.25
+        
+        keywords = [
+          "authors",
+          "Abstract:",
+          "Keywords:",
+          "References:",
+        ]
+        res = not any(kw in output for kw in keywords)
+        
+        return {
+          "pass": res,
+          "score": score if res else 0.0,
+          "reason": "Passed" if res else "Failed",
+          "assertion": {
+            "value": description,
+            "type": type,
+          },
+        }
 
     # ...is roughly same length as input
     - type: python
-      weight: 1
       value: |
+        description = "Has roughly the same length as input"
+        type = "Formatting"
+        score = 0.25
+        
         input = context["vars"]["content"]
         input_words = len(input.strip().split())
         output_words = len(output.strip().split())
-        response = (output_words > 0.5 * input_words) and (output_words < 2 * input_words)
-        return response
+        
+        res = (output_words > 0.5 * input_words) and (output_words < 1.5 * input_words)
+        
+        return {
+          "pass": res,
+          "score": score if res else 0.0,
+          "reason": "Passed" if res else "Failed",
+          "assertion": {
+            "value": description,
+            "type": type,
+          },
+        }
 
 # Make sure that output...
 tests:
@@ -55,12 +140,28 @@ tests:
       keywords: file://./inputs/keywords.txt
       content: file://./inputs/has_spelling_and_grammar_errors.md
     assert:
-      - type: not-icontains-any
-        weight: 2
-        value:
-          - "concierto"
-          - "specifico"
-          - "significantl "
+      - type: python
+        value: |
+          description = "Has no spelling errors"
+          type = "Spelling/grammar"
+          score = 2.0
+          
+          keywords = [
+            "concierto",
+            "specifico",
+            "significantl ",
+          ]
+          res = not any(kw in output for kw in keywords)
+          
+          return {
+            "pass": res,
+            "score": score if res else 0.0,
+            "reason": "Passed" if res else "Failed",
+            "assertion": {
+              "value": description,
+              "type": type,
+            },
+          }
 
   # ...starts with background
   - vars:
@@ -70,10 +171,23 @@ tests:
       content: file://./inputs/doesnt_starts_with_background.md
     assert:
       - type: python
-        weight: 2
         value: |
+          description = "Starts with background"
+          type = "Structure"
+          score = 2.0
+          
           # make sure it does not mention the method ("PhenoPLIER") in the first sentence
-          return ("PhenoPLIER" not in output.split(". ")[0])
+          res = ("PhenoPLIER" not in output.split(". ")[0])
+          
+          return {
+            "pass": res,
+            "score": score if res else 0.0,
+            "reason": "Passed" if res else "Failed",
+            "assertion": {
+              "value": description,
+              "type": type,
+            },
+          }
 
   # ...describes method before results
   - vars:
@@ -83,15 +197,28 @@ tests:
       content: file://./inputs/doesnt_describe_method_before_results.md
     assert:
       - type: python
-        weight: 2
         value: |
+          description = "Describes method before results"
+          type = "Structure"
+          score = 2.0
+          
           methods_start = output.find("PhenoPLIER")
-          results_start = max(
-              output.find("CRISPR"),
-              output.find("lipid"),
-              output.find("drug-disease"),
+          results_start = min(
+            l if (l := output.find("CRISPR")) > 0 else len(output),
+            l if (l := output.find("lipid")) > 0 else len(output),
+            l if (l := output.find("drug-disease")) > 0 else len(output),
           )
-          return (methods_start < results_start)
+          res = (methods_start < results_start)
+          
+          return {
+            "pass": res,
+            "score": score if res else 0.0,
+            "reason": "Passed" if res else "Failed",
+            "assertion": {
+              "value": description,
+              "type": type,
+            },
+          }
 
   # ...ends with interpretation of results
   - vars:
@@ -101,8 +228,11 @@ tests:
       content: file://./inputs/doesnt_end_with_interpretation_of_results.md
     assert:
       - type: python
-        weight: 2
         value: |
+          description = "Ends with interpretation of results"
+          type = "Structure"
+          score = 2.0
+          
           # look for "conclusion" words
           keywords = [
             "overall",
@@ -146,4 +276,14 @@ tests:
           # explanations below the revised paragraph)
           first_paragraph = output.strip().split("\n")[0]
           last_sentences = ".".join(first_paragraph.strip().split(". ")[-1:]).lower()
-          return any(keyword in last_sentences for keyword in keywords)
+          res = any(keyword in last_sentences for keyword in keywords)
+          
+          return {
+            "pass": res,
+            "score": score if res else 0.0,
+            "reason": "Passed" if res else "Failed",
+            "assertion": {
+              "value": description,
+              "type": type,
+            },
+          }
