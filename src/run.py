@@ -107,6 +107,8 @@ else:
     # before starting, remove temporary repetition file in cache dir if exists
     script_dir = Path(__file__).parent.resolve()
     cache_dir = script_dir / "cache"
+    repeat_runs_file_lock = cache_dir / "repeat_runs.lock"
+    repeat_runs_file_lock.unlink(missing_ok=True)
     repeat_runs_file = cache_dir / "repeat_runs.pkl"
     repeat_runs_file.unlink(missing_ok=True)
 
