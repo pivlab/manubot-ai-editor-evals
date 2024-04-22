@@ -138,7 +138,7 @@ results:
       success: false
       score: 0.39285714285714285
       namedScores: &ref_0 {}
-      latencyMs: 1276
+      latencyMs: 1315
       error: Failed
       gradingResult: &ref_64
         pass: false
@@ -281,7 +281,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_2 {}
-      latencyMs: 1279
+      latencyMs: 1313
       gradingResult: &ref_65
         pass: true
         score: 0.5
@@ -420,7 +420,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_3 {}
-      latencyMs: 1262
+      latencyMs: 1269
       gradingResult: &ref_66
         pass: true
         score: 0.5
@@ -580,7 +580,7 @@ results:
       success: false
       score: 0.35714285714285715
       namedScores: &ref_4 {}
-      latencyMs: 1275
+      latencyMs: 1260
       error: Failed
       gradingResult: &ref_67
         pass: false
@@ -721,7 +721,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_5 {}
-      latencyMs: 1267
+      latencyMs: 1248
       gradingResult: &ref_68
         pass: true
         score: 0.5
@@ -859,7 +859,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_6 {}
-      latencyMs: 1264
+      latencyMs: 1252
       gradingResult: &ref_69
         pass: true
         score: 0.5
@@ -983,7 +983,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_7 {}
-      latencyMs: 1256
+      latencyMs: 1251
       gradingResult: &ref_72
         pass: true
         score: 0.5
@@ -1126,7 +1126,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_8 {}
-      latencyMs: 1279
+      latencyMs: 1261
       gradingResult: &ref_73
         pass: true
         score: 0.5
@@ -1265,7 +1265,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_9 {}
-      latencyMs: 1269
+      latencyMs: 1261
       gradingResult: &ref_74
         pass: true
         score: 0.5
@@ -1423,7 +1423,7 @@ results:
       success: false
       score: 0.35714285714285715
       namedScores: &ref_10 {}
-      latencyMs: 1260
+      latencyMs: 1265
       error: Failed
       gradingResult: &ref_75
         pass: false
@@ -1701,7 +1701,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_12 {}
-      latencyMs: 1273
+      latencyMs: 1289
       gradingResult: &ref_77
         pass: true
         score: 0.5
@@ -1863,7 +1863,7 @@ results:
       success: false
       score: 0.39285714285714285
       namedScores: &ref_13 {}
-      latencyMs: 1279
+      latencyMs: 1294
       error: Failed
       gradingResult: &ref_78
         pass: false
@@ -2005,7 +2005,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_14 {}
-      latencyMs: 1286
+      latencyMs: 1302
       gradingResult: &ref_79
         pass: true
         score: 0.5
@@ -2143,7 +2143,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_15 {}
-      latencyMs: 1280
+      latencyMs: 1300
       gradingResult: &ref_80
         pass: true
         score: 0.5
@@ -2308,7 +2308,7 @@ results:
       success: false
       score: 0.34375
       namedScores: &ref_16 {}
-      latencyMs: 1262
+      latencyMs: 1309
       error: Failed
       gradingResult: &ref_81
         pass: false
@@ -2451,7 +2451,7 @@ results:
       success: true
       score: 0.6875
       namedScores: &ref_18 {}
-      latencyMs: 1260
+      latencyMs: 1263
       gradingResult: &ref_82
         pass: true
         score: 0.6875
@@ -2589,7 +2589,7 @@ results:
       success: true
       score: 0.6875
       namedScores: &ref_19 {}
-      latencyMs: 1280
+      latencyMs: 1274
       gradingResult: &ref_83
         pass: true
         score: 0.6875
@@ -2708,7 +2708,7 @@ results:
       success: false
       score: 0.4375
       namedScores: &ref_20 {}
-      latencyMs: 1288
+      latencyMs: 1294
       error: Failed
       gradingResult: &ref_90
         pass: false
@@ -2848,7 +2848,7 @@ results:
       success: true
       score: 0.6875
       namedScores: &ref_21 {}
-      latencyMs: 1271
+      latencyMs: 1320
       gradingResult: &ref_91
         pass: true
         score: 0.6875
@@ -2982,7 +2982,7 @@ results:
       success: true
       score: 0.6875
       namedScores: &ref_22 {}
-      latencyMs: 1271
+      latencyMs: 1310
       gradingResult: &ref_92
         pass: true
         score: 0.6875
@@ -3127,7 +3127,7 @@ results:
       success: false
       score: 0.34375
       namedScores: &ref_23 {}
-      latencyMs: 1273
+      latencyMs: 1270
       error: Failed
       gradingResult: &ref_95
         pass: false
@@ -3268,7 +3268,7 @@ results:
       success: true
       score: 0.6875
       namedScores: &ref_24 {}
-      latencyMs: 1267
+      latencyMs: 1253
       gradingResult: &ref_96
         pass: true
         score: 0.6875
@@ -3406,7 +3406,7 @@ results:
       success: true
       score: 0.6875
       namedScores: &ref_25 {}
-      latencyMs: 1310
+      latencyMs: 1264
       gradingResult: &ref_97
         pass: true
         score: 0.6875
@@ -3551,7 +3551,7 @@ results:
       success: false
       score: 0.34375
       namedScores: &ref_26 {}
-      latencyMs: 1289
+      latencyMs: 1261
       error: Failed
       gradingResult: &ref_98
         pass: false
@@ -3694,7 +3694,7 @@ results:
       success: true
       score: 0.6875
       namedScores: &ref_27 {}
-      latencyMs: 1266
+      latencyMs: 1283
       gradingResult: &ref_99
         pass: true
         score: 0.6875
@@ -3829,7 +3829,7 @@ results:
       success: true
       score: 0.6875
       namedScores: &ref_28 {}
-      latencyMs: 1260
+      latencyMs: 1264
       gradingResult: &ref_100
         pass: true
         score: 0.6875
@@ -3973,7 +3973,7 @@ results:
       success: false
       score: 0.34375
       namedScores: &ref_29 {}
-      latencyMs: 1267
+      latencyMs: 1288
       error: Failed
       gradingResult: &ref_101
         pass: false
@@ -4114,7 +4114,7 @@ results:
       success: true
       score: 0.6875
       namedScores: &ref_30 {}
-      latencyMs: 1271
+      latencyMs: 1282
       gradingResult: &ref_102
         pass: true
         score: 0.6875
@@ -4249,7 +4249,7 @@ results:
       success: true
       score: 0.6875
       namedScores: &ref_31 {}
-      latencyMs: 1295
+      latencyMs: 1269
       gradingResult: &ref_103
         pass: true
         score: 0.6875
@@ -4388,7 +4388,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_32 {}
-      latencyMs: 1259
+      latencyMs: 1265
       gradingResult: &ref_104
         pass: true
         score: 0.5
@@ -4653,7 +4653,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_35 {}
-      latencyMs: 1268
+      latencyMs: 1258
       gradingResult: &ref_106
         pass: true
         score: 0.5
@@ -4790,7 +4790,7 @@ results:
       success: false
       score: 0.39285714285714285
       namedScores: &ref_36 {}
-      latencyMs: 1269
+      latencyMs: 1290
       error: Failed
       gradingResult: &ref_107
         pass: false
@@ -4925,7 +4925,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_37 {}
-      latencyMs: 1236
+      latencyMs: 1276
       gradingResult: &ref_108
         pass: true
         score: 0.5
@@ -5054,7 +5054,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_38 {}
-      latencyMs: 1295
+      latencyMs: 1299
       gradingResult: &ref_109
         pass: true
         score: 0.5
@@ -5165,7 +5165,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_39 {}
-      latencyMs: 1246
+      latencyMs: 1265
       gradingResult: &ref_112
         pass: true
         score: 0.5
@@ -5302,7 +5302,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_40 {}
-      latencyMs: 1274
+      latencyMs: 1261
       gradingResult: &ref_113
         pass: true
         score: 0.5
@@ -5432,7 +5432,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_41 {}
-      latencyMs: 1263
+      latencyMs: 1265
       gradingResult: &ref_114
         pass: true
         score: 0.5
@@ -5539,7 +5539,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_42 {}
-      latencyMs: 1264
+      latencyMs: 1290
       gradingResult: &ref_115
         pass: true
         score: 0.5
@@ -5673,7 +5673,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_43 {}
-      latencyMs: 1268
+      latencyMs: 1286
       gradingResult: &ref_116
         pass: true
         score: 0.5
@@ -5936,7 +5936,7 @@ results:
       success: false
       score: 0.39285714285714285
       namedScores: &ref_45 {}
-      latencyMs: 1268
+      latencyMs: 1318
       error: Failed
       gradingResult: &ref_118
         pass: false
@@ -6070,7 +6070,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_46 {}
-      latencyMs: 1266
+      latencyMs: 1277
       gradingResult: &ref_119
         pass: true
         score: 0.5
@@ -6199,7 +6199,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_47 {}
-      latencyMs: 1265
+      latencyMs: 1301
       gradingResult: &ref_120
         pass: true
         score: 0.5
@@ -6338,7 +6338,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_48 {}
-      latencyMs: 1255
+      latencyMs: 1235
       gradingResult: &ref_121
         pass: true
         score: 0.5
@@ -6471,7 +6471,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_50 {}
-      latencyMs: 1250
+      latencyMs: 1266
       gradingResult: &ref_122
         pass: true
         score: 0.5
@@ -6601,7 +6601,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_51 {}
-      latencyMs: 1260
+      latencyMs: 1253
       gradingResult: &ref_123
         pass: true
         score: 0.5
@@ -6739,7 +6739,7 @@ results:
       success: false
       score: 0.10714285714285714
       namedScores: &ref_52 {}
-      latencyMs: 1246
+      latencyMs: 1284
       error: Failed
       gradingResult: &ref_124
         pass: false
@@ -6876,7 +6876,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_53 {}
-      latencyMs: 1276
+      latencyMs: 1292
       gradingResult: &ref_125
         pass: true
         score: 0.5
@@ -7007,7 +7007,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_54 {}
-      latencyMs: 1251
+      latencyMs: 1253
       gradingResult: &ref_126
         pass: true
         score: 0.5
@@ -7145,7 +7145,7 @@ results:
       success: false
       score: 0.10714285714285714
       namedScores: &ref_55 {}
-      latencyMs: 1292
+      latencyMs: 1242
       error: Failed
       gradingResult: &ref_129
         pass: false
@@ -7282,7 +7282,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_56 {}
-      latencyMs: 1253
+      latencyMs: 1261
       gradingResult: &ref_130
         pass: true
         score: 0.5
@@ -7412,7 +7412,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_57 {}
-      latencyMs: 1263
+      latencyMs: 1259
       gradingResult: &ref_131
         pass: true
         score: 0.5
@@ -7524,7 +7524,7 @@ results:
       success: false
       score: 0.21428571428571427
       namedScores: &ref_58 {}
-      latencyMs: 1268
+      latencyMs: 1317
       error: Failed
       gradingResult: &ref_132
         pass: false
@@ -7661,7 +7661,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_59 {}
-      latencyMs: 1258
+      latencyMs: 1329
       gradingResult: &ref_133
         pass: true
         score: 0.5
@@ -7796,7 +7796,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_60 {}
-      latencyMs: 1249
+      latencyMs: 1251
       error: Failed
       gradingResult: &ref_134
         pass: false
@@ -7934,7 +7934,7 @@ results:
       success: false
       score: 0.10714285714285714
       namedScores: &ref_61 {}
-      latencyMs: 1261
+      latencyMs: 1274
       error: Failed
       gradingResult: &ref_135
         pass: false
@@ -8071,7 +8071,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_62 {}
-      latencyMs: 1262
+      latencyMs: 1257
       gradingResult: &ref_136
         pass: true
         score: 0.5
@@ -8204,7 +8204,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_63 {}
-      latencyMs: 1281
+      latencyMs: 1301
       gradingResult: &ref_137
         pass: true
         score: 0.5
@@ -8292,7 +8292,7 @@ results:
             testFailCount: 15
             assertPassCount: 95
             assertFailCount: 50
-            totalLatencyMs: 25353
+            totalLatencyMs: 25587
             tokenUsage:
               total: 0
               prompt: 0
@@ -8338,7 +8338,7 @@ results:
             testFailCount: 0
             assertPassCount: 145
             assertFailCount: 0
-            totalLatencyMs: 25303
+            totalLatencyMs: 25544
             tokenUsage:
               total: 0
               prompt: 0
@@ -8384,7 +8384,7 @@ results:
             testFailCount: 1
             assertPassCount: 144
             assertFailCount: 1
-            totalLatencyMs: 25421
+            totalLatencyMs: 25454
             tokenUsage:
               total: 0
               prompt: 0
@@ -8506,7 +8506,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1276
+            latencyMs: 1315
             gradingResult: *ref_64
             cost: 0
           - pass: true
@@ -8596,7 +8596,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1279
+            latencyMs: 1313
             gradingResult: *ref_65
             cost: 0
           - pass: true
@@ -8683,7 +8683,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1262
+            latencyMs: 1269
             gradingResult: *ref_66
             cost: 0
         test:
@@ -8984,7 +8984,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1275
+            latencyMs: 1260
             gradingResult: *ref_67
             cost: 0
           - pass: true
@@ -9071,7 +9071,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1267
+            latencyMs: 1248
             gradingResult: *ref_68
             cost: 0
           - pass: true
@@ -9157,7 +9157,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1264
+            latencyMs: 1252
             gradingResult: *ref_69
             cost: 0
         test:
@@ -9263,7 +9263,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1256
+            latencyMs: 1251
             gradingResult: *ref_72
             cost: 0
           - pass: true
@@ -9354,7 +9354,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1279
+            latencyMs: 1261
             gradingResult: *ref_73
             cost: 0
           - pass: true
@@ -9441,7 +9441,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1269
+            latencyMs: 1261
             gradingResult: *ref_74
             cost: 0
         test:
@@ -9584,7 +9584,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1260
+            latencyMs: 1265
             gradingResult: *ref_75
             cost: 0
           - pass: true
@@ -9757,7 +9757,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1273
+            latencyMs: 1289
             gradingResult: *ref_77
             cost: 0
         test:
@@ -9903,7 +9903,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1279
+            latencyMs: 1294
             gradingResult: *ref_78
             cost: 0
           - pass: true
@@ -9991,7 +9991,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1286
+            latencyMs: 1302
             gradingResult: *ref_79
             cost: 0
           - pass: true
@@ -10077,7 +10077,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1280
+            latencyMs: 1300
             gradingResult: *ref_80
             cost: 0
         test:
@@ -10200,7 +10200,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1262
+            latencyMs: 1309
             gradingResult: *ref_81
             cost: 0
           - pass: true
@@ -10283,7 +10283,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1260
+            latencyMs: 1263
             gradingResult: *ref_82
             cost: 0
           - pass: true
@@ -10362,7 +10362,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1280
+            latencyMs: 1274
             gradingResult: *ref_83
             cost: 0
         test:
@@ -10576,7 +10576,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1288
+            latencyMs: 1294
             gradingResult: *ref_90
             cost: 0
           - pass: true
@@ -10655,7 +10655,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1271
+            latencyMs: 1320
             gradingResult: *ref_91
             cost: 0
           - pass: true
@@ -10731,7 +10731,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1271
+            latencyMs: 1310
             gradingResult: *ref_92
             cost: 0
         test:
@@ -10852,7 +10852,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1273
+            latencyMs: 1270
             gradingResult: *ref_95
             cost: 0
           - pass: true
@@ -10933,7 +10933,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1267
+            latencyMs: 1253
             gradingResult: *ref_96
             cost: 0
           - pass: true
@@ -11013,7 +11013,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1310
+            latencyMs: 1264
             gradingResult: *ref_97
             cost: 0
         test:
@@ -11134,7 +11134,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1289
+            latencyMs: 1261
             gradingResult: *ref_98
             cost: 0
           - pass: true
@@ -11218,7 +11218,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1266
+            latencyMs: 1283
             gradingResult: *ref_99
             cost: 0
           - pass: true
@@ -11294,7 +11294,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1260
+            latencyMs: 1264
             gradingResult: *ref_100
             cost: 0
         test:
@@ -11414,7 +11414,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1267
+            latencyMs: 1288
             gradingResult: *ref_101
             cost: 0
           - pass: true
@@ -11495,7 +11495,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1271
+            latencyMs: 1282
             gradingResult: *ref_102
             cost: 0
           - pass: true
@@ -11571,7 +11571,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1295
+            latencyMs: 1269
             gradingResult: *ref_103
             cost: 0
         test:
@@ -11657,7 +11657,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1259
+            latencyMs: 1265
             gradingResult: *ref_104
             cost: 0
           - pass: true
@@ -11820,7 +11820,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1268
+            latencyMs: 1258
             gradingResult: *ref_106
             cost: 0
         test:
@@ -11972,7 +11972,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1269
+            latencyMs: 1290
             gradingResult: *ref_107
             cost: 0
           - pass: true
@@ -12055,7 +12055,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1236
+            latencyMs: 1276
             gradingResult: *ref_108
             cost: 0
           - pass: true
@@ -12132,7 +12132,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1295
+            latencyMs: 1299
             gradingResult: *ref_109
             cost: 0
         test:
@@ -12222,7 +12222,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1246
+            latencyMs: 1265
             gradingResult: *ref_112
             cost: 0
           - pass: true
@@ -12307,7 +12307,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1274
+            latencyMs: 1261
             gradingResult: *ref_113
             cost: 0
           - pass: true
@@ -12385,7 +12385,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1263
+            latencyMs: 1265
             gradingResult: *ref_114
             cost: 0
         test:
@@ -12471,7 +12471,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1264
+            latencyMs: 1290
             gradingResult: *ref_115
             cost: 0
           - pass: true
@@ -12553,7 +12553,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1268
+            latencyMs: 1286
             gradingResult: *ref_116
             cost: 0
           - pass: true
@@ -12746,7 +12746,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1268
+            latencyMs: 1318
             gradingResult: *ref_118
             cost: 0
           - pass: true
@@ -12827,7 +12827,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1266
+            latencyMs: 1277
             gradingResult: *ref_119
             cost: 0
           - pass: true
@@ -12905,7 +12905,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1265
+            latencyMs: 1301
             gradingResult: *ref_120
             cost: 0
         test:
@@ -12995,7 +12995,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1255
+            latencyMs: 1235
             gradingResult: *ref_121
             cost: 0
           - pass: true
@@ -13076,7 +13076,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1250
+            latencyMs: 1266
             gradingResult: *ref_122
             cost: 0
           - pass: true
@@ -13153,7 +13153,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1260
+            latencyMs: 1253
             gradingResult: *ref_123
             cost: 0
         test:
@@ -13310,7 +13310,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1246
+            latencyMs: 1284
             gradingResult: *ref_124
             cost: 0
           - pass: true
@@ -13393,7 +13393,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1276
+            latencyMs: 1292
             gradingResult: *ref_125
             cost: 0
           - pass: true
@@ -13472,7 +13472,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1251
+            latencyMs: 1253
             gradingResult: *ref_126
             cost: 0
         test:
@@ -13591,7 +13591,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1292
+            latencyMs: 1242
             gradingResult: *ref_129
             cost: 0
           - pass: true
@@ -13675,7 +13675,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1253
+            latencyMs: 1261
             gradingResult: *ref_130
             cost: 0
           - pass: true
@@ -13752,7 +13752,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1263
+            latencyMs: 1259
             gradingResult: *ref_131
             cost: 0
         test:
@@ -13846,7 +13846,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1268
+            latencyMs: 1317
             gradingResult: *ref_132
             cost: 0
           - pass: true
@@ -13929,7 +13929,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1258
+            latencyMs: 1329
             gradingResult: *ref_133
             cost: 0
           - pass: false
@@ -14016,7 +14016,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1249
+            latencyMs: 1251
             gradingResult: *ref_134
             cost: 0
         test:
@@ -14135,7 +14135,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1261
+            latencyMs: 1274
             gradingResult: *ref_135
             cost: 0
           - pass: true
@@ -14219,7 +14219,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1262
+            latencyMs: 1257
             gradingResult: *ref_136
             cost: 0
           - pass: true
@@ -14299,7 +14299,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model openai=gpt-4-turbo-2024-04-09
-            latencyMs: 1281
+            latencyMs: 1301
             gradingResult: *ref_137
             cost: 0
         test:
