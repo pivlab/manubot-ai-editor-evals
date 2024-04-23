@@ -495,7 +495,12 @@ g.set(xlabel="Model", ylabel="Score")
 # leg = g.axes.flat[0].get_legend()
 # leg.set_title("")
 g._legend.set_title("Test type")
-new_labels = ["Formatting", "Spelling/grammar", "Citation accuracy", "Structure\n(C-C-C)"]
+new_labels = [
+    "Formatting",
+    "Spelling/grammar",
+    "Citation accuracy",
+    "Structure\n(C-C-C)",
+]
 for t, l in zip(g._legend.texts, new_labels):
     t.set_text(l)
 
