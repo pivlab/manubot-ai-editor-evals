@@ -4,12 +4,18 @@ channels:
   - defaults
 dependencies:
   - ipython
-  - langchain=0.0.340
+  - jupyterlab=4.1.*
+  - jupytext=1.16.*
+  - langchain=0.1.*
+  - matplotlib=3.8.*
   - nodejs=20.8.*
+  - pandas=2.2.*
   - pip
   - python=3.12.*
   - pre-commit=3.5.*
+  - seaborn=0.13.*
   - pip:
-      - openai
+      - langchain-openai
+      - langchain-anthropic
       - jinja2==3.1.*
       - python-dotenv==1.0.*

@@ -21,15 +21,15 @@ Under-the-hood, it uses:
    ```
 1. Install the last tested [promptfoo](https://promptfoo.dev/) version:
    ```bash
-   npm install -g promptfoo@0.33.3
+   npm install -g promptfoo@0.47.0
    ```
-1. Install this package in editable mode (only needs to be done once):
+1. Install this package in editable mode:
    ```bash
    pip install -e .
    ```
-1. Install [Ollama](https://ollama.ai/). The latest version we tested is [v0.1.18](https://github.com/jmorganca/ollama/releases/tag/v0.1.18), which in Linux (amd64) you can install with:
+1. Install [Ollama](https://ollama.ai/). The latest version we tested is [v0.1.32](https://github.com/ollama/ollama/releases/tag/v0.1.32), which in Linux (amd64) you can install with:
    ```bash
-   sudo curl -L https://github.com/jmorganca/ollama/releases/download/v0.1.18/ollama-linux-amd64 -o /usr/bin/ollama
+   sudo curl -L https://github.com/ollama/ollama/releases/download/v0.1.32/ollama-linux-amd64 -o /usr/bin/ollama
    sudo chmod +x /usr/bin/ollama
    ```
 
@@ -133,10 +133,16 @@ python ../../../src/run.py
 
 ### Visualize results
 
-To explore the results of your evaluations in a web UI table, run:
+To explore the results of your evaluations across *all* models in a web UI table, run:
 
 ```bash
 python ../../../src/run.py --view
+```
+
+If you are interested only in a specific model such as `gpt-3.5-turbo-0613`, run:
+
+```bash
+promptfoo view outputs/gpt-3.5-turbo-0125/
 ```
 
 [See more here](https://www.promptfoo.dev/docs/usage/web-ui).

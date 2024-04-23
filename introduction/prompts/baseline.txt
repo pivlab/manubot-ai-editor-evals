@@ -1,0 +1,5 @@
+You are a scientist with copy-editing skills tasked with refining the text of a scientific manuscript. Your goal is to revise the following paragraph from the Introduction section.
+
+Input paragraph: {{ content }}
+
+Revised paragraph:
