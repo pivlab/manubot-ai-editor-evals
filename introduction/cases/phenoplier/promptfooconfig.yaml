@@ -269,16 +269,26 @@ tests:
         value: |
           description = "Starts with context"
           type = "Structure"
-          score = 2.0
+          full_score = 2.0
+          reason = "Failed"
           
           # make sure TWAS is spelled out in the first two sentences
           first_two_sentences = ". ".join(output.split(". ")[:2]).lower()
+          
           res = "transcription-wide association stud" in first_two_sentences
+          if res:
+            reason = "Passed (full score)"
+            score = full_score
+          else:
+            res = "transcriptome-wide association stud" in first_two_sentences
+            if res:
+              reason = "Passed (half score)"
+              score = full_score / 2.0
           
           return {
             "pass": res,
             "score": score if res else 0.0,
-            "reason": "Passed" if res else "Failed",
+            "reason": reason,
             "assertion": {
               "value": description,
               "type": type,
