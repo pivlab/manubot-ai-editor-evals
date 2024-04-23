@@ -16,6 +16,7 @@ repos:
       - id: check-toml
       # This hook checks yaml files for parseable syntax.
       - id: check-yaml
+        exclude: latest\.yaml
   - repo: https://github.com/charliermarsh/ruff-pre-commit
     rev: v0.4.1
     hooks:
