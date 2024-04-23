@@ -83,6 +83,31 @@ defaultTest:
           },
         }
 
+    # ...doesn't reference authors, keywords, abstract, etc
+    - type: python
+      value: |
+        description = "Doesn't reference authors, keywords, abstract, etc"
+        type = "Formatting"
+        score = 0.25
+
+        keywords = [
+          "authors",
+          "Abstract:",
+          "Keywords:",
+          "References:",
+        ]
+        res = not any(kw in output for kw in keywords)
+
+        return {
+          "pass": res,
+          "score": score if res else 0.0,
+          "reason": "Passed" if res else "Failed",
+          "assertion": {
+            "value": description,
+            "type": type,
+          },
+        }
+
     # ...is roughly same length as input
     - type: python
       value: |
@@ -108,24 +133,3 @@ defaultTest:
 
 # Make sure that output...
 tests:
-  # ...starts with context
-  - vars:
-      test_description: Starts with context
-      title: file://./inputs/title.txt
-      content: file://./inputs/doesnt_start_with_context.md
-    assert:
-      - type: python
-        value: |
-          first_paragraph = output.strip().split("\n")[0]
-          print(not first_paragraph.lower.strip().startswith("this development has decreased"))
-
-  # ...ends with conclusion
-  - vars:
-      test_description: Ends with conclusion
-      title: file://./inputs/title.txt
-      content: file://./inputs/doesnt_end_with_conclusion.md
-    assert:
-      - type: python
-        value: |
-          first_paragraph = output.strip().split("\n")[0]
-          print(not first_paragraph.lower.strip().endswith("contribution history is preserved and public."))
