@@ -183,7 +183,7 @@ tests:
       test_description: Puts HTML comments in missing portions
       title: file://./inputs/title.txt
       keywords: file://./inputs/keywords.txt
-      content: file://./inputs/context_conclusion_mising.md
+      content: file://./inputs/context_conclusion_missing.md
     assert:
       - type: python
         value: |
