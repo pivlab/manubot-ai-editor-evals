@@ -133,3 +133,94 @@ defaultTest:
 
 # Make sure that output...
 tests:
+  # ...provides context before conclusion
+  - vars:
+      test_description: Provides context before conclusion
+      title: file://./inputs/title.txt
+      keywords: file://./inputs/keywords.txt
+      content: file://./inputs/context_conclusion_swapped.md
+    assert:
+      - type: python
+        value: |
+          description = "Starts with context"
+          type = "Structure"
+          score = 2.0
+
+          first_sentences = ".".join(output.lower().split(".")[:2])
+          res = ("manubot", "identifier" in first_sentences)
+          
+          return {
+            "pass": res,
+            "score": score if res else 0.0,
+            "reason": "Passed" if res else "Failed",
+            "assertion": {
+              "value": description,
+              "type": type,
+            },
+          }
+
+      - type: python
+        value: |
+          description = "Ends with conclusion"
+          type = "Structure"
+          score = 2.0
+
+          last_sentences = ".".join(output.lower().split(".")[-3:])
+          res = ("manual", "metadata" in last_sentences)
+          
+          return {
+            "pass": res,
+            "score": score if res else 0.0,
+            "reason": "Passed" if res else "Failed",
+            "assertion": {
+              "value": description,
+              "type": type,
+            },
+          }
+
+  # ...puts HTML comments in missing portions
+  - vars:
+      test_description: Puts HTML comments in missing portions
+      title: file://./inputs/title.txt
+      keywords: file://./inputs/keywords.txt
+      content: file://./inputs/context_conclusion_mising.md
+    assert:
+      - type: python
+        value: |
+          description = "Starts with HTML comment"
+          type = "Structure"
+          score = 2.0
+
+          first_sentences = ".".join(output.split(".")[:2])
+          res = re.search("<!--.+-->", first_sentences)
+          
+          return {
+            "pass": res,
+            "score": score if res else 0.0,
+            "reason": "Passed" if res else "Failed",
+            "assertion": {
+              "value": description,
+              "type": type,
+            },
+          }
+
+      - type: python
+        value: |
+          import re
+
+          description = "Ends with HTML comment"
+          type = "Structure"
+          score = 2.0
+
+          last_sentences = ".".join(output.split(".")[-3:])
+          res = re.search("<!--.+-->", last_sentences)
+          
+          return {
+            "pass": res,
+            "score": score if res else 0.0,
+            "reason": "Passed" if res else "Failed",
+            "assertion": {
+              "value": description,
+              "type": type,
+            },
+          }
