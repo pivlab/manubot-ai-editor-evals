@@ -20,7 +20,7 @@
 import json
 from io import StringIO
 import pandas as pd
-from proj.conf import abstract, introduction
+from proj.conf import abstract
 
 # %% [markdown]
 # # Explore `latest.json`
@@ -29,7 +29,14 @@ from proj.conf import abstract, introduction
 abstract.CASES
 
 # %%
-INPUT_FILE = abstract.CASES / "phenoplier" / "outputs" / "mixtral-8x22b-instruct-v0.1-q4_1" / "output" / "latest.json"
+INPUT_FILE = (
+    abstract.CASES
+    / "phenoplier"
+    / "outputs"
+    / "mixtral-8x22b-instruct-v0.1-q4_1"
+    / "output"
+    / "latest.json"
+)
 
 # %%
 data = pd.read_json(INPUT_FILE)

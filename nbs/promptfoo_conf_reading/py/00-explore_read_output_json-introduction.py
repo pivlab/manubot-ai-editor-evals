@@ -29,7 +29,14 @@ from proj.conf import abstract, introduction
 introduction.CASES
 
 # %%
-INPUT_FILE = introduction.CASES / "phenoplier" / "outputs" / "mixtral-8x22b-instruct-v0.1-q5_1" / "output" / "latest.json"
+INPUT_FILE = (
+    introduction.CASES
+    / "phenoplier"
+    / "outputs"
+    / "mixtral-8x22b-instruct-v0.1-q5_1"
+    / "output"
+    / "latest.json"
+)
 
 # %%
 data = pd.read_json(INPUT_FILE)

@@ -64,16 +64,17 @@ parser.add_argument(
     help="View evaluation results",
 )
 parser.add_argument(
-    "-j", "--max-concurrency",
+    "-j",
+    "--max-concurrency",
     type=int,
     help="Max concurrency for promptfoo eval. Only set to a value greater than 1 if the"
-         " cache is only read, not written to.",
+    " cache is only read, not written to.",
 )
 parser.add_argument(
     "--update-cache",
     action=argparse.BooleanOptionalAction,
     help="Forces the LangChain to skip any cached response, hit the model, and then "
-         "update the cache",
+    "update the cache",
 )
 args = parser.parse_args()
 
