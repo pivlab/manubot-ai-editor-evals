@@ -187,6 +187,8 @@ tests:
     assert:
       - type: python
         value: |
+          import re
+
           description = "Starts with HTML comment"
           type = "Structure"
           score = 2.0
