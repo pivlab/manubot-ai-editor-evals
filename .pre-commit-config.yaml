@@ -30,7 +30,7 @@ repos:
         language_version: python3
         exclude: nbs/
   - repo: https://github.com/mwouts/jupytext
-    rev: v1.16.1  # CURRENT_TAG/COMMIT_HASH
+    rev: v1.16.1
     hooks:
     - id: jupytext
       args: [--sync, --pipe, black, --pipe, ruff format -]
