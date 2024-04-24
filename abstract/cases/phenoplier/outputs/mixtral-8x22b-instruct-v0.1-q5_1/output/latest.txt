@@ -5,7 +5,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -103,7 +103,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_0 {}
-      latencyMs: 258747
+      latencyMs: 713
       gradingResult: &ref_64
         pass: true
         score: 0.5
@@ -161,7 +161,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -245,7 +245,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_2 {}
-      latencyMs: 166821
+      latencyMs: 848
       gradingResult: &ref_65
         pass: true
         score: 0.5
@@ -303,7 +303,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -384,7 +384,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_3 {}
-      latencyMs: 172865
+      latencyMs: 708
       gradingResult: &ref_66
         pass: true
         score: 0.5
@@ -442,7 +442,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -509,7 +509,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_4 {}
-      latencyMs: 161076
+      latencyMs: 745
       gradingResult: &ref_67
         pass: true
         score: 0.5
@@ -567,7 +567,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -650,7 +650,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_5 {}
-      latencyMs: 167438
+      latencyMs: 748
       gradingResult: &ref_68
         pass: true
         score: 0.5
@@ -708,7 +708,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -790,7 +790,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_6 {}
-      latencyMs: 180526
+      latencyMs: 720
       gradingResult: &ref_69
         pass: true
         score: 0.5
@@ -848,7 +848,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -915,7 +915,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_7 {}
-      latencyMs: 161721
+      latencyMs: 713
       gradingResult: &ref_72
         pass: true
         score: 0.5
@@ -973,7 +973,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -1060,7 +1060,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_8 {}
-      latencyMs: 188082
+      latencyMs: 707
       gradingResult: &ref_73
         pass: true
         score: 0.5
@@ -1118,7 +1118,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -1199,7 +1199,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_9 {}
-      latencyMs: 167802
+      latencyMs: 707
       gradingResult: &ref_74
         pass: true
         score: 0.5
@@ -1257,7 +1257,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -1325,7 +1325,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_10 {}
-      latencyMs: 165351
+      latencyMs: 703
       gradingResult: &ref_75
         pass: true
         score: 0.5
@@ -1383,7 +1383,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -1467,7 +1467,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_11 {}
-      latencyMs: 168339
+      latencyMs: 721
       gradingResult: &ref_76
         pass: true
         score: 0.5
@@ -1525,7 +1525,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -1605,7 +1605,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_12 {}
-      latencyMs: 165981
+      latencyMs: 736
       gradingResult: &ref_77
         pass: true
         score: 0.5
@@ -1663,7 +1663,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -1730,7 +1730,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_13 {}
-      latencyMs: 160235
+      latencyMs: 714
       gradingResult: &ref_78
         pass: true
         score: 0.5
@@ -1788,7 +1788,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -1873,7 +1873,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_14 {}
-      latencyMs: 179045
+      latencyMs: 728
       gradingResult: &ref_79
         pass: true
         score: 0.5
@@ -1931,7 +1931,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -2012,7 +2012,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_15 {}
-      latencyMs: 172558
+      latencyMs: 727
       gradingResult: &ref_80
         pass: true
         score: 0.5
@@ -2070,7 +2070,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -2166,7 +2166,7 @@ results:
       success: false
       score: 0.21428571428571427
       namedScores: &ref_16 {}
-      latencyMs: 158718
+      latencyMs: 727
       error: Failed
       gradingResult: &ref_81
         pass: false
@@ -2225,7 +2225,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -2311,7 +2311,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_18 {}
-      latencyMs: 180473
+      latencyMs: 715
       gradingResult: &ref_82
         pass: true
         score: 0.5
@@ -2369,7 +2369,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -2450,7 +2450,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_19 {}
-      latencyMs: 174050
+      latencyMs: 760
       gradingResult: &ref_83
         pass: true
         score: 0.5
@@ -2508,7 +2508,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -2578,7 +2578,7 @@ results:
       success: false
       score: 0.14285714285714285
       namedScores: &ref_20 {}
-      latencyMs: 175664
+      latencyMs: 721
       error: Failed
       gradingResult: &ref_90
         pass: false
@@ -2637,7 +2637,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -2734,7 +2734,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_21 {}
-      latencyMs: 224305
+      latencyMs: 720
       error: Failed
       gradingResult: &ref_91
         pass: false
@@ -2793,7 +2793,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -2872,7 +2872,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_22 {}
-      latencyMs: 160779
+      latencyMs: 722
       gradingResult: &ref_92
         pass: true
         score: 0.5
@@ -2930,7 +2930,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -2998,7 +2998,7 @@ results:
       success: false
       score: 0.21428571428571427
       namedScores: &ref_23 {}
-      latencyMs: 169151
+      latencyMs: 723
       error: Failed
       gradingResult: &ref_95
         pass: false
@@ -3057,7 +3057,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -3143,7 +3143,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_24 {}
-      latencyMs: 184356
+      latencyMs: 716
       gradingResult: &ref_96
         pass: true
         score: 0.5
@@ -3201,7 +3201,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -3281,7 +3281,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_25 {}
-      latencyMs: 168097
+      latencyMs: 722
       gradingResult: &ref_97
         pass: true
         score: 0.5
@@ -3339,7 +3339,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -3405,7 +3405,7 @@ results:
       success: false
       score: 0.21428571428571427
       namedScores: &ref_26 {}
-      latencyMs: 156481
+      latencyMs: 716
       error: Failed
       gradingResult: &ref_98
         pass: false
@@ -3464,7 +3464,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -3547,7 +3547,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_27 {}
-      latencyMs: 162352
+      latencyMs: 723
       gradingResult: &ref_99
         pass: true
         score: 0.5
@@ -3605,7 +3605,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -3687,7 +3687,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_28 {}
-      latencyMs: 183734
+      latencyMs: 716
       gradingResult: &ref_100
         pass: true
         score: 0.5
@@ -3745,7 +3745,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -3813,7 +3813,7 @@ results:
       success: false
       score: 0.21428571428571427
       namedScores: &ref_29 {}
-      latencyMs: 168462
+      latencyMs: 773
       error: Failed
       gradingResult: &ref_101
         pass: false
@@ -3872,7 +3872,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -3956,7 +3956,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_30 {}
-      latencyMs: 173341
+      latencyMs: 722
       gradingResult: &ref_102
         pass: true
         score: 0.5
@@ -4014,7 +4014,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -4095,7 +4095,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_31 {}
-      latencyMs: 176635
+      latencyMs: 721
       gradingResult: &ref_103
         pass: true
         score: 0.5
@@ -4153,7 +4153,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -4252,7 +4252,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_32 {}
-      latencyMs: 168303
+      latencyMs: 743
       gradingResult: &ref_104
         pass: true
         score: 0.5
@@ -4310,7 +4310,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -4396,7 +4396,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_34 {}
-      latencyMs: 183494
+      latencyMs: 750
       gradingResult: &ref_105
         pass: true
         score: 0.5
@@ -4454,7 +4454,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -4536,7 +4536,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_35 {}
-      latencyMs: 177344
+      latencyMs: 813
       gradingResult: &ref_106
         pass: true
         score: 0.5
@@ -4594,7 +4594,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -4662,7 +4662,7 @@ results:
       success: false
       score: 0.21428571428571427
       namedScores: &ref_36 {}
-      latencyMs: 162786
+      latencyMs: 743
       error: Failed
       gradingResult: &ref_107
         pass: false
@@ -4721,7 +4721,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -4808,7 +4808,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_37 {}
-      latencyMs: 188929
+      latencyMs: 734
       gradingResult: &ref_108
         pass: true
         score: 0.5
@@ -4866,7 +4866,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -4946,7 +4946,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_38 {}
-      latencyMs: 167992
+      latencyMs: 720
       gradingResult: &ref_109
         pass: true
         score: 0.5
@@ -5004,7 +5004,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -5071,7 +5071,7 @@ results:
       success: false
       score: 0.21428571428571427
       namedScores: &ref_39 {}
-      latencyMs: 160609
+      latencyMs: 729
       error: Failed
       gradingResult: &ref_112
         pass: false
@@ -5130,7 +5130,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -5215,7 +5215,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_40 {}
-      latencyMs: 170290
+      latencyMs: 726
       gradingResult: &ref_113
         pass: true
         score: 0.5
@@ -5273,7 +5273,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -5353,7 +5353,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_41 {}
-      latencyMs: 166291
+      latencyMs: 760
       gradingResult: &ref_114
         pass: true
         score: 0.5
@@ -5411,7 +5411,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -5479,7 +5479,7 @@ results:
       success: false
       score: 0.21428571428571427
       namedScores: &ref_42 {}
-      latencyMs: 165718
+      latencyMs: 799
       error: Failed
       gradingResult: &ref_115
         pass: false
@@ -5538,7 +5538,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -5625,7 +5625,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_43 {}
-      latencyMs: 187326
+      latencyMs: 738
       gradingResult: &ref_116
         pass: true
         score: 0.5
@@ -5683,7 +5683,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -5761,7 +5761,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_44 {}
-      latencyMs: 155951
+      latencyMs: 743
       gradingResult: &ref_117
         pass: true
         score: 0.5
@@ -5819,7 +5819,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -5888,7 +5888,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_45 {}
-      latencyMs: 164750
+      latencyMs: 717
       gradingResult: &ref_118
         pass: true
         score: 0.5
@@ -5946,7 +5946,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -6032,7 +6032,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_46 {}
-      latencyMs: 180093
+      latencyMs: 714
       gradingResult: &ref_119
         pass: true
         score: 0.5
@@ -6090,7 +6090,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -6173,7 +6173,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_47 {}
-      latencyMs: 188365
+      latencyMs: 721
       gradingResult: &ref_120
         pass: true
         score: 0.5
@@ -6231,7 +6231,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -6329,7 +6329,7 @@ results:
       success: false
       score: 0.21428571428571427
       namedScores: &ref_48 {}
-      latencyMs: 168384
+      latencyMs: 736
       error: Failed
       gradingResult: &ref_121
         pass: false
@@ -6388,7 +6388,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -6475,7 +6475,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_50 {}
-      latencyMs: 189717
+      latencyMs: 734
       gradingResult: &ref_122
         pass: true
         score: 0.5
@@ -6533,7 +6533,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -6613,7 +6613,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_51 {}
-      latencyMs: 162199
+      latencyMs: 899
       gradingResult: &ref_123
         pass: true
         score: 0.5
@@ -6671,7 +6671,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -6738,7 +6738,7 @@ results:
       success: false
       score: 0.21428571428571427
       namedScores: &ref_52 {}
-      latencyMs: 162673
+      latencyMs: 724
       error: Failed
       gradingResult: &ref_124
         pass: false
@@ -6797,7 +6797,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -6882,7 +6882,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_53 {}
-      latencyMs: 169665
+      latencyMs: 740
       gradingResult: &ref_125
         pass: true
         score: 0.5
@@ -6940,7 +6940,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -7020,7 +7020,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_54 {}
-      latencyMs: 170955
+      latencyMs: 715
       gradingResult: &ref_126
         pass: true
         score: 0.5
@@ -7078,7 +7078,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -7146,7 +7146,7 @@ results:
       success: false
       score: 0.21428571428571427
       namedScores: &ref_55 {}
-      latencyMs: 164642
+      latencyMs: 730
       error: Failed
       gradingResult: &ref_129
         pass: false
@@ -7205,7 +7205,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -7292,7 +7292,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_56 {}
-      latencyMs: 193404
+      latencyMs: 713
       gradingResult: &ref_130
         pass: true
         score: 0.5
@@ -7350,7 +7350,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -7432,7 +7432,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_57 {}
-      latencyMs: 183212
+      latencyMs: 752
       gradingResult: &ref_131
         pass: true
         score: 0.5
@@ -7490,7 +7490,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -7557,7 +7557,7 @@ results:
       success: false
       score: 0.21428571428571427
       namedScores: &ref_58 {}
-      latencyMs: 161555
+      latencyMs: 715
       error: Failed
       gradingResult: &ref_132
         pass: false
@@ -7616,7 +7616,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -7700,7 +7700,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_59 {}
-      latencyMs: 172316
+      latencyMs: 727
       gradingResult: &ref_133
         pass: true
         score: 0.5
@@ -7758,7 +7758,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -7842,7 +7842,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_60 {}
-      latencyMs: 193624
+      latencyMs: 736
       gradingResult: &ref_134
         pass: true
         score: 0.5
@@ -7900,7 +7900,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -7967,7 +7967,7 @@ results:
       success: false
       score: 0.21428571428571427
       namedScores: &ref_61 {}
-      latencyMs: 160625
+      latencyMs: 712
       error: Failed
       gradingResult: &ref_135
         pass: false
@@ -8026,7 +8026,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -8113,7 +8113,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_62 {}
-      latencyMs: 188690
+      latencyMs: 733
       gradingResult: &ref_136
         pass: true
         score: 0.5
@@ -8171,7 +8171,7 @@ results:
         id: >-
           exec:python
           /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mixtral-8x22-fix
+          --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
       prompt:
         raw: >-
           You are a scientist with copy-editing skills who will help in
@@ -8252,7 +8252,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_63 {}
-      latencyMs: 168515
+      latencyMs: 732
       gradingResult: &ref_137
         pass: true
         score: 0.5
@@ -8334,14 +8334,14 @@ results:
           provider: >-
             exec:python
             /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-            --model ollama=mixtral-8x22-fix
+            --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
           metrics:
             score: 6.214285714285715
             testPassCount: 7
             testFailCount: 13
             assertPassCount: 125
             assertFailCount: 15
-            totalLatencyMs: 3375651
+            totalLatencyMs: 14596
             tokenUsage:
               total: 0
               prompt: 0
@@ -8384,14 +8384,14 @@ results:
           provider: >-
             exec:python
             /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-            --model ollama=mixtral-8x22-fix
+            --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
           metrics:
             score: 9.964285714285715
             testPassCount: 19
             testFailCount: 1
             assertPassCount: 139
             assertFailCount: 1
-            totalLatencyMs: 3618476
+            totalLatencyMs: 14657
             tokenUsage:
               total: 0
               prompt: 0
@@ -8433,14 +8433,14 @@ results:
           provider: >-
             exec:python
             /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-            --model ollama=mixtral-8x22-fix
+            --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
           metrics:
             score: 10
             testPassCount: 20
             testFailCount: 0
             assertPassCount: 140
             assertFailCount: 0
-            totalLatencyMs: 3457475
+            totalLatencyMs: 14830
             tokenUsage:
               total: 0
               prompt: 0
@@ -8523,8 +8523,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 258747
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 713
             gradingResult: *ref_64
             cost: 0
           - pass: true
@@ -8613,8 +8613,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 166821
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 848
             gradingResult: *ref_65
             cost: 0
           - pass: true
@@ -8699,8 +8699,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 172865
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 708
             gradingResult: *ref_66
             cost: 0
         test:
@@ -8961,8 +8961,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 161076
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 745
             gradingResult: *ref_67
             cost: 0
           - pass: true
@@ -9050,8 +9050,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 167438
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 748
             gradingResult: *ref_68
             cost: 0
           - pass: true
@@ -9137,8 +9137,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 180526
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 720
             gradingResult: *ref_69
             cost: 0
         test:
@@ -9245,8 +9245,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 161721
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 713
             gradingResult: *ref_72
             cost: 0
           - pass: true
@@ -9337,8 +9337,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 188082
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 707
             gradingResult: *ref_73
             cost: 0
           - pass: true
@@ -9423,8 +9423,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 167802
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 707
             gradingResult: *ref_74
             cost: 0
         test:
@@ -9530,8 +9530,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 165351
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 703
             gradingResult: *ref_75
             cost: 0
           - pass: true
@@ -9619,8 +9619,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 168339
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 721
             gradingResult: *ref_76
             cost: 0
           - pass: true
@@ -9705,8 +9705,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 165981
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 736
             gradingResult: *ref_77
             cost: 0
         test:
@@ -9812,8 +9812,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 160235
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 714
             gradingResult: *ref_78
             cost: 0
           - pass: true
@@ -9902,8 +9902,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 179045
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 728
             gradingResult: *ref_79
             cost: 0
           - pass: true
@@ -9988,8 +9988,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 172558
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 727
             gradingResult: *ref_80
             cost: 0
         test:
@@ -10099,8 +10099,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 158718
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 727
             gradingResult: *ref_81
             cost: 0
           - pass: true
@@ -10190,8 +10190,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 180473
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 715
             gradingResult: *ref_82
             cost: 0
           - pass: true
@@ -10277,8 +10277,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 174050
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 760
             gradingResult: *ref_83
             cost: 0
         test:
@@ -10424,8 +10424,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 175664
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 721
             gradingResult: *ref_90
             cost: 0
           - pass: false
@@ -10531,8 +10531,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 224305
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 720
             gradingResult: *ref_91
             cost: 0
           - pass: true
@@ -10616,8 +10616,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 160779
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 722
             gradingResult: *ref_92
             cost: 0
         test:
@@ -10728,8 +10728,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 169151
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 723
             gradingResult: *ref_95
             cost: 0
           - pass: true
@@ -10820,8 +10820,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 184356
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 716
             gradingResult: *ref_96
             cost: 0
           - pass: true
@@ -10905,8 +10905,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 168097
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 722
             gradingResult: *ref_97
             cost: 0
         test:
@@ -11016,8 +11016,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 156481
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 716
             gradingResult: *ref_98
             cost: 0
           - pass: true
@@ -11104,8 +11104,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 162352
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 723
             gradingResult: *ref_99
             cost: 0
           - pass: true
@@ -11193,8 +11193,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 183734
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 716
             gradingResult: *ref_100
             cost: 0
         test:
@@ -11305,8 +11305,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 168462
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 773
             gradingResult: *ref_101
             cost: 0
           - pass: true
@@ -11395,8 +11395,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 173341
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 722
             gradingResult: *ref_102
             cost: 0
           - pass: true
@@ -11482,8 +11482,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 176635
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 721
             gradingResult: *ref_103
             cost: 0
         test:
@@ -11590,8 +11590,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 168303
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 743
             gradingResult: *ref_104
             cost: 0
           - pass: true
@@ -11681,8 +11681,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 183494
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 750
             gradingResult: *ref_105
             cost: 0
           - pass: true
@@ -11767,8 +11767,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 177344
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 813
             gradingResult: *ref_106
             cost: 0
         test:
@@ -11909,8 +11909,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 162786
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 743
             gradingResult: *ref_107
             cost: 0
           - pass: true
@@ -12001,8 +12001,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 188929
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 734
             gradingResult: *ref_108
             cost: 0
           - pass: true
@@ -12086,8 +12086,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 167992
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 720
             gradingResult: *ref_109
             cost: 0
         test:
@@ -12198,8 +12198,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 160609
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 729
             gradingResult: *ref_112
             cost: 0
           - pass: true
@@ -12287,8 +12287,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 170290
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 726
             gradingResult: *ref_113
             cost: 0
           - pass: true
@@ -12372,8 +12372,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 166291
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 760
             gradingResult: *ref_114
             cost: 0
         test:
@@ -12484,8 +12484,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 165718
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 799
             gradingResult: *ref_115
             cost: 0
           - pass: true
@@ -12575,8 +12575,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 187326
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 738
             gradingResult: *ref_116
             cost: 0
           - pass: true
@@ -12658,8 +12658,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 155951
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 743
             gradingResult: *ref_117
             cost: 0
         test:
@@ -12767,8 +12767,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 164750
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 717
             gradingResult: *ref_118
             cost: 0
           - pass: true
@@ -12858,8 +12858,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 180093
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 714
             gradingResult: *ref_119
             cost: 0
           - pass: true
@@ -12945,8 +12945,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 188365
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 721
             gradingResult: *ref_120
             cost: 0
         test:
@@ -13057,8 +13057,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 168384
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 736
             gradingResult: *ref_121
             cost: 0
           - pass: true
@@ -13149,8 +13149,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 189717
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 734
             gradingResult: *ref_122
             cost: 0
           - pass: true
@@ -13233,8 +13233,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 162199
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 899
             gradingResult: *ref_123
             cost: 0
         test:
@@ -13423,8 +13423,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 162673
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 724
             gradingResult: *ref_124
             cost: 0
           - pass: true
@@ -13512,8 +13512,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 169665
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 740
             gradingResult: *ref_125
             cost: 0
           - pass: true
@@ -13597,8 +13597,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 170955
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 715
             gradingResult: *ref_126
             cost: 0
         test:
@@ -13708,8 +13708,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 164642
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 730
             gradingResult: *ref_129
             cost: 0
           - pass: true
@@ -13799,8 +13799,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 193404
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 713
             gradingResult: *ref_130
             cost: 0
           - pass: true
@@ -13886,8 +13886,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 183212
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 752
             gradingResult: *ref_131
             cost: 0
         test:
@@ -13997,8 +13997,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 161555
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 715
             gradingResult: *ref_132
             cost: 0
           - pass: true
@@ -14086,8 +14086,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 172316
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 727
             gradingResult: *ref_133
             cost: 0
           - pass: true
@@ -14175,8 +14175,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 193624
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 736
             gradingResult: *ref_134
             cost: 0
         test:
@@ -14286,8 +14286,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 160625
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 712
             gradingResult: *ref_135
             cost: 0
           - pass: true
@@ -14377,8 +14377,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 188690
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 733
             gradingResult: *ref_136
             cost: 0
           - pass: true
@@ -14462,8 +14462,8 @@ results:
             provider: >-
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mixtral-8x22-fix
-            latencyMs: 168515
+              --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
+            latencyMs: 732
             gradingResult: *ref_137
             cost: 0
         test:
@@ -14510,7 +14510,7 @@ config:
     - >-
       exec:python
       /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
-      --model ollama=mixtral-8x22-fix
+      --model ollama=mixtral=8x22b-instruct-v0.1-q5_1
   tests:
     - vars:
         test_description: Has no spelling errors
@@ -14550,9 +14550,9 @@ config:
       - *ref_88
       - *ref_89
   outputPath:
-    - outputs/mixtral-8x22-fix/output/latest.html
-    - outputs/mixtral-8x22-fix/output/latest.csv
-    - outputs/mixtral-8x22-fix/output/latest.txt
-    - outputs/mixtral-8x22-fix/output/latest.json
-    - outputs/mixtral-8x22-fix/output/latest.yaml
+    - outputs/mixtral-8x22b-instruct-v0.1-q5_1/output/latest.html
+    - outputs/mixtral-8x22b-instruct-v0.1-q5_1/output/latest.csv
+    - outputs/mixtral-8x22b-instruct-v0.1-q5_1/output/latest.txt
+    - outputs/mixtral-8x22b-instruct-v0.1-q5_1/output/latest.json
+    - outputs/mixtral-8x22b-instruct-v0.1-q5_1/output/latest.yaml
 shareableUrl: null

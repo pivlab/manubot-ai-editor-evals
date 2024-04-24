@@ -131,7 +131,7 @@ results:
       success: false
       score: 0.10714285714285714
       namedScores: &ref_0 {}
-      latencyMs: 20799
+      latencyMs: 721
       error: Failed
       gradingResult: &ref_64
         pass: false
@@ -300,7 +300,7 @@ results:
       success: false
       score: 0.42857142857142855
       namedScores: &ref_2 {}
-      latencyMs: 8324
+      latencyMs: 707
       error: Failed
       gradingResult: &ref_65
         pass: false
@@ -461,7 +461,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_3 {}
-      latencyMs: 8165
+      latencyMs: 725
       error: Failed
       gradingResult: &ref_66
         pass: false
@@ -621,7 +621,7 @@ results:
       success: false
       score: 0.14285714285714285
       namedScores: &ref_4 {}
-      latencyMs: 10292
+      latencyMs: 709
       error: Failed
       gradingResult: &ref_67
         pass: false
@@ -785,7 +785,7 @@ results:
       success: false
       score: 0.42857142857142855
       namedScores: &ref_5 {}
-      latencyMs: 7575
+      latencyMs: 718
       error: Failed
       gradingResult: &ref_68
         pass: false
@@ -943,7 +943,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_6 {}
-      latencyMs: 7794
+      latencyMs: 752
       error: Failed
       gradingResult: &ref_69
         pass: false
@@ -1122,7 +1122,7 @@ results:
       success: false
       score: 0.14285714285714285
       namedScores: &ref_7 {}
-      latencyMs: 13681
+      latencyMs: 712
       error: Failed
       gradingResult: &ref_72
         pass: false
@@ -1286,7 +1286,7 @@ results:
       success: false
       score: 0.17857142857142858
       namedScores: &ref_8 {}
-      latencyMs: 7643
+      latencyMs: 763
       error: Failed
       gradingResult: &ref_73
         pass: false
@@ -1444,7 +1444,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_9 {}
-      latencyMs: 7786
+      latencyMs: 708
       error: Failed
       gradingResult: &ref_74
         pass: false
@@ -1625,7 +1625,7 @@ results:
       success: false
       score: 0.10714285714285714
       namedScores: &ref_10 {}
-      latencyMs: 13902
+      latencyMs: 729
       error: Failed
       gradingResult: &ref_75
         pass: false
@@ -1793,7 +1793,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_11 {}
-      latencyMs: 8007
+      latencyMs: 714
       error: Failed
       gradingResult: &ref_76
         pass: false
@@ -1957,7 +1957,7 @@ results:
       success: false
       score: 0.42857142857142855
       namedScores: &ref_12 {}
-      latencyMs: 8640
+      latencyMs: 717
       error: Failed
       gradingResult: &ref_77
         pass: false
@@ -2148,7 +2148,7 @@ results:
       success: false
       score: 0.14285714285714285
       namedScores: &ref_13 {}
-      latencyMs: 15990
+      latencyMs: 741
       error: Failed
       gradingResult: &ref_78
         pass: false
@@ -2314,7 +2314,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_14 {}
-      latencyMs: 8081
+      latencyMs: 718
       error: Failed
       gradingResult: &ref_79
         pass: false
@@ -2466,7 +2466,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_15 {}
-      latencyMs: 6780
+      latencyMs: 720
       error: Failed
       gradingResult: &ref_80
         pass: false
@@ -2653,7 +2653,7 @@ results:
       success: false
       score: 0.10714285714285714
       namedScores: &ref_16 {}
-      latencyMs: 9397
+      latencyMs: 708
       error: Failed
       gradingResult: &ref_81
         pass: false
@@ -2824,7 +2824,7 @@ results:
       success: false
       score: 0.39285714285714285
       namedScores: &ref_18 {}
-      latencyMs: 8762
+      latencyMs: 732
       error: Failed
       gradingResult: &ref_82
         pass: false
@@ -2979,7 +2979,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_19 {}
-      latencyMs: 7255
+      latencyMs: 715
       error: Failed
       gradingResult: &ref_83
         pass: false
@@ -3133,7 +3133,7 @@ results:
       success: false
       score: 0.10714285714285714
       namedScores: &ref_20 {}
-      latencyMs: 8684
+      latencyMs: 712
       error: Failed
       gradingResult: &ref_90
         pass: false
@@ -3301,7 +3301,7 @@ results:
       success: false
       score: 0.39285714285714285
       namedScores: &ref_21 {}
-      latencyMs: 8637
+      latencyMs: 730
       error: Failed
       gradingResult: &ref_91
         pass: false
@@ -3464,7 +3464,7 @@ results:
       success: false
       score: 0.42857142857142855
       namedScores: &ref_22 {}
-      latencyMs: 8343
+      latencyMs: 784
       error: Failed
       gradingResult: &ref_92
         pass: false
@@ -3619,7 +3619,7 @@ results:
       success: false
       score: 0.10714285714285714
       namedScores: &ref_23 {}
-      latencyMs: 8827
+      latencyMs: 717
       error: Failed
       gradingResult: &ref_95
         pass: false
@@ -3769,7 +3769,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_24 {}
-      latencyMs: 5832
+      latencyMs: 713
       error: Failed
       gradingResult: &ref_96
         pass: false
@@ -3909,7 +3909,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_25 {}
-      latencyMs: 5051
+      latencyMs: 713
       error: Failed
       gradingResult: &ref_97
         pass: false
@@ -4062,7 +4062,7 @@ results:
       success: false
       score: 0.10714285714285714
       namedScores: &ref_26 {}
-      latencyMs: 8396
+      latencyMs: 714
       error: Failed
       gradingResult: &ref_98
         pass: false
@@ -4230,7 +4230,7 @@ results:
       success: false
       score: 0.42857142857142855
       namedScores: &ref_27 {}
-      latencyMs: 8295
+      latencyMs: 715
       error: Failed
       gradingResult: &ref_99
         pass: false
@@ -4378,7 +4378,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_28 {}
-      latencyMs: 5991
+      latencyMs: 744
       error: Failed
       gradingResult: &ref_100
         pass: false
@@ -4528,7 +4528,7 @@ results:
       success: false
       score: 0.14285714285714285
       namedScores: &ref_29 {}
-      latencyMs: 7557
+      latencyMs: 735
       error: Failed
       gradingResult: &ref_101
         pass: false
@@ -4689,7 +4689,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_30 {}
-      latencyMs: 6538
+      latencyMs: 712
       error: Failed
       gradingResult: &ref_102
         pass: false
@@ -4842,7 +4842,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_31 {}
-      latencyMs: 6848
+      latencyMs: 727
       error: Failed
       gradingResult: &ref_103
         pass: false
@@ -5018,7 +5018,7 @@ results:
       success: false
       score: 0.14285714285714285
       namedScores: &ref_32 {}
-      latencyMs: 6985
+      latencyMs: 737
       error: Failed
       gradingResult: &ref_104
         pass: false
@@ -5175,7 +5175,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_34 {}
-      latencyMs: 6774
+      latencyMs: 727
       error: Failed
       gradingResult: &ref_105
         pass: false
@@ -5335,7 +5335,7 @@ results:
       success: false
       score: 0.42857142857142855
       namedScores: &ref_35 {}
-      latencyMs: 8113
+      latencyMs: 736
       error: Failed
       gradingResult: &ref_106
         pass: false
@@ -5487,7 +5487,7 @@ results:
       success: false
       score: 0.10714285714285714
       namedScores: &ref_36 {}
-      latencyMs: 8080
+      latencyMs: 708
       error: Failed
       gradingResult: &ref_107
         pass: false
@@ -5653,7 +5653,7 @@ results:
       success: false
       score: 0.39285714285714285
       namedScores: &ref_37 {}
-      latencyMs: 8205
+      latencyMs: 727
       error: Failed
       gradingResult: &ref_108
         pass: false
@@ -5797,7 +5797,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_38 {}
-      latencyMs: 5602
+      latencyMs: 714
       error: Failed
       gradingResult: &ref_109
         pass: false
@@ -5947,7 +5947,7 @@ results:
       success: false
       score: 0.14285714285714285
       namedScores: &ref_39 {}
-      latencyMs: 7913
+      latencyMs: 815
       error: Failed
       gradingResult: &ref_112
         pass: false
@@ -6106,7 +6106,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_40 {}
-      latencyMs: 6736
+      latencyMs: 717
       error: Failed
       gradingResult: &ref_113
         pass: false
@@ -6264,7 +6264,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_41 {}
-      latencyMs: 7551
+      latencyMs: 711
       error: Failed
       gradingResult: &ref_114
         pass: false
@@ -6404,7 +6404,7 @@ results:
       success: false
       score: 0.14285714285714285
       namedScores: &ref_42 {}
-      latencyMs: 5823
+      latencyMs: 711
       error: Failed
       gradingResult: &ref_115
         pass: false
@@ -6569,7 +6569,7 @@ results:
       success: false
       score: 0.42857142857142855
       namedScores: &ref_43 {}
-      latencyMs: 8274
+      latencyMs: 714
       error: Failed
       gradingResult: &ref_116
         pass: false
@@ -6716,7 +6716,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_44 {}
-      latencyMs: 5749
+      latencyMs: 739
       error: Failed
       gradingResult: &ref_117
         pass: false
@@ -6869,7 +6869,7 @@ results:
       success: false
       score: 0.10714285714285714
       namedScores: &ref_45 {}
-      latencyMs: 8613
+      latencyMs: 712
       error: Failed
       gradingResult: &ref_118
         pass: false
@@ -7030,7 +7030,7 @@ results:
       success: false
       score: 0.42857142857142855
       namedScores: &ref_46 {}
-      latencyMs: 7078
+      latencyMs: 717
       error: Failed
       gradingResult: &ref_119
         pass: false
@@ -7191,7 +7191,7 @@ results:
       success: false
       score: 0.42857142857142855
       namedScores: &ref_47 {}
-      latencyMs: 8311
+      latencyMs: 719
       error: Failed
       gradingResult: &ref_120
         pass: false
@@ -7373,7 +7373,7 @@ results:
       success: false
       score: 0.10714285714285714
       namedScores: &ref_48 {}
-      latencyMs: 8368
+      latencyMs: 711
       error: Failed
       gradingResult: &ref_121
         pass: false
@@ -7538,7 +7538,7 @@ results:
       success: false
       score: 0.14285714285714285
       namedScores: &ref_50 {}
-      latencyMs: 8190
+      latencyMs: 734
       error: Failed
       gradingResult: &ref_122
         pass: false
@@ -7700,7 +7700,7 @@ results:
       success: false
       score: 0.14285714285714285
       namedScores: &ref_51 {}
-      latencyMs: 8785
+      latencyMs: 711
       error: Failed
       gradingResult: &ref_123
         pass: false
@@ -7852,7 +7852,7 @@ results:
       success: false
       score: 0.14285714285714285
       namedScores: &ref_52 {}
-      latencyMs: 7660
+      latencyMs: 710
       error: Failed
       gradingResult: &ref_124
         pass: false
@@ -8018,7 +8018,7 @@ results:
       success: false
       score: 0.14285714285714285
       namedScores: &ref_53 {}
-      latencyMs: 8021
+      latencyMs: 737
       error: Failed
       gradingResult: &ref_125
         pass: false
@@ -8173,7 +8173,7 @@ results:
       success: false
       score: 0.17857142857142858
       namedScores: &ref_54 {}
-      latencyMs: 6847
+      latencyMs: 714
       error: Failed
       gradingResult: &ref_126
         pass: false
@@ -8366,7 +8366,7 @@ results:
       success: false
       score: 0.14285714285714285
       namedScores: &ref_55 {}
-      latencyMs: 16295
+      latencyMs: 810
       error: Failed
       gradingResult: &ref_129
         pass: false
@@ -8533,7 +8533,7 @@ results:
       success: false
       score: 0.14285714285714285
       namedScores: &ref_56 {}
-      latencyMs: 8477
+      latencyMs: 707
       error: Failed
       gradingResult: &ref_130
         pass: false
@@ -8690,7 +8690,7 @@ results:
       success: false
       score: 0.14285714285714285
       namedScores: &ref_57 {}
-      latencyMs: 7102
+      latencyMs: 710
       error: Failed
       gradingResult: &ref_131
         pass: false
@@ -8845,7 +8845,7 @@ results:
       success: false
       score: 0.10714285714285714
       namedScores: &ref_58 {}
-      latencyMs: 8609
+      latencyMs: 727
       error: Failed
       gradingResult: &ref_132
         pass: false
@@ -8997,7 +8997,7 @@ results:
       success: false
       score: 0.17857142857142858
       namedScores: &ref_59 {}
-      latencyMs: 6624
+      latencyMs: 718
       error: Failed
       gradingResult: &ref_133
         pass: false
@@ -9156,7 +9156,7 @@ results:
       success: false
       score: 0.17857142857142858
       namedScores: &ref_60 {}
-      latencyMs: 7768
+      latencyMs: 711
       error: Failed
       gradingResult: &ref_134
         pass: false
@@ -9309,7 +9309,7 @@ results:
       success: false
       score: 0.10714285714285714
       namedScores: &ref_61 {}
-      latencyMs: 8454
+      latencyMs: 712
       error: Failed
       gradingResult: &ref_135
         pass: false
@@ -9458,7 +9458,7 @@ results:
       success: false
       score: 0.14285714285714285
       namedScores: &ref_62 {}
-      latencyMs: 5855
+      latencyMs: 716
       error: Failed
       gradingResult: &ref_136
         pass: false
@@ -9623,7 +9623,7 @@ results:
       success: false
       score: 0.14285714285714285
       namedScores: &ref_63 {}
-      latencyMs: 8814
+      latencyMs: 716
       error: Failed
       gradingResult: &ref_137
         pass: false
@@ -9713,7 +9713,7 @@ results:
             testFailCount: 20
             assertPassCount: 69
             assertFailCount: 71
-            totalLatencyMs: 204325
+            totalLatencyMs: 14551
             tokenUsage:
               total: 0
               prompt: 0
@@ -9763,7 +9763,7 @@ results:
             testFailCount: 20
             assertPassCount: 99
             assertFailCount: 41
-            totalLatencyMs: 151928
+            totalLatencyMs: 14436
             tokenUsage:
               total: 0
               prompt: 0
@@ -9812,7 +9812,7 @@ results:
             testFailCount: 20
             assertPassCount: 108
             assertFailCount: 32
-            totalLatencyMs: 147295
+            totalLatencyMs: 14486
             tokenUsage:
               total: 0
               prompt: 0
@@ -9929,7 +9929,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 20799
+            latencyMs: 721
             gradingResult: *ref_64
             cost: 0
           - pass: false
@@ -10049,7 +10049,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 8324
+            latencyMs: 707
             gradingResult: *ref_65
             cost: 0
           - pass: false
@@ -10161,7 +10161,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 8165
+            latencyMs: 725
             gradingResult: *ref_66
             cost: 0
         test:
@@ -10465,7 +10465,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 10292
+            latencyMs: 709
             gradingResult: *ref_67
             cost: 0
           - pass: false
@@ -10580,7 +10580,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 7575
+            latencyMs: 718
             gradingResult: *ref_68
             cost: 0
           - pass: false
@@ -10688,7 +10688,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 7794
+            latencyMs: 752
             gradingResult: *ref_69
             cost: 0
         test:
@@ -10855,7 +10855,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 13681
+            latencyMs: 712
             gradingResult: *ref_72
             cost: 0
           - pass: false
@@ -10972,7 +10972,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 7643
+            latencyMs: 763
             gradingResult: *ref_73
             cost: 0
           - pass: false
@@ -11082,7 +11082,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 7786
+            latencyMs: 708
             gradingResult: *ref_74
             cost: 0
         test:
@@ -11251,7 +11251,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 13902
+            latencyMs: 729
             gradingResult: *ref_75
             cost: 0
           - pass: false
@@ -11369,7 +11369,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 8007
+            latencyMs: 714
             gradingResult: *ref_76
             cost: 0
           - pass: false
@@ -11483,7 +11483,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 8640
+            latencyMs: 717
             gradingResult: *ref_77
             cost: 0
         test:
@@ -11663,7 +11663,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 15990
+            latencyMs: 741
             gradingResult: *ref_78
             cost: 0
           - pass: false
@@ -11782,7 +11782,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 8081
+            latencyMs: 718
             gradingResult: *ref_79
             cost: 0
           - pass: false
@@ -11885,7 +11885,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 6780
+            latencyMs: 720
             gradingResult: *ref_80
             cost: 0
         test:
@@ -12030,7 +12030,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 9397
+            latencyMs: 708
             gradingResult: *ref_81
             cost: 0
           - pass: false
@@ -12152,7 +12152,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 8762
+            latencyMs: 732
             gradingResult: *ref_82
             cost: 0
           - pass: false
@@ -12258,7 +12258,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 7255
+            latencyMs: 715
             gradingResult: *ref_83
             cost: 0
         test:
@@ -12429,7 +12429,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 8684
+            latencyMs: 712
             gradingResult: *ref_90
             cost: 0
           - pass: false
@@ -12547,7 +12547,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 8637
+            latencyMs: 730
             gradingResult: *ref_91
             cost: 0
           - pass: false
@@ -12660,7 +12660,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 8343
+            latencyMs: 784
             gradingResult: *ref_92
             cost: 0
         test:
@@ -12803,7 +12803,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 8827
+            latencyMs: 717
             gradingResult: *ref_95
             cost: 0
           - pass: false
@@ -12903,7 +12903,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 5832
+            latencyMs: 713
             gradingResult: *ref_96
             cost: 0
           - pass: false
@@ -12993,7 +12993,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 5051
+            latencyMs: 713
             gradingResult: *ref_97
             cost: 0
         test:
@@ -13133,7 +13133,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 8396
+            latencyMs: 714
             gradingResult: *ref_98
             cost: 0
           - pass: false
@@ -13250,7 +13250,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 8295
+            latencyMs: 715
             gradingResult: *ref_99
             cost: 0
           - pass: false
@@ -13350,7 +13350,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 5991
+            latencyMs: 744
             gradingResult: *ref_100
             cost: 0
         test:
@@ -13486,7 +13486,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 7557
+            latencyMs: 735
             gradingResult: *ref_101
             cost: 0
           - pass: false
@@ -13596,7 +13596,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 6538
+            latencyMs: 712
             gradingResult: *ref_102
             cost: 0
           - pass: false
@@ -13700,7 +13700,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 6848
+            latencyMs: 727
             gradingResult: *ref_103
             cost: 0
         test:
@@ -13831,7 +13831,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 6985
+            latencyMs: 737
             gradingResult: *ref_104
             cost: 0
           - pass: false
@@ -13939,7 +13939,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 6774
+            latencyMs: 727
             gradingResult: *ref_105
             cost: 0
           - pass: false
@@ -14049,7 +14049,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 8113
+            latencyMs: 736
             gradingResult: *ref_106
             cost: 0
         test:
@@ -14217,7 +14217,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 8080
+            latencyMs: 708
             gradingResult: *ref_107
             cost: 0
           - pass: false
@@ -14334,7 +14334,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 8205
+            latencyMs: 727
             gradingResult: *ref_108
             cost: 0
           - pass: false
@@ -14426,7 +14426,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 5602
+            latencyMs: 714
             gradingResult: *ref_109
             cost: 0
         test:
@@ -14562,7 +14562,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 7913
+            latencyMs: 815
             gradingResult: *ref_112
             cost: 0
           - pass: false
@@ -14670,7 +14670,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 6736
+            latencyMs: 717
             gradingResult: *ref_113
             cost: 0
           - pass: false
@@ -14778,7 +14778,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 7551
+            latencyMs: 711
             gradingResult: *ref_114
             cost: 0
         test:
@@ -14903,7 +14903,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 5823
+            latencyMs: 711
             gradingResult: *ref_115
             cost: 0
           - pass: false
@@ -15019,7 +15019,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 8274
+            latencyMs: 714
             gradingResult: *ref_116
             cost: 0
           - pass: false
@@ -15115,7 +15115,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 5749
+            latencyMs: 739
             gradingResult: *ref_117
             cost: 0
         test:
@@ -15254,7 +15254,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 8613
+            latencyMs: 712
             gradingResult: *ref_118
             cost: 0
           - pass: false
@@ -15365,7 +15365,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 7078
+            latencyMs: 717
             gradingResult: *ref_119
             cost: 0
           - pass: false
@@ -15476,7 +15476,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 8311
+            latencyMs: 719
             gradingResult: *ref_120
             cost: 0
         test:
@@ -15615,7 +15615,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 8368
+            latencyMs: 711
             gradingResult: *ref_121
             cost: 0
           - pass: false
@@ -15730,7 +15730,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 8190
+            latencyMs: 734
             gradingResult: *ref_122
             cost: 0
           - pass: false
@@ -15843,7 +15843,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 8785
+            latencyMs: 711
             gradingResult: *ref_123
             cost: 0
         test:
@@ -16058,7 +16058,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 7660
+            latencyMs: 710
             gradingResult: *ref_124
             cost: 0
           - pass: false
@@ -16173,7 +16173,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 8021
+            latencyMs: 737
             gradingResult: *ref_125
             cost: 0
           - pass: false
@@ -16277,7 +16277,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 6847
+            latencyMs: 714
             gradingResult: *ref_126
             cost: 0
         test:
@@ -16459,7 +16459,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 16295
+            latencyMs: 810
             gradingResult: *ref_129
             cost: 0
           - pass: false
@@ -16576,7 +16576,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 8477
+            latencyMs: 707
             gradingResult: *ref_130
             cost: 0
           - pass: false
@@ -16683,7 +16683,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 7102
+            latencyMs: 710
             gradingResult: *ref_131
             cost: 0
         test:
@@ -16822,7 +16822,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 8609
+            latencyMs: 727
             gradingResult: *ref_132
             cost: 0
           - pass: false
@@ -16924,7 +16924,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 6624
+            latencyMs: 718
             gradingResult: *ref_133
             cost: 0
           - pass: false
@@ -17033,7 +17033,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 7768
+            latencyMs: 711
             gradingResult: *ref_134
             cost: 0
         test:
@@ -17171,7 +17171,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 8454
+            latencyMs: 712
             gradingResult: *ref_135
             cost: 0
           - pass: false
@@ -17270,7 +17270,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 5855
+            latencyMs: 716
             gradingResult: *ref_136
             cost: 0
           - pass: false
@@ -17384,7 +17384,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 8814
+            latencyMs: 716
             gradingResult: *ref_137
             cost: 0
         test:
