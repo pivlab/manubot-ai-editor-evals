@@ -87,7 +87,12 @@ results.groupby(["model", "prompt"]).count()
 # ## Prompt: `candidate_with_metadata`
 
 # %%
-pass_rate = results[results["prompt"].isin(("candidate_with_metadata",))].groupby(["model"])["passed"].sum().to_frame()
+pass_rate = (
+    results[results["prompt"].isin(("candidate_with_metadata",))]
+    .groupby(["model"])["passed"]
+    .sum()
+    .to_frame()
+)
 
 # %%
 pass_rate = pass_rate.assign(pass_rate=lambda x: x / 140.0)
@@ -102,7 +107,9 @@ pass_rate.head()
 pass_rate.sort_values("pass_rate")
 
 # %%
-sorted_models = pass_rate.sort_values("pass_rate").index.get_level_values("model").tolist()
+sorted_models = (
+    pass_rate.sort_values("pass_rate").index.get_level_values("model").tolist()
+)
 
 # %%
 sorted_models[-5:]
@@ -131,7 +138,12 @@ g.set(xlabel="Model", ylabel="Pass rate")
 # ## Prompt: `candidate`
 
 # %%
-pass_rate = results[results["prompt"].isin(("candidate",))].groupby(["model"])["passed"].sum().to_frame()
+pass_rate = (
+    results[results["prompt"].isin(("candidate",))]
+    .groupby(["model"])["passed"]
+    .sum()
+    .to_frame()
+)
 
 # %%
 pass_rate = pass_rate.assign(pass_rate=lambda x: x / 140.0)
@@ -146,7 +158,9 @@ pass_rate.head()
 pass_rate.sort_values("pass_rate")
 
 # %%
-sorted_models = pass_rate.sort_values("pass_rate").index.get_level_values("model").tolist()
+sorted_models = (
+    pass_rate.sort_values("pass_rate").index.get_level_values("model").tolist()
+)
 
 # %%
 sorted_models[-5:]
@@ -181,7 +195,12 @@ results
 results.groupby(["model", "prompt"]).count()
 
 # %%
-pass_rate = results[results["prompt"] != "baseline"].groupby(["model", "prompt"])["passed"].sum().to_frame()
+pass_rate = (
+    results[results["prompt"] != "baseline"]
+    .groupby(["model", "prompt"])["passed"]
+    .sum()
+    .to_frame()
+)
 
 # %%
 pass_rate = pass_rate.assign(pass_rate=lambda x: x / 140.0).reset_index()
@@ -196,7 +215,11 @@ pass_rate.head()
 pass_rate.sort_values("pass_rate")
 
 # %%
-sorted_models = pass_rate[pass_rate["prompt"] == "candidate_with_metadata"].sort_values("pass_rate")["model"].tolist()
+sorted_models = (
+    pass_rate[pass_rate["prompt"] == "candidate_with_metadata"]
+    .sort_values("pass_rate")["model"]
+    .tolist()
+)
 
 # %%
 sorted_models[-5:]
@@ -225,7 +248,7 @@ g.set(xlabel="Model", ylabel="Pass rate")
 
 leg = g.axes.flat[0].get_legend()
 leg.set_title("")
-new_labels = ['Prompt', 'Prompt + Manuscript metadata']
+new_labels = ["Prompt", "Prompt + Manuscript metadata"]
 for t, l in zip(leg.texts, new_labels):
     t.set_text(l)
 
@@ -248,7 +271,12 @@ results.groupby(["model", "prompt", "test_description"]).count()
 # ## Prompt: `candidate_with_metadata`
 
 # %%
-pass_rate = results[results["prompt"].isin(("candidate_with_metadata",))].groupby(["model", "test_description"])["passed"].sum().to_frame()
+pass_rate = (
+    results[results["prompt"].isin(("candidate_with_metadata",))]
+    .groupby(["model", "test_description"])["passed"]
+    .sum()
+    .to_frame()
+)
 
 # %%
 pass_rate = pass_rate.assign(pass_rate=lambda x: x / 35.0)
@@ -263,7 +291,9 @@ pass_rate.head()
 pass_rate.sort_values("pass_rate")
 
 # %%
-sorted_models = pass_rate.sort_values("pass_rate").index.get_level_values("model").tolist()
+sorted_models = (
+    pass_rate.sort_values("pass_rate").index.get_level_values("model").tolist()
+)
 
 # %%
 sorted_models[-5:]
@@ -297,7 +327,9 @@ results
 # ## Prompt: `candidate_with_metadata`
 
 # %%
-df = results[results["prompt"].isin(("candidate_with_metadata",))]#.groupby(["model"])["score_avg"].sum().to_frame()
+df = results[
+    results["prompt"].isin(("candidate_with_metadata",))
+]  # .groupby(["model"])["score_avg"].sum().to_frame()
 
 # %%
 df.shape
@@ -309,7 +341,13 @@ df.head()
 df.groupby("model")["score_avg"].mean().sort_values()
 
 # %%
-sorted_models = df.groupby("model")["score_avg"].mean().sort_values().index.get_level_values("model").tolist()
+sorted_models = (
+    df.groupby("model")["score_avg"]
+    .mean()
+    .sort_values()
+    .index.get_level_values("model")
+    .tolist()
+)
 
 # %%
 sorted_models[-5:]
@@ -337,7 +375,9 @@ g.set_xticklabels(rotation=30, ha="right")
 # ## Prompt: `candidate`
 
 # %%
-df = results[results["prompt"].isin(("candidate",))]#.groupby(["model"])["score_avg"].sum().to_frame()
+df = results[
+    results["prompt"].isin(("candidate",))
+]  # .groupby(["model"])["score_avg"].sum().to_frame()
 
 # %%
 df.shape
@@ -349,7 +389,13 @@ df.head()
 df.groupby("model")["score_avg"].mean().sort_values()
 
 # %%
-sorted_models = df.groupby("model")["score_avg"].mean().sort_values().index.get_level_values("model").tolist()
+sorted_models = (
+    df.groupby("model")["score_avg"]
+    .mean()
+    .sort_values()
+    .index.get_level_values("model")
+    .tolist()
+)
 
 # %%
 sorted_models[-5:]
@@ -383,7 +429,9 @@ results
 # ## Prompt: `candidate_with_metadata`
 
 # %%
-df = results[results["prompt"].isin(("candidate_with_metadata",))]#.groupby(["model"])["score_avg"].sum().to_frame()
+df = results[
+    results["prompt"].isin(("candidate_with_metadata",))
+]  # .groupby(["model"])["score_avg"].sum().to_frame()
 
 # %%
 df.shape
@@ -395,7 +443,13 @@ df.head()
 df.groupby("model")["comp_score"].mean().sort_values()
 
 # %%
-sorted_models = df.groupby("model")["comp_score"].mean().sort_values().index.get_level_values("model").tolist()
+sorted_models = (
+    df.groupby("model")["comp_score"]
+    .mean()
+    .sort_values()
+    .index.get_level_values("model")
+    .tolist()
+)
 
 # %%
 sorted_models[-5:]
@@ -404,9 +458,15 @@ sorted_models[-5:]
 # sorted_models = list(dict.fromkeys(sorted_models))
 
 # %%
-df.loc[df["comp_type"] == "Formatting", "comp_score"] = df.loc[df["comp_type"] == "Formatting", "comp_score"] / 0.25
-df.loc[df["comp_type"] == "Spelling/grammar", "comp_score"] = df.loc[df["comp_type"] == "Spelling/grammar", "comp_score"] / 2.0
-df.loc[df["comp_type"] == "Structure", "comp_score"] = df.loc[df["comp_type"] == "Structure", "comp_score"] / 2.0
+df.loc[df["comp_type"] == "Formatting", "comp_score"] = (
+    df.loc[df["comp_type"] == "Formatting", "comp_score"] / 0.25
+)
+df.loc[df["comp_type"] == "Spelling/grammar", "comp_score"] = (
+    df.loc[df["comp_type"] == "Spelling/grammar", "comp_score"] / 2.0
+)
+df.loc[df["comp_type"] == "Structure", "comp_score"] = (
+    df.loc[df["comp_type"] == "Structure", "comp_score"] / 2.0
+)
 
 # %%
 g = sns.catplot(
@@ -416,7 +476,7 @@ g = sns.catplot(
     hue="comp_type",
     kind="bar",
     order=sorted_models,
-    # errorbar=None,
+    errorbar=None,
     height=4,
     aspect=2,
     legend_out=True,
@@ -427,7 +487,31 @@ g.set(xlabel="Model", ylabel="Score")
 # leg = g.axes.flat[0].get_legend()
 # leg.set_title("")
 g._legend.set_title("Test type")
-new_labels = ['Formatting', 'Spelling/grammar', 'Structure (C-C-C)']
+new_labels = ["Formatting", "Spelling/grammar", "Structure (C-C-C)"]
+for t, l in zip(g._legend.texts, new_labels):
+    t.set_text(l)
+
+# %%
+g = sns.catplot(
+    data=df,
+    x="model",
+    y="comp_score",
+    hue="comp_type",
+    kind="bar",
+    order=sorted_models,
+    hue_order=["Formatting", "Structure"],
+    errorbar=None,
+    height=4,
+    aspect=2,
+    legend_out=True,
+)
+g.set_xticklabels(rotation=30, ha="right")
+g.set(xlabel="Model", ylabel="Score")
+
+# leg = g.axes.flat[0].get_legend()
+# leg.set_title("")
+g._legend.set_title("Test type")
+new_labels = ["Formatting", "Structure\n(C-C-C)"]
 for t, l in zip(g._legend.texts, new_labels):
     t.set_text(l)
 
