@@ -160,7 +160,7 @@ promptfoo cache clear
 
 ## Advanced
 
-### Updating cached queries
+### SQLite cache
 
 In case the cache files located in `src/cache/*.db` (SQLite) need to be updated, you
 can open the `.db` file with `sqlite3`:
@@ -169,11 +169,30 @@ can open the `.db` file with `sqlite3`:
 sqlite3 src/cache/llm_cache-rep0.db
 ```
 
-Then, you can run queries to update the cache, such as:
+#### Updating cached queries
+
+You can run queries to update the cache, such as:
 
 ```sql
 -- Update the model name for a specific prompt
 UPDATE full_llm_cache
 SET llm = replace(llm, 'mixtral-8x22-fix', 'mixtral:8x22b-instruct-v0.1-q5_1' )
 WHERE llm LIKE '%mixtral-8x22%';
+```
+
+#### Deleting old entries
+
+To delete certain entries (such as old/previous models not used anymore):
+
+```sql
+DELETE FROM full_llm_cache
+WHERE llm LIKE "%('model', 'mixtral:8x22b-instruct-v0.1-q4_1')%";
+```
+
+#### Vacuuming
+
+From the terminal:
+
+```bash
+sqlite3 src/cache/llm_cache-rep0.db "VACUUM;"
 ```
