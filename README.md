@@ -131,6 +131,9 @@ Running the script without flags runs your evaluations.
 python ../../../src/run.py
 ```
 
+By default, all queries to the models are cached in `src/cache/*.db` (SQLite) for
+faster and cheaper subsequent runs.
+
 ### Visualize results
 
 To explore the results of your evaluations across *all* models in a web UI table, run:
@@ -153,4 +156,24 @@ If you need to clear `promptfoo`'s cache, you can run:
 
 ```bash
 promptfoo cache clear
+```
+
+## Advanced
+
+### Updating cached queries
+
+In case the cache files located in `src/cache/*.db` (SQLite) need to be updated, you
+can open the `.db` file with `sqlite3`:
+
+```bash
+sqlite3 src/cache/llm_cache-rep0.db
+```
+
+Then, you can run queries to update the cache, such as:
+
+```sql
+-- Update the model name for a specific prompt
+UPDATE full_llm_cache
+SET llm = replace(llm, 'mixtral-8x22-fix', 'mixtral:8x22b-instruct-v0.1-q5_1' )
+WHERE llm LIKE '%mixtral-8x22%';
 ```
