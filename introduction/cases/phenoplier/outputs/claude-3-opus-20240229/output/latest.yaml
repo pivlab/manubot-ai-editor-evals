@@ -112,7 +112,7 @@ results:
       success: false
       score: 0.14285714285714285
       namedScores: &ref_0 {}
-      latencyMs: 1321
+      latencyMs: 731
       error: Failed
       gradingResult: &ref_64
         pass: false
@@ -261,7 +261,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_2 {}
-      latencyMs: 1266
+      latencyMs: 742
       error: Failed
       gradingResult: &ref_65
         pass: false
@@ -401,7 +401,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_3 {}
-      latencyMs: 1288
+      latencyMs: 762
       gradingResult: &ref_66
         pass: true
         score: 0.5
@@ -538,7 +538,7 @@ results:
       success: false
       score: 0.14285714285714285
       namedScores: &ref_4 {}
-      latencyMs: 1270
+      latencyMs: 746
       error: Failed
       gradingResult: &ref_67
         pass: false
@@ -687,7 +687,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_5 {}
-      latencyMs: 1253
+      latencyMs: 752
       error: Failed
       gradingResult: &ref_68
         pass: false
@@ -826,7 +826,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_6 {}
-      latencyMs: 1273
+      latencyMs: 741
       gradingResult: &ref_69
         pass: true
         score: 0.5
@@ -962,7 +962,7 @@ results:
       success: false
       score: 0.42857142857142855
       namedScores: &ref_7 {}
-      latencyMs: 1242
+      latencyMs: 740
       error: Failed
       gradingResult: &ref_72
         pass: false
@@ -1106,7 +1106,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_8 {}
-      latencyMs: 1277
+      latencyMs: 748
       gradingResult: &ref_73
         pass: true
         score: 0.5
@@ -1244,7 +1244,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_9 {}
-      latencyMs: 1256
+      latencyMs: 722
       gradingResult: &ref_74
         pass: true
         score: 0.5
@@ -1381,7 +1381,7 @@ results:
       success: false
       score: 0.14285714285714285
       namedScores: &ref_10 {}
-      latencyMs: 1267
+      latencyMs: 720
       error: Failed
       gradingResult: &ref_75
         pass: false
@@ -1530,7 +1530,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_11 {}
-      latencyMs: 1290
+      latencyMs: 723
       error: Failed
       gradingResult: &ref_76
         pass: false
@@ -1670,7 +1670,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_12 {}
-      latencyMs: 1264
+      latencyMs: 719
       gradingResult: &ref_77
         pass: true
         score: 0.5
@@ -1807,7 +1807,7 @@ results:
       success: false
       score: 0.14285714285714285
       namedScores: &ref_13 {}
-      latencyMs: 1263
+      latencyMs: 745
       error: Failed
       gradingResult: &ref_78
         pass: false
@@ -1951,7 +1951,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_14 {}
-      latencyMs: 1268
+      latencyMs: 743
       gradingResult: &ref_79
         pass: true
         score: 0.5
@@ -2089,7 +2089,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_15 {}
-      latencyMs: 1261
+      latencyMs: 725
       gradingResult: &ref_80
         pass: true
         score: 0.5
@@ -2233,7 +2233,7 @@ results:
       success: false
       score: 0.65625
       namedScores: &ref_16 {}
-      latencyMs: 1261
+      latencyMs: 718
       error: Failed
       gradingResult: &ref_81
         pass: false
@@ -2379,7 +2379,7 @@ results:
       success: false
       score: 0.65625
       namedScores: &ref_18 {}
-      latencyMs: 1272
+      latencyMs: 714
       error: Failed
       gradingResult: &ref_82
         pass: false
@@ -2515,7 +2515,7 @@ results:
       success: true
       score: 0.6875
       namedScores: &ref_19 {}
-      latencyMs: 1310
+      latencyMs: 720
       gradingResult: &ref_83
         pass: true
         score: 0.6875
@@ -2652,7 +2652,7 @@ results:
       success: false
       score: 0.65625
       namedScores: &ref_20 {}
-      latencyMs: 1269
+      latencyMs: 739
       error: Failed
       gradingResult: &ref_90
         pass: false
@@ -2792,7 +2792,7 @@ results:
       success: true
       score: 0.6875
       namedScores: &ref_21 {}
-      latencyMs: 1247
+      latencyMs: 723
       gradingResult: &ref_91
         pass: true
         score: 0.6875
@@ -2928,7 +2928,7 @@ results:
       success: true
       score: 0.6875
       namedScores: &ref_22 {}
-      latencyMs: 1266
+      latencyMs: 720
       gradingResult: &ref_92
         pass: true
         score: 0.6875
@@ -3051,7 +3051,7 @@ results:
       success: false
       score: 0.65625
       namedScores: &ref_23 {}
-      latencyMs: 1259
+      latencyMs: 721
       error: Failed
       gradingResult: &ref_95
         pass: false
@@ -3192,7 +3192,7 @@ results:
       success: true
       score: 0.6875
       namedScores: &ref_24 {}
-      latencyMs: 1256
+      latencyMs: 747
       gradingResult: &ref_96
         pass: true
         score: 0.6875
@@ -3326,7 +3326,7 @@ results:
       success: true
       score: 0.6875
       namedScores: &ref_25 {}
-      latencyMs: 1305
+      latencyMs: 736
       gradingResult: &ref_97
         pass: true
         score: 0.6875
@@ -3462,7 +3462,7 @@ results:
       success: false
       score: 0.65625
       namedScores: &ref_26 {}
-      latencyMs: 1266
+      latencyMs: 740
       error: Failed
       gradingResult: &ref_98
         pass: false
@@ -3603,7 +3603,7 @@ results:
       success: true
       score: 0.6875
       namedScores: &ref_27 {}
-      latencyMs: 1266
+      latencyMs: 719
       gradingResult: &ref_99
         pass: true
         score: 0.6875
@@ -3738,7 +3738,7 @@ results:
       success: true
       score: 0.6875
       namedScores: &ref_28 {}
-      latencyMs: 1271
+      latencyMs: 717
       gradingResult: &ref_100
         pass: true
         score: 0.6875
@@ -3861,7 +3861,7 @@ results:
       success: false
       score: 0.65625
       namedScores: &ref_29 {}
-      latencyMs: 1255
+      latencyMs: 717
       error: Failed
       gradingResult: &ref_101
         pass: false
@@ -4008,7 +4008,7 @@ results:
       success: false
       score: 0.65625
       namedScores: &ref_30 {}
-      latencyMs: 1287
+      latencyMs: 748
       error: Failed
       gradingResult: &ref_102
         pass: false
@@ -4145,7 +4145,7 @@ results:
       success: true
       score: 0.6875
       namedScores: &ref_31 {}
-      latencyMs: 1316
+      latencyMs: 730
       gradingResult: &ref_103
         pass: true
         score: 0.6875
@@ -4309,7 +4309,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_32 {}
-      latencyMs: 1273
+      latencyMs: 738
       error: Failed
       gradingResult: &ref_104
         pass: false
@@ -4359,7 +4359,7 @@ results:
               type: Formatting
           - pass: true
             score: 2
-            reason: Passed
+            reason: Passed (full score)
             assertion:
               value: Starts with context
               type: Structure
@@ -4441,7 +4441,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_34 {}
-      latencyMs: 1332
+      latencyMs: 723
       gradingResult: &ref_105
         pass: true
         score: 0.5
@@ -4490,7 +4490,7 @@ results:
               type: Formatting
           - pass: true
             score: 2
-            reason: Passed
+            reason: Passed (full score)
             assertion:
               value: Starts with context
               type: Structure
@@ -4569,7 +4569,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_35 {}
-      latencyMs: 1256
+      latencyMs: 789
       gradingResult: &ref_106
         pass: true
         score: 0.5
@@ -4618,7 +4618,7 @@ results:
               type: Formatting
           - pass: true
             score: 2
-            reason: Passed
+            reason: Passed (full score)
             assertion:
               value: Starts with context
               type: Structure
@@ -4704,13 +4704,13 @@ results:
           readability and coherence. The citations are retained in their
           original format.
       success: false
-      score: 0.17857142857142858
+      score: 0.32142857142857145
       namedScores: &ref_36 {}
-      latencyMs: 1268
+      latencyMs: 745
       error: Failed
       gradingResult: &ref_107
         pass: false
-        score: 0.17857142857142858
+        score: 0.32142857142857145
         namedScores: *ref_36
         reason: Failed
         tokensUsed:
@@ -4754,9 +4754,9 @@ results:
             assertion:
               value: Has roughly the same length as input
               type: Formatting
-          - pass: false
-            score: 0
-            reason: Failed
+          - pass: true
+            score: 1
+            reason: Passed (half score)
             assertion:
               value: Starts with context
               type: Structure
@@ -4838,7 +4838,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_37 {}
-      latencyMs: 1288
+      latencyMs: 729
       gradingResult: &ref_108
         pass: true
         score: 0.5
@@ -4887,7 +4887,7 @@ results:
               type: Formatting
           - pass: true
             score: 2
-            reason: Passed
+            reason: Passed (full score)
             assertion:
               value: Starts with context
               type: Structure
@@ -4966,7 +4966,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_38 {}
-      latencyMs: 1286
+      latencyMs: 734
       gradingResult: &ref_109
         pass: true
         score: 0.5
@@ -5015,7 +5015,7 @@ results:
               type: Formatting
           - pass: true
             score: 2
-            reason: Passed
+            reason: Passed (full score)
             assertion:
               value: Starts with context
               type: Structure
@@ -5098,7 +5098,7 @@ results:
       success: false
       score: 0.42857142857142855
       namedScores: &ref_39 {}
-      latencyMs: 1296
+      latencyMs: 748
       error: Failed
       gradingResult: &ref_112
         pass: false
@@ -5148,7 +5148,7 @@ results:
               type: Formatting
           - pass: true
             score: 2
-            reason: Passed
+            reason: Passed (full score)
             assertion:
               value: Starts with context
               type: Structure
@@ -5230,7 +5230,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_40 {}
-      latencyMs: 1276
+      latencyMs: 733
       gradingResult: &ref_113
         pass: true
         score: 0.5
@@ -5279,7 +5279,7 @@ results:
               type: Formatting
           - pass: true
             score: 2
-            reason: Passed
+            reason: Passed (full score)
             assertion:
               value: Starts with context
               type: Structure
@@ -5356,7 +5356,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_41 {}
-      latencyMs: 1285
+      latencyMs: 729
       gradingResult: &ref_114
         pass: true
         score: 0.5
@@ -5405,7 +5405,7 @@ results:
               type: Formatting
           - pass: true
             score: 2
-            reason: Passed
+            reason: Passed (full score)
             assertion:
               value: Starts with context
               type: Structure
@@ -5487,7 +5487,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_42 {}
-      latencyMs: 1272
+      latencyMs: 721
       error: Failed
       gradingResult: &ref_115
         pass: false
@@ -5537,7 +5537,7 @@ results:
               type: Formatting
           - pass: true
             score: 2
-            reason: Passed
+            reason: Passed (full score)
             assertion:
               value: Starts with context
               type: Structure
@@ -5619,7 +5619,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_43 {}
-      latencyMs: 1322
+      latencyMs: 729
       gradingResult: &ref_116
         pass: true
         score: 0.5
@@ -5668,7 +5668,7 @@ results:
               type: Formatting
           - pass: true
             score: 2
-            reason: Passed
+            reason: Passed (full score)
             assertion:
               value: Starts with context
               type: Structure
@@ -5746,7 +5746,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_44 {}
-      latencyMs: 1269
+      latencyMs: 755
       gradingResult: &ref_117
         pass: true
         score: 0.5
@@ -5795,7 +5795,7 @@ results:
               type: Formatting
           - pass: true
             score: 2
-            reason: Passed
+            reason: Passed (full score)
             assertion:
               value: Starts with context
               type: Structure
@@ -5877,7 +5877,7 @@ results:
       success: false
       score: 0.42857142857142855
       namedScores: &ref_45 {}
-      latencyMs: 1290
+      latencyMs: 726
       error: Failed
       gradingResult: &ref_118
         pass: false
@@ -5927,7 +5927,7 @@ results:
               type: Formatting
           - pass: true
             score: 2
-            reason: Passed
+            reason: Passed (full score)
             assertion:
               value: Starts with context
               type: Structure
@@ -6009,7 +6009,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_46 {}
-      latencyMs: 1274
+      latencyMs: 723
       gradingResult: &ref_119
         pass: true
         score: 0.5
@@ -6058,7 +6058,7 @@ results:
               type: Formatting
           - pass: true
             score: 2
-            reason: Passed
+            reason: Passed (full score)
             assertion:
               value: Starts with context
               type: Structure
@@ -6134,7 +6134,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_47 {}
-      latencyMs: 1274
+      latencyMs: 764
       gradingResult: &ref_120
         pass: true
         score: 0.5
@@ -6183,7 +6183,7 @@ results:
               type: Formatting
           - pass: true
             score: 2
-            reason: Passed
+            reason: Passed (full score)
             assertion:
               value: Starts with context
               type: Structure
@@ -6296,7 +6296,7 @@ results:
       success: false
       score: 0.42857142857142855
       namedScores: &ref_48 {}
-      latencyMs: 1279
+      latencyMs: 741
       error: Failed
       gradingResult: &ref_121
         pass: false
@@ -6435,7 +6435,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_50 {}
-      latencyMs: 1288
+      latencyMs: 733
       error: Failed
       gradingResult: &ref_122
         pass: false
@@ -6567,7 +6567,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_51 {}
-      latencyMs: 1283
+      latencyMs: 769
       gradingResult: &ref_123
         pass: true
         score: 0.5
@@ -6701,7 +6701,7 @@ results:
       success: false
       score: 0.42857142857142855
       namedScores: &ref_52 {}
-      latencyMs: 1265
+      latencyMs: 854
       error: Failed
       gradingResult: &ref_124
         pass: false
@@ -6839,7 +6839,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_53 {}
-      latencyMs: 1261
+      latencyMs: 856
       gradingResult: &ref_125
         pass: true
         score: 0.5
@@ -6968,7 +6968,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_54 {}
-      latencyMs: 1250
+      latencyMs: 790
       gradingResult: &ref_126
         pass: true
         score: 0.5
@@ -7085,7 +7085,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_55 {}
-      latencyMs: 1264
+      latencyMs: 738
       error: Failed
       gradingResult: &ref_129
         pass: false
@@ -7220,7 +7220,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_56 {}
-      latencyMs: 1302
+      latencyMs: 729
       gradingResult: &ref_130
         pass: true
         score: 0.5
@@ -7351,7 +7351,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_57 {}
-      latencyMs: 1272
+      latencyMs: 738
       gradingResult: &ref_131
         pass: true
         score: 0.5
@@ -7485,7 +7485,7 @@ results:
       success: false
       score: 0.42857142857142855
       namedScores: &ref_58 {}
-      latencyMs: 1294
+      latencyMs: 722
       error: Failed
       gradingResult: &ref_132
         pass: false
@@ -7621,7 +7621,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_59 {}
-      latencyMs: 1260
+      latencyMs: 744
       gradingResult: &ref_133
         pass: true
         score: 0.5
@@ -7752,7 +7752,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_60 {}
-      latencyMs: 1271
+      latencyMs: 720
       gradingResult: &ref_134
         pass: true
         score: 0.5
@@ -7869,7 +7869,7 @@ results:
       success: false
       score: 0.17857142857142858
       namedScores: &ref_61 {}
-      latencyMs: 1264
+      latencyMs: 723
       error: Failed
       gradingResult: &ref_135
         pass: false
@@ -8006,7 +8006,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_62 {}
-      latencyMs: 1269
+      latencyMs: 721
       gradingResult: &ref_136
         pass: true
         score: 0.5
@@ -8138,7 +8138,7 @@ results:
       success: true
       score: 0.5
       namedScores: &ref_63 {}
-      latencyMs: 1255
+      latencyMs: 754
       gradingResult: &ref_137
         pass: true
         score: 0.5
@@ -8221,12 +8221,12 @@ results:
             /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
             --model anthropic=claude-3-opus-20240229
           metrics:
-            score: 8.174107142857144
+            score: 8.316964285714286
             testPassCount: 0
             testFailCount: 20
-            assertPassCount: 109
-            assertFailCount: 36
-            totalLatencyMs: 25438
+            assertPassCount: 110
+            assertFailCount: 35
+            totalLatencyMs: 14773
             tokenUsage:
               total: 0
               prompt: 0
@@ -8272,7 +8272,7 @@ results:
             testFailCount: 6
             assertPassCount: 139
             assertFailCount: 6
-            totalLatencyMs: 25554
+            totalLatencyMs: 14779
             tokenUsage:
               total: 0
               prompt: 0
@@ -8318,7 +8318,7 @@ results:
             testFailCount: 0
             assertPassCount: 145
             assertFailCount: 0
-            totalLatencyMs: 25511
+            totalLatencyMs: 14834
             tokenUsage:
               total: 0
               prompt: 0
@@ -8415,7 +8415,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1321
+            latencyMs: 731
             gradingResult: *ref_64
             cost: 0
           - pass: false
@@ -8513,7 +8513,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1266
+            latencyMs: 742
             gradingResult: *ref_65
             cost: 0
           - pass: true
@@ -8598,7 +8598,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1288
+            latencyMs: 762
             gradingResult: *ref_66
             cost: 0
         test:
@@ -8876,7 +8876,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1270
+            latencyMs: 746
             gradingResult: *ref_67
             cost: 0
           - pass: false
@@ -8974,7 +8974,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1253
+            latencyMs: 752
             gradingResult: *ref_68
             cost: 0
           - pass: true
@@ -9059,7 +9059,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1273
+            latencyMs: 741
             gradingResult: *ref_69
             cost: 0
         test:
@@ -9180,7 +9180,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1242
+            latencyMs: 740
             gradingResult: *ref_72
             cost: 0
           - pass: true
@@ -9269,7 +9269,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1277
+            latencyMs: 748
             gradingResult: *ref_73
             cost: 0
           - pass: true
@@ -9354,7 +9354,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1256
+            latencyMs: 722
             gradingResult: *ref_74
             cost: 0
         test:
@@ -9476,7 +9476,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1267
+            latencyMs: 720
             gradingResult: *ref_75
             cost: 0
           - pass: false
@@ -9574,7 +9574,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1290
+            latencyMs: 723
             gradingResult: *ref_76
             cost: 0
           - pass: true
@@ -9659,7 +9659,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1264
+            latencyMs: 719
             gradingResult: *ref_77
             cost: 0
         test:
@@ -9781,7 +9781,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1263
+            latencyMs: 745
             gradingResult: *ref_78
             cost: 0
           - pass: true
@@ -9871,7 +9871,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1268
+            latencyMs: 743
             gradingResult: *ref_79
             cost: 0
           - pass: true
@@ -9956,7 +9956,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1261
+            latencyMs: 725
             gradingResult: *ref_80
             cost: 0
         test:
@@ -10058,7 +10058,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1261
+            latencyMs: 718
             gradingResult: *ref_81
             cost: 0
           - pass: false
@@ -10148,7 +10148,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1272
+            latencyMs: 714
             gradingResult: *ref_82
             cost: 0
           - pass: true
@@ -10225,7 +10225,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1310
+            latencyMs: 720
             gradingResult: *ref_83
             cost: 0
         test:
@@ -10457,7 +10457,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1269
+            latencyMs: 739
             gradingResult: *ref_90
             cost: 0
           - pass: true
@@ -10536,7 +10536,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1247
+            latencyMs: 723
             gradingResult: *ref_91
             cost: 0
           - pass: true
@@ -10614,7 +10614,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1266
+            latencyMs: 720
             gradingResult: *ref_92
             cost: 0
         test:
@@ -10713,7 +10713,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1259
+            latencyMs: 721
             gradingResult: *ref_95
             cost: 0
           - pass: true
@@ -10794,7 +10794,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1256
+            latencyMs: 747
             gradingResult: *ref_96
             cost: 0
           - pass: true
@@ -10869,7 +10869,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1305
+            latencyMs: 736
             gradingResult: *ref_97
             cost: 0
         test:
@@ -10982,7 +10982,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1266
+            latencyMs: 740
             gradingResult: *ref_98
             cost: 0
           - pass: true
@@ -11063,7 +11063,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1266
+            latencyMs: 719
             gradingResult: *ref_99
             cost: 0
           - pass: true
@@ -11140,7 +11140,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1271
+            latencyMs: 717
             gradingResult: *ref_100
             cost: 0
         test:
@@ -11239,7 +11239,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1255
+            latencyMs: 717
             gradingResult: *ref_101
             cost: 0
           - pass: false
@@ -11329,7 +11329,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1287
+            latencyMs: 748
             gradingResult: *ref_102
             cost: 0
           - pass: true
@@ -11406,7 +11406,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1316
+            latencyMs: 730
             gradingResult: *ref_103
             cost: 0
         test:
@@ -11521,7 +11521,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1273
+            latencyMs: 738
             gradingResult: *ref_104
             cost: 0
           - pass: true
@@ -11600,7 +11600,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1332
+            latencyMs: 723
             gradingResult: *ref_105
             cost: 0
           - pass: true
@@ -11676,7 +11676,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1256
+            latencyMs: 789
             gradingResult: *ref_106
             cost: 0
         test:
@@ -11695,21 +11695,32 @@ results:
 
                 type = "Structure"
 
-                score = 2.0
+                full_score = 2.0
+
+                reason = "Failed"
 
 
                 # make sure TWAS is spelled out in the first two sentences
 
                 first_two_sentences = ". ".join(output.split(". ")[:2]).lower()
 
+
                 res = "transcription-wide association stud" in
                 first_two_sentences
 
+                if res:
+                  reason = "Passed (full score)"
+                  score = full_score
+                else:
+                  res = "transcriptome-wide association stud" in first_two_sentences
+                  if res:
+                    reason = "Passed (half score)"
+                    score = full_score / 2.0
 
                 return {
                   "pass": res,
                   "score": score if res else 0.0,
-                  "reason": "Passed" if res else "Failed",
+                  "reason": reason,
                   "assertion": {
                     "value": description,
                     "type": type,
@@ -11746,7 +11757,7 @@ results:
             highlights disease etiology and drug mechanisms
       - outputs:
           - pass: false
-            score: 0.17857142857142858
+            score: 0.32142857142857145
             namedScores: *ref_36
             text: >-
               Failed
@@ -11828,7 +11839,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1268
+            latencyMs: 745
             gradingResult: *ref_107
             cost: 0
           - pass: true
@@ -11908,7 +11919,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1288
+            latencyMs: 729
             gradingResult: *ref_108
             cost: 0
           - pass: true
@@ -11984,7 +11995,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1286
+            latencyMs: 734
             gradingResult: *ref_109
             cost: 0
         test:
@@ -12100,7 +12111,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1296
+            latencyMs: 748
             gradingResult: *ref_112
             cost: 0
           - pass: true
@@ -12179,7 +12190,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1276
+            latencyMs: 733
             gradingResult: *ref_113
             cost: 0
           - pass: true
@@ -12254,7 +12265,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1285
+            latencyMs: 729
             gradingResult: *ref_114
             cost: 0
         test:
@@ -12369,7 +12380,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1272
+            latencyMs: 721
             gradingResult: *ref_115
             cost: 0
           - pass: true
@@ -12448,7 +12459,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1322
+            latencyMs: 729
             gradingResult: *ref_116
             cost: 0
           - pass: true
@@ -12523,7 +12534,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1269
+            latencyMs: 755
             gradingResult: *ref_117
             cost: 0
         test:
@@ -12638,7 +12649,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1290
+            latencyMs: 726
             gradingResult: *ref_118
             cost: 0
           - pass: true
@@ -12717,7 +12728,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1274
+            latencyMs: 723
             gradingResult: *ref_119
             cost: 0
           - pass: true
@@ -12790,7 +12801,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1274
+            latencyMs: 764
             gradingResult: *ref_120
             cost: 0
         test:
@@ -12906,7 +12917,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1279
+            latencyMs: 741
             gradingResult: *ref_121
             cost: 0
           - pass: false
@@ -12996,7 +13007,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1288
+            latencyMs: 733
             gradingResult: *ref_122
             cost: 0
           - pass: true
@@ -13075,7 +13086,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1283
+            latencyMs: 769
             gradingResult: *ref_123
             cost: 0
         test:
@@ -13228,7 +13239,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1265
+            latencyMs: 854
             gradingResult: *ref_124
             cost: 0
           - pass: true
@@ -13312,7 +13323,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1261
+            latencyMs: 856
             gradingResult: *ref_125
             cost: 0
           - pass: true
@@ -13388,7 +13399,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1250
+            latencyMs: 790
             gradingResult: *ref_126
             cost: 0
         test:
@@ -13488,7 +13499,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1264
+            latencyMs: 738
             gradingResult: *ref_129
             cost: 0
           - pass: true
@@ -13569,7 +13580,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1302
+            latencyMs: 729
             gradingResult: *ref_130
             cost: 0
           - pass: true
@@ -13647,7 +13658,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1272
+            latencyMs: 738
             gradingResult: *ref_131
             cost: 0
         test:
@@ -13762,7 +13773,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1294
+            latencyMs: 722
             gradingResult: *ref_132
             cost: 0
           - pass: true
@@ -13845,7 +13856,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1260
+            latencyMs: 744
             gradingResult: *ref_133
             cost: 0
           - pass: true
@@ -13924,7 +13935,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1271
+            latencyMs: 720
             gradingResult: *ref_134
             cost: 0
         test:
@@ -14024,7 +14035,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1264
+            latencyMs: 723
             gradingResult: *ref_135
             cost: 0
           - pass: true
@@ -14108,7 +14119,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1269
+            latencyMs: 721
             gradingResult: *ref_136
             cost: 0
           - pass: true
@@ -14187,7 +14198,7 @@ results:
               exec:python
               /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
               --model anthropic=claude-3-opus-20240229
-            latencyMs: 1255
+            latencyMs: 754
             gradingResult: *ref_137
             cost: 0
         test:

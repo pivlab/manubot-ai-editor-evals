@@ -4,8 +4,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -106,7 +106,7 @@ results:
       success: false
       score: 0.42857142857142855
       namedScores: &ref_0 {}
-      latencyMs: 203641
+      latencyMs: 768
       error: Failed
       gradingResult: &ref_64
         pass: false
@@ -164,8 +164,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -250,7 +250,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_2 {}
-      latencyMs: 314655
+      latencyMs: 726
       error: Failed
       gradingResult: &ref_65
         pass: false
@@ -308,8 +308,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -387,7 +387,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_3 {}
-      latencyMs: 236212
+      latencyMs: 720
       error: Failed
       gradingResult: &ref_66
         pass: false
@@ -445,8 +445,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -521,7 +521,7 @@ results:
       success: false
       score: 0.39285714285714285
       namedScores: &ref_4 {}
-      latencyMs: 185120
+      latencyMs: 749
       error: Failed
       gradingResult: &ref_67
         pass: false
@@ -579,8 +579,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -668,7 +668,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_5 {}
-      latencyMs: 346180
+      latencyMs: 727
       error: Failed
       gradingResult: &ref_68
         pass: false
@@ -726,8 +726,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -808,7 +808,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_6 {}
-      latencyMs: 319014
+      latencyMs: 719
       error: Failed
       gradingResult: &ref_69
         pass: false
@@ -866,8 +866,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -941,7 +941,7 @@ results:
       success: false
       score: 0.39285714285714285
       namedScores: &ref_7 {}
-      latencyMs: 175520
+      latencyMs: 727
       error: Failed
       gradingResult: &ref_72
         pass: false
@@ -999,8 +999,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -1084,7 +1084,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_8 {}
-      latencyMs: 269965
+      latencyMs: 759
       error: Failed
       gradingResult: &ref_73
         pass: false
@@ -1142,8 +1142,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -1225,7 +1225,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_9 {}
-      latencyMs: 316497
+      latencyMs: 780
       error: Failed
       gradingResult: &ref_74
         pass: false
@@ -1283,8 +1283,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -1358,7 +1358,7 @@ results:
       success: false
       score: 0.39285714285714285
       namedScores: &ref_10 {}
-      latencyMs: 185265
+      latencyMs: 722
       error: Failed
       gradingResult: &ref_75
         pass: false
@@ -1416,8 +1416,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -1501,7 +1501,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_11 {}
-      latencyMs: 293578
+      latencyMs: 728
       error: Failed
       gradingResult: &ref_76
         pass: false
@@ -1559,8 +1559,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -1639,7 +1639,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_12 {}
-      latencyMs: 261402
+      latencyMs: 715
       error: Failed
       gradingResult: &ref_77
         pass: false
@@ -1697,8 +1697,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -1769,7 +1769,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_13 {}
-      latencyMs: 166489
+      latencyMs: 729
       error: Failed
       gradingResult: &ref_78
         pass: false
@@ -1827,8 +1827,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -1913,7 +1913,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_14 {}
-      latencyMs: 243125
+      latencyMs: 719
       error: Failed
       gradingResult: &ref_79
         pass: false
@@ -1971,8 +1971,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -2053,7 +2053,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_15 {}
-      latencyMs: 302047
+      latencyMs: 744
       error: Failed
       gradingResult: &ref_80
         pass: false
@@ -2111,8 +2111,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -2211,7 +2211,7 @@ results:
       success: false
       score: 0.375
       namedScores: &ref_16 {}
-      latencyMs: 198545
+      latencyMs: 754
       error: Failed
       gradingResult: &ref_81
         pass: false
@@ -2275,8 +2275,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -2366,7 +2366,7 @@ results:
       success: false
       score: 0.625
       namedScores: &ref_18 {}
-      latencyMs: 320375
+      latencyMs: 719
       error: Failed
       gradingResult: &ref_82
         pass: false
@@ -2430,8 +2430,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -2515,7 +2515,7 @@ results:
       success: false
       score: 0.625
       namedScores: &ref_19 {}
-      latencyMs: 316362
+      latencyMs: 731
       error: Failed
       gradingResult: &ref_83
         pass: false
@@ -2579,8 +2579,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -2630,7 +2630,7 @@ results:
       success: false
       score: 0.4375
       namedScores: &ref_20 {}
-      latencyMs: 110786
+      latencyMs: 717
       error: Failed
       gradingResult: &ref_90
         pass: false
@@ -2694,8 +2694,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -2776,7 +2776,7 @@ results:
       success: false
       score: 0.65625
       namedScores: &ref_21 {}
-      latencyMs: 272535
+      latencyMs: 713
       error: Failed
       gradingResult: &ref_91
         pass: false
@@ -2840,8 +2840,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -2923,7 +2923,7 @@ results:
       success: false
       score: 0.625
       namedScores: &ref_22 {}
-      latencyMs: 293482
+      latencyMs: 714
       error: Failed
       gradingResult: &ref_92
         pass: false
@@ -2987,8 +2987,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -3041,7 +3041,7 @@ results:
       success: false
       score: 0.40625
       namedScores: &ref_23 {}
-      latencyMs: 119175
+      latencyMs: 733
       error: Failed
       gradingResult: &ref_95
         pass: false
@@ -3105,8 +3105,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -3186,7 +3186,7 @@ results:
       success: false
       score: 0.65625
       namedScores: &ref_24 {}
-      latencyMs: 262463
+      latencyMs: 720
       error: Failed
       gradingResult: &ref_96
         pass: false
@@ -3250,8 +3250,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -3327,7 +3327,7 @@ results:
       success: false
       score: 0.65625
       namedScores: &ref_25 {}
-      latencyMs: 260915
+      latencyMs: 725
       error: Failed
       gradingResult: &ref_97
         pass: false
@@ -3391,8 +3391,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -3466,7 +3466,7 @@ results:
       success: false
       score: 0.375
       namedScores: &ref_26 {}
-      latencyMs: 198921
+      latencyMs: 735
       error: Failed
       gradingResult: &ref_98
         pass: false
@@ -3530,8 +3530,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -3613,7 +3613,7 @@ results:
       success: false
       score: 0.625
       namedScores: &ref_27 {}
-      latencyMs: 262142
+      latencyMs: 729
       error: Failed
       gradingResult: &ref_99
         pass: false
@@ -3677,8 +3677,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -3755,7 +3755,7 @@ results:
       success: false
       score: 0.65625
       namedScores: &ref_28 {}
-      latencyMs: 272184
+      latencyMs: 718
       error: Failed
       gradingResult: &ref_100
         pass: false
@@ -3819,8 +3819,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -3876,7 +3876,7 @@ results:
       success: false
       score: 0.15625
       namedScores: &ref_29 {}
-      latencyMs: 150194
+      latencyMs: 741
       error: Failed
       gradingResult: &ref_101
         pass: false
@@ -3940,8 +3940,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -4028,7 +4028,7 @@ results:
       success: false
       score: 0.625
       namedScores: &ref_30 {}
-      latencyMs: 296345
+      latencyMs: 751
       error: Failed
       gradingResult: &ref_102
         pass: false
@@ -4092,8 +4092,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -4173,7 +4173,7 @@ results:
       success: false
       score: 0.625
       namedScores: &ref_31 {}
-      latencyMs: 279373
+      latencyMs: 753
       error: Failed
       gradingResult: &ref_103
         pass: false
@@ -4237,8 +4237,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -4339,7 +4339,7 @@ results:
       success: false
       score: 0.14285714285714285
       namedScores: &ref_32 {}
-      latencyMs: 243208
+      latencyMs: 723
       error: Failed
       gradingResult: &ref_104
         pass: false
@@ -4397,8 +4397,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -4496,7 +4496,7 @@ results:
       success: false
       score: 0.10714285714285714
       namedScores: &ref_34 {}
-      latencyMs: 299740
+      latencyMs: 724
       error: Failed
       gradingResult: &ref_105
         pass: false
@@ -4554,8 +4554,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -4627,7 +4627,7 @@ results:
       success: false
       score: 0.17857142857142858
       namedScores: &ref_35 {}
-      latencyMs: 221265
+      latencyMs: 754
       error: Failed
       gradingResult: &ref_106
         pass: false
@@ -4685,8 +4685,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -4778,7 +4778,7 @@ results:
       success: false
       score: 0.14285714285714285
       namedScores: &ref_36 {}
-      latencyMs: 350751
+      latencyMs: 778
       error: Failed
       gradingResult: &ref_107
         pass: false
@@ -4836,8 +4836,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -4918,7 +4918,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_37 {}
-      latencyMs: 265557
+      latencyMs: 723
       error: Failed
       gradingResult: &ref_108
         pass: false
@@ -4968,7 +4968,7 @@ results:
               type: Formatting
           - pass: true
             score: 2
-            reason: Passed
+            reason: Passed (full score)
             assertion:
               value: Starts with context
               type: Structure
@@ -4976,8 +4976,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -5051,7 +5051,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_38 {}
-      latencyMs: 249865
+      latencyMs: 730
       error: Failed
       gradingResult: &ref_109
         pass: false
@@ -5101,7 +5101,7 @@ results:
               type: Formatting
           - pass: true
             score: 2
-            reason: Passed
+            reason: Passed (full score)
             assertion:
               value: Starts with context
               type: Structure
@@ -5109,8 +5109,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -5182,7 +5182,7 @@ results:
       success: false
       score: 0.10714285714285714
       namedScores: &ref_39 {}
-      latencyMs: 221881
+      latencyMs: 738
       error: Failed
       gradingResult: &ref_112
         pass: false
@@ -5240,8 +5240,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -5322,7 +5322,7 @@ results:
       success: false
       score: 0.17857142857142858
       namedScores: &ref_40 {}
-      latencyMs: 252298
+      latencyMs: 727
       error: Failed
       gradingResult: &ref_113
         pass: false
@@ -5380,8 +5380,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -5457,7 +5457,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_41 {}
-      latencyMs: 262880
+      latencyMs: 715
       error: Failed
       gradingResult: &ref_114
         pass: false
@@ -5507,7 +5507,7 @@ results:
               type: Formatting
           - pass: true
             score: 2
-            reason: Passed
+            reason: Passed (full score)
             assertion:
               value: Starts with context
               type: Structure
@@ -5515,8 +5515,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -5572,7 +5572,7 @@ results:
       success: false
       score: 0.17857142857142858
       namedScores: &ref_42 {}
-      latencyMs: 150731
+      latencyMs: 724
       error: Failed
       gradingResult: &ref_115
         pass: false
@@ -5630,8 +5630,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -5712,7 +5712,7 @@ results:
       success: false
       score: 0.17857142857142858
       namedScores: &ref_43 {}
-      latencyMs: 273846
+      latencyMs: 725
       error: Failed
       gradingResult: &ref_116
         pass: false
@@ -5770,8 +5770,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -5852,7 +5852,7 @@ results:
       success: false
       score: 0.14285714285714285
       namedScores: &ref_44 {}
-      latencyMs: 274284
+      latencyMs: 751
       error: Failed
       gradingResult: &ref_117
         pass: false
@@ -5910,8 +5910,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -5965,7 +5965,7 @@ results:
       success: false
       score: 0.17857142857142858
       namedScores: &ref_45 {}
-      latencyMs: 116742
+      latencyMs: 733
       error: Failed
       gradingResult: &ref_118
         pass: false
@@ -6023,8 +6023,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -6101,7 +6101,7 @@ results:
       success: false
       score: 0.17857142857142858
       namedScores: &ref_46 {}
-      latencyMs: 239474
+      latencyMs: 741
       error: Failed
       gradingResult: &ref_119
         pass: false
@@ -6159,8 +6159,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -6233,7 +6233,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_47 {}
-      latencyMs: 223601
+      latencyMs: 736
       error: Failed
       gradingResult: &ref_120
         pass: false
@@ -6283,7 +6283,7 @@ results:
               type: Formatting
           - pass: true
             score: 2
-            reason: Passed
+            reason: Passed (full score)
             assertion:
               value: Starts with context
               type: Structure
@@ -6291,8 +6291,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -6403,7 +6403,7 @@ results:
       success: false
       score: 0.39285714285714285
       namedScores: &ref_48 {}
-      latencyMs: 281557
+      latencyMs: 722
       error: Failed
       gradingResult: &ref_121
         pass: false
@@ -6461,8 +6461,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -6545,7 +6545,7 @@ results:
       success: false
       score: 0.17857142857142858
       namedScores: &ref_50 {}
-      latencyMs: 244683
+      latencyMs: 724
       error: Failed
       gradingResult: &ref_122
         pass: false
@@ -6603,8 +6603,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -6685,7 +6685,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_51 {}
-      latencyMs: 253339
+      latencyMs: 734
       error: Failed
       gradingResult: &ref_123
         pass: false
@@ -6743,8 +6743,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -6811,7 +6811,7 @@ results:
       success: false
       score: 0.42857142857142855
       namedScores: &ref_52 {}
-      latencyMs: 171751
+      latencyMs: 711
       error: Failed
       gradingResult: &ref_124
         pass: false
@@ -6869,8 +6869,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -6954,7 +6954,7 @@ results:
       success: false
       score: 0.42857142857142855
       namedScores: &ref_53 {}
-      latencyMs: 274833
+      latencyMs: 712
       error: Failed
       gradingResult: &ref_125
         pass: false
@@ -7012,8 +7012,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -7093,7 +7093,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_54 {}
-      latencyMs: 246787
+      latencyMs: 712
       error: Failed
       gradingResult: &ref_126
         pass: false
@@ -7151,8 +7151,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -7220,7 +7220,7 @@ results:
       success: false
       score: 0.39285714285714285
       namedScores: &ref_55 {}
-      latencyMs: 175198
+      latencyMs: 711
       error: Failed
       gradingResult: &ref_129
         pass: false
@@ -7278,8 +7278,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -7357,7 +7357,7 @@ results:
       success: false
       score: 0.42857142857142855
       namedScores: &ref_56 {}
-      latencyMs: 200772
+      latencyMs: 716
       error: Failed
       gradingResult: &ref_130
         pass: false
@@ -7415,8 +7415,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -7487,7 +7487,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_57 {}
-      latencyMs: 196551
+      latencyMs: 710
       error: Failed
       gradingResult: &ref_131
         pass: false
@@ -7545,8 +7545,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -7613,7 +7613,7 @@ results:
       success: false
       score: 0.42857142857142855
       namedScores: &ref_58 {}
-      latencyMs: 169870
+      latencyMs: 714
       error: Failed
       gradingResult: &ref_132
         pass: false
@@ -7671,8 +7671,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -7755,7 +7755,7 @@ results:
       success: false
       score: 0.17857142857142858
       namedScores: &ref_59 {}
-      latencyMs: 244530
+      latencyMs: 710
       error: Failed
       gradingResult: &ref_133
         pass: false
@@ -7813,8 +7813,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -7887,7 +7887,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_60 {}
-      latencyMs: 218029
+      latencyMs: 719
       error: Failed
       gradingResult: &ref_134
         pass: false
@@ -7945,8 +7945,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -8007,7 +8007,7 @@ results:
       success: false
       score: 0.14285714285714285
       namedScores: &ref_61 {}
-      latencyMs: 159584
+      latencyMs: 711
       error: Failed
       gradingResult: &ref_135
         pass: false
@@ -8065,8 +8065,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -8146,7 +8146,7 @@ results:
       success: false
       score: 0.4642857142857143
       namedScores: &ref_62 {}
-      latencyMs: 262303
+      latencyMs: 710
       error: Failed
       gradingResult: &ref_136
         pass: false
@@ -8204,8 +8204,8 @@ results:
     - provider:
         id: >-
           exec:python
-          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-          --update-cache --model ollama=llama3=70b-instruct-q5_1
+          /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=llama3=70b-instruct-q5_1
       prompt:
         raw: >
           You are a scientist with copy-editing skills tasked with refining the
@@ -8282,7 +8282,7 @@ results:
       success: false
       score: 0.17857142857142858
       namedScores: &ref_63 {}
-      latencyMs: 258790
+      latencyMs: 707
       error: Failed
       gradingResult: &ref_137
         pass: false
@@ -8363,15 +8363,15 @@ results:
           id: 5bdeda8c1446401148c885c42e0f01b3ef31c1df7679dc5913891286599141ba
           provider: >-
             exec:python
-            /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-            --update-cache --model ollama=llama3=70b-instruct-q5_1
+            /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+            --model ollama=llama3=70b-instruct-q5_1
           metrics:
             score: 6.3571428571428585
             testPassCount: 0
             testFailCount: 20
             assertPassCount: 94
             assertFailCount: 51
-            totalLatencyMs: 3734929
+            totalLatencyMs: 14640
             tokenUsage:
               total: 0
               prompt: 0
@@ -8409,15 +8409,15 @@ results:
           id: b3ae9b36dde69fd3a88b2596cb227a7e2c5b759aa55a7df82cafefe336d2dba2
           provider: >-
             exec:python
-            /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-            --update-cache --model ollama=llama3=70b-instruct-q5_1
+            /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+            --model ollama=llama3=70b-instruct-q5_1
           metrics:
             score: 8.294642857142858
             testPassCount: 0
             testFailCount: 20
             assertPassCount: 112
             assertFailCount: 33
-            totalLatencyMs: 5439399
+            totalLatencyMs: 14503
             tokenUsage:
               total: 0
               prompt: 0
@@ -8455,15 +8455,15 @@ results:
           id: fdcb2dbde0cdbdbfbd3bef849b82148735a55ce5adb62ddee51c9c41a40f7876
           provider: >-
             exec:python
-            /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-            --update-cache --model ollama=llama3=70b-instruct-q5_1
+            /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+            --model ollama=llama3=70b-instruct-q5_1
           metrics:
             score: 9.258928571428571
             testPassCount: 0
             testFailCount: 20
             assertPassCount: 118
             assertFailCount: 27
-            totalLatencyMs: 5262879
+            totalLatencyMs: 14587
             tokenUsage:
               total: 0
               prompt: 0
@@ -8552,9 +8552,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 203641
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 768
             gradingResult: *ref_64
             cost: 0
           - pass: false
@@ -8647,9 +8647,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 314655
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 726
             gradingResult: *ref_65
             cost: 0
           - pass: false
@@ -8734,9 +8734,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 236212
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 720
             gradingResult: *ref_66
             cost: 0
         test:
@@ -9009,9 +9009,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 185120
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 749
             gradingResult: *ref_67
             cost: 0
           - pass: false
@@ -9108,9 +9108,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 346180
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 727
             gradingResult: *ref_68
             cost: 0
           - pass: false
@@ -9199,9 +9199,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 319014
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 719
             gradingResult: *ref_69
             cost: 0
         test:
@@ -9318,9 +9318,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 175520
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 727
             gradingResult: *ref_72
             cost: 0
           - pass: false
@@ -9412,9 +9412,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 269965
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 759
             gradingResult: *ref_73
             cost: 0
           - pass: false
@@ -9503,9 +9503,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 316497
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 780
             gradingResult: *ref_74
             cost: 0
         test:
@@ -9621,9 +9621,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 185265
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 722
             gradingResult: *ref_75
             cost: 0
           - pass: false
@@ -9713,9 +9713,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 293578
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 728
             gradingResult: *ref_76
             cost: 0
           - pass: false
@@ -9801,9 +9801,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 261402
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 715
             gradingResult: *ref_77
             cost: 0
         test:
@@ -9916,9 +9916,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 166489
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 729
             gradingResult: *ref_78
             cost: 0
           - pass: false
@@ -10010,9 +10010,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 243125
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 719
             gradingResult: *ref_79
             cost: 0
           - pass: false
@@ -10100,9 +10100,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 302047
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 744
             gradingResult: *ref_80
             cost: 0
         test:
@@ -10215,9 +10215,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 198545
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 754
             gradingResult: *ref_81
             cost: 0
           - pass: false
@@ -10314,9 +10314,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 320375
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 719
             gradingResult: *ref_82
             cost: 0
           - pass: false
@@ -10408,9 +10408,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 316362
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 731
             gradingResult: *ref_83
             cost: 0
         test:
@@ -10617,9 +10617,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 110786
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 717
             gradingResult: *ref_90
             cost: 0
           - pass: false
@@ -10708,9 +10708,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 272535
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 713
             gradingResult: *ref_91
             cost: 0
           - pass: false
@@ -10799,9 +10799,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 293482
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 714
             gradingResult: *ref_92
             cost: 0
         test:
@@ -10892,9 +10892,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 119175
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 733
             gradingResult: *ref_95
             cost: 0
           - pass: false
@@ -10981,9 +10981,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 262463
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 720
             gradingResult: *ref_96
             cost: 0
           - pass: false
@@ -11066,9 +11066,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 260915
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 725
             gradingResult: *ref_97
             cost: 0
         test:
@@ -11180,9 +11180,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 198921
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 735
             gradingResult: *ref_98
             cost: 0
           - pass: false
@@ -11272,9 +11272,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 262142
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 729
             gradingResult: *ref_99
             cost: 0
           - pass: false
@@ -11357,9 +11357,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 272184
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 718
             gradingResult: *ref_100
             cost: 0
         test:
@@ -11453,9 +11453,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 150194
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 741
             gradingResult: *ref_101
             cost: 0
           - pass: false
@@ -11550,9 +11550,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 296345
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 751
             gradingResult: *ref_102
             cost: 0
           - pass: false
@@ -11638,9 +11638,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 279373
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 753
             gradingResult: *ref_103
             cost: 0
         test:
@@ -11753,9 +11753,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 243208
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 723
             gradingResult: *ref_104
             cost: 0
           - pass: false
@@ -11861,9 +11861,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 299740
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 724
             gradingResult: *ref_105
             cost: 0
           - pass: false
@@ -11944,9 +11944,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 221265
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 754
             gradingResult: *ref_106
             cost: 0
         test:
@@ -11965,21 +11965,32 @@ results:
 
                 type = "Structure"
 
-                score = 2.0
+                full_score = 2.0
+
+                reason = "Failed"
 
 
                 # make sure TWAS is spelled out in the first two sentences
 
                 first_two_sentences = ". ".join(output.split(". ")[:2]).lower()
 
+
                 res = "transcription-wide association stud" in
                 first_two_sentences
 
+                if res:
+                  reason = "Passed (full score)"
+                  score = full_score
+                else:
+                  res = "transcriptome-wide association stud" in first_two_sentences
+                  if res:
+                    reason = "Passed (half score)"
+                    score = full_score / 2.0
 
                 return {
                   "pass": res,
                   "score": score if res else 0.0,
-                  "reason": "Passed" if res else "Failed",
+                  "reason": reason,
                   "assertion": {
                     "value": description,
                     "type": type,
@@ -12110,9 +12121,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 350751
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 778
             gradingResult: *ref_107
             cost: 0
           - pass: false
@@ -12200,9 +12211,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 265557
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 723
             gradingResult: *ref_108
             cost: 0
           - pass: false
@@ -12284,9 +12295,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 249865
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 730
             gradingResult: *ref_109
             cost: 0
         test:
@@ -12397,9 +12408,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 221881
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 738
             gradingResult: *ref_112
             cost: 0
           - pass: false
@@ -12488,9 +12499,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 252298
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 727
             gradingResult: *ref_113
             cost: 0
           - pass: false
@@ -12573,9 +12584,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 262880
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 715
             gradingResult: *ref_114
             cost: 0
         test:
@@ -12670,9 +12681,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 150731
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 724
             gradingResult: *ref_115
             cost: 0
           - pass: false
@@ -12762,9 +12773,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 273846
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 725
             gradingResult: *ref_116
             cost: 0
           - pass: false
@@ -12854,9 +12865,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 274284
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 751
             gradingResult: *ref_117
             cost: 0
         test:
@@ -12948,9 +12959,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 116742
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 733
             gradingResult: *ref_118
             cost: 0
           - pass: false
@@ -13034,9 +13045,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 239474
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 741
             gradingResult: *ref_119
             cost: 0
           - pass: false
@@ -13117,9 +13128,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 223601
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 736
             gradingResult: *ref_120
             cost: 0
         test:
@@ -13241,9 +13252,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 281557
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 722
             gradingResult: *ref_121
             cost: 0
           - pass: false
@@ -13334,9 +13345,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 244683
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 724
             gradingResult: *ref_122
             cost: 0
           - pass: false
@@ -13423,9 +13434,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 253339
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 734
             gradingResult: *ref_123
             cost: 0
         test:
@@ -13568,9 +13579,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 171751
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 711
             gradingResult: *ref_124
             cost: 0
           - pass: false
@@ -13661,9 +13672,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 274833
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 712
             gradingResult: *ref_125
             cost: 0
           - pass: false
@@ -13749,9 +13760,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 246787
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 712
             gradingResult: *ref_126
             cost: 0
         test:
@@ -13857,9 +13868,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 175198
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 711
             gradingResult: *ref_129
             cost: 0
           - pass: false
@@ -13944,9 +13955,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 200772
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 716
             gradingResult: *ref_130
             cost: 0
           - pass: false
@@ -14023,9 +14034,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 196551
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 710
             gradingResult: *ref_131
             cost: 0
         test:
@@ -14130,9 +14141,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 169870
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 714
             gradingResult: *ref_132
             cost: 0
           - pass: false
@@ -14221,9 +14232,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 244530
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 710
             gradingResult: *ref_133
             cost: 0
           - pass: false
@@ -14304,9 +14315,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 218029
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 719
             gradingResult: *ref_134
             cost: 0
         test:
@@ -14404,9 +14415,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 159584
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 711
             gradingResult: *ref_135
             cost: 0
           - pass: false
@@ -14494,9 +14505,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 262303
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 710
             gradingResult: *ref_136
             cost: 0
           - pass: false
@@ -14580,9 +14591,9 @@ results:
               Revised paragraph:
             provider: >-
               exec:python
-              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-              --update-cache --model ollama=llama3=70b-instruct-q5_1
-            latencyMs: 258790
+              /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=llama3=70b-instruct-q5_1
+            latencyMs: 707
             gradingResult: *ref_137
             cost: 0
         test:
@@ -14625,8 +14636,8 @@ config:
   providers:
     - >-
       exec:python
-      /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py
-      --update-cache --model ollama=llama3=70b-instruct-q5_1
+      /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py 
+      --model ollama=llama3=70b-instruct-q5_1
   tests:
     - vars:
         test_description: Has no spelling errors
