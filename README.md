@@ -21,15 +21,15 @@ Under-the-hood, it uses:
    ```
 1. Install the last tested [promptfoo](https://promptfoo.dev/) version:
    ```bash
-   npm install -g promptfoo@0.35.0
+   npm install -g promptfoo@0.47.0
    ```
-1. Install this package in editable mode (only needs to be done once):
+1. Install this package in editable mode:
    ```bash
    pip install -e .
    ```
-1. Install [Ollama](https://ollama.ai/). The latest version we tested is [v0.1.18](https://github.com/jmorganca/ollama/releases/tag/v0.1.18), which in Linux (amd64) you can install with:
+1. Install [Ollama](https://ollama.ai/). The latest version we tested is [v0.1.32](https://github.com/ollama/ollama/releases/tag/v0.1.32), which in Linux (amd64) you can install with:
    ```bash
-   sudo curl -L https://github.com/jmorganca/ollama/releases/download/v0.1.18/ollama-linux-amd64 -o /usr/bin/ollama
+   sudo curl -L https://github.com/ollama/ollama/releases/download/v0.1.32/ollama-linux-amd64 -o /usr/bin/ollama
    sudo chmod +x /usr/bin/ollama
    ```
 
@@ -131,12 +131,21 @@ Running the script without flags runs your evaluations.
 python ../../../src/run.py
 ```
 
+By default, all queries to the models are cached in `src/cache/*.db` (SQLite) for
+faster and cheaper subsequent runs.
+
 ### Visualize results
 
-To explore the results of your evaluations in a web UI table, run:
+To explore the results of your evaluations across *all* models in a web UI table, run:
 
 ```bash
 python ../../../src/run.py --view
+```
+
+If you are interested only in a specific model such as `gpt-3.5-turbo-0613`, run:
+
+```bash
+promptfoo view outputs/gpt-3.5-turbo-0125/
 ```
 
 [See more here](https://www.promptfoo.dev/docs/usage/web-ui).
@@ -147,4 +156,43 @@ If you need to clear `promptfoo`'s cache, you can run:
 
 ```bash
 promptfoo cache clear
+```
+
+## Advanced
+
+### SQLite cache
+
+In case the cache files located in `src/cache/*.db` (SQLite) need to be updated, you
+can open the `.db` file with `sqlite3`:
+
+```bash
+sqlite3 src/cache/llm_cache-rep0.db
+```
+
+#### Updating cached queries
+
+You can run queries to update the cache, such as:
+
+```sql
+-- Update the model name for a specific prompt
+UPDATE full_llm_cache
+SET llm = replace(llm, 'mixtral-8x22-fix', 'mixtral:8x22b-instruct-v0.1-q5_1' )
+WHERE llm LIKE '%mixtral-8x22%';
+```
+
+#### Deleting old entries
+
+To delete certain entries (such as old/previous models not used anymore):
+
+```sql
+DELETE FROM full_llm_cache
+WHERE llm LIKE "%('model', 'mixtral:8x22b-instruct-v0.1-q4_1')%";
+```
+
+#### Vacuuming
+
+From the terminal:
+
+```bash
+sqlite3 src/cache/llm_cache-rep0.db "VACUUM;"
 ```

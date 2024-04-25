@@ -2,30 +2,32 @@ import re
 import argparse
 import subprocess
 import time
+from pathlib import Path
 from dotenv import load_dotenv
 
 
 # model names and repetitions
+N_REPS = 5
 models = {
-    "ollama:alfred:40b-1023-q5_1": 5,
-    "ollama:deepseek-llm:67b-chat-q5_1": 5,
-    "ollama:deepseek-llm:7b-chat-fp16": 5,
-    "ollama:llama2:13b-chat-q8_0": 5,
-    "ollama:llama2:70b-chat-q5_1": 5,
-    "ollama:llama2:7b-chat-fp16": 1,
-    "ollama:mistral:7b-instruct-fp16": 5,
-    "ollama:mistral:7b-instruct-v0.2-fp16": 5,
-    "ollama:mixtral:8x7b-instruct-v0.1-q5_1": 5,
-    "ollama:mixtral:8x7b-instruct-v0.1-q8_0": 5,
-    "ollama:neural-chat:7b-v3.1-fp16": 5,
-    "ollama:openchat:7b-v3.5-fp16": 5,
-    "ollama:phi:2.7b-chat-v2-fp16": 5,
-    "ollama:solar:10.7b-instruct-v1-q8_0": 5,
-    "ollama:starling-lm:7b-alpha-fp16": 5,
-    "openai:gpt-3.5-turbo-0613": 5,
-    "openai:gpt-3.5-turbo-1106": 5,
-    "openai:gpt-4-0613": 5,
-    "openai:gpt-4-1106-preview": 5,
+    "ollama=mistral=7b-instruct-fp16": N_REPS,
+    "ollama=mistral=7b-instruct-v0.2-fp16": N_REPS,
+    "ollama=mixtral=8x7b-instruct-v0.1-q8_0": N_REPS,
+    "ollama=mixtral=8x22b-instruct-v0.1-q5_1": N_REPS,
+    "ollama=starling-lm=7b-alpha-fp16": N_REPS,
+    "ollama=starling-lm=7b-beta-fp16": N_REPS,
+    "ollama=llama2=7b-chat-fp16": N_REPS,
+    "ollama=llama3=8b-instruct-fp16": N_REPS,
+    "ollama=llama3=70b-instruct-q5_1": N_REPS,
+    "ollama=gemma=2b-instruct-fp16": N_REPS,
+    # gpt-3.5-turbo points to this one:
+    "openai=gpt-3.5-turbo-0125": N_REPS,
+    # gpt-4 points to this one:
+    "openai=gpt-4-0613": N_REPS,
+    # gpt-4-turbo points to this one:
+    "openai=gpt-4-turbo-2024-04-09": N_REPS,
+    "anthropic=claude-3-opus-20240229": N_REPS,
+    "anthropic=claude-3-sonnet-20240229": N_REPS,
+    "anthropic=claude-3-haiku-20240307": N_REPS,
 }
 
 
@@ -35,8 +37,8 @@ load_dotenv()
 # extract parts of model name
 def split_model(model):
     id, repeat = model
-    prefix, name = id.split(":", maxsplit=1)
-    path = name.replace(":", "-")
+    prefix, name = id.split("=", maxsplit=1)
+    path = name.replace("=", ":").replace(":", "-")
     return {
         "id": id,
         "prefix": prefix,
@@ -61,15 +63,30 @@ parser.add_argument(
     action="store_true",
     help="View evaluation results",
 )
+parser.add_argument(
+    "-j",
+    "--max-concurrency",
+    type=int,
+    help="Max concurrency for promptfoo eval. Only set to a value greater than 1 if the"
+    " cache is only read, not written to.",
+)
+parser.add_argument(
+    "--update-cache",
+    action=argparse.BooleanOptionalAction,
+    help="Forces the LangChain to skip any cached response, hit the model, and then "
+    "update the cache",
+)
 args = parser.parse_args()
 
+script_dir = Path(__file__).parent.resolve()
 
 # run in pull mode
 if args.pull:
     for model in models:
         if model["prefix"] != "ollama":
             continue
-        command = f"ollama pull {model['name']}"
+        model_name = model["name"].replace("=", ":")
+        command = f"ollama pull {model_name}"
         print(command)
         subprocess.run(command, shell=True)
 
@@ -93,18 +110,41 @@ elif args.view:
 
 # run in evaluation mode
 else:
+    # before starting, remove temporary repetition file in cache dir if exists
+    script_dir = Path(__file__).parent.resolve()
+    cache_dir = script_dir / "cache"
+    repeat_runs_file_lock = cache_dir / "repeat_runs.lock"
+    repeat_runs_file_lock.unlink(missing_ok=True)
+    repeat_runs_file = cache_dir / "repeat_runs.pkl"
+    repeat_runs_file.unlink(missing_ok=True)
+
     for model in models:
+        # the maximum concurrent API calls is one by default (needed for custom caching
+        # to work properly)
+        max_concurrent_arg = "-j 1"
+        # if model["prefix"] == "openai":
+        #     max_concurrent_arg = ""
+        if args.max_concurrency is not None:
+            max_concurrent_arg = f"-j {args.max_concurrency}"
+
+        update_cache_arg = ""
+        if args.update_cache:
+            update_cache_arg = "--update-cache"
+
+        provider = f"exec:python {str(script_dir)}/llm.py {update_cache_arg} --model {model['id']}"
+
+        # --verbose \
         command = f"""
         promptfoo eval \
-        -j 1 \
-        --no-cache \
-        --repeat {model['repeat']} \
-        --providers {model['id']} \
-        -o outputs/{model['path']}/output/latest.html \
-        -o outputs/{model['path']}/output/latest.csv \
-        -o outputs/{model['path']}/output/latest.txt \
-        -o outputs/{model['path']}/output/latest.json \
-        -o outputs/{model['path']}/output/latest.yaml
+            {max_concurrent_arg} \
+            --no-cache \
+            --repeat {model['repeat']} \
+            --providers "{provider}" \
+            -o outputs/{model['path']}/output/latest.html \
+            -o outputs/{model['path']}/output/latest.csv \
+            -o outputs/{model['path']}/output/latest.txt \
+            -o outputs/{model['path']}/output/latest.json \
+            -o outputs/{model['path']}/output/latest.yaml
         """.strip()
         print(re.sub(r"\s{2,}", " \\\n  ", command))
         subprocess.run(command, shell=True)
