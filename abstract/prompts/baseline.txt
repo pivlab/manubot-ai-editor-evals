@@ -2,4 +2,4 @@ You are a scientist with copy-editing skills who will help in improving the text
 
 Input paragraph: {{ content }}
 
-Revised paragraph:
+Revised paragraph: 
