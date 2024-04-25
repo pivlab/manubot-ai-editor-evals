@@ -30,19 +30,19 @@ if __name__ == "__main__":
     parser.add_argument(
         "prompt",
         type=str,
-        help="TODO",
+        help="Parameter sent from promptfoo",
     )
     parser.add_argument(
         "config",
         type=str,
         nargs="?",
-        help="TODO",
+        help="Parameter sent from promptfoo",
     )
     parser.add_argument(
         "vars",
         type=str,
         nargs="?",
-        help="TODO",
+        help="Parameter sent from promptfoo",
     )
     parser.add_argument(
         "--update-cache",
