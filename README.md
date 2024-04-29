@@ -1,7 +1,7 @@
-# Prompt evaluations for the Manubot AI Editor
+# A benchmark framework for large language models (LLMs) on scholarly manuscript revision
 
-The Manubot AI Editor is a tool for [Manubot](https://manubot.org) that uses AI to help authors revise their manuscripts.
-This repository contains code used to evaluate the effectiveness of the prompts (instructions to the AI) used in the tool.
+This repository contains code used to evaluate the effectiveness of prompts and LLMs in the context of scholarly manuscript revision.
+Initially, the goal of the evaluations is to improve the prompts used in the [Manubot AI Editor]([url](https://github.com/manubot/manubot-ai-editor)), which is a tool for [Manubot](https://manubot.org) that uses AI to help authors revise their manuscripts automatically
 
 Under-the-hood, it uses:
 
