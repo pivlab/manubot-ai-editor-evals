@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 
 
 # model names and repetitions
-N_REPS = 5
+N_REPS = 1
 models = {
     # "ollama=mistral=7b-instruct-fp16": N_REPS,
     # "ollama=mistral=7b-instruct-v0.2-fp16": N_REPS,
@@ -20,7 +20,7 @@ models = {
     # "ollama=llama3=70b-instruct-q5_1": N_REPS,
     # "ollama=gemma=2b-instruct-fp16": N_REPS,
     # gpt-3.5-turbo points to this one:
-    "openai=gpt-3.5-turbo-0125": N_REPS,
+    # "openai=gpt-3.5-turbo-0125": N_REPS,
     # gpt-4 points to this one:
     "openai=gpt-4-0613": N_REPS,
     # gpt-4-turbo points to this one:
