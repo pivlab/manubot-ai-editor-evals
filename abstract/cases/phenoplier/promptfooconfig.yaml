@@ -3,11 +3,9 @@ prompts:
   - file://../../prompts/candidate_with_metadata.txt
   - file://../../prompts/candidate.txt
 
-# Default asserts applied to each test case below
+# Default/standard asserts applied to each test case below
 defaultTest:
-  # Make sure that output...
   assert:
-    # ...starts with capital letter
     - type: python
       value: |
         description = "Starts with capital letter"
@@ -26,7 +24,6 @@ defaultTest:
           },
         }
 
-    # ...ends with period
     - type: python
       value: |
         description = "Ends with a period"
@@ -45,7 +42,6 @@ defaultTest:
           },
         }
 
-    # ...is a single paragraph
     - type: python
       value: |
         description = "Is a single paragraph"
@@ -64,7 +60,6 @@ defaultTest:
           },
         }
 
-    # ...doesn't include manuscript title
     - type: python
       value: |
         description = "Doesn't include manuscript title"
@@ -83,7 +78,6 @@ defaultTest:
           },
         }
 
-    # ...doesn't reference authors, keywords, abstract, etc
     - type: python
       value: |
         description = "Doesn't reference authors, keywords, abstract, etc"
@@ -108,7 +102,6 @@ defaultTest:
           },
         }
 
-    # ...is roughly same length as input
     - type: python
       value: |
         description = "Has roughly the same length as input"
@@ -131,21 +124,21 @@ defaultTest:
           },
         }
 
-# Make sure that output...
+# Specific tests using input texts from the 'inputs' directory
 tests:
-  # ...has no spelling or grammar errors
   - vars:
-      test_description: Has no spelling errors
+      test_description: Test case has spelling/grammar errors
       title: file://./inputs/title.txt
       keywords: file://./inputs/keywords.txt
       content: file://./inputs/has_spelling_and_grammar_errors.md
     assert:
       - type: python
         value: |
-          description = "Has no spelling errors"
+          description = "Has no spelling/grammar errors"
           type = "Spelling/grammar"
           score = 2.0
           
+          # trailing spaces are intentional
           keywords = [
             "concierto",
             "specifico",
@@ -163,12 +156,11 @@ tests:
             },
           }
 
-  # ...provides context before conclusion
   - vars:
-      test_description: Provides context before conclusion
+      test_description: Test case has wrong structure, with context at the end
       title: file://./inputs/title.txt
       keywords: file://./inputs/keywords.txt
-      content: file://./inputs/context_conclusion_swapped.md
+      content: file://./inputs/content_conclusion_context.md
     assert:
       - type: python
         value: |
@@ -176,7 +168,8 @@ tests:
           type = "Structure"
           score = 2.0
           
-          # make sure it does not mention the method ("PhenoPLIER") in the first sentence
+          # make sure it does not mention the method ("PhenoPLIER") in the first
+          sentence
           res = ("PhenoPLIER" not in output.split(". ")[0])
           
           return {
@@ -191,7 +184,7 @@ tests:
 
   # ...describes method before results
   - vars:
-      test_description: Describes method before results
+      test_description: Provides methods before results
       title: file://./inputs/title.txt
       keywords: file://./inputs/keywords.txt
       content: file://./inputs/doesnt_describe_method_before_results.md
