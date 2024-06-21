@@ -150,6 +150,17 @@ promptfoo view outputs/gpt-3.5-turbo-0125/
 
 [See more here](https://www.promptfoo.dev/docs/usage/web-ui).
 
+### Creating summary plots
+
+To create summary plots of the results, you need to start JupyterLab:
+
+```bash
+bash scripts/run_nbs_server.sh
+```
+
+Go to http://127.0.0.1:8899/lab/tree/nbs/section_summary and run the notebooks for each
+section to generate the plots.
+
 ### Misc
 
 If you need to clear `promptfoo`'s cache, you can run:

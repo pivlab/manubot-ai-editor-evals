@@ -24,7 +24,7 @@ from io import StringIO
 import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
-from proj.conf import abstract, introduction
+from proj.conf import abstract, introduction, outputs
 from proj.promptfoo import read_results
 
 # %% [markdown]
@@ -39,6 +39,11 @@ TEST_TYPES = [
     "Formatting",
     "Structure",
 ]
+
+# %%
+OUTPUT_FIGURES_DIR = outputs.FIGURES
+OUTPUT_FIGURES_DIR.mkdir(parents=True, exist_ok=True)
+display(OUTPUT_FIGURES_DIR)
 
 # %% [markdown]
 # # Get list of outputs for each model
@@ -763,7 +768,7 @@ g = sns.catplot(
     ],
     kind="bar",
     order=sorted_models,
-    errorbar=None,
+    # errorbar=None,
     height=4,
     aspect=2,
     legend_out=True,
@@ -786,5 +791,17 @@ new_labels = [
 ]
 for t, l in zip(g._legend.texts, new_labels):
     t.set_text(l)
+
+g.fig.savefig(
+    OUTPUT_FIGURES_DIR / "abstract-assertion_score_by_test_type.png",
+    bbox_inches="tight",
+    dpi=300,
+)
+
+g.fig.savefig(
+    OUTPUT_FIGURES_DIR / "abstract-assertion_score_by_test_type.svg",
+    bbox_inches="tight",
+    facecolor="white",
+)
 
 # %%
