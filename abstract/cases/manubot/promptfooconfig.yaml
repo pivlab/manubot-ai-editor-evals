@@ -13,9 +13,9 @@ defaultTest:
         description = "Starts with capital letter"
         type = "Formatting"
         score = 0.25
-
+        
         res = output.strip()[0].isupper()
-
+        
         return {
           "pass": res,
           "score": score if res else 0.0,
@@ -32,9 +32,9 @@ defaultTest:
         description = "Ends with a period"
         type = "Formatting"
         score = 0.25
-
+        
         res = output.strip()[-1] == "."
-
+        
         return {
           "pass": res,
           "score": score if res else 0.0,
@@ -51,9 +51,9 @@ defaultTest:
         description = "Is a single paragraph"
         type = "Formatting"
         score = 0.25
-
+        
         res = len(output.strip().split("\n")) == 1
-
+        
         return {
           "pass": res,
           "score": score if res else 0.0,
@@ -70,9 +70,9 @@ defaultTest:
         description = "Doesn't include manuscript title"
         type = "Formatting"
         score = 0.25
-
+        
         res = (context["vars"]["title"] not in output)
-
+        
         return {
           "pass": res,
           "score": score if res else 0.0,
@@ -89,7 +89,7 @@ defaultTest:
         description = "Doesn't reference authors, keywords, abstract, etc"
         type = "Formatting"
         score = 0.25
-
+        
         keywords = [
           "authors",
           "Abstract:",
@@ -97,7 +97,7 @@ defaultTest:
           "References:",
         ]
         res = not any(kw in output for kw in keywords)
-
+        
         return {
           "pass": res,
           "score": score if res else 0.0,
@@ -114,13 +114,13 @@ defaultTest:
         description = "Has roughly the same length as input"
         type = "Formatting"
         score = 0.25
-
+        
         input = context["vars"]["content"]
         input_words = len(input.strip().split())
         output_words = len(output.strip().split())
-
+        
         res = (output_words > 0.5 * input_words) and (output_words < 1.5 * input_words)
-
+        
         return {
           "pass": res,
           "score": score if res else 0.0,
@@ -133,6 +133,37 @@ defaultTest:
 
 # Make sure that output...
 tests:
+  # ...has no spelling or grammar errors
+  - vars:
+      test_description: Has no spelling errors
+      title: file://./inputs/title.txt
+      keywords: file://./inputs/keywords.txt
+      content: file://./inputs/has_spelling_and_grammar_errors.md
+    assert:
+      - type: python
+        value: |
+          description = "Has no spelling errors"
+          type = "Spelling/grammar"
+          score = 2.0
+          
+          # trailing spaces are intentional
+          keywords = [
+            "paradig ",
+            "However ",
+            "Github",
+          ]
+          res = not any(kw in output for kw in keywords)
+          
+          return {
+            "pass": res,
+            "score": score if res else 0.0,
+            "reason": "Passed" if res else "Failed",
+            "assertion": {
+              "value": description,
+              "type": type,
+            },
+          }
+
   # ...provides context before conclusion
   - vars:
       test_description: Provides context before conclusion
