@@ -163,16 +163,16 @@ tests:
             },
           }
 
-  # ...starts with background
+  # ...provides context before conclusion
   - vars:
-      test_description: Starts with background
+      test_description: Provides context before conclusion
       title: file://./inputs/title.txt
       keywords: file://./inputs/keywords.txt
-      content: file://./inputs/doesnt_starts_with_background.md
+      content: file://./inputs/context_conclusion_swapped.md
     assert:
       - type: python
         value: |
-          description = "Starts with background"
+          description = "Starts with context"
           type = "Structure"
           score = 2.0
           
@@ -229,11 +229,10 @@ tests:
     assert:
       - type: python
         value: |
-          description = "Ends with interpretation of results"
+          description = "Ends with conclusion"
           type = "Structure"
           score = 2.0
           
-          # look for "conclusion" words
           keywords = [
             "overall",
             "conclusion",
