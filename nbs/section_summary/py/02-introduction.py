@@ -24,7 +24,7 @@ from io import StringIO
 import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
-from proj.conf import abstract, introduction
+from proj.conf import introduction, outputs
 from proj.promptfoo import read_results
 
 # %% [markdown]
@@ -40,6 +40,11 @@ TEST_TYPES = [
     "Information accuracy",
     "Structure",
 ]
+
+# %%
+OUTPUT_FIGURES_DIR = outputs.FIGURES
+OUTPUT_FIGURES_DIR.mkdir(parents=True, exist_ok=True)
+display(OUTPUT_FIGURES_DIR)
 
 # %% [markdown]
 # # Get list of outputs for each model
@@ -92,7 +97,7 @@ results["comp_type"].value_counts()
 results["comp_desc"].value_counts()
 
 # %% [markdown]
-# # Pass rate
+# # Pass rate (`passed`, by promptfoo)
 
 # %% [markdown]
 # ## Stats
@@ -160,7 +165,7 @@ assert _df_stats["max"] <= 1.0
 # ### Plot by prompt
 
 # %%
-# sort models by comp_score in candidate prompts only (not baseline)
+# sort models by mean pass_rate in candidate prompts only (not baseline)
 sorted_models = (
     df[df["prompt"].isin(("candidate", "candidate_with_metadata"))]
     .groupby("model")["pass_rate"]
@@ -200,14 +205,15 @@ for t, l in zip(g._legend.texts, new_labels):
 df.groupby(["model", "prompt"])["pass_rate"].mean()
 
 # %% [markdown]
-# ## Assertion level
+# ## Assertion level and type
 
 # %% [markdown]
-# ### Sum and normalize `comp_pass` by model
+# ### Sum and normalize `passed` by model and test type
 
 # %% [markdown]
-# **Description:** This statistic computed below, based on the `comp_pass` column, measures if the assertion (by model and prompt) inside each test passed or failed, which is computed by promptfoo.
-# The previous plot used the `passed` column, with is by test, but this is is by assertions (which belong to a single test).
+# **Description:** This statistic computed below, based on the `comp_pass` column, measures if the assertion (by model, prompt and assertion type/`comp_type`) inside each test passed or failed, which is computed by promptfoo.
+# The previous plot used the `passed` column, which is by test, but this is is by assertions (which belong to a single test).
+# The test the assertion belongs to fails if a single assertion in it fails.
 
 # %%
 passed_unique = results.groupby(["model", "prompt"])["comp_pass"].count()
@@ -402,7 +408,7 @@ g = sns.catplot(
     legend_out=True,
 )
 g.fig.suptitle(
-    "Assertion pass rate by test type on 'candidate' prompt (models sorted by avg on 'candidate' prompt)",
+    "Assertion pass rate by test type ('candidate' prompt only)",
     ha="left",
     x=0.11,
 )
@@ -431,7 +437,7 @@ _tmp.index.get_level_values(0).unique()
 _tmp.loc["starling-lm-7b-alpha-fp16"]
 
 # %% [markdown]
-# ### Plot by assertion type (minus spelling/grammar) on `candidate` prompt
+# ### Plot by assertion type (no spelling/grammar) on `candidate` prompt
 
 # %%
 # sort models by score_avg in candidate prompts only (not baseline)
@@ -472,7 +478,7 @@ g = sns.catplot(
     legend_out=True,
 )
 g.fig.suptitle(
-    "Assertion pass rate by test type on 'candidate' prompt (models sorted by avg on 'candidate' prompt)",
+    "Assertion pass rate by test type on 'candidate' prompt ('candidate' prompt only)",
     ha="left",
     x=0.11,
 )
@@ -489,7 +495,10 @@ for t, l in zip(g._legend.texts, new_labels):
     t.set_text(l)
 
 # %% [markdown]
-# ### Sum and normalize `comp_pass` by model and assertion
+# ## Assertion level and description (`comp_desc`)
+
+# %% [markdown]
+# ### Sum and normalize `passed` by model and test type
 
 # %% [markdown]
 # **TODO**: agregate Formatting assertions? Otherwise, the plot is too cluttered.
@@ -590,11 +599,11 @@ g = sns.catplot(
     aspect=2,
     legend_out=True,
 )
-g.fig.suptitle(
-    "Assertion pass rate by test type on 'candidate' prompt (models sorted by avg on 'candidate' prompt)",
-    ha="left",
-    x=0.11,
-)
+# g.fig.suptitle(
+#     "Assertion pass rate by test type on 'candidate' prompt (models sorted by avg on 'candidate' prompt)",
+#     ha="left",
+#     x=0.11,
+# )
 g.set_xticklabels(rotation=30, ha="right")
 g.set(xlabel="Model", ylabel="Assertion pass rate")
 
@@ -608,16 +617,13 @@ g.set(xlabel="Model", ylabel="Assertion pass rate")
 #     t.set_text(l)
 
 # %% [markdown]
-# # Score
+# # Average score (`score_avg`, by promptfoo)
 
 # %% [markdown]
 # ## Stats
 
 # %%
 results["test_description"].unique()
-
-# %% [markdown]
-# ## Test level (`score_avg`, by promptfoo)
 
 # %%
 # used to normalize
@@ -628,6 +634,9 @@ MAX_SCORE = {
     "starts with context": ((0.25 * 6) + 2) / 7.0,
     "ends with conclusion": ((0.25 * 6) + 2) / 7.0,
 }
+
+# %% [markdown]
+# ## Test level
 
 # %% [markdown]
 # ### Normalize `score_avg`
@@ -649,22 +658,22 @@ df.apply(lambda x: x["score_avg"] / MAX_SCORE[x["test_description"]], axis=1)
 
 # %%
 df = df.assign(
-    score_std=df.apply(
+    score_avg=df.apply(
         lambda x: x["score_avg"] / MAX_SCORE[x["test_description"]], axis=1
     )
 )
 
 # %%
-_df_stats = df.groupby("test_description")["score_std"].describe()
+_df_stats = df.groupby("test_description")["score_avg"].describe()
 display(_df_stats)
 
 # %%
-_df_stats = df["score_std"].describe()
+_df_stats = df["score_avg"].describe()
 display(_df_stats)
 assert _df_stats["max"].max() <= 1.0
 
 # %%
-df.groupby("model")["score_std"].mean().sort_values()
+df.groupby("model")["score_avg"].mean().sort_values()
 
 # %% [markdown]
 # ### Plot by prompt
@@ -673,7 +682,7 @@ df.groupby("model")["score_std"].mean().sort_values()
 # sort models by score_avg in candidate prompts only (not baseline)
 sorted_models = (
     df[df["prompt"].isin(("candidate", "candidate_with_metadata"))]
-    .groupby("model")["score_std"]
+    .groupby("model")["score_avg"]
     .mean()
     .sort_values()
     .index.get_level_values("model")
@@ -688,7 +697,7 @@ sorted_models[-5:]
 g = sns.catplot(
     data=df,
     x="model",
-    y="score_std",
+    y="score_avg",
     hue="prompt",
     hue_order=["baseline", "candidate_with_metadata", "candidate"],
     kind="bar",
@@ -710,10 +719,10 @@ for t, l in zip(g._legend.texts, new_labels):
     t.set_text(l)
 
 # %% [markdown]
-# ## Assertion level (`comp_score`)
+# # Score per assertion (`comp_score`)
 
 # %% [markdown]
-# ### Stats
+# ## Stats
 
 # %%
 df = results.copy()
@@ -734,7 +743,7 @@ df["test_description"].value_counts()
 df["comp_type"].value_counts()
 
 # %% [markdown]
-# ### Normalize `comp_score`
+# ## Normalize `comp_score`
 
 # %%
 df.groupby("model")["comp_score"].mean().sort_values()
@@ -764,7 +773,7 @@ display(_df_stats)
 assert _df_stats["max"] <= 1.0
 
 # %% [markdown]
-# ### Plot by prompt
+# ## Plot by prompt
 
 # %%
 # sort models by comp_score in candidate prompts only (not baseline)
@@ -794,7 +803,7 @@ g = sns.catplot(
     aspect=2,
 )
 g.fig.suptitle(
-    "Assertion score by prompt\n(models sorted by avg on candidate prompts)",
+    "Assertion score by prompt\n(models sorted by\navg on candidate prompts)",
     ha="left",
     x=0.11,
 )
@@ -807,7 +816,7 @@ for t, l in zip(g._legend.texts, new_labels):
     t.set_text(l)
 
 # %% [markdown]
-# ### Plot by test type + `candidate` prompt
+# ## Plot by test type on `candidate` prompt
 
 # %%
 # sort models by score_avg in candidate prompts only (not baseline)
@@ -866,7 +875,7 @@ for t, l in zip(g._legend.texts, new_labels):
     t.set_text(l)
 
 # %% [markdown]
-# ### Plot by test type (no spelling/grammar) + `candidate` prompt
+# ## Plot by test type (no spelling/grammar) + `candidate` prompt
 
 # %%
 # sort models by score_avg in candidate prompts only (not baseline)
@@ -927,11 +936,14 @@ new_labels = [
 for t, l in zip(g._legend.texts, new_labels):
     t.set_text(l)
 
-# %%
-df[df["prompt"] == "candidate"].groupby(["model", "comp_type"])[
-    "comp_score"
-].mean().sort_values().loc[
-    ["gpt-4-0613", "claude-3-opus-20240229", "gpt-4-turbo-2024-04-09"]
-]
+g.fig.savefig(
+    OUTPUT_FIGURES_DIR / "introduction-assertion_score_by_test_type.png",
+    bbox_inches="tight",
+    dpi=300,
+)
 
-# %%
+g.fig.savefig(
+    OUTPUT_FIGURES_DIR / "introduction-assertion_score_by_test_type.svg",
+    bbox_inches="tight",
+    facecolor="white",
+)
