@@ -1,0 +1,272 @@
+prompts:
+  - file://../../prompts/baseline.txt
+  - file://../../prompts/candidate_with_metadata.txt
+  - file://../../prompts/candidate.txt
+
+# Default asserts applied to each test case below
+defaultTest:
+  # Make sure that output...
+  assert:
+    # ...starts with capital letter
+    - type: python
+      value: |
+        description = "Starts with capital letter"
+        type = "Formatting"
+        score = 0.25
+
+        res = output.strip()[0].isupper()
+
+        return {
+          "pass": res,
+          "score": score if res else 0.0,
+          "reason": "Passed" if res else "Failed",
+          "assertion": {
+            "value": description,
+            "type": type,
+          },
+        }
+
+    # ...ends with period
+    - type: python
+      value: |
+        description = "Ends with a period"
+        type = "Formatting"
+        score = 0.25
+
+        res = output.strip()[-1] == "."
+
+        return {
+          "pass": res,
+          "score": score if res else 0.0,
+          "reason": "Passed" if res else "Failed",
+          "assertion": {
+            "value": description,
+            "type": type,
+          },
+        }
+
+    # ...is a single paragraph
+    - type: python
+      value: |
+        description = "Is a multiblock paragraph"
+        type = "Formatting"
+        score = 0.25
+        
+        # in the methods section, one "paragraph" could have multiple blank lines
+        input = context["vars"]["content"].strip()
+        input_n_blank_lines = len([line for line in input.split("\n") if line.strip() == ""])
+        
+        # count blank lines in output
+        output_n_blank_lines = len([line for line in output.strip().split("\n") if line.strip() == ""])
+
+        # pass if both have > 0 blank lines or both have 0 blank lines
+        res = (input_n_blank_lines > 0 and output_n_blank_lines > 0) or (input_n_blank_lines == 0 and output_n_blank_lines == 0)
+
+        return {
+          "pass": res,
+          "score": score if res else 0.0,
+          "reason": "Passed" if res else "Failed",
+          "assertion": {
+            "value": description,
+            "type": type,
+          },
+        }
+
+    # ...doesn't include manuscript title
+    - type: python
+      value: |
+        description = "Doesn't include manuscript title"
+        type = "Formatting"
+        score = 0.25
+
+        res = (context["vars"]["title"] not in output)
+
+        return {
+          "pass": res,
+          "score": score if res else 0.0,
+          "reason": "Passed" if res else "Failed",
+          "assertion": {
+            "value": description,
+            "type": type,
+          },
+        }
+
+    # ...doesn't reference authors, keywords, abstract, etc
+    - type: python
+      value: |
+        description = "Doesn't reference authors, keywords, abstract, etc"
+        type = "Formatting"
+        score = 0.25
+
+        keywords = [
+          "Abstract:",
+          "Keywords:",
+          "References:",
+        ]
+        res = not any(kw in output for kw in keywords)
+
+        return {
+          "pass": res,
+          "score": score if res else 0.0,
+          "reason": "Passed" if res else "Failed",
+          "assertion": {
+            "value": description,
+            "type": type,
+          },
+        }
+
+    # ...is roughly same length as input
+    - type: python
+      value: |
+        description = "Has roughly the same length as input"
+        type = "Formatting"
+        score = 0.25
+
+        input = context["vars"]["content"]
+        input_words = len(input.strip().split())
+        output_words = len(output.strip().split())
+
+        res = (output_words > 0.5 * input_words) and (output_words < 1.5 * input_words)
+
+        return {
+          "pass": res,
+          "score": score if res else 0.0,
+          "reason": "Passed" if res else "Failed",
+          "assertion": {
+            "value": description,
+            "type": type,
+          },
+        }
+
+# Make sure that output...
+tests:
+  - vars:
+      test_description: Preserves inline math
+      title: file://./inputs/title.txt
+      keywords: file://./inputs/keywords.txt
+      content: file://./inputs/01-has_inline_math.md
+    assert:
+      - type: python
+        value: |
+          description = "Preserves inline math"
+          type = "Information accuracy / Math"
+          score = 2.0
+
+          keywords = [
+            ### whole case with $ at beginning and end:
+            r"$\mathbf{y}$",
+            r"$l$",
+            r"$X_a$",
+            r"$a$",
+            r"$w_{a}$",
+            r"$\mathbf{t}_l$",
+            r"$\tilde{\mathbf{t}}_l$",
+            ### parts of an expression:
+            r"\tilde{\mathbf{t}}_l",
+            r"\sum_{a \in \mathrm{model}_l}",
+          ]
+          
+          kws_not_found = []
+          for kw in keywords:
+              if kw not in output:
+                kws_not_found.append(kw)
+          res = len(kws_not_found) == 0
+
+          # create a string with a list of keywords that were not found
+          failed_reason_msg = "Failed to find the following keywords:\n - " + "\n - ".join(kws_not_found)
+          
+          # adjust score according to the number of keywords found
+          score = score * (1 - len(kws_not_found) / len(keywords))
+          
+          return {
+            "pass": res,
+            "score": score, # always returns a score based on failures
+            "reason": "Passed" if res else failed_reason_msg,
+            "assertion": {
+              "value": description,
+              "type": type,
+            },
+          }
+
+  - vars:
+      test_description: Preserves numbered equations and references to articles
+      title: file://./inputs/title.txt
+      keywords: file://./inputs/keywords.txt
+      content: file://./inputs/02-has_numbered_equations.md
+    assert:
+      - type: python
+        value: |
+          description = "Preserves numbered equations"
+          type = "Information accuracy / Math"
+          score = 2.0
+          
+          # FIXME: some strings below are constructed in a special way to handle a
+          #  promptfoo error with "$$" and "#" characters
+          keywords = [
+            r"$$" + r" {" + r"#eq:predixcan" + r"}",
+            r"\mathbf{y} = \mathbf{t}_l \gamma_l + \bm{\epsilon}_l",
+            r"\hat{z}_{l}",
+            r"\mathrm{se}(\hat{\gamma}_l)",
+            r"$l$",
+            r"$$" + r" {" + r"#eq:spredixcan" + r"}",
+            r"\hat{z}_{l} \approx \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)}",
+            r"$\hat{\sigma}_a$",
+            r"$\hat{\sigma}_l$",
+            r"$\hat{\beta}_a$",
+          ]
+          
+          kws_not_found = []
+          for kw in keywords:
+              if kw not in output:
+                kws_not_found.append(kw)
+          res = len(kws_not_found) == 0
+
+          # create a string with a list of keywords that were not found
+          failed_reason_msg = "Failed to find the following keywords:\n - " + "\n - ".join(kws_not_found)
+          
+          # adjust score according to the number of keywords found
+          score = score * (1 - len(kws_not_found) / len(keywords))
+          
+          return {
+            "pass": res,
+            "score": score, # always returns a score based on failures
+            "reason": "Passed" if res else failed_reason_msg,
+            "assertion": {
+              "value": description,
+              "type": type,
+            },
+          }
+
+      - type: python
+        value: |
+          description = "Keeps most references to other articles"
+          type = "Information accuracy / Citations"
+          score = 2.0
+
+          input = context["vars"]["content"]
+
+          references = {
+            "@doi:10.1038/s41467-018-03621-1",
+            "@doi:10.1038/ng.3367",
+            "@doi:10.1126/science.aaz1776",
+          }
+
+          # keep only references that are present in the input (this is needed because
+          #  references might be removed from the input in some test cases)
+          references = [ref for ref in references if ref in input]
+
+          count = len([ref for ref in references if ref in output])
+          res = (count / len(references) == 1.0)
+          
+          # TODO: adjust score according to the number of keywords found
+          # score = score * (1 - len(ref_not_found) / len(references))
+
+          return {
+            "pass": res,
+            "score": score if res else 0.0,
+            "reason": "Passed" if res else "Failed",
+            "assertion": {
+              "value": description,
+              "type": type,
+            },
+          }
