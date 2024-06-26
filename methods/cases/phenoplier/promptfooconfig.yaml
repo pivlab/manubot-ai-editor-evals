@@ -257,14 +257,99 @@ tests:
 
           count = len([ref for ref in references if ref in output])
           res = (count / len(references) == 1.0)
-          
+
+          # create a string with a list of keywords that were not found
+          failed_reason_msg = "Failed to reference the following articles:\n - " + "\n - ".join([ref for ref in references if ref not in output])
+
           # TODO: adjust score according to the number of keywords found
           # score = score * (1 - len(ref_not_found) / len(references))
 
           return {
             "pass": res,
             "score": score if res else 0.0,
-            "reason": "Passed" if res else "Failed",
+            "reason": "Passed" if res else failed_reason_msg,
+            "assertion": {
+              "value": description,
+              "type": type,
+            },
+          }
+
+  - vars:
+      test_description: Fixes wrong math
+      title: file://./inputs/title.txt
+      keywords: file://./inputs/keywords.txt
+      content: file://./inputs/03-has_incorrect_math_refs.md
+    assert:
+      - type: python
+        value: |
+          description = "Fixes wrong references to math symbols in defined equations"
+          type = "Information accuracy / Math"
+          score = 2.0
+
+          # Keys are the wrong references, values are the right references
+          keywords = {
+            r"$\beta_l$": r"$\gamma_l$",
+            r"$\epsilon_l$": r"$\bm{\epsilon}_l$",
+            r"$\hat{\Sigma}_a$": r"$\hat{\sigma}_a$",
+            r"$\sigma_l$": r"$\hat{\sigma}_l$",
+          }
+
+          kws_not_fixed = []
+          for wk, rk in keywords.items():
+              if wk in output:
+                kws_not_fixed.append(f"{wk} -> {rk}")
+              else:
+                if rk not in output:
+                  kws_not_fixed.append(f"{wk} -> {rk}")
+          res = len(kws_not_fixed) == 0
+
+          # create a string with a list of keywords that were not found
+          failed_reason_msg = "Failed to fix the following expressions:\n - " + "\n - ".join(kws_not_fixed)
+
+          # adjust score according to the number of keywords found
+          score = score * (1 - len(kws_not_fixed) / len(keywords))
+
+          return {
+            "pass": res,
+            "score": score, # always returns a score based on failures
+            "reason": "Passed" if res else failed_reason_msg,
+            "assertion": {
+              "value": description,
+              "type": type,
+            },
+          }
+
+      - type: python
+        value: |
+          description = "Fixes wrong latex expressions"
+          type = "Information accuracy / Math"
+          score = 2.0
+
+          # Keys are the wrong latex, values are the right latex
+          keywords = {
+            r"\appro ": r"\approx ",
+            r"\mathbf{t_l ": r"\mathbf{t}_l ",
+          }
+
+          kws_not_fixed = []
+          for wk, rk in keywords.items():
+              if wk in output:
+                kws_not_fixed.append(f"{wk} -> {rk}")
+              else:
+                if rk not in output:
+                  kws_not_fixed.append(f"{wk} -> {rk}")
+          res = len(kws_not_fixed) == 0
+
+          # create a string with a list of keywords that were not found
+          failed_reason_msg = "Failed to fix the following expressions:\n - " + "\n - ".join(kws_not_fixed)
+
+          # adjust score according to the number of keywords found
+          score = score * (1 - len(kws_not_fixed) / len(keywords))
+
+          return {
+            "pass": res,
+            "score": score, # always returns a score based on failures
+            "reason": "Passed" if res else failed_reason_msg,
             "assertion": {
               "value": description,
               "type": type,
