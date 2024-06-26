@@ -83,6 +83,31 @@ defaultTest:
           },
         }
 
+    # ...doesn't reference authors, keywords, abstract, etc
+    - type: python
+      value: |
+        description = "Doesn't reference authors, keywords, abstract, etc"
+        type = "Formatting"
+        score = 0.25
+
+        keywords = [
+          "authors",
+          "Abstract:",
+          "Keywords:",
+          "References:",
+        ]
+        res = not any(kw in output for kw in keywords)
+
+        return {
+          "pass": res,
+          "score": score if res else 0.0,
+          "reason": "Passed" if res else "Failed",
+          "assertion": {
+            "value": description,
+            "type": type,
+          },
+        }
+
     # ...is roughly same length as input
     - type: python
       value: |
@@ -121,7 +146,7 @@ tests:
           type = "Structure"
           score = 2.0
 
-          keywords = ["doi", "reference", "list", "citation"]
+          keywords = ["science", "internet", "global", "public"]
           first_sentences = ".".join(output.lower().split(".")[:2])
           res = len([x in first_sentences for x in keywords]) >= 2
 
@@ -141,43 +166,9 @@ tests:
           type = "Structure"
           score = 2.0
 
-          keywords = ["support", "writing", "process"]
+          keywords = ["software", "data", "study", "new", "research"]
           last_sentences = ".".join(output.lower().split(".")[-3:])
           res = len([x in last_sentences for x in keywords]) >= 2
-
-          return {
-            "pass": res,
-            "score": score if res else 0.0,
-            "reason": "Passed" if res else "Failed",
-            "assertion": {
-              "value": description,
-              "type": type,
-            },
-          }
-
-  # ...keeps most references and doesn't make them up
-  - vars:
-      test_description: Keeps most references and doesn't make them up
-      title: file://./inputs/title.txt
-      keywords: file://./inputs/keywords.txt
-      content: file://./inputs/has_references.md
-    assert:
-      - type: python
-        value: |
-          description = "Keeps most references"
-          type = "Information accuracy"
-          score = 2.0
-
-          input = context["vars"]["content"]
-
-          references = {
-            "@doi:10.1515/9781400839452",
-            "@doi:10.17226/25116",
-          }
-
-          references = [ref for ref in references if ref in input]
-          count = len([ref for ref in references if ref in output])
-          res = (count / len(references) > 0.50)
 
           return {
             "pass": res,

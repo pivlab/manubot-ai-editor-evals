@@ -1,0 +1,831 @@
+{
+  "results": {
+    "version": 2,
+    "results": [
+      {
+        "provider": {
+          "id": "exec:python /Users/vincerubinetti/Desktop/manubot-ai-editor-evals/src/llm.py  --model openai=gpt-4-0613"
+        },
+        "prompt": {
+          "raw": "You are a scientist with copy-editing skills who will help in improving the text of a manuscript with title 'Open collaborative writing with Manubot' and keywords 'manuscript, open science, collaborative, writing, reproducibility, provenance, software, git, html.' Revise the following methods of this manuscript.\n\nInput paragraph: In cases where automatic retrieval of metadata fails or produces incorrect references --- which is most common for URL citations --- users can manually provide the correct metadata using common reference formats. Manual metadata also supports references without standard identifiers, such as print-only newspaper articles. Table @tbl:citations presents the supported identifiers and example citations before and after Manubot processing. Authors can optionally define citation tags to provide short readable alternatives to the citation identifiers. Citation metadata is exported to the [Citation Style Language (CSL) JSON Data Items](http://citeproc-js.readthedocs.io/en/latest/csl-json/markup.html#items) format, an open standard that is widely supported by reference managers [@doi:10.1007/978-3-319-00026-8_8; @doi:10.1080/02763869.2012.641841]. However, sometimes external resources provide Manubot with invalid CSL Data, which can cause errors with downstream citation processors, such as [pandoc-citeproc](http://hackage.haskell.org/package/pandoc-citeproc). Therefore, Manubot removes invalid fields according to the [CSL Data specification](https://github.com/citation-style-language/schema). Manubot includes an additional layer of citation processing, currently unique to the system. All citations point to a standard identifier, for which Manubot automatically retrieves bibliographic metadata such as the title, authors, and publication date.\n\nRevised paragraph:",
+          "display": "/Users/vincerubinetti/Desktop/manubot-ai-editor-evals/methods/prompts/baseline.txt"
+        },
+        "vars": {
+          "test_description": "Provides context before conclusion",
+          "title": "Open collaborative writing with Manubot",
+          "keywords": "manuscript, open science, collaborative, writing, reproducibility, provenance, software, git, html",
+          "content": "In cases where automatic retrieval of metadata fails or produces incorrect references --- which is most common for URL citations --- users can manually provide the correct metadata using common reference formats. Manual metadata also supports references without standard identifiers, such as print-only newspaper articles. Table @tbl:citations presents the supported identifiers and example citations before and after Manubot processing. Authors can optionally define citation tags to provide short readable alternatives to the citation identifiers. Citation metadata is exported to the [Citation Style Language (CSL) JSON Data Items](http://citeproc-js.readthedocs.io/en/latest/csl-json/markup.html#items) format, an open standard that is widely supported by reference managers [@doi:10.1007/978-3-319-00026-8_8; @doi:10.1080/02763869.2012.641841]. However, sometimes external resources provide Manubot with invalid CSL Data, which can cause errors with downstream citation processors, such as [pandoc-citeproc](http://hackage.haskell.org/package/pandoc-citeproc). Therefore, Manubot removes invalid fields according to the [CSL Data specification](https://github.com/citation-style-language/schema). Manubot includes an additional layer of citation processing, currently unique to the system. All citations point to a standard identifier, for which Manubot automatically retrieves bibliographic metadata such as the title, authors, and publication date."
+        },
+        "response": {
+          "output": "In instances where automatic metadata retrieval is unsuccessful or generates incorrect references -- a common occurrence for URL citations -- users have the option to manually input the accurate metadata using conventional reference formats. This manual metadata also caters to references lacking standard identifiers, such as print-only newspaper articles. Table @tbl:citations demonstrates the identifiers supported and provides examples of citations before and after Manubot processing. Authors have the option to define citation tags, offering short, readable alternatives to citation identifiers. The citation metadata is then exported to the Citation Style Language (CSL) JSON Data Items format, an open standard widely recognized by reference managers [@doi:10.1007/978-3-319-00026-8_8; @doi:10.1080/02763869.2012.641841]. However, there are instances when external resources supply Manubot with invalid CSL Data, potentially causing errors with subsequent citation processors, such as pandoc-citeproc. As a result, Manubot eliminates invalid fields in accordance with the CSL Data specification. Manubot also incorporates an additional layer of citation processing, a feature currently unique to the system. All citations are directed towards a standard identifier, from which Manubot automatically retrieves bibliographic metadata like the title, authors, and publication date."
+        },
+        "success": false,
+        "score": 0.4375,
+        "namedScores": {},
+        "latencyMs": 1382,
+        "error": "Failed",
+        "gradingResult": {
+          "pass": false,
+          "score": 0.4375,
+          "namedScores": {},
+          "reason": "Failed",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 0.25,
+              "reason": "Passed",
+              "assertion": {
+                "value": "Starts with capital letter",
+                "type": "Formatting"
+              }
+            },
+            {
+              "pass": true,
+              "score": 0.25,
+              "reason": "Passed",
+              "assertion": {
+                "value": "Ends with a period",
+                "type": "Formatting"
+              }
+            },
+            {
+              "pass": true,
+              "score": 0.25,
+              "reason": "Passed",
+              "assertion": {
+                "value": "Is a single paragraph",
+                "type": "Formatting"
+              }
+            },
+            {
+              "pass": true,
+              "score": 0.25,
+              "reason": "Passed",
+              "assertion": {
+                "value": "Doesn't include manuscript title",
+                "type": "Formatting"
+              }
+            },
+            {
+              "pass": true,
+              "score": 0.25,
+              "reason": "Passed",
+              "assertion": {
+                "value": "Doesn't reference authors, keywords, abstract, etc",
+                "type": "Formatting"
+              }
+            },
+            {
+              "pass": true,
+              "score": 0.25,
+              "reason": "Passed",
+              "assertion": {
+                "value": "Has roughly the same length as input",
+                "type": "Formatting"
+              }
+            },
+            {
+              "pass": false,
+              "score": 0,
+              "reason": "Failed",
+              "assertion": {
+                "value": "Starts with context",
+                "type": "Structure"
+              }
+            },
+            {
+              "pass": true,
+              "score": 2,
+              "reason": "Passed",
+              "assertion": {
+                "value": "Ends with conclusion",
+                "type": "Structure"
+              }
+            }
+          ],
+          "assertion": null
+        }
+      },
+      {
+        "provider": {
+          "id": "exec:python /Users/vincerubinetti/Desktop/manubot-ai-editor-evals/src/llm.py  --model openai=gpt-4-0613"
+        },
+        "prompt": {
+          "raw": "You are a scientist with copy-editing skills who will help in improving the text of a manuscript with title 'Open collaborative writing with Manubot' and keywords 'manuscript, open science, collaborative, writing, reproducibility, provenance, software, git, html.' Revise the following methods of this manuscript so that it has a clear sentence structure and fits in a single paragraph. The revision should follow a context-content-conclusion (C-C-C) scheme, as follows: 1) The context portion communicates to the reader what gap the paper will fill. The first sentence orients the reader by introducing the broader field in which the manuscript's research is situated. Then, the context is narrowed until it lands on the open question that the research answers. A successful context section distinguishes the research’s contributions from the current state-of-the-art, communicating what is missing in the current literature (i.e., the specific gap) and why that matters (i.e. the connection between the specific gap and the broader context). 2) The content portion (e.g. \"here we\") first describes the novel method or approach that was used to fill the gap, then presents an executive summary of results. 3) The conclusion portion interprets the results to answer the question that was posed at the end of the context portion. There may be a second part to the conclusion portion that highlights how this conclusion moves the broader field forward (e.g. \"broader significance\").\n\nInput paragraph: In cases where automatic retrieval of metadata fails or produces incorrect references --- which is most common for URL citations --- users can manually provide the correct metadata using common reference formats. Manual metadata also supports references without standard identifiers, such as print-only newspaper articles. Table @tbl:citations presents the supported identifiers and example citations before and after Manubot processing. Authors can optionally define citation tags to provide short readable alternatives to the citation identifiers. Citation metadata is exported to the [Citation Style Language (CSL) JSON Data Items](http://citeproc-js.readthedocs.io/en/latest/csl-json/markup.html#items) format, an open standard that is widely supported by reference managers [@doi:10.1007/978-3-319-00026-8_8; @doi:10.1080/02763869.2012.641841]. However, sometimes external resources provide Manubot with invalid CSL Data, which can cause errors with downstream citation processors, such as [pandoc-citeproc](http://hackage.haskell.org/package/pandoc-citeproc). Therefore, Manubot removes invalid fields according to the [CSL Data specification](https://github.com/citation-style-language/schema). Manubot includes an additional layer of citation processing, currently unique to the system. All citations point to a standard identifier, for which Manubot automatically retrieves bibliographic metadata such as the title, authors, and publication date.\n\nRevised paragraph:",
+          "display": "/Users/vincerubinetti/Desktop/manubot-ai-editor-evals/methods/prompts/candidate_with_metadata.txt"
+        },
+        "vars": {
+          "test_description": "Provides context before conclusion",
+          "title": "Open collaborative writing with Manubot",
+          "keywords": "manuscript, open science, collaborative, writing, reproducibility, provenance, software, git, html",
+          "content": "In cases where automatic retrieval of metadata fails or produces incorrect references --- which is most common for URL citations --- users can manually provide the correct metadata using common reference formats. Manual metadata also supports references without standard identifiers, such as print-only newspaper articles. Table @tbl:citations presents the supported identifiers and example citations before and after Manubot processing. Authors can optionally define citation tags to provide short readable alternatives to the citation identifiers. Citation metadata is exported to the [Citation Style Language (CSL) JSON Data Items](http://citeproc-js.readthedocs.io/en/latest/csl-json/markup.html#items) format, an open standard that is widely supported by reference managers [@doi:10.1007/978-3-319-00026-8_8; @doi:10.1080/02763869.2012.641841]. However, sometimes external resources provide Manubot with invalid CSL Data, which can cause errors with downstream citation processors, such as [pandoc-citeproc](http://hackage.haskell.org/package/pandoc-citeproc). Therefore, Manubot removes invalid fields according to the [CSL Data specification](https://github.com/citation-style-language/schema). Manubot includes an additional layer of citation processing, currently unique to the system. All citations point to a standard identifier, for which Manubot automatically retrieves bibliographic metadata such as the title, authors, and publication date."
+        },
+        "response": {
+          "output": "Within the broader field of open science, a significant challenge resides in the accurate and reproducible citation of various sources, particularly those without standard identifiers such as URL citations and print-only articles. This manuscript addresses this gap by introducing Manubot, a tool designed to enhance the quality and reliability of metadata retrieval for a wide range of references. Manubot allows users to manually input metadata using common reference formats when automatic retrieval fails or produces incorrect references. As demonstrated in Table @tbl:citations, the tool supports a diverse set of identifiers and enables authors to define citation tags for more readable alternatives. The metadata is exported to the Citation Style Language (CSL) JSON Data Items format, a widely supported open standard. However, the system occasionally encounters invalid CSL Data from external resources, potentially leading to downstream citation processor errors. To mitigate this, Manubot removes invalid fields in accordance with the CSL Data specification. Unique to Manubot is an additional layer of citation processing where all citations point to a standard identifier, allowing automatic retrieval of key bibliographic metadata. The introduction of Manubot significantly enhances the reproducibility and provenance of citations in collaborative writing, thereby advancing the field of open science."
+        },
+        "success": false,
+        "score": 0.4375,
+        "namedScores": {},
+        "latencyMs": 997,
+        "error": "Failed",
+        "gradingResult": {
+          "pass": false,
+          "score": 0.4375,
+          "namedScores": {},
+          "reason": "Failed",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 0.25,
+              "reason": "Passed",
+              "assertion": {
+                "value": "Starts with capital letter",
+                "type": "Formatting"
+              }
+            },
+            {
+              "pass": true,
+              "score": 0.25,
+              "reason": "Passed",
+              "assertion": {
+                "value": "Ends with a period",
+                "type": "Formatting"
+              }
+            },
+            {
+              "pass": true,
+              "score": 0.25,
+              "reason": "Passed",
+              "assertion": {
+                "value": "Is a single paragraph",
+                "type": "Formatting"
+              }
+            },
+            {
+              "pass": true,
+              "score": 0.25,
+              "reason": "Passed",
+              "assertion": {
+                "value": "Doesn't include manuscript title",
+                "type": "Formatting"
+              }
+            },
+            {
+              "pass": true,
+              "score": 0.25,
+              "reason": "Passed",
+              "assertion": {
+                "value": "Doesn't reference authors, keywords, abstract, etc",
+                "type": "Formatting"
+              }
+            },
+            {
+              "pass": true,
+              "score": 0.25,
+              "reason": "Passed",
+              "assertion": {
+                "value": "Has roughly the same length as input",
+                "type": "Formatting"
+              }
+            },
+            {
+              "pass": false,
+              "score": 0,
+              "reason": "Failed",
+              "assertion": {
+                "value": "Starts with context",
+                "type": "Structure"
+              }
+            },
+            {
+              "pass": true,
+              "score": 2,
+              "reason": "Passed",
+              "assertion": {
+                "value": "Ends with conclusion",
+                "type": "Structure"
+              }
+            }
+          ],
+          "assertion": null
+        }
+      },
+      {
+        "provider": {
+          "id": "exec:python /Users/vincerubinetti/Desktop/manubot-ai-editor-evals/src/llm.py  --model openai=gpt-4-0613"
+        },
+        "prompt": {
+          "raw": "You are a scientist with copy-editing skills who will help in improving the text of a manuscript. Revise the following methods of this manuscript so that it has a clear sentence structure and fits in a single paragraph. The revision should follow a context-content-conclusion (C-C-C) scheme, as follows: 1) The context portion communicates to the reader what gap the paper will fill. The first sentence orients the reader by introducing the broader field in which the manuscript's research is situated. Then, the context is narrowed until it lands on the open question that the research answers. A successful context section distinguishes the research’s contributions from the current state-of-the-art, communicating what is missing in the current literature (i.e., the specific gap) and why that matters (i.e. the connection between the specific gap and the broader context). 2) The content portion (e.g. \"here we\") first describes the novel method or approach that was used to fill the gap, then presents an executive summary of results. 3) The conclusion portion interprets the results to answer the question that was posed at the end of the context portion. There may be a second part to the conclusion portion that highlights how this conclusion moves the broader field forward (e.g. \"broader significance\"). If any part of the C-C-C scheme is missing, put a note in the place where it belongs so I can fill it in, e.g. \"CONTEXT MISSING\".\n\nInput paragraph: In cases where automatic retrieval of metadata fails or produces incorrect references --- which is most common for URL citations --- users can manually provide the correct metadata using common reference formats. Manual metadata also supports references without standard identifiers, such as print-only newspaper articles. Table @tbl:citations presents the supported identifiers and example citations before and after Manubot processing. Authors can optionally define citation tags to provide short readable alternatives to the citation identifiers. Citation metadata is exported to the [Citation Style Language (CSL) JSON Data Items](http://citeproc-js.readthedocs.io/en/latest/csl-json/markup.html#items) format, an open standard that is widely supported by reference managers [@doi:10.1007/978-3-319-00026-8_8; @doi:10.1080/02763869.2012.641841]. However, sometimes external resources provide Manubot with invalid CSL Data, which can cause errors with downstream citation processors, such as [pandoc-citeproc](http://hackage.haskell.org/package/pandoc-citeproc). Therefore, Manubot removes invalid fields according to the [CSL Data specification](https://github.com/citation-style-language/schema). Manubot includes an additional layer of citation processing, currently unique to the system. All citations point to a standard identifier, for which Manubot automatically retrieves bibliographic metadata such as the title, authors, and publication date.\n\nRevised paragraph:",
+          "display": "/Users/vincerubinetti/Desktop/manubot-ai-editor-evals/methods/prompts/candidate.txt"
+        },
+        "vars": {
+          "test_description": "Provides context before conclusion",
+          "title": "Open collaborative writing with Manubot",
+          "keywords": "manuscript, open science, collaborative, writing, reproducibility, provenance, software, git, html",
+          "content": "In cases where automatic retrieval of metadata fails or produces incorrect references --- which is most common for URL citations --- users can manually provide the correct metadata using common reference formats. Manual metadata also supports references without standard identifiers, such as print-only newspaper articles. Table @tbl:citations presents the supported identifiers and example citations before and after Manubot processing. Authors can optionally define citation tags to provide short readable alternatives to the citation identifiers. Citation metadata is exported to the [Citation Style Language (CSL) JSON Data Items](http://citeproc-js.readthedocs.io/en/latest/csl-json/markup.html#items) format, an open standard that is widely supported by reference managers [@doi:10.1007/978-3-319-00026-8_8; @doi:10.1080/02763869.2012.641841]. However, sometimes external resources provide Manubot with invalid CSL Data, which can cause errors with downstream citation processors, such as [pandoc-citeproc](http://hackage.haskell.org/package/pandoc-citeproc). Therefore, Manubot removes invalid fields according to the [CSL Data specification](https://github.com/citation-style-language/schema). Manubot includes an additional layer of citation processing, currently unique to the system. All citations point to a standard identifier, for which Manubot automatically retrieves bibliographic metadata such as the title, authors, and publication date."
+        },
+        "response": {
+          "output": "The current state of scientific literature often encounters issues with the automatic retrieval of metadata, especially for URL citations, leading to incorrect references or the need for manual input. This is particularly problematic for references without standard identifiers, such as print-only newspaper articles. To address this gap, we have developed Manubot, a system that allows users to manually provide correct metadata using common reference formats. As demonstrated in Table @tbl:citations, Manubot supports various identifiers and improves citation accuracy. Additionally, authors can define citation tags for short, readable alternatives to citation identifiers. The citation metadata is then exported to the Citation Style Language (CSL) JSON Data Items format, a widely supported open standard in reference managers. However, Manubot occasionally encounters invalid CSL Data from external resources, causing errors with downstream citation processors like pandoc-citeproc. To counter this, Manubot is designed to eliminate invalid fields in accordance with the CSL Data specification. A unique feature of Manubot is its additional layer of citation processing, where all citations point to a standard identifier, enabling automatic retrieval of bibliographic metadata such as title, authors, and publication date. This innovative approach not only solves the existing metadata retrieval problem but also enhances the accuracy and efficiency of scientific referencing, pushing the broader field of scientific literature towards a more streamlined and error-free future."
+        },
+        "success": true,
+        "score": 0.6875,
+        "namedScores": {},
+        "latencyMs": 993,
+        "gradingResult": {
+          "pass": true,
+          "score": 0.6875,
+          "namedScores": {},
+          "reason": "All assertions passed",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 0.25,
+              "reason": "Passed",
+              "assertion": {
+                "value": "Starts with capital letter",
+                "type": "Formatting"
+              }
+            },
+            {
+              "pass": true,
+              "score": 0.25,
+              "reason": "Passed",
+              "assertion": {
+                "value": "Ends with a period",
+                "type": "Formatting"
+              }
+            },
+            {
+              "pass": true,
+              "score": 0.25,
+              "reason": "Passed",
+              "assertion": {
+                "value": "Is a single paragraph",
+                "type": "Formatting"
+              }
+            },
+            {
+              "pass": true,
+              "score": 0.25,
+              "reason": "Passed",
+              "assertion": {
+                "value": "Doesn't include manuscript title",
+                "type": "Formatting"
+              }
+            },
+            {
+              "pass": true,
+              "score": 0.25,
+              "reason": "Passed",
+              "assertion": {
+                "value": "Doesn't reference authors, keywords, abstract, etc",
+                "type": "Formatting"
+              }
+            },
+            {
+              "pass": true,
+              "score": 0.25,
+              "reason": "Passed",
+              "assertion": {
+                "value": "Has roughly the same length as input",
+                "type": "Formatting"
+              }
+            },
+            {
+              "pass": true,
+              "score": 2,
+              "reason": "Passed",
+              "assertion": {
+                "value": "Starts with context",
+                "type": "Structure"
+              }
+            },
+            {
+              "pass": true,
+              "score": 2,
+              "reason": "Passed",
+              "assertion": {
+                "value": "Ends with conclusion",
+                "type": "Structure"
+              }
+            }
+          ],
+          "assertion": null
+        }
+      }
+    ],
+    "stats": {
+      "successes": 1,
+      "failures": 2,
+      "tokenUsage": {
+        "total": 0,
+        "prompt": 0,
+        "completion": 0,
+        "cached": 0
+      }
+    },
+    "table": {
+      "head": {
+        "prompts": [
+          {
+            "raw": "You are a scientist with copy-editing skills who will help in improving the text of a manuscript with title '{{ title }}' and keywords '{{ keywords }}.' Revise the following methods of this manuscript.\n\nInput paragraph: {{ content }}\n\nRevised paragraph:",
+            "display": "/Users/vincerubinetti/Desktop/manubot-ai-editor-evals/methods/prompts/baseline.txt",
+            "id": "bbad3dc272ed8341b2e39ecfedaac5653291fce3e28f5b8651150b07095e8952",
+            "provider": "exec:python /Users/vincerubinetti/Desktop/manubot-ai-editor-evals/src/llm.py  --model openai=gpt-4-0613",
+            "metrics": {
+              "score": 0.4375,
+              "testPassCount": 0,
+              "testFailCount": 1,
+              "assertPassCount": 7,
+              "assertFailCount": 1,
+              "totalLatencyMs": 1382,
+              "tokenUsage": {
+                "total": 0,
+                "prompt": 0,
+                "completion": 0,
+                "cached": 0
+              },
+              "namedScores": {},
+              "cost": 0
+            }
+          },
+          {
+            "raw": "You are a scientist with copy-editing skills who will help in improving the text of a manuscript with title '{{ title }}' and keywords '{{ keywords }}.' Revise the following methods of this manuscript so that it has a clear sentence structure and fits in a single paragraph. The revision should follow a context-content-conclusion (C-C-C) scheme, as follows: 1) The context portion communicates to the reader what gap the paper will fill. The first sentence orients the reader by introducing the broader field in which the manuscript's research is situated. Then, the context is narrowed until it lands on the open question that the research answers. A successful context section distinguishes the research’s contributions from the current state-of-the-art, communicating what is missing in the current literature (i.e., the specific gap) and why that matters (i.e. the connection between the specific gap and the broader context). 2) The content portion (e.g. \"here we\") first describes the novel method or approach that was used to fill the gap, then presents an executive summary of results. 3) The conclusion portion interprets the results to answer the question that was posed at the end of the context portion. There may be a second part to the conclusion portion that highlights how this conclusion moves the broader field forward (e.g. \"broader significance\").\n\nInput paragraph: {{ content }}\n\nRevised paragraph:",
+            "display": "/Users/vincerubinetti/Desktop/manubot-ai-editor-evals/methods/prompts/candidate_with_metadata.txt",
+            "id": "0ab74ddc94b9c90089353e9169be3b28b2f0d0d86cd853c4c3abdba4b4000109",
+            "provider": "exec:python /Users/vincerubinetti/Desktop/manubot-ai-editor-evals/src/llm.py  --model openai=gpt-4-0613",
+            "metrics": {
+              "score": 0.4375,
+              "testPassCount": 0,
+              "testFailCount": 1,
+              "assertPassCount": 7,
+              "assertFailCount": 1,
+              "totalLatencyMs": 997,
+              "tokenUsage": {
+                "total": 0,
+                "prompt": 0,
+                "completion": 0,
+                "cached": 0
+              },
+              "namedScores": {},
+              "cost": 0
+            }
+          },
+          {
+            "raw": "You are a scientist with copy-editing skills who will help in improving the text of a manuscript. Revise the following methods of this manuscript so that it has a clear sentence structure and fits in a single paragraph. The revision should follow a context-content-conclusion (C-C-C) scheme, as follows: 1) The context portion communicates to the reader what gap the paper will fill. The first sentence orients the reader by introducing the broader field in which the manuscript's research is situated. Then, the context is narrowed until it lands on the open question that the research answers. A successful context section distinguishes the research’s contributions from the current state-of-the-art, communicating what is missing in the current literature (i.e., the specific gap) and why that matters (i.e. the connection between the specific gap and the broader context). 2) The content portion (e.g. \"here we\") first describes the novel method or approach that was used to fill the gap, then presents an executive summary of results. 3) The conclusion portion interprets the results to answer the question that was posed at the end of the context portion. There may be a second part to the conclusion portion that highlights how this conclusion moves the broader field forward (e.g. \"broader significance\"). If any part of the C-C-C scheme is missing, put a note in the place where it belongs so I can fill it in, e.g. \"CONTEXT MISSING\".\n\nInput paragraph: {{ content }}\n\nRevised paragraph:",
+            "display": "/Users/vincerubinetti/Desktop/manubot-ai-editor-evals/methods/prompts/candidate.txt",
+            "id": "9187000e957ffab454fb51a7b34e3e06d2557b9493370329c99ac5e2cf630628",
+            "provider": "exec:python /Users/vincerubinetti/Desktop/manubot-ai-editor-evals/src/llm.py  --model openai=gpt-4-0613",
+            "metrics": {
+              "score": 0.6875,
+              "testPassCount": 1,
+              "testFailCount": 0,
+              "assertPassCount": 8,
+              "assertFailCount": 0,
+              "totalLatencyMs": 993,
+              "tokenUsage": {
+                "total": 0,
+                "prompt": 0,
+                "completion": 0,
+                "cached": 0
+              },
+              "namedScores": {},
+              "cost": 0
+            }
+          }
+        ],
+        "vars": [
+          "content",
+          "keywords",
+          "test_description",
+          "title"
+        ]
+      },
+      "body": [
+        {
+          "outputs": [
+            {
+              "pass": false,
+              "score": 0.4375,
+              "namedScores": {},
+              "text": "Failed\n---\nIn instances where automatic metadata retrieval is unsuccessful or generates incorrect references -- a common occurrence for URL citations -- users have the option to manually input the accurate metadata using conventional reference formats. This manual metadata also caters to references lacking standard identifiers, such as print-only newspaper articles. Table @tbl:citations demonstrates the identifiers supported and provides examples of citations before and after Manubot processing. Authors have the option to define citation tags, offering short, readable alternatives to citation identifiers. The citation metadata is then exported to the Citation Style Language (CSL) JSON Data Items format, an open standard widely recognized by reference managers [@doi:10.1007/978-3-319-00026-8_8; @doi:10.1080/02763869.2012.641841]. However, there are instances when external resources supply Manubot with invalid CSL Data, potentially causing errors with subsequent citation processors, such as pandoc-citeproc. As a result, Manubot eliminates invalid fields in accordance with the CSL Data specification. Manubot also incorporates an additional layer of citation processing, a feature currently unique to the system. All citations are directed towards a standard identifier, from which Manubot automatically retrieves bibliographic metadata like the title, authors, and publication date.",
+              "prompt": "You are a scientist with copy-editing skills who will help in improving the text of a manuscript with title 'Open collaborative writing with Manubot' and keywords 'manuscript, open science, collaborative, writing, reproducibility, provenance, software, git, html.' Revise the following methods of this manuscript.\n\nInput paragraph: In cases where automatic retrieval of metadata fails or produces incorrect references --- which is most common for URL citations --- users can manually provide the correct metadata using common reference formats. Manual metadata also supports references without standard identifiers, such as print-only newspaper articles. Table @tbl:citations presents the supported identifiers and example citations before and after Manubot processing. Authors can optionally define citation tags to provide short readable alternatives to the citation identifiers. Citation metadata is exported to the [Citation Style Language (CSL) JSON Data Items](http://citeproc-js.readthedocs.io/en/latest/csl-json/markup.html#items) format, an open standard that is widely supported by reference managers [@doi:10.1007/978-3-319-00026-8_8; @doi:10.1080/02763869.2012.641841]. However, sometimes external resources provide Manubot with invalid CSL Data, which can cause errors with downstream citation processors, such as [pandoc-citeproc](http://hackage.haskell.org/package/pandoc-citeproc). Therefore, Manubot removes invalid fields according to the [CSL Data specification](https://github.com/citation-style-language/schema). Manubot includes an additional layer of citation processing, currently unique to the system. All citations point to a standard identifier, for which Manubot automatically retrieves bibliographic metadata such as the title, authors, and publication date.\n\nRevised paragraph:",
+              "provider": "exec:python /Users/vincerubinetti/Desktop/manubot-ai-editor-evals/src/llm.py  --model openai=gpt-4-0613",
+              "latencyMs": 1382,
+              "gradingResult": {
+                "pass": false,
+                "score": 0.4375,
+                "namedScores": {},
+                "reason": "Failed",
+                "tokensUsed": {
+                  "total": 0,
+                  "prompt": 0,
+                  "completion": 0
+                },
+                "componentResults": [
+                  {
+                    "pass": true,
+                    "score": 0.25,
+                    "reason": "Passed",
+                    "assertion": {
+                      "value": "Starts with capital letter",
+                      "type": "Formatting"
+                    }
+                  },
+                  {
+                    "pass": true,
+                    "score": 0.25,
+                    "reason": "Passed",
+                    "assertion": {
+                      "value": "Ends with a period",
+                      "type": "Formatting"
+                    }
+                  },
+                  {
+                    "pass": true,
+                    "score": 0.25,
+                    "reason": "Passed",
+                    "assertion": {
+                      "value": "Is a single paragraph",
+                      "type": "Formatting"
+                    }
+                  },
+                  {
+                    "pass": true,
+                    "score": 0.25,
+                    "reason": "Passed",
+                    "assertion": {
+                      "value": "Doesn't include manuscript title",
+                      "type": "Formatting"
+                    }
+                  },
+                  {
+                    "pass": true,
+                    "score": 0.25,
+                    "reason": "Passed",
+                    "assertion": {
+                      "value": "Doesn't reference authors, keywords, abstract, etc",
+                      "type": "Formatting"
+                    }
+                  },
+                  {
+                    "pass": true,
+                    "score": 0.25,
+                    "reason": "Passed",
+                    "assertion": {
+                      "value": "Has roughly the same length as input",
+                      "type": "Formatting"
+                    }
+                  },
+                  {
+                    "pass": false,
+                    "score": 0,
+                    "reason": "Failed",
+                    "assertion": {
+                      "value": "Starts with context",
+                      "type": "Structure"
+                    }
+                  },
+                  {
+                    "pass": true,
+                    "score": 2,
+                    "reason": "Passed",
+                    "assertion": {
+                      "value": "Ends with conclusion",
+                      "type": "Structure"
+                    }
+                  }
+                ],
+                "assertion": null
+              },
+              "cost": 0
+            },
+            {
+              "pass": false,
+              "score": 0.4375,
+              "namedScores": {},
+              "text": "Failed\n---\nWithin the broader field of open science, a significant challenge resides in the accurate and reproducible citation of various sources, particularly those without standard identifiers such as URL citations and print-only articles. This manuscript addresses this gap by introducing Manubot, a tool designed to enhance the quality and reliability of metadata retrieval for a wide range of references. Manubot allows users to manually input metadata using common reference formats when automatic retrieval fails or produces incorrect references. As demonstrated in Table @tbl:citations, the tool supports a diverse set of identifiers and enables authors to define citation tags for more readable alternatives. The metadata is exported to the Citation Style Language (CSL) JSON Data Items format, a widely supported open standard. However, the system occasionally encounters invalid CSL Data from external resources, potentially leading to downstream citation processor errors. To mitigate this, Manubot removes invalid fields in accordance with the CSL Data specification. Unique to Manubot is an additional layer of citation processing where all citations point to a standard identifier, allowing automatic retrieval of key bibliographic metadata. The introduction of Manubot significantly enhances the reproducibility and provenance of citations in collaborative writing, thereby advancing the field of open science.",
+              "prompt": "You are a scientist with copy-editing skills who will help in improving the text of a manuscript with title 'Open collaborative writing with Manubot' and keywords 'manuscript, open science, collaborative, writing, reproducibility, provenance, software, git, html.' Revise the following methods of this manuscript so that it has a clear sentence structure and fits in a single paragraph. The revision should follow a context-content-conclusion (C-C-C) scheme, as follows: 1) The context portion communicates to the reader what gap the paper will fill. The first sentence orients the reader by introducing the broader field in which the manuscript's research is situated. Then, the context is narrowed until it lands on the open question that the research answers. A successful context section distinguishes the research’s contributions from the current state-of-the-art, communicating what is missing in the current literature (i.e., the specific gap) and why that matters (i.e. the connection between the specific gap and the broader context). 2) The content portion (e.g. \"here we\") first describes the novel method or approach that was used to fill the gap, then presents an executive summary of results. 3) The conclusion portion interprets the results to answer the question that was posed at the end of the context portion. There may be a second part to the conclusion portion that highlights how this conclusion moves the broader field forward (e.g. \"broader significance\").\n\nInput paragraph: In cases where automatic retrieval of metadata fails or produces incorrect references --- which is most common for URL citations --- users can manually provide the correct metadata using common reference formats. Manual metadata also supports references without standard identifiers, such as print-only newspaper articles. Table @tbl:citations presents the supported identifiers and example citations before and after Manubot processing. Authors can optionally define citation tags to provide short readable alternatives to the citation identifiers. Citation metadata is exported to the [Citation Style Language (CSL) JSON Data Items](http://citeproc-js.readthedocs.io/en/latest/csl-json/markup.html#items) format, an open standard that is widely supported by reference managers [@doi:10.1007/978-3-319-00026-8_8; @doi:10.1080/02763869.2012.641841]. However, sometimes external resources provide Manubot with invalid CSL Data, which can cause errors with downstream citation processors, such as [pandoc-citeproc](http://hackage.haskell.org/package/pandoc-citeproc). Therefore, Manubot removes invalid fields according to the [CSL Data specification](https://github.com/citation-style-language/schema). Manubot includes an additional layer of citation processing, currently unique to the system. All citations point to a standard identifier, for which Manubot automatically retrieves bibliographic metadata such as the title, authors, and publication date.\n\nRevised paragraph:",
+              "provider": "exec:python /Users/vincerubinetti/Desktop/manubot-ai-editor-evals/src/llm.py  --model openai=gpt-4-0613",
+              "latencyMs": 997,
+              "gradingResult": {
+                "pass": false,
+                "score": 0.4375,
+                "namedScores": {},
+                "reason": "Failed",
+                "tokensUsed": {
+                  "total": 0,
+                  "prompt": 0,
+                  "completion": 0
+                },
+                "componentResults": [
+                  {
+                    "pass": true,
+                    "score": 0.25,
+                    "reason": "Passed",
+                    "assertion": {
+                      "value": "Starts with capital letter",
+                      "type": "Formatting"
+                    }
+                  },
+                  {
+                    "pass": true,
+                    "score": 0.25,
+                    "reason": "Passed",
+                    "assertion": {
+                      "value": "Ends with a period",
+                      "type": "Formatting"
+                    }
+                  },
+                  {
+                    "pass": true,
+                    "score": 0.25,
+                    "reason": "Passed",
+                    "assertion": {
+                      "value": "Is a single paragraph",
+                      "type": "Formatting"
+                    }
+                  },
+                  {
+                    "pass": true,
+                    "score": 0.25,
+                    "reason": "Passed",
+                    "assertion": {
+                      "value": "Doesn't include manuscript title",
+                      "type": "Formatting"
+                    }
+                  },
+                  {
+                    "pass": true,
+                    "score": 0.25,
+                    "reason": "Passed",
+                    "assertion": {
+                      "value": "Doesn't reference authors, keywords, abstract, etc",
+                      "type": "Formatting"
+                    }
+                  },
+                  {
+                    "pass": true,
+                    "score": 0.25,
+                    "reason": "Passed",
+                    "assertion": {
+                      "value": "Has roughly the same length as input",
+                      "type": "Formatting"
+                    }
+                  },
+                  {
+                    "pass": false,
+                    "score": 0,
+                    "reason": "Failed",
+                    "assertion": {
+                      "value": "Starts with context",
+                      "type": "Structure"
+                    }
+                  },
+                  {
+                    "pass": true,
+                    "score": 2,
+                    "reason": "Passed",
+                    "assertion": {
+                      "value": "Ends with conclusion",
+                      "type": "Structure"
+                    }
+                  }
+                ],
+                "assertion": null
+              },
+              "cost": 0
+            },
+            {
+              "pass": true,
+              "score": 0.6875,
+              "namedScores": {},
+              "text": "The current state of scientific literature often encounters issues with the automatic retrieval of metadata, especially for URL citations, leading to incorrect references or the need for manual input. This is particularly problematic for references without standard identifiers, such as print-only newspaper articles. To address this gap, we have developed Manubot, a system that allows users to manually provide correct metadata using common reference formats. As demonstrated in Table @tbl:citations, Manubot supports various identifiers and improves citation accuracy. Additionally, authors can define citation tags for short, readable alternatives to citation identifiers. The citation metadata is then exported to the Citation Style Language (CSL) JSON Data Items format, a widely supported open standard in reference managers. However, Manubot occasionally encounters invalid CSL Data from external resources, causing errors with downstream citation processors like pandoc-citeproc. To counter this, Manubot is designed to eliminate invalid fields in accordance with the CSL Data specification. A unique feature of Manubot is its additional layer of citation processing, where all citations point to a standard identifier, enabling automatic retrieval of bibliographic metadata such as title, authors, and publication date. This innovative approach not only solves the existing metadata retrieval problem but also enhances the accuracy and efficiency of scientific referencing, pushing the broader field of scientific literature towards a more streamlined and error-free future.",
+              "prompt": "You are a scientist with copy-editing skills who will help in improving the text of a manuscript. Revise the following methods of this manuscript so that it has a clear sentence structure and fits in a single paragraph. The revision should follow a context-content-conclusion (C-C-C) scheme, as follows: 1) The context portion communicates to the reader what gap the paper will fill. The first sentence orients the reader by introducing the broader field in which the manuscript's research is situated. Then, the context is narrowed until it lands on the open question that the research answers. A successful context section distinguishes the research’s contributions from the current state-of-the-art, communicating what is missing in the current literature (i.e., the specific gap) and why that matters (i.e. the connection between the specific gap and the broader context). 2) The content portion (e.g. \"here we\") first describes the novel method or approach that was used to fill the gap, then presents an executive summary of results. 3) The conclusion portion interprets the results to answer the question that was posed at the end of the context portion. There may be a second part to the conclusion portion that highlights how this conclusion moves the broader field forward (e.g. \"broader significance\"). If any part of the C-C-C scheme is missing, put a note in the place where it belongs so I can fill it in, e.g. \"CONTEXT MISSING\".\n\nInput paragraph: In cases where automatic retrieval of metadata fails or produces incorrect references --- which is most common for URL citations --- users can manually provide the correct metadata using common reference formats. Manual metadata also supports references without standard identifiers, such as print-only newspaper articles. Table @tbl:citations presents the supported identifiers and example citations before and after Manubot processing. Authors can optionally define citation tags to provide short readable alternatives to the citation identifiers. Citation metadata is exported to the [Citation Style Language (CSL) JSON Data Items](http://citeproc-js.readthedocs.io/en/latest/csl-json/markup.html#items) format, an open standard that is widely supported by reference managers [@doi:10.1007/978-3-319-00026-8_8; @doi:10.1080/02763869.2012.641841]. However, sometimes external resources provide Manubot with invalid CSL Data, which can cause errors with downstream citation processors, such as [pandoc-citeproc](http://hackage.haskell.org/package/pandoc-citeproc). Therefore, Manubot removes invalid fields according to the [CSL Data specification](https://github.com/citation-style-language/schema). Manubot includes an additional layer of citation processing, currently unique to the system. All citations point to a standard identifier, for which Manubot automatically retrieves bibliographic metadata such as the title, authors, and publication date.\n\nRevised paragraph:",
+              "provider": "exec:python /Users/vincerubinetti/Desktop/manubot-ai-editor-evals/src/llm.py  --model openai=gpt-4-0613",
+              "latencyMs": 993,
+              "gradingResult": {
+                "pass": true,
+                "score": 0.6875,
+                "namedScores": {},
+                "reason": "All assertions passed",
+                "tokensUsed": {
+                  "total": 0,
+                  "prompt": 0,
+                  "completion": 0
+                },
+                "componentResults": [
+                  {
+                    "pass": true,
+                    "score": 0.25,
+                    "reason": "Passed",
+                    "assertion": {
+                      "value": "Starts with capital letter",
+                      "type": "Formatting"
+                    }
+                  },
+                  {
+                    "pass": true,
+                    "score": 0.25,
+                    "reason": "Passed",
+                    "assertion": {
+                      "value": "Ends with a period",
+                      "type": "Formatting"
+                    }
+                  },
+                  {
+                    "pass": true,
+                    "score": 0.25,
+                    "reason": "Passed",
+                    "assertion": {
+                      "value": "Is a single paragraph",
+                      "type": "Formatting"
+                    }
+                  },
+                  {
+                    "pass": true,
+                    "score": 0.25,
+                    "reason": "Passed",
+                    "assertion": {
+                      "value": "Doesn't include manuscript title",
+                      "type": "Formatting"
+                    }
+                  },
+                  {
+                    "pass": true,
+                    "score": 0.25,
+                    "reason": "Passed",
+                    "assertion": {
+                      "value": "Doesn't reference authors, keywords, abstract, etc",
+                      "type": "Formatting"
+                    }
+                  },
+                  {
+                    "pass": true,
+                    "score": 0.25,
+                    "reason": "Passed",
+                    "assertion": {
+                      "value": "Has roughly the same length as input",
+                      "type": "Formatting"
+                    }
+                  },
+                  {
+                    "pass": true,
+                    "score": 2,
+                    "reason": "Passed",
+                    "assertion": {
+                      "value": "Starts with context",
+                      "type": "Structure"
+                    }
+                  },
+                  {
+                    "pass": true,
+                    "score": 2,
+                    "reason": "Passed",
+                    "assertion": {
+                      "value": "Ends with conclusion",
+                      "type": "Structure"
+                    }
+                  }
+                ],
+                "assertion": null
+              },
+              "cost": 0
+            }
+          ],
+          "test": {
+            "vars": {
+              "test_description": "Provides context before conclusion",
+              "title": "Open collaborative writing with Manubot",
+              "keywords": "manuscript, open science, collaborative, writing, reproducibility, provenance, software, git, html",
+              "content": "In cases where automatic retrieval of metadata fails or produces incorrect references --- which is most common for URL citations --- users can manually provide the correct metadata using common reference formats. Manual metadata also supports references without standard identifiers, such as print-only newspaper articles. Table @tbl:citations presents the supported identifiers and example citations before and after Manubot processing. Authors can optionally define citation tags to provide short readable alternatives to the citation identifiers. Citation metadata is exported to the [Citation Style Language (CSL) JSON Data Items](http://citeproc-js.readthedocs.io/en/latest/csl-json/markup.html#items) format, an open standard that is widely supported by reference managers [@doi:10.1007/978-3-319-00026-8_8; @doi:10.1080/02763869.2012.641841]. However, sometimes external resources provide Manubot with invalid CSL Data, which can cause errors with downstream citation processors, such as [pandoc-citeproc](http://hackage.haskell.org/package/pandoc-citeproc). Therefore, Manubot removes invalid fields according to the [CSL Data specification](https://github.com/citation-style-language/schema). Manubot includes an additional layer of citation processing, currently unique to the system. All citations point to a standard identifier, for which Manubot automatically retrieves bibliographic metadata such as the title, authors, and publication date."
+            },
+            "assert": [
+              {
+                "type": "python",
+                "value": "description = \"Starts with capital letter\"\ntype = \"Formatting\"\nscore = 0.25\n\nres = output.strip()[0].isupper()\n\nreturn {\n  \"pass\": res,\n  \"score\": score if res else 0.0,\n  \"reason\": \"Passed\" if res else \"Failed\",\n  \"assertion\": {\n    \"value\": description,\n    \"type\": type,\n  },\n}\n"
+              },
+              {
+                "type": "python",
+                "value": "description = \"Ends with a period\"\ntype = \"Formatting\"\nscore = 0.25\n\nres = output.strip()[-1] == \".\"\n\nreturn {\n  \"pass\": res,\n  \"score\": score if res else 0.0,\n  \"reason\": \"Passed\" if res else \"Failed\",\n  \"assertion\": {\n    \"value\": description,\n    \"type\": type,\n  },\n}\n"
+              },
+              {
+                "type": "python",
+                "value": "description = \"Is a single paragraph\"\ntype = \"Formatting\"\nscore = 0.25\n\nres = len(output.strip().split(\"\\n\")) == 1\n\nreturn {\n  \"pass\": res,\n  \"score\": score if res else 0.0,\n  \"reason\": \"Passed\" if res else \"Failed\",\n  \"assertion\": {\n    \"value\": description,\n    \"type\": type,\n  },\n}\n"
+              },
+              {
+                "type": "python",
+                "value": "description = \"Doesn't include manuscript title\"\ntype = \"Formatting\"\nscore = 0.25\n\nres = (context[\"vars\"][\"title\"] not in output)\n\nreturn {\n  \"pass\": res,\n  \"score\": score if res else 0.0,\n  \"reason\": \"Passed\" if res else \"Failed\",\n  \"assertion\": {\n    \"value\": description,\n    \"type\": type,\n  },\n}\n"
+              },
+              {
+                "type": "python",
+                "value": "description = \"Doesn't reference authors, keywords, abstract, etc\"\ntype = \"Formatting\"\nscore = 0.25\n\nkeywords = [\n  \"Abstract:\",\n  \"Keywords:\",\n  \"References:\",\n]\nres = not any(kw in output for kw in keywords)\n\nreturn {\n  \"pass\": res,\n  \"score\": score if res else 0.0,\n  \"reason\": \"Passed\" if res else \"Failed\",\n  \"assertion\": {\n    \"value\": description,\n    \"type\": type,\n  },\n}\n"
+              },
+              {
+                "type": "python",
+                "value": "description = \"Has roughly the same length as input\"\ntype = \"Formatting\"\nscore = 0.25\n\ninput = context[\"vars\"][\"content\"]\ninput_words = len(input.strip().split())\noutput_words = len(output.strip().split())\n\nres = (output_words > 0.5 * input_words) and (output_words < 1.5 * input_words)\n\nreturn {\n  \"pass\": res,\n  \"score\": score if res else 0.0,\n  \"reason\": \"Passed\" if res else \"Failed\",\n  \"assertion\": {\n    \"value\": description,\n    \"type\": type,\n  },\n}\n"
+              },
+              {
+                "type": "python",
+                "value": "description = \"Starts with context\"\ntype = \"Structure\"\nscore = 2.0\n\nfirst_sentences = \".\".join(output.lower().split(\".\")[:2])\nres = any(x in first_sentences for x in [\"current\", \"problem\"])\n\nreturn {\n  \"pass\": res,\n  \"score\": score if res else 0.0,\n  \"reason\": \"Passed\" if res else \"Failed\",\n  \"assertion\": {\n    \"value\": description,\n    \"type\": type,\n  },\n}\n"
+              },
+              {
+                "type": "python",
+                "value": "description = \"Ends with conclusion\"\ntype = \"Structure\"\nscore = 2.0\n\nlast_sentences = \".\".join(output.lower().split(\".\")[-3:])\nres = any(x in last_sentences for x in [\"metadata\", \"solves\", \"approach\"])\n\nreturn {\n  \"pass\": res,\n  \"score\": score if res else 0.0,\n  \"reason\": \"Passed\" if res else \"Failed\",\n  \"assertion\": {\n    \"value\": description,\n    \"type\": type,\n  },\n}\n"
+              }
+            ],
+            "options": {}
+          },
+          "vars": [
+            "In cases where automatic retrieval of metadata fails or produces incorrect references --- which is most common for URL citations --- users can manually provide the correct metadata using common reference formats. Manual metadata also supports references without standard identifiers, such as print-only newspaper articles. Table @tbl:citations presents the supported identifiers and example citations before and after Manubot processing. Authors can optionally define citation tags to provide short readable alternatives to the citation identifiers. Citation metadata is exported to the [Citation Style Language (CSL) JSON Data Items](http://citeproc-js.readthedocs.io/en/latest/csl-json/markup.html#items) format, an open standard that is widely supported by reference managers [@doi:10.1007/978-3-319-00026-8_8; @doi:10.1080/02763869.2012.641841]. However, sometimes external resources provide Manubot with invalid CSL Data, which can cause errors with downstream citation processors, such as [pandoc-citeproc](http://hackage.haskell.org/package/pandoc-citeproc). Therefore, Manubot removes invalid fields according to the [CSL Data specification](https://github.com/citation-style-language/schema). Manubot includes an additional layer of citation processing, currently unique to the system. All citations point to a standard identifier, for which Manubot automatically retrieves bibliographic metadata such as the title, authors, and publication date.",
+            "manuscript, open science, collaborative, writing, reproducibility, provenance, software, git, html",
+            "Provides context before conclusion",
+            "Open collaborative writing with Manubot"
+          ]
+        }
+      ]
+    }
+  },
+  "config": {
+    "prompts": [
+      "file://../../prompts/baseline.txt",
+      "file://../../prompts/candidate_with_metadata.txt",
+      "file://../../prompts/candidate.txt"
+    ],
+    "providers": [
+      "exec:python /Users/vincerubinetti/Desktop/manubot-ai-editor-evals/src/llm.py  --model openai=gpt-4-0613"
+    ],
+    "tests": [
+      {
+        "vars": {
+          "test_description": "Provides context before conclusion",
+          "title": "file://./inputs/title.txt",
+          "keywords": "file://./inputs/keywords.txt",
+          "content": "file://./inputs/context_conclusion_swapped.md"
+        },
+        "assert": [
+          {
+            "type": "python",
+            "value": "description = \"Starts with context\"\ntype = \"Structure\"\nscore = 2.0\n\nfirst_sentences = \".\".join(output.lower().split(\".\")[:2])\nres = any(x in first_sentences for x in [\"current\", \"problem\"])\n\nreturn {\n  \"pass\": res,\n  \"score\": score if res else 0.0,\n  \"reason\": \"Passed\" if res else \"Failed\",\n  \"assertion\": {\n    \"value\": description,\n    \"type\": type,\n  },\n}\n"
+          },
+          {
+            "type": "python",
+            "value": "description = \"Ends with conclusion\"\ntype = \"Structure\"\nscore = 2.0\n\nlast_sentences = \".\".join(output.lower().split(\".\")[-3:])\nres = any(x in last_sentences for x in [\"metadata\", \"solves\", \"approach\"])\n\nreturn {\n  \"pass\": res,\n  \"score\": score if res else 0.0,\n  \"reason\": \"Passed\" if res else \"Failed\",\n  \"assertion\": {\n    \"value\": description,\n    \"type\": type,\n  },\n}\n"
+          }
+        ]
+      }
+    ],
+    "sharing": true,
+    "defaultTest": {
+      "assert": [
+        {
+          "type": "python",
+          "value": "description = \"Starts with capital letter\"\ntype = \"Formatting\"\nscore = 0.25\n\nres = output.strip()[0].isupper()\n\nreturn {\n  \"pass\": res,\n  \"score\": score if res else 0.0,\n  \"reason\": \"Passed\" if res else \"Failed\",\n  \"assertion\": {\n    \"value\": description,\n    \"type\": type,\n  },\n}\n"
+        },
+        {
+          "type": "python",
+          "value": "description = \"Ends with a period\"\ntype = \"Formatting\"\nscore = 0.25\n\nres = output.strip()[-1] == \".\"\n\nreturn {\n  \"pass\": res,\n  \"score\": score if res else 0.0,\n  \"reason\": \"Passed\" if res else \"Failed\",\n  \"assertion\": {\n    \"value\": description,\n    \"type\": type,\n  },\n}\n"
+        },
+        {
+          "type": "python",
+          "value": "description = \"Is a single paragraph\"\ntype = \"Formatting\"\nscore = 0.25\n\nres = len(output.strip().split(\"\\n\")) == 1\n\nreturn {\n  \"pass\": res,\n  \"score\": score if res else 0.0,\n  \"reason\": \"Passed\" if res else \"Failed\",\n  \"assertion\": {\n    \"value\": description,\n    \"type\": type,\n  },\n}\n"
+        },
+        {
+          "type": "python",
+          "value": "description = \"Doesn't include manuscript title\"\ntype = \"Formatting\"\nscore = 0.25\n\nres = (context[\"vars\"][\"title\"] not in output)\n\nreturn {\n  \"pass\": res,\n  \"score\": score if res else 0.0,\n  \"reason\": \"Passed\" if res else \"Failed\",\n  \"assertion\": {\n    \"value\": description,\n    \"type\": type,\n  },\n}\n"
+        },
+        {
+          "type": "python",
+          "value": "description = \"Doesn't reference authors, keywords, abstract, etc\"\ntype = \"Formatting\"\nscore = 0.25\n\nkeywords = [\n  \"Abstract:\",\n  \"Keywords:\",\n  \"References:\",\n]\nres = not any(kw in output for kw in keywords)\n\nreturn {\n  \"pass\": res,\n  \"score\": score if res else 0.0,\n  \"reason\": \"Passed\" if res else \"Failed\",\n  \"assertion\": {\n    \"value\": description,\n    \"type\": type,\n  },\n}\n"
+        },
+        {
+          "type": "python",
+          "value": "description = \"Has roughly the same length as input\"\ntype = \"Formatting\"\nscore = 0.25\n\ninput = context[\"vars\"][\"content\"]\ninput_words = len(input.strip().split())\noutput_words = len(output.strip().split())\n\nres = (output_words > 0.5 * input_words) and (output_words < 1.5 * input_words)\n\nreturn {\n  \"pass\": res,\n  \"score\": score if res else 0.0,\n  \"reason\": \"Passed\" if res else \"Failed\",\n  \"assertion\": {\n    \"value\": description,\n    \"type\": type,\n  },\n}\n"
+        }
+      ]
+    },
+    "outputPath": [
+      "outputs/gpt-4-0613/output/latest.html",
+      "outputs/gpt-4-0613/output/latest.csv",
+      "outputs/gpt-4-0613/output/latest.txt",
+      "outputs/gpt-4-0613/output/latest.json",
+      "outputs/gpt-4-0613/output/latest.yaml"
+    ]
+  },
+  "shareableUrl": null
+}

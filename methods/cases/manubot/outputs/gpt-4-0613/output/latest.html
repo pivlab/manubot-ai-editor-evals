@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Eval Output</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial,
+          sans-serif;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        text-align: left;
+        word-break: break-all;
+      }
+      th,
+      td {
+        padding: 5px;
+        min-width: 200px;
+        white-space: pre-line;
+        vertical-align: top;
+      }
+
+      tr > td[data-content^='[PASS]'] {
+        color: green;
+      }
+      tr > td[data-content^='[FAIL]'] {
+        color: #ad0000;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        
+        <th>content</th>
+        
+        <th>keywords</th>
+        
+        <th>test_description</th>
+        
+        <th>title</th>
+        
+        <th>/Users/vincerubinetti/Desktop/manubot-ai-editor-evals/methods/prompts/baseline.txt</th>
+        
+        <th>/Users/vincerubinetti/Desktop/manubot-ai-editor-evals/methods/prompts/candidate_with_metadata.txt</th>
+        
+        <th>/Users/vincerubinetti/Desktop/manubot-ai-editor-evals/methods/prompts/candidate.txt</th>
+        
+      </thead>
+      <tbody>
+        
+        <tr>
+          
+          <td data-content="In cases where automatic retrieval of metadata fails or produces incorrect references --- which is most common for URL citations --- users can manually provide the correct metadata using common reference formats. Manual metadata also supports references without standard identifiers, such as print-only newspaper articles. Table @tbl:citations presents the supported identifiers and example citations before and after Manubot processing. Authors can optionally define citation tags to provide short readable alternatives to the citation identifiers. Citation metadata is exported to the [Citation Style Language (CSL) JSON Data Items](http://citeproc-js.readthedocs.io/en/latest/csl-json/markup.html#items) format, an open standard that is widely supported by reference managers [@doi:10.1007/978-3-319-00026-8_8; @doi:10.1080/02763869.2012.641841]. However, sometimes external resources provide Manubot with invalid CSL Data, which can cause errors with downstream citation processors, such as [pandoc-citeproc](http://hackage.haskell.org/package/pandoc-citeproc). Therefore, Manubot removes invalid fields according to the [CSL Data specification](https://github.com/citation-style-language/schema). Manubot includes an additional layer of citation processing, currently unique to the system. All citations point to a standard identifier, for which Manubot automatically retrieves bibliographic metadata such as the title, authors, and publication date.">In cases where automatic retrieval of metadata fails or produces incorrect references --- which is most common for URL citations --- users can manually provide the correct metadata using common reference formats. Manual metadata also supports references without standard identifiers, such as print-only newspaper articles. Table @tbl:citations presents the supported identifiers and example citations before and after Manubot processing. Authors can optionally define citation tags to provide short readable alternatives to the citation identifiers. Citation metadata is exported to the [Citation Style Language (CSL) JSON Data Items](http://citeproc-js.readthedocs.io/en/latest/csl-json/markup.html#items) format, an open standard that is widely supported by reference managers [@doi:10.1007/978-3-319-00026-8_8; @doi:10.1080/02763869.2012.641841]. However, sometimes external resources provide Manubot with invalid CSL Data, which can cause errors with downstream citation processors, such as [pandoc-citeproc](http://hackage.haskell.org/package/pandoc-citeproc). Therefore, Manubot removes invalid fields according to the [CSL Data specification](https://github.com/citation-style-language/schema). Manubot includes an additional layer of citation processing, currently unique to the system. All citations point to a standard identifier, for which Manubot automatically retrieves bibliographic metadata such as the title, authors, and publication date.</td>
+          
+          <td data-content="manuscript, open science, collaborative, writing, reproducibility, provenance, software, git, html">manuscript, open science, collaborative, writing, reproducibility, provenance, software, git, html</td>
+          
+          <td data-content="Provides context before conclusion">Provides context before conclusion</td>
+          
+          <td data-content="Open collaborative writing with Manubot">Open collaborative writing with Manubot</td>
+          
+          <td data-content="[FAIL] (0.44)
+
+Failed
+---
+In instances where automatic metadata retrieval is unsuccessful or generates incorrect references -- a common occurrence for URL citations -- users have the option to manually input the accurate metadata using conventional reference formats. This manual metadata also caters to references lacking standard identifiers, such as print-only newspaper articles. Table @tbl:citations demonstrates the identifiers supported and provides examples of citations before and after Manubot processing. Authors have the option to define citation tags, offering short, readable alternatives to citation identifiers. The citation metadata is then exported to the Citation Style Language (CSL) JSON Data Items format, an open standard widely recognized by reference managers [@doi:10.1007/978-3-319-00026-8_8; @doi:10.1080/02763869.2012.641841]. However, there are instances when external resources supply Manubot with invalid CSL Data, potentially causing errors with subsequent citation processors, such as pandoc-citeproc. As a result, Manubot eliminates invalid fields in accordance with the CSL Data specification. Manubot also incorporates an additional layer of citation processing, a feature currently unique to the system. All citations are directed towards a standard identifier, from which Manubot automatically retrieves bibliographic metadata like the title, authors, and publication date.
+
+Fail Reason: Failed">[FAIL] (0.44)
+
+Failed
+---
+In instances where automatic metadata retrieval is unsuccessful or generates incorrect references -- a common occurrence for URL citations -- users have the option to manually input the accurate metadata using conventional reference formats. This manual metadata also caters to references lacking standard identifiers, such as print-only newspaper articles. Table @tbl:citations demonstrates the identifiers supported and provides examples of citations before and after Manubot processing. Authors have the option to define citation tags, offering short, readable alternatives to citation identifiers. The citation metadata is then exported to the Citation Style Language (CSL) JSON Data Items format, an open standard widely recognized by reference managers [@doi:10.1007/978-3-319-00026-8_8; @doi:10.1080/02763869.2012.641841]. However, there are instances when external resources supply Manubot with invalid CSL Data, potentially causing errors with subsequent citation processors, such as pandoc-citeproc. As a result, Manubot eliminates invalid fields in accordance with the CSL Data specification. Manubot also incorporates an additional layer of citation processing, a feature currently unique to the system. All citations are directed towards a standard identifier, from which Manubot automatically retrieves bibliographic metadata like the title, authors, and publication date.
+
+Fail Reason: Failed</td>
+          
+          <td data-content="[FAIL] (0.44)
+
+Failed
+---
+Within the broader field of open science, a significant challenge resides in the accurate and reproducible citation of various sources, particularly those without standard identifiers such as URL citations and print-only articles. This manuscript addresses this gap by introducing Manubot, a tool designed to enhance the quality and reliability of metadata retrieval for a wide range of references. Manubot allows users to manually input metadata using common reference formats when automatic retrieval fails or produces incorrect references. As demonstrated in Table @tbl:citations, the tool supports a diverse set of identifiers and enables authors to define citation tags for more readable alternatives. The metadata is exported to the Citation Style Language (CSL) JSON Data Items format, a widely supported open standard. However, the system occasionally encounters invalid CSL Data from external resources, potentially leading to downstream citation processor errors. To mitigate this, Manubot removes invalid fields in accordance with the CSL Data specification. Unique to Manubot is an additional layer of citation processing where all citations point to a standard identifier, allowing automatic retrieval of key bibliographic metadata. The introduction of Manubot significantly enhances the reproducibility and provenance of citations in collaborative writing, thereby advancing the field of open science.
+
+Fail Reason: Failed">[FAIL] (0.44)
+
+Failed
+---
+Within the broader field of open science, a significant challenge resides in the accurate and reproducible citation of various sources, particularly those without standard identifiers such as URL citations and print-only articles. This manuscript addresses this gap by introducing Manubot, a tool designed to enhance the quality and reliability of metadata retrieval for a wide range of references. Manubot allows users to manually input metadata using common reference formats when automatic retrieval fails or produces incorrect references. As demonstrated in Table @tbl:citations, the tool supports a diverse set of identifiers and enables authors to define citation tags for more readable alternatives. The metadata is exported to the Citation Style Language (CSL) JSON Data Items format, a widely supported open standard. However, the system occasionally encounters invalid CSL Data from external resources, potentially leading to downstream citation processor errors. To mitigate this, Manubot removes invalid fields in accordance with the CSL Data specification. Unique to Manubot is an additional layer of citation processing where all citations point to a standard identifier, allowing automatic retrieval of key bibliographic metadata. The introduction of Manubot significantly enhances the reproducibility and provenance of citations in collaborative writing, thereby advancing the field of open science.
+
+Fail Reason: Failed</td>
+          
+          <td data-content="[PASS] (0.69)
+
+The current state of scientific literature often encounters issues with the automatic retrieval of metadata, especially for URL citations, leading to incorrect references or the need for manual input. This is particularly problematic for references without standard identifiers, such as print-only newspaper articles. To address this gap, we have developed Manubot, a system that allows users to manually provide correct metadata using common reference formats. As demonstrated in Table @tbl:citations, Manubot supports various identifiers and improves citation accuracy. Additionally, authors can define citation tags for short, readable alternatives to citation identifiers. The citation metadata is then exported to the Citation Style Language (CSL) JSON Data Items format, a widely supported open standard in reference managers. However, Manubot occasionally encounters invalid CSL Data from external resources, causing errors with downstream citation processors like pandoc-citeproc. To counter this, Manubot is designed to eliminate invalid fields in accordance with the CSL Data specification. A unique feature of Manubot is its additional layer of citation processing, where all citations point to a standard identifier, enabling automatic retrieval of bibliographic metadata such as title, authors, and publication date. This innovative approach not only solves the existing metadata retrieval problem but also enhances the accuracy and efficiency of scientific referencing, pushing the broader field of scientific literature towards a more streamlined and error-free future.
+
+Pass Reason: All assertions passed">[PASS] (0.69)
+
+The current state of scientific literature often encounters issues with the automatic retrieval of metadata, especially for URL citations, leading to incorrect references or the need for manual input. This is particularly problematic for references without standard identifiers, such as print-only newspaper articles. To address this gap, we have developed Manubot, a system that allows users to manually provide correct metadata using common reference formats. As demonstrated in Table @tbl:citations, Manubot supports various identifiers and improves citation accuracy. Additionally, authors can define citation tags for short, readable alternatives to citation identifiers. The citation metadata is then exported to the Citation Style Language (CSL) JSON Data Items format, a widely supported open standard in reference managers. However, Manubot occasionally encounters invalid CSL Data from external resources, causing errors with downstream citation processors like pandoc-citeproc. To counter this, Manubot is designed to eliminate invalid fields in accordance with the CSL Data specification. A unique feature of Manubot is its additional layer of citation processing, where all citations point to a standard identifier, enabling automatic retrieval of bibliographic metadata such as title, authors, and publication date. This innovative approach not only solves the existing metadata retrieval problem but also enhances the accuracy and efficiency of scientific referencing, pushing the broader field of scientific literature towards a more streamlined and error-free future.
+
+Pass Reason: All assertions passed</td>
+          
+        </tr>
+        
+      </tbody>
+    </table>
+  </body>
+</html>
