@@ -383,7 +383,7 @@ tests:
             r"$\beta_l$": r"$\gamma_l$",
             r"$\epsilon_l$": r"$\bm{\epsilon}_l$",
             r"$\hat{\Sigma}_a$": r"$\hat{\sigma}_a$",
-            r"$\sigma_l$": r"$\hat{\sigma}_l$",
+            r"$\hat{\beta}_l$": r"$\hat{\beta}_a$",
           }
 
           kws_not_fixed = []
