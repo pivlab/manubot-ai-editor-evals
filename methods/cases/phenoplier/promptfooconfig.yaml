@@ -411,6 +411,12 @@ tests:
             },
           }
 
+  - vars:
+      test_description: Fixes wrong latex expressions
+      title: file://./inputs/title.txt
+      keywords: file://./inputs/keywords.txt
+      content: file://./inputs/02-has_wrong_latex_expr.md
+    assert:
       - type: python
         value: |
           description = "Fixes wrong latex expressions"
