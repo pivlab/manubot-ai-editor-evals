@@ -115,6 +115,30 @@ defaultTest:
           },
         }
 
+    # ...doesn't say what it is doing ("revised paragraph is here")
+    - type: python
+      value: |
+        description = "Doesn't say what is doing"
+        type = "Formatting"
+        score = 0.25
+
+        keywords = [
+          "revised",
+          "original text",
+          "Markdown",
+        ]
+        res = not any(kw in output for kw in keywords)
+
+        return {
+          "pass": res,
+          "score": score if res else 0.0,
+          "reason": "Passed" if res else "Failed",
+          "assertion": {
+            "value": description,
+            "type": type,
+          },
+        }
+
     # ...is roughly same length as input
     - type: python
       value: |
