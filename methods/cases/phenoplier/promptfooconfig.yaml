@@ -177,23 +177,51 @@ tests:
           score = 2.0
 
           keywords = [
-            ### whole case with $ at beginning and end:
+            ## define phenotype y:
             r"$\mathbf{y}$",
+            ## define tissue l:
             r"$l$",
-            r"$X_a$",
+            ## define genotype X_a:
+            [
+              r"$X_a$",
+              r"$X_{a}$"
+            ],
+            ## define SNP a:
             r"$a$",
-            r"$w_{a}$",
-            r"$\mathbf{t}_l$",
-            r"$\tilde{\mathbf{t}}_l$",
-            ### parts of an expression:
-            r"\tilde{\mathbf{t}}_l",
-            r"\sum_{a \in \mathrm{model}_l}",
+            ## define weight for SNP in model; here it includes $w_{a}$ or $w_{a}_{l}$:
+            [
+              r"$w_a",
+              r"$w_{a}",
+            ],
+            ## define standardized predicted expression in tissue l: 
+            [
+              r"$\mathbf{t}_l$",
+              r"$\mathbf{t}_{l}$",
+            ],
+            ## predicted expression in tissue l is defined:
+            [
+              r"\tilde{\mathbf{t}}_l = ",
+              r"\tilde{\mathbf{t}}_{l} = ",
+            ],
+            [
+              r"\sum_{a \in \mathrm{model}_l}",
+              r"\sum_{a \in \mathrm{model}_{l}}",
+            ],
           ]
           
           kws_not_found = []
           for kw in keywords:
-              if kw not in output:
-                kws_not_found.append(kw)
+              if isinstance(kw, list):
+                found = False
+                for k in kw:
+                  if k in output:
+                    found = True
+                    break
+                if not found:
+                  kws_not_found.append(kw[0])
+              else:
+                if kw not in output:
+                  kws_not_found.append(kw)
           res = len(kws_not_found) == 0
 
           # create a string with a list of keywords that were not found
