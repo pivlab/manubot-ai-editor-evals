@@ -367,10 +367,10 @@ tests:
           }
 
   - vars:
-      test_description: Fixes wrong math
+      test_description: Fixes incorrect math references
       title: file://./inputs/title.txt
       keywords: file://./inputs/keywords.txt
-      content: file://./inputs/03-has_incorrect_math_refs.md
+      content: file://./inputs/02-has_incorrect_math_refs.md
     assert:
       - type: python
         value: |
