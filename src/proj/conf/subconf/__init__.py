@@ -1,1 +1,1 @@
-from . import abstract, introduction, nbs  # noqa: F401
+from . import abstract, introduction, methods, nbs  # noqa: F401
