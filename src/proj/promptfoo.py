@@ -16,6 +16,10 @@ def read_results(model_folder: Path) -> pd.DataFrame:
 
     rows = []
     for _, r in results.iterrows():
+        if pd.isnull(r.loc["gradingResult"]):
+            print("WARNING: empty result")
+            continue
+
         passed = r["success"]
         score_avg = r["score"]
         prompt = Path(r["prompt"]["display"]).stem
