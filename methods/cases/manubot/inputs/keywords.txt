@@ -1,1 +1,0 @@
-manuscript, open science, collaborative, writing, reproducibility, provenance, software, git, html
