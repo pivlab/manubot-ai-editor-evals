@@ -1,0 +1,1303 @@
+content,keywords,test_description,title,"{""raw"":""You are a scientist with copy-editing skills tasked with refining the text of a scientific manuscript. Your goal is to revise the following paragraph from the Methods section.\n\nInput paragraph: {{ content }}\n\nRevised paragraph:"",""display"":""/home/miltondp/projects/others/manubot/manubot-ai-editor-evals/methods/prompts/baseline.txt"",""id"":""dbdbe966caae3b6a35435049407ecdbb26b866d5a60bf0e456744a0bc18f5ac9"",""provider"":""exec:python /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py  --model ollama=mistral=7b-instruct-fp16"",""metrics"":{""score"":7.296250000000001,""testPassCount"":3,""testFailCount"":17,""assertPassCount"":148,""assertFailCount"":22,""totalLatencyMs"":14529,""tokenUsage"":{""total"":0,""prompt"":0,""completion"":0,""cached"":0},""namedScores"":{},""cost"":0}}","{""raw"":""You are a scientist with copy-editing skills tasked with refining the text of a scientific manuscript with title '{{ title }}' and keywords '{{ keywords }}.' Your goal is to revise the following paragraph from the Methods section to enhance clarity, reduce jargon, maintain a scholarly tone, and adhere to Markdown formatting. Your revision should: 1) preserve the original information as much as possible, with minimal changes to the text, 2) preserve technical details such as mathematical expressions, 3) ensure that equations (which could be numbered) are preserved and correctly defined, 4) preserve references to numbered equations, and 5) ensure most references to scientific articles are kept exactly as they appear in the original text; these references are crucial for academic integrity and may appear with the format \""[@TYPE:ID]\"" such as \""[@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433]\"".\n\nInput paragraph: {{ content }}\n\nRevised paragraph:"",""display"":""/home/miltondp/projects/others/manubot/manubot-ai-editor-evals/methods/prompts/candidate_with_metadata.txt"",""id"":""c357f426d8096fca34c9477212751fc056a5b5ef4294c917e72358475247bfeb"",""provider"":""exec:python /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py  --model ollama=mistral=7b-instruct-fp16"",""metrics"":{""score"":8.0625,""testPassCount"":4,""testFailCount"":16,""assertPassCount"":152,""assertFailCount"":18,""totalLatencyMs"":14585,""tokenUsage"":{""total"":0,""prompt"":0,""completion"":0,""cached"":0},""namedScores"":{},""cost"":0}}","{""raw"":""You are a scientist with copy-editing skills tasked with refining the text of a scientific manuscript. Your goal is to revise the following paragraph from the Methods section to enhance clarity, reduce jargon, maintain a scholarly tone, and adhere to Markdown formatting. Your revision should: 1) preserve the original information as much as possible, with minimal changes to the text, 2) preserve technical details such as mathematical expressions, 3) ensure that equations (which could be numbered) are preserved and correctly defined, 4) preserve references to numbered equations, and 5) ensure most references to scientific articles are kept exactly as they appear in the original text; these references are crucial for academic integrity and may appear with the format \""[@TYPE:ID]\"" such as \""[@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433]\"".\n\nInput paragraph: {{ content }}\n\nRevised paragraph:"",""display"":""/home/miltondp/projects/others/manubot/manubot-ai-editor-evals/methods/prompts/candidate.txt"",""id"":""5455ec1f5a9652cb7ba31daceeffa11db4d075c888105c481683c678f87e4308"",""provider"":""exec:python /home/miltondp/projects/others/manubot/manubot-ai-editor-evals/src/llm.py  --model ollama=mistral=7b-instruct-fp16"",""metrics"":{""score"":7.54875,""testPassCount"":5,""testFailCount"":15,""assertPassCount"":152,""assertFailCount"":18,""totalLatencyMs"":14679,""tokenUsage"":{""total"":0,""prompt"":0,""completion"":0,""cached"":0},""namedScores"":{},""cost"":0}}"
+"Here we briefly provide the details about these TWAS methods that are necessary to explain our regression framework later (see the referenced articles for more information). In the following, we refer to $\mathbf{y}$ as a vector of traits for $n$ individuals that is centered for convenience (so that no intercept is necessary); $\tilde{\mathbf{t}}_l = \sum_{a \in \mathrm{model}_l} w_{a}^{l} X_{a}$ is the gene's predicted expression for all individuals in tissue $l$, $X_a$ is the genotype of SNP $a$ and $w_{a}$ its weight in the tissue prediction model $l$; and $\mathbf{t}_l$ is the standardized version of $\tilde{\mathbf{t}}_l$ with mean equal to zero and standard deviation equal to one.","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",Preserves inline math,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[FAIL] (0.41)
+
+Failed to find the following keywords:
+ - \tilde{\mathbf{t}}_l = 
+ - \sum_{a \in \mathrm{model}_l}
+---
+In this section, we briefly describe the TWAS methods that will be utilized later in our regression framework (as detailed in referenced articles). For convenience, we refer to $\mathbf{y}$ as a vector of traits for $n$ individuals, centered so that no intercept is required. The predicted expression of a gene in tissue $l$, denoted as $\tilde{\mathbf{t}}_l$, is calculated by summing the weighted genotypes of all SNPs in the model $l$, where $X_a$ represents the genotype of SNP $a$ and $w_{a}$ is its corresponding weight in the tissue prediction model $l$. The standardized version of $\tilde{\mathbf{t}}_l$, denoted as $\mathbf{t}_l$, has a mean of zero and a standard deviation of one.
+
+Fail Reason: Failed to find the following keywords:
+ - \tilde{\mathbf{t}}_l = 
+ - \sum_{a \in \mathrm{model}_l}","[FAIL] (0.41)
+
+Failed to find the following keywords:
+ - \tilde{\mathbf{t}}_l = 
+ - \sum_{a \in \mathrm{model}_l}
+---
+Here, we briefly explain the necessary details about the TWAS methods that will be used in our regression framework later (referenced articles provide more information). In the following text, we use $\mathbf{y}$ to represent a vector of traits for $n$ individuals, centered for convenience so no intercept is required. We denote $\tilde{\mathbf{t}}_l$ as the predicted gene expression for all individuals in tissue $l$, where $X_a$ is the genotype of SNP $a$ and $w_{a}$ its weight in the tissue prediction model $l$. Finally, we define $\mathbf{t}_l$ as the standardized version of $\tilde{\mathbf{t}}_l$, with a mean of zero and a standard deviation of one.
+
+Fail Reason: Failed to find the following keywords:
+ - \tilde{\mathbf{t}}_l = 
+ - \sum_{a \in \mathrm{model}_l}","[PASS] (0.47)
+
+In this section, we briefly introduce the TWAS methods used in our regression framework (see referenced articles for further details). For clarity, we use $\mathbf{y}$ to represent a vector of traits for $n$ individuals, centered for convenience (i.e., no intercept is necessary). We define $\tilde{\mathbf{t}}_l = \sum_{a \in \mathrm{model}_l} w_{a}^{l} X_{a}$ as the predicted expression of gene $a$ in tissue $l$, where $X_a$ is the genotype of SNP $a$ and $w_{a}$ its weight in the tissue prediction model $l$. Finally, we obtain the standardized version $\mathbf{t}_l$ of $\tilde{\mathbf{t}}_l$, with a mean of zero and a standard deviation of one.
+
+Pass Reason: All assertions passed"
+"Here we briefly provide the details about these TWAS methods that are necessary to explain our regression framework later (see the referenced articles for more information). In the following, we refer to $\mathbf{y}$ as a vector of traits for $n$ individuals that is centered for convenience (so that no intercept is necessary); $\tilde{\mathbf{t}}_l = \sum_{a \in \mathrm{model}_l} w_{a}^{l} X_{a}$ is the gene's predicted expression for all individuals in tissue $l$, $X_a$ is the genotype of SNP $a$ and $w_{a}$ its weight in the tissue prediction model $l$; and $\mathbf{t}_l$ is the standardized version of $\tilde{\mathbf{t}}_l$ with mean equal to zero and standard deviation equal to one.","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",Preserves inline math,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[FAIL] (0.44)
+
+Failed to find the following keywords:
+ - $\mathbf{t}_l$
+---
+In this section, we provide a brief overview of the TWAS methods used in our study. These techniques are essential for explaining our regression framework, as detailed in the referenced articles. For convenience, we denote $\mathbf{y}$ as a vector of traits for $n$ individuals, which is centered so that no intercept is necessary. We define $\tilde{\mathbf{t}}_l = \sum_{a \in \mathrm{model}_l} w_{a}^{l} X_{a}$ as the gene's predicted expression for all individuals in tissue $l$, where $X_a$ represents the genotype of SNP $a$ and $w_{a}$ is its weight in the tissue prediction model $l$. Finally, we calculate $\mathbf{t}_l = \frac{\tilde{\mathbf{t}}_l - \bar{\tilde{\mathbf{t}}_l}}{\sigma_{\tilde{\mathbf{t}}_l}}$ as the standardized version of $\tilde{\mathbf{t}}_l$ with mean equal to zero and standard deviation equal to one.
+
+Fail Reason: Failed to find the following keywords:
+ - $\mathbf{t}_l$","[PASS] (0.47)
+
+We briefly describe the TWAS methods used in our study, which will be further explained in detail in the referenced articles. In this section, we refer to $\mathbf{y}$ as a vector of traits for $n$ individuals that is centered for convenience (i.e., no intercept is necessary); $\tilde{\mathbf{t}}_l = \sum_{a \in \mathrm{model}_l} w_{a}^{l} X_{a}$ represents the predicted expression of a gene in tissue $l$, where $X_a$ is the genotype of SNP $a$ and $w_{a}$ its weight in the tissue prediction model $l$; and $\mathbf{t}_l$ is the standardized version of $\tilde{\mathbf{t}}_l$ with mean equal to zero and standard deviation equal to one.
+
+Pass Reason: All assertions passed","[FAIL] (0.44)
+
+Failed
+---
+In this section, we briefly introduce the TWAS methods that will be used to describe our regression framework in more detail (see the referenced articles for further information). For clarity, we use $\mathbf{y}$ to represent a vector of traits for $n$ individuals, centered for convenience so that no intercept is required. We define $\tilde{\mathbf{t}}_l = \sum_{a \in \mathrm{model}_l} w_{a}^{l} X_{a}$ as the predicted expression of the gene in tissue $l$, where $X_a$ is the genotype of SNP $a$ and $w_{a}$ its weight in the tissue prediction model $l$. Finally, we obtain $\mathbf{t}_l$ by standardizing $\tilde{\mathbf{t}}_l$ with a mean of zero and a standard deviation of one.
+
+Throughout this manuscript, we use mathematical expressions to describe technical details as much as possible while maintaining clarity. We ensure that all equations are properly defined and numbered where necessary. Additionally, we reference scientific articles using the format ""[@TYPE:ID]"" such as ""[@pmid:33931583; @doi:10.1101/2021.10.21.21265225; @pmid:31036433]"".
+
+Fail Reason: Failed"
+"Here we briefly provide the details about these TWAS methods that are necessary to explain our regression framework later (see the referenced articles for more information). In the following, we refer to $\mathbf{y}$ as a vector of traits for $n$ individuals that is centered for convenience (so that no intercept is necessary); $\tilde{\mathbf{t}}_l = \sum_{a \in \mathrm{model}_l} w_{a}^{l} X_{a}$ is the gene's predicted expression for all individuals in tissue $l$, $X_a$ is the genotype of SNP $a$ and $w_{a}$ its weight in the tissue prediction model $l$; and $\mathbf{t}_l$ is the standardized version of $\tilde{\mathbf{t}}_l$ with mean equal to zero and standard deviation equal to one.","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",Preserves inline math,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[PASS] (0.47)
+
+In this section, we briefly introduce the TWAS methods used in our study. These techniques are crucial for understanding the regression framework presented later (referenced articles provide additional information). We refer to $\mathbf{y}$ as a vector of traits for $n$ individuals, centered for convenience (no intercept is necessary); $\tilde{\mathbf{t}}_l = \sum_{a \in \mathrm{model}_l} w_{a}^{l} X_{a}$ denotes the gene's predicted expression for all individuals in tissue $l$, where $X_a$ represents the genotype of SNP $a$ and $w_{a}$ is its weight in the tissue prediction model $l$. Finally, $\mathbf{t}_l$ refers to the standardized version of $\tilde{\mathbf{t}}_l$, with a mean of zero and a standard deviation of one.
+
+Pass Reason: All assertions passed","[FAIL] (0.38)
+
+Failed to find the following keywords:
+ - $X_a$
+ - \tilde{\mathbf{t}}_l = 
+ - \sum_{a \in \mathrm{model}_l}
+---
+In this section, we briefly describe the TWAS methods that will be used in our regression framework (see the referenced articles for more details). We denote $\mathbf{y}$ as a vector of traits for $n$ individuals that has been centered (i.e., no intercept is necessary). In what follows, we use $\tilde{\mathbf{t}}_l$ to represent the predicted expression of a gene in tissue $l$, where $\mathbf{y}_a$ is the genotype of SNP $a$ and $w_{a}$ its weight in the tissue prediction model $l$. The standardized version of $\tilde{\mathbf{t}}_l$ is denoted by $\mathbf{t}_l$, with a mean of zero and standard deviation of one.
+
+Fail Reason: Failed to find the following keywords:
+ - $X_a$
+ - \tilde{\mathbf{t}}_l = 
+ - \sum_{a \in \mathrm{model}_l}","[PASS] (0.47)
+
+In this section, we briefly outline the methods used to explain our regression framework later (refer to the cited articles for more details). We use $\mathbf{y}$ to represent a vector of traits for $n$ individuals, centered for convenience (i.e., with no intercept necessary). $\tilde{\mathbf{t}}_l = \sum_{a \in \mathrm{model}_l} w_{a}^{l} X_{a}$ denotes the predicted expression of a gene in tissue $l$, where $X_a$ is the genotype of SNP $a$ and $w_{a}$ its weight in the tissue prediction model $l$. The standardized version of $\tilde{\mathbf{t}}_l$ is denoted by $\mathbf{t}_l$, with a mean of zero and a standard deviation of one.
+
+Pass Reason: All assertions passed"
+"Here we briefly provide the details about these TWAS methods that are necessary to explain our regression framework later (see the referenced articles for more information). In the following, we refer to $\mathbf{y}$ as a vector of traits for $n$ individuals that is centered for convenience (so that no intercept is necessary); $\tilde{\mathbf{t}}_l = \sum_{a \in \mathrm{model}_l} w_{a}^{l} X_{a}$ is the gene's predicted expression for all individuals in tissue $l$, $X_a$ is the genotype of SNP $a$ and $w_{a}$ its weight in the tissue prediction model $l$; and $\mathbf{t}_l$ is the standardized version of $\tilde{\mathbf{t}}_l$ with mean equal to zero and standard deviation equal to one.","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",Preserves inline math,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[PASS] (0.47)
+
+In this section, we briefly outline the methods used in our regression framework. For more detailed information, please refer to the cited articles. We denote $\mathbf{y}$ as a vector of traits for $n$ individuals, centered for convenience (i.e., with no intercept necessary). We define $\tilde{\mathbf{t}}_l = \sum_{a \in \mathrm{model}_l} w_{a}^{l} X_{a}$ as the predicted expression of gene $a$ in tissue $l$, where $X_a$ is the genotype of SNP $a$ and $w_{a}$ is its weight in the tissue prediction model $l$. Finally, we obtain $\mathbf{t}_l$ by standardizing $\tilde{\mathbf{t}}_l$ with a mean of zero and a standard deviation of one.
+
+Pass Reason: All assertions passed","[PASS] (0.47)
+
+Here, we briefly present the details of the TWAS methods that will be used later in our regression framework (referenced articles provide more information). We use $\mathbf{y}$ to represent a vector of traits for $n$ individuals that are centered for convenience (no intercept is necessary); $\tilde{\mathbf{t}}_l = \sum_{a \in \mathrm{model}_l} w_{a}^{l} X_{a}$ denotes the predicted gene expression for all individuals in tissue $l$, where $X_a$ is the genotype of SNP $a$ and $w_{a}$ its weight in the tissue prediction model $l$; and $\mathbf{t}_l$ represents the standardized version of $\tilde{\mathbf{t}}_l$ with mean equal to zero and standard deviation equal to one.
+
+Pass Reason: All assertions passed","[PASS] (0.47)
+
+We now present a brief overview of the TWAS methods that will be used to explain our regression framework in detail (referenced articles provide more information). For clarity, we refer to $\mathbf{y}$ as a vector of traits for $n$ individuals with mean zero and no intercept. $\tilde{\mathbf{t}}_l = \sum_{a \in \mathrm{model}_l} w_{a}^{l} X_{a}$ represents the predicted expression of each gene in tissue $l$, where $X_a$ is the genotype of SNP $a$ and $w_{a}$ its weight in the tissue prediction model $l$. Finally, $\mathbf{t}_l$ is the standardized version of $\tilde{\mathbf{t}}_l$, with a mean of zero and a standard deviation of one.
+
+Pass Reason: All assertions passed"
+"Here we briefly provide the details about these TWAS methods that are necessary to explain our regression framework later (see the referenced articles for more information). In the following, we refer to $\mathbf{y}$ as a vector of traits for $n$ individuals that is centered for convenience (so that no intercept is necessary); $\tilde{\mathbf{t}}_l = \sum_{a \in \mathrm{model}_l} w_{a}^{l} X_{a}$ is the gene's predicted expression for all individuals in tissue $l$, $X_a$ is the genotype of SNP $a$ and $w_{a}$ its weight in the tissue prediction model $l$; and $\mathbf{t}_l$ is the standardized version of $\tilde{\mathbf{t}}_l$ with mean equal to zero and standard deviation equal to one.","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",Preserves inline math,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[PASS] (0.47)
+
+In this section, we briefly describe the TWAS methods used in our study. For more detailed information, please refer to the cited articles. In the following text, $\mathbf{y}$ represents a vector of traits for $n$ individuals that has been centered for convenience (i.e., no intercept is required). $\tilde{\mathbf{t}}_l = \sum_{a \in \mathrm{model}_l} w_{a}^{l} X_{a}$ denotes the predicted expression of each gene in tissue $l$, where $X_a$ is the genotype of SNP $a$ and $w_{a}$ its weight in the tissue prediction model $l$. Finally, $\mathbf{t}_l$ represents the standardized version of $\tilde{\mathbf{t}}_l$ with a mean of zero and a standard deviation of one.
+
+Pass Reason: All assertions passed","[FAIL] (0.44)
+
+Failed to find the following keywords:
+ - $\mathbf{t}_l$
+---
+We briefly introduce the TWAS methods required for our regression framework (referenced articles provide more information). In this section, we use $\mathbf{y}$ to represent a vector of traits for $n$ individuals, centered for convenience (no intercept is necessary). $\tilde{\mathbf{t}}_l = \sum_{a \in \mathrm{model}_l} w_{a}^{l} X_{a}$ denotes the predicted expression of a gene in tissue $l$, where $X_a$ is the genotype of SNP $a$ and $w_{a}$ its weight in the tissue prediction model $l$. We then define $\mathbf{t}_l = \frac{\tilde{\mathbf{t}}_l - \bar{\tilde{\mathbf{t}}_l}}{\sigma_{\tilde{\mathbf{t}}_l}}$ as the standardized version of $\tilde{\mathbf{t}}_l$, with mean zero and standard deviation equal to one.
+
+Fail Reason: Failed to find the following keywords:
+ - $\mathbf{t}_l$","[PASS] (0.47)
+
+Here, we briefly describe the TWAS methods required for our regression framework (referenced articles provide more information). In the following text, we use $\mathbf{y}$ to denote a vector of traits for $n$ individuals, centered for convenience (i.e., no intercept is necessary); $\tilde{\mathbf{t}}_l = \sum_{a \in \mathrm{model}_l} w_{a}^{l} X_{a}$ represents the predicted expression of a gene in tissue $l$, where $X_a$ is the genotype of SNP $a$ and $w_{a}$ its weight in the tissue prediction model $l$; and $\mathbf{t}_l$ refers to the standardized version of $\tilde{\mathbf{t}}_l$, with mean equal to zero and standard deviation equal to one.
+
+Pass Reason: All assertions passed"
+"S-PrediXcan [@doi:10.1038/s41467-018-03621-1] is the summary version of PrediXcan [@doi:10.1038/ng.3367]. PrediXcan models the trait as a linear function of the gene's expression on a single tissue using the univariate model
+
+$$
+\mathbf{y} = \mathbf{t}_l \gamma_l + \bm{\epsilon}_l,
+$$ {#eq:predixcan}
+
+where $\hat{\gamma}_l$ is the estimated effect size or regression coefficient, and $\bm{\epsilon}_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$. PrediXcan needs individual-level data to fit this model, whereas S-PrediXcan approximates PrediXcan $z$-scores using only GWAS summary statistics with the expression
+
+$$
+\hat{z}_{l} \approx \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$ {#eq:spredixcan}
+
+where $\hat{\sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_a$ is the estimated effect size of SNP $a$ from the GWAS. In these TWAS methods, the genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) [@doi:10.1126/science.aaz1776] as the reference panel. Since S-PrediXcan provides tissue-specific direction of effects (for instance, whether a higher or lower predicted expression of a gene confers more or less disease risk), we used the $z$-scores in our drug repurposing approach (described below).","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",Preserves numbered equations and references to articles,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[FAIL] (0.39)
+
+Failed to reference the following articles:
+ - @doi:10.1038/ng.3367
+ - @doi:10.1038/s41467-018-03621-1
+ - @doi:10.1126/science.aaz1776
+---
+The S-PrediXcan method is a summary version of PrediXcan, which models a trait as a linear function of gene expression on a single tissue using the univariate model. The significance of the association between the trait and a gene's expression is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$. However, S-PrediXcan approximates PrediXcan $z$-scores using only GWAS summary statistics. The genotype variances and covariances are estimated using the Genotype-Tissue Expression project (GTEx v8) as the reference panel. S-PrediXcan provides tissue-specific direction of effects, which can be used in drug repurposing approaches.
+
+Fail Reason: Failed to reference the following articles:
+ - @doi:10.1038/ng.3367
+ - @doi:10.1038/s41467-018-03621-1
+ - @doi:10.1126/science.aaz1776","[PASS] (0.78)
+
+The S-PrediXcan method [@doi:10.1038/s41467-018-03621-1] is a simplified version of the PrediXcan model [@doi:10.1038/ng.3367]. The PrediXcan model predicts a trait as a linear function of gene expression in a single tissue using the univariate model
+
+$$
+\mathbf{y} = \mathbf{t}_l \gamma_l + \bm{\epsilon}_l,
+$$ {#eq:predixcan}
+
+where $\hat{\gamma}_l$ is the estimated effect size or regression coefficient, and $\bm{\epsilon}_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$. PrediXcan requires individual-level data to fit this model, whereas S-PrediXcan approximates PrediXcan $z$-scores using only GWAS summary statistics with the expression
+
+$$
+\hat{z}_{l} \approx \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$ {#eq:spredixcan}
+
+where $\hat{\sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_a$ is the estimated effect size of SNP $a$ from the GWAS. In these TWAS methods, the genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) [@doi:10.1126/science.aaz1776] as the reference panel. Since S-PrediXcan provides tissue-specific direction of effects, we used the $z$-scores in our drug repurposing approach (described below).
+
+Pass Reason: All assertions passed","[PASS] (0.78)
+
+S-PrediXcan [@doi:10.1038/s41467-018-03621-1] is a simplified version of PrediXcan [@doi:10.1038/ng.3367]. PrediXcan models the trait as a linear function of a gene's expression on a single tissue using the univariate model
+
+$$
+\mathbf{y} = \mathbf{t}_l \gamma_l + \bm{\epsilon}_l,
+$$ {#eq:predixcan}
+
+where $\hat{\gamma}_l$ is the estimated effect size or regression coefficient, and $\bm{\epsilon}_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$. PrediXcan requires individual-level data to fit this model, whereas S-PrediXcan approximates PrediXcan $z$-scores using only GWAS summary statistics with the expression
+
+$$
+\hat{z}_{l} \approx \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$ {#eq:spredixcan}
+
+where $\hat{\sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_a$ is the estimated effect size of SNP $a$ from the GWAS. In these TWAS methods, the genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) [@doi:10.1126/science.aaz1776] as the reference panel. Since S-PrediXcan provides tissue-specific direction of effects (for example, whether a higher or lower predicted expression of a gene confers more or less disease risk), we used the $z$-scores in our drug repurposing approach (described below).
+
+Pass Reason: All assertions passed"
+"S-PrediXcan [@doi:10.1038/s41467-018-03621-1] is the summary version of PrediXcan [@doi:10.1038/ng.3367]. PrediXcan models the trait as a linear function of the gene's expression on a single tissue using the univariate model
+
+$$
+\mathbf{y} = \mathbf{t}_l \gamma_l + \bm{\epsilon}_l,
+$$ {#eq:predixcan}
+
+where $\hat{\gamma}_l$ is the estimated effect size or regression coefficient, and $\bm{\epsilon}_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$. PrediXcan needs individual-level data to fit this model, whereas S-PrediXcan approximates PrediXcan $z$-scores using only GWAS summary statistics with the expression
+
+$$
+\hat{z}_{l} \approx \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$ {#eq:spredixcan}
+
+where $\hat{\sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_a$ is the estimated effect size of SNP $a$ from the GWAS. In these TWAS methods, the genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) [@doi:10.1126/science.aaz1776] as the reference panel. Since S-PrediXcan provides tissue-specific direction of effects (for instance, whether a higher or lower predicted expression of a gene confers more or less disease risk), we used the $z$-scores in our drug repurposing approach (described below).","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",Preserves numbered equations and references to articles,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[FAIL] (0.52)
+
+Failed to reference the following articles:
+ - @doi:10.1038/ng.3367
+ - @doi:10.1038/s41467-018-03621-1
+ - @doi:10.1126/science.aaz1776
+---
+The S-PrediXcan method is a simplified version of PrediXcan, which models the trait as a linear function of gene expression on a single tissue using a univariate model. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$. However, S-PrediXcan uses GWAS summary statistics to approximate PrediXcan $z$-scores, with the expression
+
+$$\hat{z}_{l} \approx \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},$$ 
+
+where $\hat{\sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_a$ is the estimated effect size of SNP $a$ from the GWAS. In these TWAS methods, genotype variances and covariances are always estimated using GTEx v8 as the reference panel. S-PrediXcan provides tissue-specific direction of effects, allowing it to be used in drug repurposing approaches, such as the one described below.
+
+Fail Reason: Failed to reference the following articles:
+ - @doi:10.1038/ng.3367
+ - @doi:10.1038/s41467-018-03621-1
+ - @doi:10.1126/science.aaz1776","[PASS] (0.78)
+
+PrediXcan [@doi:10.1038/ng.3367] is a method that models gene expression as a linear function of the trait on a single tissue, using univariate model:
+
+$$
+\mathbf{y} = \mathbf{t}_l \gamma_l + \bm{\epsilon}_l,
+$$ {#eq:predixcan}
+
+where $\hat{\gamma}_l$ is the estimated effect size or regression coefficient, and $\bm{\epsilon}_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$.
+
+S-PrediXcan [@doi:10.1038/s41467-018-03621-1] is a summary version of PrediXcan, which approximates PrediXcan $z$-scores using only GWAS summary statistics with the expression
+
+$$
+\hat{z}_{l} \approx \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$ {#eq:spredixcan}
+
+where $\hat{\sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_a$ is the estimated effect size of SNP $a$ from the GWAS. In these TWAS methods, the genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) [@doi:10.1126/science.aaz1776] as the reference panel.
+
+Since S-PrediXcan provides tissue-specific direction of effects, we used the $z$-scores in our drug repurposing approach (described below).
+
+Pass Reason: All assertions passed","[FAIL] (0.53)
+
+Failed to reference the following articles:
+ - @doi:10.1038/ng.3367
+ - @doi:10.1038/s41467-018-03621-1
+ - @doi:10.1126/science.aaz1776
+---
+S-PrediXcan is a simplified version of PrediXcan, which models the trait as a linear function of gene expression on a single tissue using the univariate model. In this equation, $\hat{\gamma}_l$ represents the estimated effect size or regression coefficient, and $\bm{\epsilon}_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$. PrediXcan requires individual-level data to fit this model, whereas S-PrediXcan approximates PrediXcan $z$-scores using only GWAS summary statistics with the expression:
+
+$$
+\hat{z}_{l} \approx \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$ {#eq:spredixcan}
+
+where $\hat{\sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_a$ is the estimated effect size of SNP $a$ from the GWAS. In these TWAS methods, genotype variances and covariances are always estimated using GTEx v8 as the reference panel. Since S-PrediXcan provides tissue-specific direction of effects (e.g., whether a higher or lower predicted expression of a gene confers more or less disease risk), we used $z$-scores in our drug repurposing approach (described below).
+
+Fail Reason: Failed to reference the following articles:
+ - @doi:10.1038/ng.3367
+ - @doi:10.1038/s41467-018-03621-1
+ - @doi:10.1126/science.aaz1776"
+"S-PrediXcan [@doi:10.1038/s41467-018-03621-1] is the summary version of PrediXcan [@doi:10.1038/ng.3367]. PrediXcan models the trait as a linear function of the gene's expression on a single tissue using the univariate model
+
+$$
+\mathbf{y} = \mathbf{t}_l \gamma_l + \bm{\epsilon}_l,
+$$ {#eq:predixcan}
+
+where $\hat{\gamma}_l$ is the estimated effect size or regression coefficient, and $\bm{\epsilon}_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$. PrediXcan needs individual-level data to fit this model, whereas S-PrediXcan approximates PrediXcan $z$-scores using only GWAS summary statistics with the expression
+
+$$
+\hat{z}_{l} \approx \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$ {#eq:spredixcan}
+
+where $\hat{\sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_a$ is the estimated effect size of SNP $a$ from the GWAS. In these TWAS methods, the genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) [@doi:10.1126/science.aaz1776] as the reference panel. Since S-PrediXcan provides tissue-specific direction of effects (for instance, whether a higher or lower predicted expression of a gene confers more or less disease risk), we used the $z$-scores in our drug repurposing approach (described below).","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",Preserves numbered equations and references to articles,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[FAIL] (0.72)
+
+Failed to find the following keywords:
+ - $$ {#eq:predixcan}
+ - \mathbf{y} = \mathbf{t}_l \gamma_l + \bm{\epsilon}_l
+ - \mathrm{se}(\hat{\gamma}_l)
+---
+S-PrediXcan [@doi:10.1038/s41467-018-03621-1] is a summary version of PrediXcan [@doi:10.1038/ng.3367]. The two methods model the trait as a linear function of gene expression on a single tissue using univariate models. 
+
+PrediXcan uses individual-level data to fit this model, whereas S-PrediXcan approximates PrediXcan $z$-scores using only GWAS summary statistics with the expression:
+
+$$
+\hat{z}_{l} \approx \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$ {#eq:spredixcan}
+
+where $\hat{\sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_a$ is the estimated effect size of SNP $a$ from the GWAS. In these TWAS methods, genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) [@doi:10.1126/science.aaz1776] as the reference panel.
+
+S-PrediXcan provides tissue-specific direction of effects, allowing us to use $z$-scores in our drug repurposing approach (described below).
+
+Fail Reason: Failed to find the following keywords:
+ - $$ {#eq:predixcan}
+ - \mathbf{y} = \mathbf{t}_l \gamma_l + \bm{\epsilon}_l
+ - \mathrm{se}(\hat{\gamma}_l)","[FAIL] (0.57)
+
+Failed to reference the following articles:
+ - @doi:10.1038/ng.3367
+ - @doi:10.1038/s41467-018-03621-1
+ - @doi:10.1126/science.aaz1776
+---
+PrediXcan and S-PrediXcan are two methods for modeling genetic associations with disease etiology and drug mechanisms. PrediXcan uses individual-level data to fit a linear model of the trait as a function of gene expression on a single tissue, using the univariate model:
+
+$$
+\mathbf{y} = \mathbf{t}_l \gamma_l + \bm{\epsilon}_l,
+$$ {#eq:predixcan}
+
+where $\hat{\gamma}_l$ is the estimated effect size or regression coefficient, and $\bm{\epsilon}_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$.
+
+S-PrediXcan, on the other hand, approximates PrediXcan $z$-scores using only GWAS summary statistics with the expression:
+
+$$
+\hat{z}_{l} \approx \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$ {#eq:spredixcan}
+
+where $\hat{\sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_a$ is the estimated effect size of SNP $a$ from the GWAS. S-PrediXcan uses the Genotype-Tissue Expression project (GTEx v8) as the reference panel for estimating genotype variances and covariances.
+
+The tissue-specific direction of effects provided by S-PrediXcan was used in our drug repurposing approach, which is described below.
+
+Fail Reason: Failed to reference the following articles:
+ - @doi:10.1038/ng.3367
+ - @doi:10.1038/s41467-018-03621-1
+ - @doi:10.1126/science.aaz1776","[FAIL] (0.49)
+
+Failed to reference the following articles:
+ - @doi:10.1038/ng.3367
+ - @doi:10.1038/s41467-018-03621-1
+ - @doi:10.1126/science.aaz1776
+---
+PrediXcan is a statistical tool that models traits as linear functions of gene expression levels on single tissues. The univariate model {#eq:predixcan} is used to fit the trait, where $\hat{\gamma}_l$ represents the estimated effect size or regression coefficient, and $\bm{\epsilon}_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$.
+
+S-PrediXcan is a simplified version of PrediXcan that approximates the $z$-scores using only GWAS summary statistics. The approximation expression {#eq:spredixcan} is used, where $\hat{\sigma}_a$ represents the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_a$ is the estimated effect size of SNP $a$ from the GWAS. The genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) as the reference panel.
+
+S-PrediXcan provides tissue-specific direction of effects, which can be useful in drug repurposing approaches. In this study, we used S-PrediXcan $z$-scores to assess the potential of existing drugs for treating a particular disease.
+
+Fail Reason: Failed to reference the following articles:
+ - @doi:10.1038/ng.3367
+ - @doi:10.1038/s41467-018-03621-1
+ - @doi:10.1126/science.aaz1776"
+"S-PrediXcan [@doi:10.1038/s41467-018-03621-1] is the summary version of PrediXcan [@doi:10.1038/ng.3367]. PrediXcan models the trait as a linear function of the gene's expression on a single tissue using the univariate model
+
+$$
+\mathbf{y} = \mathbf{t}_l \gamma_l + \bm{\epsilon}_l,
+$$ {#eq:predixcan}
+
+where $\hat{\gamma}_l$ is the estimated effect size or regression coefficient, and $\bm{\epsilon}_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$. PrediXcan needs individual-level data to fit this model, whereas S-PrediXcan approximates PrediXcan $z$-scores using only GWAS summary statistics with the expression
+
+$$
+\hat{z}_{l} \approx \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$ {#eq:spredixcan}
+
+where $\hat{\sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_a$ is the estimated effect size of SNP $a$ from the GWAS. In these TWAS methods, the genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) [@doi:10.1126/science.aaz1776] as the reference panel. Since S-PrediXcan provides tissue-specific direction of effects (for instance, whether a higher or lower predicted expression of a gene confers more or less disease risk), we used the $z$-scores in our drug repurposing approach (described below).","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",Preserves numbered equations and references to articles,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[FAIL] (0.57)
+
+Failed to reference the following articles:
+ - @doi:10.1038/ng.3367
+ - @doi:10.1038/s41467-018-03621-1
+---
+The S-PrediXcan method is an abridged version of PrediXcan, which models the trait as a linear function of gene expression in a single tissue using a univariate model. The model is expressed as:
+
+$$
+\mathbf{y} = \mathbf{t}_l \gamma_l + \bm{\epsilon}_l,
+$$ {#eq:predixcan}
+
+where $\hat{\gamma}_l$ is the estimated effect size or regression coefficient, and $\bm{\epsilon}_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$. PrediXcan requires individual-level data to fit this model, whereas S-PrediXcan approximates PrediXcan $z$-scores using only GWAS summary statistics with the expression:
+
+$$
+\hat{z}_{l} \approx \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$ {#eq:spredixcan}
+
+where $\hat{\sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_a$ is the estimated effect size of SNP $a$ from the GWAS. In these TWAS methods, the genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) [@doi:10.1126/science.aaz1776] as the reference panel. S-PrediXcan provides tissue-specific direction of effects, which can be used to determine whether a higher or lower predicted expression of a gene confers more or less disease risk. In our drug repurposing approach, we utilized these $z$-scores.
+
+Fail Reason: Failed to reference the following articles:
+ - @doi:10.1038/ng.3367
+ - @doi:10.1038/s41467-018-03621-1","[FAIL] (0.73)
+
+Failed to find the following keywords:
+ - $$ {#eq:predixcan}
+ - \mathbf{y} = \mathbf{t}_l \gamma_l + \bm{\epsilon}_l
+---
+The S-PrediXcan method [@doi:10.1038/s41467-018-03621-1] is a summary version of PrediXcan [@doi:10.1038/ng.3367]. Both methods model the trait as a linear function of gene expression on a single tissue using different approaches.
+
+PrediXcan uses an univariate model to fit the trait as a linear function of the gene's expression on a single tissue, with error terms $\bm{\epsilon}_l$ and estimated effect size or regression coefficient $\hat{\gamma}_l$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$.
+
+S-PrediXcan, on the other hand, approximates PrediXcan $z$-scores using only GWAS summary statistics. The expression used is:
+
+$$
+\hat{z}_{l} \approx \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$ {#eq:spredixcan}
+
+where $\hat{\sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_a$ is the estimated effect size of SNP $a$ from the GWAS. In these TWAS methods, the genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) [@doi:10.1126/science.aaz1776] as the reference panel.
+
+Since S-PrediXcan provides tissue-specific direction of effects, we used the $z$-scores in our drug repurposing approach (described below).
+
+Fail Reason: Failed to find the following keywords:
+ - $$ {#eq:predixcan}
+ - \mathbf{y} = \mathbf{t}_l \gamma_l + \bm{\epsilon}_l","[FAIL] (0.57)
+
+Failed to reference the following articles:
+ - @doi:10.1038/ng.3367
+ - @doi:10.1038/s41467-018-03621-1
+ - @doi:10.1126/science.aaz1776
+---
+S-PrediXcan is the summary version of PrediXcan, which models the trait as a linear function of gene expression on a single tissue using the univariate model. The equation for this model is:
+
+$$
+\mathbf{y} = \mathbf{t}_l \gamma_l + \bm{\epsilon}_l,
+$$ {#eq:predixcan}
+
+where $\hat{\gamma}_l$ is the estimated effect size or regression coefficient, and $\bm{\epsilon}_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$.
+
+S-PrediXcan approximates PrediXcan $z$-scores using only GWAS summary statistics. The expression for this approximation is:
+
+$$
+\hat{z}_{l} \approx \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$ {#eq:spredixcan}
+
+where $\hat{\sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_a$ is the estimated effect size of SNP $a$ from the GWAS. In these TWAS methods, genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) as a reference panel.
+
+Since S-PrediXcan provides tissue-specific direction of effects, we used the $z$-scores in our drug repurposing approach.
+
+Fail Reason: Failed to reference the following articles:
+ - @doi:10.1038/ng.3367
+ - @doi:10.1038/s41467-018-03621-1
+ - @doi:10.1126/science.aaz1776"
+"S-PrediXcan [@doi:10.1038/s41467-018-03621-1] is the summary version of PrediXcan [@doi:10.1038/ng.3367]. PrediXcan models the trait as a linear function of the gene's expression on a single tissue using the univariate model
+
+$$
+\mathbf{y} = \mathbf{t}_l \gamma_l + \bm{\epsilon}_l,
+$$ {#eq:predixcan}
+
+where $\hat{\gamma}_l$ is the estimated effect size or regression coefficient, and $\bm{\epsilon}_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$. PrediXcan needs individual-level data to fit this model, whereas S-PrediXcan approximates PrediXcan $z$-scores using only GWAS summary statistics with the expression
+
+$$
+\hat{z}_{l} \approx \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$ {#eq:spredixcan}
+
+where $\hat{\sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_a$ is the estimated effect size of SNP $a$ from the GWAS. In these TWAS methods, the genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) [@doi:10.1126/science.aaz1776] as the reference panel. Since S-PrediXcan provides tissue-specific direction of effects (for instance, whether a higher or lower predicted expression of a gene confers more or less disease risk), we used the $z$-scores in our drug repurposing approach (described below).","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",Preserves numbered equations and references to articles,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[FAIL] (0.57)
+
+Failed to find the following keywords:
+ - $$ {#eq:predixcan}
+ - \mathbf{y} = \mathbf{t}_l \gamma_l + \bm{\epsilon}_l
+ - \hat{z}_{l}
+ - \mathrm{se}(\hat{\gamma}_l)
+ - $l$
+ - $$ {#eq:spredixcan}
+ - \hat{z}_{l} \approx \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)}
+ - $\hat{\sigma}_a$
+ - $\hat{\sigma}_l$
+ - $\hat{\beta}_a$
+---
+The S-PrediXcan tool [@doi:10.1038/s41467-018-03621-1] is a simplified version of PrediXcan [@doi:10.1038/ng.3367]. While PrediXcan models the trait as a linear function of gene expression on a single tissue using the univariate model described in equation #eq:predixcan, S-PrediXcan uses only GWAS summary statistics to approximate PrediXcan $z$-scores with the expression given in equation #eq:spredixcan. This approach is useful because it allows for the analysis of disease risk without requiring individual-level data.
+
+In these TWAS methods, genotype variances and covariances are always estimated using GTEx v8 as a reference panel [@doi:10.1126/science.aaz1776]. S-PrediXcan provides tissue-specific direction of effects, which can be used to identify genes that may be repurposed for drug development (see below).
+
+Overall, the use of S-PrediXcan in our drug repurposing approach is a valuable tool for identifying potential therapeutic targets based on GWAS data and gene expression information.
+
+Fail Reason: Failed to find the following keywords:
+ - $$ {#eq:predixcan}
+ - \mathbf{y} = \mathbf{t}_l \gamma_l + \bm{\epsilon}_l
+ - \hat{z}_{l}
+ - \mathrm{se}(\hat{\gamma}_l)
+ - $l$
+ - $$ {#eq:spredixcan}
+ - \hat{z}_{l} \approx \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)}
+ - $\hat{\sigma}_a$
+ - $\hat{\sigma}_l$
+ - $\hat{\beta}_a$","[FAIL] (0.52)
+
+Failed to reference the following articles:
+ - @doi:10.1038/ng.3367
+ - @doi:10.1038/s41467-018-03621-1
+ - @doi:10.1126/science.aaz1776
+---
+S-PrediXcan is a simplified version of PrediXcan, which models the relationship between a trait and gene expression in a single tissue using a univariate model. The linear equation for this model is:
+
+$$
+\mathbf{y} = \mathbf{t}_l \gamma_l + \bm{\epsilon}_l,
+$$ {#eq:predixcan}
+
+where $\hat{\gamma}_l$ represents the estimated effect size or regression coefficient and $\bm{\epsilon}_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. To determine the significance of the association, a $z$-score is computed for each gene's tissue model $l$:
+
+$$
+\hat{z}_{l} = \frac{\hat{\gamma}_l}{\mathrm{se}(\hat{\gamma}_l)}.
+$$ {#eq:spredixcan}
+
+PrediXcan requires individual-level data to fit this model, while S-PrediXcan approximates PrediXcan $z$-scores using only GWAS summary statistics. The expression for S-PrediXcan is:
+
+$$
+\hat{z}_{l} \approx \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)}.
+$$ {#eq:spredixcan}
+
+In these TWAS methods, the genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) as the reference panel. Since S-PrediXcan provides tissue-specific direction of effects, we used the $z$-scores in our drug repurposing approach.
+
+Fail Reason: Failed to reference the following articles:
+ - @doi:10.1038/ng.3367
+ - @doi:10.1038/s41467-018-03621-1
+ - @doi:10.1126/science.aaz1776","[FAIL] (0.57)
+
+Failed to reference the following articles:
+ - @doi:10.1038/ng.3367
+ - @doi:10.1038/s41467-018-03621-1
+ - @doi:10.1126/science.aaz1776
+---
+S-PrediXcan is a summary version of PrediXcan, which models the trait as a linear function of a gene's expression on a single tissue using the univariate model:
+
+$$\mathbf{y} = \mathbf{t}_l \gamma_l + \bm{\epsilon}_l,$$ {#eq:predixcan}
+
+where $\hat{\gamma}_l$ is the estimated effect size or regression coefficient, and $\bm{\epsilon}_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$.
+
+S-PrediXcan approximates PrediXcan $z$-scores using only GWAS summary statistics with the expression:
+
+$$\hat{z}_{l} \approx \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},$$ {#eq:spredixcan}
+
+where $\hat{\sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_a$ is the estimated effect size of SNP $a$ from the GWAS. In these TWAS methods, genotype variances and covariances are always estimated using GTEx v8 as the reference panel. S-PrediXcan provides tissue-specific direction of effects (e.g., whether a higher or lower predicted expression of a gene confers more or less disease risk), which we used in our drug repurposing approach.
+
+Fail Reason: Failed to reference the following articles:
+ - @doi:10.1038/ng.3367
+ - @doi:10.1038/s41467-018-03621-1
+ - @doi:10.1126/science.aaz1776"
+"S-PrediXcan [@doi:10.1038/s41467-018-03621-1] is the summary version of PrediXcan [@doi:10.1038/ng.3367]. PrediXcan models the trait as a linear function of the gene's expression on a single tissue using the univariate model
+
+$$
+\mathbf{y} = \mathbf{t}_l \gamma_l + \bm{\epsilon}_l,
+$$ {#eq:predixcan}
+
+where \mathbf{t}_l is the gene predicted expression in tissue $l$, $\beta_l$ is the estimated effect size or regression coefficient, and $\epsilon_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$. PrediXcan needs individual-level data to fit this model, whereas S-PrediXcan approximates PrediXcan $z$-scores using only GWAS summary statistics with the expression
+
+$$
+\hat{z}_{l} \approx \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$ {#eq:spredixcan}
+
+where $\hat{\Sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_l$ is the estimated effect size of SNP $a$ from the GWAS. In these TWAS methods, the genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) [@doi:10.1126/science.aaz1776] as the reference panel. Since S-PrediXcan provides tissue-specific direction of effects (for instance, whether a higher or lower predicted expression of a gene confers more or less disease risk), we used the $z$-scores in our drug repurposing approach (described below).","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",Fixes incorrect math references,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[FAIL] (0.22)
+
+Failed to fix the following expressions:
+ - $\beta_l$ -> $\gamma_l$
+ - $\epsilon_l$ -> $\bm{\epsilon}_l$
+ - $\hat{\Sigma}_a$ -> $\hat{\sigma}_a$
+ - $\hat{\beta}_l$ -> $\hat{\beta}_a$
+---
+S-PrediXcan is a summary version of PrediXcan, an R package that models traits as linear functions of gene expression in a single tissue using the univariate model equation:
+
+$$\mathbf{y} = \mathbf{t}_l \gamma_l + \bm{\epsilon}_l$$ {#eq:predixcan}
+
+where $\mathbf{t}_l$ is the predicted gene expression in tissue $l$, $\beta_l$ is the estimated effect size or regression coefficient, and $\epsilon_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$. PrediXcan requires individual-level data to fit this model, but S-PrediXcan approximates PrediXcan $z$-scores using only GWAS summary statistics with the expression:
+
+$$\hat{z}_{l} \approx \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},$$ {#eq:spredixcan}
+
+where $\hat{\Sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_l$ is the estimated effect size of SNP $a$ from the GWAS. In these TWAS methods, the genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) as the reference panel. S-PrediXcan provides tissue-specific direction of effects, allowing us to use $z$-scores in our drug repurposing approach (see below).
+
+Fail Reason: Failed to fix the following expressions:
+ - $\beta_l$ -> $\gamma_l$
+ - $\epsilon_l$ -> $\bm{\epsilon}_l$
+ - $\hat{\Sigma}_a$ -> $\hat{\sigma}_a$
+ - $\hat{\beta}_l$ -> $\hat{\beta}_a$","[FAIL] (0.22)
+
+Failed to fix the following expressions:
+ - $\beta_l$ -> $\gamma_l$
+ - $\epsilon_l$ -> $\bm{\epsilon}_l$
+ - $\hat{\Sigma}_a$ -> $\hat{\sigma}_a$
+ - $\hat{\beta}_l$ -> $\hat{\beta}_a$
+---
+In this study, we employed S-PrediXcan [@doi:10.1038/s41467-018-03621-1], which is a summary version of PrediXcan [@doi:10.1038/ng.3367]. Both methods model the trait as a linear function of gene expression in a single tissue using the univariate model
+
+$$
+\mathbf{y} = \mathbf{t}_l \gamma_l + \bm{\epsilon}_l,
+$$ {#eq:predixcan}
+
+where \mathbf{t}_l is the predicted gene expression in tissue $l$, $\beta_l$ is the estimated effect size or regression coefficient, and $\epsilon_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$.
+
+However, S-PrediXcan approximates PrediXcan $z$-scores using only GWAS summary statistics with the expression
+
+$$
+\hat{z}_{l} \approx \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$ {#eq:spredixcan}
+
+where $\hat{\Sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_l$ is the estimated effect size of SNP $a$ from the GWAS. In these TWAS methods, the genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) [@doi:10.1126/science.aaz1776] as the reference panel.
+
+Since S-PrediXcan provides tissue-specific direction of effects, we utilized the $z$-scores in our drug repurposing approach to identify potential therapeutic targets and drug mechanisms (described below).
+
+Fail Reason: Failed to fix the following expressions:
+ - $\beta_l$ -> $\gamma_l$
+ - $\epsilon_l$ -> $\bm{\epsilon}_l$
+ - $\hat{\Sigma}_a$ -> $\hat{\sigma}_a$
+ - $\hat{\beta}_l$ -> $\hat{\beta}_a$","[FAIL] (0.22)
+
+Failed to fix the following expressions:
+ - $\beta_l$ -> $\gamma_l$
+ - $\epsilon_l$ -> $\bm{\epsilon}_l$
+ - $\hat{\Sigma}_a$ -> $\hat{\sigma}_a$
+ - $\hat{\beta}_l$ -> $\hat{\beta}_a$
+---
+PrediXcan [@doi:10.1038/ng.3367] is a statistical model that predicts disease risk based on the expression of genes in a single tissue using univariate analysis. The model uses linear regression to estimate the effect size or regression coefficient for each gene, which is then used to calculate significance scores [#eq:predixcan].
+
+S-PrediXcan is an approximation of PrediXcan that utilizes GWAS summary statistics instead of individual-level data. This method calculates $z$-scores for each gene using the expression [#eq:spredixcan], which takes into account the variance of SNPs and their estimated effect sizes from the GWAS. The Genotype-Tissue Expression project (GTEx v8) is used to estimate genotype variances and covariances in these TWAS methods [@doi:10.1126/science.aaz1776].
+
+Since S-PrediXcan provides tissue-specific direction of effects, we utilized the $z$-scores in our drug repurposing approach.
+
+Fail Reason: Failed to fix the following expressions:
+ - $\beta_l$ -> $\gamma_l$
+ - $\epsilon_l$ -> $\bm{\epsilon}_l$
+ - $\hat{\Sigma}_a$ -> $\hat{\sigma}_a$
+ - $\hat{\beta}_l$ -> $\hat{\beta}_a$"
+"S-PrediXcan [@doi:10.1038/s41467-018-03621-1] is the summary version of PrediXcan [@doi:10.1038/ng.3367]. PrediXcan models the trait as a linear function of the gene's expression on a single tissue using the univariate model
+
+$$
+\mathbf{y} = \mathbf{t}_l \gamma_l + \bm{\epsilon}_l,
+$$ {#eq:predixcan}
+
+where \mathbf{t}_l is the gene predicted expression in tissue $l$, $\beta_l$ is the estimated effect size or regression coefficient, and $\epsilon_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$. PrediXcan needs individual-level data to fit this model, whereas S-PrediXcan approximates PrediXcan $z$-scores using only GWAS summary statistics with the expression
+
+$$
+\hat{z}_{l} \approx \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$ {#eq:spredixcan}
+
+where $\hat{\Sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_l$ is the estimated effect size of SNP $a$ from the GWAS. In these TWAS methods, the genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) [@doi:10.1126/science.aaz1776] as the reference panel. Since S-PrediXcan provides tissue-specific direction of effects (for instance, whether a higher or lower predicted expression of a gene confers more or less disease risk), we used the $z$-scores in our drug repurposing approach (described below).","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",Fixes incorrect math references,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[FAIL] (0.22)
+
+Failed to fix the following expressions:
+ - $\beta_l$ -> $\gamma_l$
+ - $\epsilon_l$ -> $\bm{\epsilon}_l$
+ - $\hat{\Sigma}_a$ -> $\hat{\sigma}_a$
+ - $\hat{\beta}_l$ -> $\hat{\beta}_a$
+---
+S-PrediXcan [@doi:10.1038/s41467-018-03621-1] is a summary version of PrediXcan [@doi:10.1038/ng.3367], which models the trait as a linear function of the gene's expression on a single tissue using the univariate model
+
+$$
+\mathbf{y} = \mathbf{t}_l \gamma_l + \bm{\epsilon}_l,
+$$ {#eq:predixcan}
+
+where \mathbf{t}_l is the gene predicted expression in tissue $l$, $\beta_l$ is the estimated effect size or regression coefficient, and $\epsilon_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$. PrediXcan requires individual-level data to fit this model, whereas S-PrediXcan approximates PrediXcan $z$-scores using only GWAS summary statistics with the expression
+
+$$
+\hat{z}_{l} \approx \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$ {#eq:spredixcan}
+
+where $\hat{\Sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_l$ is the estimated effect size of SNP $a$ from the GWAS. In these TWAS methods, the genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) [@doi:10.1126/science.aaz1776] as the reference panel. S-PrediXcan provides tissue-specific direction of effects, which allows us to determine whether a higher or lower predicted expression of a gene confers more or less disease risk. We used these $z$-scores in our drug repurposing approach (described below).
+
+Fail Reason: Failed to fix the following expressions:
+ - $\beta_l$ -> $\gamma_l$
+ - $\epsilon_l$ -> $\bm{\epsilon}_l$
+ - $\hat{\Sigma}_a$ -> $\hat{\sigma}_a$
+ - $\hat{\beta}_l$ -> $\hat{\beta}_a$","[FAIL] (0.22)
+
+Failed to fix the following expressions:
+ - $\beta_l$ -> $\gamma_l$
+ - $\epsilon_l$ -> $\bm{\epsilon}_l$
+ - $\hat{\Sigma}_a$ -> $\hat{\sigma}_a$
+ - $\hat{\beta}_l$ -> $\hat{\beta}_a$
+---
+PrediXcan is a functional genomics tool for modeling traits as linear functions of gene expression on a single tissue. The univariate model uses the equation:
+
+$$
+\mathbf{y} = \mathbf{t}_l \gamma_l + \bm{\epsilon}_l,
+$$ {#eq:predixcan}
+
+where \mathbf{t}_l is the gene predicted expression in tissue $l$, $\beta_l$ is the estimated effect size or regression coefficient, and $\epsilon_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$.
+
+S-PrediXcan is a summary version of PrediXcan that approximates the $z$-scores using only GWAS summary statistics. The expression is:
+
+$$
+\hat{z}_{l} \approx \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$ {#eq:spredixcan}
+
+where $\hat{\Sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_l$ is the estimated effect size of SNP $a$ from the GWAS. In these TWAS methods, the genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) as the reference panel.
+
+Our analysis used S-PrediXcan to identify genetic associations for disease etiology and drug mechanisms. We computed the $z$-scores for each gene in a tissue model, which provided tissue-specific direction of effects (for instance, whether a higher or lower predicted expression of a gene confers more or less disease risk). These $z$-scores were used in our drug repurposing approach to identify potential therapeutic targets and drug mechanisms.
+
+Fail Reason: Failed to fix the following expressions:
+ - $\beta_l$ -> $\gamma_l$
+ - $\epsilon_l$ -> $\bm{\epsilon}_l$
+ - $\hat{\Sigma}_a$ -> $\hat{\sigma}_a$
+ - $\hat{\beta}_l$ -> $\hat{\beta}_a$","[FAIL] (0.22)
+
+Failed to fix the following expressions:
+ - $\beta_l$ -> $\gamma_l$
+ - $\epsilon_l$ -> $\bm{\epsilon}_l$
+ - $\hat{\Sigma}_a$ -> $\hat{\sigma}_a$
+ - $\hat{\beta}_l$ -> $\hat{\beta}_a$
+---
+PrediXcan [@doi:10.1038/ng.3367; @pmid:31036433] is a statistical model that predicts the trait as a linear function of gene expression on a single tissue using univariate analysis. The model takes into account the predicted expression of a gene in a specific tissue (denoted by \mathbf{t}_l), the estimated effect size or regression coefficient ($\beta_l$), and error terms ($\epsilon_l$) with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$.
+
+S-PrediXcan [@doi:10.1038/s41467-018-03621-1; @pmid:33931583] is the summary version of PrediXcan, which uses only GWAS summary statistics to approximate PrediXcan $z$-scores. S-PrediXcan models the predicted expression of a gene in a specific tissue (denoted by \mathbf{t}_l) as a weighted sum of SNP variances and covariances. The variance of SNP $a$ ($\hat{\Sigma}_a$) is estimated using the Genotype-Tissue Expression project (GTEx v8) [@doi:10.1126/science.aaz1776] as a reference panel. In these TWAS methods, the genotype variances and covariances are always estimated using GTEx v8.
+
+S-PrediXcan provides tissue-specific direction of effects (for instance, whether a higher or lower predicted expression of a gene confers more or less disease risk). We used the $z$-scores in our drug repurposing approach to identify potential therapeutic targets for a specific disease.
+
+Fail Reason: Failed to fix the following expressions:
+ - $\beta_l$ -> $\gamma_l$
+ - $\epsilon_l$ -> $\bm{\epsilon}_l$
+ - $\hat{\Sigma}_a$ -> $\hat{\sigma}_a$
+ - $\hat{\beta}_l$ -> $\hat{\beta}_a$"
+"S-PrediXcan [@doi:10.1038/s41467-018-03621-1] is the summary version of PrediXcan [@doi:10.1038/ng.3367]. PrediXcan models the trait as a linear function of the gene's expression on a single tissue using the univariate model
+
+$$
+\mathbf{y} = \mathbf{t}_l \gamma_l + \bm{\epsilon}_l,
+$$ {#eq:predixcan}
+
+where \mathbf{t}_l is the gene predicted expression in tissue $l$, $\beta_l$ is the estimated effect size or regression coefficient, and $\epsilon_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$. PrediXcan needs individual-level data to fit this model, whereas S-PrediXcan approximates PrediXcan $z$-scores using only GWAS summary statistics with the expression
+
+$$
+\hat{z}_{l} \approx \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$ {#eq:spredixcan}
+
+where $\hat{\Sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_l$ is the estimated effect size of SNP $a$ from the GWAS. In these TWAS methods, the genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) [@doi:10.1126/science.aaz1776] as the reference panel. Since S-PrediXcan provides tissue-specific direction of effects (for instance, whether a higher or lower predicted expression of a gene confers more or less disease risk), we used the $z$-scores in our drug repurposing approach (described below).","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",Fixes incorrect math references,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[FAIL] (0.22)
+
+Failed to fix the following expressions:
+ - $\beta_l$ -> $\gamma_l$
+ - $\epsilon_l$ -> $\bm{\epsilon}_l$
+ - $\hat{\Sigma}_a$ -> $\hat{\sigma}_a$
+ - $\hat{\beta}_l$ -> $\hat{\beta}_a$
+---
+S-PrediXcan is a summary version of PrediXcan, which models the trait as a linear function of the gene's expression on a single tissue using the univariate model as follows:
+
+$$
+\mathbf{y} = \mathbf{t}_l \gamma_l + \bm{\epsilon}_l,
+$$
+
+where $\mathbf{t}_l$ is the gene predicted expression in tissue $l$, $\beta_l$ is the estimated effect size or regression coefficient, and $\epsilon_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$. PrediXcan requires individual-level data to fit this model, whereas S-PrediXcan approximates PrediXcan $z$-scores using only GWAS summary statistics with the expression:
+
+$$
+\hat{z}_{l} \approx \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)}.
+$$
+
+Here, $\hat{\Sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_l$ is the estimated effect size of SNP $a$ from the GWAS. In these TWAS methods, the genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) as the reference panel. S-PrediXcan provides tissue-specific direction of effects (e.g., whether a higher or lower predicted expression of a gene confers more or less disease risk), which we used in our drug repurposing approach (described below).
+
+Fail Reason: Failed to fix the following expressions:
+ - $\beta_l$ -> $\gamma_l$
+ - $\epsilon_l$ -> $\bm{\epsilon}_l$
+ - $\hat{\Sigma}_a$ -> $\hat{\sigma}_a$
+ - $\hat{\beta}_l$ -> $\hat{\beta}_a$","[FAIL] (0.22)
+
+Failed to fix the following expressions:
+ - $\beta_l$ -> $\gamma_l$
+ - $\epsilon_l$ -> $\bm{\epsilon}_l$
+ - $\hat{\Sigma}_a$ -> $\hat{\sigma}_a$
+ - $\hat{\beta}_l$ -> $\hat{\beta}_a$
+---
+PrediXcan [@doi:10.1038/ng.3367] is a computational tool that models the relationship between genetic variants and complex traits, such as disease risk. It uses gene expression data from a single tissue to predict the trait value for an individual based on their genotype. The model is defined by the linear equation:
+
+$$\mathbf{y} = \mathbf{t}_l \gamma_l + \bm{\epsilon}_l,$$ {#eq:predixcan}
+
+where $\mathbf{t}_l$ is the predicted gene expression in tissue $l$, $\beta_l$ is the estimated effect size or regression coefficient, and $\epsilon_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$.
+
+S-PrediXcan [@doi:10.1038/s41467-018-03621-1] is a simplified version of PrediXcan that uses only GWAS summary statistics to predict the trait value for an individual. It approximates the $z$-scores using the following equation:
+
+$$\hat{z}_{l} \approx \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},$$ {#eq:spredixcan}
+
+where $\hat{\Sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_l$ is the estimated effect size of SNP $a$ from the GWAS. In these TWAS methods, the genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) [@doi:10.1126/science.aaz1776] as the reference panel.
+
+S-PrediXcan provides tissue-specific direction of effects, which can be useful in drug repurposing approaches. In our study, we used the $z$-scores to identify potential therapeutic targets and drug mechanisms for a specific disease.
+
+Fail Reason: Failed to fix the following expressions:
+ - $\beta_l$ -> $\gamma_l$
+ - $\epsilon_l$ -> $\bm{\epsilon}_l$
+ - $\hat{\Sigma}_a$ -> $\hat{\sigma}_a$
+ - $\hat{\beta}_l$ -> $\hat{\beta}_a$","[FAIL] (0.22)
+
+Failed to fix the following expressions:
+ - $\beta_l$ -> $\gamma_l$
+ - $\epsilon_l$ -> $\bm{\epsilon}_l$
+ - $\hat{\Sigma}_a$ -> $\hat{\sigma}_a$
+ - $\hat{\beta}_l$ -> $\hat{\beta}_a$
+---
+PrediXcan [@doi:10.1038/ng.3367] and S-PrediXcan [@doi:10.1038/s41467-018-03621-1] are both used to model the relationship between a trait and gene expression in a single tissue. PrediXcan uses a univariate linear regression model with gene expression as the predictor variable, while S-PrediXcan approximates PrediXcan's $z$-scores using only GWAS summary statistics. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$.
+
+S-PrediXcan uses individual-level data to fit the model, whereas S-PrediXcan approximates PrediXcan's $z$-scores using only GWAS summary statistics. In these TWAS methods, genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) as the reference panel. S-PrediXcan provides tissue-specific direction of effects, which can be useful for drug repurposing approaches.
+
+Fail Reason: Failed to fix the following expressions:
+ - $\beta_l$ -> $\gamma_l$
+ - $\epsilon_l$ -> $\bm{\epsilon}_l$
+ - $\hat{\Sigma}_a$ -> $\hat{\sigma}_a$
+ - $\hat{\beta}_l$ -> $\hat{\beta}_a$"
+"S-PrediXcan [@doi:10.1038/s41467-018-03621-1] is the summary version of PrediXcan [@doi:10.1038/ng.3367]. PrediXcan models the trait as a linear function of the gene's expression on a single tissue using the univariate model
+
+$$
+\mathbf{y} = \mathbf{t}_l \gamma_l + \bm{\epsilon}_l,
+$$ {#eq:predixcan}
+
+where \mathbf{t}_l is the gene predicted expression in tissue $l$, $\beta_l$ is the estimated effect size or regression coefficient, and $\epsilon_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$. PrediXcan needs individual-level data to fit this model, whereas S-PrediXcan approximates PrediXcan $z$-scores using only GWAS summary statistics with the expression
+
+$$
+\hat{z}_{l} \approx \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$ {#eq:spredixcan}
+
+where $\hat{\Sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_l$ is the estimated effect size of SNP $a$ from the GWAS. In these TWAS methods, the genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) [@doi:10.1126/science.aaz1776] as the reference panel. Since S-PrediXcan provides tissue-specific direction of effects (for instance, whether a higher or lower predicted expression of a gene confers more or less disease risk), we used the $z$-scores in our drug repurposing approach (described below).","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",Fixes incorrect math references,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[FAIL] (0.22)
+
+Failed to fix the following expressions:
+ - $\beta_l$ -> $\gamma_l$
+ - $\epsilon_l$ -> $\bm{\epsilon}_l$
+ - $\hat{\Sigma}_a$ -> $\hat{\sigma}_a$
+ - $\hat{\beta}_l$ -> $\hat{\beta}_a$
+---
+S-PrediXcan is a summary version of PrediXcan, which models the trait as a linear function of gene expression on a single tissue using the univariate model. The equation for this model is given in Eq. [1]. S-PrediXcan uses GWAS summary statistics to approximate PrediXcan $z$-scores, with the expression being:
+
+$$
+\hat{z}_{l} \approx \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$ {#eq:spredixcan}
+
+where $\hat{\Sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_l$ is the estimated effect size of SNP $a$ from the GWAS. In S-PrediXcan, genotype variances and covariances are always estimated using GTEx v8 as the reference panel.
+
+One advantage of S-PrediXcan is that it provides tissue-specific direction of effects, such as whether a higher or lower predicted expression of a gene confers more or less disease risk. In our drug repurposing approach, we used the $z$-scores generated by S-PrediXcan to identify potential drug targets for a specific disease.
+
+Fail Reason: Failed to fix the following expressions:
+ - $\beta_l$ -> $\gamma_l$
+ - $\epsilon_l$ -> $\bm{\epsilon}_l$
+ - $\hat{\Sigma}_a$ -> $\hat{\sigma}_a$
+ - $\hat{\beta}_l$ -> $\hat{\beta}_a$","[FAIL] (0.22)
+
+Failed to fix the following expressions:
+ - $\beta_l$ -> $\gamma_l$
+ - $\epsilon_l$ -> $\bm{\epsilon}_l$
+ - $\hat{\Sigma}_a$ -> $\hat{\sigma}_a$
+ - $\hat{\beta}_l$ -> $\hat{\beta}_a$
+---
+PrediXcan [@doi:10.1038/ng.3367; @pmid:31036433] is a statistical method that models the relationship between a trait and gene expression in a single tissue using a univariate model. The equation for PrediXcan is:
+
+$$
+\mathbf{y} = \mathbf{t}_l \gamma_l + \bm{\epsilon}_l,
+$$ {#eq:predixcan}
+
+where \mathbf{t}_l represents the predicted gene expression in tissue $l$, $\beta_l$ is the estimated effect size or regression coefficient, and $\epsilon_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association between a trait and a gene is determined by computing the z-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for the tissue model $l$. However, PrediXcan requires individual-level data to fit this model.
+
+S-PrediXcan [@doi:10.1038/s41467-018-03621-1; @pmid:33931583] is a summary version of PrediXcan that approximates PrediXcan z-scores using only GWAS summary statistics. The equation for S-PrediXcan is:
+
+$$
+\hat{z}_{l} \approx \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$ {#eq:spredixcan}
+
+where $\hat{\Sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_l$ is the estimated effect size of SNP $a$ from the GWAS. In S-PrediXcan, genotype variances and covariances are always estimated using GTEx v8 [@doi:10.1126/science.aaz1776] as a reference panel. S-PrediXcan can determine tissue-specific direction of effects (e.g., whether higher or lower predicted expression of a gene confers more or less disease risk), which is useful for drug repurposing approaches, such as the one described below.
+
+Fail Reason: Failed to fix the following expressions:
+ - $\beta_l$ -> $\gamma_l$
+ - $\epsilon_l$ -> $\bm{\epsilon}_l$
+ - $\hat{\Sigma}_a$ -> $\hat{\sigma}_a$
+ - $\hat{\beta}_l$ -> $\hat{\beta}_a$","[FAIL] (0.22)
+
+Failed to fix the following expressions:
+ - $\beta_l$ -> $\gamma_l$
+ - $\epsilon_l$ -> $\bm{\epsilon}_l$
+ - $\hat{\Sigma}_a$ -> $\hat{\sigma}_a$
+ - $\hat{\beta}_l$ -> $\hat{\beta}_a$
+---
+S-PrediXcan is a simplified version of PrediXcan, which models the relationship between a trait and gene expression levels on a single tissue using a linear regression model. The equation for this model is:
+
+$$
+\mathbf{y} = \mathbf{t}_l \gamma_l + \bm{\epsilon}_l,
+$$ {#eq:predixcan}
+
+where $\mathbf{t}_l$ is the predicted expression of a gene in tissue $l$, $\beta_l$ is the estimated effect size or regression coefficient, and $\epsilon_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association between the trait and gene expression levels is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$.
+
+S-PrediXcan uses only GWAS summary statistics to approximate PrediXcan $z$-scores, rather than individual-level data. The equation for this approximation is:
+
+$$
+\hat{z}_{l} \approx \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$ {#eq:spredixcan}
+
+where $\hat{\Sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_l$ is the estimated effect size of SNP $a$ from the GWAS. The genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) as the reference panel.
+
+One advantage of S-PrediXcan is that it provides tissue-specific direction of effects, which can be useful in drug repurposing approaches. In our study, we used these $z$-scores to identify potential therapeutic targets for a specific disease.
+
+Fail Reason: Failed to fix the following expressions:
+ - $\beta_l$ -> $\gamma_l$
+ - $\epsilon_l$ -> $\bm{\epsilon}_l$
+ - $\hat{\Sigma}_a$ -> $\hat{\sigma}_a$
+ - $\hat{\beta}_l$ -> $\hat{\beta}_a$"
+"S-PrediXcan [@doi:10.1038/s41467-018-03621-1] is the summary version of PrediXcan [@doi:10.1038/ng.3367]. PrediXcan models the trait as a linear function of the gene's expression on a single tissue using the univariate model
+
+$$
+\mathbf{y} = \mathbf{t}_l \gamma_l + \bm{\epsilon}_l,
+$$ {#eq:predixcan}
+
+where \mathbf{t}_l is the gene predicted expression in tissue $l$, $\beta_l$ is the estimated effect size or regression coefficient, and $\epsilon_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$. PrediXcan needs individual-level data to fit this model, whereas S-PrediXcan approximates PrediXcan $z$-scores using only GWAS summary statistics with the expression
+
+$$
+\hat{z}_{l} \approx \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$ {#eq:spredixcan}
+
+where $\hat{\Sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_l$ is the estimated effect size of SNP $a$ from the GWAS. In these TWAS methods, the genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) [@doi:10.1126/science.aaz1776] as the reference panel. Since S-PrediXcan provides tissue-specific direction of effects (for instance, whether a higher or lower predicted expression of a gene confers more or less disease risk), we used the $z$-scores in our drug repurposing approach (described below).","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",Fixes incorrect math references,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[FAIL] (0.22)
+
+Failed to fix the following expressions:
+ - $\beta_l$ -> $\gamma_l$
+ - $\epsilon_l$ -> $\bm{\epsilon}_l$
+ - $\hat{\Sigma}_a$ -> $\hat{\sigma}_a$
+ - $\hat{\beta}_l$ -> $\hat{\beta}_a$
+---
+The S-PrediXcan method is a summary version of PrediXcan [@doi:10.1038/ng.3367], which models the trait as a linear function of gene expression on a single tissue using the univariate model, as shown in Equation {#eq:predixcan}:
+
+$$
+\mathbf{y} = \mathbf{t}_l \gamma_l + \bm{\epsilon}_l,
+$$
+
+where $\mathbf{t}_l$ is the gene predicted expression in tissue $l$, $\beta_l$ is the estimated effect size or regression coefficient, and $\epsilon_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$.
+
+S-PrediXcan approximates PrediXcan $z$-scores using only GWAS summary statistics, as shown in Equation {#eq:spredixcan}:
+
+$$
+\hat{z}_{l} \approx \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$
+
+where $\hat{\Sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_l$ is the estimated effect size of SNP $a$ from the GWAS. S-PrediXcan uses GTEx v8 [@doi:10.1126/science.aaz1776] as a reference panel to estimate genotype variances and covariances.
+
+One advantage of S-PrediXcan is that it provides tissue-specific direction of effects, allowing us to determine whether a higher or lower predicted expression of a gene confers more or less disease risk. In our drug repurposing approach, we used the $z$-scores to identify genes that are associated with a particular trait and may be potential candidates for drug repurposing.
+
+Fail Reason: Failed to fix the following expressions:
+ - $\beta_l$ -> $\gamma_l$
+ - $\epsilon_l$ -> $\bm{\epsilon}_l$
+ - $\hat{\Sigma}_a$ -> $\hat{\sigma}_a$
+ - $\hat{\beta}_l$ -> $\hat{\beta}_a$","[FAIL] (0.22)
+
+Failed to fix the following expressions:
+ - $\beta_l$ -> $\gamma_l$
+ - $\epsilon_l$ -> $\bm{\epsilon}_l$
+ - $\hat{\Sigma}_a$ -> $\hat{\sigma}_a$
+ - $\hat{\beta}_l$ -> $\hat{\beta}_a$
+---
+PrediXcan [@doi:10.1038/ng.3367] is a computational method that models the relationship between gene expression and disease risk. It uses linear regression to predict the disease trait based on the gene's expression in a single tissue. The equation for PrediXcan is as follows:
+
+$$
+\mathbf{y} = \mathbf{t}_l \gamma_l + \bm{\epsilon}_l,
+$$ {#eq:predixcan}
+
+where \mathbf{t}_l is the predicted expression of a gene in tissue $l$, $\beta_l$ is the estimated effect size or regression coefficient, and $\epsilon_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$.
+
+S-PrediXcan [@doi:10.1038/s41467-018-03621-1] is a summary version of PrediXcan that uses only GWAS summary statistics to approximate PrediXcan $z$-scores. The equation for S-PrediXcan is as follows:
+
+$$
+\hat{z}_{l} \approx \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$ {#eq:spredixcan}
+
+where $\hat{\Sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_l$ is the estimated effect size of SNP $a$ from the GWAS.
+
+In these TWAS methods, the genotype variances and covariances are always estimated using GTEx v8 [@doi:10.1126/science.aaz1776] as the reference panel. S-PrediXcan provides tissue-specific direction of effects (for instance, whether a higher or lower predicted expression of a gene confers more or less disease risk), which we used in our drug repurposing approach (described below).
+
+Fail Reason: Failed to fix the following expressions:
+ - $\beta_l$ -> $\gamma_l$
+ - $\epsilon_l$ -> $\bm{\epsilon}_l$
+ - $\hat{\Sigma}_a$ -> $\hat{\sigma}_a$
+ - $\hat{\beta}_l$ -> $\hat{\beta}_a$","[FAIL] (0.22)
+
+Failed to fix the following expressions:
+ - $\beta_l$ -> $\gamma_l$
+ - $\epsilon_l$ -> $\bm{\epsilon}_l$
+ - $\hat{\Sigma}_a$ -> $\hat{\sigma}_a$
+ - $\hat{\beta}_l$ -> $\hat{\beta}_a$
+---
+S-PrediXcan is a simplified version of PrediXcan, which models a trait as a linear function of gene expression on a single tissue using a univariate model. The equation for the model is shown below:
+
+$$
+\mathbf{y} = \mathbf{t}_l \gamma_l + \bm{\epsilon}_l,
+$$ {#eq:predixcan}
+
+where $\mathbf{t}_l$ represents the predicted expression of a gene in tissue $l$, $\beta_l$ is the estimated effect size or regression coefficient, and $\epsilon_l$ are error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$.
+
+To fit this model, PrediXcan requires individual-level data. However, S-PrediXcan approximates PrediXcan $z$-scores using only GWAS summary statistics. The expression for the approximation is shown below:
+
+$$
+\hat{z}_{l} \approx \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$ {#eq:spredixcan}
+
+where $\hat{\Sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_l$ is the estimated effect size of SNP $a$ from the GWAS. In these TWAS methods, genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) as the reference panel.
+
+S-PrediXcan provides tissue-specific direction of effects (e.g., whether a higher or lower predicted expression of a gene confers more or less disease risk), which we used in our drug repurposing approach (described below).
+
+Fail Reason: Failed to fix the following expressions:
+ - $\beta_l$ -> $\gamma_l$
+ - $\epsilon_l$ -> $\bm{\epsilon}_l$
+ - $\hat{\Sigma}_a$ -> $\hat{\sigma}_a$
+ - $\hat{\beta}_l$ -> $\hat{\beta}_a$"
+"S-PrediXcan [@doi:10.1038/s41467-018-03621-1] is the summary version of PrediXcan [@doi:10.1038/ng.3367]. PrediXcan models the trait as a linear function of the gene's expression on a single tissue using the univariate model
+
+$$
+\mathbf{y} = \mathbf{t_l \gamma_l + \bm{\epsilon}_l,
+$$ {#eq:predixcan}
+
+where $\hat{\gamma}_l$ is the estimated effect size or regression coefficient, and $\bm{\epsilon}_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$. PrediXcan needs individual-level data to fit this model, whereas S-PrediXcan approximates PrediXcan $z$-scores using only GWAS summary statistics with the expression
+
+$$
+\hat{z}_{l} \appro \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$ {#eq:spredixcan}
+
+where $\hat{\sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_a$ is the estimated effect size of SNP $a$ from the GWAS. In these TWAS methods, the genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) [@doi:10.1126/science.aaz1776] as the reference panel. Since S-PrediXcan provides tissue-specific direction of effects (for instance, whether a higher or lower predicted expression of a gene confers more or less disease risk), we used the $z$-scores in our drug repurposing approach (described below).","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",Fixes wrong latex expressions,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[FAIL] (0.22)
+
+Failed to fix the following expressions:
+ - \appro  -> \approx 
+ - \mathbf{t_l  -> \mathbf{t}_l 
+---
+The S-PrediXcan method [@doi:10.1038/s41467-018-03621-1] is a summary version of PrediXcan [@doi:10.1038/ng.3367]. S-PrediXcan models the trait as a linear function of gene expression on a single tissue using the univariate model
+
+$$
+\mathbf{y} = \mathbf{t_l \gamma_l + \bm{\epsilon}_l,
+$$ {#eq:predixcan}
+
+where $\hat{\gamma}_l$ is the estimated effect size or regression coefficient, and $\bm{\epsilon}_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$.
+
+S-PrediXcan approximates PrediXcan $z$-scores using only GWAS summary statistics with the expression
+
+$$
+\hat{z}_{l} \appro \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$ {#eq:spredixcan}
+
+where $\hat{\sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_a$ is the estimated effect size of SNP $a$ from the GWAS. In these TWAS methods, genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) [@doi:10.1126/science.aaz1776] as the reference panel. S-PrediXcan provides tissue-specific direction of effects, allowing us to use $z$-scores in our drug repurposing approach (described below).
+
+Fail Reason: Failed to fix the following expressions:
+ - \appro  -> \approx 
+ - \mathbf{t_l  -> \mathbf{t}_l","[FAIL] (0.34)
+
+Failed to fix the following expressions:
+ - \mathbf{t_l  -> \mathbf{t}_l 
+---
+S-PrediXcan is a simplified version of PrediXcan, which is a tool that models genetic associations through gene expression patterns. S-PrediXcan uses the univariate model to predict disease risk based on the expression of a single tissue using the equation:
+
+$$y = t\_l \gamma\_l + \epsilon\_l,$$ {#eq:predixcan}
+
+where $\hat{\gamma}_l$ is the estimated effect size or regression coefficient, and $\bm{\epsilon}_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$.
+
+S-PrediXcan approximates PrediXcan $z$-scores using only GWAS summary statistics with the expression:
+
+$$
+\hat{z}_{l} \approx \sum_{a \in model_{l}} w\_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$ {#eq:spredixcan}
+
+where $\hat{\sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_a$ is the estimated effect size of SNP $a$ from the GWAS. In these TWAS methods, the genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) as the reference panel.
+
+Since S-PrediXcan provides tissue-specific direction of effects, we used the $z$-scores in our drug repurposing approach. Our study highlights the importance of functional genomics and gene co-expression in identifying therapeutic targets and drug mechanisms for complex traits.
+
+Fail Reason: Failed to fix the following expressions:
+ - \mathbf{t_l  -> \mathbf{t}_l","[FAIL] (0.22)
+
+Failed to fix the following expressions:
+ - \appro  -> \approx 
+ - \mathbf{t_l  -> \mathbf{t}_l 
+---
+S-PrediXcan [@doi:10.1038/s41467-018-03621-1] is a simplified version of PrediXcan [@doi:10.1038/ng.3367]. PrediXcan models a trait as a linear function of a gene's expression in a single tissue using the univariate model
+
+$$
+\mathbf{y} = \mathbf{t_l \gamma_l + \bm{\epsilon}_l,
+$$ {#eq:predixcan}
+
+where $\hat{\gamma}_l$ is the estimated effect size or regression coefficient, and $\bm{\epsilon}_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$. PrediXcan requires individual-level data to fit this model, whereas S-PrediXcan approximates PrediXcan $z$-scores using only GWAS summary statistics with the expression
+
+$$
+\hat{z}_{l} \appro \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$ {#eq:spredixcan}
+
+where $\hat{\sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_a$ is the estimated effect size of SNP $a$ from the GWAS. In these TWAS methods, the genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) [@doi:10.1126/science.aaz1776] as the reference panel. Since S-PrediXcan provides tissue-specific direction of effects (for instance, whether a higher or lower predicted expression of a gene confers more or less disease risk), we used the $z$-scores in our drug repurposing approach (described below).
+
+Fail Reason: Failed to fix the following expressions:
+ - \appro  -> \approx 
+ - \mathbf{t_l  -> \mathbf{t}_l"
+"S-PrediXcan [@doi:10.1038/s41467-018-03621-1] is the summary version of PrediXcan [@doi:10.1038/ng.3367]. PrediXcan models the trait as a linear function of the gene's expression on a single tissue using the univariate model
+
+$$
+\mathbf{y} = \mathbf{t_l \gamma_l + \bm{\epsilon}_l,
+$$ {#eq:predixcan}
+
+where $\hat{\gamma}_l$ is the estimated effect size or regression coefficient, and $\bm{\epsilon}_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$. PrediXcan needs individual-level data to fit this model, whereas S-PrediXcan approximates PrediXcan $z$-scores using only GWAS summary statistics with the expression
+
+$$
+\hat{z}_{l} \appro \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$ {#eq:spredixcan}
+
+where $\hat{\sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_a$ is the estimated effect size of SNP $a$ from the GWAS. In these TWAS methods, the genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) [@doi:10.1126/science.aaz1776] as the reference panel. Since S-PrediXcan provides tissue-specific direction of effects (for instance, whether a higher or lower predicted expression of a gene confers more or less disease risk), we used the $z$-scores in our drug repurposing approach (described below).","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",Fixes wrong latex expressions,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[FAIL] (0.22)
+
+Failed to fix the following expressions:
+ - \appro  -> \approx 
+ - \mathbf{t_l  -> \mathbf{t}_l 
+---
+The manuscript employs S-PrediXcan [@doi:10.1038/s41467-018-03621-1], a summary version of PrediXcan [@doi:10.1038/ng.3367]. S-PrediXcan models the trait as a linear function of gene expression on a single tissue using the univariate model
+
+$$
+\mathbf{y} = \mathbf{t_l \gamma_l + \bm{\epsilon}_l,
+$$ {#eq:predixcan}
+
+where $\hat{\gamma}_l$ is the estimated effect size or regression coefficient, and $\bm{\epsilon}_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$.
+
+S-PrediXcan approximates PrediXcan $z$-scores using only GWAS summary statistics with the expression
+
+$$
+\hat{z}_{l} \appro \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$ {#eq:spredixcan}
+
+where $\hat{\sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_a$ is the estimated effect size of SNP $a$ from the GWAS. In these TWAS methods, genotype variances and covariances are always estimated using GTEx v8 [@doi:10.1126/science.aaz1776] as the reference panel.
+
+S-PrediXcan provides tissue-specific direction of effects (e.g., whether a higher or lower predicted expression of a gene confers more or less disease risk), which we utilized in our drug repurposing approach (see below).
+
+Fail Reason: Failed to fix the following expressions:
+ - \appro  -> \approx 
+ - \mathbf{t_l  -> \mathbf{t}_l","[FAIL] (0.22)
+
+Failed to fix the following expressions:
+ - \appro  -> \approx 
+ - \mathbf{t_l  -> \mathbf{t}_l 
+---
+S-PrediXcan [@doi:10.1038/s41467-018-03621-1] is a simplified version of PrediXcan [@doi:10.1038/ng.3367]. PrediXcan models the trait as a linear function of gene expression on a single tissue using the univariate model
+
+$$
+\mathbf{y} = \mathbf{t_l \gamma_l + \bm{\epsilon}_l,
+$$ {#eq:predixcan}
+
+where $\hat{\gamma}_l$ is the estimated effect size or regression coefficient, and $\bm{\epsilon}_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$. PrediXcan requires individual-level data to fit this model, whereas S-PrediXcan approximates PrediXcan $z$-scores using only GWAS summary statistics with the expression
+
+$$
+\hat{z}_{l} \appro \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$ {#eq:spredixcan}
+
+where $\hat{\sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_a$ is the estimated effect size of SNP $a$ from the GWAS. In these TWAS methods, genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) [@doi:10.1126/science.aaz1776] as the reference panel. Since S-PrediXcan provides tissue-specific direction of effects, we used the $z$-scores in our drug repurposing approach (described below).
+
+Fail Reason: Failed to fix the following expressions:
+ - \appro  -> \approx 
+ - \mathbf{t_l  -> \mathbf{t}_l","[FAIL] (0.22)
+
+Failed to fix the following expressions:
+ - \appro  -> \approx 
+ - \mathbf{t_l  -> \mathbf{t}_l 
+---
+PrediXcan [@doi:10.1038/ng.3367] is a statistical method that models traits as linear functions of gene expression on a single tissue using the univariate model, which can be expressed mathematically as:
+
+$$
+\mathbf{y} = \mathbf{t_l \gamma_l + \bm{\epsilon}_l,
+$$ {#eq:predixcan}
+
+where $\hat{\gamma}_l$ is the estimated effect size or regression coefficient, and $\bm{\epsilon}_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$.
+
+S-PrediXcan [@doi:10.1038/s41467-018-03621-1] is the summary version of PrediXcan, which approximates PrediXcan $z$-scores using only GWAS summary statistics with the expression:
+
+$$
+\hat{z}_{l} \appro \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$ {#eq:spredixcan}
+
+where $\hat{\sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_a$ is the estimated effect size of SNP $a$ from the GWAS. In these TWAS methods, genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) [@doi:10.1126/science.aaz1776] as the reference panel.
+
+S-PrediXcan provides tissue-specific direction of effects, which can be used in drug repurposing approaches. In our study, we used $z$-scores to identify potential drug targets for a specific disease.
+
+Fail Reason: Failed to fix the following expressions:
+ - \appro  -> \approx 
+ - \mathbf{t_l  -> \mathbf{t}_l"
+"S-PrediXcan [@doi:10.1038/s41467-018-03621-1] is the summary version of PrediXcan [@doi:10.1038/ng.3367]. PrediXcan models the trait as a linear function of the gene's expression on a single tissue using the univariate model
+
+$$
+\mathbf{y} = \mathbf{t_l \gamma_l + \bm{\epsilon}_l,
+$$ {#eq:predixcan}
+
+where $\hat{\gamma}_l$ is the estimated effect size or regression coefficient, and $\bm{\epsilon}_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$. PrediXcan needs individual-level data to fit this model, whereas S-PrediXcan approximates PrediXcan $z$-scores using only GWAS summary statistics with the expression
+
+$$
+\hat{z}_{l} \appro \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$ {#eq:spredixcan}
+
+where $\hat{\sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_a$ is the estimated effect size of SNP $a$ from the GWAS. In these TWAS methods, the genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) [@doi:10.1126/science.aaz1776] as the reference panel. Since S-PrediXcan provides tissue-specific direction of effects (for instance, whether a higher or lower predicted expression of a gene confers more or less disease risk), we used the $z$-scores in our drug repurposing approach (described below).","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",Fixes wrong latex expressions,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[FAIL] (0.34)
+
+Failed to fix the following expressions:
+ - \mathbf{t_l  -> \mathbf{t}_l 
+---
+S-PrediXcan is a simplified version of PrediXcan [@doi:10.1038/ng.3367], which models the trait as a linear function of gene expression in a single tissue using the univariate model [#eq:predixcan]. This model estimates the effect size or regression coefficient $\hat{\gamma}_l$ and error terms $\bm{\epsilon}_l$ with variance $\sigma_{\epsilon}^{2}$ for each gene's tissue model $l$. The significance of the association is determined by calculating the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a given gene's tissue model $l$. PrediXcan requires individual-level data to fit this model, whereas S-PrediXcan approximates PrediXcan $z$-scores using only GWAS summary statistics [#eq:spredixcan]. Specifically, S-PrediXcan uses the expression
+
+$$\hat{z}_{l} \approx \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},$$
+
+where $\hat{\sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_a$ is the estimated effect size of SNP $a$ from the GWAS. S-PrediXcan estimates genotype variances and covariances using GTEx v8 [@doi:10.1126/science.aaz1776] as the reference panel. The use of S-PrediXcan allows for tissue-specific direction of effects (e.g., whether a higher or lower predicted expression of a gene confers more or less disease risk), which is useful in drug repurposing approaches (see below).
+
+Fail Reason: Failed to fix the following expressions:
+ - \mathbf{t_l  -> \mathbf{t}_l","[FAIL] (0.34)
+
+Failed to fix the following expressions:
+ - \mathbf{t_l  -> \mathbf{t}_l 
+---
+S-PrediXcan is a simplified version of PrediXcan, which models traits as linear functions of gene expression on a single tissue using a univariate model. The equation for this model is:
+
+$$
+\mathbf{y} = \mathbf{t_l \gamma_l + \bm{\epsilon}_l,
+$$ {#eq:predixcan}
+
+where $\hat{\gamma}_l$ is the estimated effect size or regression coefficient, and $\bm{\epsilon}_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. To assess the significance of the association, a $z$-score is computed for each gene's tissue model $l$, which is:
+
+$$
+\hat{z}_{l} = \frac{\hat{\gamma}_l}{\mathrm{se}(\hat{\gamma}_l)},
+$$ {#eq:spredixcan}
+
+PrediXcan requires individual-level data to fit this model, but S-PrediXcan approximates PrediXcan $z$-scores using GWAS summary statistics. The equation for this approximation is:
+
+$$
+\hat{z}_{l} \approx \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$ {#eq:spredixcan}
+
+where $\hat{\sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_a$ is the estimated effect size of SNP $a$ from the GWAS. In these TWAS methods, genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) as a reference panel. Since S-PrediXcan provides tissue-specific direction of effects, we used the $z$-scores in our drug repurposing approach (described below).
+
+Fail Reason: Failed to fix the following expressions:
+ - \mathbf{t_l  -> \mathbf{t}_l","[FAIL] (0.19)
+
+Failed to fix the following expressions:
+ - \appro  -> \approx 
+ - \mathbf{t_l  -> \mathbf{t}_l 
+---
+PrediXcan [@doi:10.1038/ng.3367] is a tool that models a trait as a linear function of gene expression on a single tissue using the univariate model defined in equation [#eq:predixcan]. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$. However, PrediXcan requires individual-level data to fit this model. S-PrediXcan [@doi:10.1038/s41467-018-03621-1] is a summary version of PrediXcan that approximates the $z$-scores using only GWAS summary statistics with the expression [#eq:spredixcan]. In these Tissue-Wide Association Study (TWAS) methods, the genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) [@doi:10.1126/science.aaz1776] as the reference panel. S-PrediXcan provides tissue-specific direction of effects, which can be used in drug repurposing approaches. In our study, we used the $z$-scores from S-PrediXcan to identify potential drug targets for a specific disease.
+
+Fail Reason: Failed to fix the following expressions:
+ - \appro  -> \approx 
+ - \mathbf{t_l  -> \mathbf{t}_l"
+"S-PrediXcan [@doi:10.1038/s41467-018-03621-1] is the summary version of PrediXcan [@doi:10.1038/ng.3367]. PrediXcan models the trait as a linear function of the gene's expression on a single tissue using the univariate model
+
+$$
+\mathbf{y} = \mathbf{t_l \gamma_l + \bm{\epsilon}_l,
+$$ {#eq:predixcan}
+
+where $\hat{\gamma}_l$ is the estimated effect size or regression coefficient, and $\bm{\epsilon}_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$. PrediXcan needs individual-level data to fit this model, whereas S-PrediXcan approximates PrediXcan $z$-scores using only GWAS summary statistics with the expression
+
+$$
+\hat{z}_{l} \appro \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$ {#eq:spredixcan}
+
+where $\hat{\sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_a$ is the estimated effect size of SNP $a$ from the GWAS. In these TWAS methods, the genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) [@doi:10.1126/science.aaz1776] as the reference panel. Since S-PrediXcan provides tissue-specific direction of effects (for instance, whether a higher or lower predicted expression of a gene confers more or less disease risk), we used the $z$-scores in our drug repurposing approach (described below).","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",Fixes wrong latex expressions,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[FAIL] (0.22)
+
+Failed to fix the following expressions:
+ - \appro  -> \approx 
+ - \mathbf{t_l  -> \mathbf{t}_l 
+---
+S-PrediXcan is a summary version of PrediXcan, which models the trait as a linear function of the gene's expression on a single tissue using the univariate model:
+
+$$
+\mathbf{y} = \mathbf{t_l \gamma_l + \bm{\epsilon}_l,
+$$ {#eq:predixcan}
+
+where $\hat{\gamma}_l$ is the estimated effect size or regression coefficient, and $\bm{\epsilon}_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$.
+
+S-PrediXcan approximates PrediXcan $z$-scores using only GWAS summary statistics with the expression:
+
+$$
+\hat{z}_{l} \appro \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$ {#eq:spredixcan}
+
+where $\hat{\sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_a$ is the estimated effect size of SNP $a$ from the GWAS. In these TWAS methods, the genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) [@doi:10.1126/science.aaz1776] as the reference panel.
+
+S-PrediXcan provides tissue-specific direction of effects, allowing us to use the $z$-scores in our drug repurposing approach (described below).
+
+Fail Reason: Failed to fix the following expressions:
+ - \appro  -> \approx 
+ - \mathbf{t_l  -> \mathbf{t}_l","[FAIL] (0.19)
+
+Failed to fix the following expressions:
+ - \appro  -> \approx 
+ - \mathbf{t_l  -> \mathbf{t}_l 
+---
+S-PrediXcan [@doi:10.1038/s41467-018-03621-1] is a simplified version of PrediXcan [@doi:10.1038/ng.3367]. PrediXcan models the trait as a linear function of gene expression in a single tissue using the univariate model
+$$
+\mathbf{y} = \mathbf{t_l \gamma_l + \bm{\epsilon}_l,
+$$ {#eq:predixcan}
+where $\hat{\gamma}_l$ is the estimated effect size or regression coefficient, and $\bm{\epsilon}_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$. PrediXcan requires individual-level data to fit this model, whereas S-PrediXcan approximates PrediXcan $z$-scores using only GWAS summary statistics with the expression
+$$
+\hat{z}_{l} \appro \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$ {#eq:spredixcan}
+where $\hat{\sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_a$ is the estimated effect size of SNP $a$ from the GWAS. In these TWAS methods, genotype variances and covariances are always estimated using GTEx v8 [@doi:10.1126/science.aaz1776] as the reference panel. S-PrediXcan provides tissue-specific direction of effects (e.g., whether a higher or lower predicted expression of a gene confers more or less disease risk), which we used in our drug repurposing approach (described below).
+
+Fail Reason: Failed to fix the following expressions:
+ - \appro  -> \approx 
+ - \mathbf{t_l  -> \mathbf{t}_l","[FAIL] (0.22)
+
+Failed to fix the following expressions:
+ - \appro  -> \approx 
+ - \mathbf{t_l  -> \mathbf{t}_l 
+---
+The summary version of PrediXcan, known as S-PrediXcan, is a tool that models traits as linear functions of gene expression on a single tissue using the univariate model:
+
+$$
+\mathbf{y} = \mathbf{t_l \gamma_l + \bm{\epsilon}_l,
+$$ {#eq:predixcan}
+
+where $\hat{\gamma}_l$ is the estimated effect size or regression coefficient, and $\bm{\epsilon}_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$.
+
+S-PrediXcan, on the other hand, approximates PrediXcan $z$-scores using only GWAS summary statistics with the expression:
+
+$$
+\hat{z}_{l} \appro \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$ {#eq:spredixcan}
+
+where $\hat{\sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_a$ is the estimated effect size of SNP $a$ from the GWAS. The genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) [@doi:10.1126/science.aaz1776] as the reference panel.
+
+One of the advantages of S-PrediXcan is that it provides tissue-specific direction of effects, which means we can determine whether a higher or lower predicted expression of a gene confers more or less disease risk in a specific tissue. We used these $z$-scores in our drug repurposing approach (which is described below).
+
+Fail Reason: Failed to fix the following expressions:
+ - \appro  -> \approx 
+ - \mathbf{t_l  -> \mathbf{t}_l"
+"S-PrediXcan [@doi:10.1038/s41467-018-03621-1] is the summary version of PrediXcan [@doi:10.1038/ng.3367]. PrediXcan models the trait as a linear function of the gene's expression on a single tissue using the univariate model
+
+$$
+\mathbf{y} = \mathbf{t_l \gamma_l + \bm{\epsilon}_l,
+$$ {#eq:predixcan}
+
+where $\hat{\gamma}_l$ is the estimated effect size or regression coefficient, and $\bm{\epsilon}_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$. PrediXcan needs individual-level data to fit this model, whereas S-PrediXcan approximates PrediXcan $z$-scores using only GWAS summary statistics with the expression
+
+$$
+\hat{z}_{l} \appro \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$ {#eq:spredixcan}
+
+where $\hat{\sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_a$ is the estimated effect size of SNP $a$ from the GWAS. In these TWAS methods, the genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) [@doi:10.1126/science.aaz1776] as the reference panel. Since S-PrediXcan provides tissue-specific direction of effects (for instance, whether a higher or lower predicted expression of a gene confers more or less disease risk), we used the $z$-scores in our drug repurposing approach (described below).","genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits",Fixes wrong latex expressions,Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms,"[FAIL] (0.19)
+
+Failed to fix the following expressions:
+ - \appro  -> \approx 
+ - \mathbf{t_l  -> \mathbf{t}_l 
+---
+S-PrediXcan is a summary version of PrediXcan, which models the trait as a linear function of gene expression on a single tissue using the univariate model {#eq:predixcan}. In S-PrediXcan, the significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$. However, PrediXcan requires individual-level data to fit this model. S-PrediXcan approximates PrediXcan $z$-scores using only GWAS summary statistics with the expression {#eq:spredixcan}. The variance of SNP $\hat{\sigma}_a$, variance of predicted expression $\hat{\sigma}_l$, and estimated effect size $\hat{\beta}_a$ are all estimated using the Genotype-Tissue Expression project (GTEx v8) as a reference panel. Since S-PrediXcan provides tissue-specific direction of effects, we used the $z$-scores in our drug repurposing approach.
+
+Fail Reason: Failed to fix the following expressions:
+ - \appro  -> \approx 
+ - \mathbf{t_l  -> \mathbf{t}_l","[FAIL] (0.34)
+
+Failed to fix the following expressions:
+ - \mathbf{t_l  -> \mathbf{t}_l 
+---
+S-PrediXcan is a simplified version of PrediXcan, which models the trait as a linear function of gene expression on a single tissue using the univariate model:
+
+$$\mathbf{y} = \mathbf{t\_l \gamma_l + \bm{\epsilon}_l,}$$ {#eq:predixcan}
+
+where $\hat{\gamma}_l$ is the estimated effect size or regression coefficient and $\bm{\epsilon}_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$.
+
+S-PrediXcan approximates PrediXcan $z$-scores using only GWAS summary statistics with the expression:
+
+$$\hat{z}_{l} \approx \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},$$ {#eq:spredixcan}
+
+where $\hat{\sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_a$ is the estimated effect size of SNP $a$ from the GWAS. The genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) [@doi:10.1126/science.aaz1776] as the reference panel.
+
+Since S-PrediXcan provides tissue-specific direction of effects, we used the $z$-scores in our drug repurposing approach (described below).
+
+Fail Reason: Failed to fix the following expressions:
+ - \mathbf{t_l  -> \mathbf{t}_l","[FAIL] (0.34)
+
+Failed to fix the following expressions:
+ - \mathbf{t_l  -> \mathbf{t}_l 
+---
+PrediXcan [@doi:10.1038/ng.3367] is a linear regression model that predicts a trait based on gene expression in a single tissue. The model uses the univariate model equation:
+
+$$\mathbf{y} = \mathbf{t_l \gamma_l + \bm{\epsilon}_l,}$$ {#eq:predixcan}
+
+where $\hat{\gamma}_l$ is the estimated effect size or regression coefficient and $\bm{\epsilon}_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$. The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$.
+
+S-PrediXcan [@doi:10.1038/s41467-018-03621-1] is a summary version of PrediXcan that approximates PrediXcan $z$-scores using only GWAS summary statistics. The expression for S-PrediXcan is:
+
+$$\hat{z}_{l} \approx \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},$$ {#eq:spredixcan}
+
+where $\hat{\sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_a$ is the estimated effect size of SNP $a$ from the GWAS. The genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) [@doi:10.1126/science.aaz1776] as the reference panel.
+
+Since S-PrediXcan provides tissue-specific direction of effects, we used the $z$-scores in our drug repurposing approach (described below).
+
+Fail Reason: Failed to fix the following expressions:
+ - \mathbf{t_l  -> \mathbf{t}_l"

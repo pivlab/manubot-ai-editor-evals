@@ -305,7 +305,7 @@ tests:
 
           # keep only references that are present in the input (this is needed because
           #  references might be removed from the input in some test cases)
-          references = [ref for ref in references if ref in input]
+          references = sorted([ref for ref in references if ref in input])
 
           count = len([ref for ref in references if ref in output])
           res = (count / len(references) == 1.0)
@@ -344,12 +344,12 @@ tests:
           
           # keep only references that are present in the input (this is needed because
           #  references might be removed from the input in some cases)
-          references = [ref for ref in references if ref in input]
+          references = sorted([ref for ref in references if ref in input])
           
           # capture current references in the output using a regex
           output_references = re.findall(r'@[^ ;\]]+', output)
           
-          fake_refs = [ref for ref in output_references if ref not in references]
+          fake_refs = sorted([ref for ref in output_references if ref not in references])
           n_fake_refs = len(fake_refs)
           res = (n_fake_refs == 0)
           
@@ -359,7 +359,7 @@ tests:
           return {
             "pass": res,
             "score": score if res else 0.0,
-            "reason": "Passed" if res else "Failed",
+            "reason": "Passed" if res else failed_reason_msg,
             "assertion": {
               "value": description,
               "type": type,
