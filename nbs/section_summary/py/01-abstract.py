@@ -24,6 +24,12 @@ from io import StringIO
 import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
+
+# %%
+import sys
+sys.path.append('/Users/faisala/Checkouts/chai/pivlab/manubot-ai-editor-evals/src')
+
+# %%
 from proj.conf import abstract, outputs
 from proj.promptfoo import read_results
 
@@ -788,10 +794,17 @@ assert len(set(sorted_models)) == len(sorted_models)
 sorted_models[-5:]
 
 # %%
+# figure dims in inches
+fig_width = 4.25
+fig_height = 8
+
+USE_TITLE = False
+USE_LEGEND = False
+
 g = sns.catplot(
     data=df[df["prompt"] == "candidate"],
-    x="model",
-    y="comp_score",
+    y="model",
+    x="comp_score",
     hue="comp_type",
     hue_order=[
         # "Spelling/grammar",
@@ -799,31 +812,42 @@ g = sns.catplot(
         "Structure",
     ],
     kind="bar",
-    order=sorted_models,
+    order=list(reversed(sorted_models)),
     # errorbar=None,
-    height=4,
-    aspect=2,
-    legend_out=True,
+    # height=4,
+    # aspect=2,
+    height=fig_height,
+    aspect=fig_width/fig_height,  # aspect ratio to get the correct width
+    legend=USE_LEGEND
+    # legend_out=True,
 )
-g.fig.suptitle(
-    "Assertion score by test type (models sorted by avg on 'candidate' prompt)",
-    ha="left",
-    x=0.11,
-)
-g.set_xticklabels(rotation=30, ha="right")
-g.set(xlabel="Model", ylabel="Assertion score")
 
-# leg = g.axes.flat[0].get_legend()
-# leg.set_title("")
-g._legend.set_title("Test type")
-new_labels = [
-    # "Spelling/grammar",
-    "Formatting",
-    "Structure\n(C-C-C)",
-]
-for t, l in zip(g._legend.texts, new_labels):
-    t.set_text(l)
+if USE_TITLE:
+    # adjust the top margin to make room for the title
+    g.fig.subplots_adjust(top=0.95)
+    
+    g.fig.suptitle(
+        "Assertion score by test type (models sorted by avg on 'candidate' prompt)",
+        ha="left",
+        x=0.11,
+    )
 
+# g.set_xticklabels(rotation=30, ha="right")
+g.set(ylabel="Model", xlabel="Assertion score", xlim=(0,1))
+
+if USE_LEGEND:
+    # leg = g.axes.flat[0].get_legend()
+    # leg.set_title("")
+    g._legend.set_title("Test type")
+    new_labels = [
+        # "Spelling/grammar",
+        "Formatting",
+        "Structure\n(C-C-C)",
+    ]
+    for t, l in zip(g._legend.texts, new_labels):
+        t.set_text(l)
+
+# %%
 g.fig.savefig(
     OUTPUT_FIGURES_DIR / "abstract-assertion_score_by_test_type.png",
     bbox_inches="tight",
@@ -835,5 +859,3 @@ g.fig.savefig(
     bbox_inches="tight",
     facecolor="white",
 )
-
-# %%
