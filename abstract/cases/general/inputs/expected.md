@@ -11,3 +11,5 @@ The first thing they saw upon entering was an envelope with the words "Clue No. 
 The contents contained a riddle: "Dr. E. Brown knows what makes time travel possible."
 "The flux capacitor!" exclaimed McAdams.
 "We need to get this to the lab A.S.A.P. for forensic analysis."
+On the back of the note read a mysterious message.
+«¿Quién botará la puerca afuera?»
