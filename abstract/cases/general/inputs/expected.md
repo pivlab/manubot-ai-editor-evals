@@ -2,7 +2,7 @@ This is a test
 This is another test.
 Please turn to p. 55.
 I will begin reading.
-It was a cold morning on Dec. 31.
+It was cold the morning of Dec. 31.
 "Dead." detective McAdams said remorsefully.
 "Certainly a setback... but not a dead-end."
 "What do you mean?" asked his partner.
