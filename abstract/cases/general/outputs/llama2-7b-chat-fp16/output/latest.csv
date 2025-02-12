@@ -1,0 +1,99 @@
+"{""raw"":""Please take the following paragraph of text with no line breaks, and respond only with the same text split into separate lines by sentence.\n\nInput paragraph: {{ content }}\n\nSplit paragraph:"",""display"":""Please take the following paragraph of text with no line breaks, and respond only with the same text split into separate lines by sentence.\n\nInput paragraph: {{ content }}\n\nSplit paragraph:"",""id"":""26bfbadcacf3cf6d4ec38062f9ecc85503061e199a7f2cb1776cd249c9262ce8"",""provider"":""exec:python /Users/vincerubinetti/Desktop/manubot-ai-editor-evals/src/llm.py  --model ollama=llama2=7b-chat-fp16"",""metrics"":{""score"":0,""testPassCount"":0,""testFailCount"":1,""assertPassCount"":0,""assertFailCount"":0,""totalLatencyMs"":0,""tokenUsage"":{""total"":0,""prompt"":0,""completion"":0,""cached"":0},""namedScores"":{},""cost"":0}}"
+"[FAIL] (0.00)
+
+Error: Command failed: python /Users/vincerubinetti/Desktop/manubot-ai-editor-evals/src/llm.py --model ollama=llama2=7b-chat-fp16 Please take the following paragraph of text with no line breaks, and respond only with the same text split into separate lines by sentence.
+
+Input paragraph: This is a test This is another test. Please turn to p. 55. I will begin reading. It was cold the morning of Dec. 31. ""Dead."" detective McAdams said remorsefully. ""Certainly a setback... but not a dead-end."" ""What do you mean?"" asked his partner. ""We need to check inside. Immediately."" he replied. The first thing they saw upon entering was an envelope with the words ""Clue No. 1"" pristinely calligraphed upon it. The contents contained a riddle: ""Dr. E. Brown knows what makes time travel possible."" ""The flux capacitor!"" exclaimed McAdams. ""We need to get this to the lab A.S.A.P. for forensic analysis."" On the back of the note read a mysterious message. «¿Quién botará la puerca afuera?»
+
+Split paragraph: {""config"":{""basePath"":""""}} {""vars"":{""test_description"":""Splits sentences by line"",""content"":""This is a test This is another test. Please turn to p. 55. I will begin reading. It was cold the morning of Dec. 31. \""Dead.\"" detective McAdams said remorsefully. \""Certainly a setback... but not a dead-end.\"" \""What do you mean?\"" asked his partner. \""We need to check inside. Immediately.\"" he replied. The first thing they saw upon entering was an envelope with the words \""Clue No. 1\"" pristinely calligraphed upon it. The contents contained a riddle: \""Dr. E. Brown knows what makes time travel possible.\"" \""The flux capacitor!\"" exclaimed McAdams. \""We need to get this to the lab A.S.A.P. for forensic analysis.\"" On the back of the note read a mysterious message. «¿Quién botará la puerca afuera?»"",""expected"":""This is a test \nThis is another test.\nPlease turn to p. 55.\nI will begin reading.\nIt was cold the morning of Dec. 31.\n\""Dead.\"" detective McAdams said remorsefully.\n\""Certainly a setback... but not a dead-end.\""\n\""What do you mean?\"" asked his partner.\n\""We need to check inside. Immediately.\"" he replied.\nThe first thing they saw upon entering was an envelope with the words \""Clue No. 1\"" pristinely calligraphed upon it.\nThe contents contained a riddle: \""Dr. E. Brown knows what makes time travel possible.\""\n\""The flux capacitor!\"" exclaimed McAdams.\n\""We need to get this to the lab A.S.A.P. for forensic analysis.\""\nOn the back of the note read a mysterious message.\n«¿Quién botará la puerca afuera?»""}}
+/Users/vincerubinetti/miniconda3/envs/manubot-ai-editor-evals/lib/python3.12/importlib/__init__.py:90: LangChainDeprecationWarning: As of langchain-core 0.3.0, LangChain uses pydantic v2 internally. The langchain_core.pydantic_v1 module was a compatibility shim for pydantic v1, and should no longer be used. Please update the code to import from Pydantic directly.
+
+For example, replace imports like: `from langchain_core.pydantic_v1 import BaseModel`
+with: `from pydantic import BaseModel`
+or the v1 compatibility namespace if you are working in a code base that has not been fully upgraded to pydantic 2 yet. 	from pydantic.v1 import BaseModel
+
+  return _bootstrap._gcd_import(name[level:], package, level)
+/Users/vincerubinetti/miniconda3/envs/manubot-ai-editor-evals/lib/python3.12/site-packages/pydantic/v1/validators.py:767: UserWarning: Mixing V1 and V2 models is not supported. `PromptTemplate` is a V2 model.
+  warn(f'Mixing V1 and V2 models is not supported. `{type_.__name__}` is a V2 model.', UserWarning)
+Traceback (most recent call last):
+  File ""/Users/vincerubinetti/Desktop/manubot-ai-editor-evals/src/llm.py"", line 7, in <module>
+    from langchain.prompts import (
+  File ""/Users/vincerubinetti/miniconda3/envs/manubot-ai-editor-evals/lib/python3.12/site-packages/langchain/prompts/__init__.py"", line 53, in <module>
+    from langchain.prompts.example_selector import NGramOverlapExampleSelector
+  File ""/Users/vincerubinetti/miniconda3/envs/manubot-ai-editor-evals/lib/python3.12/site-packages/langchain/prompts/example_selector/__init__.py"", line 10, in <module>
+    from langchain.prompts.example_selector.ngram_overlap import (
+  File ""/Users/vincerubinetti/miniconda3/envs/manubot-ai-editor-evals/lib/python3.12/site-packages/langchain/prompts/example_selector/ngram_overlap.py"", line 1, in <module>
+    from langchain_community.example_selectors.ngram_overlap import (
+  File ""/Users/vincerubinetti/miniconda3/envs/manubot-ai-editor-evals/lib/python3.12/site-packages/langchain_community/example_selectors/__init__.py"", line 9, in <module>
+    from langchain_community.example_selectors.ngram_overlap import (
+  File ""/Users/vincerubinetti/miniconda3/envs/manubot-ai-editor-evals/lib/python3.12/site-packages/langchain_community/example_selectors/ngram_overlap.py"", line 41, in <module>
+    class NGramOverlapExampleSelector(BaseExampleSelector, BaseModel):
+  File ""/Users/vincerubinetti/miniconda3/envs/manubot-ai-editor-evals/lib/python3.12/site-packages/pydantic/v1/main.py"", line 197, in __new__
+    fields[ann_name] = ModelField.infer(
+                       ^^^^^^^^^^^^^^^^^
+  File ""/Users/vincerubinetti/miniconda3/envs/manubot-ai-editor-evals/lib/python3.12/site-packages/pydantic/v1/fields.py"", line 504, in infer
+    return cls(
+           ^^^^
+  File ""/Users/vincerubinetti/miniconda3/envs/manubot-ai-editor-evals/lib/python3.12/site-packages/pydantic/v1/fields.py"", line 434, in __init__
+    self.prepare()
+  File ""/Users/vincerubinetti/miniconda3/envs/manubot-ai-editor-evals/lib/python3.12/site-packages/pydantic/v1/fields.py"", line 555, in prepare
+    self.populate_validators()
+  File ""/Users/vincerubinetti/miniconda3/envs/manubot-ai-editor-evals/lib/python3.12/site-packages/pydantic/v1/fields.py"", line 829, in populate_validators
+    *(get_validators() if get_validators else list(find_validators(self.type_, self.model_config))),
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/Users/vincerubinetti/miniconda3/envs/manubot-ai-editor-evals/lib/python3.12/site-packages/pydantic/v1/validators.py"", line 768, in find_validators
+    raise RuntimeError(f'no validator found for {type_}, see `arbitrary_types_allowed` in Config')
+RuntimeError: no validator found for <class 'langchain_core.prompts.prompt.PromptTemplate'>, see `arbitrary_types_allowed` in Config
+
+
+Error: Command failed: python /Users/vincerubinetti/Desktop/manubot-ai-editor-evals/src/llm.py --model ollama=llama2=7b-chat-fp16 Please take the following paragraph of text with no line breaks, and respond only with the same text split into separate lines by sentence.
+
+Input paragraph: This is a test This is another test. Please turn to p. 55. I will begin reading. It was cold the morning of Dec. 31. ""Dead."" detective McAdams said remorsefully. ""Certainly a setback... but not a dead-end."" ""What do you mean?"" asked his partner. ""We need to check inside. Immediately."" he replied. The first thing they saw upon entering was an envelope with the words ""Clue No. 1"" pristinely calligraphed upon it. The contents contained a riddle: ""Dr. E. Brown knows what makes time travel possible."" ""The flux capacitor!"" exclaimed McAdams. ""We need to get this to the lab A.S.A.P. for forensic analysis."" On the back of the note read a mysterious message. «¿Quién botará la puerca afuera?»
+
+Split paragraph: {""config"":{""basePath"":""""}} {""vars"":{""test_description"":""Splits sentences by line"",""content"":""This is a test This is another test. Please turn to p. 55. I will begin reading. It was cold the morning of Dec. 31. \""Dead.\"" detective McAdams said remorsefully. \""Certainly a setback... but not a dead-end.\"" \""What do you mean?\"" asked his partner. \""We need to check inside. Immediately.\"" he replied. The first thing they saw upon entering was an envelope with the words \""Clue No. 1\"" pristinely calligraphed upon it. The contents contained a riddle: \""Dr. E. Brown knows what makes time travel possible.\"" \""The flux capacitor!\"" exclaimed McAdams. \""We need to get this to the lab A.S.A.P. for forensic analysis.\"" On the back of the note read a mysterious message. «¿Quién botará la puerca afuera?»"",""expected"":""This is a test \nThis is another test.\nPlease turn to p. 55.\nI will begin reading.\nIt was cold the morning of Dec. 31.\n\""Dead.\"" detective McAdams said remorsefully.\n\""Certainly a setback... but not a dead-end.\""\n\""What do you mean?\"" asked his partner.\n\""We need to check inside. Immediately.\"" he replied.\nThe first thing they saw upon entering was an envelope with the words \""Clue No. 1\"" pristinely calligraphed upon it.\nThe contents contained a riddle: \""Dr. E. Brown knows what makes time travel possible.\""\n\""The flux capacitor!\"" exclaimed McAdams.\n\""We need to get this to the lab A.S.A.P. for forensic analysis.\""\nOn the back of the note read a mysterious message.\n«¿Quién botará la puerca afuera?»""}}
+/Users/vincerubinetti/miniconda3/envs/manubot-ai-editor-evals/lib/python3.12/importlib/__init__.py:90: LangChainDeprecationWarning: As of langchain-core 0.3.0, LangChain uses pydantic v2 internally. The langchain_core.pydantic_v1 module was a compatibility shim for pydantic v1, and should no longer be used. Please update the code to import from Pydantic directly.
+
+For example, replace imports like: `from langchain_core.pydantic_v1 import BaseModel`
+with: `from pydantic import BaseModel`
+or the v1 compatibility namespace if you are working in a code base that has not been fully upgraded to pydantic 2 yet. 	from pydantic.v1 import BaseModel
+
+  return _bootstrap._gcd_import(name[level:], package, level)
+/Users/vincerubinetti/miniconda3/envs/manubot-ai-editor-evals/lib/python3.12/site-packages/pydantic/v1/validators.py:767: UserWarning: Mixing V1 and V2 models is not supported. `PromptTemplate` is a V2 model.
+  warn(f'Mixing V1 and V2 models is not supported. `{type_.__name__}` is a V2 model.', UserWarning)
+Traceback (most recent call last):
+  File ""/Users/vincerubinetti/Desktop/manubot-ai-editor-evals/src/llm.py"", line 7, in <module>
+    from langchain.prompts import (
+  File ""/Users/vincerubinetti/miniconda3/envs/manubot-ai-editor-evals/lib/python3.12/site-packages/langchain/prompts/__init__.py"", line 53, in <module>
+    from langchain.prompts.example_selector import NGramOverlapExampleSelector
+  File ""/Users/vincerubinetti/miniconda3/envs/manubot-ai-editor-evals/lib/python3.12/site-packages/langchain/prompts/example_selector/__init__.py"", line 10, in <module>
+    from langchain.prompts.example_selector.ngram_overlap import (
+  File ""/Users/vincerubinetti/miniconda3/envs/manubot-ai-editor-evals/lib/python3.12/site-packages/langchain/prompts/example_selector/ngram_overlap.py"", line 1, in <module>
+    from langchain_community.example_selectors.ngram_overlap import (
+  File ""/Users/vincerubinetti/miniconda3/envs/manubot-ai-editor-evals/lib/python3.12/site-packages/langchain_community/example_selectors/__init__.py"", line 9, in <module>
+    from langchain_community.example_selectors.ngram_overlap import (
+  File ""/Users/vincerubinetti/miniconda3/envs/manubot-ai-editor-evals/lib/python3.12/site-packages/langchain_community/example_selectors/ngram_overlap.py"", line 41, in <module>
+    class NGramOverlapExampleSelector(BaseExampleSelector, BaseModel):
+  File ""/Users/vincerubinetti/miniconda3/envs/manubot-ai-editor-evals/lib/python3.12/site-packages/pydantic/v1/main.py"", line 197, in __new__
+    fields[ann_name] = ModelField.infer(
+                       ^^^^^^^^^^^^^^^^^
+  File ""/Users/vincerubinetti/miniconda3/envs/manubot-ai-editor-evals/lib/python3.12/site-packages/pydantic/v1/fields.py"", line 504, in infer
+    return cls(
+           ^^^^
+  File ""/Users/vincerubinetti/miniconda3/envs/manubot-ai-editor-evals/lib/python3.12/site-packages/pydantic/v1/fields.py"", line 434, in __init__
+    self.prepare()
+  File ""/Users/vincerubinetti/miniconda3/envs/manubot-ai-editor-evals/lib/python3.12/site-packages/pydantic/v1/fields.py"", line 555, in prepare
+    self.populate_validators()
+  File ""/Users/vincerubinetti/miniconda3/envs/manubot-ai-editor-evals/lib/python3.12/site-packages/pydantic/v1/fields.py"", line 829, in populate_validators
+    *(get_validators() if get_validators else list(find_validators(self.type_, self.model_config))),
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/Users/vincerubinetti/miniconda3/envs/manubot-ai-editor-evals/lib/python3.12/site-packages/pydantic/v1/validators.py"", line 768, in find_validators
+    raise RuntimeError(f'no validator found for {type_}, see `arbitrary_types_allowed` in Config')
+RuntimeError: no validator found for <class 'langchain_core.prompts.prompt.PromptTemplate'>, see `arbitrary_types_allowed` in Config
+
+    at genericNodeError (node:internal/errors:983:15)
+    at wrappedFn (node:internal/errors:537:14)
+    at ChildProcess.exithandler (node:child_process:414:12)
+    at ChildProcess.emit (node:events:524:28)
+    at maybeClose (node:internal/child_process:1101:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:304:5)
+---"

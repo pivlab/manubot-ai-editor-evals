@@ -1,0 +1,20 @@
+"{""raw"":""Please take the following paragraph of text with no line breaks, and respond only with the same text split into separate lines by sentence.\n\nInput paragraph: {{ content }}\n\nSplit paragraph:"",""display"":""Please take the following paragraph of text with no line breaks, and respond only with the same text split into separate lines by sentence.\n\nInput paragraph: {{ content }}\n\nSplit paragraph:"",""id"":""26bfbadcacf3cf6d4ec38062f9ecc85503061e199a7f2cb1776cd249c9262ce8"",""provider"":""exec:python /Users/vincerubinetti/Desktop/manubot-ai-editor-evals/src/llm.py  --model ollama=mistral=7b-instruct-fp16"",""metrics"":{""score"":1,""testPassCount"":1,""testFailCount"":0,""assertPassCount"":1,""assertFailCount"":0,""totalLatencyMs"":72067,""tokenUsage"":{""total"":0,""prompt"":0,""completion"":0,""cached"":0},""namedScores"":{},""cost"":0}}"
+"[PASS] (1.00)
+
+This is a test
+This is another test.
+Please turn to p. 55.
+I will begin reading.
+It was cold the morning of Dec. 31.
+""Dead."" detective McAdams said remorsefully.
+""Certainly a setback... but not a dead-end.""
+""What do you mean?"" asked his partner.
+""We need to check inside. Immediately."" he replied.
+The first thing they saw upon entering was an envelope with the words ""Clue No. 1"" pristinely calligraphed upon it.
+The contents contained a riddle: ""Dr. E. Brown knows what makes time travel possible.""
+""The flux capacitor!"" exclaimed McAdams.
+""We need to get this to the lab A.S.A.P. for forensic analysis.""
+On the back of the note read a mysterious message.
+«¿Quién botará la puerca afuera?»
+
+Pass Reason: All assertions passed"

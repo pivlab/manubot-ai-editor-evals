@@ -3,19 +3,19 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - ipython
-  - jupyterlab=4.1.*
-  - jupytext=1.16.*
-  - langchain=0.1.*
-  - matplotlib=3.8.*
-  - nodejs=20.8.*
-  - pandas=2.2.*
-  - pip
-  - python=3.12.*
-  - pre-commit=3.5.*
-  - seaborn=0.13.*
+  - ipython=8.22.2
+  - jupyterlab=4.1.6
+  - jupytext=1.16.1
+  - langchain=0.1.16
+  - matplotlib=3.8.4
+  - nodejs=20.8.1
+  - pandas=2.2.2
+  - pip=24.0
+  - python=3.12.3
+  - pre-commit=3.5.0
+  - seaborn=0.13.2
   - pip:
-      - langchain-openai
-      - langchain-anthropic
-      - jinja2==3.1.*
-      - python-dotenv==1.0.*
+      - langchain-openai==0.1.3
+      - langchain-anthropic==0.1.11
+      - jinja2==3.1.3
+      - python-dotenv==1.0.1

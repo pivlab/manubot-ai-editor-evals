@@ -1,5 +1,5 @@
 Please take the following paragraph of text with no line breaks, and respond only with the same text split into separate lines by sentence.
 
-Input paragraph: {{ input }}
+Input paragraph: {{ content }}
 
 Split paragraph: 
