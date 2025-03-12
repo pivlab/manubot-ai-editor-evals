@@ -1,8 +1,9 @@
-This is a test 
+This is a test
 This is another test.
 Please turn to p. 55.
 I will begin reading.
 It was cold the morning of Dec. 31.
+-10.5 degrees, to be precise.
 "Dead." detective McAdams said remorsefully.
 "Certainly a setback... but not a dead-end."
 "What do you mean?" asked his partner.
@@ -11,5 +12,4 @@ The first thing they saw upon entering was an envelope with the words "Clue No. 
 The contents contained a riddle: "Dr. E. Brown knows what makes time travel possible."
 "The flux capacitor!" exclaimed McAdams.
 "We need to get this to the lab A.S.A.P. for forensic analysis."
-On the back of the note read a mysterious message.
-«¿Quién botará la puerca afuera?»
+On the back of the note, a mysterious message read «¿Quién botará la puerca afuera?»

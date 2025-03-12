@@ -5,7 +5,7 @@ results:
         id: >-
           exec:python
           /Users/vincerubinetti/Desktop/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mistral=7b-instruct-fp16
+          --model ollama=llama3=8b-instruct-fp16
       prompt:
         raw: >-
           Please take the following paragraph of text with no line breaks, and
@@ -88,18 +88,21 @@ results:
           puerca afuera?»
       response:
         output: >-
-          This is a test.
+          This is a test
 
-          Another test.
+          This is another test.
 
           Please turn to p. 55.
 
           I will begin reading.
 
-          It was cold the morning of Dec. 31. -10.5 degrees, to be precise.
+          It was cold the morning of Dec. 31.
 
-          "Dead." detective McAdams said remorsefully. "Certainly a setback...
-          but not a dead-end."
+          -10.5 degrees, to be precise.
+
+          "Dead." detective McAdams said remorsefully.
+
+          "Certainly a setback... but not a dead-end."
 
           "What do you mean?" asked his partner.
 
@@ -111,36 +114,36 @@ results:
           The contents contained a riddle: "Dr. E. Brown knows what makes time
           travel possible."
 
-          "The flux capacitor!" exclaimed McAdams. "We need to get this to the
-          lab A.S.A.P. for forensic analysis."
+          "The flux capacitor!" exclaimed McAdams.
+
+          "We need to get this to the lab A.S.A.P. for forensic analysis."
 
           On the back of the note, a mysterious message read «¿Quién botará la
           puerca afuera?»
-      success: false
-      score: 0
+      success: true
+      score: 1
       namedScores: &ref_0 {}
-      latencyMs: 42891
-      error: Failed
+      latencyMs: 43642
       gradingResult: &ref_1
-        pass: false
-        score: 0
+        pass: true
+        score: 1
         namedScores: *ref_0
-        reason: Failed
+        reason: All assertions passed
         tokensUsed:
           total: 0
           prompt: 0
           completion: 0
         componentResults:
-          - pass: false
-            score: 0
-            reason: Failed
+          - pass: true
+            score: 1
+            reason: Passed
             assertion:
               value: Splits sentences by line
               type: Formatting
         assertion: null
   stats:
-    successes: 0
-    failures: 1
+    successes: 1
+    failures: 0
     tokenUsage:
       total: 0
       prompt: 0
@@ -175,14 +178,14 @@ results:
           provider: >-
             exec:python
             /Users/vincerubinetti/Desktop/manubot-ai-editor-evals/src/llm.py 
-            --model ollama=mistral=7b-instruct-fp16
+            --model ollama=llama3=8b-instruct-fp16
           metrics:
-            score: 0
-            testPassCount: 0
-            testFailCount: 1
-            assertPassCount: 0
-            assertFailCount: 1
-            totalLatencyMs: 42891
+            score: 1
+            testPassCount: 1
+            testFailCount: 0
+            assertPassCount: 1
+            assertFailCount: 0
+            totalLatencyMs: 43642
             tokenUsage:
               total: 0
               prompt: 0
@@ -193,26 +196,25 @@ results:
       vars: []
     body:
       - outputs:
-          - pass: false
-            score: 0
+          - pass: true
+            score: 1
             namedScores: *ref_0
             text: >-
-              Failed
+              This is a test
 
-              ---
-
-              This is a test.
-
-              Another test.
+              This is another test.
 
               Please turn to p. 55.
 
               I will begin reading.
 
-              It was cold the morning of Dec. 31. -10.5 degrees, to be precise.
+              It was cold the morning of Dec. 31.
 
-              "Dead." detective McAdams said remorsefully. "Certainly a
-              setback... but not a dead-end."
+              -10.5 degrees, to be precise.
+
+              "Dead." detective McAdams said remorsefully.
+
+              "Certainly a setback... but not a dead-end."
 
               "What do you mean?" asked his partner.
 
@@ -224,8 +226,9 @@ results:
               The contents contained a riddle: "Dr. E. Brown knows what makes
               time travel possible."
 
-              "The flux capacitor!" exclaimed McAdams. "We need to get this to
-              the lab A.S.A.P. for forensic analysis."
+              "The flux capacitor!" exclaimed McAdams.
+
+              "We need to get this to the lab A.S.A.P. for forensic analysis."
 
               On the back of the note, a mysterious message read «¿Quién botará
               la puerca afuera?»
@@ -254,8 +257,8 @@ results:
             provider: >-
               exec:python
               /Users/vincerubinetti/Desktop/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mistral=7b-instruct-fp16
-            latencyMs: 42891
+              --model ollama=llama3=8b-instruct-fp16
+            latencyMs: 43642
             gradingResult: *ref_1
             cost: 0
         test:
@@ -317,7 +320,7 @@ config:
     - >-
       exec:python
       /Users/vincerubinetti/Desktop/manubot-ai-editor-evals/src/llm.py  --model
-      ollama=mistral=7b-instruct-fp16
+      ollama=llama3=8b-instruct-fp16
   tests: []
   sharing: true
   defaultTest:
@@ -328,9 +331,9 @@ config:
     assert:
       - *ref_3
   outputPath:
-    - outputs/mistral-7b-instruct-fp16/output/latest.html
-    - outputs/mistral-7b-instruct-fp16/output/latest.csv
-    - outputs/mistral-7b-instruct-fp16/output/latest.txt
-    - outputs/mistral-7b-instruct-fp16/output/latest.json
-    - outputs/mistral-7b-instruct-fp16/output/latest.yaml
+    - outputs/llama3-8b-instruct-fp16/output/latest.html
+    - outputs/llama3-8b-instruct-fp16/output/latest.csv
+    - outputs/llama3-8b-instruct-fp16/output/latest.txt
+    - outputs/llama3-8b-instruct-fp16/output/latest.json
+    - outputs/llama3-8b-instruct-fp16/output/latest.yaml
 shareableUrl: null

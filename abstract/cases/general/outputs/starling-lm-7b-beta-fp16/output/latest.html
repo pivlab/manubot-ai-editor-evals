@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Eval Output</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial,
+          sans-serif;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        text-align: left;
+        word-break: break-all;
+      }
+      th,
+      td {
+        padding: 5px;
+        min-width: 200px;
+        white-space: pre-line;
+        vertical-align: top;
+      }
+
+      tr > td[data-content^='[PASS]'] {
+        color: green;
+      }
+      tr > td[data-content^='[FAIL]'] {
+        color: #ad0000;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        
+        <th>Please take the following paragraph of text with no line breaks, and respond only with the same text split into separate lines by sentence. Do not include any line numbers, empty lines, pretext, or anything else besides the split text.
+
+Input paragraph: {{ content }}
+
+Split paragraph:</th>
+        
+      </thead>
+      <tbody>
+        
+        <tr>
+          
+          <td data-content="[FAIL] (0.00)
+
+Failed
+---
+1. This is a test.
+2. This is another test. Please turn to p. 55.
+3. I will begin reading.
+4. It was cold the morning of Dec. 31. -10.5 degrees, to be precise.
+5. &quot;Dead.&quot; detective McAdams said remorsefully. &quot;Certainly a setback... but not a dead-end.&quot;
+6. &quot;What do you mean?&quot; asked his partner.
+7. &quot;We need to check inside. Immediately.&quot; he replied.
+8. The first thing they saw upon entering was an envelope with the words &quot;Clue No. 1&quot; pristinely calligraphed upon it.
+9. The contents contained a riddle: &quot;Dr. E. Brown knows what makes time travel possible.&quot;
+10. &quot;The flux capacitor!&quot; exclaimed McAdams. &quot;We need to get this to the lab A.S.A.P. for forensic analysis.&quot;
+11. On the back of the note, a mysterious message read «¿Quién botará la puerca afuera?»
+
+Fail Reason: Failed">[FAIL] (0.00)
+
+Failed
+---
+1. This is a test.
+2. This is another test. Please turn to p. 55.
+3. I will begin reading.
+4. It was cold the morning of Dec. 31. -10.5 degrees, to be precise.
+5. "Dead." detective McAdams said remorsefully. "Certainly a setback... but not a dead-end."
+6. "What do you mean?" asked his partner.
+7. "We need to check inside. Immediately." he replied.
+8. The first thing they saw upon entering was an envelope with the words "Clue No. 1" pristinely calligraphed upon it.
+9. The contents contained a riddle: "Dr. E. Brown knows what makes time travel possible."
+10. "The flux capacitor!" exclaimed McAdams. "We need to get this to the lab A.S.A.P. for forensic analysis."
+11. On the back of the note, a mysterious message read «¿Quién botará la puerca afuera?»
+
+Fail Reason: Failed</td>
+          
+        </tr>
+        
+      </tbody>
+    </table>
+  </body>
+</html>

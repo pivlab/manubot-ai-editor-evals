@@ -10,25 +10,29 @@ results:
         raw: >-
           Please take the following paragraph of text with no line breaks, and
           respond only with the same text split into separate lines by sentence.
+          Do not include any line numbers, empty lines, pretext, or anything
+          else besides the split text.
 
 
           Input paragraph: This is a test This is another test. Please turn to
-          p. 55. I will begin reading. It was cold the morning of Dec. 31.
-          "Dead." detective McAdams said remorsefully. "Certainly a setback...
-          but not a dead-end." "What do you mean?" asked his partner. "We need
-          to check inside. Immediately." he replied. The first thing they saw
-          upon entering was an envelope with the words "Clue No. 1" pristinely
-          calligraphed upon it. The contents contained a riddle: "Dr. E. Brown
-          knows what makes time travel possible." "The flux capacitor!"
-          exclaimed McAdams. "We need to get this to the lab A.S.A.P. for
-          forensic analysis." On the back of the note read a mysterious message.
-          «¿Quién botará la puerca afuera?»
+          p. 55. I will begin reading. It was cold the morning of Dec. 31. -10.5
+          degrees, to be precise. "Dead." detective McAdams said remorsefully.
+          "Certainly a setback... but not a dead-end." "What do you mean?" asked
+          his partner. "We need to check inside. Immediately." he replied. The
+          first thing they saw upon entering was an envelope with the words
+          "Clue No. 1" pristinely calligraphed upon it. The contents contained a
+          riddle: "Dr. E. Brown knows what makes time travel possible." "The
+          flux capacitor!" exclaimed McAdams. "We need to get this to the lab
+          A.S.A.P. for forensic analysis." On the back of the note, a mysterious
+          message read «¿Quién botará la puerca afuera?»
 
 
           Split paragraph:
         display: >-
           Please take the following paragraph of text with no line breaks, and
           respond only with the same text split into separate lines by sentence.
+          Do not include any line numbers, empty lines, pretext, or anything
+          else besides the split text.
 
 
           Input paragraph: {{ content }}
@@ -39,50 +43,17 @@ results:
         test_description: Splits sentences by line
         content: >-
           This is a test This is another test. Please turn to p. 55. I will
-          begin reading. It was cold the morning of Dec. 31. "Dead." detective
-          McAdams said remorsefully. "Certainly a setback... but not a
-          dead-end." "What do you mean?" asked his partner. "We need to check
-          inside. Immediately." he replied. The first thing they saw upon
-          entering was an envelope with the words "Clue No. 1" pristinely
-          calligraphed upon it. The contents contained a riddle: "Dr. E. Brown
-          knows what makes time travel possible." "The flux capacitor!"
+          begin reading. It was cold the morning of Dec. 31. -10.5 degrees, to
+          be precise. "Dead." detective McAdams said remorsefully. "Certainly a
+          setback... but not a dead-end." "What do you mean?" asked his partner.
+          "We need to check inside. Immediately." he replied. The first thing
+          they saw upon entering was an envelope with the words "Clue No. 1"
+          pristinely calligraphed upon it. The contents contained a riddle: "Dr.
+          E. Brown knows what makes time travel possible." "The flux capacitor!"
           exclaimed McAdams. "We need to get this to the lab A.S.A.P. for
-          forensic analysis." On the back of the note read a mysterious message.
+          forensic analysis." On the back of the note, a mysterious message read
           «¿Quién botará la puerca afuera?»
         expected: >-
-          This is a test 
-
-          This is another test.
-
-          Please turn to p. 55.
-
-          I will begin reading.
-
-          It was cold the morning of Dec. 31.
-
-          "Dead." detective McAdams said remorsefully.
-
-          "Certainly a setback... but not a dead-end."
-
-          "What do you mean?" asked his partner.
-
-          "We need to check inside. Immediately." he replied.
-
-          The first thing they saw upon entering was an envelope with the words
-          "Clue No. 1" pristinely calligraphed upon it.
-
-          The contents contained a riddle: "Dr. E. Brown knows what makes time
-          travel possible."
-
-          "The flux capacitor!" exclaimed McAdams.
-
-          "We need to get this to the lab A.S.A.P. for forensic analysis."
-
-          On the back of the note read a mysterious message.
-
-          «¿Quién botará la puerca afuera?»
-      response:
-        output: >-
           This is a test
 
           This is another test.
@@ -93,6 +64,8 @@ results:
 
           It was cold the morning of Dec. 31.
 
+          -10.5 degrees, to be precise.
+
           "Dead." detective McAdams said remorsefully.
 
           "Certainly a setback... but not a dead-end."
@@ -111,33 +84,63 @@ results:
 
           "We need to get this to the lab A.S.A.P. for forensic analysis."
 
-          On the back of the note read a mysterious message.
+          On the back of the note, a mysterious message read «¿Quién botará la
+          puerca afuera?»
+      response:
+        output: >-
+          This is a test.
 
-          «¿Quién botará la puerca afuera?»
-      success: true
-      score: 1
+          Another test.
+
+          Please turn to p. 55.
+
+          I will begin reading.
+
+          It was cold the morning of Dec. 31. -10.5 degrees, to be precise.
+
+          "Dead." detective McAdams said remorsefully. "Certainly a setback...
+          but not a dead-end."
+
+          "What do you mean?" asked his partner.
+
+          "We need to check inside. Immediately." he replied.
+
+          The first thing they saw upon entering was an envelope with the words
+          "Clue No. 1" pristinely calligraphed upon it.
+
+          The contents contained a riddle: "Dr. E. Brown knows what makes time
+          travel possible."
+
+          "The flux capacitor!" exclaimed McAdams. "We need to get this to the
+          lab A.S.A.P. for forensic analysis."
+
+          On the back of the note, a mysterious message read «¿Quién botará la
+          puerca afuera?»
+      success: false
+      score: 0
       namedScores: &ref_0 {}
-      latencyMs: 72067
+      latencyMs: 42891
+      error: Failed
       gradingResult: &ref_1
-        pass: true
-        score: 1
+        pass: false
+        score: 0
         namedScores: *ref_0
-        reason: All assertions passed
+        reason: Failed
         tokensUsed:
           total: 0
           prompt: 0
           completion: 0
         componentResults:
-          - pass: true
-            score: 1
-            reason: Passed
+          - pass: false
+            score: 0
+            reason: Failed
             assertion:
               value: Splits sentences by line
               type: Formatting
         assertion: null
   stats:
-    successes: 1
-    failures: 0
+    successes: 0
+    failures: 1
     tokenUsage:
       total: 0
       prompt: 0
@@ -149,7 +152,8 @@ results:
         - raw: >-
             Please take the following paragraph of text with no line breaks, and
             respond only with the same text split into separate lines by
-            sentence.
+            sentence. Do not include any line numbers, empty lines, pretext, or
+            anything else besides the split text.
 
 
             Input paragraph: {{ content }}
@@ -159,25 +163,26 @@ results:
           display: >-
             Please take the following paragraph of text with no line breaks, and
             respond only with the same text split into separate lines by
-            sentence.
+            sentence. Do not include any line numbers, empty lines, pretext, or
+            anything else besides the split text.
 
 
             Input paragraph: {{ content }}
 
 
             Split paragraph:
-          id: 26bfbadcacf3cf6d4ec38062f9ecc85503061e199a7f2cb1776cd249c9262ce8
+          id: c6be4586cd194f56689f62030f63434d23430137c5da9ce4b56b7eb0a447fcbd
           provider: >-
             exec:python
             /Users/vincerubinetti/Desktop/manubot-ai-editor-evals/src/llm.py 
             --model ollama=mistral=7b-instruct-fp16
           metrics:
-            score: 1
-            testPassCount: 1
-            testFailCount: 0
-            assertPassCount: 1
-            assertFailCount: 0
-            totalLatencyMs: 72067
+            score: 0
+            testPassCount: 0
+            testFailCount: 1
+            assertPassCount: 0
+            assertFailCount: 1
+            totalLatencyMs: 42891
             tokenUsage:
               total: 0
               prompt: 0
@@ -188,23 +193,26 @@ results:
       vars: []
     body:
       - outputs:
-          - pass: true
-            score: 1
+          - pass: false
+            score: 0
             namedScores: *ref_0
             text: >-
-              This is a test
+              Failed
 
-              This is another test.
+              ---
+
+              This is a test.
+
+              Another test.
 
               Please turn to p. 55.
 
               I will begin reading.
 
-              It was cold the morning of Dec. 31.
+              It was cold the morning of Dec. 31. -10.5 degrees, to be precise.
 
-              "Dead." detective McAdams said remorsefully.
-
-              "Certainly a setback... but not a dead-end."
+              "Dead." detective McAdams said remorsefully. "Certainly a
+              setback... but not a dead-end."
 
               "What do you mean?" asked his partner.
 
@@ -216,31 +224,30 @@ results:
               The contents contained a riddle: "Dr. E. Brown knows what makes
               time travel possible."
 
-              "The flux capacitor!" exclaimed McAdams.
+              "The flux capacitor!" exclaimed McAdams. "We need to get this to
+              the lab A.S.A.P. for forensic analysis."
 
-              "We need to get this to the lab A.S.A.P. for forensic analysis."
-
-              On the back of the note read a mysterious message.
-
-              «¿Quién botará la puerca afuera?»
+              On the back of the note, a mysterious message read «¿Quién botará
+              la puerca afuera?»
             prompt: >-
               Please take the following paragraph of text with no line breaks,
               and respond only with the same text split into separate lines by
-              sentence.
+              sentence. Do not include any line numbers, empty lines, pretext,
+              or anything else besides the split text.
 
 
               Input paragraph: This is a test This is another test. Please turn
               to p. 55. I will begin reading. It was cold the morning of Dec.
-              31. "Dead." detective McAdams said remorsefully. "Certainly a
-              setback... but not a dead-end." "What do you mean?" asked his
-              partner. "We need to check inside. Immediately." he replied. The
-              first thing they saw upon entering was an envelope with the words
-              "Clue No. 1" pristinely calligraphed upon it. The contents
-              contained a riddle: "Dr. E. Brown knows what makes time travel
-              possible." "The flux capacitor!" exclaimed McAdams. "We need to
-              get this to the lab A.S.A.P. for forensic analysis." On the back
-              of the note read a mysterious message. «¿Quién botará la puerca
-              afuera?»
+              31. -10.5 degrees, to be precise. "Dead." detective McAdams said
+              remorsefully. "Certainly a setback... but not a dead-end." "What
+              do you mean?" asked his partner. "We need to check inside.
+              Immediately." he replied. The first thing they saw upon entering
+              was an envelope with the words "Clue No. 1" pristinely
+              calligraphed upon it. The contents contained a riddle: "Dr. E.
+              Brown knows what makes time travel possible." "The flux
+              capacitor!" exclaimed McAdams. "We need to get this to the lab
+              A.S.A.P. for forensic analysis." On the back of the note, a
+              mysterious message read «¿Quién botará la puerca afuera?»
 
 
               Split paragraph:
@@ -248,7 +255,7 @@ results:
               exec:python
               /Users/vincerubinetti/Desktop/manubot-ai-editor-evals/src/llm.py 
               --model ollama=mistral=7b-instruct-fp16
-            latencyMs: 72067
+            latencyMs: 42891
             gradingResult: *ref_1
             cost: 0
         test:

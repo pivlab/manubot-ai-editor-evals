@@ -5,7 +5,7 @@ results:
         id: >-
           exec:python
           /Users/vincerubinetti/Desktop/manubot-ai-editor-evals/src/llm.py 
-          --model ollama=mistral=7b-instruct-fp16
+          --model ollama=starling-lm=7b-alpha-fp16
       prompt:
         raw: >-
           Please take the following paragraph of text with no line breaks, and
@@ -88,38 +88,28 @@ results:
           puerca afuera?»
       response:
         output: >-
-          This is a test.
+          This is a test
 
-          Another test.
+          This is another test.
 
           Please turn to p. 55.
 
           I will begin reading.
 
           It was cold the morning of Dec. 31. -10.5 degrees, to be precise.
-
           "Dead." detective McAdams said remorsefully. "Certainly a setback...
-          but not a dead-end."
-
-          "What do you mean?" asked his partner.
-
-          "We need to check inside. Immediately." he replied.
-
-          The first thing they saw upon entering was an envelope with the words
-          "Clue No. 1" pristinely calligraphed upon it.
-
-          The contents contained a riddle: "Dr. E. Brown knows what makes time
-          travel possible."
-
-          "The flux capacitor!" exclaimed McAdams. "We need to get this to the
-          lab A.S.A.P. for forensic analysis."
-
-          On the back of the note, a mysterious message read «¿Quién botará la
-          puerca afuera?»
+          but not a dead-end." "What do you mean?" asked his partner. "We need
+          to check inside. Immediately." he replied. The first thing they saw
+          upon entering was an envelope with the words "Clue No. 1" pristinely
+          calligraphed upon it. The contents contained a riddle: "Dr. E. Brown
+          knows what makes time travel possible." "The flux capacitor!"
+          exclaimed McAdams. "We need to get this to the lab A.S.A.P. for
+          forensic analysis." On the back of the note, a mysterious message read
+          «¿Quién botará la puerca afuera?»
       success: false
       score: 0
       namedScores: &ref_0 {}
-      latencyMs: 42891
+      latencyMs: 42368
       error: Failed
       gradingResult: &ref_1
         pass: false
@@ -175,14 +165,14 @@ results:
           provider: >-
             exec:python
             /Users/vincerubinetti/Desktop/manubot-ai-editor-evals/src/llm.py 
-            --model ollama=mistral=7b-instruct-fp16
+            --model ollama=starling-lm=7b-alpha-fp16
           metrics:
             score: 0
             testPassCount: 0
             testFailCount: 1
             assertPassCount: 0
             assertFailCount: 1
-            totalLatencyMs: 42891
+            totalLatencyMs: 42368
             tokenUsage:
               total: 0
               prompt: 0
@@ -201,34 +191,25 @@ results:
 
               ---
 
-              This is a test.
+              This is a test
 
-              Another test.
+              This is another test.
 
               Please turn to p. 55.
 
               I will begin reading.
 
               It was cold the morning of Dec. 31. -10.5 degrees, to be precise.
-
               "Dead." detective McAdams said remorsefully. "Certainly a
-              setback... but not a dead-end."
-
-              "What do you mean?" asked his partner.
-
-              "We need to check inside. Immediately." he replied.
-
-              The first thing they saw upon entering was an envelope with the
-              words "Clue No. 1" pristinely calligraphed upon it.
-
-              The contents contained a riddle: "Dr. E. Brown knows what makes
-              time travel possible."
-
-              "The flux capacitor!" exclaimed McAdams. "We need to get this to
-              the lab A.S.A.P. for forensic analysis."
-
-              On the back of the note, a mysterious message read «¿Quién botará
-              la puerca afuera?»
+              setback... but not a dead-end." "What do you mean?" asked his
+              partner. "We need to check inside. Immediately." he replied. The
+              first thing they saw upon entering was an envelope with the words
+              "Clue No. 1" pristinely calligraphed upon it. The contents
+              contained a riddle: "Dr. E. Brown knows what makes time travel
+              possible." "The flux capacitor!" exclaimed McAdams. "We need to
+              get this to the lab A.S.A.P. for forensic analysis." On the back
+              of the note, a mysterious message read «¿Quién botará la puerca
+              afuera?»
             prompt: >-
               Please take the following paragraph of text with no line breaks,
               and respond only with the same text split into separate lines by
@@ -254,8 +235,8 @@ results:
             provider: >-
               exec:python
               /Users/vincerubinetti/Desktop/manubot-ai-editor-evals/src/llm.py 
-              --model ollama=mistral=7b-instruct-fp16
-            latencyMs: 42891
+              --model ollama=starling-lm=7b-alpha-fp16
+            latencyMs: 42368
             gradingResult: *ref_1
             cost: 0
         test:
@@ -317,7 +298,7 @@ config:
     - >-
       exec:python
       /Users/vincerubinetti/Desktop/manubot-ai-editor-evals/src/llm.py  --model
-      ollama=mistral=7b-instruct-fp16
+      ollama=starling-lm=7b-alpha-fp16
   tests: []
   sharing: true
   defaultTest:
@@ -328,9 +309,9 @@ config:
     assert:
       - *ref_3
   outputPath:
-    - outputs/mistral-7b-instruct-fp16/output/latest.html
-    - outputs/mistral-7b-instruct-fp16/output/latest.csv
-    - outputs/mistral-7b-instruct-fp16/output/latest.txt
-    - outputs/mistral-7b-instruct-fp16/output/latest.json
-    - outputs/mistral-7b-instruct-fp16/output/latest.yaml
+    - outputs/starling-lm-7b-alpha-fp16/output/latest.html
+    - outputs/starling-lm-7b-alpha-fp16/output/latest.csv
+    - outputs/starling-lm-7b-alpha-fp16/output/latest.txt
+    - outputs/starling-lm-7b-alpha-fp16/output/latest.json
+    - outputs/starling-lm-7b-alpha-fp16/output/latest.yaml
 shareableUrl: null

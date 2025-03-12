@@ -1,0 +1,18 @@
+"{""raw"":""Please take the following paragraph of text with no line breaks, and respond only with the same text split into separate lines by sentence. Do not include any line numbers, empty lines, pretext, or anything else besides the split text.\n\nInput paragraph: {{ content }}\n\nSplit paragraph:"",""display"":""Please take the following paragraph of text with no line breaks, and respond only with the same text split into separate lines by sentence. Do not include any line numbers, empty lines, pretext, or anything else besides the split text.\n\nInput paragraph: {{ content }}\n\nSplit paragraph:"",""id"":""c6be4586cd194f56689f62030f63434d23430137c5da9ce4b56b7eb0a447fcbd"",""provider"":""exec:python /Users/vincerubinetti/Desktop/manubot-ai-editor-evals/src/llm.py  --model ollama=starling-lm=7b-beta-fp16"",""metrics"":{""score"":0,""testPassCount"":0,""testFailCount"":1,""assertPassCount"":0,""assertFailCount"":1,""totalLatencyMs"":44495,""tokenUsage"":{""total"":0,""prompt"":0,""completion"":0,""cached"":0},""namedScores"":{},""cost"":0}}"
+"[FAIL] (0.00)
+
+Failed
+---
+1. This is a test.
+2. This is another test. Please turn to p. 55.
+3. I will begin reading.
+4. It was cold the morning of Dec. 31. -10.5 degrees, to be precise.
+5. ""Dead."" detective McAdams said remorsefully. ""Certainly a setback... but not a dead-end.""
+6. ""What do you mean?"" asked his partner.
+7. ""We need to check inside. Immediately."" he replied.
+8. The first thing they saw upon entering was an envelope with the words ""Clue No. 1"" pristinely calligraphed upon it.
+9. The contents contained a riddle: ""Dr. E. Brown knows what makes time travel possible.""
+10. ""The flux capacitor!"" exclaimed McAdams. ""We need to get this to the lab A.S.A.P. for forensic analysis.""
+11. On the back of the note, a mysterious message read «¿Quién botará la puerca afuera?»
+
+Fail Reason: Failed"
