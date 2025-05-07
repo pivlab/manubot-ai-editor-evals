@@ -1,4 +1,4 @@
-Please take the following paragraph of text with no line breaks, and respond only with the same text split into separate lines by sentence. Do not include any line numbers, empty lines, pretext, or anything else besides the split text.
+Please take the following paragraph of text with no line breaks, and respond only with the same text split into separate lines by sentence. Make sure to preserve any punctuation or special markings in the original text, but do not add any line numbers, empty lines, pretext, or anything else besides the split text. 
 
 Input paragraph: {{ content }}
 

@@ -13,3 +13,6 @@ The contents contained a riddle: "Dr. E. Brown knows what makes time travel poss
 "The flux capacitor!" exclaimed McAdams.
 "We need to get this to the lab A.S.A.P. for forensic analysis."
 On the back of the note, a mysterious message read «¿Quién botará la puerca afuera?»
+They knew that could mean one of two things.
+1. The killer felt justified.
+2. The killer was a farmer.
