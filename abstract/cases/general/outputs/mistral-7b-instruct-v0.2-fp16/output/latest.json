@@ -19,13 +19,13 @@
           "output": "This is a test.\nThis is another test.\nPlease turn to p. 55.\nI will begin reading.\nIt was cold the morning of Dec. 31. -10.5 degrees, to be precise.\n\"Dead.\" detective McAdams said remorsefully.\n\"Certainly a setback... but not a dead-end.\"\n\"What do you mean?\" asked his partner.\n\"We need to check inside. Immediately.\" he replied.\nThe first thing they saw upon entering was an envelope with the words _Clue No. 1_ pristinely calligraphed upon it.\nThe contents contained a riddle: \"Dr. E. Brown knows what makes time travel possible.\"\n\"The flux capacitor!\" exclaimed McAdams.\n\"We need to get this to the lab A.S.A.P. for forensic analysis.\"\nOn the back of the note, a mysterious message read «¿Quién botará la puerca afuera?»\n<ul class=\"list\">\n<li>1. The killer felt justified.</li>\n<li>2. The killer was a farmer.</li>\n</ul>"
         },
         "success": false,
-        "score": 0,
+        "score": 0.40000000000000013,
         "namedScores": {},
-        "latencyMs": 835,
+        "latencyMs": 888,
         "error": "Failed",
         "gradingResult": {
           "pass": false,
-          "score": 0,
+          "score": 0.40000000000000013,
           "namedScores": {},
           "reason": "Failed",
           "tokensUsed": {
@@ -36,7 +36,7 @@
           "componentResults": [
             {
               "pass": false,
-              "score": 0,
+              "score": 0.40000000000000013,
               "reason": "Failed",
               "assertion": {
                 "value": "Splits sentences by line",
@@ -67,12 +67,12 @@
             "id": "878575e907d9093d7e4d01059d204f897a0d9ab7494ca675a8e97c6d69930738",
             "provider": "exec:python /home/vrubinetti/manubot-ai-editor-evals/src/llm.py  --model ollama=mistral=7b-instruct-v0.2-fp16",
             "metrics": {
-              "score": 0,
+              "score": 0.40000000000000013,
               "testPassCount": 0,
               "testFailCount": 1,
               "assertPassCount": 0,
               "assertFailCount": 1,
-              "totalLatencyMs": 835,
+              "totalLatencyMs": 888,
               "tokenUsage": {
                 "total": 0,
                 "prompt": 0,
@@ -91,15 +91,15 @@
           "outputs": [
             {
               "pass": false,
-              "score": 0,
+              "score": 0.40000000000000013,
               "namedScores": {},
               "text": "Failed\n---\nThis is a test.\nThis is another test.\nPlease turn to p. 55.\nI will begin reading.\nIt was cold the morning of Dec. 31. -10.5 degrees, to be precise.\n\"Dead.\" detective McAdams said remorsefully.\n\"Certainly a setback... but not a dead-end.\"\n\"What do you mean?\" asked his partner.\n\"We need to check inside. Immediately.\" he replied.\nThe first thing they saw upon entering was an envelope with the words _Clue No. 1_ pristinely calligraphed upon it.\nThe contents contained a riddle: \"Dr. E. Brown knows what makes time travel possible.\"\n\"The flux capacitor!\" exclaimed McAdams.\n\"We need to get this to the lab A.S.A.P. for forensic analysis.\"\nOn the back of the note, a mysterious message read «¿Quién botará la puerca afuera?»\n<ul class=\"list\">\n<li>1. The killer felt justified.</li>\n<li>2. The killer was a farmer.</li>\n</ul>",
               "prompt": "Please take the following paragraph of text with no line breaks, and respond only with the same text split into separate lines by sentence. Do not insert anything into the response like line numbers, empty lines, or a preamble; only line breaks. Make sure to preserve any punctuation or special markings in the original text. If you encounter HTML, treat each opening or closing tag as its own sentence, placing it on its own line. For example, \"<ul class=\"list\"><li>First sentence. Second sentence.</li></ul>\" should be split into six lines.\n\nInput paragraph: This is a test This is another test. Please turn to p. 55. I will begin reading. It was cold the morning of Dec. 31. -10.5 degrees, to be precise. \"Dead.\" detective McAdams said remorsefully. \"Certainly a setback... but not a dead-end.\" \"What do you mean?\" asked his partner. \"We need to check inside. Immediately.\" he replied. The first thing they saw upon entering was an envelope with the words _Clue No. 1_ pristinely calligraphed upon it. The contents contained a riddle: \"Dr. E. Brown knows what makes time travel possible.\" \"The flux capacitor!\" exclaimed McAdams. \"We need to get this to the lab A.S.A.P. for forensic analysis.\" On the back of the note, a mysterious message read «¿Quién botará la puerca afuera?» They knew that could mean one of two things. <ul class=\"list\"><li>1. The killer felt justified.</li><li>2. The killer was a farmer.</li></ul>\n\nSplit paragraph:",
               "provider": "exec:python /home/vrubinetti/manubot-ai-editor-evals/src/llm.py  --model ollama=mistral=7b-instruct-v0.2-fp16",
-              "latencyMs": 835,
+              "latencyMs": 888,
               "gradingResult": {
                 "pass": false,
-                "score": 0,
+                "score": 0.40000000000000013,
                 "namedScores": {},
                 "reason": "Failed",
                 "tokensUsed": {
@@ -110,7 +110,7 @@
                 "componentResults": [
                   {
                     "pass": false,
-                    "score": 0,
+                    "score": 0.40000000000000013,
                     "reason": "Failed",
                     "assertion": {
                       "value": "Splits sentences by line",
@@ -132,7 +132,7 @@
             "assert": [
               {
                 "type": "python",
-                "value": "description = \"Splits sentences by line\"\ntype = \"Formatting\"\nscore = 1.0\n\ndef remove_before(string, substring):\n    index = string.find(substring)\n    if index != -1:\n        return string[index:]\n    return string\n\ndef split(text: str):\n    return [line for line in [line.strip() for line in text.split(\"\\n\")] if line]\n\noutput = remove_before(output.lower(), \"this is a test\").strip()\nexpected = context[\"vars\"][\"expected\"].lower().strip()\n\noutput_lines = split(output)\nexpected_lines = split(expected)\n\nres = False\n\nif len(output_lines) == len(expected_lines):\n    res = True\n    for i in range(len(output_lines)):\n        output_line = output_lines[i].lower()\n        expected_line = expected_lines[i].lower()\n        match_chars = min(10, len(output_line), len(expected_line))\n        if output_line[:match_chars] != expected_line[:match_chars]:\n            res = False\n            break\n\nreturn {\n    \"pass\": res,\n    \"score\": score if res else 0.0,\n    \"reason\": \"Passed\" if res else \"Failed\",\n    \"assertion\": {\n      \"value\": description,\n      \"type\": type,\n    },\n  }\n"
+                "value": "description = \"Splits sentences by line\"\ntype = \"Formatting\"\nscore = 1.0\n\ndef remove_before(string, substring):\n    index = string.find(substring)\n    if index != -1:\n        return string[index:]\n    return string\n\ndef split(text):\n    return [line for line in [line.strip() for line in text.split(\"\\n\")] if line]\n\noutput = remove_before(output.lower().strip(), \"this is a test\")\nexpected = context[\"vars\"][\"expected\"].lower().strip()\n\noutput_lines = split(output)\nexpected_lines = split(expected)\n\nexpected_index = 0\nscore = 1\n\ndef compare_lines(output_line):\n    expected_line = expected_lines[expected_index]\n    match_chars = min(10, len(output_line), len(expected_line))\n    return output_line[:match_chars] == expected_line[:match_chars]\n\nfor output_line in output_lines:\n    while expected_index < len(expected_lines) and not compare_lines(output_line):\n        expected_index += 1\n        score -= 0.1\n    expected_index += 1\n\nres = score >= 0.8\n\nreturn {\n    \"pass\": res,\n    \"score\": score,\n    \"reason\": \"Passed\" if res else \"Failed\",\n    \"assertion\": {\n      \"value\": description,\n      \"type\": type,\n    },\n  }\n"
               }
             ],
             "options": {}
@@ -160,7 +160,7 @@
       "assert": [
         {
           "type": "python",
-          "value": "description = \"Splits sentences by line\"\ntype = \"Formatting\"\nscore = 1.0\n\ndef remove_before(string, substring):\n    index = string.find(substring)\n    if index != -1:\n        return string[index:]\n    return string\n\ndef split(text: str):\n    return [line for line in [line.strip() for line in text.split(\"\\n\")] if line]\n\noutput = remove_before(output.lower(), \"this is a test\").strip()\nexpected = context[\"vars\"][\"expected\"].lower().strip()\n\noutput_lines = split(output)\nexpected_lines = split(expected)\n\nres = False\n\nif len(output_lines) == len(expected_lines):\n    res = True\n    for i in range(len(output_lines)):\n        output_line = output_lines[i].lower()\n        expected_line = expected_lines[i].lower()\n        match_chars = min(10, len(output_line), len(expected_line))\n        if output_line[:match_chars] != expected_line[:match_chars]:\n            res = False\n            break\n\nreturn {\n    \"pass\": res,\n    \"score\": score if res else 0.0,\n    \"reason\": \"Passed\" if res else \"Failed\",\n    \"assertion\": {\n      \"value\": description,\n      \"type\": type,\n    },\n  }\n"
+          "value": "description = \"Splits sentences by line\"\ntype = \"Formatting\"\nscore = 1.0\n\ndef remove_before(string, substring):\n    index = string.find(substring)\n    if index != -1:\n        return string[index:]\n    return string\n\ndef split(text):\n    return [line for line in [line.strip() for line in text.split(\"\\n\")] if line]\n\noutput = remove_before(output.lower().strip(), \"this is a test\")\nexpected = context[\"vars\"][\"expected\"].lower().strip()\n\noutput_lines = split(output)\nexpected_lines = split(expected)\n\nexpected_index = 0\nscore = 1\n\ndef compare_lines(output_line):\n    expected_line = expected_lines[expected_index]\n    match_chars = min(10, len(output_line), len(expected_line))\n    return output_line[:match_chars] == expected_line[:match_chars]\n\nfor output_line in output_lines:\n    while expected_index < len(expected_lines) and not compare_lines(output_line):\n        expected_index += 1\n        score -= 0.1\n    expected_index += 1\n\nres = score >= 0.8\n\nreturn {\n    \"pass\": res,\n    \"score\": score,\n    \"reason\": \"Passed\" if res else \"Failed\",\n    \"assertion\": {\n      \"value\": description,\n      \"type\": type,\n    },\n  }\n"
         }
       ]
     },

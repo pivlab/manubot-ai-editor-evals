@@ -144,13 +144,13 @@ results:
 
           They knew that could mean one of two things.
       success: false
-      score: 0
+      score: 0.5000000000000001
       namedScores: &ref_0 {}
-      latencyMs: 805
+      latencyMs: 836
       error: Failed
       gradingResult: &ref_1
         pass: false
-        score: 0
+        score: 0.5000000000000001
         namedScores: *ref_0
         reason: Failed
         tokensUsed:
@@ -159,7 +159,7 @@ results:
           completion: 0
         componentResults:
           - pass: false
-            score: 0
+            score: 0.5000000000000001
             reason: Failed
             assertion:
               value: Splits sentences by line
@@ -213,12 +213,12 @@ results:
             exec:python /home/vrubinetti/manubot-ai-editor-evals/src/llm.py 
             --model ollama=llama2=7b-chat-fp16
           metrics:
-            score: 0
+            score: 0.5000000000000001
             testPassCount: 0
             testFailCount: 1
             assertPassCount: 0
             assertFailCount: 1
-            totalLatencyMs: 805
+            totalLatencyMs: 836
             tokenUsage:
               total: 0
               prompt: 0
@@ -230,7 +230,7 @@ results:
     body:
       - outputs:
           - pass: false
-            score: 0
+            score: 0.5000000000000001
             namedScores: *ref_0
             text: >-
               Failed
@@ -296,7 +296,7 @@ results:
             provider: >-
               exec:python /home/vrubinetti/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama2=7b-chat-fp16
-            latencyMs: 805
+            latencyMs: 836
             gradingResult: *ref_1
             cost: 0
         test:
@@ -315,30 +315,34 @@ results:
                         return string[index:]
                     return string
 
-                def split(text: str):
+                def split(text):
                     return [line for line in [line.strip() for line in text.split("\n")] if line]
 
-                output = remove_before(output.lower(), "this is a test").strip()
+                output = remove_before(output.lower().strip(), "this is a test")
                 expected = context["vars"]["expected"].lower().strip()
 
                 output_lines = split(output)
                 expected_lines = split(expected)
 
-                res = False
+                expected_index = 0
+                score = 1
 
-                if len(output_lines) == len(expected_lines):
-                    res = True
-                    for i in range(len(output_lines)):
-                        output_line = output_lines[i].lower()
-                        expected_line = expected_lines[i].lower()
-                        match_chars = min(10, len(output_line), len(expected_line))
-                        if output_line[:match_chars] != expected_line[:match_chars]:
-                            res = False
-                            break
+                def compare_lines(output_line):
+                    expected_line = expected_lines[expected_index]
+                    match_chars = min(10, len(output_line), len(expected_line))
+                    return output_line[:match_chars] == expected_line[:match_chars]
+
+                for output_line in output_lines:
+                    while expected_index < len(expected_lines) and not compare_lines(output_line):
+                        expected_index += 1
+                        score -= 0.1
+                    expected_index += 1
+
+                res = score >= 0.8
 
                 return {
                     "pass": res,
-                    "score": score if res else 0.0,
+                    "score": score,
                     "reason": "Passed" if res else "Failed",
                     "assertion": {
                       "value": description,
