@@ -162,7 +162,7 @@ results:
       success: false
       score: 0
       namedScores: &ref_0 {}
-      latencyMs: 24486
+      latencyMs: 860
       error: Failed
       gradingResult: &ref_1
         pass: false
@@ -234,7 +234,7 @@ results:
             testFailCount: 1
             assertPassCount: 0
             assertFailCount: 1
-            totalLatencyMs: 24486
+            totalLatencyMs: 860
             tokenUsage:
               total: 0
               prompt: 0
@@ -328,7 +328,7 @@ results:
             provider: >-
               exec:python /home/vrubinetti/manubot-ai-editor-evals/src/llm.py 
               --model ollama=llama3=8b-instruct-fp16
-            latencyMs: 24486
+            latencyMs: 860
             gradingResult: *ref_1
             cost: 0
         test:

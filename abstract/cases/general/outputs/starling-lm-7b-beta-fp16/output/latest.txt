@@ -154,7 +154,7 @@ results:
       success: false
       score: 0
       namedScores: &ref_0 {}
-      latencyMs: 26179
+      latencyMs: 806
       error: Failed
       gradingResult: &ref_1
         pass: false
@@ -226,7 +226,7 @@ results:
             testFailCount: 1
             assertPassCount: 0
             assertFailCount: 1
-            totalLatencyMs: 26179
+            totalLatencyMs: 806
             tokenUsage:
               total: 0
               prompt: 0
@@ -314,7 +314,7 @@ results:
             provider: >-
               exec:python /home/vrubinetti/manubot-ai-editor-evals/src/llm.py 
               --model ollama=starling-lm=7b-beta-fp16
-            latencyMs: 26179
+            latencyMs: 806
             gradingResult: *ref_1
             cost: 0
         test:

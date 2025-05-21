@@ -21,7 +21,7 @@
         "success": false,
         "score": 0,
         "namedScores": {},
-        "latencyMs": 22384,
+        "latencyMs": 793,
         "error": "Failed",
         "gradingResult": {
           "pass": false,
@@ -72,7 +72,7 @@
               "testFailCount": 1,
               "assertPassCount": 0,
               "assertFailCount": 1,
-              "totalLatencyMs": 22384,
+              "totalLatencyMs": 793,
               "tokenUsage": {
                 "total": 0,
                 "prompt": 0,
@@ -96,7 +96,7 @@
               "text": "Failed\n---\nThis is a test\nThis is another test.\nPlease turn to p. 55.\nI will begin reading.\nIt was cold the morning of Dec. 31. -10.5 degrees, to be precise.\n\"Dead.\" detective McAdams said remorsefully. \"Certainly a setback... but not a dead-end.\"\n\"What do you mean?\" asked his partner.\n\"We need to check inside. Immediately.\" he replied.\nThe first thing they saw upon entering was an envelope with the words _Clue No. 1_ pristinely calligraphed upon it.\nThe contents contained a riddle: \"Dr. E. Brown knows what makes time travel possible.\"\n\"The flux capacitor!\" exclaimed McAdams.\n\"We need to get this to the lab A.S.A.P. for forensic analysis.\"\nOn the back of the note, a mysterious message read «¿Quién botará la puerca afuera?»\nThey knew that could mean one of two things.\n<ul class=\"list\">\n1. The killer felt justified.\n2. The killer was a farmer.",
               "prompt": "Please take the following paragraph of text with no line breaks, and respond only with the same text split into separate lines by sentence. Do not insert anything into the response like line numbers, empty lines, or a preamble; only line breaks. Make sure to preserve any punctuation or special markings in the original text. If you encounter HTML, treat each opening or closing tag as its own sentence, placing it on its own line. For example, \"<ul class=\"list\"><li>First sentence. Second sentence.</li></ul>\" should be split into six lines.\n\nInput paragraph: This is a test This is another test. Please turn to p. 55. I will begin reading. It was cold the morning of Dec. 31. -10.5 degrees, to be precise. \"Dead.\" detective McAdams said remorsefully. \"Certainly a setback... but not a dead-end.\" \"What do you mean?\" asked his partner. \"We need to check inside. Immediately.\" he replied. The first thing they saw upon entering was an envelope with the words _Clue No. 1_ pristinely calligraphed upon it. The contents contained a riddle: \"Dr. E. Brown knows what makes time travel possible.\" \"The flux capacitor!\" exclaimed McAdams. \"We need to get this to the lab A.S.A.P. for forensic analysis.\" On the back of the note, a mysterious message read «¿Quién botará la puerca afuera?» They knew that could mean one of two things. <ul class=\"list\"><li>1. The killer felt justified.</li><li>2. The killer was a farmer.</li></ul>\n\nSplit paragraph:",
               "provider": "exec:python /home/vrubinetti/manubot-ai-editor-evals/src/llm.py  --model ollama=mistral=7b-instruct-fp16",
-              "latencyMs": 22384,
+              "latencyMs": 793,
               "gradingResult": {
                 "pass": false,
                 "score": 0,
