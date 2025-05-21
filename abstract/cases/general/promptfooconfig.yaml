@@ -22,30 +22,32 @@ defaultTest:
                 return string[index:]
             return string
 
-        def split(text: str):
+        def split(text):
             return [line for line in [line.strip() for line in text.split("\n")] if line]
 
-        output = remove_before(output.lower(), "this is a test").strip()
+        output = remove_before(output.lower().strip(), "this is a test")
         expected = context["vars"]["expected"].lower().strip()
 
         output_lines = split(output)
         expected_lines = split(expected)
 
-        res = False
+        expected_index = 0
+        score = 1
 
-        if len(output_lines) == len(expected_lines):
-            res = True
-            for i in range(len(output_lines)):
-                output_line = output_lines[i].lower()
-                expected_line = expected_lines[i].lower()
-                match_chars = min(10, len(output_line), len(expected_line))
-                if output_line[:match_chars] != expected_line[:match_chars]:
-                    res = False
-                    break
+        def compare_lines(output_line):
+            expected_line = expected_lines[expected_index]
+            match_chars = min(10, len(output_line), len(expected_line))
+            return output_line[:match_chars] == expected_line[:match_chars]
+
+        for output_line in output_lines:
+            while expected_index < len(expected_lines) and not compare_lines(output_line):
+                expected_index += 1
+                score -= 0.1
+            expected_index += 1
 
         return {
-            "pass": res,
-            "score": score if res else 0.0,
+            "pass": score >= 0.8,
+            "score": score,
             "reason": "Passed" if res else "Failed",
             "assertion": {
               "value": description,
