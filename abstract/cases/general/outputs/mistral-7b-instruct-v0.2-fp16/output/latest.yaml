@@ -48,7 +48,7 @@ results:
 
 
           Split paragraph:
-      vars: &ref_1
+      vars: &ref_2
         test_description: Splits sentences by line
         content: >-
           This is a test This is another test. Please turn to p. 55. I will
@@ -115,11 +115,68 @@ results:
           </li>
 
           </ul>
-      error: "Error: Command failed: python /home/vrubinetti/manubot-ai-editor-evals/src/llm.py --model ollama=mistral=7b-instruct-v0.2-fp16 Please take the following paragraph of text with no line breaks, and respond only with the same text split into separate lines by sentence. Do not insert anything into the response like line numbers, empty lines, or a preamble; only line breaks. Make sure to preserve any punctuation or special markings in the original text. If you encounter HTML, treat each opening or closing tag as its own sentence, placing it on its own line. For example, \"<ul class=\"list\"><li>First sentence. Second sentence.</li></ul>\" should be split into six lines.\n\nInput paragraph: This is a test This is another test. Please turn to p. 55. I will begin reading. It was cold the morning of Dec. 31. -10.5 degrees, to be precise. \"Dead.\" detective McAdams said remorsefully. \"Certainly a setback... but not a dead-end.\" \"What do you mean?\" asked his partner. \"We need to check inside. Immediately.\" he replied. The first thing they saw upon entering was an envelope with the words _Clue No. 1_ pristinely calligraphed upon it. The contents contained a riddle: \"Dr. E. Brown knows what makes time travel possible.\" \"The flux capacitor!\" exclaimed McAdams. \"We need to get this to the lab A.S.A.P. for forensic analysis.\" On the back of the note, a mysterious message read «¿Quién botará la puerca afuera?» They knew that could mean one of two things. <ul class=\"list\"><li>1. The killer felt justified.</li><li>2. The killer was a farmer.</li></ul>\n\nSplit paragraph: {\"config\":{\"basePath\":\"\"}} {\"vars\":{\"test_description\":\"Splits sentences by line\",\"content\":\"This is a test This is another test. Please turn to p. 55. I will begin reading. It was cold the morning of Dec. 31. -10.5 degrees, to be precise. \\\"Dead.\\\" detective McAdams said remorsefully. \\\"Certainly a setback... but not a dead-end.\\\" \\\"What do you mean?\\\" asked his partner. \\\"We need to check inside. Immediately.\\\" he replied. The first thing they saw upon entering was an envelope with the words _Clue No. 1_ pristinely calligraphed upon it. The contents contained a riddle: \\\"Dr. E. Brown knows what makes time travel possible.\\\" \\\"The flux capacitor!\\\" exclaimed McAdams. \\\"We need to get this to the lab A.S.A.P. for forensic analysis.\\\" On the back of the note, a mysterious message read «¿Quién botará la puerca afuera?» They knew that could mean one of two things. <ul class=\\\"list\\\"><li>1. The killer felt justified.</li><li>2. The killer was a farmer.</li></ul>\",\"expected\":\"This is a test\\nThis is another test.\\nPlease turn to p. 55.\\nI will begin reading.\\nIt was cold the morning of Dec. 31.\\n-10.5 degrees, to be precise.\\n\\\"Dead.\\\" detective McAdams said remorsefully.\\n\\\"Certainly a setback... but not a dead-end.\\\"\\n\\\"What do you mean?\\\" asked his partner.\\n\\\"We need to check inside. Immediately.\\\" he replied.\\nThe first thing they saw upon entering was an envelope with the words _Clue No. 1_ pristinely calligraphed upon it.\\nThe contents contained a riddle: \\\"Dr. E. Brown knows what makes time travel possible.\\\"\\n\\\"The flux capacitor!\\\" exclaimed McAdams.\\n\\\"We need to get this to the lab A.S.A.P. for forensic analysis.\\\"\\nOn the back of the note, a mysterious message read «¿Quién botará la puerca afuera?»\\nThey knew that could mean one of two things.\\n<ul class=\\\"list\\\">\\n<li>\\n1. The killer felt justified.\\n</li>\\n<li>\\n2. The killer was a farmer.\\n</li>\\n</ul>\"}}\n/home/vrubinetti/miniconda3/envs/manubot-ai-editor-evals/lib/python3.12/importlib/__init__.py:90: LangChainDeprecationWarning: As of langchain-core 0.3.0, LangChain uses pydantic v2 internally. The langchain_core.pydantic_v1 module was a compatibility shim for pydantic v1, and should no longer be used. Please update the code to import from Pydantic directly.\n\nFor example, replace imports like: `from langchain_core.pydantic_v1 import BaseModel`\nwith: `from pydantic import BaseModel`\nor the v1 compatibility namespace if you are working in a code base that has not been fully upgraded to pydantic 2 yet. \tfrom pydantic.v1 import BaseModel\n\n  return _bootstrap._gcd_import(name[level:], package, level)\n/home/vrubinetti/manubot-ai-editor-evals/src/llm.py:14: LangChainDeprecationWarning: Importing SQLiteCache from langchain is deprecated. Please replace deprecated imports:\n\n>> from langchain import SQLiteCache\n\nwith new imports of:\n\n>> from langchain_community.cache import SQLiteCache\n\n  from langchain.cache import SQLiteCache\n/home/vrubinetti/manubot-ai-editor-evals/src/llm.py:139: LangChainDeprecationWarning: The class `LLMChain` was deprecated in LangChain 0.1.17 and will be removed in 0.3.0. Use :meth:`~RunnableSequence, e.g., `prompt | llm`` instead.\n  llm_chain = LLMChain(llm=llm, prompt=prompt)\nTraceback (most recent call last):\n  File \"/home/vrubinetti/manubot-ai-editor-evals/src/llm.py\", line 141, in <module>\n    output = llm_chain.invoke(q)[\"text\"]\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/vrubinetti/miniconda3/envs/manubot-ai-editor-evals/lib/python3.12/site-packages/langchain/chains/base.py\", line 134, in invoke\n    callback_manager = CallbackManager.configure(\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/vrubinetti/miniconda3/envs/manubot-ai-editor-evals/lib/python3.12/site-packages/langchain_core/callbacks/manager.py\", line 1576, in configure\n    return _configure(\n           ^^^^^^^^^^^\n  File \"/home/vrubinetti/miniconda3/envs/manubot-ai-editor-evals/lib/python3.12/site-packages/langchain_core/callbacks/manager.py\", line 2328, in _configure\n    else (local_callbacks.handlers if local_callbacks else [])\n          ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'FieldInfo' object has no attribute 'handlers'\n\n\nError: Command failed: python /home/vrubinetti/manubot-ai-editor-evals/src/llm.py --model ollama=mistral=7b-instruct-v0.2-fp16 Please take the following paragraph of text with no line breaks, and respond only with the same text split into separate lines by sentence. Do not insert anything into the response like line numbers, empty lines, or a preamble; only line breaks. Make sure to preserve any punctuation or special markings in the original text. If you encounter HTML, treat each opening or closing tag as its own sentence, placing it on its own line. For example, \"<ul class=\"list\"><li>First sentence. Second sentence.</li></ul>\" should be split into six lines.\n\nInput paragraph: This is a test This is another test. Please turn to p. 55. I will begin reading. It was cold the morning of Dec. 31. -10.5 degrees, to be precise. \"Dead.\" detective McAdams said remorsefully. \"Certainly a setback... but not a dead-end.\" \"What do you mean?\" asked his partner. \"We need to check inside. Immediately.\" he replied. The first thing they saw upon entering was an envelope with the words _Clue No. 1_ pristinely calligraphed upon it. The contents contained a riddle: \"Dr. E. Brown knows what makes time travel possible.\" \"The flux capacitor!\" exclaimed McAdams. \"We need to get this to the lab A.S.A.P. for forensic analysis.\" On the back of the note, a mysterious message read «¿Quién botará la puerca afuera?» They knew that could mean one of two things. <ul class=\"list\"><li>1. The killer felt justified.</li><li>2. The killer was a farmer.</li></ul>\n\nSplit paragraph: {\"config\":{\"basePath\":\"\"}} {\"vars\":{\"test_description\":\"Splits sentences by line\",\"content\":\"This is a test This is another test. Please turn to p. 55. I will begin reading. It was cold the morning of Dec. 31. -10.5 degrees, to be precise. \\\"Dead.\\\" detective McAdams said remorsefully. \\\"Certainly a setback... but not a dead-end.\\\" \\\"What do you mean?\\\" asked his partner. \\\"We need to check inside. Immediately.\\\" he replied. The first thing they saw upon entering was an envelope with the words _Clue No. 1_ pristinely calligraphed upon it. The contents contained a riddle: \\\"Dr. E. Brown knows what makes time travel possible.\\\" \\\"The flux capacitor!\\\" exclaimed McAdams. \\\"We need to get this to the lab A.S.A.P. for forensic analysis.\\\" On the back of the note, a mysterious message read «¿Quién botará la puerca afuera?» They knew that could mean one of two things. <ul class=\\\"list\\\"><li>1. The killer felt justified.</li><li>2. The killer was a farmer.</li></ul>\",\"expected\":\"This is a test\\nThis is another test.\\nPlease turn to p. 55.\\nI will begin reading.\\nIt was cold the morning of Dec. 31.\\n-10.5 degrees, to be precise.\\n\\\"Dead.\\\" detective McAdams said remorsefully.\\n\\\"Certainly a setback... but not a dead-end.\\\"\\n\\\"What do you mean?\\\" asked his partner.\\n\\\"We need to check inside. Immediately.\\\" he replied.\\nThe first thing they saw upon entering was an envelope with the words _Clue No. 1_ pristinely calligraphed upon it.\\nThe contents contained a riddle: \\\"Dr. E. Brown knows what makes time travel possible.\\\"\\n\\\"The flux capacitor!\\\" exclaimed McAdams.\\n\\\"We need to get this to the lab A.S.A.P. for forensic analysis.\\\"\\nOn the back of the note, a mysterious message read «¿Quién botará la puerca afuera?»\\nThey knew that could mean one of two things.\\n<ul class=\\\"list\\\">\\n<li>\\n1. The killer felt justified.\\n</li>\\n<li>\\n2. The killer was a farmer.\\n</li>\\n</ul>\"}}\n/home/vrubinetti/miniconda3/envs/manubot-ai-editor-evals/lib/python3.12/importlib/__init__.py:90: LangChainDeprecationWarning: As of langchain-core 0.3.0, LangChain uses pydantic v2 internally. The langchain_core.pydantic_v1 module was a compatibility shim for pydantic v1, and should no longer be used. Please update the code to import from Pydantic directly.\n\nFor example, replace imports like: `from langchain_core.pydantic_v1 import BaseModel`\nwith: `from pydantic import BaseModel`\nor the v1 compatibility namespace if you are working in a code base that has not been fully upgraded to pydantic 2 yet. \tfrom pydantic.v1 import BaseModel\n\n  return _bootstrap._gcd_import(name[level:], package, level)\n/home/vrubinetti/manubot-ai-editor-evals/src/llm.py:14: LangChainDeprecationWarning: Importing SQLiteCache from langchain is deprecated. Please replace deprecated imports:\n\n>> from langchain import SQLiteCache\n\nwith new imports of:\n\n>> from langchain_community.cache import SQLiteCache\n\n  from langchain.cache import SQLiteCache\n/home/vrubinetti/manubot-ai-editor-evals/src/llm.py:139: LangChainDeprecationWarning: The class `LLMChain` was deprecated in LangChain 0.1.17 and will be removed in 0.3.0. Use :meth:`~RunnableSequence, e.g., `prompt | llm`` instead.\n  llm_chain = LLMChain(llm=llm, prompt=prompt)\nTraceback (most recent call last):\n  File \"/home/vrubinetti/manubot-ai-editor-evals/src/llm.py\", line 141, in <module>\n    output = llm_chain.invoke(q)[\"text\"]\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/vrubinetti/miniconda3/envs/manubot-ai-editor-evals/lib/python3.12/site-packages/langchain/chains/base.py\", line 134, in invoke\n    callback_manager = CallbackManager.configure(\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/vrubinetti/miniconda3/envs/manubot-ai-editor-evals/lib/python3.12/site-packages/langchain_core/callbacks/manager.py\", line 1576, in configure\n    return _configure(\n           ^^^^^^^^^^^\n  File \"/home/vrubinetti/miniconda3/envs/manubot-ai-editor-evals/lib/python3.12/site-packages/langchain_core/callbacks/manager.py\", line 2328, in _configure\n    else (local_callbacks.handlers if local_callbacks else [])\n          ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'FieldInfo' object has no attribute 'handlers'\n\n    at ChildProcess.exithandler (node:child_process:422:12)\n    at ChildProcess.emit (node:events:514:28)\n    at maybeClose (node:internal/child_process:1105:16)\n    at Socket.<anonymous> (node:internal/child_process:457:11)\n    at Socket.emit (node:events:514:28)\n    at Pipe.<anonymous> (node:net:337:12)"
+      response:
+        output: >-
+          This is a test.
+
+          This is another test.
+
+          Please turn to p. 55.
+
+          I will begin reading.
+
+          It was cold the morning of Dec. 31. -10.5 degrees, to be precise.
+
+          "Dead." detective McAdams said remorsefully.
+
+          "Certainly a setback... but not a dead-end."
+
+          "What do you mean?" asked his partner.
+
+          "We need to check inside. Immediately." he replied.
+
+          The first thing they saw upon entering was an envelope with the words
+          _Clue No. 1_ pristinely calligraphed upon it.
+
+          The contents contained a riddle: "Dr. E. Brown knows what makes time
+          travel possible."
+
+          "The flux capacitor!" exclaimed McAdams.
+
+          "We need to get this to the lab A.S.A.P. for forensic analysis."
+
+          On the back of the note, a mysterious message read «¿Quién botará la
+          puerca afuera?»
+
+          <ul class="list">
+
+          <li>1. The killer felt justified.</li>
+
+          <li>2. The killer was a farmer.</li>
+
+          </ul>
       success: false
       score: 0
       namedScores: &ref_0 {}
-      latencyMs: 0
+      latencyMs: 22948
+      error: Failed
+      gradingResult: &ref_1
+        pass: false
+        score: 0
+        namedScores: *ref_0
+        reason: Failed
+        tokensUsed:
+          total: 0
+          prompt: 0
+          completion: 0
+        componentResults:
+          - pass: false
+            score: 0
+            reason: Failed
+            assertion:
+              value: Splits sentences by line
+              type: Formatting
+        assertion: null
   stats:
     successes: 0
     failures: 1
@@ -172,8 +229,8 @@ results:
             testPassCount: 0
             testFailCount: 1
             assertPassCount: 0
-            assertFailCount: 0
-            totalLatencyMs: 0
+            assertFailCount: 1
+            totalLatencyMs: 22948
             tokenUsage:
               total: 0
               prompt: 0
@@ -187,7 +244,49 @@ results:
           - pass: false
             score: 0
             namedScores: *ref_0
-            text: "Error: Command failed: python /home/vrubinetti/manubot-ai-editor-evals/src/llm.py --model ollama=mistral=7b-instruct-v0.2-fp16 Please take the following paragraph of text with no line breaks, and respond only with the same text split into separate lines by sentence. Do not insert anything into the response like line numbers, empty lines, or a preamble; only line breaks. Make sure to preserve any punctuation or special markings in the original text. If you encounter HTML, treat each opening or closing tag as its own sentence, placing it on its own line. For example, \"<ul class=\"list\"><li>First sentence. Second sentence.</li></ul>\" should be split into six lines.\n\nInput paragraph: This is a test This is another test. Please turn to p. 55. I will begin reading. It was cold the morning of Dec. 31. -10.5 degrees, to be precise. \"Dead.\" detective McAdams said remorsefully. \"Certainly a setback... but not a dead-end.\" \"What do you mean?\" asked his partner. \"We need to check inside. Immediately.\" he replied. The first thing they saw upon entering was an envelope with the words _Clue No. 1_ pristinely calligraphed upon it. The contents contained a riddle: \"Dr. E. Brown knows what makes time travel possible.\" \"The flux capacitor!\" exclaimed McAdams. \"We need to get this to the lab A.S.A.P. for forensic analysis.\" On the back of the note, a mysterious message read «¿Quién botará la puerca afuera?» They knew that could mean one of two things. <ul class=\"list\"><li>1. The killer felt justified.</li><li>2. The killer was a farmer.</li></ul>\n\nSplit paragraph: {\"config\":{\"basePath\":\"\"}} {\"vars\":{\"test_description\":\"Splits sentences by line\",\"content\":\"This is a test This is another test. Please turn to p. 55. I will begin reading. It was cold the morning of Dec. 31. -10.5 degrees, to be precise. \\\"Dead.\\\" detective McAdams said remorsefully. \\\"Certainly a setback... but not a dead-end.\\\" \\\"What do you mean?\\\" asked his partner. \\\"We need to check inside. Immediately.\\\" he replied. The first thing they saw upon entering was an envelope with the words _Clue No. 1_ pristinely calligraphed upon it. The contents contained a riddle: \\\"Dr. E. Brown knows what makes time travel possible.\\\" \\\"The flux capacitor!\\\" exclaimed McAdams. \\\"We need to get this to the lab A.S.A.P. for forensic analysis.\\\" On the back of the note, a mysterious message read «¿Quién botará la puerca afuera?» They knew that could mean one of two things. <ul class=\\\"list\\\"><li>1. The killer felt justified.</li><li>2. The killer was a farmer.</li></ul>\",\"expected\":\"This is a test\\nThis is another test.\\nPlease turn to p. 55.\\nI will begin reading.\\nIt was cold the morning of Dec. 31.\\n-10.5 degrees, to be precise.\\n\\\"Dead.\\\" detective McAdams said remorsefully.\\n\\\"Certainly a setback... but not a dead-end.\\\"\\n\\\"What do you mean?\\\" asked his partner.\\n\\\"We need to check inside. Immediately.\\\" he replied.\\nThe first thing they saw upon entering was an envelope with the words _Clue No. 1_ pristinely calligraphed upon it.\\nThe contents contained a riddle: \\\"Dr. E. Brown knows what makes time travel possible.\\\"\\n\\\"The flux capacitor!\\\" exclaimed McAdams.\\n\\\"We need to get this to the lab A.S.A.P. for forensic analysis.\\\"\\nOn the back of the note, a mysterious message read «¿Quién botará la puerca afuera?»\\nThey knew that could mean one of two things.\\n<ul class=\\\"list\\\">\\n<li>\\n1. The killer felt justified.\\n</li>\\n<li>\\n2. The killer was a farmer.\\n</li>\\n</ul>\"}}\n/home/vrubinetti/miniconda3/envs/manubot-ai-editor-evals/lib/python3.12/importlib/__init__.py:90: LangChainDeprecationWarning: As of langchain-core 0.3.0, LangChain uses pydantic v2 internally. The langchain_core.pydantic_v1 module was a compatibility shim for pydantic v1, and should no longer be used. Please update the code to import from Pydantic directly.\n\nFor example, replace imports like: `from langchain_core.pydantic_v1 import BaseModel`\nwith: `from pydantic import BaseModel`\nor the v1 compatibility namespace if you are working in a code base that has not been fully upgraded to pydantic 2 yet. \tfrom pydantic.v1 import BaseModel\n\n  return _bootstrap._gcd_import(name[level:], package, level)\n/home/vrubinetti/manubot-ai-editor-evals/src/llm.py:14: LangChainDeprecationWarning: Importing SQLiteCache from langchain is deprecated. Please replace deprecated imports:\n\n>> from langchain import SQLiteCache\n\nwith new imports of:\n\n>> from langchain_community.cache import SQLiteCache\n\n  from langchain.cache import SQLiteCache\n/home/vrubinetti/manubot-ai-editor-evals/src/llm.py:139: LangChainDeprecationWarning: The class `LLMChain` was deprecated in LangChain 0.1.17 and will be removed in 0.3.0. Use :meth:`~RunnableSequence, e.g., `prompt | llm`` instead.\n  llm_chain = LLMChain(llm=llm, prompt=prompt)\nTraceback (most recent call last):\n  File \"/home/vrubinetti/manubot-ai-editor-evals/src/llm.py\", line 141, in <module>\n    output = llm_chain.invoke(q)[\"text\"]\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/vrubinetti/miniconda3/envs/manubot-ai-editor-evals/lib/python3.12/site-packages/langchain/chains/base.py\", line 134, in invoke\n    callback_manager = CallbackManager.configure(\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/vrubinetti/miniconda3/envs/manubot-ai-editor-evals/lib/python3.12/site-packages/langchain_core/callbacks/manager.py\", line 1576, in configure\n    return _configure(\n           ^^^^^^^^^^^\n  File \"/home/vrubinetti/miniconda3/envs/manubot-ai-editor-evals/lib/python3.12/site-packages/langchain_core/callbacks/manager.py\", line 2328, in _configure\n    else (local_callbacks.handlers if local_callbacks else [])\n          ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'FieldInfo' object has no attribute 'handlers'\n\n\nError: Command failed: python /home/vrubinetti/manubot-ai-editor-evals/src/llm.py --model ollama=mistral=7b-instruct-v0.2-fp16 Please take the following paragraph of text with no line breaks, and respond only with the same text split into separate lines by sentence. Do not insert anything into the response like line numbers, empty lines, or a preamble; only line breaks. Make sure to preserve any punctuation or special markings in the original text. If you encounter HTML, treat each opening or closing tag as its own sentence, placing it on its own line. For example, \"<ul class=\"list\"><li>First sentence. Second sentence.</li></ul>\" should be split into six lines.\n\nInput paragraph: This is a test This is another test. Please turn to p. 55. I will begin reading. It was cold the morning of Dec. 31. -10.5 degrees, to be precise. \"Dead.\" detective McAdams said remorsefully. \"Certainly a setback... but not a dead-end.\" \"What do you mean?\" asked his partner. \"We need to check inside. Immediately.\" he replied. The first thing they saw upon entering was an envelope with the words _Clue No. 1_ pristinely calligraphed upon it. The contents contained a riddle: \"Dr. E. Brown knows what makes time travel possible.\" \"The flux capacitor!\" exclaimed McAdams. \"We need to get this to the lab A.S.A.P. for forensic analysis.\" On the back of the note, a mysterious message read «¿Quién botará la puerca afuera?» They knew that could mean one of two things. <ul class=\"list\"><li>1. The killer felt justified.</li><li>2. The killer was a farmer.</li></ul>\n\nSplit paragraph: {\"config\":{\"basePath\":\"\"}} {\"vars\":{\"test_description\":\"Splits sentences by line\",\"content\":\"This is a test This is another test. Please turn to p. 55. I will begin reading. It was cold the morning of Dec. 31. -10.5 degrees, to be precise. \\\"Dead.\\\" detective McAdams said remorsefully. \\\"Certainly a setback... but not a dead-end.\\\" \\\"What do you mean?\\\" asked his partner. \\\"We need to check inside. Immediately.\\\" he replied. The first thing they saw upon entering was an envelope with the words _Clue No. 1_ pristinely calligraphed upon it. The contents contained a riddle: \\\"Dr. E. Brown knows what makes time travel possible.\\\" \\\"The flux capacitor!\\\" exclaimed McAdams. \\\"We need to get this to the lab A.S.A.P. for forensic analysis.\\\" On the back of the note, a mysterious message read «¿Quién botará la puerca afuera?» They knew that could mean one of two things. <ul class=\\\"list\\\"><li>1. The killer felt justified.</li><li>2. The killer was a farmer.</li></ul>\",\"expected\":\"This is a test\\nThis is another test.\\nPlease turn to p. 55.\\nI will begin reading.\\nIt was cold the morning of Dec. 31.\\n-10.5 degrees, to be precise.\\n\\\"Dead.\\\" detective McAdams said remorsefully.\\n\\\"Certainly a setback... but not a dead-end.\\\"\\n\\\"What do you mean?\\\" asked his partner.\\n\\\"We need to check inside. Immediately.\\\" he replied.\\nThe first thing they saw upon entering was an envelope with the words _Clue No. 1_ pristinely calligraphed upon it.\\nThe contents contained a riddle: \\\"Dr. E. Brown knows what makes time travel possible.\\\"\\n\\\"The flux capacitor!\\\" exclaimed McAdams.\\n\\\"We need to get this to the lab A.S.A.P. for forensic analysis.\\\"\\nOn the back of the note, a mysterious message read «¿Quién botará la puerca afuera?»\\nThey knew that could mean one of two things.\\n<ul class=\\\"list\\\">\\n<li>\\n1. The killer felt justified.\\n</li>\\n<li>\\n2. The killer was a farmer.\\n</li>\\n</ul>\"}}\n/home/vrubinetti/miniconda3/envs/manubot-ai-editor-evals/lib/python3.12/importlib/__init__.py:90: LangChainDeprecationWarning: As of langchain-core 0.3.0, LangChain uses pydantic v2 internally. The langchain_core.pydantic_v1 module was a compatibility shim for pydantic v1, and should no longer be used. Please update the code to import from Pydantic directly.\n\nFor example, replace imports like: `from langchain_core.pydantic_v1 import BaseModel`\nwith: `from pydantic import BaseModel`\nor the v1 compatibility namespace if you are working in a code base that has not been fully upgraded to pydantic 2 yet. \tfrom pydantic.v1 import BaseModel\n\n  return _bootstrap._gcd_import(name[level:], package, level)\n/home/vrubinetti/manubot-ai-editor-evals/src/llm.py:14: LangChainDeprecationWarning: Importing SQLiteCache from langchain is deprecated. Please replace deprecated imports:\n\n>> from langchain import SQLiteCache\n\nwith new imports of:\n\n>> from langchain_community.cache import SQLiteCache\n\n  from langchain.cache import SQLiteCache\n/home/vrubinetti/manubot-ai-editor-evals/src/llm.py:139: LangChainDeprecationWarning: The class `LLMChain` was deprecated in LangChain 0.1.17 and will be removed in 0.3.0. Use :meth:`~RunnableSequence, e.g., `prompt | llm`` instead.\n  llm_chain = LLMChain(llm=llm, prompt=prompt)\nTraceback (most recent call last):\n  File \"/home/vrubinetti/manubot-ai-editor-evals/src/llm.py\", line 141, in <module>\n    output = llm_chain.invoke(q)[\"text\"]\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/vrubinetti/miniconda3/envs/manubot-ai-editor-evals/lib/python3.12/site-packages/langchain/chains/base.py\", line 134, in invoke\n    callback_manager = CallbackManager.configure(\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/vrubinetti/miniconda3/envs/manubot-ai-editor-evals/lib/python3.12/site-packages/langchain_core/callbacks/manager.py\", line 1576, in configure\n    return _configure(\n           ^^^^^^^^^^^\n  File \"/home/vrubinetti/miniconda3/envs/manubot-ai-editor-evals/lib/python3.12/site-packages/langchain_core/callbacks/manager.py\", line 2328, in _configure\n    else (local_callbacks.handlers if local_callbacks else [])\n          ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'FieldInfo' object has no attribute 'handlers'\n\n    at ChildProcess.exithandler (node:child_process:422:12)\n    at ChildProcess.emit (node:events:514:28)\n    at maybeClose (node:internal/child_process:1105:16)\n    at Socket.<anonymous> (node:internal/child_process:457:11)\n    at Socket.emit (node:events:514:28)\n    at Pipe.<anonymous> (node:net:337:12)\n---\n"
+            text: >-
+              Failed
+
+              ---
+
+              This is a test.
+
+              This is another test.
+
+              Please turn to p. 55.
+
+              I will begin reading.
+
+              It was cold the morning of Dec. 31. -10.5 degrees, to be precise.
+
+              "Dead." detective McAdams said remorsefully.
+
+              "Certainly a setback... but not a dead-end."
+
+              "What do you mean?" asked his partner.
+
+              "We need to check inside. Immediately." he replied.
+
+              The first thing they saw upon entering was an envelope with the
+              words _Clue No. 1_ pristinely calligraphed upon it.
+
+              The contents contained a riddle: "Dr. E. Brown knows what makes
+              time travel possible."
+
+              "The flux capacitor!" exclaimed McAdams.
+
+              "We need to get this to the lab A.S.A.P. for forensic analysis."
+
+              On the back of the note, a mysterious message read «¿Quién botará
+              la puerca afuera?»
+
+              <ul class="list">
+
+              <li>1. The killer felt justified.</li>
+
+              <li>2. The killer was a farmer.</li>
+
+              </ul>
             prompt: >-
               Please take the following paragraph of text with no line breaks,
               and respond only with the same text split into separate lines by
@@ -221,12 +320,13 @@ results:
             provider: >-
               exec:python /home/vrubinetti/manubot-ai-editor-evals/src/llm.py 
               --model ollama=mistral=7b-instruct-v0.2-fp16
-            latencyMs: 0
+            latencyMs: 22948
+            gradingResult: *ref_1
             cost: 0
         test:
-          vars: *ref_1
+          vars: *ref_2
           assert:
-            - &ref_2
+            - &ref_3
               type: python
               value: >
                 description = "Splits sentences by line"
@@ -290,7 +390,7 @@ config:
       content: file://./inputs/content.md
       expected: file://./inputs/expected.md
     assert:
-      - *ref_2
+      - *ref_3
   outputPath:
     - outputs/mistral-7b-instruct-v0.2-fp16/output/latest.html
     - outputs/mistral-7b-instruct-v0.2-fp16/output/latest.csv
