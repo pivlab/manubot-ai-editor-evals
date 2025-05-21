@@ -45,8 +45,10 @@ defaultTest:
                 score -= 0.1
             expected_index += 1
 
+        res = score >= 0.8
+
         return {
-            "pass": score >= 0.8,
+            "pass": res,
             "score": score,
             "reason": "Passed" if res else "Failed",
             "assertion": {
