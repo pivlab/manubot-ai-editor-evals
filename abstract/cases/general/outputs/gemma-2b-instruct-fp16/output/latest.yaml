@@ -1,0 +1,392 @@
+results:
+  version: 2
+  results:
+    - provider:
+        id: >-
+          exec:python /home/vrubinetti/manubot-ai-editor-evals/src/llm.py 
+          --model ollama=gemma=2b-instruct-fp16
+      prompt:
+        raw: >-
+          Please take the following paragraph of text with no line breaks, and
+          respond only with the same text split into separate lines by sentence.
+          Do not insert anything into the response like line numbers, empty
+          lines, or a preamble; only line breaks. Make sure to preserve any
+          punctuation or special markings in the original text. If you encounter
+          HTML, treat each opening or closing tag as its own sentence, placing
+          it on its own line. For example, "<ul class="list"><li>First sentence.
+          Second sentence.</li></ul>" should be split into six lines.
+
+
+          Input paragraph: This is a test This is another test. Please turn to
+          p. 55. I will begin reading. It was cold the morning of Dec. 31. -10.5
+          degrees, to be precise. "Dead." detective McAdams said remorsefully.
+          "Certainly a setback... but not a dead-end." "What do you mean?" asked
+          his partner. "We need to check inside. Immediately." he replied. The
+          first thing they saw upon entering was an envelope with the words
+          _Clue No. 1_ pristinely calligraphed upon it. The contents contained a
+          riddle: "Dr. E. Brown knows what makes time travel possible." "The
+          flux capacitor!" exclaimed McAdams. "We need to get this to the lab
+          A.S.A.P. for forensic analysis." On the back of the note, a mysterious
+          message read «¿Quién botará la puerca afuera?» They knew that could
+          mean one of two things. <ul class="list"><li>1. The killer felt
+          justified.</li><li>2. The killer was a farmer.</li></ul>
+
+
+          Split paragraph:
+        display: >-
+          Please take the following paragraph of text with no line breaks, and
+          respond only with the same text split into separate lines by sentence.
+          Do not insert anything into the response like line numbers, empty
+          lines, or a preamble; only line breaks. Make sure to preserve any
+          punctuation or special markings in the original text. If you encounter
+          HTML, treat each opening or closing tag as its own sentence, placing
+          it on its own line. For example, "<ul class="list"><li>First sentence.
+          Second sentence.</li></ul>" should be split into six lines.
+
+
+          Input paragraph: {{ content }}
+
+
+          Split paragraph:
+      vars: &ref_2
+        test_description: Splits sentences by line
+        content: >-
+          This is a test This is another test. Please turn to p. 55. I will
+          begin reading. It was cold the morning of Dec. 31. -10.5 degrees, to
+          be precise. "Dead." detective McAdams said remorsefully. "Certainly a
+          setback... but not a dead-end." "What do you mean?" asked his partner.
+          "We need to check inside. Immediately." he replied. The first thing
+          they saw upon entering was an envelope with the words _Clue No. 1_
+          pristinely calligraphed upon it. The contents contained a riddle: "Dr.
+          E. Brown knows what makes time travel possible." "The flux capacitor!"
+          exclaimed McAdams. "We need to get this to the lab A.S.A.P. for
+          forensic analysis." On the back of the note, a mysterious message read
+          «¿Quién botará la puerca afuera?» They knew that could mean one of two
+          things. <ul class="list"><li>1. The killer felt justified.</li><li>2.
+          The killer was a farmer.</li></ul>
+        expected: >-
+          This is a test
+
+          This is another test.
+
+          Please turn to p. 55.
+
+          I will begin reading.
+
+          It was cold the morning of Dec. 31.
+
+          -10.5 degrees, to be precise.
+
+          "Dead." detective McAdams said remorsefully.
+
+          "Certainly a setback... but not a dead-end."
+
+          "What do you mean?" asked his partner.
+
+          "We need to check inside. Immediately." he replied.
+
+          The first thing they saw upon entering was an envelope with the words
+          _Clue No. 1_ pristinely calligraphed upon it.
+
+          The contents contained a riddle: "Dr. E. Brown knows what makes time
+          travel possible."
+
+          "The flux capacitor!" exclaimed McAdams.
+
+          "We need to get this to the lab A.S.A.P. for forensic analysis."
+
+          On the back of the note, a mysterious message read «¿Quién botará la
+          puerca afuera?»
+
+          They knew that could mean one of two things.
+
+          <ul class="list">
+
+          <li>
+
+          1. The killer felt justified.
+
+          </li>
+
+          <li>
+
+          2. The killer was a farmer.
+
+          </li>
+
+          </ul>
+      response:
+        output: >-
+          This is a test
+
+          This is another test.
+
+          Please turn to p. 55.
+
+          I will begin reading.
+
+          It was cold the morning of Dec. 31. -10.5 degrees, to be precise.
+
+          "Dead." detective McAdams said remorsefully.
+
+          "Certainly a setback... but not a dead-end."
+
+          "What do you mean?" asked his partner.
+
+          "We need to check inside. Immediately."
+
+          he replied.
+
+          The first thing they saw upon entering was an envelope with the words
+          _Clue No. 1_ pristinely calligraphed upon it.
+
+          The contents contained a riddle: "Dr. E. Brown knows what makes time
+          travel possible."
+
+          "The flux capacitor!" exclaimed McAdams.
+
+          "We need to get this to the lab A.S.A.P. for forensic analysis."
+
+          On the back of the note, a mysterious message read «¿Quién botará la
+          puerca afuera?»
+
+          They knew that could mean one of two things.
+      success: false
+      score: -0.4999999999999999
+      namedScores: &ref_0 {}
+      latencyMs: 808
+      error: Failed
+      gradingResult: &ref_1
+        pass: false
+        score: -0.4999999999999999
+        namedScores: *ref_0
+        reason: Failed
+        tokensUsed:
+          total: 0
+          prompt: 0
+          completion: 0
+        componentResults:
+          - pass: false
+            score: -0.4999999999999999
+            reason: Failed
+            assertion:
+              value: Splits sentences by line
+              type: Formatting
+        assertion: null
+  stats:
+    successes: 0
+    failures: 1
+    tokenUsage:
+      total: 0
+      prompt: 0
+      completion: 0
+      cached: 0
+  table:
+    head:
+      prompts:
+        - raw: >-
+            Please take the following paragraph of text with no line breaks, and
+            respond only with the same text split into separate lines by
+            sentence. Do not insert anything into the response like line
+            numbers, empty lines, or a preamble; only line breaks. Make sure to
+            preserve any punctuation or special markings in the original text.
+            If you encounter HTML, treat each opening or closing tag as its own
+            sentence, placing it on its own line. For example, "<ul
+            class="list"><li>First sentence. Second sentence.</li></ul>" should
+            be split into six lines.
+
+
+            Input paragraph: {{ content }}
+
+
+            Split paragraph:
+          display: >-
+            Please take the following paragraph of text with no line breaks, and
+            respond only with the same text split into separate lines by
+            sentence. Do not insert anything into the response like line
+            numbers, empty lines, or a preamble; only line breaks. Make sure to
+            preserve any punctuation or special markings in the original text.
+            If you encounter HTML, treat each opening or closing tag as its own
+            sentence, placing it on its own line. For example, "<ul
+            class="list"><li>First sentence. Second sentence.</li></ul>" should
+            be split into six lines.
+
+
+            Input paragraph: {{ content }}
+
+
+            Split paragraph:
+          id: 878575e907d9093d7e4d01059d204f897a0d9ab7494ca675a8e97c6d69930738
+          provider: >-
+            exec:python /home/vrubinetti/manubot-ai-editor-evals/src/llm.py 
+            --model ollama=gemma=2b-instruct-fp16
+          metrics:
+            score: -0.4999999999999999
+            testPassCount: 0
+            testFailCount: 1
+            assertPassCount: 0
+            assertFailCount: 1
+            totalLatencyMs: 808
+            tokenUsage:
+              total: 0
+              prompt: 0
+              completion: 0
+              cached: 0
+            namedScores: {}
+            cost: 0
+      vars: []
+    body:
+      - outputs:
+          - pass: false
+            score: -0.4999999999999999
+            namedScores: *ref_0
+            text: >-
+              Failed
+
+              ---
+
+              This is a test
+
+              This is another test.
+
+              Please turn to p. 55.
+
+              I will begin reading.
+
+              It was cold the morning of Dec. 31. -10.5 degrees, to be precise.
+
+              "Dead." detective McAdams said remorsefully.
+
+              "Certainly a setback... but not a dead-end."
+
+              "What do you mean?" asked his partner.
+
+              "We need to check inside. Immediately."
+
+              he replied.
+
+              The first thing they saw upon entering was an envelope with the
+              words _Clue No. 1_ pristinely calligraphed upon it.
+
+              The contents contained a riddle: "Dr. E. Brown knows what makes
+              time travel possible."
+
+              "The flux capacitor!" exclaimed McAdams.
+
+              "We need to get this to the lab A.S.A.P. for forensic analysis."
+
+              On the back of the note, a mysterious message read «¿Quién botará
+              la puerca afuera?»
+
+              They knew that could mean one of two things.
+            prompt: >-
+              Please take the following paragraph of text with no line breaks,
+              and respond only with the same text split into separate lines by
+              sentence. Do not insert anything into the response like line
+              numbers, empty lines, or a preamble; only line breaks. Make sure
+              to preserve any punctuation or special markings in the original
+              text. If you encounter HTML, treat each opening or closing tag as
+              its own sentence, placing it on its own line. For example, "<ul
+              class="list"><li>First sentence. Second sentence.</li></ul>"
+              should be split into six lines.
+
+
+              Input paragraph: This is a test This is another test. Please turn
+              to p. 55. I will begin reading. It was cold the morning of Dec.
+              31. -10.5 degrees, to be precise. "Dead." detective McAdams said
+              remorsefully. "Certainly a setback... but not a dead-end." "What
+              do you mean?" asked his partner. "We need to check inside.
+              Immediately." he replied. The first thing they saw upon entering
+              was an envelope with the words _Clue No. 1_ pristinely
+              calligraphed upon it. The contents contained a riddle: "Dr. E.
+              Brown knows what makes time travel possible." "The flux
+              capacitor!" exclaimed McAdams. "We need to get this to the lab
+              A.S.A.P. for forensic analysis." On the back of the note, a
+              mysterious message read «¿Quién botará la puerca afuera?» They
+              knew that could mean one of two things. <ul class="list"><li>1.
+              The killer felt justified.</li><li>2. The killer was a
+              farmer.</li></ul>
+
+
+              Split paragraph:
+            provider: >-
+              exec:python /home/vrubinetti/manubot-ai-editor-evals/src/llm.py 
+              --model ollama=gemma=2b-instruct-fp16
+            latencyMs: 808
+            gradingResult: *ref_1
+            cost: 0
+        test:
+          vars: *ref_2
+          assert:
+            - &ref_3
+              type: python
+              value: |
+                description = "Splits sentences by line"
+                type = "Formatting"
+                score = 1.0
+
+                def remove_before(string, substring):
+                    index = string.find(substring)
+                    if index != -1:
+                        return string[index:]
+                    return string
+
+                def split(text):
+                    return [line for line in [line.strip() for line in text.split("\n")] if line]
+
+                output = remove_before(output.lower().strip(), "this is a test")
+                expected = context["vars"]["expected"].lower().strip()
+
+                output_lines = split(output)
+                expected_lines = split(expected)
+
+                expected_index = 0
+                score = 1
+
+                def compare_lines(output_line):
+                    expected_line = expected_lines[expected_index]
+                    match_chars = min(10, len(output_line), len(expected_line))
+                    return output_line[:match_chars] == expected_line[:match_chars]
+
+                for output_line in output_lines:
+                    while expected_index < len(expected_lines) and not compare_lines(output_line):
+                        expected_index += 1
+                        score -= 0.1
+                    expected_index += 1
+
+                res = score >= 0.8
+
+                return {
+                    "pass": res,
+                    "score": score,
+                    "reason": "Passed" if res else "Failed",
+                    "assertion": {
+                      "value": description,
+                      "type": type,
+                    },
+                  }
+          options: {}
+        vars: []
+config:
+  prompts:
+    - file://../../prompts/sentence-split.txt
+  providers:
+    - >-
+      exec:python /home/vrubinetti/manubot-ai-editor-evals/src/llm.py  --model
+      ollama=gemma=2b-instruct-fp16
+  tests: []
+  sharing: true
+  defaultTest:
+    vars:
+      test_description: Splits sentences by line
+      content: file://./inputs/content.md
+      expected: file://./inputs/expected.md
+    assert:
+      - *ref_3
+  outputPath:
+    - outputs/gemma-2b-instruct-fp16/output/latest.html
+    - outputs/gemma-2b-instruct-fp16/output/latest.csv
+    - outputs/gemma-2b-instruct-fp16/output/latest.txt
+    - outputs/gemma-2b-instruct-fp16/output/latest.json
+    - outputs/gemma-2b-instruct-fp16/output/latest.yaml
+shareableUrl: null

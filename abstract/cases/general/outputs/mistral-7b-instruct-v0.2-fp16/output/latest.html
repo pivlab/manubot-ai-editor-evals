@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Eval Output</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial,
+          sans-serif;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        text-align: left;
+        word-break: break-all;
+      }
+      th,
+      td {
+        padding: 5px;
+        min-width: 200px;
+        white-space: pre-line;
+        vertical-align: top;
+      }
+
+      tr > td[data-content^='[PASS]'] {
+        color: green;
+      }
+      tr > td[data-content^='[FAIL]'] {
+        color: #ad0000;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        
+        <th>Please take the following paragraph of text with no line breaks, and respond only with the same text split into separate lines by sentence. Do not insert anything into the response like line numbers, empty lines, or a preamble; only line breaks. Make sure to preserve any punctuation or special markings in the original text. If you encounter HTML, treat each opening or closing tag as its own sentence, placing it on its own line. For example, "<ul class="list"><li>First sentence. Second sentence.</li></ul>" should be split into six lines.
+
+Input paragraph: {{ content }}
+
+Split paragraph:</th>
+        
+      </thead>
+      <tbody>
+        
+        <tr>
+          
+          <td data-content="[FAIL] (0.40)
+
+Failed
+---
+This is a test.
+This is another test.
+Please turn to p. 55.
+I will begin reading.
+It was cold the morning of Dec. 31. -10.5 degrees, to be precise.
+&quot;Dead.&quot; detective McAdams said remorsefully.
+&quot;Certainly a setback... but not a dead-end.&quot;
+&quot;What do you mean?&quot; asked his partner.
+&quot;We need to check inside. Immediately.&quot; he replied.
+The first thing they saw upon entering was an envelope with the words _Clue No. 1_ pristinely calligraphed upon it.
+The contents contained a riddle: &quot;Dr. E. Brown knows what makes time travel possible.&quot;
+&quot;The flux capacitor!&quot; exclaimed McAdams.
+&quot;We need to get this to the lab A.S.A.P. for forensic analysis.&quot;
+On the back of the note, a mysterious message read «¿Quién botará la puerca afuera?»
+&lt;ul class=&quot;list&quot;&gt;
+&lt;li&gt;1. The killer felt justified.&lt;/li&gt;
+&lt;li&gt;2. The killer was a farmer.&lt;/li&gt;
+&lt;/ul&gt;
+
+Fail Reason: Failed">[FAIL] (0.40)
+
+Failed
+---
+This is a test.
+This is another test.
+Please turn to p. 55.
+I will begin reading.
+It was cold the morning of Dec. 31. -10.5 degrees, to be precise.
+"Dead." detective McAdams said remorsefully.
+"Certainly a setback... but not a dead-end."
+"What do you mean?" asked his partner.
+"We need to check inside. Immediately." he replied.
+The first thing they saw upon entering was an envelope with the words _Clue No. 1_ pristinely calligraphed upon it.
+The contents contained a riddle: "Dr. E. Brown knows what makes time travel possible."
+"The flux capacitor!" exclaimed McAdams.
+"We need to get this to the lab A.S.A.P. for forensic analysis."
+On the back of the note, a mysterious message read «¿Quién botará la puerca afuera?»
+<ul class="list">
+<li>1. The killer felt justified.</li>
+<li>2. The killer was a farmer.</li>
+</ul>
+
+Fail Reason: Failed</td>
+          
+        </tr>
+        
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+Please take the following paragraph of text with no line breaks, and respond only with the same text split into separate lines by sentence. Do not insert anything into the response like line numbers, empty lines, or a preamble; only line breaks. Make sure to preserve any punctuation or special markings in the original text. If you encounter HTML, treat each opening or closing tag as its own sentence, placing it on its own line. For example, "<ul class="list"><li>First sentence. Second sentence.</li></ul>" should be split into six lines.
+
+Input paragraph: {{ content }}
+
+Split paragraph: 

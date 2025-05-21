@@ -1,0 +1,58 @@
+prompts:
+  - file://../../prompts/sentence-split.txt
+
+# Default asserts applied to each test case below
+defaultTest:
+  vars:
+    test_description: Splits sentences by line
+    content: file://./inputs/content.md
+    expected: file://./inputs/expected.md
+  # Make sure that output...
+  assert:
+    # ...was split into sentences properly
+    - type: python
+      value: |
+        description = "Splits sentences by line"
+        type = "Formatting"
+        score = 1.0
+
+        def remove_before(string, substring):
+            index = string.find(substring)
+            if index != -1:
+                return string[index:]
+            return string
+
+        def split(text):
+            return [line for line in [line.strip() for line in text.split("\n")] if line]
+
+        output = remove_before(output.lower().strip(), "this is a test")
+        expected = context["vars"]["expected"].lower().strip()
+
+        output_lines = split(output)
+        expected_lines = split(expected)
+
+        expected_index = 0
+        score = 1
+
+        def compare_lines(output_line):
+            expected_line = expected_lines[expected_index]
+            match_chars = min(10, len(output_line), len(expected_line))
+            return output_line[:match_chars] == expected_line[:match_chars]
+
+        for output_line in output_lines:
+            while expected_index < len(expected_lines) and not compare_lines(output_line):
+                expected_index += 1
+                score -= 0.1
+            expected_index += 1
+
+        res = score >= 0.8
+
+        return {
+            "pass": res,
+            "score": score,
+            "reason": "Passed" if res else "Failed",
+            "assertion": {
+              "value": description,
+              "type": type,
+            },
+          }
