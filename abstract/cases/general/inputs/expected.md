@@ -8,11 +8,17 @@ It was cold the morning of Dec. 31.
 "Certainly a setback... but not a dead-end."
 "What do you mean?" asked his partner.
 "We need to check inside. Immediately." he replied.
-The first thing they saw upon entering was an envelope with the words "Clue No. 1" pristinely calligraphed upon it.
+The first thing they saw upon entering was an envelope with the words _Clue No. 1_ pristinely calligraphed upon it.
 The contents contained a riddle: "Dr. E. Brown knows what makes time travel possible."
 "The flux capacitor!" exclaimed McAdams.
 "We need to get this to the lab A.S.A.P. for forensic analysis."
 On the back of the note, a mysterious message read «¿Quién botará la puerca afuera?»
 They knew that could mean one of two things.
+<ul class="list">
+<li>
 1. The killer felt justified.
+</li>
+<li>
 2. The killer was a farmer.
+</li>
+</ul>
