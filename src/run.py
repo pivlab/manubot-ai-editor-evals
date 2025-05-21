@@ -103,8 +103,9 @@ elif args.view:
         print(command)
         processes.append(subprocess.Popen(command, shell=True))
 
-    # stop previews and free up ports after webpages open
-    time.sleep(2)
+    # stop previews and free up ports
+    time.sleep(3)
+    input("Press Enter to continue...")
     for process in processes:
         process.terminate()
 
