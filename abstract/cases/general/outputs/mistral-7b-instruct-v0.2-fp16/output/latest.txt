@@ -158,7 +158,7 @@ results:
       success: false
       score: 0
       namedScores: &ref_0 {}
-      latencyMs: 794
+      latencyMs: 835
       error: Failed
       gradingResult: &ref_1
         pass: false
@@ -230,7 +230,7 @@ results:
             testFailCount: 1
             assertPassCount: 0
             assertFailCount: 1
-            totalLatencyMs: 794
+            totalLatencyMs: 835
             tokenUsage:
               total: 0
               prompt: 0
@@ -320,7 +320,7 @@ results:
             provider: >-
               exec:python /home/vrubinetti/manubot-ai-editor-evals/src/llm.py 
               --model ollama=mistral=7b-instruct-v0.2-fp16
-            latencyMs: 794
+            latencyMs: 835
             gradingResult: *ref_1
             cost: 0
         test:
@@ -328,13 +328,10 @@ results:
           assert:
             - &ref_3
               type: python
-              value: >
+              value: |
                 description = "Splits sentences by line"
-
                 type = "Formatting"
-
                 score = 1.0
-
 
                 def remove_before(string, substring):
                     index = string.find(substring)
@@ -345,14 +342,13 @@ results:
                 def split(text: str):
                     return [line for line in [line.strip() for line in text.split("\n")] if line]
 
-                output_lines = split(remove_before(output.lower(), "this is a
-                test"))
+                output = remove_before(output.lower(), "this is a test").strip()
+                expected = context["vars"]["expected"].lower().strip()
 
-                expected_lines = split(context["vars"]["expected"].lower())
-
+                output_lines = split(output)
+                expected_lines = split(expected)
 
                 res = False
-
 
                 if len(output_lines) == len(expected_lines):
                     res = True
